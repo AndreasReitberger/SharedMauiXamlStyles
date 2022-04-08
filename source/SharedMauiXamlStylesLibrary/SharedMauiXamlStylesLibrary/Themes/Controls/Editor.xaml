@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    xmlns:control="clr-namespace:AndreasReitberger.Shared.Controls"
+    >
+    <!-- OPTIMIZED -->
+    <!--  Common style for editor  -->
+    <Style TargetType="control:BorderlessEditor">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Margin" Value="5,0" />
+        <Setter Property="PlaceholderColor" Value="{DynamicResource Gray-700}" />
+    </Style>
+</ResourceDictionary>

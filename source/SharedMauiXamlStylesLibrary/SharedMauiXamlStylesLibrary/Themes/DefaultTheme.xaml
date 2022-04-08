@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.DefaultTheme"
+    
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Fonts.xaml" />
+        <ResourceDictionary Source="Icons.xaml" />
+        
+        <ResourceDictionary Source="/Themes/Controls/BoxView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Editor.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Entry.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Label.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Grid.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Frame.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/RefreshView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/StackLayout.xaml" />
+        <!--
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBorder.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfButtons.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCardView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCharts.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularProgressBar.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularGauge.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfComboBoxes.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfGradientView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfListView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfMaskedEdit.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfNumericTextInputs.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfNumericUpDowns.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPicker.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPullToRefresh.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRotator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRangeSlider.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTabView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
+        -->
+    </ResourceDictionary.MergedDictionaries>
+
+    <Color x:Key="Transparent">Transparent</Color>
+    <Color x:Key="TappedBackgroundColor">#eaeaea</Color>
+
+    <Color x:Key="Green">#33AD79</Color>
+    <Color x:Key="LightGreen">#38ef7d</Color>
+    <Color x:Key="DarkGreen">#11998e</Color>
+    <Color x:Key="Red">#ff4a4a</Color>
+    <Color x:Key="DarkRed">#93291e</Color>
+    <Color x:Key="Orange">#F78836</Color>
+    <Color x:Key="DarkOrange">#F83017</Color>
+    <Color x:Key="Blue">#3C8CF1</Color>
+    <Color x:Key="LightBlue">#6dd5ed</Color>
+    <Color x:Key="DarkBlue">#2193b0</Color>
+    <Color x:Key="HyperLink">#567cd7</Color>
+    <Color x:Key="White">#ffffff</Color>
+    <Color x:Key="Black">#000000</Color>
+    <Color x:Key="primary-lighter">#edcacd</Color>
+    <Color x:Key="Liliac">#d483fc</Color>
+    <Color x:Key="Purpleish-Blue">#5d4cf7</Color>
+    <Color x:Key="Link">#567cd7</Color>
+    <Color x:Key="Bright-Cyan">#3cdeff</Color>
+    <Color x:Key="Lemon-Lime">#bdff27</Color>
+    <Color x:Key="Yellow">#E9B31A</Color>
+    <Color x:Key="Pink">#C6275C</Color>
+
+    <!-- Circular Gauge Temprange Colors -->
+    <Color x:Key="TempLow">#DD4E38</Color>
+    <Color x:Key="TempMiddle">#B72316</Color>
+    <Color x:Key="TempHigh">#93291e</Color>
+
+    <Style x:Key="DefaultShellStyle" TargetType="Shell">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}"/>
+        <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="TitleColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="UnselectedColor" Value="{DynamicResource Gray-900}"/>
+        <Setter Property="DisabledColor" Value="{DynamicResource Gray-400}"/>
+        <Setter Property="FlyoutBackgroundColor" Value="{DynamicResource Gray-White}"/>
+    </Style>
+
+    <Style x:Key="DefaultFlyoutItemStyle" TargetType="FlyoutItem">
+        <Style.Triggers>
+            <Trigger TargetType="FlyoutItem" Property="IsEnabled" Value="False">
+                <Setter Property="Icon">
+                    <Setter.Value>
+                        <FontImageSource
+                            FontFamily="{StaticResource MaterialFontFamily}"
+                            Glyph="{StaticResource MaterialDesign_LockOutline}"
+                            Size="{OnIdiom Desktop=64, Tablet=64, Phone=48, Default=48}"
+                            Color="{DynamicResource Gray-800}"
+                            />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!-- Apply default style defaultly-->
+    <Style TargetType="FlyoutItem" BasedOn="{StaticResource DefaultFlyoutItemStyle}"/>
+
+    <Style x:Key="DefaultPageStyle" TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+    </Style>
+    
+    <Style x:Key="ModalPageStyle" TargetType="ContentPage" BasedOn="{StaticResource DefaultPageStyle}">
+        <Setter Property="Shell.PresentationMode" Value="ModalAnimated" />
+        <Setter Property="ios:Page.ModalPresentationStyle" Value="{OnIdiom Tablet=Automatic, Default=FormSheet}" />
+    </Style>
+</ResourceDictionary>

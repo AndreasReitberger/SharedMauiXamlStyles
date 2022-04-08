@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32317.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedMauiXamlStylesLibrary", "SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj", "{1BA45A7B-9F25-451F-8272-FF4AD7E17241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BA45A7B-9F25-451F-8272-FF4AD7E17241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA45A7B-9F25-451F-8272-FF4AD7E17241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA45A7B-9F25-451F-8272-FF4AD7E17241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA45A7B-9F25-451F-8272-FF4AD7E17241}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE74D6A3-DC07-4C80-B814-EFBC2E1A9503}
+	EndGlobalSection
+EndGlobal

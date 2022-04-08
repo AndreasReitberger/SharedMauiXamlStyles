@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:control="clr-namespace:AndreasReitberger.Shared.Controls"        
+    >
+    <!-- OPTIMIZED -->
+
+    <!--  Common style for TapNavigationGrid  -->
+    <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
+        <Setter Property="RowSpacing" Value="0"/>
+        <Setter Property="IsAnimated" Value="False"/>
+        <Setter Property="ColumnSpacing" Value="0"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="control:TapAnimationGrid">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-300}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--  Common style for SettingsGrid  -->
+    <Style x:Key="DefaultGridStyle" TargetType="Grid">
+        <Setter Property="RowSpacing" Value="0"/>
+        <Setter Property="ColumnSpacing" Value="0"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-300}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DefaultSettingsGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+    </Style>
+    <!--  Common style for WarningGrid  -->
+    <Style x:Key="WarningGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Yellow}" />
+    </Style>
+    <!--  Common style for ErrorGrid  -->
+    <Style x:Key="CriticalErrorGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Red}" />
+    </Style>
+    <!--  Common style for SettingsGrid  -->
+    <Style x:Key="DefaultPanelGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}" />
+    </Style>
+
+    <!--  Common style for Shell.TitleView  -->
+    <Style x:Key="ShellTitleViewGridStyle" TargetType="Grid">
+        <Setter Property="HeightRequest" Value="{OnPlatform iOS=44}" />
+    </Style>
+</ResourceDictionary>
