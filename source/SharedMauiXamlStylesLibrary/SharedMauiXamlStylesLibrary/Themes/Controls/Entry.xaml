@@ -20,7 +20,7 @@
         <Setter Property="BackgroundColor" Value="{OnPlatform Android={DynamicResource Gray-100}, Default={DynamicResource Gray-200}}" />
         <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Regular}"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="control:BorderlessEntry">
                 <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
@@ -35,7 +35,7 @@
     <Style x:Key="DefaultEntryStyle" TargetType="Entry">
         <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
         <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Regular}"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=20, Phone=14, Default=14}"/>
         <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="Margin" Value="4,2"/>

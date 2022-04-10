@@ -88,7 +88,7 @@
                 <Setter Property="Icon">
                     <Setter.Value>
                         <FontImageSource
-                            FontFamily="{StaticResource MaterialFontFamily}"
+                            FontFamily="{StaticResource MaterialDesignIcons}"
                             Glyph="{StaticResource MaterialDesign_LockOutline}"
                             Size="{OnIdiom Desktop=64, Tablet=64, Phone=48, Default=48}"
                             Color="{DynamicResource Gray-800}"

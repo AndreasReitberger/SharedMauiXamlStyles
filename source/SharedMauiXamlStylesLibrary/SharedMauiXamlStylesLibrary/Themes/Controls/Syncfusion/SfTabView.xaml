@@ -19,7 +19,7 @@
 
     <Style x:Key="DefaultTabViewItemDefaultStyle" TargetType="tabView:SfTabItem">
         <Setter Property="FontSize" Value="{OnIdiom Desktop=36, Tablet=14, Default=12}"/>
-        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Medium}"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
     </Style>
 
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemDefaultStyle}"/>
@@ -28,10 +28,10 @@
         <Setter Property="TitleFontColor" Value="{DynamicResource Gray-Black}"/>
         <Setter Property="SelectionColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TitleFontSize" Value="{OnIdiom Desktop=36, Tablet=14, Default=12}"/>
-        <Setter Property="TitleFontFamily" Value="{StaticResource Montserrat-Medium}"/>
+        <Setter Property="TitleFontFamily" Value="{StaticResource MontserratMedium}"/>
         <Setter Property="FontIconFontSize" Value="{OnIdiom Desktop=36, Tablet=20, Default=16}"/>
         <Setter Property="FontIconFontColor" Value="{DynamicResource Gray-800}"/>
-        <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialFontFamily}"/>
+        <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialDesignIcons}"/>
     </Style>
 
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemDefaultStyle}"/>
