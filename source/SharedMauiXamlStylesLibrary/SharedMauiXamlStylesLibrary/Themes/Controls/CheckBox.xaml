@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Icons.xaml" />
+        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="DefaultCheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="Color" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}"/>
+        <Setter Property="Visual" Value="Default"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Checked">
+                        <VisualState.Setters>
+                            <Setter Property="Color" Value="{DynamicResource PrimaryColor}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Unchecked">
+                        <VisualState.Setters>
+                            <Setter Property="Color" Value="{DynamicResource Gray-600}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Color" Value="{DynamicResource PrimaryColor}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="CheckBox">
+                <Setter Property="Color" Value="{DynamicResource PrimaryDarkColor}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="CheckBox" BasedOn="{StaticResource DefaultCheckBoxStyle}"/>
+
+</ResourceDictionary>

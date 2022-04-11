@@ -17,12 +17,17 @@
         <Setter Property="IndicatorPlacement" Value="Bottom"/>
     </Style>
 
-    <Style x:Key="DefaultTabViewItemDefaultStyle" TargetType="tabView:SfTabItem">
+    <Style x:Key="DefaultTabViewItemStyle" TargetType="tabView:SfTabItem">
         <Setter Property="FontSize" Value="{OnIdiom Desktop=36, Tablet=14, Default=12}"/>
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
     </Style>
 
-    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemDefaultStyle}"/>
+    <Style x:Key="MaterialIconTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
+    </Style>
+
+    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemStyle}"/>
     <!--
     <Style x:Key="DefaultTabViewItemDefaultStyle" TargetType="tabView:SfTabItem">
         <Setter Property="TitleFontColor" Value="{DynamicResource Gray-Black}"/>

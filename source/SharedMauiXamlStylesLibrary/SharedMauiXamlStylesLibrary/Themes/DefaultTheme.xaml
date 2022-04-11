@@ -11,6 +11,8 @@
         <ResourceDictionary Source="Icons.xaml" />
         
         <ResourceDictionary Source="/Themes/Controls/BoxView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Button.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/CheckBox.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Editor.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Entry.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Label.xaml" />

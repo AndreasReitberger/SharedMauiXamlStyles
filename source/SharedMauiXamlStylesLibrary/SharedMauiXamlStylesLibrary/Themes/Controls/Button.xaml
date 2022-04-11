@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Icons.xaml" />
+        <ResourceDictionary Source="/Themes/Fonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray-700}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource Gray-800}" />
+                <!-- <Setter Property="BackgroundGradient" Value="{x:Null}"/> -->
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}"/>
+
+    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=24, Tablet=22, Phone=18, Default=18}" />
+        <!--
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        -->
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=40}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=40}" />
+    </Style>
+
+    <Style x:Key="MaterialDesignIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=26, Default=22}" />
+    </Style>
+
+    <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="TextColor" Value="{DynamicResource HyperLink}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="RoundIconButtonStyle" BasedOn="{StaticResource IconButtonStyle}" TargetType="Button">
+        <Setter Property="BorderColor" Value="{DynamicResource Gray-300}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="CornerRadius" Value="22" />
+        <Setter Property="WidthRequest" Value="44" />
+        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <!--
+        <Setter Property="BackgroundGradient">
+            <Setter.Value>
+                <graphics:SfLinearGradientBrush>
+                    <graphics:SfLinearGradientBrush.GradientStops>
+                        <graphics:SfGradientStop Offset="0" Color="{DynamicResource GradientStart}" />
+                        <graphics:SfGradientStop Offset="1" Color="{DynamicResource GradientEnd}" />
+                    </graphics:SfLinearGradientBrush.GradientStops>
+                </graphics:SfLinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        -->
+    </Style>
+
+    <Style x:Key="RoundedLongButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=45, Default=45}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=300, Tablet=300, Phone=250, Default=250}" />
+
+        <Setter Property="BorderWidth" Value="0" />
+        <!--
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="BackgroundGradient">
+            <Setter.Value>
+                <gradient:SfLinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                    <gradient:SfLinearGradientBrush.GradientStops>
+                        <gradient:SfGradientStop Offset="0" Color="{DynamicResource GradientStart}" />
+                        <gradient:SfGradientStop Offset="1" Color="{DynamicResource GradientEnd}" />
+                    </gradient:SfLinearGradientBrush.GradientStops>
+                </gradient:SfLinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        -->
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
+                <Setter Property="TextColor" Value="{DynamicResource Gray-800}" />
+                <!--<Setter Property="BackgroundGradient" Value="{x:Null}"/>-->
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="True" TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource White}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SetupButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedLongButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}"/>
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
+    </Style>
+
+    <!--  Common style for swipe template content border control  -->
+    <Style x:Key="SwipeTemplateBorderStyle" TargetType="Button">
+        <Setter Property="HeightRequest" Value="32" />
+        <Setter Property="WidthRequest" Value="32" />
+        <Setter Property="BorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+    </Style>
+
+    <Style x:Key="RoundMaterialDesignIconButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=32, Phone=22, Default=22}" />
+        <!--
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        -->
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=40, Default=40}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=40, Default=40}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
+    </Style>
+
+    <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
+        <Setter Property="Text" Value="{StaticResource MaterialDesign_HandRight}" />
+        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Red}" />
+        <Setter Property="BorderColor" Value="{DynamicResource Yellow}" />
+        <Setter Property="BorderWidth" Value="3" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Tablet=35, Phone=25, Default=25}" />
+    </Style>
+
+</ResourceDictionary>

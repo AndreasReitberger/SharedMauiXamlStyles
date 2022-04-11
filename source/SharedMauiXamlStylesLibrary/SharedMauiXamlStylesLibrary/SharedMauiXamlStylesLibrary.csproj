@@ -50,6 +50,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Themes\Controls\CheckBox.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Button.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\BoxView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
