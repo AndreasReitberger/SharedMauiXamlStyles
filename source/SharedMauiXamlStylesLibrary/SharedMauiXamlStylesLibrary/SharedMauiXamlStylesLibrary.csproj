@@ -40,16 +40,69 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.1.47-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.1.47-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.47-preview" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.1.47-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.47-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.1.47-preview" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.1.47-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.1.48-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.1.48-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.48-preview" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.1.48-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.48-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.1.48-preview" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.1.48-preview" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Themes\Controls\Border.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\DatePicker.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\RadioButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\ProgressBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Picker.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\ListView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\IndicatorView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\SwipeItem.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Slider.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Shadow.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\SearchHandler.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\SearchBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Shell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\ActivityIndicator.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\TimePicker.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Switch.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\CheckBox.xaml">
 	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
@@ -89,6 +142,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Fonts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Colors.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Icons.xaml">

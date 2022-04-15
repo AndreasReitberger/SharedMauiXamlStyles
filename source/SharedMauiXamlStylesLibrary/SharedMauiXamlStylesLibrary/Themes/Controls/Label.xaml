@@ -13,7 +13,7 @@
     <!-- DEFAULT LABEL STYLE -->
     <Style x:Key="DefaultLabelStyle" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <Setter Property="TextColor" Value="{DynamicResource Gray-900}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 

@@ -6,8 +6,6 @@
     
     xmlns:control="clr-namespace:AndreasReitberger.Shared.Controls"        
     >
-    <!-- OPTIMIZED -->
-
     <!--  Common style for TapNavigationGrid  -->
     <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
         <Setter Property="RowSpacing" Value="0"/>
@@ -47,8 +45,8 @@
         <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}" />
     </Style>
 
-    <!--  Common style for Shell.TitleView  -->
+    <!--  Common style for Shell.TitleView  
     <Style x:Key="ShellTitleViewGridStyle" TargetType="Grid">
         <Setter Property="HeightRequest" Value="{OnPlatform iOS=44}" />
-    </Style>
+    </Style>-->
 </ResourceDictionary>

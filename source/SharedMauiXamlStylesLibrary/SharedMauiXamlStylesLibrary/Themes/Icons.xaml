@@ -4,6 +4,75 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     >
+    <!--
+    <OnIdiom x:Key="DefaultIconSize" x:TypeArguments="x:Int16">
+        <OnIdiom.Phone>36</OnIdiom.Phone>
+        <OnIdiom.Tablet>48</OnIdiom.Tablet>
+        <OnIdiom.Desktop>56</OnIdiom.Desktop>
+        <OnIdiom.Default>36</OnIdiom.Default>
+    </OnIdiom>
+    -->
+    <OnPlatform x:Key="DefaultIconSize" x:TypeArguments="x:Int16">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Int16">
+                    <OnIdiom.Phone>36</OnIdiom.Phone>
+                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
+                    <OnIdiom.Default>36</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Int16">
+                    <OnIdiom.Phone>36</OnIdiom.Phone>
+                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
+                    <OnIdiom.Default>36</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="UWP">
+                <OnIdiom x:TypeArguments="x:Int16">
+                    <OnIdiom.Phone>36</OnIdiom.Phone>
+                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
+                    <OnIdiom.Default>36</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="MacCatalyst">
+                <OnIdiom x:TypeArguments="x:Int16">
+                    <OnIdiom.Phone>36</OnIdiom.Phone>
+                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
+                    <OnIdiom.Default>36</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="macOS">
+                <OnIdiom x:TypeArguments="x:Int16">
+                    <OnIdiom.Phone>36</OnIdiom.Phone>
+                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
+                    <OnIdiom.Default>36</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">
+                <OnIdiom x:TypeArguments="x:Int16">
+                    <OnIdiom.Phone>36</OnIdiom.Phone>
+                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
+                    <OnIdiom.Default>36</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="Unknown">
+                <OnIdiom x:TypeArguments="x:Int16">
+                    <OnIdiom.Phone>36</OnIdiom.Phone>
+                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
+                    <OnIdiom.Default>36</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    
     <!-- Syncfusion Ui -->
     <x:String x:Key="Menu">&#xe72e;</x:String>
     <x:String x:Key="Back">&#xe709;</x:String>
