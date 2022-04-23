@@ -10,16 +10,16 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="BaseStyle" TargetType="Element">
-        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-        <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-        <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
-        <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={DynamicResource White}, Dark={DynamicResource Black}}" />
+        <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
+        <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
+        <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}" />
+        <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
-        <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-        <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-        <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+        <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light={DynamicResource White}, Dark={DynamicResource Black}}" />
+        <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
+        <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
+        <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}" />
     </Style>
     <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" ApplyToDerivedTypes="True" />
 
@@ -37,11 +37,12 @@
             <Trigger TargetType="FlyoutItem" Property="IsEnabled" Value="False">
                 <Setter Property="Icon">
                     <Setter.Value>
+                        <!-- Size="{StaticResource DefaultIconSize}" -->
                         <FontImageSource
                             FontFamily="{StaticResource MaterialDesignIcons}"
-                            Glyph="{StaticResource MaterialDesign_LockOutline}"
-                            Size="{StaticResource DefaultIconSize}"
+                            Glyph="{StaticResource MaterialDesign_LockOutline}"                           
                             Color="{DynamicResource Gray-800}"
+                            Size="{StaticResource DefaultIconSize}"
                             />
                     </Setter.Value>
                 </Setter>

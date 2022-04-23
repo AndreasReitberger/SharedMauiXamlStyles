@@ -6,7 +6,7 @@
     >
     <!-- OPTIMIZED -->
     <Style x:Key="SeparatorStyle" TargetType="BoxView">
-        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+        <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}" />
         <Setter Property="HeightRequest" Value="1" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
     </Style>

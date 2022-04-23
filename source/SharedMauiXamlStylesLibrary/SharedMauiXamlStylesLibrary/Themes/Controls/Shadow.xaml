@@ -7,7 +7,14 @@
     <Style TargetType="Shadow">
         <Setter Property="Radius" Value="15" />
         <Setter Property="Opacity" Value="0.5" />
-        <Setter Property="Brush" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="Brush" Value="{AppThemeBinding Light={DynamicResource Black}, Dark={DynamicResource White}}" />
         <Setter Property="Offset" Value="10,10" />
+    </Style>
+    
+    <Style x:Key="CardViewShadowStyle" TargetType="Shadow">
+        <Setter Property="Radius" Value="40" />
+        <Setter Property="Opacity" Value="0.8" />
+        <Setter Property="Brush" Value="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}" />
+        <Setter Property="Offset" Value="20,20" />
     </Style>
 </ResourceDictionary>

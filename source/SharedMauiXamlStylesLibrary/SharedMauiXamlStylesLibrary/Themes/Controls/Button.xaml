@@ -11,22 +11,22 @@
 
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={DynamicResource White}, Dark={DynamicResource PrimaryColor}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
         <Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
-                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={DynamicResource White}, Dark={DynamicResource PrimaryColor}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
-                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -88,18 +88,6 @@
         <Setter Property="HeightRequest" Value="44" />
         <Setter Property="TextColor" Value="{DynamicResource White}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
-        <!--
-        <Setter Property="BackgroundGradient">
-            <Setter.Value>
-                <graphics:SfLinearGradientBrush>
-                    <graphics:SfLinearGradientBrush.GradientStops>
-                        <graphics:SfGradientStop Offset="0" Color="{DynamicResource GradientStart}" />
-                        <graphics:SfGradientStop Offset="1" Color="{DynamicResource GradientEnd}" />
-                    </graphics:SfLinearGradientBrush.GradientStops>
-                </graphics:SfLinearGradientBrush>
-            </Setter.Value>
-        </Setter>
-        -->
     </Style>
 
     <Style x:Key="RoundedLongButtonStyle" TargetType="Button">
@@ -113,24 +101,10 @@
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=300, Tablet=300, Phone=250, Default=250}" />
 
         <Setter Property="BorderWidth" Value="0" />
-        <!--
-        <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="BackgroundGradient">
-            <Setter.Value>
-                <gradient:SfLinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
-                    <gradient:SfLinearGradientBrush.GradientStops>
-                        <gradient:SfGradientStop Offset="0" Color="{DynamicResource GradientStart}" />
-                        <gradient:SfGradientStop Offset="1" Color="{DynamicResource GradientEnd}" />
-                    </gradient:SfLinearGradientBrush.GradientStops>
-                </gradient:SfLinearGradientBrush>
-            </Setter.Value>
-        </Setter>
-        -->
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
                 <Setter Property="TextColor" Value="{DynamicResource Gray-800}" />
-                <!--<Setter Property="BackgroundGradient" Value="{x:Null}"/>-->
             </Trigger>
             <Trigger Property="IsEnabled" Value="True" TargetType="Button">
                 <Setter Property="TextColor" Value="{DynamicResource White}" />

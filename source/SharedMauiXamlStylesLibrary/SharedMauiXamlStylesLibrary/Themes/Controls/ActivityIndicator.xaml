@@ -10,9 +10,9 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="DefaultActivityIndicator" TargetType="ActivityIndicator">
-        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource White}}" />
+        <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
     </Style>
 
-    <Style TargetType="ActivityIndicator" BasedOn="{StaticResource ActivityIndicator}"/>
+    <Style TargetType="ActivityIndicator" BasedOn="{StaticResource DefaultActivityIndicator}"/>
 
 </ResourceDictionary>

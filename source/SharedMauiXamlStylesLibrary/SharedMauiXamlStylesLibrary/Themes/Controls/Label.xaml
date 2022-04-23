@@ -13,7 +13,7 @@
     <!-- DEFAULT LABEL STYLE -->
     <Style x:Key="DefaultLabelStyle" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={DynamicResource Black}, Dark={DynamicResource White}}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 
@@ -75,12 +75,12 @@
         <Setter Property="TextColor" Value="{DynamicResource HyperLink}"/>
     </Style>
 
-    <!-- Primary Label -->
+    <!-- PrimaryColor Label -->
     <Style x:Key="PrimaryLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
-    <!-- Primary Dark Label style -->
+    <!-- PrimaryColor Dark Label style -->
     <Style x:Key="PrimaryDarkLabelStyle" TargetType="Label" BasedOn="{StaticResource PrimaryLabelStyle}">
         <Setter Property="TextColor" Value="{DynamicResource Gray-900}"/>
     </Style>
@@ -142,7 +142,7 @@
         <Setter Property="TextColor" Value="{DynamicResource Gray-900}"/>
     </Style>
 
-    <!-- Primary Dark Headline -->
+    <!-- PrimaryColor Dark Headline -->
     <Style x:Key="PrimaryDarkHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource HeadlineLabelStyle}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkColor}"/>
     </Style>

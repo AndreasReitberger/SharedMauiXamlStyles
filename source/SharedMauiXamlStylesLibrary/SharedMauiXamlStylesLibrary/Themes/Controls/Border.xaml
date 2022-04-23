@@ -4,9 +4,36 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Controls/Shadow.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!--
+    Docs: https://docs.microsoft.com/de-de/dotnet/maui/user-interface/controls/border
+    -->
     <Style TargetType="Border">
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}" />
         <Setter Property="StrokeShape" Value="Rectangle"/>
         <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <Style x:Key="ProfileBorderStyle" TargetType="Border">
+        <Setter Property="StrokeShape">
+            <Setter.Value>
+                <RoundRectangle CornerRadius="20" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <Style x:Key="CardViewBorderStyle" TargetType="Border">
+        <Setter Property="StrokeShape">
+            <Setter.Value>
+                <RoundRectangle CornerRadius="30" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Shadow" Value="{StaticResource CardViewShadowStyle}"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}"/>
     </Style>
 </ResourceDictionary>

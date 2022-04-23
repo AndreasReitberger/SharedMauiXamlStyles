@@ -12,10 +12,10 @@
         <OnIdiom.Default>36</OnIdiom.Default>
     </OnIdiom>
     -->
-    <OnPlatform x:Key="DefaultIconSize" x:TypeArguments="x:Int16">
+    <OnPlatform x:Key="DefaultIconSize" x:TypeArguments="x:Double">
         <OnPlatform.Platforms>
             <On Platform="Android">
-                <OnIdiom x:TypeArguments="x:Int16">
+                <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Phone>36</OnIdiom.Phone>
                     <OnIdiom.Tablet>48</OnIdiom.Tablet>
                     <OnIdiom.Desktop>56</OnIdiom.Desktop>
@@ -23,7 +23,7 @@
                 </OnIdiom>
             </On>
             <On Platform="iOS">
-                <OnIdiom x:TypeArguments="x:Int16">
+                <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Phone>36</OnIdiom.Phone>
                     <OnIdiom.Tablet>48</OnIdiom.Tablet>
                     <OnIdiom.Desktop>56</OnIdiom.Desktop>
@@ -31,7 +31,7 @@
                 </OnIdiom>
             </On>
             <On Platform="UWP">
-                <OnIdiom x:TypeArguments="x:Int16">
+                <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Phone>36</OnIdiom.Phone>
                     <OnIdiom.Tablet>48</OnIdiom.Tablet>
                     <OnIdiom.Desktop>56</OnIdiom.Desktop>
@@ -39,7 +39,7 @@
                 </OnIdiom>
             </On>
             <On Platform="MacCatalyst">
-                <OnIdiom x:TypeArguments="x:Int16">
+                <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Phone>36</OnIdiom.Phone>
                     <OnIdiom.Tablet>48</OnIdiom.Tablet>
                     <OnIdiom.Desktop>56</OnIdiom.Desktop>
@@ -47,7 +47,7 @@
                 </OnIdiom>
             </On>
             <On Platform="macOS">
-                <OnIdiom x:TypeArguments="x:Int16">
+                <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Phone>36</OnIdiom.Phone>
                     <OnIdiom.Tablet>48</OnIdiom.Tablet>
                     <OnIdiom.Desktop>56</OnIdiom.Desktop>
@@ -55,7 +55,7 @@
                 </OnIdiom>
             </On>
             <On Platform="WinUI">
-                <OnIdiom x:TypeArguments="x:Int16">
+                <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Phone>36</OnIdiom.Phone>
                     <OnIdiom.Tablet>48</OnIdiom.Tablet>
                     <OnIdiom.Desktop>56</OnIdiom.Desktop>
@@ -63,7 +63,7 @@
                 </OnIdiom>
             </On>
             <On Platform="Unknown">
-                <OnIdiom x:TypeArguments="x:Int16">
+                <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Phone>36</OnIdiom.Phone>
                     <OnIdiom.Tablet>48</OnIdiom.Tablet>
                     <OnIdiom.Desktop>56</OnIdiom.Desktop>

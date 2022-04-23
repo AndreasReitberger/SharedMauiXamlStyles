@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    >
+
+    <DataTemplate x:Key="ProFeatureItemTemplate">
+        <ViewCell>
+            <Grid 
+                Padding="8,6"
+                ColumnSpacing="4"
+                RowSpacing="4"
+                >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!-- Check icon -->
+                <Border
+                    Style="{StaticResource ProfileBorderStyle}"
+                    BackgroundColor="{DynamicResource LightGreen}"
+                    Margin="0"
+                    >
+                    <Label 
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource Sent}"
+                        TextColor="{DynamicResource White}"
+                        />
+                </Border>
+
+                <Label 
+                    Grid.Column="1"
+                    Text="{Binding Feature}"
+                    Style="{StaticResource LabelStyle}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    />
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+    
+</ResourceDictionary>
