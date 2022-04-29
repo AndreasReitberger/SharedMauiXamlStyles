@@ -45,5 +45,15 @@ public class SharedFonts
 | SfTabView                           | ❌   | ✅      |
 | SfListVirew                         | ❌   | ✅      |
 
+## Migration from Xamarin.Forms (Syncfusion.XForm)
+
+| Syncfusion.XForms                   | MAUI (Core)  | Syncfusion.MAUI |
+| ----------------------------------- |:------------:| ---------------:|
+| SfButton                            | Button       | ❌             |
+| SfCheckBox                          | CheckBox     | ❌             |
+| SfBadgeView                         | ❌           | SfBadgeView    |
+| SfTabView                           | ❌           | SfTabView      |
+| SfListVirew                         | ❌           | SfListVirew    |
+
 ## Usage
 This library combines all styles in the `DefaultTheme.xaml`, which can be merged into your `LightTheme.xaml` / `DarkTheme.xaml`.
