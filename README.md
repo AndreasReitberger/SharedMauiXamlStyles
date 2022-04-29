@@ -61,6 +61,9 @@ An overview of the corresponding MAUI controls if you migrate from `Syncfusion.X
 | SfTabView                           | ❌                 | SfTabView      |
 | SfListVirew                         | ❌                 | SfListVirew    |
 
+### RoadMap
+https://www.syncfusion.com/products/roadmap/maui-controls
+
 List to be continued...
 
 ## Usage
