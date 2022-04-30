@@ -52,6 +52,7 @@ An overview of the corresponding MAUI controls if you migrate from `Syncfusion.X
 | ----------------------------------- |:------------------:| ---------------:|
 | SfButton                            | Button             | ❌             |
 | SfCheckBox                          | CheckBox           | ❌             |
+| SfComboBox                          | Picker?!           | ❌             |
 | SfBorder                            | Border             | ❌             |
 | SfPullToRefresh                     | RefreshView        | ❌             |
 | SfBusyIndicator                     | ActivityIndicator  | ❌             |
