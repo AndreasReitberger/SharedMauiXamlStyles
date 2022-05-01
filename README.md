@@ -45,5 +45,27 @@ public class SharedFonts
 | SfTabView                           | ❌   | ✅      |
 | SfListVirew                         | ❌   | ✅      |
 
+## Migration from Xamarin.Forms (Syncfusion.XForm)
+An overview of the corresponding MAUI controls if you migrate from `Syncfusion.XForm` to `Syncfusion.MAUI`.
+
+| Syncfusion.XForms                   | MAUI (Core)        | Syncfusion.MAUI |
+| ----------------------------------- |:------------------:| ---------------:|
+| SfButton                            | Button             | ❌             |
+| SfCheckBox                          | CheckBox           | ❌             |
+| SfComboBox                          | Picker?!           | ❌             |
+| SfBorder                            | Border             | ❌             |
+| SfPullToRefresh                     | RefreshView        | ❌             |
+| SfBusyIndicator                     | ActivityIndicator  | ❌             |
+| SfSwitch                            | Switch             | ❌             |
+| SfCircularGauge                     | ❌                 | SfRadialGauge  |
+| SfBadgeView                         | ❌                 | SfBadgeView    |
+| SfTabView                           | ❌                 | SfTabView      |
+| SfListVirew                         | ❌                 | SfListVirew    |
+
+### RoadMap
+https://www.syncfusion.com/products/roadmap/maui-controls
+
+List to be continued...
+
 ## Usage
 This library combines all styles in the `DefaultTheme.xaml`, which can be merged into your `LightTheme.xaml` / `DarkTheme.xaml`.
