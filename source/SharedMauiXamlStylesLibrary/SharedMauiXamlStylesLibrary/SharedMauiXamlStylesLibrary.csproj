@@ -40,13 +40,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.1.48-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.1.48-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.48-preview" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.1.48-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.48-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.1.48-preview" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.1.48-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.1.51-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.1.51-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.51-preview" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.1.51-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.51-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.1.51-preview" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.1.51-preview" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\SharedMauiCoreLibrary\source\SharedMauiCoreLibrary\SharedMauiCoreLibrary\SharedMauiCoreLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -94,6 +98,18 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Syncfusion\SfBadgeView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Syncfusion\SfRadialGauge.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Syncfusion\SfListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\TimePicker.xaml">

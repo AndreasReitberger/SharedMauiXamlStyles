@@ -36,4 +36,8 @@
 
     <Style TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}"/>
     <Style TargetType="control:BorderlessEntry" BasedOn="{StaticResource DefaultEntryStyle}"/>
+
+    <Style x:Key="NumericEntryStyle" TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}">
+        <Setter Property="Keyboard" Value="Numeric"/>
+    </Style>
 </ResourceDictionary>

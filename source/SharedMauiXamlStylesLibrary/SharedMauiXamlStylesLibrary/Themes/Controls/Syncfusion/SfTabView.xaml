@@ -7,7 +7,7 @@
     xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
     >
     <ResourceDictionary.MergedDictionaries>
-        <!--<ResourceDictionary Source="/Themes/Icons.xaml" />-->
+        <ResourceDictionary Source="/Themes/Icons.xaml" />
         <ResourceDictionary Source="/Themes/Fonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -23,6 +23,7 @@
     </Style>
 
     <Style x:Key="MaterialIconTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemStyle}">
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}"/>
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>

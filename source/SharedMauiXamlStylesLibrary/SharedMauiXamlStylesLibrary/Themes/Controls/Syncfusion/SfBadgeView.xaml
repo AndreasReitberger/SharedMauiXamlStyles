@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    >
+    <Style TargetType="core:SfBadgeView">
+        <Setter Property="BadgeSettings">
+            <Setter.Value>
+                <core:BadgeSettings
+                    CornerRadius="4"
+                    Position="BottomRight"
+                    Offset="12,-20"
+                    Type="None"
+                    Background="{DynamicResource PrimaryColor}"
+                    TextColor="{DynamicResource White}"
+                    />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="HyperlinkBadgedViewStyle" TargetType="core:SfBadgeView">
+        <Setter Property="BadgeSettings">
+            <Setter.Value>
+                <core:BadgeSettings
+                    CornerRadius="4"
+                    Position="BottomRight"
+                    Offset="12,-20"
+                    Type="None"
+                    Background="{DynamicResource HyperLink}"
+                    TextColor="{DynamicResource White}"
+                    />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

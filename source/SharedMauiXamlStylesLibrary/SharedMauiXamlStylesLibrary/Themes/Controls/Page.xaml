@@ -32,4 +32,8 @@
         <Setter Property="Shell.PresentationMode" Value="ModalAnimated" />
         <Setter Property="ios:Page.ModalPresentationStyle" Value="{OnIdiom Tablet=Automatic, Default=FormSheet}" />
     </Style>
+
+    <Style x:Key="SettingsPageStyle" TargetType="ContentPage" BasedOn="{StaticResource DefaultPageStyle}">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource Gray-100}, Dark={DynamicResource Gray-100}}" />
+    </Style>
 </ResourceDictionary>

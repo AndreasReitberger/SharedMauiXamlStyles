@@ -61,18 +61,18 @@
         <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=24, Tablet=22, Phone=18, Default=18}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextIconSize}" />
         <!--
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         -->
-        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=40}" />
-        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=40}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
     </Style>
 
     <Style x:Key="MaterialDesignIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=26, Default=22}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextIconSize}" />
     </Style>
 
     <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
@@ -99,7 +99,7 @@
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=45, Default=45}" />
         <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=300, Tablet=300, Phone=250, Default=250}" />
-
+        <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="BorderWidth" Value="0" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="Button">
@@ -131,14 +131,10 @@
         <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=32, Phone=22, Default=22}" />
-        <!--
-        <Setter Property="HorizontalTextAlignment" Value="Center" />
-        <Setter Property="VerticalTextAlignment" Value="Center" />
-        -->
-        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=40, Default=40}" />
-        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=40, Default=40}" />
-        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=70, Tablet=70, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=70, Tablet=70, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=35, Tablet=35, Default=25}" />
     </Style>
 
     <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">

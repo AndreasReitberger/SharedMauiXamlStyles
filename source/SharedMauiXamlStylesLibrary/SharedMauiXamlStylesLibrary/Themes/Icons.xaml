@@ -16,58 +16,119 @@
         <OnPlatform.Platforms>
             <On Platform="Android">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Phone>36</OnIdiom.Phone>
-                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
-                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
-                    <OnIdiom.Default>36</OnIdiom.Default>
+                    <OnIdiom.Phone>20</OnIdiom.Phone>
+                    <OnIdiom.Tablet>32</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>40</OnIdiom.Desktop>
+                    <OnIdiom.Default>20</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="iOS">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Phone>36</OnIdiom.Phone>
-                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
-                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
-                    <OnIdiom.Default>36</OnIdiom.Default>
+                    <OnIdiom.Phone>20</OnIdiom.Phone>
+                    <OnIdiom.Tablet>32</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>40</OnIdiom.Desktop>
+                    <OnIdiom.Default>20</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="UWP">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Phone>36</OnIdiom.Phone>
-                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
-                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
-                    <OnIdiom.Default>36</OnIdiom.Default>
+                    <OnIdiom.Phone>20</OnIdiom.Phone>
+                    <OnIdiom.Tablet>32</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>40</OnIdiom.Desktop>
+                    <OnIdiom.Default>20</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="MacCatalyst">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Phone>36</OnIdiom.Phone>
-                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
-                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
-                    <OnIdiom.Default>36</OnIdiom.Default>
+                    <OnIdiom.Phone>20</OnIdiom.Phone>
+                    <OnIdiom.Tablet>32</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>40</OnIdiom.Desktop>
+                    <OnIdiom.Default>20</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="macOS">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Phone>36</OnIdiom.Phone>
-                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
-                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
-                    <OnIdiom.Default>36</OnIdiom.Default>
+                    <OnIdiom.Phone>20</OnIdiom.Phone>
+                    <OnIdiom.Tablet>32</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>40</OnIdiom.Desktop>
+                    <OnIdiom.Default>20</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="WinUI">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Phone>36</OnIdiom.Phone>
-                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
-                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
-                    <OnIdiom.Default>36</OnIdiom.Default>
+                    <OnIdiom.Phone>20</OnIdiom.Phone>
+                    <OnIdiom.Tablet>32</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>40</OnIdiom.Desktop>
+                    <OnIdiom.Default>20</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="Unknown">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Phone>36</OnIdiom.Phone>
-                    <OnIdiom.Tablet>48</OnIdiom.Tablet>
-                    <OnIdiom.Desktop>56</OnIdiom.Desktop>
-                    <OnIdiom.Default>36</OnIdiom.Default>
+                    <OnIdiom.Phone>20</OnIdiom.Phone>
+                    <OnIdiom.Tablet>32</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>40</OnIdiom.Desktop>
+                    <OnIdiom.Default>20</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+
+    <OnPlatform x:Key="DefaultTextIconSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>18</OnIdiom.Phone>
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>24</OnIdiom.Desktop>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>18</OnIdiom.Phone>
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>24</OnIdiom.Desktop>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="UWP">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>18</OnIdiom.Phone>
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>24</OnIdiom.Desktop>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="MacCatalyst">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>18</OnIdiom.Phone>
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>24</OnIdiom.Desktop>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="macOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>18</OnIdiom.Phone>
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>24</OnIdiom.Desktop>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>18</OnIdiom.Phone>
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>24</OnIdiom.Desktop>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="Unknown">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>18</OnIdiom.Phone>
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Desktop>24</OnIdiom.Desktop>
+                    <OnIdiom.Default>18</OnIdiom.Default>
                 </OnIdiom>
             </On>
         </OnPlatform.Platforms>

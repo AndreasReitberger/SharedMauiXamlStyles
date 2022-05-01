@@ -47,6 +47,18 @@
     <MauiXaml Update="Themes\Controls\Page.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Syncfusion\SfBadgeView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Syncfusion\SfRadialGauge.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Syncfusion\SfListView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\Controls\TimePicker.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

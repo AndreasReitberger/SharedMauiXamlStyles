@@ -109,6 +109,10 @@
         
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
         -->
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfListView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRadialGauge.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTabView.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
