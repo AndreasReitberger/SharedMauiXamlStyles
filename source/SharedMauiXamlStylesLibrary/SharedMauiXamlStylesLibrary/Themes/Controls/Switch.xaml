@@ -7,6 +7,8 @@
     <Style TargetType="Switch">
         <Setter Property="OnColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
         <Setter Property="ThumbColor" Value="{DynamicResource White}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <!--<Setter Property="HeightRequest" Value="28" />-->
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">

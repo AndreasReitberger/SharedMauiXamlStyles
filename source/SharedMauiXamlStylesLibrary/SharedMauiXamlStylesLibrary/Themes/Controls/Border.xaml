@@ -35,5 +35,6 @@
         <Setter Property="StrokeThickness" Value="1"/>
         <Setter Property="Shadow" Value="{StaticResource CardViewShadowStyle}"/>
         <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}"/>
+        <Setter Property="Stroke" Value="{DynamicResource Gray-100}"/>
     </Style>
 </ResourceDictionary>
