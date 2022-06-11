@@ -44,6 +44,12 @@
     <Style x:Key="DefaultPanelGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
         <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}" />
     </Style>
+    <!--  Common style for ModalGrid  -->
+    <Style x:Key="ModalPanelGridStyle" TargetType="Grid">
+        <!--<Setter Property="CompressedLayout.IsHeadless" Value="true" />-->
+        <Setter Property="ColumnDefinitions" Value="*,48" />
+        <Setter Property="RowDefinitions" Value="Auto,*,Auto" />
+    </Style>
 
     <!--  Common style for Shell.TitleView  
     <Style x:Key="ShellTitleViewGridStyle" TargetType="Grid">

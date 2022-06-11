@@ -10,6 +10,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="DefaultCheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource White}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource White}, Dark={DynamicResource Black}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
