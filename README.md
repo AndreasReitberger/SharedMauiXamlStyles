@@ -107,3 +107,8 @@ This library combines all styles in the `DefaultTheme.xaml`, which can be merged
 ```
 
 Same applies to the DarkTheme.
+
+# Licenses & Thirdparty
+This project uses thirdparty fonts. All licenses can be found in the project folder under Licenses -> LicenseFiles.
+It's mandatory to also add those licenses to your final App. In this case you can use the LicenseManager class to get a List of all
+used libraries and their licenses.
