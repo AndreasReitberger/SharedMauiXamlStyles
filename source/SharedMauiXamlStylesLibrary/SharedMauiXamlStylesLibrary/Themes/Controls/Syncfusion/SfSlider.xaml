@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+    >
+    <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started -->
+    <Style TargetType="sliders:SfSlider">
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="HeightRequest" Value="48" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle
+                                        ActiveSize="8" 
+                                        InactiveSize="6" 
+                                        ActiveFill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}" 
+                                        InactiveFill="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle
+                                        Radius = "13"
+                                        Fill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}"
+                                        Stroke="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}"
+                                        StrokeThickness="3"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="LabelStyle">
+                                <Setter.Value>
+                                    <sliders:SliderLabelStyle
+                                        ActiveTextColor = "{DynamicResource Gray-Black}"
+                                        InactiveTextColor="{DynamicResource Gray-600}"
+                                        ActiveFontSize="16"
+                                        InactiveFontSize="14"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle
+                                        ActiveSize="10" 
+                                        InactiveSize="8"
+                                        ActiveFill="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}" 
+                                        InactiveFill="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle
+                                        Radius = "13"
+                                        Fill="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        Stroke="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        StrokeThickness="3"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="LabelStyle">
+                                <Setter.Value>
+                                    <sliders:SliderLabelStyle
+                                        ActiveTextColor = "{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        InactiveTextColor="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        ActiveFontSize="14"
+                                        InactiveFontSize="16"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PrimraySliderStyle" TargetType="sliders:SfSlider">
+        <Setter Property="ShowLabels" Value="False" />
+        <Setter Property="WidthRequest" Value="290" />
+        <Setter Property="HeightRequest" Value="36" />
+    </Style>
+</ResourceDictionary>

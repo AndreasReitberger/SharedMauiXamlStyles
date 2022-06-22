@@ -213,4 +213,37 @@
             </Grid>
         </ViewCell>
     </DataTemplate>
+    
+    <!-- Documentation -->
+    <DataTemplate x:Key="ChangelogItemTemplate" x:DataType="documentation:ChangelogInfo">
+        <ViewCell>
+            <Grid
+                x:Name="Grid"
+                Padding="16,12"
+                ColumnSpacing="16"
+                RowSpacing="2"
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Style="{StaticResource LabelStyle}"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding Changelog}"
+                    />
+                <Border 
+                    BackgroundColor="{DynamicResource Gray-200}" 
+                    Style="{StaticResource ProfileBorderStyle}"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    >
+                    <Label
+                        Margin="4"
+                        Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                        Text="{Binding Type, Converter={StaticResource StringToChangelogIconConverter}}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        />
+                </Border>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
 </ResourceDictionary>
