@@ -27,6 +27,25 @@ public class SharedFonts
     }
 ```
 
+In order to register all shared fonts, add following function to the `MauiAppBuilder`.
+
+```csharp
+public static MauiApp CreateMauiApp()
+{
+    MauiAppBuilder builder = MauiApp.CreateBuilder();
+    builder
+        .UseMauiApp<App>()
+        .UseMauiApp<App>().UseMauiCommunityToolkit()
+        .ConfigureFonts(fonts =>
+        {
+            // Your used fonts
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        })
+        // Shared fonts (for list of used fonts, see above)
+        .RegisterSharedFonts();
+}
+```
+
 ## Available control styles
 
 | Control                             | Core  | Syncfusion |
@@ -69,3 +88,22 @@ List to be continued...
 
 ## Usage
 This library combines all styles in the `DefaultTheme.xaml`, which can be merged into your `LightTheme.xaml` / `DarkTheme.xaml`.
+
+```xaml
+<ResourceDictionary
+    x:Class="KlipperRemoteControl.Themes.LightTheme"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <!-- Merge the DefaultTheme here -->
+        <shared:DefaultTheme/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Your style stuff -->
+</ResourceDictionary>
+```
+
+Same applies to the DarkTheme.

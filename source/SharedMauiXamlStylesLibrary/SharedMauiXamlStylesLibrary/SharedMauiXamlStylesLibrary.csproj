@@ -18,8 +18,17 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 		<RootNamespace>AndreasReitberger.Shared</RootNamespace>
-		<PackageLicenseExpression>apache-2.0</PackageLicenseExpression>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Version>1.0.0-alpha</Version>
+		<Title>MAUI Shared Styles Library</Title>
+		<Copyright>Andreas Reitberger</Copyright>
+		<PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>MAUI, Styles, Shared, Syncfusion, XAML</PackageTags>
+		<Description>A collection of predefined Control styles for MAUI and Syncfusion.</Description>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -51,17 +60,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.1.59-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.1.59-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.59-preview" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.1.59-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.59-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.1.59-preview" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.1.59-preview" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\..\..\..\SharedMauiCoreLibrary\source\SharedMauiCoreLibrary\SharedMauiCoreLibrary\SharedMauiCoreLibrary.csproj" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.0-alpha" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.1.61-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.1.61-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.61-preview" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.1.61-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.61-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.1.61-preview" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.1.61-preview" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -109,6 +115,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Syncfusion\SfSlider.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
