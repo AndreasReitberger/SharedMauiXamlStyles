@@ -34,7 +34,7 @@ namespace AndreasReitberger.Shared.Controls
         /**/
         public static readonly BindableProperty FilterObjectProperty =
             BindableProperty.Create(nameof(Filter), typeof(object), typeof(EnhancedListView), null, BindingMode.TwoWay, null, OnFilterChanged);
-        
+
         public static readonly BindableProperty IsFilterProperty =
             BindableProperty.Create(nameof(IsFiltered), typeof(bool), typeof(EnhancedListView), false, BindingMode.OneWay, null);
 
@@ -65,7 +65,7 @@ namespace AndreasReitberger.Shared.Controls
             get { return GetValue(FilterObjectProperty); }
             set { SetValue(FilterObjectProperty, value); }
         }
-        
+
         //bool _isFiltered = false;
         public bool IsFiltered
         {
@@ -123,7 +123,7 @@ namespace AndreasReitberger.Shared.Controls
                 if (newValue != null && listView.DataSource != null)
                 {
                     OnFilterChanged(bindable, oldValue, newValue);
-                }                
+                }
                 else if (listView.DataSource != null)
                 {
                     //listView.filter = null;
@@ -137,7 +137,7 @@ namespace AndreasReitberger.Shared.Controls
                 Console.WriteLine($"Exception: {exc?.Message}");
             }
         }
-        
+
 
         static void OnSearchTextChanged(BindableObject bindable, object oldValue, object newValue)
         {
