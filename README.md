@@ -112,3 +112,4 @@ Same applies to the DarkTheme.
 This project uses thirdparty fonts. All licenses can be found in the project folder under Licenses -> LicenseFiles.
 It's mandatory to also add those licenses to your final App. In this case you can use the LicenseManager class to get a List of all
 used libraries and their licenses.
+https://github.com/AndreasReitberger/SharedMauiXamlStyles/tree/main/source/SharedMauiXamlStylesLibrary/SharedMauiXamlStylesLibrary/Licenses/LicenseFiles
