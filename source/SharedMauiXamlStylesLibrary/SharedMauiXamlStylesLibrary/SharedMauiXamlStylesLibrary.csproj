@@ -21,7 +21,7 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.0-alpha</Version>
+		<Version>1.0.1</Version>
 		<Title>MAUI Shared Styles Library</Title>
 		<Copyright>Andreas Reitberger</Copyright>
 		<PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
@@ -29,12 +29,14 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>MAUI, Styles, Shared, Syncfusion, XAML</PackageTags>
 		<Description>A collection of predefined Control styles for MAUI and Syncfusion.</Description>
+		<Authors>Andreas Reitberger</Authors>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
+	<!--
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\FontAwesome5Brands.otf" />
 	  <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
@@ -46,8 +48,12 @@
 	  <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
 	  <None Remove="Resources\Fonts\UIFontIcons.ttf" />
 	</ItemGroup>
+	-->
 
 	<ItemGroup>
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+		<!--
 	  <MauiFont Include="Resources\Fonts\FontAwesome5Brands.otf" />
 	  <MauiFont Include="Resources\Fonts\FontAwesome5Regular.otf" />
 	  <MauiFont Include="Resources\Fonts\FontAwesome5Solid.otf" />
@@ -57,17 +63,34 @@
 	  <MauiFont Include="Resources\Fonts\Montserrat-Regular.ttf" />
 	  <MauiFont Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
 	  <MauiFont Include="Resources\Fonts\UIFontIcons.ttf" />
+	  -->
 	</ItemGroup>
+	
 
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.0-alpha" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.1.61-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.1.61-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.61-preview" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.1.61-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.61-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.1.61-preview" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.1.61-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.2.43" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.2.43" />
+	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.2.43" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.2.43" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.2.43" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.2.43" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.2.43" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.2.43" />
+	</ItemGroup>
+	
+
+	<ItemGroup>
+	  <Compile Update="Themes\SharedColors.xaml.cs">
+	    <DependentUpon>SharedColors.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Themes\SharedIcons.xaml.cs">
+	    <DependentUpon>SharedIcons.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Themes\SharedFonts.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>SharedFonts.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -132,6 +155,9 @@
 	  <MauiXaml Update="Themes\Controls\Syncfusion\SfListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\TimePicker.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -174,16 +200,17 @@
 	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Themes\SharedColors.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\SharedIcons.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\SharedFonts.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Fonts.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Colors.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Icons.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">

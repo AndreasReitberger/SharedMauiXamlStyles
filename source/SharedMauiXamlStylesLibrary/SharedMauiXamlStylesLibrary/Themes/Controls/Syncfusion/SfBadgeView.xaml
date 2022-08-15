@@ -6,6 +6,9 @@
     
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <Style TargetType="core:SfBadgeView">
         <Setter Property="BadgeSettings">
             <Setter.Value>

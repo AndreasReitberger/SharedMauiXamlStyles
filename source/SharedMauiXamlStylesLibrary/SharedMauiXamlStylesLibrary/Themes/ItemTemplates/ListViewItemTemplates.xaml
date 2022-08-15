@@ -9,6 +9,8 @@
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    
+    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
     
@@ -230,7 +232,7 @@
                     Text="{Binding Changelog}"
                     />
                 <Border 
-                    BackgroundColor="{DynamicResource Gray-200}" 
+                    BackgroundColor="{AppThemeBinding Light={DynamicResource Gray200}, Dark={DynamicResource Gray800}}" 
                     Style="{StaticResource ProfileBorderStyle}"
                     Grid.Column="1"
                     VerticalOptions="Center"
@@ -246,4 +248,86 @@
             </Grid>
         </ViewCell>
     </DataTemplate>
+    
+    <!-- Swipe Templates -->
+    <DataTemplate x:Key="DuplicateEditDeleteSwipeRightTemplate">
+        <ViewCell>
+            <Border
+                Stroke="{AppThemeBinding Light={DynamicResource Gray100}, Dark={DynamicResource Gray900}}"
+                StrokeThickness="0"
+                >
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="BackgroundColor" Value="{Binding BackgroundColor, 
+                                Source={x:RelativeSource 
+                                AncestorType={x:Type listView:ListViewItem}, 
+                                AncestorLevel=1}}"/>
+                        <Style.Triggers>
+                            <DataTrigger 
+                                TargetType="Border" 
+                                Binding="{Binding IsSelected, Source={x:RelativeSource AncestorType={x:Type listView:ListViewItem}, AncestorLevel=1}}"
+                                Value="True"
+                                >
+                                <Setter 
+                                    Property="BackgroundColor" 
+                                    Value="{Binding SelectionBackgroundColor, 
+                                        Source={x:RelativeSource 
+                                        AncestorType={x:Type listView:SfListView}, 
+                                        AncestorLevel=1}}"
+                                    />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+                <Border
+                    Margin="0,8"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
+                    Stroke="{AppThemeBinding Light={DynamicResource Gray100}, Dark={DynamicResource Gray900}}"
+                    StrokeThickness="0"
+                    >
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30, 0, 0, 30" />
+                    </Border.StrokeShape>
+                    <Grid>
+                        <!-- Xamarin.Forms 
+                        <gradient:SfGradientView
+                            Style="{StaticResource GradientViewStyle}"
+                            />
+                        -->
+                        <Grid
+                            Padding="15,0"
+                            ColumnSpacing="14"
+                            VerticalOptions="Center"
+                            ColumnDefinitions="Auto,Auto,Auto"
+                            >
+                            <!--  Duplicate button  -->
+                            <Button 
+                                Command="{Binding BindingContext.DuplicateItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}" 
+                                CommandParameter="{Binding .}"
+                                Style="{StaticResource SwipeTemplateButtonStyle}"
+                                Text="{StaticResource Viewed}"
+                                />
+                            <!--  Delete button  -->
+                            <Button
+                                Grid.Column="1"
+                                Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                                CommandParameter="{Binding .}"
+                                Style="{StaticResource SwipeTemplateButtonStyle}"
+                                Text="{StaticResource Delete}"
+                                />
+                            <!--  Edit button  -->
+                            <Button
+                                Grid.Column="2"
+                                Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                                CommandParameter="{Binding .}"
+                                Style="{StaticResource SwipeTemplateButtonStyle}"
+                                Text="{StaticResource Edit}"
+                                />
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Border>
+        </ViewCell>
+    </DataTemplate>
+   
 </ResourceDictionary>

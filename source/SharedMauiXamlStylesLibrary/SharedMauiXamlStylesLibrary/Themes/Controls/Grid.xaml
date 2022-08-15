@@ -6,15 +6,18 @@
     
     xmlns:control="clr-namespace:AndreasReitberger.Shared.Controls"        
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!--  Common style for TapNavigationGrid  -->
     <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
         <Setter Property="RowSpacing" Value="0"/>
         <Setter Property="IsAnimated" Value="False"/>
         <Setter Property="ColumnSpacing" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="control:TapAnimationGrid">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-300}"/>
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -24,13 +27,13 @@
         <Setter Property="ColumnSpacing" Value="0"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="Grid">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-300}"/>
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 
     <Style x:Key="DefaultSettingsGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
     </Style>
     <!--  Common style for WarningGrid  -->
     <Style x:Key="WarningGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
@@ -51,8 +54,8 @@
         <Setter Property="RowDefinitions" Value="Auto,*,Auto" />
     </Style>
 
-    <!--  Common style for Shell.TitleView  
+    <!--  Common style for Shell.TitleView -->
     <Style x:Key="ShellTitleViewGridStyle" TargetType="Grid">
-        <Setter Property="HeightRequest" Value="{OnPlatform iOS=44}" />
-    </Style>-->
+        <!--<Setter Property="HeightRequest" Value="{OnPlatform iOS=44}" />-->
+    </Style>
 </ResourceDictionary>

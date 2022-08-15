@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ActiveDebugProfile>Pixel 3a R 11.0 - API 30 (Android 11.0 - API 30)</ActiveDebugProfile>
+    <ActiveDebugProfile>iPhone SE (3rd generation) iOS 15.5</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="Themes\Controls\Border.xaml">
@@ -64,6 +64,9 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfListView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\Controls\TimePicker.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -103,16 +106,16 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\SharedColors.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\SharedIcons.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\SharedFonts.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\DefaultTheme.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\Fonts.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\Colors.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\Icons.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">

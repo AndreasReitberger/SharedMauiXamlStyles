@@ -6,6 +6,9 @@
     
     xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started 
     <Style TargetType="sliders:SfRangeSlider">
         <Setter Property="Visual" Value="Default" />
@@ -38,8 +41,8 @@
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
                                     <sliders:SliderLabelStyle
-                                        ActiveTextColor = "{DynamicResource Gray-Black}"
-                                        InactiveTextColor="{DynamicResource Gray-600}"
+                                        ActiveTextColor = "{AppThemeBinding Light={DynamicResource Black}, Dark={DynamicResource White}}"
+                                        InactiveTextColor="{AppThemeBinding Light={DynamicResource Gray600}, Dark={DynamicResource Gray400}}"
                                         ActiveFontSize="16"
                                         InactiveFontSize="14"
                                         />

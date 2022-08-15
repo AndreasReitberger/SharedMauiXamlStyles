@@ -6,10 +6,14 @@
     
     xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started -->
     <Style TargetType="sliders:SfSlider">
         <Setter Property="Visual" Value="Default" />
-        <Setter Property="HeightRequest" Value="48" />
+        <Setter Property="HeightRequest" Value="70" />
+        <!-- -->
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -20,8 +24,8 @@
                                     <sliders:SliderTrackStyle
                                         ActiveSize="8" 
                                         InactiveSize="6" 
-                                        ActiveFill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}" 
-                                        InactiveFill="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}"
+                                        ActiveFill="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource Gray200}}" 
+                                        InactiveFill="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"
                                         />
                                 </Setter.Value>
                             </Setter>
@@ -29,8 +33,8 @@
                                 <Setter.Value>
                                     <sliders:SliderThumbStyle
                                         Radius = "13"
-                                        Fill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}"
-                                        Stroke="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}"
+                                        Fill="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource Gray200}}"
+                                        Stroke="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource Gray200}}"
                                         StrokeThickness="3"
                                         />
                                 </Setter.Value>
@@ -38,8 +42,8 @@
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
                                     <sliders:SliderLabelStyle
-                                        ActiveTextColor = "{DynamicResource Gray-Black}"
-                                        InactiveTextColor="{DynamicResource Gray-600}"
+                                        ActiveTextColor = "{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                                        InactiveTextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"
                                         ActiveFontSize="16"
                                         InactiveFontSize="14"
                                         />
@@ -54,8 +58,8 @@
                                     <sliders:SliderTrackStyle
                                         ActiveSize="10" 
                                         InactiveSize="8"
-                                        ActiveFill="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}" 
-                                        InactiveFill="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        ActiveFill="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" 
+                                        InactiveFill="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
                                         />
                                 </Setter.Value>
                             </Setter>
@@ -63,8 +67,8 @@
                                 <Setter.Value>
                                     <sliders:SliderThumbStyle
                                         Radius = "13"
-                                        Fill="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
-                                        Stroke="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        Fill="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                                        Stroke="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
                                         StrokeThickness="3"
                                         />
                                 </Setter.Value>
@@ -72,8 +76,8 @@
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
                                     <sliders:SliderLabelStyle
-                                        ActiveTextColor = "{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
-                                        InactiveTextColor="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        ActiveTextColor = "{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                                        InactiveTextColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
                                         ActiveFontSize="14"
                                         InactiveFontSize="16"
                                         />
@@ -90,5 +94,9 @@
         <Setter Property="ShowLabels" Value="False" />
         <Setter Property="WidthRequest" Value="290" />
         <Setter Property="HeightRequest" Value="36" />
+    </Style>
+
+    <Style x:Key="PercentageSliderStyle" TargetType="sliders:SfSlider">
+        <Setter Property="NumberFormat" Value="# %" />
     </Style>
 </ResourceDictionary>

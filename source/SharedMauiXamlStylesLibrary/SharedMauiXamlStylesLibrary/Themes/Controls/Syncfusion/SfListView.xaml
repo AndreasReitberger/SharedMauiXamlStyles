@@ -6,11 +6,14 @@
     
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <Style TargetType="listView:SfListView">
         <!--<Setter Property="SelectionBackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}" />-->
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="listView:SfListView">
-                <Setter Property="BackgroundColor" Value="{DynamicResource Gray-600}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

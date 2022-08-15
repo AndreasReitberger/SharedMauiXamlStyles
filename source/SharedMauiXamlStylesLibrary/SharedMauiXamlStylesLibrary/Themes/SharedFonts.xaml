@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<?xaml-comp compile="true" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Fonts"
     >
     <!-- Allows binding as StaticResource in the Main Project -->
     <x:String x:Key="FontAwesome5Brands">FontAwesome5Brands</x:String>

@@ -4,16 +4,18 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     >
-    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <Style TargetType="Frame">
         <Setter Property="HasShadow" Value="False" />
-        <Setter Property="BorderColor" Value="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
         <Setter Property="CornerRadius" Value="8" />
     </Style>
     
     <Style x:Key="ListViewItemFrameStyle" TargetType="Frame">
-        <Setter Property="BorderColor" Value="{DynamicResource TransparentColor}"/>
-        <Setter Property="BackgroundColor" Value="{DynamicResource TransparentColor}" />
-        <Setter Property="BorderColor" Value="{DynamicResource ItemTemplateBorder}" />
+        <Setter Property="BorderColor" Value="{StaticResource Transparent}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Light_ItemTemplateBorder}, Dark={StaticResource Dark_ItemTemplateBorder}}" />
     </Style>
 </ResourceDictionary>
