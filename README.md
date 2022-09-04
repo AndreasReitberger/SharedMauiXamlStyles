@@ -33,6 +33,8 @@ public class SharedFonts
 ```
 
 In order to register all shared fonts, add following function to the `MauiAppBuilder`.
+Note! Don't forget to add the fonts also to your main MAUI app!
+https://github.com/AndreasReitberger/SharedMauiXamlStyles/tree/main/source/SharedMauiXamlStylesLibrary/SharedMauiXamlStylesLibrary/Resources/Fonts
 
 ```csharp
 public static MauiApp CreateMauiApp()
