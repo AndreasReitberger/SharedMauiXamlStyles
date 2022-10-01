@@ -24,7 +24,7 @@
                                     <sliders:SliderTrackStyle
                                         ActiveSize="8" 
                                         InactiveSize="6" 
-                                        ActiveFill="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource Gray200}}" 
+                                        ActiveFill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource Gray200}}" 
                                         InactiveFill="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"
                                         />
                                 </Setter.Value>
@@ -33,8 +33,8 @@
                                 <Setter.Value>
                                     <sliders:SliderThumbStyle
                                         Radius = "13"
-                                        Fill="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource Gray200}}"
-                                        Stroke="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource Gray200}}"
+                                        Fill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource Gray200}}"
+                                        Stroke="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource Gray200}}"
                                         StrokeThickness="3"
                                         />
                                 </Setter.Value>

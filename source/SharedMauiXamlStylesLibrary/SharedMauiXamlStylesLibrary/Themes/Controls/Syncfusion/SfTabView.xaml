@@ -12,7 +12,6 @@
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <!-- OPTIMIZED -->
     <Style x:Key="TabViewDefaultStyle" TargetType="tabView:SfTabView">
         <Setter Property="IndicatorBackground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="IndicatorPlacement" Value="Top"/>

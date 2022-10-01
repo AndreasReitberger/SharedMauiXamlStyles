@@ -39,31 +39,28 @@
 
         <!-- Item Templates -->
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewItemTemplates.xaml" />
+        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
+        
         <!--
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBorder.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfButtons.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCardView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCharts.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularProgressBar.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularGauge.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfComboBoxes.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularGauge.xaml" />      
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfGradientView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfListView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfMaskedEdit.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfNumericTextInputs.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfNumericUpDowns.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPicker.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPullToRefresh.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRotator.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRangeSlider.xaml" />
-        
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRotator.xaml" /> 
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
         -->
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfComboBox.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfListView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRadialGauge.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfSlider.xaml" />

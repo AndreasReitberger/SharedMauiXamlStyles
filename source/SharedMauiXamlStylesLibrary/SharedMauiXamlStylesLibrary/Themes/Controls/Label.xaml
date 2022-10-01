@@ -152,7 +152,7 @@
     <Style x:Key="SwipeTemplateButtonStyle" TargetType="Label">
         <!-- Check if needed 
         <Setter Property="BackgroundColor" Value="Transparent" />-->
-        <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="FontSize" Value="18" />
