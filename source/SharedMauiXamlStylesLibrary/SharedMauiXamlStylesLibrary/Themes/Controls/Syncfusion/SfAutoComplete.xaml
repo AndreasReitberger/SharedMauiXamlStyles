@@ -16,7 +16,8 @@
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
+        <!-- Seems to cause a crash -->
+        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
         <Setter Property="Margin" Value="4,2"/>
         <!-- 
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -38,7 +39,8 @@
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
+        <!-- Seems to cause a crash -->
+        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
         <Setter Property="Margin" Value="4,2"/>
         <!--
         <Setter Property="VisualStateManager.VisualStateGroups">
