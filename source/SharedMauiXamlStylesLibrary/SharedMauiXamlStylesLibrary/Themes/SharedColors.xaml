@@ -118,7 +118,7 @@
     <Color x:Key="Dark_TaptemGridBackground">#1A202C</Color>
     <Color x:Key="Dark_PanelBackground">#1A202C</Color>
 
-    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource PrimaryColor}"/>
     <SolidColorBrush x:Key="LightBrush" Color="{StaticResource Light}"/>
     <SolidColorBrush x:Key="DarkBrush" Color="{StaticResource Dark}"/>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
