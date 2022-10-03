@@ -8,6 +8,7 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <Style TargetType="listView:SfListView">
         <!--<Setter Property="SelectionBackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}" />-->
@@ -16,5 +17,12 @@
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
             </Trigger>
         </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ListViewDeleteEditSwipeableStyle" TargetType="listView:SfListView">
+        <Setter Property="AllowSwiping" Value="True" />
+        <Setter Property="SwipeThreshold" Value="70" />
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteSwipeTemplate}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource EditSwipeTemplate}" />
     </Style>
 </ResourceDictionary>
