@@ -3,6 +3,7 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Themes.ItemTemplates.ListViewItemTemplates"
     
     xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedMauiCoreLibrary"
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
@@ -13,7 +14,7 @@
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
-    
+
     <DataTemplate x:Key="ProFeatureItemTemplate" x:DataType="documentation:ProVersionFeature">
         <ViewCell>
             <Grid 
@@ -128,7 +129,7 @@
             </Grid>
         </ViewCell>
     </DataTemplate>
-    
+
     <!-- Localization -->
     <DataTemplate x:Key="LanguageItemTemplate" x:DataType="language:LocalizationInfo">
         <ViewCell>
@@ -182,7 +183,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="{OnIdiom Tablet=80, Default=60}" />
                 </Grid.RowDefinitions>
- 
+
                 <!-- Flag -->
                 <Image 
                     HeightRequest="24"                                          
@@ -215,7 +216,7 @@
             </Grid>
         </ViewCell>
     </DataTemplate>
-    
+
     <!-- Documentation -->
     <DataTemplate x:Key="ChangelogItemTemplate" x:DataType="documentation:ChangelogInfo">
         <ViewCell>

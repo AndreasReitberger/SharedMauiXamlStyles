@@ -9,6 +9,9 @@
     <MauiXaml Update="Themes\Controls\Border.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Core\EnhancedListView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\Controls\DatePicker.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -75,6 +78,9 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Syncfusion\SfCartesianChart.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\Controls\TimePicker.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -114,7 +120,16 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Themes\SharedColors.xaml">
@@ -127,9 +142,6 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Themes\DefaultTheme.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

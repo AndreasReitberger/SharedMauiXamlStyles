@@ -3,6 +3,7 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Themes.ItemTemplates.ListViewSwipeTemplates"
     
     xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedMauiCoreLibrary"
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
@@ -13,7 +14,7 @@
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
-        
+
     <!-- Swipe Templates -->
 
     <DataTemplate x:Key="DeleteSwipeTemplate">
@@ -59,7 +60,7 @@
             </Grid>
         </ViewCell>
     </DataTemplate>
-    
+
     <DataTemplate x:Key="DuplicateEditDeleteSwipeRightTemplate">
         <ViewCell>
             <Border
@@ -139,5 +140,5 @@
             </Border>
         </ViewCell>
     </DataTemplate>
-   
+
 </ResourceDictionary>

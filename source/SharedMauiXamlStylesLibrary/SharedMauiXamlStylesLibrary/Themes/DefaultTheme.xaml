@@ -9,6 +9,8 @@
         <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
 
+        <ResourceDictionary Source="/Themes/Controls/Core/EnhancedListView.xaml" />
+        
         <ResourceDictionary Source="/Themes/Controls/ActivityIndicator.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Border.xaml" />
         <ResourceDictionary Source="/Themes/Controls/BoxView.xaml" />
@@ -38,6 +40,8 @@
         <ResourceDictionary Source="/Themes/Controls/TimePicker.xaml" />
 
         <!-- Item Templates -->
+        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewGroupHeaderTemplates.xaml" />
+        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewHeaderTemplates.xaml" />
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewItemTemplates.xaml" />
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
         
@@ -45,7 +49,6 @@
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBorder.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfButtons.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCardView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCharts.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularProgressBar.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularGauge.xaml" />      
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfGradientView.xaml" />
@@ -60,6 +63,7 @@
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCartesianChart.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfComboBox.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfListView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRadialGauge.xaml" />

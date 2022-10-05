@@ -21,7 +21,7 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.4</Version>
+		<Version>1.0.5</Version>
 		<Title>MAUI Shared Styles Library</Title>
 		<Copyright>Andreas Reitberger</Copyright>
 		<PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
@@ -82,6 +82,18 @@
 	
 
 	<ItemGroup>
+	  <Compile Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
+	    <DependentUpon>ListViewGroupHeaderTemplates.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml.cs">
+	    <DependentUpon>ListViewHeaderTemplates.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
+	    <DependentUpon>ListViewSwipeTemplates.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
 	  <Compile Update="Themes\SharedColors.xaml.cs">
 	    <DependentUpon>SharedColors.xaml</DependentUpon>
 	  </Compile>
@@ -96,6 +108,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Themes\Controls\Border.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Core\EnhancedListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\DatePicker.xaml">
@@ -165,6 +180,9 @@
 	  <MauiXaml Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Themes\Controls\Syncfusion\SfCartesianChart.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\TimePicker.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -207,7 +225,16 @@
 	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedColors.xaml">
@@ -221,9 +248,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
