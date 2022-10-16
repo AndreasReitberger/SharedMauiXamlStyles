@@ -37,15 +37,15 @@
     </Style>
     <!--  Common style for WarningGrid  -->
     <Style x:Key="WarningGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Yellow}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Yellow}" />
     </Style>
     <!--  Common style for ErrorGrid  -->
     <Style x:Key="CriticalErrorGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource Red}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
     </Style>
     <!--  Common style for SettingsGrid  -->
     <Style x:Key="DefaultPanelGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
     </Style>
     <!--  Common style for ModalGrid  -->
     <Style x:Key="ModalPanelGridStyle" TargetType="Grid">

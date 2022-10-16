@@ -92,8 +92,17 @@
     </Style>
 
     <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
-        <Setter Property="TextColor" Value="{DynamicResource HyperLink}" />
+        <Setter Property="Margin" Value="4,6" />
+        <Setter Property="TextColor" Value="{StaticResource Blue}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="FontSize" Value="Caption" />
+    </Style>
+
+    <Style x:Key="LinkRoundButton" TargetType="Button" BasedOn="{StaticResource LinkButton}">
+        <Setter Property="BorderColor" Value="{StaticResource Blue}" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="CornerRadius" Value="22" />
     </Style>
 
     <Style x:Key="RoundIconButtonStyle" BasedOn="{StaticResource IconButtonStyle}" TargetType="Button">
@@ -108,7 +117,7 @@
 
     <Style x:Key="RoundedLongButtonStyle" TargetType="Button">
         <Setter Property="Margin" Value="20" />
-        <Setter Property="TextColor" Value="{DynamicResource White}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />
         <Setter Property="FontAttributes" Value="Bold" />
@@ -123,7 +132,7 @@
                 <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="True" TargetType="Button">
-                <Setter Property="TextColor" Value="{DynamicResource White}" />
+                <Setter Property="TextColor" Value="{StaticResource White}" />
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -166,9 +175,9 @@
 
     <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
         <Setter Property="Text" Value="{StaticResource MaterialDesign_HandRight}" />
-        <Setter Property="TextColor" Value="{DynamicResource White}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Red}" />
-        <Setter Property="BorderColor" Value="{DynamicResource Yellow}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
+        <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
         <Setter Property="BorderWidth" Value="3" />
         <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />

@@ -9,8 +9,7 @@
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"
     
-    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"    
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
@@ -30,13 +29,13 @@
                 <!-- Check icon -->
                 <Border
                     Style="{StaticResource ProfileBorderStyle}"
-                    BackgroundColor="{DynamicResource LightGreen}"
+                    BackgroundColor="{StaticResource LightGreen}"
                     Margin="0"
                     >
                     <Label 
                         Style="{StaticResource IconLabelStyle}"
                         Text="{StaticResource Sent}"
-                        TextColor="{DynamicResource White}"
+                        TextColor="{StaticResource White}"
                         />
                 </Border>
 
@@ -74,22 +73,22 @@
                                 <!-- Info -->
                                 <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Info">
                                     <Setter Property="Text" Value="{StaticResource MaterialDesign_InformationOutline}"/>
-                                    <Setter Property="TextColor" Value="{DynamicResource Blue}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource Blue}"/>
                                 </DataTrigger>
                                 <!-- Alert -->
                                 <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Warning">
                                     <Setter Property="Text" Value="{StaticResource MaterialDesign_AlertCircleOutline}"/>
-                                    <Setter Property="TextColor" Value="{DynamicResource Yellow}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource Yellow}"/>
                                 </DataTrigger>
                                 <!-- Error -->
                                 <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Critical">
                                     <Setter Property="Text" Value="{StaticResource MaterialDesign_CloseCircleOutline}"/>
-                                    <Setter Property="TextColor" Value="{DynamicResource Red}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource Red}"/>
                                 </DataTrigger>
                                 <!-- Performance -->
                                 <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Performance">
                                     <Setter Property="Text" Value="{StaticResource MaterialDesign_Speedometer}"/>
-                                    <Setter Property="TextColor" Value="{DynamicResource LightGreen}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource LightGreen}"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>

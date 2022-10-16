@@ -73,7 +73,7 @@
     </Style>
 
     <Style x:Key="LinkLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
-        <Setter Property="TextColor" Value="{DynamicResource HyperLink}"/>
+        <Setter Property="TextColor" Value="{StaticResource Blue}"/>
     </Style>
 
     <!-- PrimaryColor Label -->
@@ -88,13 +88,13 @@
 
     <!-- Warning (on yellow background )-->
     <Style x:Key="WarningLabelStyle" TargetType="Label" BasedOn="{StaticResource MediumLabelStyle}">
-        <Setter Property="TextColor" Value="{DynamicResource Black}"/>
+        <Setter Property="TextColor" Value="{StaticResource Black}"/>
         <Setter Property="LineBreakMode" Value="WordWrap"/>
     </Style>
 
     <!-- Error (on red background )-->
     <Style x:Key="ErrorLabelStyle" TargetType="Label" BasedOn="{StaticResource WarningLabelStyle}">
-        <Setter Property="TextColor" Value="{DynamicResource White}"/>
+        <Setter Property="TextColor" Value="{StaticResource White}"/>
     </Style>
 
     <!-- Shell Flyout Menu Label -->

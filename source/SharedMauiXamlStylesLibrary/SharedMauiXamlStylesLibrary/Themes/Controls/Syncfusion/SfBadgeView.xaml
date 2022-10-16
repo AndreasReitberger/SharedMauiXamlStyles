@@ -18,7 +18,7 @@
                     Offset="12,-20"
                     Type="None"
                     Background="{DynamicResource PrimaryColor}"
-                    TextColor="{DynamicResource White}"
+                    TextColor="{StaticResource White}"
                     />
             </Setter.Value>
         </Setter>
@@ -32,8 +32,8 @@
                     Position="BottomRight"
                     Offset="12,-20"
                     Type="None"
-                    Background="{DynamicResource HyperLink}"
-                    TextColor="{DynamicResource White}"
+                    Background="{StaticResource Blue}"
+                    TextColor="{StaticResource White}"
                     />
             </Setter.Value>
         </Setter>
