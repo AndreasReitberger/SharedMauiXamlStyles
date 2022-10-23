@@ -3,6 +3,8 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
@@ -10,10 +12,14 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <!----> <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  /> 
+
+    <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
+    <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" />
         <Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -33,6 +39,18 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
+        <!--
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Style.Triggers>
+            <DataTrigger
+                TargetType="Button"
+                Binding="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToLightForgroundConverter}}"
+                Value="True"
+                >
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+            </DataTrigger>
+        </Style.Triggers>
+        -->
     </Style>
     <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}"/>
 
@@ -117,7 +135,7 @@
 
     <Style x:Key="RoundedLongButtonStyle" TargetType="Button">
         <Setter Property="Margin" Value="20" />
-        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />
         <Setter Property="FontAttributes" Value="Bold" />
@@ -134,6 +152,13 @@
             <Trigger Property="IsEnabled" Value="True" TargetType="Button">
                 <Setter Property="TextColor" Value="{StaticResource White}" />
             </Trigger>
+            <DataTrigger
+                TargetType="Button"
+                Binding="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToLightForgroundConverter}}"
+                Value="True"
+                >
+                <Setter Property="TextColor" Value="{StaticResource White}" />
+            </DataTrigger>
         </Style.Triggers>
     </Style>
 
