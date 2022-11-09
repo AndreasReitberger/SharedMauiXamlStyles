@@ -12,6 +12,14 @@
     <!--  Common style for TapNavigationGrid  -->
     <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
         <Setter Property="RowSpacing" Value="0"/>
+        <!-- Seems to be needed since 7.x.x -->
+        <Setter Property="RowDefinitions">
+            <Setter.Value>
+                <RowDefinitionCollection>
+                    <RowDefinition Height="Auto" />
+                </RowDefinitionCollection>
+            </Setter.Value>
+        </Setter>
         <Setter Property="IsAnimated" Value="False"/>
         <Setter Property="ColumnSpacing" Value="0"/>
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
@@ -24,6 +32,14 @@
     <!--  Common style for SettingsGrid  -->
     <Style x:Key="DefaultGridStyle" TargetType="Grid">
         <Setter Property="RowSpacing" Value="0"/>
+        <!-- Seems to be needed since 7.x.x -->
+        <Setter Property="RowDefinitions">
+            <Setter.Value>
+                <RowDefinitionCollection>
+                    <RowDefinition Height="Auto" />
+                </RowDefinitionCollection>
+            </Setter.Value>
+        </Setter>
         <Setter Property="ColumnSpacing" Value="0"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="Grid">

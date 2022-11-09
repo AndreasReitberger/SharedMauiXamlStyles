@@ -25,6 +25,7 @@
                         <VisualState.Setters>
                             <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource LightGreen}, Dark={StaticResource LightGreen}}" />
                             <Setter Property="ThumbColor" Value="{StaticResource White}" />
+                            <!--<Setter Property="ThumbColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />-->
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Off">
