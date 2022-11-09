@@ -26,4 +26,9 @@
         <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteSwipeTemplate}" />
         <Setter Property="EndSwipeTemplate" Value="{StaticResource EditSwipeTemplate}" />
     </Style>
+
+    <Style x:Key="ListViewDeleteEditGestureSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteEditSwipeableStyle}">
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource EditDeleteGestureSwipeTemplate}" />
+    </Style>
 </ResourceDictionary>
