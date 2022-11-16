@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Themes.ItemTemplates.GeneralItemTemplates"
+    
+    xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedMauiCoreLibrary"
+    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
+    xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"    
+    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+    >
+    <converters:UriToStringConverter x:Key="UriToStringConverter" />
+
+    <DataTemplate x:Key="TutorialStepItemTemplate" x:DataType="documentation:TutorialStep">
+        <Grid 
+            Padding="8,6"
+            ColumnSpacing="4"
+            RowSpacing="4"
+            RowDefinitions="*,64,Auto"
+            >
+            <!-- BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" -->
+            <Frame
+                Margin="20,16"
+                BorderColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}"
+                >
+                <Image
+                    Margin="4"
+                    Source="{Binding Image, Converter={StaticResource UriToStringConverter}}"
+                    Aspect="AspectFit"
+                    />
+            </Frame>
+            <Label 
+                Grid.Row="1"
+                Text="{Binding Heading}"
+                Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                VerticalTextAlignment="End"
+                HorizontalTextAlignment="Center"
+                />
+
+            <Label
+                Grid.Row="2"
+                Style="{StaticResource LabelStyle}"
+                Text="{Binding Content}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Margin="4,12"
+                />
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

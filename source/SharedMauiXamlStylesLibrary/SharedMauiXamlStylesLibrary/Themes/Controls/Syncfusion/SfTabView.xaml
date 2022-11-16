@@ -50,19 +50,19 @@
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemStyle}"/>
     <!--
     <Style x:Key="DefaultTabViewItemDefaultStyle" TargetType="tabView:SfTabItem">
-        <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={DynamicResource Black}, Dark={DynamicResource White}}"/>
+        <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
         <Setter Property="SelectionColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TitleFontSize" Value="{OnIdiom Desktop=36, Tablet=14, Default=12}"/>
         <Setter Property="TitleFontFamily" Value="{StaticResource MontserratMedium}"/>
         <Setter Property="FontIconFontSize" Value="{OnIdiom Desktop=36, Tablet=20, Default=16}"/>
-        <Setter Property="FontIconFontColor" Value="{AppThemeBinding Light={DynamicResource Gray800}, Dark={DynamicResource Gray200}}"/>
+        <Setter Property="FontIconFontColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="FontIconFontFamily" Value="{StaticResource MaterialDesignIcons}"/>
     </Style>
 
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemDefaultStyle}"/>
 
     <Style x:Key="ChildTabViewItemDefaultStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemDefaultStyle}">
-        <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={DynamicResource Gray800}, Dark={DynamicResource Gray200}}"/>
+        <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="TitleFontSize" Value="{OnIdiom Desktop=24, Tablet=12, Default=10}"/>
         <Setter Property="FontIconFontSize" Value="{OnIdiom Desktop=24, Tablet=18, Default=14}"/>
     </Style>

@@ -126,6 +126,9 @@
     <MauiXaml Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\ItemTemplates\GeneralItemTemplates.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
