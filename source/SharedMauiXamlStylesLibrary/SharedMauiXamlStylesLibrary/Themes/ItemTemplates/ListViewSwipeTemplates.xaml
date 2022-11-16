@@ -36,15 +36,13 @@
 
     <DataTemplate x:Key="DeleteGestureSwipeTemplate">
         <ViewCell>
-            <Grid
-                BackgroundColor="{StaticResource Red}"
-                >
                 <Label
                     Style="{StaticResource IconLabelStyle}"
                     Text="{StaticResource Delete}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
+                    BackgroundColor="{StaticResource Red}"
                     Margin="0"
                     >
                     <Label.GestureRecognizers>
@@ -55,7 +53,12 @@
                             />
                     </Label.GestureRecognizers>
                 </Label>
+            <!--
+            <Grid
+                BackgroundColor="{StaticResource Red}"
+                >
             </Grid>
+            -->
         </ViewCell>
     </DataTemplate>
 
@@ -205,7 +208,7 @@
                 <Border
                     Margin="0,8"
                     BackgroundColor="{DynamicResource PrimaryColor}"
-                    Stroke="{AppThemeBinding Light={DynamicResource Gray100}, Dark={DynamicResource Gray900}}"
+                    Stroke="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
                     StrokeThickness="0"
                     >
                     <Border.StrokeShape>

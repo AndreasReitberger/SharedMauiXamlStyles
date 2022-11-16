@@ -68,16 +68,16 @@
 	
 
 	<ItemGroup>
-	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.5" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.3.56" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.3.56" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.7" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.3.57" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.3.57" />
 	</ItemGroup>
 	
 
@@ -87,6 +87,10 @@
 	  </Compile>
 	  <Compile Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml.cs">
 	    <DependentUpon>ListViewHeaderTemplates.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Themes\ItemTemplates\GeneralItemTemplates.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>GeneralItemTemplates.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
 	    <DependentUpon>ListViewSwipeTemplates.xaml</DependentUpon>
@@ -229,6 +233,10 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\ItemTemplates\GeneralItemTemplates.xaml">
+	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml">

@@ -20,12 +20,8 @@
                 Padding="8,6"
                 ColumnSpacing="4"
                 RowSpacing="4"
+                ColumnDefinitions="Auto,*"
                 >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
                 <!-- Check icon -->
                 <Border
                     Style="{StaticResource ProfileBorderStyle}"
@@ -200,7 +196,7 @@
                     <Label 
                         LineBreakMode="NoWrap" 
                         Style="{StaticResource PrimaryLabelStyle}" 
-                        TextColor="{DynamicResource White}"
+                        TextColor="{StaticResource White}"
                         Text="{Binding Name}"
                         />
                     <!-- Translator -->
@@ -208,7 +204,7 @@
                         Style="{StaticResource LabelStyle}" 
                         LineBreakMode="WordWrap" 
                         Text="{Binding Translator}"
-                        TextColor="{DynamicResource White}"
+                        TextColor="{StaticResource White}"
                         FontSize="12"
                         />
                 </StackLayout>
@@ -232,7 +228,7 @@
                     Text="{Binding Changelog}"
                     />
                 <Border 
-                    BackgroundColor="{AppThemeBinding Light={DynamicResource Gray200}, Dark={DynamicResource Gray800}}" 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
                     Style="{StaticResource ProfileBorderStyle}"
                     Grid.Column="1"
                     VerticalOptions="Center"

@@ -23,8 +23,8 @@
                                     <sliders:SliderTrackStyle
                                         ActiveSize="8" 
                                         InactiveSize="6" 
-                                        ActiveFill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}" 
-                                        InactiveFill="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}"
+                                        ActiveFill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource LightGray}}" 
+                                        InactiveFill="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}"
                                         />
                                 </Setter.Value>
                             </Setter>
@@ -32,8 +32,8 @@
                                 <Setter.Value>
                                     <sliders:SliderThumbStyle
                                         Radius = "13"
-                                        Fill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}"
-                                        Stroke="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource LightGray}}"
+                                        Fill="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource LightGray}}"
+                                        Stroke="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource LightGray}}"
                                         StrokeThickness="3"
                                         />
                                 </Setter.Value>
@@ -41,8 +41,8 @@
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
                                     <sliders:SliderLabelStyle
-                                        ActiveTextColor = "{AppThemeBinding Light={DynamicResource Black}, Dark={DynamicResource White}}"
-                                        InactiveTextColor="{AppThemeBinding Light={DynamicResource Gray600}, Dark={DynamicResource Gray400}}"
+                                        ActiveTextColor = "{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                                        InactiveTextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"
                                         ActiveFontSize="16"
                                         InactiveFontSize="14"
                                         />
@@ -57,8 +57,8 @@
                                     <sliders:SliderTrackStyle
                                         ActiveSize="10" 
                                         InactiveSize="8"
-                                        ActiveFill="{AppThemeBinding Light={DynamicResource DarkGray}, Dark={DynamicResource LightGray}}" 
-                                        InactiveFill="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        ActiveFill="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" 
+                                        InactiveFill="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"
                                         />
                                 </Setter.Value>
                             </Setter>
@@ -66,8 +66,8 @@
                                 <Setter.Value>
                                     <sliders:SliderThumbStyle
                                         Radius = "13"
-                                        Fill="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
-                                        Stroke="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        Fill="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"
+                                        Stroke="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"
                                         StrokeThickness="3"
                                         />
                                 </Setter.Value>
@@ -75,8 +75,8 @@
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
                                     <sliders:SliderLabelStyle
-                                        ActiveTextColor = "{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
-                                        InactiveTextColor="{AppThemeBinding Light={DynamicResource LightGray}, Dark={DynamicResource DarkGray}}"
+                                        ActiveTextColor = "{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"
+                                        InactiveTextColor="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"
                                         ActiveFontSize="14"
                                         InactiveFontSize="16"
                                         />
