@@ -6,6 +6,7 @@
     >
     <!-- Keys not found if added in a separat file     -->
     <Color x:Key="PrimaryColor">#B02F35</Color>
+    <Color x:Key="PrimaryColorLight">#B02F35</Color>
 
     <Color x:Key="Light">#DFD8F7</Color>
     <Color x:Key="Dark">#B02F35</Color>

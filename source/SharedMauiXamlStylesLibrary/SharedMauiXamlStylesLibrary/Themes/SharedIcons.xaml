@@ -362,4 +362,5 @@
     <x:String x:Key="MaterialDesign_CursorPointer">&#xf01bd;</x:String>
     <x:String x:Key="MaterialDesign_TemperatureCelsius">&#xf0504;</x:String>
     <x:String x:Key="MaterialDesign_Patreon">&#xf0882;</x:String>
+    <x:String x:Key="MaterialDesign_Equal">&#xf01fc;</x:String>
 </ResourceDictionary>
