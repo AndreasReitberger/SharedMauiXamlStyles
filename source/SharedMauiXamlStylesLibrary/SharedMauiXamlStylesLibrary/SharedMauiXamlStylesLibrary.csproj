@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<!--
-		<TargetFrameworks>net7.0;net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net7.0-windows10.0.19041</TargetFrameworks>
-		-->
 		<TargetFrameworks>net7.0;net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<UseMaui>true</UseMaui>
@@ -36,50 +32,24 @@
 		<None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
-	<!--
-	<ItemGroup>
-	  <None Remove="Resources\Fonts\FontAwesome5Brands.otf" />
-	  <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
-	  <None Remove="Resources\Fonts\FontAwesome5Solid.otf" />
-	  <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
-	  <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
-	  <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
-	  <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
-	  <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
-	  <None Remove="Resources\Fonts\UIFontIcons.ttf" />
-	</ItemGroup>
-	-->
-
 	<ItemGroup>
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
-		<!--
-	  <MauiFont Include="Resources\Fonts\FontAwesome5Brands.otf" />
-	  <MauiFont Include="Resources\Fonts\FontAwesome5Regular.otf" />
-	  <MauiFont Include="Resources\Fonts\FontAwesome5Solid.otf" />
-	  <MauiFont Include="Resources\Fonts\materialdesignicons-webfont.ttf" />
-	  <MauiFont Include="Resources\Fonts\Montserrat-Bold.ttf" />
-	  <MauiFont Include="Resources\Fonts\Montserrat-Medium.ttf" />
-	  <MauiFont Include="Resources\Fonts\Montserrat-Regular.ttf" />
-	  <MauiFont Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
-	  <MauiFont Include="Resources\Fonts\UIFontIcons.ttf" />
-	  -->
 	</ItemGroup>
 	
 
 	<ItemGroup>
-	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.7" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.3.57" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.3.57" />
-	</ItemGroup>
-	
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.8" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.3.59" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.3.59" />
+	</ItemGroup>	
 
 	<ItemGroup>
 	  <Compile Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">

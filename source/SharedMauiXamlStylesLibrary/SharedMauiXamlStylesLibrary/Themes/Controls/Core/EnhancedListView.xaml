@@ -20,11 +20,19 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="ListViewDeleteEditSwipeableStyle" TargetType="controls:EnhancedListView">
+    <Style x:Key="ListViewDeleteSwipeableStyle" TargetType="controls:EnhancedListView">
         <Setter Property="AllowSwiping" Value="True" />
         <Setter Property="SwipeThreshold" Value="70" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DeleteSwipeTemplate}" />
+    </Style>
+
+    <Style x:Key="ListViewDeleteEditSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteSwipeableStyle}">
         <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteSwipeTemplate}" />
         <Setter Property="EndSwipeTemplate" Value="{StaticResource EditSwipeTemplate}" />
+    </Style>
+
+    <Style x:Key="ListViewDeleteGestureSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteSwipeableStyle}">
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
     </Style>
 
     <Style x:Key="ListViewDeleteEditGestureSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteEditSwipeableStyle}">
