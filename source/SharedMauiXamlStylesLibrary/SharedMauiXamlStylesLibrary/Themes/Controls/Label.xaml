@@ -129,17 +129,21 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="FontSize" Value="{OnPlatform 
             Android={OnIdiom Phone=18, Default=22}, 
-            iOS={OnIdiom Phone=20, Default=24}, 
-            Default={OnIdiom Phone=20, Default=24}}"/>
+            Default={OnIdiom Phone=20, Default=24}}"
+                />
         <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
     </Style>
 
     <Style x:Key="PrimaryHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource HeadlineLabelStyle}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="FontSize" Value="{OnPlatform 
+            Android={OnIdiom Phone=14, Default=18}, 
+            Default={OnIdiom Phone=16, Default=20}}"
+                />
     </Style>
 
-    <Style x:Key="TitleViewHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource HeadlineLabelStyle}">
+    <Style x:Key="TitleViewHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource PrimaryHeadlineLabelStyle}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
     </Style>
 
