@@ -20,7 +20,11 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" />
-        <Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />-->
+        <Setter Property="FontSize" Value="{OnPlatform 
+            Android={OnIdiom Phone=14, Default=18}, 
+            Default={OnIdiom Phone=16, Default=20}}"
+                />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
@@ -119,16 +123,16 @@
     <Style x:Key="LinkRoundButton" TargetType="Button" BasedOn="{StaticResource LinkButton}">
         <Setter Property="BorderColor" Value="{StaticResource Blue}" />
         <Setter Property="BorderWidth" Value="2" />
-        <Setter Property="HeightRequest" Value="44" />
-        <Setter Property="CornerRadius" Value="22" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="CornerRadius" Value="25" />
     </Style>
 
     <Style x:Key="RoundIconButtonStyle" BasedOn="{StaticResource IconButtonStyle}" TargetType="Button">
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="BorderWidth" Value="1" />
-        <Setter Property="CornerRadius" Value="22" />
-        <Setter Property="WidthRequest" Value="44" />
-        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="CornerRadius" Value="25" />
+        <Setter Property="WidthRequest" Value="50" />
+        <Setter Property="HeightRequest" Value="50" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
     </Style>
@@ -137,10 +141,14 @@
         <Setter Property="Margin" Value="20" />
         <Setter Property="TextColor" Value="{StaticResource Black}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />-->
+        <Setter Property="FontSize" Value="{OnPlatform 
+            Android={OnIdiom Phone=12, Default=16}, 
+            Default={OnIdiom Phone=16, Default=20}}"
+                />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Phone=45, Default=45}" />
-        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Phone=20, Default=20}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Default=20}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=300, Tablet=300, Phone=250, Default=250}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="BorderWidth" Value="0" />

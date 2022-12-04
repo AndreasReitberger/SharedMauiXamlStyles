@@ -31,6 +31,7 @@
                     Margin="4"
                     Source="{Binding Image, Converter={StaticResource UriToStringConverter}}"
                     Aspect="AspectFit"
+                    SemanticProperties.Description="{Binding Heading}"
                     />
             </Frame>
             <Label 
@@ -39,6 +40,8 @@
                 Style="{StaticResource PrimaryHeadlineLabelStyle}"
                 VerticalTextAlignment="End"
                 HorizontalTextAlignment="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="{Binding Heading}"
                 />
 
             <Label
@@ -49,6 +52,7 @@
                 HorizontalTextAlignment="Center"
                 LineBreakMode="WordWrap"
                 Margin="4,12"
+                SemanticProperties.Description="{Binding Content}"
                 />
         </Grid>
     </DataTemplate>

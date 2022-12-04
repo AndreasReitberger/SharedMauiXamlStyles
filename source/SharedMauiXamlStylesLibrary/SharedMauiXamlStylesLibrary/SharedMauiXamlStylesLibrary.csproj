@@ -17,7 +17,7 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.6</Version>
+		<Version>1.0.7</Version>
 		<Title>MAUI Shared Styles Library</Title>
 		<Copyright>Andreas Reitberger</Copyright>
 		<PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
