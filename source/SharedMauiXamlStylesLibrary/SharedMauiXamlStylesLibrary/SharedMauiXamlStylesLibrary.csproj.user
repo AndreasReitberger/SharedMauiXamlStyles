@@ -120,6 +120,9 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\ItemTemplates\ShellItemTemplates.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

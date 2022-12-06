@@ -52,6 +52,9 @@
 	</ItemGroup>	
 
 	<ItemGroup>
+	  <Compile Update="Themes\ItemTemplates\ShellItemTemplates.xaml.cs">
+	    <DependentUpon>ShellItemTemplates.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
 	    <DependentUpon>ListViewGroupHeaderTemplates.xaml</DependentUpon>
 	  </Compile>
@@ -197,6 +200,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\ItemTemplates\ShellItemTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml">
