@@ -59,9 +59,9 @@
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfNumericUpDowns.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPicker.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPullToRefresh.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRotator.xaml" /> 
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRotator.xaml" />
         -->
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />

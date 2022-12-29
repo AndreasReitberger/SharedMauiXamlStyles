@@ -1,4 +1,6 @@
-﻿namespace AndreasReitberger.Shared
+﻿using System.Collections.Generic;
+
+namespace AndreasReitberger.Shared
 {
     public class SharedFonts
     {

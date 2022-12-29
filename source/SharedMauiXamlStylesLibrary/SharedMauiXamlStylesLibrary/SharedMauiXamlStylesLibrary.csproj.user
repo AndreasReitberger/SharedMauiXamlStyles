@@ -81,6 +81,9 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfCartesianChart.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\Controls\Syncfusion\SfTextInputLayout.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\Controls\TimePicker.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

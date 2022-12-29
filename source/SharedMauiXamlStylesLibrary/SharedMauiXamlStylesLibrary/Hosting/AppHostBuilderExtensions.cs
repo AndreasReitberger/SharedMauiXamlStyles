@@ -1,6 +1,5 @@
 ﻿using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Syncfusion.Maui.Core.Hosting;
-using Syncfusion.Maui.ListView.Hosting;
 
 namespace AndreasReitberger.Shared.Hosting
 {
@@ -27,7 +26,7 @@ namespace AndreasReitberger.Shared.Hosting
             builder
                 .UseMauiCompatibility()
                 .ConfigureSyncfusionCore()
-                .ConfigureSyncfusionListView();
+                ;
             return builder;
         }
     }
