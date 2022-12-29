@@ -18,7 +18,7 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.7-preview</Version>
+		<Version>1.0.7.1-preview</Version>
 		<Title>MAUI Shared Styles Library</Title>
 		<Copyright>Andreas Reitberger</Copyright>
 		<PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
@@ -74,6 +74,9 @@
 	  </Compile>
 	  <Compile Update="Themes\SharedColors.xaml.cs">
 	    <DependentUpon>SharedColors.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Themes\SharedIcons.Fluent.xaml.cs">
+	    <DependentUpon>SharedIcons.Fluent.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Themes\SharedIcons.xaml.cs">
 	    <DependentUpon>SharedIcons.xaml</DependentUpon>
@@ -226,6 +229,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedColors.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\SharedIcons.Fluent.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedIcons.xaml">
