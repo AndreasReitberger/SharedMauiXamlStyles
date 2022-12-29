@@ -1,4 +1,6 @@
-﻿namespace AndreasReitberger.Shared.Enums
+﻿using System.ComponentModel;
+
+namespace AndreasReitberger.Shared.Enums
 {
     public enum FluentFontIcon
     {
