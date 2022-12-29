@@ -207,7 +207,7 @@
     </Style>
 
     <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
-        <Setter Property="Text" Value="{StaticResource MaterialDesign_HandRight}" />
+        <Setter Property="Text" Value="{StaticResource MaterialDesign_HandFrontRight}" />
         <Setter Property="TextColor" Value="{StaticResource White}" />
         <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
