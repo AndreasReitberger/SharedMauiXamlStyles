@@ -5,6 +5,15 @@ namespace AndreasReitberger.Shared.Hosting
 {
     public static class AppHostBuilderExtensions
     {
+        public static MauiAppBuilder InitializeSharedMauiStyles(this MauiAppBuilder builder)
+        {
+            builder
+                .RegisterSharedFonts()
+                .ConfigureSyncfusionAddons()
+                ;
+            return builder;
+        }
+
         public static MauiAppBuilder RegisterSharedFonts(this MauiAppBuilder builder)
         {
             builder
@@ -16,7 +25,10 @@ namespace AndreasReitberger.Shared.Hosting
                         // Avoid duplicates
                         FontDescriptor fontDescriptor = fonts.FirstOrDefault(f => f.Filename == font.Key);
                         if (fontDescriptor == null)
-                            fonts.AddFont(font.Key, font.Value);
+                        {
+                            fonts.AddEmbeddedResourceFont(typeof(AppHostBuilderExtensions).Assembly, font.Key);
+                            //fonts.AddFont(font.Key, font.Value);
+                        }
                     }
                 });
             return builder;
