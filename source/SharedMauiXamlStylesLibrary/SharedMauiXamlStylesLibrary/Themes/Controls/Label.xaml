@@ -159,8 +159,11 @@
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="18" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontSize" Value="{OnPlatform 
+            Android={OnIdiom Phone=12, Default=16}, 
+            Default={OnIdiom Phone=14, Default=18}}"
+                />
     </Style>
 
     <!--  Common style for option labels  -->
@@ -179,6 +182,10 @@
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.5, iOS=-1}" />
+        <Setter Property="FontSize" Value="{OnPlatform 
+            Android={OnIdiom Phone=12, Default=16}, 
+            Default={OnIdiom Phone=14, Default=18}}"
+                />
     </Style>
 
     <!--  Common style for swipe template content button control  -->
