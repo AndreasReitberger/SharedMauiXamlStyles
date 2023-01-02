@@ -14,7 +14,8 @@
 
     <Style x:Key="DefaultTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
         <Setter Property="ContainerType" Value="Outlined"/>
-        <!--<Setter Property="ContainerBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100},Dark={StaticResource Gray900}}"/>-->
+        <Setter Property="LeadingViewPosition" Value="Inside"/>
+        <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray100},Dark={StaticResource Gray900}}"/>
         <Setter Property="HelperLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
