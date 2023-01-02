@@ -38,6 +38,11 @@
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
     </Style>
 
+    <Style x:Key="TextInputLayoutMaterialIconLabelStyle" TargetType="Label" BasedOn="{StaticResource MaterialSettingsIconLabelStyle}">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
     <Style x:Key="MaterialFontFamilyIconLabelStyle" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=28, Tablet=26, Phone=24, Default=24}"/>
