@@ -138,29 +138,12 @@ namespace AndreasReitberger.Shared.Controls
             }
         }
 
-
         static void OnSearchTextChanged(BindableObject bindable, object oldValue, object newValue)
         {
             //var listView = bindable as EnhancedListView;
             return;
 
         }
-
-        /// <summary>
-        /// Filtering the list view items based on the search text.
-        /// </summary>
-        /// <param name="obj">The list view item</param>
-        /// <returns>Returns the filtered item</returns>
-        /*
-        public virtual bool FilterListView(object obj)
-        {
-            if (Filter == null)
-            {
-                return false;
-            }
-            return true;
-        }
-        */
 
         static void OnDefaultSortDescriptorChanged(BindableObject bindable, object oldValue, object newValue)
         {

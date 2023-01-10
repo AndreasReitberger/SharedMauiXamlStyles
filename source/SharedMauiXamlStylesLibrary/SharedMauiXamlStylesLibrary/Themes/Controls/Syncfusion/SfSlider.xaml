@@ -13,10 +13,18 @@
     <Style TargetType="sliders:SfSlider">
         <Setter Property="Visual" Value="Default" />
         <Setter Property="HeightRequest" Value="70" />
+        <Setter Property="Margin" Value="8,4" />
         <!-- -->
+        <Setter Property="ThumbStyle">
+            <Setter.Value>
+                <sliders:SliderThumbStyle
+                    Radius="8"
+                    />
+            </Setter.Value>
+        </Setter>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
-                <VisualStateGroup>
+                <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Default">
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
@@ -93,7 +101,6 @@
     <Style x:Key="PrimraySliderStyle" TargetType="sliders:SfSlider">
         <Setter Property="ShowLabels" Value="False" />
         <Setter Property="WidthRequest" Value="290" />
-        <Setter Property="HeightRequest" Value="36" />
     </Style>
 
     <Style x:Key="PercentageSliderStyle" TargetType="sliders:SfSlider">

@@ -11,10 +11,32 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    <!-- Docs: https://help.syncfusion.com/maui/cartesian-charts -->
 
+    <Style x:Key="NumericOnlySfCartesianChartStyle" TargetType="chart:SfCartesianChart">
+
+    </Style>
+    
     <Style x:Key="DefaultChartAxisLabelStyle" TargetType="chart:ChartAxisLabelStyle">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+    </Style>
+
+    <Style x:Key="DefaultMajorGridChartLineStyle" TargetType="chart:ChartLineStyle">
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray400}}" />
+    </Style>
+
+    <Style x:Key="DefaultAxisChartLineStyle" TargetType="chart:ChartLineStyle">
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray400}}" />
+    </Style>
+
+    <Style x:Key="DefaultMinorGridChartLineStyle" TargetType="chart:ChartLineStyle">
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray400}}" />
+    </Style>
+
+    <Style x:Key="DefaultMajorChartAxisTickStyle" TargetType="chart:ChartAxisTickStyle">
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="TickSize" Value="10" />
     </Style> 
               
 </ResourceDictionary>

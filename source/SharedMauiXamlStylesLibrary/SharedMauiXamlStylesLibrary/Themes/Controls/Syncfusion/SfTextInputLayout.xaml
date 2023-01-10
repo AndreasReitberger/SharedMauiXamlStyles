@@ -12,15 +12,26 @@
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <!-- Docs: https://help.syncfusion.com/maui/textinputlayout/states-and-colors -->
     <Style x:Key="DefaultTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
         <Setter Property="ContainerType" Value="Outlined"/>
         <Setter Property="LeadingViewPosition" Value="Inside"/>
-        <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray100},Dark={StaticResource Gray900}}"/>
+        <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray100},Dark={StaticResource Gray950}}"/>
+        <Setter Property="HintLabelStyle">
+            <Setter.Value>
+                <inputLayout:LabelStyle
+                    FontSize="12"
+                    FontFamily="{StaticResource MontserratRegular}"
+                    TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
+                    />
+            </Setter.Value>
+        </Setter>
         <Setter Property="HelperLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
                     FontSize="12"
                     FontFamily="{StaticResource MontserratRegular}"
+                    TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
                     />
             </Setter.Value>
         </Setter>
@@ -37,7 +48,7 @@
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray900},Dark={StaticResource Gray100}}"/>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"/>
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Focused">
