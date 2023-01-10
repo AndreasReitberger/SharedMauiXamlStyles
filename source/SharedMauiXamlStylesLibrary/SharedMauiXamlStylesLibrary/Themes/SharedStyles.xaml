@@ -2,16 +2,9 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AndreasReitberger.Shared.DefaultTheme"
+    x:Class="AndreasReitberger.Shared.Styles"
     >
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
-        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
-        <ResourceDictionary Source="/Themes/SharedStyles.xaml" />
-        <ResourceDictionary Source="/Themes/SharedTemplates.xaml" />
-
-        <!-- Replaced by own ResourceDictionary 
         <ResourceDictionary Source="/Themes/Controls/Core/EnhancedListView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/ActivityIndicator.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Border.xaml" />
@@ -40,6 +33,20 @@
         <ResourceDictionary Source="/Themes/Controls/SwipeItem.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Switch.xaml" />
         <ResourceDictionary Source="/Themes/Controls/TimePicker.xaml" />
+        <!--
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBorder.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfButtons.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCardView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularProgressBar.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCircularGauge.xaml" />      
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfGradientView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfMaskedEdit.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfNumericTextInputs.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfNumericUpDowns.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPicker.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfPullToRefresh.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRotator.xaml" />
+        -->
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
@@ -51,14 +58,5 @@
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfSlider.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTabView.xaml" />
-        -->
-        <!-- Item Templates 
-        <ResourceDictionary Source="/Themes/ItemTemplates/GeneralItemTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ShellItemTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewGroupHeaderTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewHeaderTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewItemTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
-        -->
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

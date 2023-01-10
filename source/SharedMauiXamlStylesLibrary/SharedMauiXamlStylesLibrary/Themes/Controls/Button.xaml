@@ -100,7 +100,8 @@
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
-                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+                            <!---<Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />-->
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -116,7 +117,7 @@
     <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Margin" Value="4,6" />
         <Setter Property="TextColor" Value="{StaticResource Blue}" />
-        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="FontSize" Value="Caption" />
     </Style>
 

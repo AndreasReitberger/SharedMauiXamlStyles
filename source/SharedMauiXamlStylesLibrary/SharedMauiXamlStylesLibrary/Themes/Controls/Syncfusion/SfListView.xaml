@@ -19,10 +19,10 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="ListViewDeleteEditSwipeableStyle" TargetType="listView:SfListView">
+    <Style x:Key="ListViewDeleteEditGestureSwipeableStyle" TargetType="listView:SfListView">
         <Setter Property="AllowSwiping" Value="True" />
         <Setter Property="SwipeThreshold" Value="70" />
-        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteSwipeTemplate}" />
-        <Setter Property="EndSwipeTemplate" Value="{StaticResource EditSwipeTemplate}" />
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource EditGestureSwipeTemplate}" />
     </Style>
 </ResourceDictionary>

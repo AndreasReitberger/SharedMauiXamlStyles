@@ -123,6 +123,12 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\SharedTemplates.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Themes\SharedStyles.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\ItemTemplates\ShellItemTemplates.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

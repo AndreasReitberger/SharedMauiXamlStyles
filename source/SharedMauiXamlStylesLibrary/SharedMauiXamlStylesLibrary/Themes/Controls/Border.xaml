@@ -40,10 +40,19 @@
     </Style>
 
     <Style x:Key="PanelCardViewBorderStyle" TargetType="Border" BasedOn="{StaticResource CardViewBorderStyle}">
-        <Setter Property="Margin" Value="4,8"/>
+        <Setter Property="Margin" Value="8"/>
         <Setter Property="StrokeShape">
             <Setter.Value>
                 <RoundRectangle CornerRadius="15" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MinimalPanelCardViewBorderStyle" TargetType="Border" BasedOn="{StaticResource PanelCardViewBorderStyle}">
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="StrokeShape">
+            <Setter.Value>
+                <RoundRectangle CornerRadius="2" />
             </Setter.Value>
         </Setter>
     </Style>
