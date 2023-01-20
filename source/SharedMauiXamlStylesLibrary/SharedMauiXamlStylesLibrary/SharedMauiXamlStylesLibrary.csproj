@@ -18,7 +18,7 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.8-preview</Version>
+		<Version>1.0.9</Version>
 		<Title>MAUI Shared Styles Library</Title>
 		<Copyright>Andreas Reitberger</Copyright>
 		<PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
@@ -53,16 +53,16 @@
 	
 
 	<ItemGroup>
-	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.10-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.4.43" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.4.43" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.11" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.4.44" />
 	</ItemGroup>	
 
 	<ItemGroup>
