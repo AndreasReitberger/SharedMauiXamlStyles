@@ -6,10 +6,10 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
+        <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
+    
     <Style x:Key="DefaultCheckBoxStyle" TargetType="CheckBox">
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />

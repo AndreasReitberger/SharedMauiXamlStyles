@@ -5,14 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
     >
+    <!---->
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
+        <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <!----> <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  /> 
+    
+    <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  /> 
 
     <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
     <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
@@ -208,7 +210,8 @@
     </Style>
 
     <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
-        <Setter Property="Text" Value="{StaticResource MaterialDesign_HandFrontRight}" />
+        <!--<Setter Property="Text" Value="{StaticResource MaterialDesign_HandFrontRight}" />-->
+        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.HandFrontRight}" />
         <Setter Property="TextColor" Value="{StaticResource White}" />
         <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />

@@ -153,12 +153,6 @@
     <MauiXaml Update="Themes\SharedIcons.Syncfusion.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Themes\SharedIcons.Material.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\SharedIcons.Fluent.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="Themes\SharedIcons.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

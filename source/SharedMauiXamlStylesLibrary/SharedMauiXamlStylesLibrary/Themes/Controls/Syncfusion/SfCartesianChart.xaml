@@ -6,11 +6,13 @@
     
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
     >
+    <!---->
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
+        <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    
     <!-- Docs: https://help.syncfusion.com/maui/cartesian-charts -->
 
     <Style x:Key="NumericOnlySfCartesianChartStyle" TargetType="chart:SfCartesianChart">

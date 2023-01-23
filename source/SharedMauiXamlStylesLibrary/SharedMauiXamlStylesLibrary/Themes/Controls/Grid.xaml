@@ -9,6 +9,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    
     <!--  Common style for TapNavigationGrid  -->
     <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
         <Setter Property="RowSpacing" Value="0"/>

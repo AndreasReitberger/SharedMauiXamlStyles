@@ -97,12 +97,6 @@
 	  <Compile Update="Themes\SharedIcons.Syncfusion.xaml.cs">
 	    <DependentUpon>SharedIcons.Syncfusion.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\SharedIcons.Material.xaml.cs">
-	    <DependentUpon>SharedIcons.Material.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Themes\SharedIcons.Fluent.xaml.cs">
-	    <DependentUpon>SharedIcons.Fluent.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Themes\SharedIcons.xaml.cs">
 	    <DependentUpon>SharedIcons.xaml</DependentUpon>
 	  </Compile>
@@ -263,12 +257,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedIcons.Syncfusion.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedIcons.Material.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedIcons.Fluent.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedIcons.xaml">

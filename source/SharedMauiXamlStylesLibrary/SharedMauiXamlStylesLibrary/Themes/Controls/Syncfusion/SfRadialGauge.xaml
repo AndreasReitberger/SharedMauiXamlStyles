@@ -9,6 +9,8 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+    
     <!-- Docs: https://help.syncfusion.com/maui/radial-gauge/overview-->
     <Style TargetType="gauge:SfRadialGauge">
         <Setter Property="WidthRequest" Value="250" />

@@ -2,6 +2,7 @@
 
 namespace AndreasReitberger.Shared.Enums
 {
+    [Obsolete]
     public enum MaterialFontIcon
     {
         [Description("\U000f0001")] VectorSquare,

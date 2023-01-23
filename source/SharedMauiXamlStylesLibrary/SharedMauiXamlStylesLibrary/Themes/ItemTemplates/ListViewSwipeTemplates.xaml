@@ -9,8 +9,8 @@
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"
     xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls"
-    
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
     
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
@@ -99,7 +99,7 @@
         <ViewCell>
             <Label
                 Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                Text="{StaticResource MaterialDesign_Printer3dNozzleOutline}"
+                Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -121,7 +121,7 @@
         <ViewCell>
             <Label
                 Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                Text="{StaticResource MaterialDesign_RunFast}"
+                Text="{x:Static icons:MaterialIcons.RunFast}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -346,7 +346,7 @@
                 >
                 <Label
                     Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{StaticResource MaterialDesign_Printer3dNozzleOutline}"
+                    Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -364,7 +364,7 @@
                 <Label
                     Grid.Column="1"
                     Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{StaticResource MaterialDesign_EyeOutline}"
+                    Text="{x:Static icons:MaterialIcons.EyeOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -390,7 +390,7 @@
                 >
                 <Label
                     Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{StaticResource MaterialDesign_RunFast}"
+                    Text="{x:Static icons:MaterialIcons.RunFast}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -408,7 +408,7 @@
                 <Label
                     Grid.Column="1"
                     Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{StaticResource MaterialDesign_PencilOutline}"
+                    Text="{x:Static icons:MaterialIcons.PencilOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"

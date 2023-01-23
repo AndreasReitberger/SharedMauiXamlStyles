@@ -2,6 +2,7 @@
 
 namespace AndreasReitberger.Shared.Enums
 {
+    [Obsolete]
     public enum FluentFontIcon
     {
         [Description("\ue000")] AccessTime20,
