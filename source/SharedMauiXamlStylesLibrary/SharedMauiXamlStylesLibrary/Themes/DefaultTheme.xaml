@@ -6,59 +6,9 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
-        <ResourceDictionary Source="/Themes/SharedStyles.xaml" />
+        <!-- Templates must come for styles! -->
         <ResourceDictionary Source="/Themes/SharedTemplates.xaml" />
-
-        <!-- Replaced by own ResourceDictionary 
-        <ResourceDictionary Source="/Themes/Controls/Core/EnhancedListView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/ActivityIndicator.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Border.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/BoxView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Button.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/CheckBox.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/DatePicker.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Editor.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Entry.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Label.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/ListView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Page.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Picker.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/ProgressBar.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/RadioButton.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Grid.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/IndicatorView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Frame.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/RefreshView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/SearchBar.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/SearchHandler.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Shadow.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Shell.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Slider.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/StackLayout.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/SwipeItem.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Switch.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/TimePicker.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCartesianChart.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfComboBox.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfListView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRadialGauge.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfSlider.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRangeSlider.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTabView.xaml" />
-        -->
-        <!-- Item Templates 
-        <ResourceDictionary Source="/Themes/ItemTemplates/GeneralItemTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ShellItemTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewGroupHeaderTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewHeaderTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewItemTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
-        -->
+        <ResourceDictionary Source="/Themes/SharedStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

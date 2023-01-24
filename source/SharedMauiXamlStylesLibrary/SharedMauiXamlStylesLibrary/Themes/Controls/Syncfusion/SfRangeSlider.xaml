@@ -9,6 +9,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+   
     <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started 
     <Style TargetType="sliders:SfRangeSlider">
         <Setter Property="Visual" Value="Default" />

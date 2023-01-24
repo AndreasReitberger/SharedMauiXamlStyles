@@ -11,6 +11,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    
 
     <Style x:Key="DefaultComboBoxStyle" TargetType="inputs:SfComboBox">
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />

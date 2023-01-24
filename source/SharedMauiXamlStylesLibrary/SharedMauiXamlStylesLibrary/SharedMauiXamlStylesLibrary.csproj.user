@@ -123,6 +123,9 @@
     <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Themes\MinimalisticTheme.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Themes\SharedTemplates.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -148,18 +151,6 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Themes\SharedColors.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\SharedIcons.Syncfusion.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\SharedIcons.Material.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\SharedIcons.Fluent.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Themes\SharedIcons.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Themes\SharedFonts.xaml">

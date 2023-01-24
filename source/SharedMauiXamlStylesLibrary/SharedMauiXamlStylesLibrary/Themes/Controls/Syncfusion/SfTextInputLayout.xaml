@@ -6,12 +6,13 @@
      
     xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     >
+    <!---->
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
+        <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
+    
     <!-- Docs: https://help.syncfusion.com/maui/textinputlayout/states-and-colors -->
     <Style x:Key="DefaultTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
         <Setter Property="ContainerType" Value="Outlined"/>

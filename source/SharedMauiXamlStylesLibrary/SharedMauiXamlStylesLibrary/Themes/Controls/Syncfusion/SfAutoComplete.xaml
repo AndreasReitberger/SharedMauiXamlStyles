@@ -11,7 +11,7 @@
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
+    
     <Style TargetType="inputs:SfAutocomplete">
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />

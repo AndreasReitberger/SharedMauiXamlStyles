@@ -11,6 +11,7 @@
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    
     <Style TargetType="controls:EnhancedListView">
         <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Style.Triggers>

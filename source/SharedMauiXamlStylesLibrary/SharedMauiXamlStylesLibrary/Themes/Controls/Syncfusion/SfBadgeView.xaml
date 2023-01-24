@@ -9,6 +9,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    
     <Style TargetType="core:SfBadgeView">
         <Setter Property="BadgeSettings">
             <Setter.Value>

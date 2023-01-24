@@ -5,6 +5,9 @@
     x:Class="AndreasReitberger.Shared.Styles"
     >
     <ResourceDictionary.MergedDictionaries>
+        <!-- Must come for Boarder! -->
+        <ResourceDictionary Source="/Themes/Controls/Shadow.xaml" />
+        
         <ResourceDictionary Source="/Themes/Controls/Core/EnhancedListView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/ActivityIndicator.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Border.xaml" />
@@ -26,7 +29,6 @@
         <ResourceDictionary Source="/Themes/Controls/RefreshView.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SearchBar.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SearchHandler.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Shadow.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Shell.xaml" />
         <ResourceDictionary Source="/Themes/Controls/Slider.xaml" />
         <ResourceDictionary Source="/Themes/Controls/StackLayout.xaml" />
