@@ -14,7 +14,6 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     

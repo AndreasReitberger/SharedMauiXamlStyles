@@ -7,7 +7,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
-        <ResourceDictionary Source="/Themes/SharedIcons.xaml" />
         <!-- Templates must come for styles! -->
         <ResourceDictionary Source="/Themes/SharedTemplates.xaml" />
         <ResourceDictionary Source="/Themes/SharedStyles.xaml" />

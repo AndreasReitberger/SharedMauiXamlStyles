@@ -66,6 +66,9 @@
 	</ItemGroup>	
 
 	<ItemGroup>
+	  <Compile Update="Themes\MinimalisticTheme.xaml.cs">
+	    <DependentUpon>MinimalisticTheme.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Themes\SharedTemplates.xaml.cs">
 	    <DependentUpon>SharedTemplates.xaml</DependentUpon>
 	  </Compile>
@@ -93,12 +96,6 @@
 	  </Compile>
 	  <Compile Update="Themes\SharedColors.xaml.cs">
 	    <DependentUpon>SharedColors.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Themes\SharedIcons.Syncfusion.xaml.cs">
-	    <DependentUpon>SharedIcons.Syncfusion.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Themes\SharedIcons.xaml.cs">
-	    <DependentUpon>SharedIcons.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Themes\SharedFonts.xaml.cs">
 	    <SubType>Code</SubType>
@@ -228,6 +225,9 @@
 	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Themes\MinimalisticTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -254,12 +254,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedColors.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedIcons.Syncfusion.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedIcons.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedFonts.xaml">

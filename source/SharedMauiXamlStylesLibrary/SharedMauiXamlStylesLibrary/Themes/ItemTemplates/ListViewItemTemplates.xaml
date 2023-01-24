@@ -31,7 +31,7 @@
                     >
                     <Label 
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Sent}"
+                        Text="{x:Static icons:SyncfusionIcons.Sent}"
                         TextColor="{StaticResource White}"
                         />
                 </Border>
