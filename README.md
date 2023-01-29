@@ -9,6 +9,11 @@ Get the latest version from nuget.org<br>
 [![NuGet](https://img.shields.io/nuget/v/SharedMauiXamlStylesLibrary.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary/)
 [![NuGet](https://img.shields.io/nuget/dt/SharedMauiXamlStylesLibrary.svg)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary)
 
+# IMPORTANT CHANGE
+Since putting all `FontKeys` in a `ResourceDictionary` leads to poor performance of the app, we moved all `FontKeys` to a static class instead.
+For a migration guide, please see here:
+https://github.com/AndreasReitberger/SharedMauiXamlStyles/wiki/Use-Icons-in-XAML-content#reference-icons
+
 ## Used fonts
 All used fonts are available from the `SharedFonts.Fonts` property. 
 
@@ -42,14 +47,14 @@ public static MauiApp CreateMauiApp()
     MauiAppBuilder builder = MauiApp.CreateBuilder();
     builder
         .UseMauiApp<App>()
-        .UseMauiApp<App>().UseMauiCommunityToolkit()
+        .UseMauiCommunityToolkit()
         .ConfigureFonts(fonts =>
         {
-            // Your used fonts
+            // Your custom used fonts
             fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
         })
-        // Shared fonts (for list of used fonts, see above)
-        .RegisterSharedFonts();
+        // Initializes the library
+        .InitializeSharedMauiStyles();  // <== Add this line
 }
 ```
 
