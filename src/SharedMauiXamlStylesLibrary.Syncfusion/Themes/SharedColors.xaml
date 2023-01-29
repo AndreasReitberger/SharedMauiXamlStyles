@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Syncfusion.Colors"
+    >
+    <!-- Keys not found if added in a separat file     -->
+    <Color x:Key="PrimaryColor">#B02F35</Color>
+    <Color x:Key="PrimaryColorLight">#B02F35</Color>
+
+    <Color x:Key="Light">#DFD8F7</Color>
+    <Color x:Key="Dark">#B02F35</Color>
+    <Color x:Key="White">White</Color>
+    <Color x:Key="Black">Black</Color>
+    <Color x:Key="LightGray">#E5E5E1</Color>
+    <Color x:Key="MidGray">#969696</Color>
+    <Color x:Key="DarkGray">#505050</Color>
+
+    <Color x:Key="Transparent">Transparent</Color>
+    <Color x:Key="TappedBackgroundColor">#eaeaea</Color>
+
+    <Color x:Key="Green">#33AD79</Color>
+    <Color x:Key="LightGreen">#38ef7d</Color>
+    <Color x:Key="DarkGreen">#11998e</Color>
+    <Color x:Key="Red">#ff4a4a</Color>
+    <Color x:Key="DarkRed">#93291e</Color>
+    <Color x:Key="Orange">#F78836</Color>
+    <Color x:Key="DarkOrange">#F83017</Color>
+    <Color x:Key="Blue">#3C8CF1</Color>
+    <Color x:Key="LightBlue">#6dd5ed</Color>
+    <Color x:Key="DarkBlue">#2193b0</Color>
+    <Color x:Key="primary-lighter">#edcacd</Color>
+    <Color x:Key="Liliac">#d483fc</Color>
+    <Color x:Key="Purpleish-Blue">#5d4cf7</Color>
+    <Color x:Key="Link">#567cd7</Color>
+    <Color x:Key="Bright-Cyan">#3cdeff</Color>
+    <Color x:Key="Lemon-Lime">#bdff27</Color>
+    <Color x:Key="Yellow">#E9B31A</Color>
+    <Color x:Key="Pink">#C6275C</Color>
+
+    <Color x:Key="TempLow">#DD4E38</Color>
+    <Color x:Key="TempMiddle">#B72316</Color>
+    <Color x:Key="TempHigh">#93291e</Color>
+
+    <!-- https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129-->
+    <Color x:Key="Gray950">#141414</Color>
+    <Color x:Key="Gray900">#212121</Color>
+    <Color x:Key="Gray800">#424242</Color>
+    <Color x:Key="Gray700">#616161</Color>
+    <Color x:Key="Gray600">#757575</Color>
+    <Color x:Key="Gray500">#9E9E9E</Color>
+    <Color x:Key="Gray400">#BDBDBD</Color>
+    <Color x:Key="Gray300">#E0E0E0</Color>
+    <Color x:Key="Gray200">#EEEEEE</Color>
+    <Color x:Key="Gray100">#F5F5F5</Color>
+
+    <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}"/>
+    <SolidColorBrush x:Key="Gray200Brush" Color="{StaticResource Gray200}"/>
+    <SolidColorBrush x:Key="Gray300Brush" Color="{StaticResource Gray300}"/>
+    <SolidColorBrush x:Key="Gray400Brush" Color="{StaticResource Gray400}"/>
+    <SolidColorBrush x:Key="Gray500Brush" Color="{StaticResource Gray500}"/>
+    <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
+    <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
+    <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+    
+    <!-- Light -->
+    <Color x:Key="Light_Error">#B00020</Color>
+    <Color x:Key="Light_OnError">#ffffff</Color>
+    <Color x:Key="Light_OnPrimary">#ffffff</Color>
+    <Color x:Key="Light_OnSecondary">#ffffff</Color>
+    <Color x:Key="Light_OnBackground">#121212</Color>
+    <Color x:Key="Light_OnSurface">#121212</Color>
+
+    <!-- Dark -->
+    <Color x:Key="Dark_Error">#CF6679</Color>
+    <Color x:Key="Dark_OnError">#121212</Color>
+    <Color x:Key="Dark_OnPrimary">#121212</Color>
+    <Color x:Key="Dark_OnSecondary">#121212</Color>
+    <Color x:Key="Dark_OnBackground">#ffffff</Color>
+    <Color x:Key="Dark_OnSurface">#ffffff</Color>
+
+    <!-- Light -->
+    <Color x:Key="Light_ItemTemplateOuterBackground">#F0F0F0</Color>
+    <Color x:Key="Light_ItemTemplateInnerBackground">White</Color>
+    <Color x:Key="Light_ItemTemplateSelectedBackground">#E4E4E4</Color>
+    <Color x:Key="Light_ItemTemplateBorder">Transparent</Color>
+    <Color x:Key="Light_ItemTemplatePrimaryText">Black</Color>
+    <Color x:Key="Light_ItemTemplateSecondaryText">Gray</Color>
+    <Color x:Key="Light_ItemTemplatePrimary">#f37921</Color>
+    <Color x:Key="Light_ItemTemplateSecondary">White</Color>
+    <Color x:Key="Light_ItemTemplateSeparator">LightGray</Color>
+
+    <!-- Dark -->
+    <Color x:Key="Dark_ItemTemplateOuterBackground">#1C2939</Color>
+    <Color x:Key="Dark_ItemTemplateInnerBackground">White</Color>
+    <Color x:Key="Dark_ItemTemplateSelectedBackground">#3C8CF1</Color>
+    <Color x:Key="Dark_ItemTemplateBorder">Transparent</Color>
+    <Color x:Key="Dark_ItemTemplatePrimaryText">Black</Color>
+    <Color x:Key="Dark_ItemTemplateSecondaryText">Gray</Color>
+    <Color x:Key="Dark_ItemTemplatePrimary">#f37921</Color>
+    <Color x:Key="Dark_ItemTemplateSecondary">White</Color>
+    <Color x:Key="Dark_ItemTemplateSeparator">LightGray</Color>
+
+    <!-- Light -->
+    <Color x:Key="Light_GroupingTemplateBackground">#E4E4E4</Color>
+    <Color x:Key="Light_GroupingTemplatePrimary">#1c1c1c</Color>
+
+    <!-- Dark -->
+    <Color x:Key="Dark_GroupingTemplateBackground">#E4E4E4</Color>
+    <Color x:Key="Dark_GroupingTemplatePrimary">#1c1c1c</Color>
+
+    <!-- Light -->
+    <Color x:Key="Light_MenuItemBarBackground">#1c1c1c</Color>
+    <Color x:Key="Light_TaptemGridBackground">#ffffff</Color>
+    <Color x:Key="Light_PanelBackground">#e8e8e8</Color>
+
+    <!-- Dark -->
+    <Color x:Key="Dark_MenuItemBarBackground">#1A202C</Color>
+    <Color x:Key="Dark_TaptemGridBackground">#1A202C</Color>
+    <Color x:Key="Dark_PanelBackground">#1A202C</Color>
+
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="LightBrush" Color="{StaticResource Light}"/>
+    <SolidColorBrush x:Key="DarkBrush" Color="{StaticResource Dark}"/>
+    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
+    <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
+    <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGray}"/>
+    <SolidColorBrush x:Key="MidGrayBrush" Color="{StaticResource MidGray}"/>
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="{StaticResource DarkGray}"/>
+</ResourceDictionary>

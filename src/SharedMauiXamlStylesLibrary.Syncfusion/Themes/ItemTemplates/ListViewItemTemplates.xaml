@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Syncfusion.Themes.ItemTemplates.ListViewItemTemplates"
+    
+    xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedMauiCoreLibrary"
+    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
+    xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"  
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"   
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    
+    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+    >
+    <converters:UriToStringConverter x:Key="UriToStringConverter" />
+
+    <DataTemplate x:Key="ProFeatureItemTemplate" x:DataType="documentation:ProVersionFeature">
+        <ViewCell>
+            <Grid 
+                Padding="8,6"
+                ColumnSpacing="4"
+                RowSpacing="4"
+                ColumnDefinitions="Auto,*"
+                >
+                <!-- Check icon -->
+                <Border
+                    Style="{StaticResource ProfileBorderStyle}"
+                    BackgroundColor="{StaticResource LightGreen}"
+                    Margin="0"
+                    >
+                    <Label 
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{x:Static icons:SyncfusionIcons.Sent}"
+                        TextColor="{StaticResource White}"
+                        />
+                </Border>
+
+                <Label 
+                    Grid.Column="1"
+                    Text="{Binding Feature}"
+                    Style="{StaticResource LabelStyle}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    />
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AppEventTemplate" x:DataType="eventLogger:AppEvent">
+        <ViewCell>
+            <Grid 
+                x:Name="Grid"
+                Padding="16,12"
+                ColumnSpacing="16"
+                RowSpacing="2"
+                RowDefinitions="Auto"
+                ColumnDefinitions="48,*"
+                >
+                <!-- Icon -->
+                <Label
+                    Margin="3.5,0,0,0" 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    >
+                    <Label.Style>
+                        <Style TargetType="Label" BasedOn="{StaticResource MaterialSettingsIconLabelStyle}">
+                            <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AlertCircleOutline}"/>
+                            <Style.Triggers>
+                                <!-- Info -->
+                                <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Info">
+                                    <Setter Property="Text" Value="{x:Static icons:MaterialIcons.InformationOutline}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource Blue}"/>
+                                </DataTrigger>
+                                <!-- Alert -->
+                                <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Warning">
+                                    <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AlertCircleOutline}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource Yellow}"/>
+                                </DataTrigger>
+                                <!-- Error -->
+                                <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Critical">
+                                    <Setter Property="Text" Value="{x:Static icons:MaterialIcons.CloseCircleOutline}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource Red}"/>
+                                </DataTrigger>
+                                <!-- Performance -->
+                                <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Performance">
+                                    <Setter Property="Text" Value="{x:Static icons:MaterialIcons.Speedometer}"/>
+                                    <Setter Property="TextColor" Value="{StaticResource LightGreen}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+                <!-- Quick Infos -->
+                <StackLayout 
+                    Grid.Column="1" 
+                    Spacing="1"
+                    CompressedLayout.IsHeadless="true"
+                    >
+                    <Label 
+                        LineBreakMode="WordWrap" 
+                        Style="{StaticResource LabelStyle}" 
+                        Text="{Binding Message}"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        />
+                    <Label 
+                        LineBreakMode="WordWrap" 
+                        Text="{Binding Args}"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.Style>
+                            <Style TargetType="Label" BasedOn="{StaticResource SmallLabelStyle}">
+                                <Setter Property="IsVisible" Value="True"/>
+                                <Style.Triggers>
+                                    <!-- Has no args -->
+                                    <DataTrigger TargetType="Label" Binding="{Binding Args}" Value="{x:Null}">
+                                        <Setter Property="IsVisible" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+
+    <!-- Localization -->
+    <DataTemplate x:Key="LanguageItemTemplate" x:DataType="language:LocalizationInfo">
+        <ViewCell>
+            <Grid 
+                Padding="2" 
+                Margin="1" 
+                ColumnDefinitions="48,*"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{OnIdiom Tablet=80, Default=60}" />
+                </Grid.RowDefinitions>
+                <!-- Flag -->
+                <Image 
+                    HeightRequest="24"                                          
+                    Source="{Binding FlagUri, Converter={StaticResource UriToStringConverter}}"
+                    />
+
+                <!-- Infos -->
+                <StackLayout
+                    Grid.Column="1"
+                    Spacing="1" 
+                    Padding="2,5,-10,0"
+                    CompressedLayout.IsHeadless="true"
+                    >
+                    <!-- Language name -->
+                    <Label 
+                        LineBreakMode="NoWrap" 
+                        Style="{StaticResource PrimaryLabelStyle}" 
+                        Text="{Binding Name}"
+                        />
+                    <!-- Translator -->
+                    <Label 
+                        Style="{StaticResource LabelStyle}" 
+                        LineBreakMode="WordWrap" 
+                        Text="{Binding Translator}"
+                        FontSize="12"
+                        />
+                </StackLayout>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+
+    <DataTemplate x:Key="LanguageSelectedItemTemplate" x:DataType="language:LocalizationInfo">
+        <ViewCell>
+            <Grid 
+                Padding="2"
+                Margin="1"
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                ColumnDefinitions="48,*"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{OnIdiom Tablet=80, Default=60}" />
+                </Grid.RowDefinitions>
+
+                <!-- Flag -->
+                <Image 
+                    HeightRequest="24"                                          
+                    Source="{Binding FlagUri, Converter={StaticResource UriToStringConverter}}"
+                    />
+
+                <!-- Infos -->
+                <StackLayout 
+                    Grid.Column="1" 
+                    Spacing="1" 
+                    Padding="2,5,-10,0"
+                    CompressedLayout.IsHeadless="true"
+                    >
+                    <!-- Language name -->
+                    <Label 
+                        LineBreakMode="NoWrap" 
+                        Style="{StaticResource PrimaryLabelStyle}" 
+                        TextColor="{StaticResource White}"
+                        Text="{Binding Name}"
+                        />
+                    <!-- Translator -->
+                    <Label 
+                        Style="{StaticResource LabelStyle}" 
+                        LineBreakMode="WordWrap" 
+                        Text="{Binding Translator}"
+                        TextColor="{StaticResource White}"
+                        FontSize="12"
+                        />
+                </StackLayout>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+
+    <!-- Documentation -->
+    <DataTemplate x:Key="ChangelogItemTemplate" x:DataType="documentation:ChangelogInfo">
+        <ViewCell>
+            <Grid
+                x:Name="Grid"
+                Padding="16,12"
+                ColumnSpacing="16"
+                RowSpacing="2"
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Style="{StaticResource LabelStyle}"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding Changelog}"
+                    />
+                <Border 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
+                    Style="{StaticResource ProfileBorderStyle}"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    >
+                    <Label
+                        Margin="4"
+                        Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                        Text="{Binding Type, Converter={StaticResource StringToChangelogIconConverter}}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        />
+                </Border>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+
+</ResourceDictionary>

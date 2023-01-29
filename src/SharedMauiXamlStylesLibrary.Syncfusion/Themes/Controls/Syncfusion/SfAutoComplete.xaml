@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Syncfusion.Controls"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="inputs:SfAutocomplete">
+        <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="IsClearButtonVisible" Value="True" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <!-- Seems to cause a crash -->
+        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
+        <Setter Property="Margin" Value="4,2"/>
+        <!-- 
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+       -->
+    </Style>
+
+    <Style TargetType="controls:MultiSelectAutoComplete">
+        <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="IsClearButtonVisible" Value="True" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <!-- Seems to cause a crash -->
+        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
+        <Setter Property="Margin" Value="4,2"/>
+        <!--
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+        -->
+    </Style>
+
+</ResourceDictionary>

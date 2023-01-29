@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="listView:SfListView">
+        <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="listView:SfListView">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ListViewDeleteEditGestureSwipeableStyle" TargetType="listView:SfListView">
+        <Setter Property="AllowSwiping" Value="True" />
+        <Setter Property="SwipeThreshold" Value="70" />
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource EditGestureSwipeTemplate}" />
+    </Style>
+</ResourceDictionary>
