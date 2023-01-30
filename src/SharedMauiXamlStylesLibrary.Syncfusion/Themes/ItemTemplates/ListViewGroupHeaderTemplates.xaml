@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Syncfusion.Themes.ItemTemplates.ListViewGroupHeaderTemplates"
+    
+    xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedMauiCoreLibrary"
+    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
+
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
+    >
+    <converters:UriToStringConverter x:Key="UriToStringConverter" />
+
+    <DataTemplate x:Key="GroupHeaderSyncfusionTemplate">
+        <ViewCell>
+            <StackLayout 
+                Style="{StaticResource StackLayoutHeaderStyle}" 
+                Orientation="Horizontal"
+                >
+                <!-- Icon -->
+                <Label Margin="10,4">
+                    <Label.Style>
+                        <Style TargetType="Label" BasedOn="{StaticResource IconLabelStyle}">
+                            <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.Dropdown}"/>
+                            <Style.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
+                                    <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.UpArrow}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+
+                <Label 
+                    Text="{Binding Key}" 
+                    Style="{StaticResource GroupingHeaderLabelStyle}"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    Margin="0,4"
+                    />
+            </StackLayout>
+        </ViewCell>
+    </DataTemplate>
+</ResourceDictionary>

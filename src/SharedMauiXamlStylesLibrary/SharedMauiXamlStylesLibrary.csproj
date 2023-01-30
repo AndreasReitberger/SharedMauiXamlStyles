@@ -18,7 +18,7 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.9</Version>
+		<Version>1.1.0-preview</Version>
 		<Title>MAUI Shared Styles Library</Title>
 		<Copyright>Andreas Reitberger</Copyright>
 		<PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
@@ -49,21 +49,11 @@
 	  <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
 	  <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.ttf" />
 	  <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
-	  <EmbeddedResource Include="Resources\Fonts\UIFontIcons.ttf" />
 	</ItemGroup>
 	
 
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.11" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.4.44" />
 	</ItemGroup>	
 
 	<ItemGroup>
@@ -89,9 +79,6 @@
 	    <SubType>Code</SubType>
 	    <DependentUpon>GeneralItemTemplates.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
-	    <DependentUpon>ListViewSwipeTemplates.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
@@ -106,9 +93,6 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Themes\Controls\Border.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Core\EnhancedListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\DatePicker.xaml">
@@ -154,36 +138,6 @@
 	  <MauiXaml Update="Themes\Controls\Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfComboBox.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfAutoComplete.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfSlider.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfBadgeView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfRadialGauge.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfListView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfCartesianChart.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTextInputLayout.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Themes\Controls\TimePicker.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -223,9 +177,6 @@
 	  <MauiXaml Update="Themes\Controls\StackLayout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Themes\MinimalisticTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -246,9 +197,6 @@
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\ItemTemplates\GeneralItemTemplates.xaml">
 	    <SubType>Designer</SubType>
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">

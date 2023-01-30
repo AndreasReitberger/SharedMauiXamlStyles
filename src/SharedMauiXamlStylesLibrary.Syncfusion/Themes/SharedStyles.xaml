@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Syncfusion.Styles"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Controls/Core/EnhancedListView.xaml" />
+        
+        <ResourceDictionary Source="/Themes/Controls/SfTextInputLayout.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfAutoComplete.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfBadgeView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfBusyIndicator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfCartesianChart.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfComboBox.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfListView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfRadialGauge.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfSlider.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfRangeSlider.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfTabView.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
