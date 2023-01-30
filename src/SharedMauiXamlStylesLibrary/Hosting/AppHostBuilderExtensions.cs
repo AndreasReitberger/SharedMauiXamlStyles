@@ -1,5 +1,4 @@
 ﻿using Microsoft.Maui.Controls.Compatibility.Hosting;
-using Syncfusion.Maui.Core.Hosting;
 
 namespace AndreasReitberger.Shared.Hosting
 {
@@ -9,7 +8,6 @@ namespace AndreasReitberger.Shared.Hosting
         {
             builder
                 .RegisterSharedFonts()
-                //.ConfigureSyncfusionAddons()
                 ;
             return builder;
         }
@@ -32,16 +30,6 @@ namespace AndreasReitberger.Shared.Hosting
                     }
                 });
             return builder;
-        }
-        
-        [Obsolete("Use the `SharedMauiXamlStylesLibrary.Syncfusion` library instead.")]
-        public static MauiAppBuilder ConfigureSyncfusionAddons(this MauiAppBuilder builder)
-        {
-            builder
-                .UseMauiCompatibility()
-                .ConfigureSyncfusionCore()
-                ;
-            return builder;
-        }
+        }     
     }
 }

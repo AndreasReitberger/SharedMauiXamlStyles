@@ -15,7 +15,6 @@ namespace AndreasReitberger.Shared
             { "Montserrat-Medium.ttf", "MontserratMedium" },
             { "Montserrat-Regular.ttf", "MontserratRegular" },
             { "Montserrat-SemiBold.ttf", "MontserratSemiBold" },
-            //{ "UIFontIcons.ttf", "UIFontIcons" }, // => moved to Syncfusion library
         };
         #endregion
     }

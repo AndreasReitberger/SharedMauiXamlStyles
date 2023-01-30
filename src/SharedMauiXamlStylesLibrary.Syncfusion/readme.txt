@@ -22,6 +22,22 @@ public static MauiApp CreateMauiApp()
         .InitializeSharedSyncfusionStyles()  // <== Add this line
         ;
 }
+```
+
+To add the Styles and Colors to your app theme, you can merge the `ResourceDictionary` at your App.xaml page.
+
+```xaml
+    <ResourceDictionary.MergedDictionaries>
+        <!-- your own stuff -->
+        <ResourceDictionary Source="/Themes/DefaultColors.xaml" />
+
+        <!-- Library -->
+        <syncfusion:Fonts />
+        <syncfusion:Styles />
+        <syncfusion:Templates />
+        <shared:DefaultTheme/>
+    </ResourceDictionary.MergedDictionaries>
+```
 
 For further instructions or issues, please visit the project page on github.
 https://github.com/AndreasReitberger/SharedMauiXamlStyles

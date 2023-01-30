@@ -5,6 +5,8 @@
     x:Class="AndreasReitberger.Shared.Syncfusion.Styles"
     >
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Themes/Controls/Core/EnhancedListView.xaml" />
+        
         <ResourceDictionary Source="/Themes/Controls/SfTextInputLayout.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Themes/Controls/SfBadgeView.xaml" />

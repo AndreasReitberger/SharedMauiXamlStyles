@@ -4,7 +4,7 @@ using Syncfusion.Maui.Data;
 using System.Collections.ObjectModel;
 using System.Globalization;
 
-namespace AndreasReitberger.Shared.Syncfusion.Syncfusion.Converters
+namespace AndreasReitberger.Shared.Syncfusion.Converters
 {
     public class DictionaryToChartSeriesCollectionConverter : BindableObject, IValueConverter, IMarkupExtension<DictionaryToChartSeriesCollectionConverter>
     {

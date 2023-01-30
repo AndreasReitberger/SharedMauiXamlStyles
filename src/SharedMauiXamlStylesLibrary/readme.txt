@@ -16,11 +16,30 @@ public static MauiApp CreateMauiApp()
         // Initializes the library
         .InitializeSharedMauiStyles();  // <== Add this line
 }
+```
 
+To add the Styles and Colors to your app theme, you can merge the `ResourceDictionary` at your App.xaml page.
+
+```xaml
+    <ResourceDictionary.MergedDictionaries>
+        <!-- your own stuff -->
+        <ResourceDictionary Source="/Themes/DefaultColors.xaml" />
+
+        <!-- Library componentes -->
+        <shared:Fonts />
+        <shared:Styles />
+        <shared:Templates />
+        <!-- or the whole theme -->
+        <shared:DefaultTheme/>
+    </ResourceDictionary.MergedDictionaries>
+```
 For further instructions or issues, please visit the project page on github.
 https://github.com/AndreasReitberger/SharedMauiXamlStyles
 
 # Important update notice
+Since 1.1.0, we moved all Syncfusion related stuff into its own project and nuget package.
+Search for => "SharedMauiXamlStylesLibrary.Syncfusion"
+
 Since 1.0.9, we changed the location for the `FontIconKeys`.
 In order to use the library, you need to migrate to use the new `FontIconKeys` instead.
 

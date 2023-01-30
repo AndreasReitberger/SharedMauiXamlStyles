@@ -1,7 +1,7 @@
 ﻿using Syncfusion.Maui.Core;
 using System.Globalization;
 
-namespace AndreasReitberger.Shared.Syncfusion.Syncfusion.Converters
+namespace AndreasReitberger.Shared.Syncfusion.Converters
 {
     public class BooleanToBadgeIconConverter : IValueConverter
     {

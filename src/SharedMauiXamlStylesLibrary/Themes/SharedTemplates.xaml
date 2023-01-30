@@ -11,6 +11,5 @@
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewGroupHeaderTemplates.xaml" />
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewHeaderTemplates.xaml" />
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewItemTemplates.xaml" />
-        <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
