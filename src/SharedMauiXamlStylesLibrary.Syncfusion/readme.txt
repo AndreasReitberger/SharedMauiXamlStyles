@@ -1,5 +1,9 @@
-﻿# Getting started
-Open the `MauiProgramm.cs` file and add `InitializeSharedMauiStyles()`
+﻿# Important
+This is an addon of our `SharedMauXamlStyles` library (https://github.com/AndreasReitberger/SharedMauiXamlStyles).
+In order to get this extension to work, make sure that also the core project above is installed on your app project.
+
+# Getting started
+Open the `MauiProgramm.cs` file and add `InitializeSharedMauiStyles()` and `InitializeSharedSyncfusionStyles()`
 
 ```csharp
 public static MauiApp CreateMauiApp()
@@ -14,7 +18,9 @@ public static MauiApp CreateMauiApp()
             fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
         })
         // Initializes the library
-        .InitializeSharedMauiStyles();  // <== Add this line
+        .InitializeSharedMauiStyles()  // <== Add this line
+        .InitializeSharedSyncfusionStyles()  // <== Add this line
+        ;
 }
 
 For further instructions or issues, please visit the project page on github.

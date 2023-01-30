@@ -4,6 +4,7 @@ using SelectionChangedEventArgs = Syncfusion.Maui.Inputs.SelectionChangedEventAr
 
 namespace AndreasReitberger.Shared.Controls
 {
+    [Obsolete("Use the `SharedMauiXamlStylesLibrary.Syncfusion` library instead.")]
     public class MultiSelectComboBox : SfComboBox
     {
         public MultiSelectComboBox()

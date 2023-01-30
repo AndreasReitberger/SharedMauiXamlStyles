@@ -11,6 +11,7 @@
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"   
     
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
     
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
@@ -32,7 +33,7 @@
                     >
                     <Label 
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{x:Static icons:SyncfusionIcons.Sent}"
+                        Text="{x:Static iconsSyncfusion:SyncfusionIcons.Sent}"
                         TextColor="{StaticResource White}"
                         />
                 </Border>

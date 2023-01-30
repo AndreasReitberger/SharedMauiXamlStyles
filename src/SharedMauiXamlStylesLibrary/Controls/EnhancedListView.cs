@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 
 namespace AndreasReitberger.Shared.Controls
 {
+    [Obsolete("Use the `SharedMauiXamlStylesLibrary.Syncfusion` library instead.")]
     public partial class EnhancedListView : SfListView
     {
         #region Field

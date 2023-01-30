@@ -1,5 +1,7 @@
 ﻿using Syncfusion.Maui.ListView;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("AndreasReitberger.Shared")]
 namespace AndreasReitberger.Shared.Syncfusion.Behaviors.Syncfusion
 {
     internal class FilterListViewBehavior : Behavior<SfListView>

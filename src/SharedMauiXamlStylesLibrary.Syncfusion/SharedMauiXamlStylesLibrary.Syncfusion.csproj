@@ -14,7 +14,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-		<RootNamespace>AndreasReitberger.Shared.Syncfusion.Syncfusion</RootNamespace>
+		<RootNamespace>AndreasReitberger.Shared.Syncfusion</RootNamespace>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -37,6 +37,18 @@
 	<ItemGroup>
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiFont Remove="Resources\Fonts\UIFontIcons.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\UIFontIcons.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Fonts\UIFontIcons.ttf" />
 	</ItemGroup>
 	
 
@@ -84,9 +96,6 @@
 	  <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\SharedColors.xaml.cs">
-	    <DependentUpon>SharedColors.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Themes\SharedFonts.xaml.cs">
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedFonts.xaml</DependentUpon>
@@ -97,37 +106,37 @@
 	  <MauiXaml Update="Themes\Controls\Core\EnhancedListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfComboBox.xaml">
+	  <MauiXaml Update="Themes\Controls\SfComboBox.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfAutoComplete.xaml">
+	  <MauiXaml Update="Themes\Controls\SfAutoComplete.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfSlider.xaml">
+	  <MauiXaml Update="Themes\Controls\SfSlider.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
+	  <MauiXaml Update="Themes\Controls\SfRangeSlider.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfBadgeView.xaml">
+	  <MauiXaml Update="Themes\Controls\SfBadgeView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfRadialGauge.xaml">
+	  <MauiXaml Update="Themes\Controls\SfRadialGauge.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfListView.xaml">
+	  <MauiXaml Update="Themes\Controls\SfListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
+	  <MauiXaml Update="Themes\Controls\SfBusyIndicator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfCartesianChart.xaml">
+	  <MauiXaml Update="Themes\Controls\SfCartesianChart.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTextInputLayout.xaml">
+	  <MauiXaml Update="Themes\Controls\SfTextInputLayout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\Syncfusion\SfTabView.xaml">
+	  <MauiXaml Update="Themes\Controls\SfTabView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\MinimalisticTheme.xaml">
@@ -155,9 +164,6 @@
 	  <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedColors.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Themes\SharedFonts.xaml">
 	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
@@ -165,10 +171,6 @@
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Resources\Fonts\" />
 	</ItemGroup>
 
 </Project>

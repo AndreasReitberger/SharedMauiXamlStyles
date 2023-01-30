@@ -5,12 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
     >
-    <!---->
     <ResourceDictionary.MergedDictionaries>
-        <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
+        <shared:Colors />
+        <shared:Fonts />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
-        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
     <!-- Docs: https://help.syncfusion.com/maui/cartesian-charts -->

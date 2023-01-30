@@ -11,8 +11,6 @@
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    
-    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
@@ -25,11 +23,11 @@
                 <!-- Icon -->
                 <Label Margin="10,4">
                     <Label.Style>
-                        <Style TargetType="Label" BasedOn="{StaticResource IconLabelStyle}">
-                            <Setter Property="Text" Value="{StaticResource DropDownButtonIcon}"/>
+                        <Style TargetType="Label" BasedOn="{StaticResource MaterialFontFamilyIconLabelStyle}">
+                            <Setter Property="Text" Value="{x:Static icons:MaterialIcons.ArrowDown}"/>
                             <Style.Triggers>
                                 <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
-                                    <Setter Property="Text" Value="{x:Static icons:SyncfusionIcons.UpArrow}"/>
+                                    <Setter Property="Text" Value="{x:Static icons:MaterialIcons.ArrowUp}"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>

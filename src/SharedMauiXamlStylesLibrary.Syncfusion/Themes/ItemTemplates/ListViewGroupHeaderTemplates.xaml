@@ -10,12 +10,11 @@
 
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
-    
-    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
-    <DataTemplate x:Key="GroupHeaderTemplate">
+    <DataTemplate x:Key="GroupHeaderSyncfusionTemplate">
         <ViewCell>
             <StackLayout 
                 Style="{StaticResource StackLayoutHeaderStyle}" 
@@ -25,10 +24,10 @@
                 <Label Margin="10,4">
                     <Label.Style>
                         <Style TargetType="Label" BasedOn="{StaticResource IconLabelStyle}">
-                            <Setter Property="Text" Value="{StaticResource DropDownButtonIcon}"/>
+                            <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.Dropdown}"/>
                             <Style.Triggers>
                                 <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
-                                    <Setter Property="Text" Value="{x:Static icons:SyncfusionIcons.UpArrow}"/>
+                                    <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.UpArrow}"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>

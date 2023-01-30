@@ -6,6 +6,7 @@ using System.Globalization;
 
 namespace AndreasReitberger.Shared.Converters.Syncfusion
 {
+    [Obsolete("Use the `SharedMauiXamlStylesLibrary.Syncfusion` library instead.")]
     public class DictionaryToChartSeriesCollectionConverter : BindableObject, IValueConverter, IMarkupExtension<DictionaryToChartSeriesCollectionConverter>
     {
         #region Fields

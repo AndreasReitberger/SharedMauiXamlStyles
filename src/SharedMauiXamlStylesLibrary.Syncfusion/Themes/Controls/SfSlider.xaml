@@ -5,9 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <shared:Colors />
+        <shared:Fonts />
     </ResourceDictionary.MergedDictionaries>
     
     <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started -->

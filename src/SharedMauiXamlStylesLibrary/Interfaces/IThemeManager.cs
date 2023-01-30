@@ -1,4 +1,7 @@
-﻿namespace AndreasReitberger.Shared.Interfaces
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("AndreasReitberger.Shared.Syncfusion")]
+namespace AndreasReitberger.Shared.Interfaces
 {
     public interface IThemeManager
     {

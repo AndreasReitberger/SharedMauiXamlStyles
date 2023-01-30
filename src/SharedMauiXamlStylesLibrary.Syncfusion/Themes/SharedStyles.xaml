@@ -5,16 +5,16 @@
     x:Class="AndreasReitberger.Shared.Syncfusion.Styles"
     >
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTextInputLayout.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfAutoComplete.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBadgeView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfBusyIndicator.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfCartesianChart.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfComboBox.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfListView.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRadialGauge.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfSlider.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfRangeSlider.xaml" />
-        <ResourceDictionary Source="/Themes/Controls/Syncfusion/SfTabView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfTextInputLayout.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfAutoComplete.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfBadgeView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfBusyIndicator.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfCartesianChart.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfComboBox.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfListView.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfRadialGauge.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfSlider.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfRangeSlider.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/SfTabView.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

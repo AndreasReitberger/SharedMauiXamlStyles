@@ -5,9 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
+        <shared:Colors />
         <ResourceDictionary Source="/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
     </ResourceDictionary.MergedDictionaries>
     

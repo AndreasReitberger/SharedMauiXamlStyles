@@ -3,6 +3,7 @@ using System.Globalization;
 
 namespace AndreasReitberger.Shared.Converters.Syncfusion
 {
+    [Obsolete("Use the `SharedMauiXamlStylesLibrary.Syncfusion` library instead.")]
     public class BooleanToBadgeIconConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

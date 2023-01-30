@@ -9,7 +9,7 @@ namespace AndreasReitberger.Shared.Hosting
         {
             builder
                 .RegisterSharedFonts()
-                .ConfigureSyncfusionAddons()
+                //.ConfigureSyncfusionAddons()
                 ;
             return builder;
         }
@@ -33,6 +33,8 @@ namespace AndreasReitberger.Shared.Hosting
                 });
             return builder;
         }
+        
+        [Obsolete("Use the `SharedMauiXamlStylesLibrary.Syncfusion` library instead.")]
         public static MauiAppBuilder ConfigureSyncfusionAddons(this MauiAppBuilder builder)
         {
             builder

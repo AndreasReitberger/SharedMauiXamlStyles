@@ -6,10 +6,12 @@
     
     xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
     xmlns:controls="clr-namespace:AndreasReitberger.Shared.Syncfusion.Controls"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
         <ResourceDictionary Source="/Themes/SharedFonts.xaml" />
-        <ResourceDictionary Source="/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
 

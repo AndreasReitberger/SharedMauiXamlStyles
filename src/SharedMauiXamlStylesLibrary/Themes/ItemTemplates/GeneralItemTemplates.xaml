@@ -10,7 +10,6 @@
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"    
-    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 

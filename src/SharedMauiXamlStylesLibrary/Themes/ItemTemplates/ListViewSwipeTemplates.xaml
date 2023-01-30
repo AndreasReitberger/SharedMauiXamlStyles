@@ -11,18 +11,16 @@
     xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls"
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
-    
-    xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
-    <!-- Single Swipe Templates -->
-
+    <!-- Single Swipe Templates 
+    Moved to Syncfusion library
     <DataTemplate x:Key="DeleteGestureSwipeTemplate">
         <ViewCell>
             <Label
-                Style="{StaticResource IconLabelStyle}"
-                Text="{x:Static icons:SyncfusionIcons.Delete}"
+                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Text="{x:Static icons:MaterialIcons.DeleteOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -46,8 +44,8 @@
                 BackgroundColor="{StaticResource Green}"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Edit}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.PencilOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -71,8 +69,8 @@
                 BackgroundColor="{StaticResource Blue}"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Show}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.ViewCompactOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -132,17 +130,17 @@
             </Label>
         </ViewCell>
     </DataTemplate>
-
-    <!-- Double Swipe Templates -->
-    
+    -->
+    <!-- Double Swipe Templates 
+    Moved to Syncfusion library
     <DataTemplate x:Key="EditDeleteGestureSwipeTemplate">
         <ViewCell>
             <Grid
                 ColumnDefinitions="*,*"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Delete}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -159,8 +157,8 @@
                 </Label>
                 <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Edit}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.PencilOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -185,8 +183,8 @@
                 ColumnDefinitions="*,*"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.FileExplorer}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.FileOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -204,8 +202,8 @@
 
                 <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Edit}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.PencilOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -229,10 +227,9 @@
             <Grid
                 ColumnDefinitions="*,*,*"
                 >
-                <!-- Duplicate -->
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Viewed}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.ContentDuplicate}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -247,11 +244,10 @@
                             />
                     </Label.GestureRecognizers>
                 </Label>
-                <!-- Edit -->
                 <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Edit}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.PencilOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -266,11 +262,10 @@
                             />
                     </Label.GestureRecognizers>
                 </Label>
-                <!-- Delete -->
                 <Label
                     Grid.Column="2"
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Edit}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -280,7 +275,7 @@
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
                             NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                            Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
                             CommandParameter="{Binding .}"
                             />
                     </Label.GestureRecognizers>
@@ -295,8 +290,8 @@
                 ColumnDefinitions="*,*"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Delete}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -313,8 +308,8 @@
                 </Label>
                 <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static icons:SyncfusionIcons.Show}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{x:Static icons:MaterialIcons.ViewCompactOutline}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -420,5 +415,5 @@
             </Grid>
         </ViewCell>
     </DataTemplate>
-
+    -->
 </ResourceDictionary>
