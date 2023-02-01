@@ -7,7 +7,6 @@
         <PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
         <RepositoryUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <Description>Uranium is a Free &amp; Open-Source UI Kit for MAUI.</Description>
         <PackageReleaseNotes>Check GitHub releases for changelog.</PackageReleaseNotes>
         <Authors>Andreas Reitberger</Authors>
         <PublishReadyToRun>false</PublishReadyToRun>
