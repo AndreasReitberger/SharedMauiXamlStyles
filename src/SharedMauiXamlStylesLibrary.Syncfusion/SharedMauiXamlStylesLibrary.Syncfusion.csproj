@@ -55,15 +55,15 @@
 
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiXamlStylesLibrary" Version="1.1.0-preview" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.4.44" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.4.44" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="20.4.48" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="20.4.48" />
 	</ItemGroup>
 
 	<ItemGroup>
