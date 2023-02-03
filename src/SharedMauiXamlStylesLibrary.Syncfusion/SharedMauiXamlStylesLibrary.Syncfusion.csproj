@@ -67,104 +67,104 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Themes\MinimalisticTheme.xaml.cs">
+	  <Compile Update="Resources\Themes\MinimalisticTheme.xaml.cs">
 	    <DependentUpon>MinimalisticTheme.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\SharedTemplates.xaml.cs">
+	  <Compile Update="Resources\Themes\SharedTemplates.xaml.cs">
 	    <DependentUpon>SharedTemplates.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\SharedStyles.xaml.cs">
+	  <Compile Update="Resources\Themes\SharedStyles.xaml.cs">
 	    <DependentUpon>SharedStyles.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
+	  <Compile Update="Resources\Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
 	    <DependentUpon>ListViewGroupHeaderTemplates.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml.cs">
+	  <Compile Update="Resources\Themes\ItemTemplates\ListViewHeaderTemplates.xaml.cs">
 	    <DependentUpon>ListViewHeaderTemplates.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\ItemTemplates\GeneralItemTemplates.xaml.cs">
+	  <Compile Update="Resources\Themes\ItemTemplates\GeneralItemTemplates.xaml.cs">
 	    <SubType>Code</SubType>
 	    <DependentUpon>GeneralItemTemplates.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
+	  <Compile Update="Resources\Themes\ItemTemplates\ListViewSwipeTemplates.xaml.cs">
 	    <DependentUpon>ListViewSwipeTemplates.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
+	  <Compile Update="Resources\Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
-	  <Compile Update="Themes\SharedFonts.xaml.cs">
+	  <Compile Update="Resources\Themes\SharedFonts.xaml.cs">
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedFonts.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Themes\Controls\Core\EnhancedListView.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\Core\EnhancedListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfComboBox.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfComboBox.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfAutoComplete.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfAutoComplete.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfSlider.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfSlider.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfRangeSlider.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfRangeSlider.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfBadgeView.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfBadgeView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfRadialGauge.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfRadialGauge.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfListView.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfBusyIndicator.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfBusyIndicator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfCartesianChart.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfCartesianChart.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfTextInputLayout.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfTextInputLayout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\Controls\SfTabView.xaml">
+	  <MauiXaml Update="Resources\Themes\Controls\SfTabView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\MinimalisticTheme.xaml">
+	  <MauiXaml Update="Resources\Themes\MinimalisticTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedTemplates.xaml">
+	  <MauiXaml Update="Resources\Themes\SharedTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedStyles.xaml">
+	  <MauiXaml Update="Resources\Themes\SharedStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml">
+	  <MauiXaml Update="Resources\Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\ItemTemplates\ListViewHeaderTemplates.xaml">
+	  <MauiXaml Update="Resources\Themes\ItemTemplates\ListViewHeaderTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\ItemTemplates\GeneralItemTemplates.xaml">
+	  <MauiXaml Update="Resources\Themes\ItemTemplates\GeneralItemTemplates.xaml">
 	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\ItemTemplates\ListViewSwipeTemplates.xaml">
+	  <MauiXaml Update="Resources\Themes\ItemTemplates\ListViewSwipeTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\ItemTemplates\ListViewItemTemplates.xaml">
+	  <MauiXaml Update="Resources\Themes\ItemTemplates\ListViewItemTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedFonts.xaml">
+	  <MauiXaml Update="Resources\Themes\SharedFonts.xaml">
 	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	  <MauiXaml Update="Resources\Themes\DefaultTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

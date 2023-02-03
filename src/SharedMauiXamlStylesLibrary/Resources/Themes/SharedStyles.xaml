@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Styles"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <!-- Must come for Boarder! -->
+        <ResourceDictionary Source="/Resources/Themes/Controls/Shadow.xaml" />
+        
+        <ResourceDictionary Source="/Resources/Themes/Controls/ActivityIndicator.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Border.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/BoxView.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Button.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/CheckBox.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/DatePicker.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Editor.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Entry.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Label.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/ListView.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Page.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Picker.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/ProgressBar.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/RadioButton.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Grid.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/IndicatorView.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Frame.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/RefreshView.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SearchBar.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SearchHandler.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Shell.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Slider.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/StackLayout.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SwipeItem.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Switch.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/TimePicker.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
