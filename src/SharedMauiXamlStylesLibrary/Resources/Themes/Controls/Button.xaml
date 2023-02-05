@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
+    >
+    <!---->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+        <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  /> 
+
+    <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
+    <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />-->
+        <Setter Property="FontSize" Value="{OnPlatform 
+            Android={OnIdiom Phone=14, Default=18}, 
+            Default={OnIdiom Phone=16, Default=20}}"
+                />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+        <!--
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Style.Triggers>
+            <DataTrigger
+                TargetType="Button"
+                Binding="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToLightForgroundConverter}}"
+                Value="True"
+                >
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+            </DataTrigger>
+        </Style.Triggers>
+        -->
+    </Style>
+    <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}"/>
+
+    <Style TargetType="ImageButton">
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Opacity" Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Opacity" Value="0.5" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextIconSize}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                            <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                            <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+                            <!---<Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />-->
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MaterialDesignIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextIconSize}" />
+    </Style>
+
+    <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Margin" Value="4,6" />
+        <Setter Property="TextColor" Value="{StaticResource Blue}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="FontSize" Value="Caption" />
+    </Style>
+
+    <Style x:Key="LinkRoundButton" TargetType="Button" BasedOn="{StaticResource LinkButton}">
+        <Setter Property="BorderColor" Value="{StaticResource Blue}" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="CornerRadius" Value="25" />
+    </Style>
+
+    <Style x:Key="RoundIconButtonStyle" BasedOn="{StaticResource IconButtonStyle}" TargetType="Button">
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="CornerRadius" Value="25" />
+        <Setter Property="WidthRequest" Value="50" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+    </Style>
+
+    <Style x:Key="RoundedLongButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Phone=14, Default=14}" />-->
+        <Setter Property="FontSize" Value="{OnPlatform 
+            Android={OnIdiom Phone=12, Default=16}, 
+            Default={OnIdiom Phone=16, Default=20}}"
+                />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Default=20}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=300, Tablet=300, Phone=250, Default=250}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="BorderWidth" Value="0" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="True" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource White}" />
+            </Trigger>
+            <DataTrigger
+                TargetType="Button"
+                Binding="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToLightForgroundConverter}}"
+                Value="True"
+                >
+                <Setter Property="TextColor" Value="{StaticResource White}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SetupButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedLongButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
+    </Style>
+
+    <!--  Common style for swipe template content border control  -->
+    <!-- Delete later due to wrong style naming -->
+    <Style x:Key="SwipeTemplateBorderStyle" TargetType="Button">
+        <Setter Property="HeightRequest" Value="32" />
+        <Setter Property="WidthRequest" Value="32" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+    </Style>
+    
+    <Style x:Key="SwipeTemplateButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="HeightRequest" Value="32" />
+        <Setter Property="WidthRequest" Value="32" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+    </Style>
+
+    <Style x:Key="RoundMaterialDesignIconButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=70, Tablet=70, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=70, Tablet=70, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=35, Tablet=35, Default=25}" />
+    </Style>
+
+    <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
+        <!--<Setter Property="Text" Value="{StaticResource MaterialDesign_HandFrontRight}" />-->
+        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.HandFrontRight}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
+        <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
+        <Setter Property="BorderWidth" Value="3" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Tablet=35, Phone=25, Default=25}" />
+    </Style>
+
+</ResourceDictionary>

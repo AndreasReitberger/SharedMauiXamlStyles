@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"   
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style TargetType="Shadow">
+        <Setter Property="Radius" Value="15" />
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="Brush" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="Offset" Value="10,10" />
+    </Style>
+    
+    <Style x:Key="CardViewShadowStyle" TargetType="Shadow">
+        <Setter Property="Radius" Value="40" />
+        <Setter Property="Opacity" Value="0.8" />
+        <Setter Property="Brush" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+        <Setter Property="Offset" Value="20,20" />
+    </Style>
+</ResourceDictionary>

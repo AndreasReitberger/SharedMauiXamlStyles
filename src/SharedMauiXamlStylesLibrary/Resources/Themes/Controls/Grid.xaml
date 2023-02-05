@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:control="clr-namespace:AndreasReitberger.Shared.Controls"        
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!--  Common style for TapNavigationGrid  -->
+    <Style x:Key="DefaultTapAnimationGridStyle" TargetType="control:TapAnimationGrid">
+        <Setter Property="RowSpacing" Value="0"/>
+        <!-- Seems to be needed since 7.x.x -->
+        <Setter Property="RowDefinitions">
+            <Setter.Value>
+                <RowDefinitionCollection>
+                    <RowDefinition Height="Auto" />
+                </RowDefinitionCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="IsAnimated" Value="False"/>
+        <Setter Property="ColumnSpacing" Value="0"/>
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="control:TapAnimationGrid">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--  Common style for SettingsGrid  -->
+    <Style x:Key="DefaultGridStyle" TargetType="Grid">
+        <Setter Property="RowSpacing" Value="0"/>
+        <!-- Seems to be needed since 7.x.x -->
+        <Setter Property="RowDefinitions">
+            <Setter.Value>
+                <RowDefinitionCollection>
+                    <RowDefinition Height="Auto" />
+                </RowDefinitionCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ColumnSpacing" Value="0"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DefaultSettingsGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+    </Style>
+    <!--  Common style for WarningGrid  -->
+    <Style x:Key="WarningGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource Yellow}" />
+    </Style>
+    <!--  Common style for ErrorGrid  -->
+    <Style x:Key="CriticalErrorGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
+    </Style>
+    <!--  Common style for SettingsGrid  -->
+    <Style x:Key="DefaultPanelGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+    </Style>
+    <!--  Common style for ModalGrid  -->
+    <Style x:Key="ModalPanelGridStyle" TargetType="Grid">
+        <!--<Setter Property="CompressedLayout.IsHeadless" Value="true" />-->
+        <Setter Property="ColumnDefinitions" Value="*,48" />
+        <Setter Property="RowDefinitions" Value="Auto,*,Auto" />
+    </Style>
+
+    <!--  Common style for Shell.TitleView -->
+    <Style x:Key="ShellTitleViewGridStyle" TargetType="Grid">
+        <!--<Setter Property="HeightRequest" Value="150" />-->
+        <!--<Setter Property="Padding" Value="0, 10" />-->
+    </Style>
+</ResourceDictionary>
