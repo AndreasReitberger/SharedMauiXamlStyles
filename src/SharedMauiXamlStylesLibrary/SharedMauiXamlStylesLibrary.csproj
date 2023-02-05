@@ -54,9 +54,18 @@
 
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.11" />
+	</ItemGroup>
+	
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\SharedMauiCoreLibrary\src\SharedMauiCoreLibrary\SharedMauiCoreLibrary.csproj" />
 	</ItemGroup>	
 
 	<ItemGroup>
+	  <Compile Update="Resources\Themes\ItemTemplates\CarouselViewItemTemplates.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>CarouselViewItemTemplates.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\MinimalisticTheme.xaml.cs">
 	    <DependentUpon>MinimalisticTheme.xaml</DependentUpon>
 	  </Compile>
@@ -175,6 +184,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\StackLayout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\ItemTemplates\CarouselViewItemTemplates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\MinimalisticTheme.xaml">
