@@ -30,7 +30,7 @@
     <Style x:Key="IconLabelStyle" TargetType="Label">
         <Setter Property="Margin" Value="16,8" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=24, Tablet=20, Phone=18, Default=18}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=22, Tablet=20, Default=18}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
