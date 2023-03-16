@@ -35,7 +35,7 @@
                             <VisualState.Setters>
                                 <Setter
                                     Property="BackgroundColor"
-                                    Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                                    Value="{OnPlatform WinUI=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
                                     />
                             </VisualState.Setters>
                         </VisualState>
@@ -43,7 +43,7 @@
                             <VisualState.Setters>
                                 <Setter
                                     Property="BackgroundColor"
-                                    Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}"
+                                    Value="{OnPlatform WinUI=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
                                     />
                             </VisualState.Setters>
                         </VisualState>
