@@ -7,8 +7,6 @@ namespace AndreasReitberger.Shared.Syncfusion.Hosting
         public static MauiAppBuilder InitializeSharedSyncfusionStyles(this MauiAppBuilder builder)
         {
             builder
-                //.UseMauiCompatibility()
-                //.RegisterSharedFonts()
                 .RegisterSharedSyncfusionFonts()
                 .ConfigureSyncfusionAddons()
                 ;

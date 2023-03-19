@@ -22,7 +22,7 @@
     </Style>
 
     <Style x:Key="LabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=16, Tablet=14, Default=12}"/>
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=14, Tablet=14, Default=12}"/>
     </Style>
 
     <!-- ICON ONLY LABELS -->
@@ -30,7 +30,7 @@
     <Style x:Key="IconLabelStyle" TargetType="Label">
         <Setter Property="Margin" Value="16,8" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=24, Tablet=20, Phone=18, Default=18}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=22, Tablet=20, Default=18}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
@@ -49,7 +49,7 @@
 
     <Style x:Key="MaterialFontFamilyIconLabelStyle" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=28, Tablet=26, Phone=24, Default=24}"/>
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=24, Tablet=26, Phone=24, Default=24}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
@@ -63,18 +63,18 @@
 
     <Style x:Key="MediumLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=20, Tablet=18, Default=16}" />
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Tablet=18, Default=16}" />
         <Setter Property="Margin" Value="16, 12" />
         <!--<Setter Property="LineBreakMode" Value="WordWrap" />-->
     </Style>
 
     <Style x:Key="SmallLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=16, Tablet=12, Default=10}"/>
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=12, Tablet=12, Default=10}"/>
     </Style>
 
     <Style x:Key="VerySmallLabelStyle" TargetType="Label" BasedOn="{StaticResource SmallLabelStyle}">
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=14, Tablet=10, Default=8}"/>
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=10, Tablet=10, Default=8}"/>
     </Style>
 
     <Style x:Key="SetupLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
@@ -116,7 +116,7 @@
         <Setter Property="Margin" Value="16,0,0,0" />
         <Setter Property="FontSize" Value="{OnPlatform 
             Android={OnIdiom Desktop=16, Tablet=16, Default=12}, 
-            Default={OnIdiom Desktop=16, Tablet=14, Default=12}}"
+            Default={OnIdiom Desktop=14, Tablet=14, Default=12}}"
             />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=-1, Android=1.25}"/>

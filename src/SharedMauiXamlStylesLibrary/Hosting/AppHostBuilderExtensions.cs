@@ -1,7 +1,4 @@
-﻿using Microsoft.Maui.Controls.Compatibility.Hosting;
-
-namespace AndreasReitberger.Shared.Hosting
-{
+﻿namespace AndreasReitberger.Shared.Hosting {
     public static class AppHostBuilderExtensions
     {
         public static MauiAppBuilder InitializeSharedMauiStyles(this MauiAppBuilder builder)
@@ -15,7 +12,6 @@ namespace AndreasReitberger.Shared.Hosting
         public static MauiAppBuilder RegisterSharedFonts(this MauiAppBuilder builder)
         {
             builder
-                .UseMauiCompatibility()
                 .ConfigureFonts(fonts =>
                 {
                     foreach (KeyValuePair<string, string> font in SharedFonts.Fonts)
