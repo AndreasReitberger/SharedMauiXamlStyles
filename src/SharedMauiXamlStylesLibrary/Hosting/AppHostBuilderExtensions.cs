@@ -1,4 +1,5 @@
-﻿namespace AndreasReitberger.Shared.Hosting {
+﻿namespace AndreasReitberger.Shared.Hosting
+{
     public static class AppHostBuilderExtensions
     {
         public static MauiAppBuilder InitializeSharedMauiStyles(this MauiAppBuilder builder)
@@ -26,6 +27,6 @@
                     }
                 });
             return builder;
-        }     
+        }
     }
 }
