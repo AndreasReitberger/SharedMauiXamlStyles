@@ -54,6 +54,11 @@
 
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.12" />
+	</ItemGroup>
+	
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\SharedMauiCoreLibrary\src\SharedMauiCoreLibrary\SharedMauiCoreLibrary.csproj" />
 	</ItemGroup>	
 
 	<ItemGroup>
