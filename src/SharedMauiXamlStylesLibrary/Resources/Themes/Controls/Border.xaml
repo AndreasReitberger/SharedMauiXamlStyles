@@ -57,6 +57,11 @@
         </Setter>
     </Style>
 
+    <Style x:Key="BrightMinimalPanelCardViewBorderStyle" TargetType="Border" BasedOn="{StaticResource MinimalPanelCardViewBorderStyle}">
+        <Setter Property="Margin" Value="4,8"/>
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+    </Style>
+
     <Style x:Key="CircleBorderStyle" TargetType="Border" BasedOn="{StaticResource ProfileBorderStyle}">
         <Setter Property="WidthRequest" Value="{OnIdiom Phone=64, Default=72}" />
         <Setter Property="HeightRequest" Value="{OnIdiom Phone=64, Default=72}" />
