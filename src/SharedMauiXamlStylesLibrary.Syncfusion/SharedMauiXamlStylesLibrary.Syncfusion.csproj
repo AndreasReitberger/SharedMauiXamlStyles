@@ -55,7 +55,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiXamlStylesLibrary" Version="1.1.1" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="21.2.9" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="21.2.10" />
 	  <PackageReference Include="Syncfusion.Maui.Core" Version="21.2.10" />
 	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="21.2.9" />
 	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="21.2.10" />
