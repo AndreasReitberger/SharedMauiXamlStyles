@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:expander="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" Black="{StaticResource Black}" White="{StaticResource White}" />
+
+    <!-- Docs: https://help.syncfusion.com/maui/accordion/ -->
+    <Style x:Key="DefaultExpanderStyle" TargetType="expander:SfExpander">
+        <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="AnimationDuration" Value="200" />
+        <Setter Property="HeaderIconPosition" Value="Start" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState Name="Expanded">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Collapsed">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="expander:SfExpander" BasedOn="{StaticResource DefaultExpanderStyle}"/>
+</ResourceDictionary>

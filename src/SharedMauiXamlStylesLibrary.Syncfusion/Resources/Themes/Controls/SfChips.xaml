@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     
+    xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!-- Docs: https://help.syncfusion.com/maui/ -->
+    <Style x:Key="DefaultChipStyle" TargetType="inputLayout:SfChip">
+
+    </Style>
+    
+    <Style x:Key="DefaultChipGroupStyle" TargetType="inputLayout:SfChipGroup">
+
+    </Style>
+
+    <Style TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}"/>
+    <Style TargetType="inputLayout:SfChipGroup" BasedOn="{StaticResource DefaultChipGroupStyle}"/>
+</ResourceDictionary>
