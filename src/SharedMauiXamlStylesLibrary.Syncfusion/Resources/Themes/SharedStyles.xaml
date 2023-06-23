@@ -20,6 +20,7 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SfNumericEntry.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRadialGauge.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSlider.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfRating.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTabView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTextInputLayout.xaml" />

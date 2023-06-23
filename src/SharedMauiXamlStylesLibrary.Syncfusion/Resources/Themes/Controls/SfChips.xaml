@@ -12,14 +12,29 @@
         <shared:Fonts />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <!-- Docs: https://help.syncfusion.com/maui/ -->
-    <Style x:Key="DefaultChipStyle" TargetType="inputLayout:SfChip">
 
+    <!-- Docs: https://help.syncfusion.com/maui/chips -->
+    <Style x:Key="DefaultChipStyle" TargetType="inputLayout:SfChip">
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="Padding" Value="2"/>
+    </Style>
+    
+    <Style x:Key="ColorSelectionChipStyle" TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}">
+        <Setter Property="WidthRequest" Value="140"/>
+        <Setter Property="HeightRequest" Value="30"/>
+        <Setter Property="ShowSelectionIndicator" Value="False"/>
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Transparent}" />
     </Style>
     
     <Style x:Key="DefaultChipGroupStyle" TargetType="inputLayout:SfChipGroup">
-
+        <Setter Property="SelectionIndicatorColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="ChipBackground" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="ChipTextSize" Value="12" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
     </Style>
 
     <Style TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}"/>

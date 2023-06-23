@@ -18,7 +18,10 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="14" />
+        <Setter Property="IsEditable" Value="True" />
+        <Setter Property="ShowClearButton" Value="True" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+        <Setter Property="UpDownPlacementMode" Value="Inline" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
@@ -35,6 +38,14 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
+    </Style>
+
+    <Style x:Key="CurrencyNumericEntryStyle" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultNumericEntryStyle}">
+        <Setter Property="CustomFormat" Value="C2" />
+    </Style>
+
+    <Style x:Key="PercentageNumericEntryStyle" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultNumericEntryStyle}">
+        <Setter Property="CustomFormat" Value="P2" />
     </Style>
 
     <Style TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultNumericEntryStyle}"/>

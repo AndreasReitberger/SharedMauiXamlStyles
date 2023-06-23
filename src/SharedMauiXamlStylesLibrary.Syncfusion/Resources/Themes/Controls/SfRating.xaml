@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     
+    xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Docs: https://help.syncfusion.com/maui/rating -->
+    <Style x:Key="DefaultRatingStyle" TargetType="inputs:SfRating">
+        <Setter Property="Precision" Value="Half" />
+        <Setter Property="RatingSettings">
+            <Setter.Value>
+                <inputs:RatingSettings
+                    RatedFill="{DynamicResource PrimaryColor}"
+                    RatedStrokeThickness="0"
+                    UnratedFill="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"
+                    UnratedStrokeThickness="0"
+                    />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="inputs:SfRating" BasedOn="{StaticResource DefaultRatingStyle}"/>
+</ResourceDictionary>

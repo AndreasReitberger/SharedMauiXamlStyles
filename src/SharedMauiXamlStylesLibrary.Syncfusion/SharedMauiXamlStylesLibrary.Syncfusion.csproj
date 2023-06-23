@@ -118,6 +118,9 @@
 	  <MauiXaml Update="Resources\Themes\Controls\SfMaskedEntry.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\SfRating.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfSlider.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
