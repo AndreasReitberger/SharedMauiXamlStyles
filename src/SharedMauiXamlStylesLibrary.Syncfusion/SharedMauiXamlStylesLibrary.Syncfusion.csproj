@@ -99,6 +99,7 @@
 	  </Compile>
 	</ItemGroup>
 
+	<!-- Maui Samples styles do not have the Compile attribute, maybe this causes problems for Intelisense.
 	<ItemGroup>
 	  <MauiXaml Update="Resources\Themes\Controls\Core\EnhancedListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
@@ -187,5 +188,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+	-->
 
 </Project>

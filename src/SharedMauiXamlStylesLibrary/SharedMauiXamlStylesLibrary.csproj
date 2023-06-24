@@ -94,6 +94,7 @@
 	  </Compile>
 	</ItemGroup>
 
+	<!--
 	<ItemGroup>
 	  <MauiXaml Update="Resources\Themes\Controls\Border.xaml">
 	    <Generator>MSBuild:Compile</Generator>
@@ -219,5 +220,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+	-->
 
 </Project>
