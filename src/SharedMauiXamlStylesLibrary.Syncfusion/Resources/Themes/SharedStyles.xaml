@@ -7,16 +7,22 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/Controls/Core/EnhancedListView.xaml" />
         
-        <ResourceDictionary Source="/Resources/Themes/Controls/SfTextInputLayout.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfAccordion.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfAutoComplete.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfBusyIndicator.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfCartesianChart.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfChips.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfComboBox.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfExpander.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfListView.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfMaskedEntry.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfNumericEntry.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRadialGauge.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSlider.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfRating.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTabView.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfTextInputLayout.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
