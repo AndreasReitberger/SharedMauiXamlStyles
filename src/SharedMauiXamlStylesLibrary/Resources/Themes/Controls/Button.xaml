@@ -116,14 +116,15 @@
         <Setter Property="FontSize" Value="{StaticResource DefaultTextIconSize}" />
     </Style>
 
-    <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+    <Style x:Key="LinkButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Margin" Value="4,6" />
         <Setter Property="TextColor" Value="{StaticResource Blue}" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="FontSize" Value="Caption" />
     </Style>
 
-    <Style x:Key="LinkRoundButton" TargetType="Button" BasedOn="{StaticResource LinkButton}">
+
+    <Style x:Key="LinkRoundButtonStyle" TargetType="Button" BasedOn="{StaticResource LinkButton}">
         <Setter Property="BorderColor" Value="{StaticResource Blue}" />
         <Setter Property="BorderWidth" Value="2" />
         <Setter Property="HeightRequest" Value="50" />
