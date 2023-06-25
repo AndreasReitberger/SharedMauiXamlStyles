@@ -104,7 +104,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         public void OnDisappearing()
         {
-            
+
         }
         #endregion
     }
