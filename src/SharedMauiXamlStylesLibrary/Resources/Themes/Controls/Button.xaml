@@ -123,8 +123,7 @@
         <Setter Property="FontSize" Value="Caption" />
     </Style>
 
-
-    <Style x:Key="LinkRoundButtonStyle" TargetType="Button" BasedOn="{StaticResource LinkButton}">
+    <Style x:Key="LinkRoundButtonStyle" TargetType="Button" BasedOn="{StaticResource LinkButtonStyle}">
         <Setter Property="BorderColor" Value="{StaticResource Blue}" />
         <Setter Property="BorderWidth" Value="2" />
         <Setter Property="HeightRequest" Value="50" />
