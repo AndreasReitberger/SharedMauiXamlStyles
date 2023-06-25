@@ -244,4 +244,36 @@
         </ViewCell>
     </DataTemplate>
 
+    <DataTemplate x:Key="ChangeInfoItemTemplate" x:DataType="documentation:ChangeInfo">
+        <ViewCell>
+            <Grid
+                x:Name="Grid"
+                Padding="16,12"
+                ColumnSpacing="16"
+                RowSpacing="2"
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Style="{StaticResource LabelStyle}"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding Changelog}"
+                    />
+                <Border 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
+                    Style="{StaticResource ProfileBorderStyle}"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    >
+                    <Label
+                        Margin="4"
+                        Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                        Text="{Binding Type, Converter={StaticResource StringToChangelogIconConverter}}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        />
+                </Border>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+
 </ResourceDictionary>
