@@ -59,7 +59,7 @@
 	  <PackageReference Include="Syncfusion.Maui.Core" Version="22.1.38" />
 	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="22.1.38" />
 	  <PackageReference Include="Syncfusion.Maui.Expander" Version="22.1.38" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="22.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="22.1.38" />
 	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="22.1.38" />
 	  <PackageReference Include="Syncfusion.Maui.ListView" Version="22.1.38" />
 	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="22.1.38" />
