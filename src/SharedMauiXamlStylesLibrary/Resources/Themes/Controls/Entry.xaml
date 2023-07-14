@@ -35,10 +35,15 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}"/>
-    <Style TargetType="control:BorderlessEntry" BasedOn="{StaticResource DefaultEntryStyle}"/>
+    <Style TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}" ApplyToDerivedTypes="True"/>
+    <Style TargetType="control:BorderlessEntry" BasedOn="{StaticResource DefaultEntryStyle}" ApplyToDerivedTypes="True"/>
 
     <Style x:Key="NumericEntryStyle" TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}">
         <Setter Property="Keyboard" Value="Numeric"/>
+    </Style>
+    
+    <Style x:Key="PasswordEntryStyle" TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}">
+        <Setter Property="IsPassword" Value="True"/>
+        <Setter Property="IsSpellCheckEnabled" Value="False" />
     </Style>
 </ResourceDictionary>

@@ -58,7 +58,7 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
-    
+       
     <Style TargetType="Editor" BasedOn="{StaticResource DefaultEditorStyle}"/>
     <Style TargetType="control:BorderlessEditor" BasedOn="{StaticResource DefaultBorderlessEditorStyle}"/>
 </ResourceDictionary>
