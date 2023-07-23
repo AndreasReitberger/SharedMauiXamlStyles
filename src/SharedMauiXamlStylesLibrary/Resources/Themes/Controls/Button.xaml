@@ -17,19 +17,12 @@
     <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  />
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
 
-    <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
-    <!-- <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" /> -->
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <!--
-        <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"L />
-        <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}" />
-        -->
-        <!--<Setter Property="FontSize" Value="{OnIdiom Tablet=20, Default=16}" />-->
         <Setter Property="FontSize" Value="{OnPlatform 
             Android={OnIdiom Phone=14, Default=18}, 
             Default={OnIdiom Phone=16, Default=20}}"
-                />
+            />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
@@ -126,8 +119,8 @@
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={DynamicResource PrimaryColor}}" />
-                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+                            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
