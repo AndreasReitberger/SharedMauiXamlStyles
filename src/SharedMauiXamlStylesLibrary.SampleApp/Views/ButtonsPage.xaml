@@ -60,26 +60,34 @@
 
             <Grid
                 ColumnDefinitions="*,*,*"
+                RowDefinitions="*,*"
                 >
             <Button 
                 Margin="8,16"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Favourite}"
                 Style="{StaticResource IconButtonStyle}"
-                BackgroundColor="{DynamicResource PrimaryColor}"
+                Background="{DynamicResource PrimaryColor}"
                 />
             <Button 
                 Grid.Column="1"
                 Margin="8,16"
                 Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
                 Style="{StaticResource MaterialDesignIconButtonStyle}"
-                BackgroundColor="{DynamicResource PrimaryColor}"
+                Background="{DynamicResource PrimaryColor}"
                 />
             <Button 
                 Grid.Column="2"
                 Margin="8,16"
                 Text="{x:Static icons:MaterialIcons.ProgressCheck}"
                 Style="{StaticResource RoundMaterialDesignIconButtonStyle}"
-                BackgroundColor="{DynamicResource PrimaryColor}"
+                Background="{DynamicResource PrimaryColor}"
+                />
+            <Button 
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="8,16"
+                Text="{x:Static icons:MaterialIcons.ProgressCheck}"
+                Style="{StaticResource PrimaryMaterialDesignIconButtonStyle}"
                 />
             </Grid>
         </VerticalStackLayout>
