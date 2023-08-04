@@ -12,7 +12,7 @@
     </ResourceDictionary.MergedDictionaries>
    
     <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started 
-    <Style TargetType="sliders:SfRangeSlider">
+    <Style x:Key="DefaultSfRangeSliderStyle" TargetType="sliders:SfRangeSlider">
         <Setter Property="Visual" Value="Default" />
         <Setter Property="HeightRequest" Value="48" />
         <Setter Property="VisualStateManager.VisualStateGroups">

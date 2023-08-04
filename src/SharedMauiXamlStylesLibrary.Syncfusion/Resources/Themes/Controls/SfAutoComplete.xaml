@@ -15,10 +15,12 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-    <Style TargetType="inputs:SfAutocomplete">
+    <Style x:Key="DefaultAutocompleteStyle" TargetType="inputs:SfAutocomplete">
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <!-- Seems to cause a crash -->
         <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
         <Setter Property="Margin" Value="4,2"/>
@@ -38,10 +40,14 @@
        -->
     </Style>
 
-    <Style TargetType="controls:MultiSelectAutoComplete">
+    <Style TargetType="inputs:SfAutocomplete" BasedOn="{StaticResource DefaultAutocompleteStyle}"/>
+
+    <Style x:Key="DefaultMultiSelectAutoCompleteStyle" TargetType="controls:MultiSelectAutoComplete">
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <!-- Seems to cause a crash -->
         <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
         <Setter Property="Margin" Value="4,2"/>
@@ -64,5 +70,7 @@
         </Setter>
         -->
     </Style>
+
+    <Style TargetType="controls:MultiSelectAutoComplete" BasedOn="{StaticResource DefaultMultiSelectAutoCompleteStyle}"/>
 
 </ResourceDictionary>

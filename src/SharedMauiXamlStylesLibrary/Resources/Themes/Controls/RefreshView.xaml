@@ -7,10 +7,11 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <!-- <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />-->
-    <Style TargetType="RefreshView">
+    
+    <Style x:Key="DefaultRefreshViewStyle" TargetType="RefreshView">
         <Setter Property="RefreshColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={OnPlatform WinUI={StaticResource White}, Default={StaticResource Gray100}}, Dark={OnPlatform WinUI={StaticResource Black}, Default={StaticResource Gray900}}}" />
-        <!--<Setter Property="Padding" Value="4,4,4,4" />-->
     </Style>
+
+    <Style TargetType="RefreshView" BasedOn="{StaticResource DefaultRefreshViewStyle}" />
 </ResourceDictionary>

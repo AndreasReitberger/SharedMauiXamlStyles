@@ -7,8 +7,8 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style TargetType="SearchHandler">
+
+    <Style x:Key="DefaultSearchHandlerStyle" TargetType="SearchHandler">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
@@ -32,4 +32,6 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+
+    <Style TargetType="SearchHandler" BasedOn="{StaticResource DefaultSearchHandlerStyle}" />
 </ResourceDictionary>

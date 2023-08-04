@@ -35,6 +35,19 @@
         <Setter Property="ChipTextSize" Value="12" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
+        <Setter Property="ChipLayout">
+            <Setter.Value>
+                <FlexLayout 
+					HorizontalOptions="Start" 
+					VerticalOptions="Center" 
+                    Direction="Row" 
+                    Wrap="Wrap"
+                    JustifyContent="Center"
+                    AlignContent="SpaceAround" 
+                    AlignItems="Center"
+					/>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}"/>

@@ -15,12 +15,15 @@
 
     <!-- Docs: https://help.syncfusion.com/maui/numeric-entry -->
     <Style x:Key="DefaultNumericEntryStyle" TargetType="inputs:SfNumericEntry">
+        <Setter Property="Minimum" Value="0" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="IsEditable" Value="True" />
         <Setter Property="ShowClearButton" Value="True" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="UpDownPlacementMode" Value="Inline" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

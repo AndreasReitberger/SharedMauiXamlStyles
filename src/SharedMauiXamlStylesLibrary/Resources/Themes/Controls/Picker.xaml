@@ -8,7 +8,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-    <Style TargetType="Picker">
+    <Style x:Key="DefaultPickerStyle" TargetType="Picker">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="TitleColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
@@ -32,4 +32,6 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+
+    <Style TargetType="Picker" BasedOn="{StaticResource DefaultPickerStyle}" />
 </ResourceDictionary>

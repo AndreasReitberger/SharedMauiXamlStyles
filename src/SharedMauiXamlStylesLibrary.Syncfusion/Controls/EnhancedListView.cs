@@ -10,6 +10,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
     {
         #region Field
 
+        [Obsolete("Not needed anymore, the SfListView has the `SelectedItems` property")]
         public IList SelectedItemsList
         {
             get => (IList)GetValue(SelectedItemsListProperty);
