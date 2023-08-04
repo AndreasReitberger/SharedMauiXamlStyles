@@ -13,13 +13,18 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-    <Style x:Key="TabViewDefaultStyle" TargetType="tabView:SfTabView">
+    <Style x:Key="DefaultSfTabViewStyle" TargetType="tabView:SfTabView">
         <Setter Property="IndicatorBackground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="IndicatorPlacement" Value="Top"/>
         <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
     </Style>
 
-    <Style x:Key="DefaultTabViewItemStyle" TargetType="tabView:SfTabItem">
+    <!-- Workaround for wrong style name-->
+    <Style x:Key="TabViewDefaultStyle" TargetType="tabView:SfTabView" BasedOn="{StaticResource DefaultSfTabViewStyle}" />
+
+    <Style TargetType="tabView:SfTabView" BasedOn="{StaticResource DefaultSfTabViewStyle}" />
+
+    <Style x:Key="DefaultSfTabViewItemStyle" TargetType="tabView:SfTabItem">
         <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=36, Tablet=14, Default=12}"/>-->
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
         <Setter Property="FontSize" Value="Micro"/>
@@ -41,14 +46,17 @@
         </Setter>
     </Style>
 
-    <Style x:Key="MaterialIconTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemStyle}">
+    <!-- Workaround for wrong style name-->
+    <Style x:Key="DefaultTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}" />
+
+    <Style x:Key="MaterialIconTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
         <!--<Setter Property="FontSize" Value="{StaticResource DefaultIconSize}"/>-->
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
         <Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
         <!--<Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>-->
     </Style>
 
-    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultTabViewItemStyle}"/>
+    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}"/>
     <!--
     <Style x:Key="DefaultTabViewItemDefaultStyle" TargetType="tabView:SfTabItem">
         <Setter Property="TitleFontColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>

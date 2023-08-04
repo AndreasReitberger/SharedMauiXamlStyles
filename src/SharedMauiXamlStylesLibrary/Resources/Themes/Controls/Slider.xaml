@@ -8,7 +8,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-    <Style TargetType="Slider">
+    <Style x:Key="DefaultSliderStyle" TargetType="Slider">
         <Setter Property="MinimumTrackColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
         <Setter Property="MaximumTrackColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
         <Setter Property="ThumbColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
@@ -33,4 +33,6 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+
+    <Style TargetType="Slider" BasedOn="{StaticResource DefaultSliderStyle}" />
 </ResourceDictionary>

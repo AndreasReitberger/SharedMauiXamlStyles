@@ -30,6 +30,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    
     <!--  Common style for SettingsGrid  -->
     <Style x:Key="DefaultGridStyle" TargetType="Grid">
         <Setter Property="RowSpacing" Value="0"/>

@@ -8,7 +8,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-    <Style TargetType="RadioButton">
+    <Style x:Key="DefaultRadioButtonStyle" TargetType="RadioButton">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
@@ -29,4 +29,6 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+
+    <Style TargetType="RadioButton" BasedOn="{StaticResource DefaultRadioButtonStyle}" />
 </ResourceDictionary>

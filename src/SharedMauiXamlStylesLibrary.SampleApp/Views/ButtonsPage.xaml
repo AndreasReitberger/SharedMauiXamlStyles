@@ -6,6 +6,8 @@
     
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
@@ -13,6 +15,9 @@
     Style="{StaticResource DefaultPageStyle}"
     x:DataType="viewModels:LabesPageViewModel"   
     >
+    <ContentPage.Resources>
+        <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout>
             <Label 
@@ -67,6 +72,7 @@
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Favourite}"
                 Style="{StaticResource IconButtonStyle}"
                 Background="{DynamicResource PrimaryColor}"
+                TextColor="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
                 />
             <Button 
                 Grid.Column="1"
@@ -74,6 +80,7 @@
                 Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
                 Style="{StaticResource MaterialDesignIconButtonStyle}"
                 Background="{DynamicResource PrimaryColor}"
+                TextColor="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
                 />
             <Button 
                 Grid.Column="2"
@@ -81,6 +88,7 @@
                 Text="{x:Static icons:MaterialIcons.ProgressCheck}"
                 Style="{StaticResource RoundMaterialDesignIconButtonStyle}"
                 Background="{DynamicResource PrimaryColor}"
+                TextColor="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
                 />
             <Button 
                 Grid.Row="1"

@@ -34,7 +34,7 @@
                 Text="This is a small label"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource DoesNotExistSmallLabelStyle}"
+                Style="{StaticResource SmallLabelStyle}"
                 />
             <Label 
                 Margin="2,16"

@@ -13,10 +13,12 @@
 
     
     <!-- Docs: https://help.syncfusion.com/maui/radial-gauge/overview-->
-    <Style TargetType="gauge:SfRadialGauge">
+    <Style x:Key="DefaultSfRadialGaugeStyle" TargetType="gauge:SfRadialGauge">
         <Setter Property="WidthRequest" Value="250" />
         <Setter Property="HeightRequest" Value="250" />
     </Style>
+
+    <Style TargetType="gauge:SfRadialGauge" BasedOn="{StaticResource DefaultSfRadialGaugeStyle}" />
 
     <Style x:Key="DefaultRadialLineStyle" TargetType="gauge:RadialLineStyle">
         <Setter Property="Fill" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
