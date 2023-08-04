@@ -37,14 +37,14 @@
             <Button 
                 Margin="8,16"
                 Text="This is a link styled button"
-                Style="{StaticResource LinkButton}"
+                Style="{StaticResource LinkButtonStyle}"
                 />
             
             
             <Button 
                 Margin="8,16"
                 Text="This is a link styled button with a round frame"
-                Style="{StaticResource LinkRoundButton}"
+                Style="{StaticResource LinkRoundButtonStyle}"
                 />
             
             <Button 
