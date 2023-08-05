@@ -130,13 +130,13 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## ActivityIndicator
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultActivityIndicator               | ActivityIndicator   | Core      |
 
 ## Border
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | ProfileBorderStyle                     | Border              | Core      |
 | CardViewBorderStyle                    | Border              | Core      |
 | PanelCardViewBorderStyle               | Border              | Core      |
@@ -148,13 +148,13 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## BoxView
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | SeparatorStyle                         | BoxView             | Core      |
 
 ## Button
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultButtonStyle                     | Button              | Core      |
 | ImageButton                            | Button              | Core      |
 | IconButtonStyle                        | Button              | Core      |
@@ -173,26 +173,26 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## CheckBox
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultCheckBoxStyle                   | CheckBox            | Core      |
 
 ## DatePicker
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultDatePickerStyle                 | DatePicker          | Core      |
 
 ## Editor / BorderlessEditor
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultEditorStyle                     | Editor              | Core      |
 | DefaultBorderlessEditorStyle           | BorderlessEditor    | Core      |
 
 ## Entry / BorderlessEntry
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultEntryStyle                      | Entry               | Core      |
 | NumericEntryStyle                      | Entry               | Core      |
 | PasswordEntryStyle                     | Entry               | Core      |
@@ -200,14 +200,14 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## Frame
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultFrameStyle                      | Frame               | Core      |
 | ListViewItemFrameStyle                 | Frame               | Core      |
 
 ## Grid / TapAnimationGrid
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultGridStyle                       | Grid                | Core      |
 | DefaultSettingsGridStyle               | Grid                | Core      |
 | WarningGridStyle                       | Grid                | Core      |
@@ -220,13 +220,13 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## IndicatorView
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultIndicatorViewStyle              | IndicatorView       | Core      |
  
 ## Label
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultLabelStyle                      | Label               | Core      |
 | LabelStyle                             | Label               | Core      |
 | IconLabelStyle                         | Label               | Core      |
@@ -262,13 +262,13 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## ListView
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultListViewStyle                   | ListView            | Core      |
 
 ## Page
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultPageStyle                       | Page                | Core      |
 | ModalPageStyle                         | Page                | Core      |
 | SettingsPageStyle                      | Page                | Core      |
@@ -276,50 +276,50 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## Picker
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultPickerStyle                     | Picker              | Core      |
 
 ## ProgressBar
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultProgressBarStyle                | ProgressBar         | Core      |
 
 ## RadioButton
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultRadioButtonStyle                | RadioButton         | Core      |
 
 ## RefreshView
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultRefreshViewStyle                | RefreshView         | Core      |
 
 ## SearchBar
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSearchBarStyle                  | SearchBar           | Core      |
 
 ## SearchHandler
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSearchHandlerStyle              | SearchHandler       | Core      |
 
 ## Shadow
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultShadowStyle                     | Shadow              | Core      |
 | CardViewShadowStyle                    | Shadow              | Core      |
 
 ## Shell
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | BaseStyle                              | Element             | Core      |
 | DefaultShellStyle                      | Shell               | Core      |
 | DefaultFlyoutItemStyle                 | FlyoutItem          | Core      |
@@ -327,13 +327,13 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## Slider
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSliderStyle                     | Slider              | Core      |
 
 ## StackLayout
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | StackLayoutHeaderStyle                 | StackLayout         | Core      |
 | ModalInputPageStackLayoutStyle         | StackLayout         | Core      |
 | VerticalStackLayoutHeaderStyle         | VerticalStackLayout | Core      |
@@ -344,52 +344,52 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## SwipeItem
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSwipeItemStyle                  | SwipeItem           | Core      |
 
 ## Switch
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSwitchStyle                     | Switch              | Core      |
 
 ## TimePicker
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultTimePickerStyle                 | TimePicker          | Core      |
 
 ## SfAccordion
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultAccordionStyle                  | SfAccordion         | Syncfusion|
 | DefaultAccordionItemStyle              | AccordionItem       | Syncfusion|
 
 ## SfAutocomplete
 
 | Key                                    | TargetType             | Library   |
-| ---------------------------------------|:----------------------:| ------- -:|
+| ---------------------------------------|:----------------------:| ---------:|
 | DefaultAutocompleteStyle               | SfAutocomplete         | Syncfusion|
 | DefaultMultiSelectAutoCompleteStyle    | MultiSelectAutoComplete| Syncfusion|
 
 ## SfBadgeView
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultBadgeViewStyle                  | SfBadgeView         | Syncfusion|
 | HyperlinkBadgedViewStyle               | SfBadgeView         | Syncfusion|
 
 ## SfBusyIndicator
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultBusyIndicatorStyle              | SfBusyIndicator     | Syncfusion|
 
 ## SfCartesianChart
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | NumericOnlySfCartesianChartStyle       | SfCartesianChart    | Syncfusion|
 | DefaultChartAxisLabelStyle             | ChartAxisLabelStyle | Syncfusion|
 | DefaultMajorGridChartLineStyle         | ChartLineStyle      | Syncfusion|
@@ -400,7 +400,7 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## SfChip
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultChipStyle                       | SfChip              | Syncfusion|
 | ColorSelectionChipStyle                | SfChip              | Syncfusion|
 | DefaultChipGroupStyle                  | SfChipGroup         | Syncfusion|
@@ -408,33 +408,33 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## SfComboBox
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultComboBoxStyle                   | SfComboBox          | Syncfusion|
 | DefaultMultiSelectComboBox             | MultiSelectComboBox | Syncfusion|
 
 ## SfExpander
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultExpanderStyle                   | SfExpander          | Syncfusion|
 
 ## SfListView
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSfListViewStyle                 | SfListView          | Syncfusion|
 | ListViewDeleteEditGestureSwipeableStyle| SfListView          | Syncfusion|
 
 ## SfMaskedEntry
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultMaskedEntryStyle                | SfMaskedEntry       | Syncfusion|
 
 ## SfNumericEntry
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultNumericEntryStyle               | SfNumericEntry      | Syncfusion|
 | CurrencyNumericEntryStyle              | SfNumericEntry      | Syncfusion|
 | PercentageNumericEntryStyle            | SfNumericEntry      | Syncfusion|
@@ -442,26 +442,26 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## SfRadialGauge
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSfRadialGaugeStyle              | SfRadialGauge       | Syncfusion|
 | DefaultRadialLineStyle                 | RadialLineStyle     | Syncfusion|
 
 ## SfRangeSlider
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSfRangeSliderStyle              | SfRangeSlider       | Syncfusion|
 
 ## SfRating
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultRatingStyle                     | SfRating            | Syncfusion|
 
 ## SfSlider
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSfSliderStyle                   | SfSlider            | Syncfusion|
 | PrimraySliderStyle                     | SfSlider            | Syncfusion|
 | PercentageSliderStyle                  | SfSlider            | Syncfusion|
@@ -469,14 +469,14 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 ## SfTabView
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultSfTabViewStyle                  | SfTabView           | Syncfusion|
 | DefaultSfTabViewItemStyle              | SfTabItem           | Syncfusion|
 
 ## SfTextInputLayout
 
 | Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ------- -:|
+| ---------------------------------------|:-------------------:| ---------:|
 | DefaultTextInputLayoutStyle            | SfTextInputLayout   | Syncfusion|
 
 
