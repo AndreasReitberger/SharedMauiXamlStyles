@@ -5,8 +5,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:views="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.Views"
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"   
     
-    Shell.FlyoutBehavior="Flyout"  
+    Style="{StaticResource DefaultShellStyle}"
+    FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
+    FlyoutBackgroundColor="{AppThemeBinding Light={OnPlatform WinUI={StaticResource Gray100}, Default={StaticResource White}}, Dark={OnPlatform WinUI={StaticResource Gray900}, Default={StaticResource Black}}}"
+    
+    Shell.ItemTemplate="{StaticResource DefaultFlyoutTemplate}"
+    Shell.MenuItemTemplate="{StaticResource DefaultFlyoutTemplate}"
+    x:DataType="viewModels:AppShellViewModel"
     >
 
     <ShellContent
@@ -19,4 +26,29 @@
         ContentTemplate="{DataTemplate views:ButtonsPage}"
         Route="ButtonsPage" />
 
+    <ShellContent
+        Title="TabView"
+        ContentTemplate="{DataTemplate views:TabViewPage}"
+        Route="TabViewPage" />
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout
+            BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+            >
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Style="{StaticResource LabelStyle}"
+                    Text="Darkmode"
+                    VerticalTextAlignment="Center"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Darkmode}"
+                    />
+            </Grid>
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+    
 </Shell>

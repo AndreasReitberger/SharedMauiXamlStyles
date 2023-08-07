@@ -57,6 +57,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\TabViewPage.xaml.cs">
+	    <DependentUpon>TabViewPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\ButtonsPage.xaml.cs">
 	    <DependentUpon>ButtonsPage.xaml</DependentUpon>
 	  </Compile>
@@ -70,6 +73,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TabViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ButtonsPage.xaml">

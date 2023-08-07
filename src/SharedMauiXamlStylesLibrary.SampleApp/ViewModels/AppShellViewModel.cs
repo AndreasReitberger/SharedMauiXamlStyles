@@ -2,7 +2,7 @@
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
-    public partial class LabesPageViewModel : BaseViewModel
+    public partial class AppShellViewModel : BaseViewModel
     {
 
         #region Properties
@@ -14,7 +14,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         #region Constructor, LoadSettings
 
-        public LabesPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
+        public AppShellViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
             UpdateVersionBuild();

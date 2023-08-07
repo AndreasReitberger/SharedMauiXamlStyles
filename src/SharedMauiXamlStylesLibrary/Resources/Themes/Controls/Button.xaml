@@ -18,6 +18,8 @@
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
 
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{OnPlatform 
             Android={OnIdiom Phone=14, Default=18}, 
@@ -26,12 +28,15 @@
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <!--
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}" />
                             <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
                         </VisualState.Setters>
                     </VisualState>
+                    -->
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
@@ -41,18 +46,6 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
-        <!--
-        <Setter Property="TextColor" Value="{StaticResource Black}" />
-        <Style.Triggers>
-            <DataTrigger
-                TargetType="Button"
-                Binding="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToLightForgroundConverter}}"
-                Value="True"
-                >
-                <Setter Property="TextColor" Value="{StaticResource Black}" />
-            </DataTrigger>
-        </Style.Triggers>
-        -->
     </Style>
     <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}"/>
 

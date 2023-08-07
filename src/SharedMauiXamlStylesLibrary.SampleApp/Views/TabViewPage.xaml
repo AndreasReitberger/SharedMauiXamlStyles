@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.TabViewPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+    
+    Title="TabViewPage"
+    Style="{StaticResource DefaultPageStyle}"
+    x:DataType="viewModels:TabViewPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <tabView:SfTabView
+        Style="{StaticResource DefaultSfTabViewStyle}"
+        >
+        <tabView:SfTabItem
+            Header="Tab1"
+            >
+            <VerticalStackLayout>
+                <Label
+                    Text="Text"
+                    />
+            </VerticalStackLayout>
+        </tabView:SfTabItem>
+        <tabView:SfTabItem
+            Header="Tab2"
+            >
+            <VerticalStackLayout>
+                <Label
+                    Text="Text"
+                    />
+            </VerticalStackLayout>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>
+</ContentPage>
