@@ -62,7 +62,7 @@
 	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="22.2.8" />
 	  <PackageReference Include="Syncfusion.Maui.ListView" Version="22.2.7" />
 	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="22.2.7" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="22.2.7" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="22.2.8" />
 	  <PackageReference Include="Syncfusion.Maui.TabView" Version="22.2.7" />
 	</ItemGroup>
 
