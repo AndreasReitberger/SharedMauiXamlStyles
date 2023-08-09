@@ -37,15 +37,30 @@
             >
             <Grid
                 ColumnDefinitions="*,Auto"
+                RowDefinitions="*,*"
                 >
                 <Label
                     Style="{StaticResource LabelStyle}"
-                    Text="Darkmode"
+                    Text="Darkmode: "
                     VerticalTextAlignment="Center"
                     />
                 <Switch
                     Grid.Column="1"
                     IsToggled="{Binding Darkmode}"
+                    />
+
+                <Label
+                    Grid.Row="1"
+                    Style="{StaticResource LabelStyle}"
+                    Text="Color:"
+                    VerticalTextAlignment="Center"
+                    />
+                <Picker
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    ItemsSource="{Binding Themes}"
+                    SelectedItem="{Binding Theme}"
+                    ItemDisplayBinding="{Binding ThemeName}"
                     />
             </Grid>
         </VerticalStackLayout>
