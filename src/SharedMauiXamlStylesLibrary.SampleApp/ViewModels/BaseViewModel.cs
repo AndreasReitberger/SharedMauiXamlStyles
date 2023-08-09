@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
+using SharedMauiXamlStylesLibrary.SampleApp.Utilities;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
@@ -48,11 +49,40 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         #endregion
 
+        #region Theme
+        [ObservableProperty]
+        bool darkmode = false;
+        partial void OnDarkmodeChanged(bool value)
+        {
+            if (!IsLoading)
+            {
+                //SettingsApp.Theme_UseDarkTheme = value;
+                //SettingsApp.SettingsChanged = true;
+                ThemeManager.Instance.ApplyTheme(value ? AppTheme.Dark : AppTheme.Light, Application.Current);
+            }
+        }
+
+
+        [ObservableProperty]
+        string hexCode = string.Empty;
+        partial void OnHexCodeChanged(string value)
+        {
+            if (!IsLoading)
+            {
+                //SettingsApp.Theme_PrimaryThemeColor = value;
+                //SettingsApp.SettingsChanged = true;
+                ThemeManager.Instance.UpdatePrimaryThemeColor(ThemeManager.Instance.FindThemeOrDefault(value), Application.Current);
+                ThemeManager.Instance.UpdatePlatformThemeColor(ThemeManager.Instance.FindThemeOrDefault(value));
+            }
+        }
+        #endregion
 
         #region Constructor
-        public BaseViewModel(IDispatcher dispatcher) : base(dispatcher)
+        public BaseViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
+            Provider = provider;
+
             UpdateVersionBuild();
         }
 

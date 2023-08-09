@@ -11,9 +11,9 @@
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
-    Title="LabelsPage"
+    Title="ButtonsPage"
     Style="{StaticResource DefaultPageStyle}"
-    x:DataType="viewModels:LabesPageViewModel"   
+    x:DataType="viewModels:ButtonsPageViewModel"   
     >
     <ContentPage.Resources>
         <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
