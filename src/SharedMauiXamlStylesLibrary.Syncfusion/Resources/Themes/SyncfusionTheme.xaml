@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Syncfusion.SyncfusionTheme"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <!--
+    <Color x:Key="SfComboBoxDropdownBackground"></Color>
+    <Color x:Key="SfComboBoxNormalDropdownItemsTextColor">#B02F35</Color>
+    -->
+</ResourceDictionary>
