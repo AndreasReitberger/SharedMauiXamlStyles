@@ -14,6 +14,8 @@
 
 
     <Style x:Key="BaseStyle" TargetType="Element">
+        <!-- Must be BackgroundColor, otherwise TitleView is not set (at least on NET7) -->
+        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="Shell.Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
         <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />

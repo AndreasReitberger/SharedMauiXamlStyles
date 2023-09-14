@@ -36,6 +36,13 @@
             
             <Button 
                 Margin="8,16"
+                Text="This is a green button"
+                Style="{StaticResource DefaultButtonStyle}"
+                Background="Green"
+                />
+            
+            <Button 
+                Margin="8,16"
                 Text="This is a link styled button"
                 Style="{StaticResource LinkButtonStyle}"
                 />
@@ -70,25 +77,19 @@
             <Button 
                 Margin="8,16"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Favourite}"
-                Style="{StaticResource IconButtonStyle}"
-                Background="{DynamicResource PrimaryColor}"
-                TextColor="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
+                Style="{StaticResource PrimaryIconButtonStyle}"
                 />
             <Button 
                 Grid.Column="1"
                 Margin="8,16"
                 Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
-                Style="{StaticResource MaterialDesignIconButtonStyle}"
-                Background="{DynamicResource PrimaryColor}"
-                TextColor="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
+                Style="{StaticResource PrimaryMaterialDesignIconButtonStyle}"
                 />
             <Button 
                 Grid.Column="2"
                 Margin="8,16"
                 Text="{x:Static icons:MaterialIcons.ProgressCheck}"
-                Style="{StaticResource RoundMaterialDesignIconButtonStyle}"
-                Background="{DynamicResource PrimaryColor}"
-                TextColor="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
+                Style="{StaticResource PrimaryMaterialDesignIconButtonStyle}"
                 />
             <Button 
                 Grid.Row="1"
