@@ -164,7 +164,7 @@
     <!--  Common style for swipe template content button control  -->
     <Style x:Key="SwipeTemplateButtonStyle" TargetType="Label">
         <!-- Check if needed 
-        <Setter Property="BackgroundColor" Value="Transparent" />-->
+        <Setter Property="Background" Value="Transparent" />-->
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />

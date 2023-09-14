@@ -33,7 +33,7 @@
         <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="ChipBackground" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="ChipTextSize" Value="12" />
-        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
         <Setter Property="ChipLayout">
             <Setter.Value>

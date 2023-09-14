@@ -28,13 +28,13 @@
                     <VisualStateGroup x:Name="CommonStates">
                         <VisualState x:Name="Normal">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="Transparent" />
+                                <Setter Property="Background" Value="Transparent" />
                             </VisualState.Setters>
                         </VisualState>
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
                                 <Setter
-                                    Property="BackgroundColor"
+                                    Property="Background"
                                     Value="{OnPlatform WinUI=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
                                     />
                             </VisualState.Setters>
@@ -42,7 +42,7 @@
                         <VisualState x:Name="Disabled">
                             <VisualState.Setters>
                                 <Setter
-                                    Property="BackgroundColor"
+                                    Property="Background"
                                     Value="{OnPlatform WinUI=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
                                     />
                             </VisualState.Setters>

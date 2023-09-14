@@ -20,11 +20,11 @@
             RowSpacing="4"
             RowDefinitions="*,64,Auto"
             >
-            <!-- BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" -->
+            <!-- Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" -->
             <Frame
                 Margin="20,16"
                 BorderColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
-                BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}"
+                Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}"
                 >
                 <Image
                     Margin="4"

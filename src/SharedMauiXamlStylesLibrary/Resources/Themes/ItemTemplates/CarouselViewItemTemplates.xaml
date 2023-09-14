@@ -46,7 +46,7 @@
                 StrokeShape="RoundRectangle 20"
                 StrokeThickness="0"
                 Margin="0,10"
-                BackgroundColor="{Binding PrimaryColor}"
+                Background="{Binding PrimaryColor}"
                 >
                 <Border.Shadow>
                     <Shadow 
@@ -74,7 +74,7 @@
                             StrokeShape="RoundRectangle 10"
                             StrokeThickness="0"
                             Margin="20,10"
-                            BackgroundColor="{Binding PrimaryLigtherColor}"
+                            Background="{Binding PrimaryLigtherColor}"
                             >
                             <Label
                                 Text="{Binding PrimaryLigtherColor, Converter={StaticResource ColorToStringConverter}}"
@@ -89,7 +89,7 @@
                             StrokeShape="RoundRectangle 10"
                             StrokeThickness="0"
                             Margin="20,10"
-                            BackgroundColor="{Binding PrimaryDarkerColor}"
+                            Background="{Binding PrimaryDarkerColor}"
                             >
                             <Label
                                 Text="{Binding PrimaryDarkerColor, Converter={StaticResource ColorToStringConverter}}"
