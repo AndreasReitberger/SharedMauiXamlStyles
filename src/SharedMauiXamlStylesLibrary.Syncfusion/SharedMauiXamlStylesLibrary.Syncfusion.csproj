@@ -2,8 +2,8 @@
  <Import Project="..\..\common.props" />
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0;net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -53,6 +53,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.0-preview.7.8842" />
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
 	  <PackageReference Include="Syncfusion.Maui.Charts" Version="23.1.36" />
 	  <PackageReference Include="Syncfusion.Maui.Core" Version="23.1.36" />
@@ -67,6 +68,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Resources\Themes\SyncfusionTheme.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>SyncfusionTheme.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\MinimalisticTheme.xaml.cs">
 	    <DependentUpon>MinimalisticTheme.xaml</DependentUpon>
 	  </Compile>
@@ -99,7 +104,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
+	  <MauiXaml Update="Resources\Themes\SyncfusionTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<!-- Maui Samples styles do not have the Compile attribute, maybe this causes problems for Intelisense.
