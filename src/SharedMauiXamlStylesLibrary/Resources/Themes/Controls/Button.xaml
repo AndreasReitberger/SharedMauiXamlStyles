@@ -5,7 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    xmlns:localConcerters="clr-namespace:AndreasReitberger.Shared.Converters"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
     >
     <!--
@@ -20,7 +19,7 @@
 
     <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  />
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
-    <localConcerters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
 
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <!-- Set Background before setting the TextColor due to the Converter -->
