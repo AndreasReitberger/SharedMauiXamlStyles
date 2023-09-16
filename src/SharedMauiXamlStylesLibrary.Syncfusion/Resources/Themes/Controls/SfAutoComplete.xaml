@@ -19,7 +19,7 @@
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <!-- Seems to cause a crash -->
         <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
@@ -46,7 +46,7 @@
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <!-- Seems to cause a crash -->
         <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->

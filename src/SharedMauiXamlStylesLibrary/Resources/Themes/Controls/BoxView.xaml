@@ -12,7 +12,7 @@
     <Style x:Key="SeparatorStyle" TargetType="BoxView">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
         <Setter Property="HeightRequest" Value="1" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
     </Style>
 
     <!--  Common style for separator BoxView  -->

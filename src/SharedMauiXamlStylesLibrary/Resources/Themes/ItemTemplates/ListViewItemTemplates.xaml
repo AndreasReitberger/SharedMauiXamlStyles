@@ -25,7 +25,7 @@
                 <!-- Check icon -->
                 <Border
                     Style="{StaticResource ProfileBorderStyle}"
-                    BackgroundColor="{StaticResource LightGreen}"
+                    Background="{StaticResource LightGreen}"
                     Margin="0"
                     >
                     <Label 
@@ -172,7 +172,7 @@
             <Grid 
                 Padding="2"
                 Margin="1"
-                BackgroundColor="{DynamicResource PrimaryColor}"
+                Background="{DynamicResource PrimaryColor}"
                 ColumnDefinitions="48,*"
                 >
                 <Grid.RowDefinitions>
@@ -228,7 +228,7 @@
                     Text="{Binding Changelog}"
                     />
                 <Border 
-                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
+                    Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
                     Style="{StaticResource ProfileBorderStyle}"
                     Grid.Column="1"
                     VerticalOptions="Center"
@@ -260,7 +260,7 @@
                     Text="{Binding Changelog}"
                     />
                 <Border 
-                    BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
+                    Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
                     Style="{StaticResource ProfileBorderStyle}"
                     Grid.Column="1"
                     VerticalOptions="Center"

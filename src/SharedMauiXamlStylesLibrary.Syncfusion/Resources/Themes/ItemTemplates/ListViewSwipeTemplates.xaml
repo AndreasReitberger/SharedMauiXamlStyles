@@ -27,7 +27,7 @@
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
-                BackgroundColor="{StaticResource Red}"
+                Background="{StaticResource Red}"
                 Margin="0"
                 >
                 <Label.GestureRecognizers>
@@ -44,7 +44,7 @@
     <DataTemplate x:Key="EditGestureSwipeTemplate">
         <ViewCell>
             <Grid
-                BackgroundColor="{StaticResource Green}"
+                Background="{StaticResource Green}"
                 >
                 <Label
                     Style="{StaticResource IconLabelStyle}"
@@ -69,7 +69,7 @@
     <DataTemplate x:Key="ViewGestureSwipeTemplate">
         <ViewCell>
             <Grid
-                BackgroundColor="{StaticResource Blue}"
+                Background="{StaticResource Blue}"
                 >
                 <Label
                     Style="{StaticResource IconLabelStyle}"
@@ -98,7 +98,7 @@
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
-                BackgroundColor="{StaticResource Green}"
+                Background="{StaticResource Green}"
                 Margin="0"
                 >
                 <Label.GestureRecognizers>
@@ -120,7 +120,7 @@
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
-                BackgroundColor="{StaticResource Orange}"
+                Background="{StaticResource Orange}"
                 Margin="0"
                 >
                 <Label.GestureRecognizers>
@@ -147,7 +147,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Red}"
+                    Background="{StaticResource Red}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -165,7 +165,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Green}"
+                    Background="{StaticResource Green}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -191,7 +191,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Yellow}"
+                    Background="{StaticResource Yellow}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -210,7 +210,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Green}"
+                    Background="{StaticResource Green}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -236,7 +236,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Blue}"
+                    Background="{StaticResource Blue}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -254,7 +254,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Green}"
+                    Background="{StaticResource Green}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -272,7 +272,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Green}"
+                    Background="{StaticResource Green}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -298,7 +298,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Red}"
+                    Background="{StaticResource Red}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -316,7 +316,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Blue}"
+                    Background="{StaticResource Blue}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -341,7 +341,7 @@
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
-                    BackgroundColor="{StaticResource Green}"
+                    Background="{StaticResource Green}"
                     Margin="0"
                     >
                     <Label.GestureRecognizers>
@@ -360,7 +360,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Blue}"
+                    Background="{StaticResource Blue}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
@@ -385,7 +385,7 @@
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
-                    BackgroundColor="{StaticResource Orange}"
+                    Background="{StaticResource Orange}"
                     Margin="0"
                     >
                     <Label.GestureRecognizers>
@@ -404,7 +404,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    BackgroundColor="{StaticResource Green}"
+                    Background="{StaticResource Green}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer

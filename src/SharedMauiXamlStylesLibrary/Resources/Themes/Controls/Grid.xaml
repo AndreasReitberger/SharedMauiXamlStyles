@@ -23,10 +23,10 @@
         </Setter>
         <Setter Property="IsAnimated" Value="False"/>
         <Setter Property="ColumnSpacing" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="control:TapAnimationGrid">
-                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -45,25 +45,25 @@
         <Setter Property="ColumnSpacing" Value="0"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="Grid">
-                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 
     <Style x:Key="DefaultSettingsGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
     </Style>
     <!--  Common style for WarningGrid  -->
     <Style x:Key="WarningGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{StaticResource Yellow}" />
+        <Setter Property="Background" Value="{StaticResource Yellow}" />
     </Style>
     <!--  Common style for ErrorGrid  -->
     <Style x:Key="CriticalErrorGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{StaticResource Red}" />
+        <Setter Property="Background" Value="{StaticResource Red}" />
     </Style>
     <!--  Common style for SettingsGrid  -->
     <Style x:Key="DefaultPanelGridStyle" TargetType="Grid" BasedOn="{StaticResource DefaultGridStyle}">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
     </Style>
     <!--  Common style for ModalGrid  -->
     <Style x:Key="ModalPanelGridStyle" TargetType="Grid">
