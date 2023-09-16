@@ -12,7 +12,7 @@
     
     <Style TargetType="Page" ApplyToDerivedTypes="True">
         <Setter Property="Padding" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
 
     <Style TargetType="NavigationPage">
@@ -29,16 +29,16 @@
     </Style>
 
     <Style x:Key="DefaultPageStyle" TargetType="ContentPage">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
 
     <Style x:Key="ModalPageStyle" TargetType="ContentPage" BasedOn="{StaticResource DefaultPageStyle}">
         <Setter Property="Shell.PresentationMode" Value="ModalAnimated" />
         <Setter Property="ios:Page.ModalPresentationStyle" Value="{OnIdiom Tablet=Automatic, Default=FormSheet}" />
-        <!--<Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />-->
+        <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />-->
     </Style>
 
     <Style x:Key="SettingsPageStyle" TargetType="ContentPage" BasedOn="{StaticResource DefaultPageStyle}">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
     </Style>
 </ResourceDictionary>

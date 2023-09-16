@@ -19,7 +19,7 @@
     <Style x:Key="DefaultExpanderStyle" TargetType="expander:SfExpander">
         <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="AnimationDuration" Value="200" />
         <Setter Property="HeaderIconPosition" Value="Start" />
         <Setter Property="VisualStateManager.VisualStateGroups">

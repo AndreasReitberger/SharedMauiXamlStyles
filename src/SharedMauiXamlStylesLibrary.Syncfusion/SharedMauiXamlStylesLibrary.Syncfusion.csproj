@@ -54,16 +54,16 @@
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.Expander" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="22.2.11" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="22.2.11" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.Expander" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="23.1.36" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="23.1.36" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -96,6 +96,10 @@
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedFonts.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
 	</ItemGroup>
 
 	<!-- Maui Samples styles do not have the Compile attribute, maybe this causes problems for Intelisense.

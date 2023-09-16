@@ -120,13 +120,13 @@ namespace AndreasReitberger.Shared.Controls
             TapAnimationGrid grid = (TapAnimationGrid)bindable;
             if (grid.IsAnimated)
             {
-                Application.Current.Resources.TryGetValue($"{(Application.Current.RequestedTheme == AppTheme.Light ? "Light_" : "Dark_")}Gray100", out var retVal);
-                grid.BackgroundColor = (Color)retVal;
+                Application.Current.Resources.TryGetValue($"{(Application.Current.RequestedTheme == AppTheme.Light ? "Gray100" : "Gray900")}", out var retVal);
+                grid.Background = (Brush)retVal;
 
                 // To make the selected item color changes for 100 milliseconds.
                 await Task.Delay(100);
                 Application.Current.Resources.TryGetValue("TaptemGridBackground", out var retValue);
-                grid.BackgroundColor = (Color)retValue;
+                grid.Background = (Brush)retValue;
             }
         }
         #endregion

@@ -22,8 +22,8 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
         <Setter Property="Margin" Value="4,2"/>
-        <!--<Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />-->
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" /><!---->
+        <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />-->
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" /><!---->
         <!--
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
