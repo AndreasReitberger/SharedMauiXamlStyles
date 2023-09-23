@@ -14,7 +14,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Docs: https://help.syncfusion.com/maui/numeric-entry -->
-    <Style x:Key="DefaultNumericEntryStyle" TargetType="inputs:SfNumericEntry">
+    <Style x:Key="DefaultSfNumericEntryStyle" TargetType="inputs:SfNumericEntry">
         <Setter Property="Minimum" Value="0" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
@@ -43,13 +43,13 @@
         </Setter>
     </Style>
 
-    <Style x:Key="CurrencyNumericEntryStyle" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultNumericEntryStyle}">
+    <Style x:Key="CurrencySfNumericEntryStyle" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultSfNumericEntryStyle}">
         <Setter Property="CustomFormat" Value="C2" />
     </Style>
 
-    <Style x:Key="PercentageNumericEntryStyle" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultNumericEntryStyle}">
+    <Style x:Key="PercentageSfNumericEntryStyle" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultSfNumericEntryStyle}">
         <Setter Property="CustomFormat" Value="P2" />
     </Style>
 
-    <Style TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultNumericEntryStyle}"/>
+    <Style TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource DefaultSfNumericEntryStyle}"/>
 </ResourceDictionary>

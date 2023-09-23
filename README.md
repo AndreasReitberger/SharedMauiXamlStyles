@@ -435,9 +435,9 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultNumericEntryStyle               | SfNumericEntry      | Syncfusion|
-| CurrencyNumericEntryStyle              | SfNumericEntry      | Syncfusion|
-| PercentageNumericEntryStyle            | SfNumericEntry      | Syncfusion|
+| DefaultSfNumericEntryStyle             | SfNumericEntry      | Syncfusion|
+| CurrencySfNumericEntryStyle            | SfNumericEntry      | Syncfusion|
+| PercentageSfNumericEntryStyle          | SfNumericEntry      | Syncfusion|
 
 ## SfRadialGauge
 
