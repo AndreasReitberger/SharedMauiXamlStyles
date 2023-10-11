@@ -53,8 +53,8 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.0-rc.1.9171" />
-	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
+	  <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+	  <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 	  <PackageReference Include="Syncfusion.Maui.Charts" Version="23.1.40" />
 	  <PackageReference Include="Syncfusion.Maui.Core" Version="23.1.40" />
 	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="23.1.40" />
@@ -65,6 +65,7 @@
 	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="23.1.40" />
 	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="23.1.40" />
 	  <PackageReference Include="Syncfusion.Maui.TabView" Version="23.1.40" />
+	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

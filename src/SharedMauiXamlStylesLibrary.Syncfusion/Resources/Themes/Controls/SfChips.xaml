@@ -14,8 +14,9 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Docs: https://help.syncfusion.com/maui/chips -->
+    <!-- MissingFieldException: Field not found: 'Syncfusion.Maui.Core.SfChip.FontSizeProperty  on Net8? -->
     <Style x:Key="DefaultChipStyle" TargetType="inputLayout:SfChip">
-        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
+        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" /> 
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="StrokeThickness" Value="0"/>
         <Setter Property="Padding" Value="2"/>
@@ -27,6 +28,9 @@
         <Setter Property="ShowSelectionIndicator" Value="False"/>
         <Setter Property="SelectionIndicatorColor" Value="{StaticResource Transparent}" />
     </Style>
+    
+    <Style TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}"/>
+    
     
     <Style x:Key="DefaultChipGroupStyle" TargetType="inputLayout:SfChipGroup">
         <Setter Property="SelectionIndicatorColor" Value="{DynamicResource PrimaryColor}"/>
@@ -50,6 +54,6 @@
         </Setter>
     </Style>
 
-    <Style TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}"/>
     <Style TargetType="inputLayout:SfChipGroup" BasedOn="{StaticResource DefaultChipGroupStyle}"/>
+    <<!-- -->
 </ResourceDictionary>
