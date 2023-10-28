@@ -55,5 +55,4 @@
     </Style>
 
     <Style TargetType="inputLayout:SfChipGroup" BasedOn="{StaticResource DefaultChipGroupStyle}"/>
-    <<!-- -->
 </ResourceDictionary>
