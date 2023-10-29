@@ -53,9 +53,6 @@
 
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.16" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.2.9373" />
 	</ItemGroup>
 	
 	<ItemGroup>

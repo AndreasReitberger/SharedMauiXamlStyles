@@ -49,11 +49,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.0-rc.1.9171" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.1.23419.4" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary.Syncfusion\SharedMauiXamlStylesLibrary.Syncfusion.csproj" />
 	</ItemGroup>
 
