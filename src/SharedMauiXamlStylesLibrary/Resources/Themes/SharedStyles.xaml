@@ -5,7 +5,7 @@
     x:Class="AndreasReitberger.Shared.Styles"
     >
     <ResourceDictionary.MergedDictionaries>
-        <!-- Must come for Boarder! -->
+        <!-- Must come for Border! -->
         <ResourceDictionary Source="/Resources/Themes/Controls/Shadow.xaml" />
         
         <ResourceDictionary Source="/Resources/Themes/Controls/ActivityIndicator.xaml" />
