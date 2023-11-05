@@ -19,8 +19,10 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
+        <Setter Property="FontSize" Value="Default"/>
     </Style>
 
+    <!-- Obsolete, will be removed -->
     <Style x:Key="LabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
         <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=14, Tablet=14, Default=12}"/>-->
         <Setter Property="FontSize" Value="Default"/>
@@ -121,7 +123,7 @@
         <Setter Property="FontSize" Value="Default" />
     </Style>
 
-    <Style x:Key="SettingsLabelStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+    <Style x:Key="SettingsLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
         <Setter Property="Margin" Value="16,0,0,0" />
         <!--
         <Setter Property="FontSize" Value="{OnPlatform 
@@ -129,7 +131,7 @@
             Default={OnIdiom Desktop=14, Tablet=14, Default=12}}"
             />
         -->
-        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="FontSize" Value="Small" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=-1, Android=1.25}"/>
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=70, Tablet=70, Phone=50, Default=50}"/>
@@ -172,6 +174,7 @@
 
     <Style x:Key="TitleViewHeadlineLabelStyle" TargetType="Label" BasedOn="{StaticResource PrimaryHeadlineLabelStyle}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <Setter Property="FontSize" Value="Medium" />
     </Style>
 
     <!-- PrimaryColor Dark Headline -->
