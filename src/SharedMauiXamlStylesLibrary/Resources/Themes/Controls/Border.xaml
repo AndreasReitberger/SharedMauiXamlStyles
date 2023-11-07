@@ -34,7 +34,18 @@
             </Setter.Value>
         </Setter>
         <Setter Property="StrokeThickness" Value="1"/>
-        <Setter Property="Shadow" Value="{StaticResource CardViewShadowStyle}"/>
+        <!-- Causes: Microsoft.Maui.Controls.BindableObject: Warning: Cannot convert Microsoft.Maui.Controls.Style to type 'Microsoft.Maui.Controls.Shadow' -->
+        <!--<Setter Property="Shadow" Value="{StaticResource CardViewShadowStyle}"/>-->
+        <Setter Property="Shadow">
+            <Setter.Value>
+                <Shadow 
+                    Radius="40" 
+                    Opacity="0.8" 
+                    Brush="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}"
+                    Offset="20,20"
+                    />
+            </Setter.Value>
+        </Setter>
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}"/>
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}"/>
     </Style>

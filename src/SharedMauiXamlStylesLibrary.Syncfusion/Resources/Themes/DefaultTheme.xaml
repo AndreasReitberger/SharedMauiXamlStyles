@@ -14,5 +14,6 @@
         <!-- Templates must come for styles! -->
         <ResourceDictionary Source="/Resources/Themes/SharedTemplates.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedStyles.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SyncfusionTheme.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
