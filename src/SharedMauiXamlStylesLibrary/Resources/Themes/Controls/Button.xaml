@@ -162,10 +162,30 @@
 
     <Style x:Key="LinkButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Margin" Value="4,6" />
-        <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <!--
+        <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{StaticResource Blue}" />
+        -->
         <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource Transparent}"/>
+                            <Setter Property="TextColor" Value="{StaticResource Blue}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
 
     <Style x:Key="LinkRoundButtonStyle" TargetType="Button" BasedOn="{StaticResource LinkButtonStyle}">
