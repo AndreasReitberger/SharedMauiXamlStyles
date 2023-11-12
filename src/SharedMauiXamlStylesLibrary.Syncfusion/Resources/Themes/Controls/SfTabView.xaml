@@ -25,7 +25,6 @@
     <Style TargetType="tabView:SfTabView" BasedOn="{StaticResource DefaultSfTabViewStyle}" />
 
     <Style x:Key="DefaultSfTabViewItemStyle" TargetType="tabView:SfTabItem">
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=36, Tablet=14, Default=12}"/>-->
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
         <Setter Property="FontSize" Value="Micro"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -50,7 +49,6 @@
     <Style x:Key="DefaultTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}" />
 
     <Style x:Key="MaterialIconTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
-        <!--<Setter Property="FontSize" Value="{StaticResource DefaultIconSize}"/>-->
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
         <Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
         <!--<Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>-->
