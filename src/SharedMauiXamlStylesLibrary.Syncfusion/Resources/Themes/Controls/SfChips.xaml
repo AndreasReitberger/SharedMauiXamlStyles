@@ -16,7 +16,7 @@
     <!-- Docs: https://help.syncfusion.com/maui/chips -->
     <!-- MissingFieldException: Field not found: 'Syncfusion.Maui.Core.SfChip.FontSizeProperty  on Net8? -->
     <Style x:Key="DefaultChipStyle" TargetType="inputLayout:SfChip">
-        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" /> 
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="StrokeThickness" Value="0"/>
         <Setter Property="Padding" Value="2"/>

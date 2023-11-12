@@ -21,7 +21,7 @@
         <Setter Property="HintLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="12"
+                    FontSize="{OnPlatform iOS=Micro, Default=Small}"
                     FontFamily="{StaticResource MontserratRegular}"
                     TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
                     />
@@ -30,7 +30,7 @@
         <Setter Property="HelperLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="12"
+                    FontSize="{OnPlatform iOS=Micro, Default=Small}"
                     FontFamily="{StaticResource MontserratRegular}"
                     TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
                     />
@@ -39,7 +39,7 @@
         <Setter Property="ErrorLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="12"
+                    FontSize="{OnPlatform iOS=Micro, Default=Small}"
                     FontFamily="{StaticResource MontserratRegular}"
                     />
             </Setter.Value>

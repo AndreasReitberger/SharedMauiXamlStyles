@@ -219,17 +219,17 @@
                 >
             <Label
                     Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
+                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    Background="{StaticResource Blue}"
+                    Background="{StaticResource Red}"
                     >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
                             NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.DuplicateItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                            Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
                             CommandParameter="{Binding .}"
                             />
                 </Label.GestureRecognizers>
@@ -260,12 +260,12 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    Background="{StaticResource Green}"
+                    Background="{StaticResource Blue}"
                     >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
                             NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                            Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
                             CommandParameter="{Binding .}"
                             />
                 </Label.GestureRecognizers>
@@ -279,17 +279,17 @@
                 >
             <Label
                     Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    Background="{StaticResource Red}"
+                    Background="{StaticResource Green}"
                     >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
                             NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                            Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
                             CommandParameter="{Binding .}"
                             />
                 </Label.GestureRecognizers>
@@ -397,5 +397,67 @@
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DuplicateEditDeleteGestureSwipeTemplate">
+        <ViewCell>
+            <Grid
+                ColumnDefinitions="*,*,*"
+                >
+                <Label
+                    Style="{StaticResource IconLabelStyle}"
+                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
+                    TextColor="{StaticResource White}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="0"
+                    Background="{StaticResource Blue}"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Command="{Binding BindingContext.DuplicateItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                            CommandParameter="{Binding .}"
+                            />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Style="{StaticResource IconLabelStyle}"
+                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                    TextColor="{StaticResource White}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="0"
+                    Background="{StaticResource Green}"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                            CommandParameter="{Binding .}"
+                            />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Grid.Column="2"
+                    Style="{StaticResource IconLabelStyle}"
+                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                    TextColor="{StaticResource White}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="0"
+                    Background="{StaticResource Green}"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                            CommandParameter="{Binding .}"
+                            />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </ViewCell>
     </DataTemplate>
 </ResourceDictionary>
