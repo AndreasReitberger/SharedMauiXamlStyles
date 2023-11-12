@@ -19,7 +19,7 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="ClearButtonColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="IsEditable" Value="True" />
         <Setter Property="ShowClearButton" Value="True" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />

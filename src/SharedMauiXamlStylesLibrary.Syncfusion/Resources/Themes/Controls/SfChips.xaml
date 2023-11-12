@@ -15,7 +15,7 @@
 
     <!-- Docs: https://help.syncfusion.com/maui/chips -->
     <Style x:Key="DefaultChipStyle" TargetType="inputLayout:SfChip">
-        <Setter Property="FontSize" Value="{OnIdiom Tablet=14, Default=12}" />
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="StrokeThickness" Value="0"/>
         <Setter Property="Padding" Value="2"/>

@@ -97,7 +97,7 @@
                     >
                     <Label 
                         LineBreakMode="WordWrap" 
-                        Style="{StaticResource LabelStyle}" 
+                        Style="{StaticResource SmallLabelStyle}" 
                         Text="{Binding Message}"
                         FontAttributes="Bold"
                         VerticalTextAlignment="Center"
