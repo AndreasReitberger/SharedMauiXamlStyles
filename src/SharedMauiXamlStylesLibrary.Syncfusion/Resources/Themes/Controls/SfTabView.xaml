@@ -14,9 +14,11 @@
     </ResourceDictionary.MergedDictionaries>
     
     <Style x:Key="DefaultSfTabViewStyle" TargetType="tabView:SfTabView">
-        <Setter Property="IndicatorBackground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="IndicatorPlacement" Value="Top"/>
         <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <!-- Seems to cause troubles if set in style already. So rather set in the app later -->
+        <!--<Setter Property="IndicatorBackground" Value="{DynamicResource PrimaryColor}"/>-->
+        <Setter Property="IndicatorBackground" Value="{StaticResource PrimaryColor}"/>
     </Style>
 
     <!-- Workaround for wrong style name-->

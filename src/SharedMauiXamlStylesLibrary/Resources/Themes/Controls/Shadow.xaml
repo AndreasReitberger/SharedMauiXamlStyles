@@ -7,6 +7,9 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+    <!-- Causes: Microsoft.Maui.Controls.BindableObject: Warning: Cannot convert Microsoft.Maui.Controls.Style to type 'Microsoft.Maui.Controls.Shadow' -->
+    <!-- Use directly, not as StaticResource
     <Style x:Key="DefaultShadowStyle" TargetType="Shadow">
         <Setter Property="Radius" Value="15" />
         <Setter Property="Opacity" Value="0.5" />
@@ -22,4 +25,5 @@
         <Setter Property="Brush" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
         <Setter Property="Offset" Value="20,20" />
     </Style>
+    -->
 </ResourceDictionary>
