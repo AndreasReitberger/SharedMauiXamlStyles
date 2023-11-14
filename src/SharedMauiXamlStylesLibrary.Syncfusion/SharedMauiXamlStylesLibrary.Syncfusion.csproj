@@ -108,6 +108,10 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
 	<!-- Maui Samples styles do not have the Compile attribute, maybe this causes problems for Intelisense.
 	<ItemGroup>
 	  <MauiXaml Update="Resources\Themes\Controls\Core\EnhancedListView.xaml">

@@ -213,10 +213,10 @@
             </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="DuplicateEditDeleteGestureSwipeTemplate">
+    <DataTemplate x:Key="DeleteEditViewGestureSwipeTemplate">
         <Grid
-                ColumnDefinitions="*,*,*"
-                >
+            ColumnDefinitions="*,*,*"
+            >
             <Label
                     Style="{StaticResource IconLabelStyle}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
@@ -253,15 +253,15 @@
                 </Label.GestureRecognizers>
             </Label>
             <Label
-                    Grid.Column="2"
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
-                    TextColor="{StaticResource White}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Margin="0"
-                    Background="{StaticResource Blue}"
-                    >
+                Grid.Column="2"
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Blue}"
+                >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
                             NumberOfTapsRequired="1"
@@ -447,7 +447,7 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     Margin="0"
-                    Background="{StaticResource Green}"
+                    Background="{StaticResource Red}"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer

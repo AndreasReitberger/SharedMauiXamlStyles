@@ -52,7 +52,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.0.16" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.0" />
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -92,5 +92,9 @@
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedFonts.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 </Project>
