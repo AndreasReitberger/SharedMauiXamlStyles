@@ -14,15 +14,16 @@
         <shared:Fonts />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
+
     <Style x:Key="DefaultAutocompleteStyle" TargetType="inputs:SfAutocomplete">
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <!-- Seems to cause a crash -->
-        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/><!---->
         <Setter Property="Margin" Value="4,2"/>
         <!-- 
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -43,13 +44,14 @@
     <Style TargetType="inputs:SfAutocomplete" BasedOn="{StaticResource DefaultAutocompleteStyle}"/>
 
     <Style x:Key="DefaultMultiSelectAutoCompleteStyle" TargetType="controls:MultiSelectAutoComplete">
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <!-- Seems to cause a crash -->
-        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/><!---->
         <Setter Property="Margin" Value="4,2"/>
         <!--
         <Setter Property="VisualStateManager.VisualStateGroups">
