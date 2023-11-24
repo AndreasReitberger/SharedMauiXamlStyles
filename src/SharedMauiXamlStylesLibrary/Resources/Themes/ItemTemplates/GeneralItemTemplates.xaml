@@ -11,6 +11,10 @@
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"    
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
     <DataTemplate x:Key="TutorialStepItemTemplate" x:DataType="documentation:TutorialStep">

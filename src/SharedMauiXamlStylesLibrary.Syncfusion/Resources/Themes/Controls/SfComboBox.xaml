@@ -13,9 +13,10 @@
         <shared:Fonts />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
+
 
     <Style x:Key="DefaultComboBoxStyle" TargetType="inputs:SfComboBox">
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
@@ -47,6 +48,7 @@
     <Style TargetType="inputs:SfComboBox" BasedOn="{StaticResource DefaultComboBoxStyle}"/>
 
     <Style x:Key="DefaultMultiSelectComboBox" TargetType="controls:MultiSelectComboBox">
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
