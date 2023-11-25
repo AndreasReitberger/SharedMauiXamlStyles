@@ -24,6 +24,14 @@
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <!---->
+        <Setter Property="HeaderView">
+            <Setter.Value>
+                <picker:PickerHeaderView 
+                    DividerColor="{DynamicResource PrimaryColor}"
+                    >
+                </picker:PickerHeaderView>
+            </Setter.Value>
+        </Setter>
         <Setter Property="SelectionView">
             <Setter.Value>
                 <picker:PickerSelectionView 
@@ -81,6 +89,15 @@
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="TimeFormat" Value="HH_mm" />
         <!---->
+        <Setter Property="HeaderView">
+            <Setter.Value>
+                <picker:DateTimePickerHeaderView 
+                    TimeFormat="HH:mm"
+                    DividerColor="{DynamicResource PrimaryColor}"
+                    >
+                </picker:DateTimePickerHeaderView>
+            </Setter.Value>
+        </Setter>
         <Setter Property="SelectionView">
             <Setter.Value>
                 <picker:PickerSelectionView 
