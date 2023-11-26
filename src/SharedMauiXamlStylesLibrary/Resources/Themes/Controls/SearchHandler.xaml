@@ -11,7 +11,7 @@
     <Style x:Key="DefaultSearchHandlerStyle" TargetType="SearchHandler">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

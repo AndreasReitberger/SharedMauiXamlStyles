@@ -11,7 +11,7 @@
     <Style x:Key="DefaultPickerStyle" TargetType="Picker">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="TitleColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

@@ -10,7 +10,7 @@
     
     <Style x:Key="DefaultTimePickerStyle" TargetType="TimePicker">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
