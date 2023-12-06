@@ -58,7 +58,7 @@
                 <picker:PickerTextStyle
                     FontSize="12"
                     FontFamily="{StaticResource MontserratRegular}"
-                    TextColor="{DynamicResource PrimaryColor}"
+                    TextColor="{Binding Source={RelativeSource AncestorType={x:Type picker:SfPicker}}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"            
                     >
                 </picker:PickerTextStyle>
             </Setter.Value>
@@ -92,10 +92,17 @@
         <!--
         <Setter Property="HeaderView">
             <Setter.Value>
-                <picker:DateTimePickerHeaderView 
-                    TimeFormat="HH:mm"
+                <picker:DateTimePickerHeaderView
                     DividerColor="{DynamicResource PrimaryColor}"
+                    TimeFormat="HH:mm"
                     >
+                    <picker:DateTimePickerHeaderView.SelectionTextStyle>
+                        <picker:PickerTextStyle
+                            FontSize="12"
+                            FontFamily="{StaticResource MontserratRegular}"
+                            TextColor="{DynamicResource PrimaryColor}"
+                            />
+                    </picker:DateTimePickerHeaderView.SelectionTextStyle>
                 </picker:DateTimePickerHeaderView>
             </Setter.Value>
         </Setter>
@@ -125,7 +132,7 @@
                 <picker:PickerTextStyle
                     FontSize="12"
                     FontFamily="{StaticResource MontserratRegular}"
-                    TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                    TextColor="{Binding Source={RelativeSource AncestorType={x:Type picker:SfDateTimePicker}}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
                     >
                 </picker:PickerTextStyle>
             </Setter.Value>
