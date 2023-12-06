@@ -8,11 +8,12 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
     <Style x:Key="DefaultEditorStyle" TargetType="Editor">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -35,7 +36,7 @@
 
     <Style x:Key="DefaultBorderlessEditorStyle" TargetType="control:BorderlessEditor">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />

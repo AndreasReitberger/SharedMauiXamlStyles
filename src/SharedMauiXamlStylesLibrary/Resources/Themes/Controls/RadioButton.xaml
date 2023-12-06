@@ -6,11 +6,12 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
     <Style x:Key="DefaultRadioButtonStyle" TargetType="RadioButton">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

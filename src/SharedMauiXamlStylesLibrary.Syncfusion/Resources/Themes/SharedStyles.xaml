@@ -18,6 +18,7 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SfListView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfMaskedEntry.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfNumericEntry.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfPicker.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRadialGauge.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSlider.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRating.xaml" />
