@@ -83,18 +83,18 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         #region Method
         void ItemSelect_SelectionChanged(object sender, ItemSelectionChangedEventArgs e)
         {
-
             ArrayList list = new(SelectedItemsList);
             // Add new items
-            foreach (var item in e.AddedItems)
-                if (!list.Contains(item))
-                    list.Add(item);
+            if(e?.AddedItems is not null)
+                foreach (var item in e.AddedItems)
+                    if (!list.Contains(item))
+                        list.Add(item);
 
             // Remove items
-            foreach (var item in e.RemovedItems)
-                if (list.Contains(item))
-                    list.Remove(item);
-
+            if (e?.RemovedItems is not null)
+                foreach (var item in e.RemovedItems)
+                    if (list.Contains(item))
+                        list.Remove(item);
             // Update list
             SelectedItemsList = list;
         }
@@ -105,6 +105,15 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             if (newValue is IList selectedItems)
             {
                 listView.SetValue(SelectedItemsListProperty, selectedItems);
+                if (selectedItems?.Count > 0 && listView.SelectedItems.Count == 0)
+                {
+                    foreach (var item in selectedItems)
+                        listView.SelectedItems.Add(item);
+                    //args.AddedItems.Add(item);
+                    // Fire blank event
+                    ItemSelectionChangedEventArgs args = new();
+                    listView.ItemSelect_SelectionChanged(listView, args);
+                };
             }
         }
 
