@@ -27,6 +27,11 @@
         Route="ButtonsPage" />
 
     <ShellContent
+        Title="Entry"
+        ContentTemplate="{DataTemplate views:EntryPage}"
+        Route="EntryPage" />
+
+    <ShellContent
         Title="TabView"
         ContentTemplate="{DataTemplate views:TabViewPage}"
         Route="TabViewPage" />

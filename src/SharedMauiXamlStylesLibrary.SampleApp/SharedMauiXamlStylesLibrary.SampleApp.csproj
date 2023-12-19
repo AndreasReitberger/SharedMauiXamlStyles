@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\common.props" />
 	<PropertyGroup>
 		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
@@ -53,6 +53,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\EntryPage.xaml.cs">
+	    <DependentUpon>EntryPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\TabViewPage.xaml.cs">
 	    <DependentUpon>TabViewPage.xaml</DependentUpon>
 	  </Compile>
@@ -71,6 +74,9 @@
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\EntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TabViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -81,9 +87,4 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-	</ItemGroup>
-
 </Project>
