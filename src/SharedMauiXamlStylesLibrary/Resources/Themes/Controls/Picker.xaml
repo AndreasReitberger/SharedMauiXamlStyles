@@ -8,8 +8,8 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultPickerStyle" TargetType="Picker">
+
+    <Style x:Key="Style.Core.Picker.Default" TargetType="Picker">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="TitleColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
@@ -34,5 +34,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Picker" BasedOn="{StaticResource DefaultPickerStyle}" />
+    <Style TargetType="Picker" BasedOn="{StaticResource Style.Core.Picker.Default}" />
 </ResourceDictionary>

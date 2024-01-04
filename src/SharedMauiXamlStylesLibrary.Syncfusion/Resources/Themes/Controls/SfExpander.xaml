@@ -16,7 +16,7 @@
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" Black="{StaticResource Black}" White="{StaticResource White}" />
 
     <!-- Docs: https://help.syncfusion.com/maui/accordion/ -->
-    <Style x:Key="DefaultSfExpanderStyle" TargetType="expander:SfExpander">
+    <Style x:Key="Style.Syncfusion.SfExpander.Default" TargetType="expander:SfExpander">
         <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
@@ -42,5 +42,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="expander:SfExpander" BasedOn="{StaticResource DefaultSfExpanderStyle}"/>
+    <Style TargetType="expander:SfExpander" BasedOn="{StaticResource Style.Syncfusion.SfExpander.Default}"/>
 </ResourceDictionary>

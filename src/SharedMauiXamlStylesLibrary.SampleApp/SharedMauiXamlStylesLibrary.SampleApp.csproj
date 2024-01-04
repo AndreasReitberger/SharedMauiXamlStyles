@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary.Syncfusion\SharedMauiXamlStylesLibrary.Syncfusion.csproj" />
+	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

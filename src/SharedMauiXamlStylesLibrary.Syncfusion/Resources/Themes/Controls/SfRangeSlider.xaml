@@ -12,7 +12,7 @@
     </ResourceDictionary.MergedDictionaries>
    
     <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started 
-    <Style x:Key="DefaultSfRangeSliderStyle" TargetType="sliders:SfRangeSlider">
+    <Style x:Key="Style.Syncfusion.SfRangeSlider.Default" TargetType="sliders:SfRangeSlider">
         <Setter Property="Visual" Value="Default" />
         <Setter Property="HeightRequest" Value="48" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -91,7 +91,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PrimraySfRangeSliderStyle" TargetType="sliders:SfRangeSlider">
+    <Style x:Key="Style.Syncfusion.SfRangeSlider.Primray" TargetType="sliders:SfRangeSlider">
         <Setter Property="ShowLabels" Value="False" />
         <Setter Property="WidthRequest" Value="290" />
         <Setter Property="HeightRequest" Value="36" />

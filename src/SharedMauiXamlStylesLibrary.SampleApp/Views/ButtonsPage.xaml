@@ -12,7 +12,7 @@
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
     Title="ButtonsPage"
-    Style="{StaticResource DefaultPageStyle}"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
     x:DataType="viewModels:ButtonsPageViewModel"   
     >
     <ContentPage.Resources>
@@ -25,39 +25,39 @@
                 Text="Text Buttons"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource LabelStyle}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             
             <Button 
                 Margin="8,16"
                 Text="This is a normal button"
-                Style="{StaticResource DefaultButtonStyle}"
+                Style="{StaticResource Style.Core.Button.Default}"
                 />
             
             <Button 
                 Margin="8,16"
                 Text="This is a green button"
-                Style="{StaticResource DefaultButtonStyle}"
+                Style="{StaticResource Style.Core.Button.Default}"
                 Background="Green"
                 />
             
             <Button 
                 Margin="8,16"
                 Text="This is a link styled button"
-                Style="{StaticResource LinkButtonStyle}"
+                Style="{StaticResource Style.Core.Button.Link}"
                 />
             
             
             <Button 
                 Margin="8,16"
                 Text="This is a link styled button with a round frame"
-                Style="{StaticResource LinkRoundButtonStyle}"
+                Style="{StaticResource Style.Core.Button.LinkRound}"
                 />
             
             <Button 
                 Margin="8,16"
                 Text="This is a normal button"
-                Style="{StaticResource RoundedLongButtonStyle}"
+                Style="{StaticResource Style.Core.Button.RoundedLong}"
                 />
             
             <BoxView />
@@ -67,7 +67,7 @@
                 Text="Icon Buttons"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource LabelStyle}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
 
             <Grid
@@ -77,26 +77,26 @@
             <Button 
                 Margin="8,16"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Favourite}"
-                Style="{StaticResource PrimaryIconButtonStyle}"
+                Style="{StaticResource Style.Core.Button.IconPrimary}"
                 />
             <Button 
                 Grid.Column="1"
                 Margin="8,16"
                 Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
-                Style="{StaticResource PrimaryMaterialDesignIconButtonStyle}"
+                Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                 />
             <Button 
                 Grid.Column="2"
                 Margin="8,16"
                 Text="{x:Static icons:MaterialIcons.ProgressCheck}"
-                Style="{StaticResource PrimaryMaterialDesignIconButtonStyle}"
+                Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                 />
             <Button 
                 Grid.Row="1"
                 Grid.Column="0"
                 Margin="8,16"
                 Text="{x:Static icons:MaterialIcons.ProgressCheck}"
-                Style="{StaticResource PrimaryMaterialDesignIconButtonStyle}"
+                Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                 />
             </Grid>
         </VerticalStackLayout>

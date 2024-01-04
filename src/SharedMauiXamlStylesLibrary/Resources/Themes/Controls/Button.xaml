@@ -21,7 +21,7 @@
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
 
-    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+    <Style x:Key="Style.Core.Button.Default" TargetType="Button">
         <!-- Set Background before setting the TextColor due to the Converter -->
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
@@ -47,9 +47,10 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
-    <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}"/>
+    
+    <Style TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}"/>
 
-    <Style TargetType="ImageButton">
+    <Style x:Key="Style.Core.ImageButton.Default" TargetType="ImageButton">
         <Setter Property="BorderColor" Value="Transparent"/>
         <Setter Property="BorderWidth" Value="0"/>
         <Setter Property="CornerRadius" Value="0"/>
@@ -70,8 +71,10 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
-    
-    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+
+    <Style TargetType="ImageButton" BasedOn="{StaticResource Style.Core.ImageButton.Default}"/>
+
+    <Style x:Key="Style.Core.Button.Icon" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
@@ -100,7 +103,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PrimaryIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
+    <Style x:Key="Style.Core.Button.IconPrimary" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -123,12 +126,12 @@
         </Setter>
     </Style>
 
-    <Style x:Key="MaterialDesignIconButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle}">
+    <Style x:Key="Style.Core.Button.Icon.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />
     </Style>
 
-    <Style x:Key="PrimaryMaterialDesignIconButtonStyle" TargetType="Button" BasedOn="{StaticResource MaterialDesignIconButtonStyle}">
+    <Style x:Key="Style.Core.Button.IconPrimary.MaterialDesign" TargetType="Button" BasedOn="{StaticResource MaterialDesignStyle.Core.Button.Icon}">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -151,7 +154,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="LinkButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+    <Style x:Key="Style.Core.Button.Link" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="Margin" Value="4,6" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{StaticResource Blue}" />
@@ -176,14 +179,14 @@
         </Setter>
     </Style>
 
-    <Style x:Key="LinkRoundButtonStyle" TargetType="Button" BasedOn="{StaticResource LinkButtonStyle}">
+    <Style x:Key="Style.Core.Button.LinkRound" TargetType="Button" BasedOn="{StaticResource LinkButtonStyle}">
         <Setter Property="BorderColor" Value="{StaticResource Blue}" />
         <Setter Property="BorderWidth" Value="2" />
         <Setter Property="HeightRequest" Value="50" />
         <Setter Property="CornerRadius" Value="25" />
     </Style>
 
-    <Style x:Key="RoundIconButtonStyle" BasedOn="{StaticResource IconButtonStyle}" TargetType="Button">
+    <Style x:Key="Style.Core.Button.IconRound" BasedOn="{StaticResource Style.Core.Button.Icon}" TargetType="Button">
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="CornerRadius" Value="25" />
@@ -193,7 +196,7 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
     </Style>
 
-    <Style x:Key="RoundedLongButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+    <Style x:Key="Style.Core.Button.RoundedLong" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="Margin" Value="20" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="Small" />
@@ -204,23 +207,13 @@
         <Setter Property="BorderWidth" Value="0" />
     </Style>
 
-    <Style x:Key="SetupButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedLongButtonStyle}">
+    <Style x:Key="Style.Core.Button.Setup" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.RoundedLong}">
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
     <!--  Common style for swipe template content border control  -->
-    <!-- Delete later due to wrong style naming -->
-    <Style x:Key="SwipeTemplateBorderStyle" TargetType="Button">
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="HeightRequest" Value="32" />
-        <Setter Property="WidthRequest" Value="32" />
-        <Setter Property="BorderWidth" Value="0" />
-        <Setter Property="CornerRadius" Value="16" />
-    </Style>
-    
-    <Style x:Key="SwipeTemplateButtonStyle" TargetType="Button">
+    <Style x:Key="Style.Core.Button.Swipe" TargetType="Button">
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
@@ -230,7 +223,7 @@
         <Setter Property="CornerRadius" Value="16" />
     </Style>
 
-    <Style x:Key="RoundMaterialDesignIconButtonStyle" TargetType="Button">
+    <Style x:Key="Style.Core.Button.IconRound.MaterialDesign" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
@@ -240,7 +233,7 @@
         <Setter Property="CornerRadius" Value="{OnIdiom Desktop=32, Tablet=32, Default=25}" />
     </Style>
 
-    <Style x:Key="RoundEmergencyStopIconButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignIconButtonStyle}">
+    <Style x:Key="Style.Core.Button.IconRound.EmergencyStop" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignStyle.Core.Button.Icon}">
         <Setter Property="Background" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
         <Setter Property="TextColor" Value="{StaticResource White}" />
@@ -251,7 +244,7 @@
         <Setter Property="CornerRadius" Value="{OnIdiom Tablet=35, Phone=25, Default=25}" />
     </Style>
 
-    <Style x:Key="GoogleLoginButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedLongButtonStyle}">
+    <Style x:Key="Style.Core.Button.LoginGoogle" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.RoundedLong}">
         <Setter Property="Background" Value="{StaticResource White}" />
         <Setter Property="ImageSource">
             <FontImageSource

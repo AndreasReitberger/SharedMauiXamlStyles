@@ -8,8 +8,8 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultTimePickerStyle" TargetType="TimePicker">
+
+    <Style x:Key="Style.Core.TimePicker.Default" TargetType="TimePicker">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default"/>
@@ -30,4 +30,6 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+
+    <Style TargetType="TimePicker" BasedOn="{StaticResource Style.Core.TimePicker.Default}" />
 </ResourceDictionary>

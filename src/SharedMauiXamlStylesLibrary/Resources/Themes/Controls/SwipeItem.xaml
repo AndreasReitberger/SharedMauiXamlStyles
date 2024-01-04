@@ -8,9 +8,9 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSwipeItemStyle" TargetType="SwipeItem">
+    <Style x:Key="Style.Core.SwipeItem.Default" TargetType="SwipeItem">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
 
-    <Style TargetType="SwipeItem" BasedOn="{StaticResource DefaultSwipeItemStyle}" />
+    <Style TargetType="SwipeItem" BasedOn="{StaticResource Style.Core.SwipeItem.Default}" />
 </ResourceDictionary>

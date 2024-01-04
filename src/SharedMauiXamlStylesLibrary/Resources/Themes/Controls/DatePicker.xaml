@@ -8,8 +8,8 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultDatePickerStyle" TargetType="DatePicker">
+
+    <Style x:Key="Style.Core.DatePicker.Default" TargetType="DatePicker">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="Default"/>
@@ -31,5 +31,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="DatePicker" BasedOn="{StaticResource DefaultDatePickerStyle}" />
+    <Style TargetType="DatePicker" BasedOn="{StaticResource Style.Core.DatePicker.Default}" />
 </ResourceDictionary>

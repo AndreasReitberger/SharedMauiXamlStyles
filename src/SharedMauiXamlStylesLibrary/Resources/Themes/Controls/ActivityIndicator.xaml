@@ -9,11 +9,11 @@
         <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultActivityIndicator" TargetType="ActivityIndicator">
+
+    <Style x:Key="Style.Core.ActivityIndicator.Default" TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
     </Style>
 
-    <Style TargetType="ActivityIndicator" BasedOn="{StaticResource DefaultActivityIndicator}"/>
+    <Style TargetType="ActivityIndicator" BasedOn="{StaticResource Style.Core.ActivityIndicator.Default}"/>
 
 </ResourceDictionary>

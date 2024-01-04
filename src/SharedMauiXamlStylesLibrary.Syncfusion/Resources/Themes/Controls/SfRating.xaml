@@ -14,7 +14,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Docs: https://help.syncfusion.com/maui/rating -->
-    <Style x:Key="DefaultSfRatingStyle" TargetType="inputs:SfRating">
+    <Style x:Key="Style.Syncfusion.SfRating.Default" TargetType="inputs:SfRating">
         <Setter Property="Precision" Value="Half" />
         <Setter Property="RatingSettings">
             <Setter.Value>
@@ -28,5 +28,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="inputs:SfRating" BasedOn="{StaticResource DefaultSfRatingStyle}"/>
+    <Style TargetType="inputs:SfRating" BasedOn="{StaticResource Style.Syncfusion.SfRating.Default}"/>
 </ResourceDictionary>

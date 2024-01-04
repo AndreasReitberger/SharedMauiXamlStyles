@@ -10,11 +10,11 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultListViewStyle" TargetType="ListView">
+
+    <Style x:Key="Style.Core.ListView.Default" TargetType="ListView">
         <Setter Property="SeparatorColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
         <Setter Property="RefreshControlColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
     </Style>
 
-    <Style TargetType="ListView" BasedOn="{StaticResource DefaultListViewStyle}" />
+    <Style TargetType="ListView" BasedOn="{StaticResource Style.Core.ListView.Default}" />
 </ResourceDictionary>

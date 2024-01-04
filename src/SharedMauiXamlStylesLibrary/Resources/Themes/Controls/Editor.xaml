@@ -10,8 +10,8 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultEditorStyle" TargetType="Editor">
+
+    <Style x:Key="Style.Core.Editor.Default" TargetType="Editor">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default" />
@@ -34,7 +34,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="DefaultBorderlessEditorStyle" TargetType="control:BorderlessEditor">
+    <Style x:Key="Style.Core.BorderlessEditor.Default" TargetType="control:BorderlessEditor">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="Default" />
@@ -59,7 +59,7 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
-       
-    <Style TargetType="Editor" BasedOn="{StaticResource DefaultEditorStyle}"/>
-    <Style TargetType="control:BorderlessEditor" BasedOn="{StaticResource DefaultBorderlessEditorStyle}"/>
+
+    <Style TargetType="Editor" BasedOn="{StaticResource Style.Core.Editor.Default}"/>
+    <Style TargetType="control:BorderlessEditor" BasedOn="{StaticResource Style.Core.BorderlessEditor.Default}"/>
 </ResourceDictionary>

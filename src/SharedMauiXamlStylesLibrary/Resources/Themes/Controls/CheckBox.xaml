@@ -9,8 +9,8 @@
         <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultCheckBoxStyle" TargetType="CheckBox">
+
+    <Style x:Key="Style.Core.CheckBox.Default" TargetType="CheckBox">
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
@@ -33,5 +33,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="CheckBox" BasedOn="{StaticResource DefaultCheckBoxStyle}"/>
+    <Style TargetType="CheckBox" BasedOn="{StaticResource Style.Core.CheckBox.Default}"/>
 </ResourceDictionary>

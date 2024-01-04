@@ -29,7 +29,7 @@
     <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" ApplyToDerivedTypes="True" />
     -->
 
-    <Style x:Key="DefaultShellStyle" TargetType="Shell" ApplyToDerivedTypes="True">
+    <Style x:Key="Style.Core.Shell.Default" TargetType="Shell" ApplyToDerivedTypes="True">
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"/>
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"/>
         <Setter Property="ForegroundColor" Value="{DynamicResource PrimaryColor}"/>
@@ -56,7 +56,7 @@
         <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
     </Style>
 
-    <Style TargetType="Shell" ApplyToDerivedTypes="True" BasedOn="{StaticResource DefaultShellStyle}"/>
+    <Style TargetType="Shell" ApplyToDerivedTypes="True" BasedOn="{StaticResource Style.Core.Shell.Default}"/>
     
     <!--
     <Style x:Key="DefaultShellStyle" TargetType="Shell">
@@ -72,7 +72,7 @@
     </Style>
     -->
 
-    <Style x:Key="DefaultFlyoutItemStyle" TargetType="FlyoutItem">
+    <Style x:Key="Style.Core.FlyoutItem.Default" TargetType="FlyoutItem">
         <Style.Triggers>
             <Trigger TargetType="FlyoutItem" Property="IsEnabled" Value="False">
                 <Setter Property="Icon">
@@ -91,6 +91,6 @@
     </Style>
     
     <!-- Apply default style defaultly-->
-    <Style TargetType="FlyoutItem" BasedOn="{StaticResource DefaultFlyoutItemStyle}"/>
+    <Style TargetType="FlyoutItem" BasedOn="{StaticResource Style.Core.FlyoutItem.Default}"/>
 
 </ResourceDictionary>

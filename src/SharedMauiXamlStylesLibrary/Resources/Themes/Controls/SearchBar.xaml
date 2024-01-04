@@ -9,7 +9,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSearchBarStyle" TargetType="SearchBar">
+    <Style x:Key="Style.Core.SearchBar.Default" TargetType="SearchBar">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="CancelButtonColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
@@ -35,5 +35,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="SearchBar" BasedOn="{StaticResource DefaultSearchBarStyle}" />
+    <Style TargetType="SearchBar" BasedOn="{StaticResource Style.Core.SearchBar.Default}" />
 </ResourceDictionary>

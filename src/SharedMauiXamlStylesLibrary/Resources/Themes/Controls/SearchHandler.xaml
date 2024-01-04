@@ -9,7 +9,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSearchHandlerStyle" TargetType="SearchHandler">
+    <Style x:Key="Style.Core.SearchHandler.Default" TargetType="SearchHandler">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
@@ -34,5 +34,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="SearchHandler" BasedOn="{StaticResource DefaultSearchHandlerStyle}" />
+    <Style TargetType="SearchHandler" BasedOn="{StaticResource Style.Core.SearchHandler.Default}" />
 </ResourceDictionary>

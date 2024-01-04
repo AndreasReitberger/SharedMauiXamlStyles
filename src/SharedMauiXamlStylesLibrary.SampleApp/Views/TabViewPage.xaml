@@ -13,14 +13,14 @@
     xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
     
     Title="TabViewPage"
-    Style="{StaticResource DefaultPageStyle}"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
     x:DataType="viewModels:TabViewPageViewModel"   
     >
     <ContentPage.Resources>
         <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     </ContentPage.Resources>
     <tabView:SfTabView
-        Style="{StaticResource DefaultSfTabViewStyle}"
+        Style="{StaticResource Style.Syncfusion.SfTabView.Default}"
         >
         <tabView:SfTabItem
             Header="Tab1"

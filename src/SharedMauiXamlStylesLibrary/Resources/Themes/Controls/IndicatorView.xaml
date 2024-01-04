@@ -11,10 +11,10 @@
     <!--
     Docs: https://docs.microsoft.com/de-de/dotnet/maui/user-interface/controls/indicatorview
     -->
-    <Style x:Key="DefaultIndicatorViewStyle" TargetType="IndicatorView">
+    <Style x:Key="Style.Core.IndicatorView.Default" TargetType="IndicatorView">
         <Setter Property="IndicatorColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"/>
         <Setter Property="SelectedIndicatorColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}"/>
     </Style>
 
-    <Style TargetType="IndicatorView" BasedOn="{StaticResource DefaultIndicatorViewStyle}" />
+    <Style TargetType="IndicatorView" BasedOn="{StaticResource Style.Core.IndicatorView.Default}" />
 </ResourceDictionary>
