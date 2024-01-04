@@ -23,7 +23,7 @@
 
     <Style TargetType="listView:SfListView" BasedOn="{StaticResource DefaultSfListViewStyle}" />
 
-    <Style x:Key="ListViewDeleteEditGestureSwipeableStyle" TargetType="listView:SfListView" BasedOn="{StaticResource DefaultSfListViewStyle}">
+    <Style x:Key="DeleteEditGestureSwipeSfListViewStyle" TargetType="listView:SfListView" BasedOn="{StaticResource DefaultSfListViewStyle}">
         <Setter Property="AllowSwiping" Value="True" />
         <Setter Property="SwipeThreshold" Value="70" />
         <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />

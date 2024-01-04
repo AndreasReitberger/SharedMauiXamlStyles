@@ -16,7 +16,7 @@
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" Black="{StaticResource Black}" White="{StaticResource White}" />
 
     <!-- Docs: https://help.syncfusion.com/maui/accordion/ -->
-    <Style x:Key="DefaultAccordionStyle" TargetType="expander:SfAccordion">
+    <Style x:Key="DefaultSfAccordionStyle" TargetType="expander:SfAccordion">
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
     </Style>
     
@@ -41,5 +41,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="expander:SfAccordion" BasedOn="{StaticResource DefaultAccordionStyle}"/>
+    <Style TargetType="expander:SfAccordion" BasedOn="{StaticResource DefaultSfAccordionStyle}"/>
 </ResourceDictionary>

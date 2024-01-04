@@ -363,28 +363,28 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultAccordionStyle                  | SfAccordion         | Syncfusion|
+| DefaultSfAccordionStyle                | SfAccordion         | Syncfusion|
 | DefaultAccordionItemStyle              | AccordionItem       | Syncfusion|
 
 ## SfAutocomplete
 
 | Key                                    | TargetType             | Library   |
 | ---------------------------------------|:----------------------:| ---------:|
-| DefaultAutocompleteStyle               | SfAutocomplete         | Syncfusion|
+| DefaultSfAutocompleteStyle             | SfAutocomplete         | Syncfusion|
 | DefaultMultiSelectAutoCompleteStyle    | MultiSelectAutoComplete| Syncfusion|
 
 ## SfBadgeView
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultBadgeViewStyle                  | SfBadgeView         | Syncfusion|
-| HyperlinkBadgedViewStyle               | SfBadgeView         | Syncfusion|
+| DefaultSfBadgeViewStyle                | SfBadgeView         | Syncfusion|
+| HyperlinkSfBadgedViewStyle             | SfBadgeView         | Syncfusion|
 
 ## SfBusyIndicator
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultBusyIndicatorStyle              | SfBusyIndicator     | Syncfusion|
+| DefaultSfBusyIndicatorStyle            | SfBusyIndicator     | Syncfusion|
 
 ## SfCartesianChart
 
@@ -401,35 +401,35 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultChipStyle                       | SfChip              | Syncfusion|
-| ColorSelectionChipStyle                | SfChip              | Syncfusion|
-| DefaultChipGroupStyle                  | SfChipGroup         | Syncfusion|
+| faultSfChipStyle                       | SfChip              | Syncfusion|
+| ColorSelectionSfChipStyle              | SfChip              | Syncfusion|
+| DefaultSfChipGroupStyle                | SfChipGroup         | Syncfusion|
 
 ## SfComboBox
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultComboBoxStyle                   | SfComboBox          | Syncfusion|
+| DefaultSfComboBoxStyle                 | SfComboBox          | Syncfusion|
 | DefaultMultiSelectComboBox             | MultiSelectComboBox | Syncfusion|
 
 ## SfExpander
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultExpanderStyle                   | SfExpander          | Syncfusion|
+| DefaultSfExpanderStyle                 | SfExpander          | Syncfusion|
 
 ## SfListView
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
 | DefaultSfListViewStyle                 | SfListView          | Syncfusion|
-| ListViewDeleteEditGestureSwipeableStyle| SfListView          | Syncfusion|
+| DeleteEditGestureSwipeSfListViewStyle  | SfListView          | Syncfusion|
 
 ## SfMaskedEntry
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultMaskedEntryStyle                | SfMaskedEntry       | Syncfusion|
+| DefaultSfMaskedEntryStyle              | SfMaskedEntry       | Syncfusion|
 
 ## SfNumericEntry
 
@@ -456,15 +456,15 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultRatingStyle                     | SfRating            | Syncfusion|
+| DefaultSfRatingStyle                   | SfRating            | Syncfusion|
 
 ## SfSlider
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
 | DefaultSfSliderStyle                   | SfSlider            | Syncfusion|
-| PrimraySliderStyle                     | SfSlider            | Syncfusion|
-| PercentageSliderStyle                  | SfSlider            | Syncfusion|
+| PrimraySfSliderStyle                   | SfSlider            | Syncfusion|
+| PercentageSfSliderStyle                | SfSlider            | Syncfusion|
 
 ## SfTabView
 
@@ -477,7 +477,7 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultTextInputLayoutStyle            | SfTextInputLayout   | Syncfusion|
+| DefaultSfTextInputLayoutStyle          | SfTextInputLayout   | Syncfusion|
 
 
 # Licenses & Thirdparty

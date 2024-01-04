@@ -15,24 +15,24 @@
 
     <!-- Docs: https://help.syncfusion.com/maui/chips -->
     <!-- MissingFieldException: Field not found: 'Syncfusion.Maui.Core.SfChip.FontSizeProperty  on Net8? -->
-    <Style x:Key="DefaultChipStyle" TargetType="inputLayout:SfChip">
+    <Style x:Key="DefaultSfChipStyle" TargetType="inputLayout:SfChip">
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="StrokeThickness" Value="0"/>
         <Setter Property="Padding" Value="2"/>
     </Style>
-    
-    <Style x:Key="ColorSelectionChipStyle" TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}">
+
+    <Style x:Key="ColorSelectionSfChipStyle" TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultSfChipStyle}">
         <Setter Property="WidthRequest" Value="140"/>
         <Setter Property="HeightRequest" Value="30"/>
         <Setter Property="ShowSelectionIndicator" Value="False"/>
         <Setter Property="SelectionIndicatorColor" Value="{StaticResource Transparent}" />
     </Style>
-    
-    <Style TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultChipStyle}"/>
-    
-    
-    <Style x:Key="DefaultChipGroupStyle" TargetType="inputLayout:SfChipGroup">
+
+    <Style TargetType="inputLayout:SfChip" BasedOn="{StaticResource DefaultSfChipStyle}"/>
+
+
+    <Style x:Key="DefaultSfChipGroupStyle" TargetType="inputLayout:SfChipGroup">
         <Setter Property="SelectionIndicatorColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="ChipBackground" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
@@ -54,5 +54,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="inputLayout:SfChipGroup" BasedOn="{StaticResource DefaultChipGroupStyle}"/>
+    <Style TargetType="inputLayout:SfChipGroup" BasedOn="{StaticResource DefaultSfChipGroupStyle}"/>
 </ResourceDictionary>

@@ -275,41 +275,143 @@
 
     <DataTemplate x:Key="ViewDeleteGestureSwipeTemplate">
         <Grid
-                ColumnDefinitions="*,*"
-                >
+            ColumnDefinitions="*,*"
+            >
             <Label
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
-                    TextColor="{StaticResource White}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Margin="0"
-                    Background="{StaticResource Green}"
-                    >
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Red}"
+                >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
-                            NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
-                            CommandParameter="{Binding .}"
-                            />
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
                 </Label.GestureRecognizers>
             </Label>
             <Label
-                    Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
-                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
-                    TextColor="{StaticResource White}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Margin="0"
-                    Background="{StaticResource Blue}"
-                    >
+                Grid.Column="1"
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Blue}"
+                >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
-                            NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
-                            CommandParameter="{Binding .}"
-                            />
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ViewEditGestureSwipeTemplate">
+        <Grid
+            ColumnDefinitions="*,*"
+            >
+            <Label
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Green}"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="1"
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Blue}"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ViewEditDeleteGestureSwipeTemplate">
+        <Grid
+            ColumnDefinitions="*,*,*"
+            >
+            <Label
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Green}"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="1"
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Blue}"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="2"
+                Style="{StaticResource IconLabelStyle}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Red}"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.DeleteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
@@ -317,41 +419,41 @@
 
     <DataTemplate x:Key="PrintViewGestureSwipeTemplate">
         <Grid
-                ColumnDefinitions="*,*"
-                >
+            ColumnDefinitions="*,*"
+            >
             <Label
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
-                    TextColor="{StaticResource White}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Background="{StaticResource Green}"
-                    Margin="0"
-                    >
+                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Background="{StaticResource Green}"
+                Margin="0"
+                >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
-                            NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.PrintItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
-                            CommandParameter="{Binding .}"
-                            />
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.PrintItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
                 </Label.GestureRecognizers>
             </Label>
             <Label
-                    Grid.Column="1"
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{x:Static icons:MaterialIcons.EyeOutline}"
-                    TextColor="{StaticResource White}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Margin="0"
-                    Background="{StaticResource Blue}"
-                    >
+                Grid.Column="1"
+                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Text="{x:Static icons:MaterialIcons.EyeOutline}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Blue}"
+                >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
-                            NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
-                            CommandParameter="{Binding .}"
-                            />
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
@@ -359,41 +461,41 @@
 
     <DataTemplate x:Key="ExecuteEditGestureSwipeTemplate">
         <Grid
-                ColumnDefinitions="*,*"
-                >
+            ColumnDefinitions="*,*"
+            >
             <Label
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{x:Static icons:MaterialIcons.RunFast}"
-                    TextColor="{StaticResource White}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Background="{StaticResource Orange}"
-                    Margin="0"
-                    >
+                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Text="{x:Static icons:MaterialIcons.RunFast}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Background="{StaticResource Orange}"
+                Margin="0"
+                >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
-                            NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.ExecuteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
-                            CommandParameter="{Binding .}"
-                            />
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.ExecuteItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
                 </Label.GestureRecognizers>
             </Label>
             <Label
-                    Grid.Column="1"
-                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
-                    Text="{x:Static icons:MaterialIcons.PencilOutline}"
-                    TextColor="{StaticResource White}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Margin="0"
-                    Background="{StaticResource Green}"
-                    >
+                Grid.Column="1"
+                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Text="{x:Static icons:MaterialIcons.PencilOutline}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Green}"
+                >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
-                            NumberOfTapsRequired="1"
-                            Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
-                            CommandParameter="{Binding .}"
-                            />
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.EditItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
