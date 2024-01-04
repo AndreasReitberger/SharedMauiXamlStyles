@@ -15,7 +15,7 @@
     </ResourceDictionary.MergedDictionaries>
 
 
-    <Style x:Key="DefaultSfComboBoxStyle" TargetType="inputs:SfComboBox">
+    <Style x:Key="Style.Syncfusion.SfComboBox.Default" TargetType="inputs:SfComboBox">
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
@@ -45,9 +45,9 @@
         -->
     </Style>
 
-    <Style TargetType="inputs:SfComboBox" BasedOn="{StaticResource DefaultSfComboBoxStyle}"/>
+    <Style TargetType="inputs:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Default}"/>
 
-    <Style x:Key="DefaultMultiSelectComboBox" TargetType="controls:MultiSelectComboBox">
+    <Style x:Key="Style.Syncfusion.MultiSelectComboBox.Default" TargetType="controls:MultiSelectComboBox">
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
@@ -75,5 +75,5 @@
         -->
     </Style>
 
-    <Style TargetType="controls:MultiSelectComboBox" BasedOn="{StaticResource DefaultMultiSelectComboBox}"/>
+    <Style TargetType="controls:MultiSelectComboBox" BasedOn="{StaticResource Style.Syncfusion.MultiSelectComboBox.Default}"/>
 </ResourceDictionary>

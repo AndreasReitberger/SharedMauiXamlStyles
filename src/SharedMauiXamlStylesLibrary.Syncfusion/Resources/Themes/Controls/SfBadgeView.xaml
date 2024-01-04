@@ -10,8 +10,8 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultSfBadgeViewStyle" TargetType="core:SfBadgeView">
+
+    <Style x:Key="Style.Syncfusion.SfBadgeView.Default" TargetType="core:SfBadgeView">
         <Setter Property="BadgeSettings">
             <Setter.Value>
                 <core:BadgeSettings
@@ -26,9 +26,9 @@
         </Setter>
     </Style>
 
-    <Style TargetType="core:SfBadgeView" BasedOn="{StaticResource DefaultSfBadgeViewStyle}" />
+    <Style TargetType="core:SfBadgeView" BasedOn="{StaticResource Style.Syncfusion.SfBadgeView.Default}" />
 
-    <Style x:Key="HyperlinkSfBadgedViewStyle" TargetType="core:SfBadgeView">
+    <Style x:Key="Style.Syncfusion.SfBadgeView.Hyperlink" TargetType="core:SfBadgeView">
         <Setter Property="BadgeSettings">
             <Setter.Value>
                 <core:BadgeSettings

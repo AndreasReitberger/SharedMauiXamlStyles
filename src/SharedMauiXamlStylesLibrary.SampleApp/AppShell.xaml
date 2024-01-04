@@ -7,7 +7,7 @@
     xmlns:views="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.Views"
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"   
     
-    Style="{StaticResource DefaultShellStyle}"
+    Style="{StaticResource Style.Core.Shell.Default}"
     FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
     FlyoutBackgroundColor="{AppThemeBinding Light={OnPlatform WinUI={StaticResource Gray100}, Default={StaticResource White}}, Dark={OnPlatform WinUI={StaticResource Gray900}, Default={StaticResource Black}}}"
     
@@ -45,7 +45,7 @@
                 RowDefinitions="*,*"
                 >
                 <Label
-                    Style="{StaticResource LabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     Text="Darkmode: "
                     VerticalTextAlignment="Center"
                     />
@@ -56,7 +56,7 @@
 
                 <Label
                     Grid.Row="1"
-                    Style="{StaticResource LabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     Text="Color:"
                     VerticalTextAlignment="Center"
                     />

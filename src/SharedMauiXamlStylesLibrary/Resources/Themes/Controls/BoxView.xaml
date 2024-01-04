@@ -8,13 +8,15 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="SeparatorStyle" TargetType="BoxView">
+
+    <Style x:Key="Style.Core.BoxView.Default" TargetType="BoxView">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
         <Setter Property="HeightRequest" Value="1" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
     </Style>
 
     <!--  Common style for separator BoxView  -->
-    <Style TargetType="BoxView" BasedOn="{StaticResource SeparatorStyle}"/>
+    <Style TargetType="BoxView" BasedOn="{StaticResource Style.Core.BoxView.Default}"/>
+
+    <Style x:Key="Style.Core.BoxView.Separator" TargetType="BoxView" BasedOn="{StaticResource Style.Core.BoxView.Default}"/>
 </ResourceDictionary>

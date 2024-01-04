@@ -129,200 +129,198 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 ## ActivityIndicator
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultActivityIndicator               | ActivityIndicator   | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.ActivityIndicator.Default         | ActivityIndicator   | Core      |
 
 ## Border
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| ProfileBorderStyle                     | Border              | Core      |
-| CardViewBorderStyle                    | Border              | Core      |
-| PanelCardViewBorderStyle               | Border              | Core      |
-| MinimalPanelCardViewBorderStyle        | Border              | Core      |
-| BrightMinimalPanelCardViewBorderStyle  | Border              | Core      |
-| CircleBorderStyle                      | Border              | Core      |
-| MenuSeparatorBorderStyle               | Border              | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.Border.Default                    | Border              | Core      |
+| Style.Core.Border.Profile                    | Border              | Core      |
+| Style.Core.Border.CardView                   | Border              | Core      |
+| Style.Core.Border.PanelCardView              | Border              | Core      |
+| Style.Core.Border.MinimalPanelCardView       | Border              | Core      |
+| Style.Core.Border.BrightMinimalPanelCardView | Border              | Core      |
+| Style.Core.Border.Circle                     | Border              | Core      |
+| Style.Core.Border.MenuSeparator              | Border              | Core      |
 
 ## BoxView
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| SeparatorStyle                         | BoxView             | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.BoxView.Default                   | BoxView             | Core      |
+| Style.Core.BoxView.Separator                 | BoxView             | Core      |
 
 ## Button
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultButtonStyle                     | Button              | Core      |
-| ImageButton                            | Button              | Core      |
-| IconButtonStyle                        | Button              | Core      |
-| MaterialDesignIconButtonStyle          | Button              | Core      |
-| PrimaryMaterialDesignIconButtonStyle   | Button              | Core      |
-| LinkButtonStyle                        | Button              | Core      |
-| LinkRoundButtonStyle                   | Button              | Core      |
-| RoundIconButtonStyle                   | Button              | Core      |
-| RoundedLongButtonStyle                 | Button              | Core      |
-| SwipeTemplateBorderStyle               | Button              | Core      |
-| SwipeTemplateButtonStyle               | Button              | Core      |
-| RoundMaterialDesignIconButtonStyle     | Button              | Core      |
-| RoundEmergencyStopIconButtonStyle      | Button              | Core      |
-| GoogleLoginButtonStyle                 | Button              | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.Button.Default                    | Button              | Core      |
+| Style.Core.ImageButton.Default               | ImageButton         | Core      |
+| Style.Core.Button.Icon                       | Button              | Core      |
+| Style.Core.Button.IconPrimary                | Button              | Core      |
+| Style.Core.Button.Icon.MaterialDesign        | Button              | Core      |
+| Style.Core.Button.IconPrimary.MaterialDesign | Button              | Core      |
+| Style.Core.Button.Link                       | Button              | Core      |
+| Style.Core.Button.LinkRound                  | Button              | Core      |
+| Style.Core.Button.IconRound                  | Button              | Core      |
+| Style.Core.Button.RoundedLong                | Button              | Core      |
+| Style.Core.Button.Setup                      | Button              | Core      |
+| Style.Core.Button.Swipe                      | Button              | Core      |
+| Style.Core.Button.IconRound.MaterialDesign   | Button              | Core      |
+| Style.Core.Button.IconRound.EmergencyStop    | Button              | Core      |
+| Style.Core.Button.LoginGoogle                | Button              | Core      |
 
 ## CheckBox
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultCheckBoxStyle                   | CheckBox            | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.CheckBox.Default                  | CheckBox            | Core      |
 
 ## DatePicker
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultDatePickerStyle                 | DatePicker          | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.DatePicker.Default                | DatePicker          | Core      |
 
 ## Editor / BorderlessEditor
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultEditorStyle                     | Editor              | Core      |
-| DefaultBorderlessEditorStyle           | BorderlessEditor    | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.Editor.Default                    | Editor              | Core      |
+| Style.Core.BorderlessEditor.Default          | BorderlessEditor    | Core      |
 
 ## Entry / BorderlessEntry
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultEntryStyle                      | Entry               | Core      |
-| NumericEntryStyle                      | Entry               | Core      |
-| PasswordEntryStyle                     | Entry               | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.Entry.Default                     | Entry               | Core      |
+| Style.Core.Entry.Numeric                     | Entry               | Core      |
+| Style.Core.Entry.Password                    | Entry               | Core      |
+| Style.Core.BorderlessEntry.Default           | BorderlessEntry     | Core      |
+| Style.Core.BorderlessEntry.Numeric           | BorderlessEntry     | Core      |
+| Style.Core.BorderlessEntry.Password          | BorderlessEntry     | Core      |
 
 ## Frame
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultFrameStyle                      | Frame               | Core      |
-| ListViewItemFrameStyle                 | Frame               | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.Frame.Default                     | Frame               | Core      |
+| Style.Core.Frame.ListViewItem                | Frame               | Core      |
 
 ## Grid / TapAnimationGrid
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultGridStyle                       | Grid                | Core      |
-| DefaultSettingsGridStyle               | Grid                | Core      |
-| WarningGridStyle                       | Grid                | Core      |
-| CriticalErrorGridStyle                 | Grid                | Core      |
-| DefaultPanelGridStyle                  | Grid                | Core      |
-| ModalPanelGridStyle                    | Grid                | Core      |
-| ShellTitleViewGridStyle                | Grid                | Core      |
-| DefaultTapAnimationGridStyle           | TapAnimationGrid    | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.Grid.Default                      | Grid                | Core      |
+| Style.Core.Grid.Settings                     | Grid                | Core      |
+| Style.Core.Grid.Warning                      | Grid                | Core      |
+| Style.Core.Grid.CriticalError                | Grid                | Core      |
+| Style.Core.Grid.Panel                        | Grid                | Core      |
+| Style.Core.Grid.Panel.Modal                  | Grid                | Core      |
+| Style.Core.Grid.ShellTitleView               | Grid                | Core      |
+| Style.Core.TapAnimationGrid.Default          | TapAnimationGrid    | Core      |
 
 ## IndicatorView
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultIndicatorViewStyle              | IndicatorView       | Core      |
+| Key                                          | TargetType          | Library   |
+| ---------------------------------------------|:-------------------:| ---------:|
+| Style.Core.IndicatorView.Default             | IndicatorView       | Core      |
  
 ## Label
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultLabelStyle                      | Label               | Core      |
-| LabelStyle                             | Label               | Core      |
-| IconLabelStyle                         | Label               | Core      |
-| MaterialSettingsIconLabelStyle         | Label               | Core      |
-| TextInputLayoutMaterialIconLabelStyle  | Label               | Core      |
-| MaterialFontFamilyIconLabelStyle       | Label               | Core      |
-| PrimaryMaterialFontFamilyIconLabelStyle| Label               | Core      |
-| MediumLabelStyle                       | Label               | Core      |
-| SmallLabelStyle                        | Label               | Core      |
-| VerySmallLabelStyle                    | Label               | Core      |
-| SetupLabelStyle                        | Label               | Core      |
-| LinkLabelStyle                         | Label               | Core      |
-| PrimaryLabelStyle                      | Label               | Core      |
-| PrimaryDarkLabelStyle                  | Label               | Core      |
-| WarningLabelStyle                      | Label               | Core      |
-| ErrorLabelStyle                        | Label               | Core      |
-| ShellLabelStyle                        | Label               | Core      |
-| SettingsLabelStyle                     | Label               | Core      |
-| SettingsSmallLabelStyle                | Label               | Core      |
-| HeadlineLabelStyle                     | Label               | Core      |
-| PrimaryHeadlineLabelStyle              | Label               | Core      |
-| TitleViewHeadlineLabelStyle            | Label               | Core      |
-| PrimaryDarkHeadlineLabelStyle          | Label               | Core      |
-| SwipeTemplateButtonStyle               | Label               | Core      |
-| OptionButtonLabelStyle                 | Label               | Core      |
-| GroupingHeaderLabelStyle               | Label               | Core      |
-| SwipeTemplateMaterialButtonStyle       | Label               | Core      |
-| MaterialFontIconSpanStyle              | Label               | Core      |
-| FontIconSpanStyle                      | Label               | Core      |
-| MaterialFontFamilyIconSmallLabelStyle  | Label               | Core      |
-| MaterialSwipeTemplateButtonStyle       | Label               | Core      |
+| Key                                                    | TargetType          | Library   |
+| -------------------------------------------------------|:-------------------:| ---------:|
+| Style.Core.Label.Default                               | Label               | Core      |
+| Style.Core.Label.Icon                                  | Label               | Core      |
+| Style.Core.Label.Icon.MaterialDesign                   | Label               | Core      |
+| Style.Core.Label.Icon.MaterialDesign.TextInputLayout   | Label               | Core      |
+| Style.Core.Label.IconPrimary.MaterialDesign            | Label               | Core      |
+| Style.Core.Label.Medium                                | Label               | Core      |
+| Style.Core.Label.Small                                 | Label               | Core      |
+| Style.Core.Label.VerySmall                             | Label               | Core      |
+| Style.Core.Label.Setup                                 | Label               | Core      |
+| Style.Core.Label.Link                                  | Label               | Core      |
+| Style.Core.Label.Primary                               | Label               | Core      |
+| Style.Core.Label.PrimaryDark                           | Label               | Core      |
+| Style.Core.Label.Warning                               | Label               | Core      |
+| Style.Core.Label.Error                                 | Label               | Core      |
+| Style.Core.Label.Shell                                 | Label               | Core      |
+| Style.Core.Label.Settings                              | Label               | Core      |
+| Style.Core.Label.SettingsSmall                         | Label               | Core      |
+| Style.Core.Label.Headline                              | Label               | Core      |
+| Style.Core.Label.HeadlinePrimary                       | Label               | Core      |
+| Style.Core.Label.HeadlinePrimaryDark                   | Label               | Core      |
+| Style.Core.Label.TitleView                             | Label               | Core      |
+| Style.Core.Label.IconSwipe                             | Label               | Core      |
+| Style.Core.Label.IconSwipe.MaterialDesign              | Label               | Core      |
+| Style.Core.Label.Option                                | Label               | Core      |
+| Style.Core.Label.GroupingHeader                        | Label               | Core      |
+| Style.Core.Span.IconTiny.MaterialDesign                | Label               | Core      |
+| Style.Core.Span.Icon.MaterialDesign                    | Span                | Core      |
+| Style.Core.Span.Icon                                   | Span                | Core      |
 
 ## ListView
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultListViewStyle                   | ListView            | Core      |
+| Style.Core.ListView.Default            | ListView            | Core      |
 
 ## Page
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultPageStyle                       | Page                | Core      |
-| ModalPageStyle                         | Page                | Core      |
-| SettingsPageStyle                      | Page                | Core      |
+| Style.Core.Page.Default                | Page                | Core      |
+| Style.Core.NavigationPage.Default      | NavigationPage      | Core      |
+| Style.Core.TabbedPage.Default          | TabbedPage          | Core      |
+| Style.Core.ContentPage.Default         | ContentPage         | Core      |
+| Style.Core.ContentPage.Modal           | ContentPage         | Core      |
+| Style.Core.ContentPage.Settings        | ContentPage         | Core      |
 
 ## Picker
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultPickerStyle                     | Picker              | Core      |
+| Style.Core.Picker.Default              | Picker              | Core      |
 
 ## ProgressBar
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultProgressBarStyle                | ProgressBar         | Core      |
+| Style.Core.ProgressBar.Default         | ProgressBar         | Core      |
 
 ## RadioButton
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultRadioButtonStyle                | RadioButton         | Core      |
+| Style.Core.RadioButton.Default         | RadioButton         | Core      |
 
 ## RefreshView
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultRefreshViewStyle                | RefreshView         | Core      |
+| Style.Core.RefreshView.Default         | RefreshView         | Core      |
 
 ## SearchBar
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSearchBarStyle                  | SearchBar           | Core      |
+| Style.Core.SearchBar.Default           | SearchBar           | Core      |
 
 ## SearchHandler
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSearchHandlerStyle              | SearchHandler       | Core      |
-
-## Shadow
-
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultShadowStyle                     | Shadow              | Core      |
-| CardViewShadowStyle                    | Shadow              | Core      |
+| Style.Core.SearchHandler.Default       | SearchHandler       | Core      |
 
 ## Shell
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| BaseStyle                              | Element             | Core      |
-| DefaultShellStyle                      | Shell               | Core      |
-| DefaultFlyoutItemStyle                 | FlyoutItem          | Core      |
+| Style.Core.Shell.Default               | Shell               | Core      |
+| Style.Core.FlyoutItem.Default          | FlyoutItem          | Core      |
 
 ## Slider
 
@@ -334,150 +332,156 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| StackLayoutHeaderStyle                 | StackLayout         | Core      |
-| ModalInputPageStackLayoutStyle         | StackLayout         | Core      |
-| VerticalStackLayoutHeaderStyle         | VerticalStackLayout | Core      |
-| VerticalModalInputPageStackLayoutStyle | VerticalStackLayout | Core      |
-| HorizontalStackLayoutHeaderStyle       | HorizontalStackLayout  | Core   |
-| HorizontalModalInputPageStackLayoutStyle| HorizontalStackLayout | Core   |
+| Style.Core.StackLayout.Header          | StackLayout         | Core      |
+| Style.Core.StackLayout.Modal           | StackLayout         | Core      |
+| Style.Core.VerticalStackLayout.Header  | VerticalStackLayout | Core      |
+| Style.Core.VerticalStackLayout.Modal   | VerticalStackLayout | Core      |
+| Style.Core.HorizontalStackLayout.Header| HorizontalStackLayout | Core   |
+| Style.Core.HorizontalStackLayout.Modal | HorizontalStackLayout | Core   |
 
 ## SwipeItem
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSwipeItemStyle                  | SwipeItem           | Core      |
+| Style.Core.SwipeItem.Default           | SwipeItem           | Core      |
 
 ## Switch
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSwitchStyle                     | Switch              | Core      |
+| Style.Core.Switch.Default              | Switch              | Core      |
 
 ## TimePicker
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultTimePickerStyle                 | TimePicker          | Core      |
+| Style.Core.TimePicker.Default          | TimePicker          | Core      |
 
 ## SfAccordion
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfAccordionStyle                | SfAccordion         | Syncfusion|
-| DefaultAccordionItemStyle              | AccordionItem       | Syncfusion|
+| Style.Syncfusion.SfAccordion.Default   | SfAccordion         | Syncfusion|
+| Style.Syncfusion.AccordionItem.Default | AccordionItem       | Syncfusion|
 
 ## SfAutocomplete
 
-| Key                                    | TargetType             | Library   |
-| ---------------------------------------|:----------------------:| ---------:|
-| DefaultSfAutocompleteStyle             | SfAutocomplete         | Syncfusion|
-| DefaultMultiSelectAutoCompleteStyle    | MultiSelectAutoComplete| Syncfusion|
+| Key                                                 | TargetType             | Library   |
+| ----------------------------------------------------|:----------------------:| ---------:|
+| Style.Syncfusion.SfAutocomplete.Default             | SfAutocomplete         | Syncfusion|
+| Style.Syncfusion.MultiSelectAutoComplete.Default    | MultiSelectAutoComplete| Syncfusion|
 
 ## SfBadgeView
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfBadgeViewStyle                | SfBadgeView         | Syncfusion|
-| HyperlinkSfBadgedViewStyle             | SfBadgeView         | Syncfusion|
+| Style.Syncfusion.SfBadgeView.Default   | SfBadgeView         | Syncfusion|
+| Style.Syncfusion.SfBadgeView.Hyperlink | SfBadgeView         | Syncfusion|
 
 ## SfBusyIndicator
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfBusyIndicatorStyle            | SfBusyIndicator     | Syncfusion|
+| Key                                      | TargetType          | Library   |
+| -----------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfBusyIndicator.Default | SfBusyIndicator     | Syncfusion|
 
 ## SfCartesianChart
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| NumericOnlySfCartesianChartStyle       | SfCartesianChart    | Syncfusion|
-| DefaultChartAxisLabelStyle             | ChartAxisLabelStyle | Syncfusion|
-| DefaultMajorGridChartLineStyle         | ChartLineStyle      | Syncfusion|
-| DefaultAxisChartLineStyle              | ChartLineStyle      | Syncfusion|
-| DefaultMinorGridChartLineStyle         | ChartLineStyle      | Syncfusion|
-| DefaultMajorChartAxisTickStyle         | ChartAxisTickStyle  | Syncfusion|
+| Key                                                | TargetType          | Library   |
+| ---------------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfCartesianChart.Default          | SfCartesianChart    | Syncfusion|
+| Style.Syncfusion.ChartLineStyle.Default.Major      | ChartAxisLabelStyle | Syncfusion|
+| Style.Syncfusion.ChartLineStyle.Default.AxisChart  | ChartLineStyle      | Syncfusion|
+| Style.Syncfusion.ChartLineStyle.Default.Minor      | ChartLineStyle      | Syncfusion|
+| Style.Syncfusion.ChartAxisTickStyle.Default.Major  | ChartLineStyle      | Syncfusion|
 
 ## SfChip
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| faultSfChipStyle                       | SfChip              | Syncfusion|
-| ColorSelectionSfChipStyle              | SfChip              | Syncfusion|
-| DefaultSfChipGroupStyle                | SfChipGroup         | Syncfusion|
+| Style.Syncfusion.SfChip.Default        | SfChip              | Syncfusion|
+| Style.Syncfusion.SfChip.ColorSelection | SfChip              | Syncfusion|
+| Style.Syncfusion.SfChipGroup.Default   | SfChipGroup         | Syncfusion|
 
 ## SfComboBox
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfComboBoxStyle                 | SfComboBox          | Syncfusion|
-| DefaultMultiSelectComboBox             | MultiSelectComboBox | Syncfusion|
+| Key                                           | TargetType          | Library   |
+| ----------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfComboBox.Default           | SfComboBox          | Syncfusion|
+| Style.Syncfusion.MultiSelectComboBox.Default  | MultiSelectComboBox | Syncfusion|
 
 ## SfExpander
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfExpanderStyle                 | SfExpander          | Syncfusion|
+| Style.Syncfusion.SfExpander.Default    | SfExpander          | Syncfusion|
 
 ## SfListView
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfListViewStyle                 | SfListView          | Syncfusion|
-| DeleteEditGestureSwipeSfListViewStyle  | SfListView          | Syncfusion|
+| Key                                           | TargetType          | Library   |
+| ----------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfListView.Default           | SfListView          | Syncfusion|
+| Style.Syncfusion.SfListView.Swipe.DeleteEdit  | SfListView          | Syncfusion|
 
 ## SfMaskedEntry
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfMaskedEntryStyle              | SfMaskedEntry       | Syncfusion|
+| Style.Syncfusion.SfMaskedEntry.Default | SfMaskedEntry       | Syncfusion|
 
 ## SfNumericEntry
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfNumericEntryStyle             | SfNumericEntry      | Syncfusion|
-| CurrencySfNumericEntryStyle            | SfNumericEntry      | Syncfusion|
-| PercentageSfNumericEntryStyle          | SfNumericEntry      | Syncfusion|
+| Key                                      | TargetType          | Library   |
+| -----------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfNumericEntry.Default  | SfNumericEntry      | Syncfusion|
+| Style.Syncfusion.SfNumericEntry.Currency | SfNumericEntry      | Syncfusion|
+| Style.Syncfusion.SfNumericEntry.Percent  | SfNumericEntry      | Syncfusion|
+
+## SfPicker
+
+| Key                                      | TargetType          | Library   |
+| -----------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfPicker.Default        | SfPicker            | Syncfusion|
+| Style.Syncfusion.SfDateTimePicker.Default| SfDateTimePicker    | Syncfusion|
 
 ## SfRadialGauge
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfRadialGaugeStyle              | SfRadialGauge       | Syncfusion|
-| DefaultRadialLineStyle                 | RadialLineStyle     | Syncfusion|
+| Key                                       | TargetType          | Library   |
+| ------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfRadialGauge.Default    | SfRadialGauge       | Syncfusion|
+| Style.Syncfusion.RadialLineStyle.Default  | RadialLineStyle     | Syncfusion|
 
 ## SfRangeSlider
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfRangeSliderStyle              | SfRangeSlider       | Syncfusion|
+| Style.Syncfusion.SfRangeSlider.Default | SfRangeSlider       | Syncfusion|
 
 ## SfRating
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfRatingStyle                   | SfRating            | Syncfusion|
+| Style.Syncfusion.SfRating.Default      | SfRating            | Syncfusion|
 
 ## SfSlider
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfSliderStyle                   | SfSlider            | Syncfusion|
-| PrimraySfSliderStyle                   | SfSlider            | Syncfusion|
-| PercentageSfSliderStyle                | SfSlider            | Syncfusion|
+| Style.Syncfusion.SfSlider.Default      | SfSlider            | Syncfusion|
+| Style.Syncfusion.SfSlider.Primray      | SfSlider            | Syncfusion|
+| Style.Syncfusion.SfSlider.Percent      | SfSlider            | Syncfusion|
 
 ## SfTabView
 
 | Key                                    | TargetType          | Library   |
 | ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfTabViewStyle                  | SfTabView           | Syncfusion|
-| DefaultSfTabViewItemStyle              | SfTabItem           | Syncfusion|
+| Style.Syncfusion.SfTabView.Default     | SfTabView           | Syncfusion|
+| Style.Syncfusion.SfTabItem.Default     | SfTabItem           | Syncfusion|
 
 ## SfTextInputLayout
 
-| Key                                    | TargetType          | Library   |
-| ---------------------------------------|:-------------------:| ---------:|
-| DefaultSfTextInputLayoutStyle          | SfTextInputLayout   | Syncfusion|
+| Key                                        | TargetType          | Library   |
+| -------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.SfTextInputLayout.Default | SfTextInputLayout   | Syncfusion|
 
 
 # Licenses & Thirdparty

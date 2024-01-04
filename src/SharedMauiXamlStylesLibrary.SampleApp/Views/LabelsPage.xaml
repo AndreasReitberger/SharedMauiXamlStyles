@@ -10,7 +10,7 @@
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
     Title="LabelsPage"
-    Style="{StaticResource DefaultPageStyle}"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
     x:DataType="viewModels:LabesPageViewModel"   
     >
     <ScrollView>
@@ -20,35 +20,35 @@
                 Text="This is a medium label"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource MediumLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Medium}"
                 />
             <Label 
                 Margin="2,16"
                 Text="This is a normal label"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource LabelStyle}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             <Label 
                 Margin="2,16"
                 Text="This is a small label"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource SmallLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Small}"
                 />
             <Label 
                 Margin="2,16"
                 Text="This is a very small label"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource VerySmallLabelStyle}"
+                Style="{StaticResource Style.Core.Label.VerySmall}"
                 />
             <Label 
                 Margin="2,16"
                 Text="This is a primary color label"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource PrimaryLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Primary}"
                 />
 
             <Label 
@@ -56,7 +56,7 @@
                 Text="This is a headline"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                Style="{StaticResource Style.Core.Label.HeadlinePrimary}"
                 />
 
             <BoxView
@@ -67,7 +67,7 @@
                 Text="{x:Static icons:MaterialIcons.HeartOutline}"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource PrimaryMaterialFontFamilyIconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.IconPrimary.MaterialDesign}"
                 />
             
         </VerticalStackLayout>

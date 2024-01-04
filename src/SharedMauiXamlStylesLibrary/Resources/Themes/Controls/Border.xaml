@@ -12,13 +12,15 @@
     <!--
     Docs: https://docs.microsoft.com/de-de/dotnet/maui/user-interface/controls/border
     -->
-    <Style TargetType="Border">
+    <Style x:Key="Style.Core.Border.Default" TargetType="Border">
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
         <Setter Property="StrokeShape" Value="Rectangle"/>
         <Setter Property="StrokeThickness" Value="1"/>
     </Style>
 
-    <Style x:Key="ProfileBorderStyle" TargetType="Border">
+    <Style TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Default}"/>
+
+    <Style x:Key="Style.Core.Border.Profile" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Default}">
         <Setter Property="StrokeShape">
             <Setter.Value>
                 <RoundRectangle CornerRadius="20" />
@@ -27,7 +29,7 @@
         <Setter Property="StrokeThickness" Value="1"/>
     </Style>
 
-    <Style x:Key="CardViewBorderStyle" TargetType="Border">
+    <Style x:Key="Style.Core.Border.CardView" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Default}">
         <Setter Property="StrokeShape">
             <Setter.Value>
                 <RoundRectangle CornerRadius="30" />
@@ -52,7 +54,7 @@
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}"/>
     </Style>
 
-    <Style x:Key="PanelCardViewBorderStyle" TargetType="Border" BasedOn="{StaticResource CardViewBorderStyle}">
+    <Style x:Key="Style.Core.Border.PanelCardView" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.CardView}">
         <Setter Property="Margin" Value="8"/>
         <Setter Property="StrokeShape">
             <Setter.Value>
@@ -61,7 +63,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="MinimalPanelCardViewBorderStyle" TargetType="Border" BasedOn="{StaticResource PanelCardViewBorderStyle}">
+    <Style x:Key="Style.Core.Border.MinimalPanelCardView" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.PanelCardView}">
         <Setter Property="Margin" Value="4"/>
         <Setter Property="StrokeShape">
             <Setter.Value>
@@ -70,12 +72,12 @@
         </Setter>
     </Style>
 
-    <Style x:Key="BrightMinimalPanelCardViewBorderStyle" TargetType="Border" BasedOn="{StaticResource MinimalPanelCardViewBorderStyle}">
+    <Style x:Key="Style.Core.Border.BrightMinimalPanelCardView" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.MinimalPanelCardView}">
         <Setter Property="Margin" Value="4,8"/>
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
     </Style>
 
-    <Style x:Key="CircleBorderStyle" TargetType="Border" BasedOn="{StaticResource ProfileBorderStyle}">
+    <Style x:Key="Style.Core.Border.Circle" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Profile}">
         <Setter Property="WidthRequest" Value="{OnIdiom Phone=64, Default=72}" />
         <Setter Property="HeightRequest" Value="{OnIdiom Phone=64, Default=72}" />
         <Setter Property="StrokeShape">
@@ -86,7 +88,7 @@
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
     </Style>
 
-    <Style x:Key="MenuSeparatorBorderStyle" TargetType="Border" BasedOn="{StaticResource ProfileBorderStyle}">
+    <Style x:Key="Style.Core.Border.MenuSeparator" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Profile}">
         <Setter Property="StrokeThickness" Value="0" />
         <Setter Property="StrokeShape">
             <Setter.Value>

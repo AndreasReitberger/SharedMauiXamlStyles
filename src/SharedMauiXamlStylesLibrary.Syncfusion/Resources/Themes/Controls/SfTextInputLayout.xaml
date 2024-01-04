@@ -14,7 +14,7 @@
     </ResourceDictionary.MergedDictionaries>
     
     <!-- Docs: https://help.syncfusion.com/maui/textinputlayout/states-and-colors -->
-    <Style x:Key="DefaultSfTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
+    <Style x:Key="Style.Syncfusion.SfTextInputLayout.Default" TargetType="inputLayout:SfTextInputLayout">
         <Setter Property="ContainerType" Value="Outlined"/>
         <Setter Property="LeadingViewPosition" Value="Inside"/>
         <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray100},Dark={StaticResource Gray950}}"/>
@@ -67,5 +67,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource DefaultSfTextInputLayoutStyle}"/>
+    <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"/>
 </ResourceDictionary>

@@ -11,8 +11,8 @@
         <!--<ResourceDictionary Source="/Themes/SharedIcons.xaml" />-->
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultEntryStyle" TargetType="Entry">
+
+    <Style x:Key="Style.Core.Entry.Default" TargetType="Entry">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="Default" />
@@ -37,7 +37,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="DefaultBorderlessEntryStyle" TargetType="control:BorderlessEntry">
+    <Style x:Key="Style.Core.BorderlessEntry.Default" TargetType="control:BorderlessEntry">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="Default" />
@@ -62,23 +62,23 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}" ApplyToDerivedTypes="True"/>
+    <Style TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}" ApplyToDerivedTypes="True"/>
     <Style TargetType="control:BorderlessEntry" BasedOn="{StaticResource DefaultEntryStyle}" ApplyToDerivedTypes="True"/>
 
-    <Style x:Key="NumericEntryStyle" TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}">
+    <Style x:Key="Style.Core.Entry.Numeric" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}">
         <Setter Property="Keyboard" Value="Numeric"/>
     </Style>
 
-    <Style x:Key="NumericBorderlessEntryStyle" TargetType="control:BorderlessEntry" BasedOn="{StaticResource DefaultBorderlessEntryStyle}">
+    <Style x:Key="Style.Core.BorderlessEntry.Numeric" TargetType="control:BorderlessEntry" BasedOn="{StaticResource Style.Core.BorderlessEntry.Default}">
         <Setter Property="Keyboard" Value="Numeric"/>
     </Style>
-    
-    <Style x:Key="PasswordEntryStyle" TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}">
+
+    <Style x:Key="Style.Core.Entry.Password" TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}">
         <Setter Property="IsPassword" Value="True"/>
         <Setter Property="IsSpellCheckEnabled" Value="False" />
     </Style>
 
-    <Style x:Key="PasswordBorderlessEntryStyle" TargetType="control:BorderlessEntry" BasedOn="{StaticResource DefaultBorderlessEntryStyle}">
+    <Style x:Key="Style.Core.BorderlessEntry.Password" TargetType="control:BorderlessEntry" BasedOn="{StaticResource Style.Core.BorderlessEntry.Default}">
         <Setter Property="IsPassword" Value="True"/>
         <Setter Property="IsSpellCheckEnabled" Value="False" />
     </Style>

@@ -19,7 +19,7 @@
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
 
-    <Style x:Key="DefaultSfPickerStyle" TargetType="picker:SfPicker">
+    <Style x:Key="Style.Syncfusion.SfPicker.Default" TargetType="picker:SfPicker">
         <Setter Property="ColumnDividerColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
@@ -82,9 +82,9 @@
         </Setter>
         -->
     </Style>
-    <Style TargetType="picker:SfPicker" BasedOn="{StaticResource DefaultSfPickerStyle}"/>
-    
-    <Style x:Key="DefaultSfDateTimePickerStyle" TargetType="picker:SfDateTimePicker">
+    <Style TargetType="picker:SfPicker" BasedOn="{StaticResource Style.Syncfusion.SfPicker.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfDateTimePicker.Default" TargetType="picker:SfDateTimePicker">
         <Setter Property="ColumnDividerColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
@@ -138,6 +138,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="picker:SfDateTimePicker" BasedOn="{StaticResource DefaultSfDateTimePickerStyle}"/>
+    <Style TargetType="picker:SfDateTimePicker" BasedOn="{StaticResource Style.Syncfusion.SfDateTimePicker.Default}"/>
 
 </ResourceDictionary>

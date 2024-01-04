@@ -7,8 +7,8 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-   
-    <Style x:Key="DefaultProgressBarStyle" TargetType="ProgressBar">
+
+    <Style x:Key="Style.Core.ProgressBar.Default" TargetType="ProgressBar">
         <Setter Property="ProgressColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -28,5 +28,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="ProgressBar" BasedOn="{StaticResource DefaultProgressBarStyle}" />
+    <Style TargetType="ProgressBar" BasedOn="{StaticResource Style.Core.ProgressBar.Default}" />
 </ResourceDictionary>

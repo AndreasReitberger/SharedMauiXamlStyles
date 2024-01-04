@@ -15,7 +15,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="DefaultSfAutocompleteStyle" TargetType="inputs:SfAutocomplete">
+    <Style x:Key="Style.Syncfusion.SfAutocomplete.Default" TargetType="inputs:SfAutocomplete">
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
@@ -41,9 +41,9 @@
        -->
     </Style>
 
-    <Style TargetType="inputs:SfAutocomplete" BasedOn="{StaticResource DefaultSfAutocompleteStyle}"/>
+    <Style TargetType="inputs:SfAutocomplete" BasedOn="{StaticResource Style.Syncfusion.SfAutocomplete.Default}"/>
 
-    <Style x:Key="DefaultMultiSelectAutoCompleteStyle" TargetType="controls:MultiSelectAutoComplete">
+    <Style x:Key="Style.Syncfusion.MultiSelectAutoComplete.Default" TargetType="controls:MultiSelectAutoComplete">
         <Setter Property="FontSize" Value="Default" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
@@ -73,6 +73,6 @@
         -->
     </Style>
 
-    <Style TargetType="controls:MultiSelectAutoComplete" BasedOn="{StaticResource DefaultMultiSelectAutoCompleteStyle}"/>
+    <Style TargetType="controls:MultiSelectAutoComplete" BasedOn="{StaticResource Style.Syncfusion.MultiSelectAutoComplete.Default}"/>
 
 </ResourceDictionary>

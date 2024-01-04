@@ -12,16 +12,16 @@
         <shared:Fonts />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultSfTabViewStyle" TargetType="tabView:SfTabView">
+
+    <Style x:Key="Style.Syncfusion.SfTabView.Default" TargetType="tabView:SfTabView">
         <Setter Property="IndicatorBackground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
         <Setter Property="IndicatorPlacement" Value="Top"/>
     </Style>
 
-    <Style TargetType="tabView:SfTabView" BasedOn="{StaticResource DefaultSfTabViewStyle}" />
+    <Style TargetType="tabView:SfTabView" BasedOn="{StaticResource Style.Syncfusion.SfTabView.Default}" />
 
-    <Style x:Key="DefaultSfTabViewItemStyle" TargetType="tabView:SfTabItem">
+    <Style x:Key="Style.Syncfusion.SfTabItem.Default" TargetType="tabView:SfTabItem">
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
         <Setter Property="FontSize" Value="Micro"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -42,11 +42,11 @@
         </Setter>
     </Style>
 
-    <Style x:Key="MaterialIconSfTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}">
+    <Style x:Key="MaterialIconSfTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
         <Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
     </Style>
 
-    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource DefaultSfTabViewItemStyle}"/>
+    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}"/>
 
 </ResourceDictionary>

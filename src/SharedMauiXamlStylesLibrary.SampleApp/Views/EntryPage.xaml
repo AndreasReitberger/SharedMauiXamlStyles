@@ -14,7 +14,7 @@
     xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
     
     Title="ButtonsPage"
-    Style="{StaticResource DefaultPageStyle}"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
     x:DataType="viewModels:EntryPageViewModel"   
     >
     <ContentPage.Resources>
@@ -27,7 +27,7 @@
                 Text="Entries"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource LabelStyle}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             
             <Entry 
@@ -38,7 +38,7 @@
             <editors:SfNumericEntry 
                 Margin="8,16"
                 Value="{Binding SampleValue}"
-                Style="{StaticResource DefaultSfNumericEntryStyle}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
                 Background="Green"
                 />
             

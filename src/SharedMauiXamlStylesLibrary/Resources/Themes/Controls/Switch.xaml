@@ -7,8 +7,8 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultSwitchStyle" TargetType="Switch">
+
+    <Style x:Key="Style.Core.Switch.Default" TargetType="Switch">
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="ThumbColor" Value="{StaticResource White}" />
@@ -41,5 +41,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Switch" BasedOn="{StaticResource DefaultSwitchStyle}" />
+    <Style TargetType="Switch" BasedOn="{StaticResource Style.Core.Switch.Default}" />
 </ResourceDictionary>

@@ -10,8 +10,8 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style x:Key="DefaultSfBusyIndicatorStyle" TargetType="core:SfBusyIndicator">
+
+    <Style x:Key="Style.Syncfusion.SfBusyIndicator.Default" TargetType="core:SfBusyIndicator">
         <Setter Property="AnimationType" Value="CircularMaterial" />
         <Setter Property="SizeFactor" Value="0.7" />
         <Setter Property="IndicatorColor" Value="{DynamicResource PrimaryColor}" />
@@ -19,5 +19,5 @@
         <Setter Property="OverlayFill" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
 
-    <Style TargetType="core:SfBusyIndicator" BasedOn="{StaticResource DefaultSfBusyIndicatorStyle}"/>
+    <Style TargetType="core:SfBusyIndicator" BasedOn="{StaticResource Style.Syncfusion.SfBusyIndicator.Default}"/>
 </ResourceDictionary>
