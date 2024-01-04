@@ -14,14 +14,18 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
 
         void MultiSelectAutoComplete_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.CurrentSelection is not IList list)
-            {
-                // Single item (if token is set to 'none')
-                list = new ArrayList
-                {
-                    e.CurrentSelection
-                };
-            }
+            ArrayList list = new(SelectedItemsList);
+            // Add new items
+            if (e?.AddedItems is not null)
+                foreach (var item in e?.AddedItems)
+                    if (!list.Contains(item))
+                        list.Add(item);
+            // Remove items
+            if (e?.RemovedItems is not null)
+                foreach (var item in e?.RemovedItems)
+                    if (list.Contains(item))
+                        list.Remove(item);
+            // Update list
             SelectedItemsList = list;
         }
 
