@@ -91,7 +91,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PrimrayRangeSliderStyle" TargetType="sliders:SfRangeSlider">
+    <Style x:Key="PrimraySfRangeSliderStyle" TargetType="sliders:SfRangeSlider">
         <Setter Property="ShowLabels" Value="False" />
         <Setter Property="WidthRequest" Value="290" />
         <Setter Property="HeightRequest" Value="36" />

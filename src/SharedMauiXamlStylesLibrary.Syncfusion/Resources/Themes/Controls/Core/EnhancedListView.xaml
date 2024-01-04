@@ -22,27 +22,27 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="ListViewDeleteGestureSwipeableStyle" TargetType="controls:EnhancedListView" >
+    <Style x:Key="DeleteGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" >
         <Setter Property="AllowSwiping" Value="True" />
         <Setter Property="SwipeThreshold" Value="70" />
         <Setter Property="EndSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
     </Style>
 
-    <Style x:Key="ListViewDeleteEditGestureSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteGestureSwipeableStyle}">
+    <Style x:Key="DeleteEditGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
         <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
         <Setter Property="EndSwipeTemplate" Value="{StaticResource EditDeleteGestureSwipeTemplate}" />
     </Style>
 
-    <Style x:Key="ListViewPrintDeleteViewGestureSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteGestureSwipeableStyle}">
+    <Style x:Key="PrintDeleteViewGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
         <Setter Property="StartSwipeTemplate" Value="{StaticResource PrintGestureSwipeTemplate}" />
         <Setter Property="EndSwipeTemplate" Value="{StaticResource ViewDeleteGestureSwipeTemplate}" />
     </Style>
 
-    <Style x:Key="ListViewDeleteViewPrintGestureSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteGestureSwipeableStyle}">
+    <Style x:Key="DeleteViewPrintGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
         <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
         <Setter Property="EndSwipeTemplate" Value="{StaticResource PrintViewGestureSwipeTemplate}" />
     </Style>
-    <Style x:Key="ListViewDeleteEditExecuteGestureSwipeableStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource ListViewDeleteGestureSwipeableStyle}">
+    <Style x:Key="DeleteEditExecuteGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
         <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
         <Setter Property="EndSwipeTemplate" Value="{StaticResource ExecuteEditGestureSwipeTemplate}" />
     </Style>

@@ -14,7 +14,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Docs: https://help.syncfusion.com/maui/masked-entry/getting-started -->
-    <Style x:Key="DefaultMaskedEntryStyle" TargetType="inputs:SfMaskedEntry">
+    <Style x:Key="DefaultSfMaskedEntryStyle" TargetType="inputs:SfMaskedEntry">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="Default" />
@@ -37,5 +37,5 @@
         </Setter>
     </Style>
 
-    <Style TargetType="inputs:SfMaskedEntry" BasedOn="{StaticResource DefaultMaskedEntryStyle}"/>
+    <Style TargetType="inputs:SfMaskedEntry" BasedOn="{StaticResource DefaultSfMaskedEntryStyle}"/>
 </ResourceDictionary>

@@ -154,6 +154,7 @@
     <Style x:Key="LinkButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Margin" Value="4,6" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="TextColor" Value="{StaticResource Blue}" />
         <Setter Property="FontSize" Value="Caption" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
