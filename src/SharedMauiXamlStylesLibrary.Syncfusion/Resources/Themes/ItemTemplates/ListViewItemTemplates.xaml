@@ -27,12 +27,12 @@
                 >
                 <!-- Check icon -->
                 <Border
-                    Style="{StaticResource ProfileBorderStyle}"
+                    Style="{StaticResource Style.Core.Border.Profile}"
                     Background="{StaticResource LightGreen}"
                     Margin="0"
                     >
                     <Label 
-                        Style="{StaticResource IconLabelStyle}"
+                        Style="{StaticResource Style.Core.Label.Icon}"
                         Text="{x:Static iconsSyncfusion:SyncfusionIcons.Sent}"
                         TextColor="{StaticResource White}"
                         />
@@ -41,7 +41,7 @@
                 <Label 
                     Grid.Column="1"
                     Text="{Binding Feature}"
-                    Style="{StaticResource LabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Start"
                     />
@@ -66,7 +66,7 @@
                     VerticalTextAlignment="Center"
                     >
                     <Label.Style>
-                        <Style TargetType="Label" BasedOn="{StaticResource MaterialSettingsIconLabelStyle}">
+                        <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
                             <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AlertCircleOutline}"/>
                             <Style.Triggers>
                                 <!-- Info -->
@@ -101,7 +101,7 @@
                     >
                     <Label 
                         LineBreakMode="WordWrap" 
-                        Style="{StaticResource LabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Default}" 
                         Text="{Binding Message}"
                         FontAttributes="Bold"
                         VerticalTextAlignment="Center"
@@ -112,7 +112,7 @@
                         VerticalTextAlignment="Center"
                         >
                         <Label.Style>
-                            <Style TargetType="Label" BasedOn="{StaticResource SmallLabelStyle}">
+                            <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Small}">
                                 <Setter Property="IsVisible" Value="True"/>
                                 <Style.Triggers>
                                     <!-- Has no args -->
@@ -155,12 +155,12 @@
                     <!-- Language name -->
                     <Label 
                         LineBreakMode="NoWrap" 
-                        Style="{StaticResource PrimaryLabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Primary}" 
                         Text="{Binding Name}"
                         />
                     <!-- Translator -->
                     <Label 
-                        Style="{StaticResource LabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Default}" 
                         LineBreakMode="WordWrap" 
                         Text="{Binding Translator}"
                         FontSize="12"
@@ -198,13 +198,13 @@
                     <!-- Language name -->
                     <Label 
                         LineBreakMode="NoWrap" 
-                        Style="{StaticResource PrimaryLabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Primary}" 
                         TextColor="{StaticResource White}"
                         Text="{Binding Name}"
                         />
                     <!-- Translator -->
                     <Label 
-                        Style="{StaticResource LabelStyle}" 
+                        Style="{StaticResource Style.Core.Label.Default}" 
                         LineBreakMode="WordWrap" 
                         Text="{Binding Translator}"
                         TextColor="{StaticResource White}"
@@ -226,19 +226,19 @@
                 ColumnDefinitions="*,Auto"
                 >
                 <Label
-                    Style="{StaticResource LabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     LineBreakMode="WordWrap"
                     Text="{Binding Changelog}"
                     />
                 <Border 
                     Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" 
-                    Style="{StaticResource ProfileBorderStyle}"
+                    Style="{StaticResource Style.Core.Border.Profile}"
                     Grid.Column="1"
                     VerticalOptions="Center"
                     >
                     <Label
                         Margin="4"
-                        Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                        Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                         Text="{Binding Type, Converter={StaticResource StringToChangelogIconConverter}}"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center"

@@ -60,7 +60,7 @@
                     >
                     <Label
                         Text="{Binding ThemeName}"
-                        Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                        Style="{StaticResource Style.Core.Label.HeadlinePrimary}"
                         TextColor="{Binding PrimaryColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center"
@@ -78,7 +78,7 @@
                             >
                             <Label
                                 Text="{Binding PrimaryLigtherColor, Converter={StaticResource ColorToStringConverter}}"
-                                Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                                Style="{StaticResource Style.Core.Label.HeadlinePrimary}"
                                 TextColor="{Binding PrimaryLigtherColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
@@ -93,7 +93,7 @@
                             >
                             <Label
                                 Text="{Binding PrimaryDarkerColor, Converter={StaticResource ColorToStringConverter}}"
-                                Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                                Style="{StaticResource Style.Core.Label.HeadlinePrimary}"
                                 TextColor="{Binding PrimaryDarkerColor, Converter={StaticResource ColorToBlackWhiteConverter}}"
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"

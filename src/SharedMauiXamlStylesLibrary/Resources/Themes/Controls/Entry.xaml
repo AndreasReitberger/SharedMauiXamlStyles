@@ -63,7 +63,7 @@
     </Style>
 
     <Style TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}" ApplyToDerivedTypes="True"/>
-    <Style TargetType="control:BorderlessEntry" BasedOn="{StaticResource DefaultEntryStyle}" ApplyToDerivedTypes="True"/>
+    <Style TargetType="control:BorderlessEntry" BasedOn="{StaticResource Style.Core.BorderlessEntry.Default}" ApplyToDerivedTypes="True"/>
 
     <Style x:Key="Style.Core.Entry.Numeric" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}">
         <Setter Property="Keyboard" Value="Numeric"/>
@@ -73,7 +73,7 @@
         <Setter Property="Keyboard" Value="Numeric"/>
     </Style>
 
-    <Style x:Key="Style.Core.Entry.Password" TargetType="Entry" BasedOn="{StaticResource DefaultEntryStyle}">
+    <Style x:Key="Style.Core.Entry.Password" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}">
         <Setter Property="IsPassword" Value="True"/>
         <Setter Property="IsSpellCheckEnabled" Value="False" />
     </Style>

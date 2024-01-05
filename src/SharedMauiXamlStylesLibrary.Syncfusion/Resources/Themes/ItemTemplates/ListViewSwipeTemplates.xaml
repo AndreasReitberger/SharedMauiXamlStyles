@@ -21,7 +21,7 @@
 
     <DataTemplate x:Key="DeleteGestureSwipeTemplate">
         <Label
-            Style="{StaticResource IconLabelStyle}"
+            Style="{StaticResource Style.Core.Label.Icon}"
             Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
@@ -44,7 +44,7 @@
             Background="{StaticResource Green}"
             >
             <Label
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                 TextColor="{StaticResource White}"
                 Background="{StaticResource Green}"
@@ -68,7 +68,7 @@
             Background="{StaticResource Blue}"
             >
             <Label
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
                 TextColor="{StaticResource White}"
                 Background="{StaticResource Blue}"
@@ -89,7 +89,7 @@
 
     <DataTemplate x:Key="PrintGestureSwipeTemplate">
         <Label
-            Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
             Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
@@ -109,7 +109,7 @@
 
     <DataTemplate x:Key="ExecuteGestureSwipeTemplate">
         <Label
-            Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
             Text="{x:Static icons:MaterialIcons.RunFast}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
@@ -133,7 +133,7 @@
                 ColumnDefinitions="*,*"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                     TextColor="{StaticResource White}"
                     Background="{StaticResource Red}"
@@ -151,7 +151,7 @@
                 </Label>
                 <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     Background="{StaticResource Green}"
@@ -175,7 +175,7 @@
                 ColumnDefinitions="*,*"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.FileExplorer}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -194,7 +194,7 @@
 
                 <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -218,7 +218,7 @@
             ColumnDefinitions="*,*,*"
             >
             <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -236,7 +236,7 @@
             </Label>
             <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -254,7 +254,7 @@
             </Label>
             <Label
                 Grid.Column="2"
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -278,7 +278,7 @@
             ColumnDefinitions="*,*"
             >
             <Label
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -296,7 +296,7 @@
             </Label>
             <Label
                 Grid.Column="1"
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -320,7 +320,7 @@
             ColumnDefinitions="*,*"
             >
             <Label
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -338,7 +338,7 @@
             </Label>
             <Label
                 Grid.Column="1"
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -362,7 +362,7 @@
             ColumnDefinitions="*,*,*"
             >
             <Label
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -380,7 +380,7 @@
             </Label>
             <Label
                 Grid.Column="1"
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -398,7 +398,7 @@
             </Label>
             <Label
                 Grid.Column="2"
-                Style="{StaticResource IconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon}"
                 Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -422,7 +422,7 @@
             ColumnDefinitions="*,*"
             >
             <Label
-                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                 Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -440,7 +440,7 @@
             </Label>
             <Label
                 Grid.Column="1"
-                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                 Text="{x:Static icons:MaterialIcons.EyeOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -464,7 +464,7 @@
             ColumnDefinitions="*,*"
             >
             <Label
-                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                 Text="{x:Static icons:MaterialIcons.RunFast}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -482,7 +482,7 @@
             </Label>
             <Label
                 Grid.Column="1"
-                Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                 Text="{x:Static icons:MaterialIcons.PencilOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
@@ -507,7 +507,7 @@
                 ColumnDefinitions="*,*,*"
                 >
                 <Label
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -525,7 +525,7 @@
                 </Label>
                 <Label
                     Grid.Column="1"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"
@@ -543,7 +543,7 @@
                 </Label>
                 <Label
                     Grid.Column="2"
-                    Style="{StaticResource IconLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.Icon}"
                     Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
                     TextColor="{StaticResource White}"
                     VerticalTextAlignment="Center"

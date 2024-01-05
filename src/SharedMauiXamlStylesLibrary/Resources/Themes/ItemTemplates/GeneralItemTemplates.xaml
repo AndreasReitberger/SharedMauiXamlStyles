@@ -40,7 +40,7 @@
             <Label 
                 Grid.Row="1"
                 Text="{Binding Heading}"
-                Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                Style="{StaticResource Style.Core.Label.HeadlinePrimary}"
                 VerticalTextAlignment="End"
                 HorizontalTextAlignment="Center"
                 SemanticProperties.HeadingLevel="Level1"
@@ -49,7 +49,7 @@
 
             <Label
                 Grid.Row="2"
-                Style="{StaticResource LabelStyle}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 Text="{Binding Content}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"

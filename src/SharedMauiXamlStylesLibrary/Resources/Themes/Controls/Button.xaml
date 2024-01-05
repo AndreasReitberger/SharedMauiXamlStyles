@@ -131,7 +131,7 @@
         <Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />
     </Style>
 
-    <Style x:Key="Style.Core.Button.IconPrimary.MaterialDesign" TargetType="Button" BasedOn="{StaticResource MaterialDesignStyle.Core.Button.Icon}">
+    <Style x:Key="Style.Core.Button.IconPrimary.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -179,7 +179,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Style.Core.Button.LinkRound" TargetType="Button" BasedOn="{StaticResource LinkButtonStyle}">
+    <Style x:Key="Style.Core.Button.LinkRound" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Link}">
         <Setter Property="BorderColor" Value="{StaticResource Blue}" />
         <Setter Property="BorderWidth" Value="2" />
         <Setter Property="HeightRequest" Value="50" />
@@ -233,7 +233,7 @@
         <Setter Property="CornerRadius" Value="{OnIdiom Desktop=32, Tablet=32, Default=25}" />
     </Style>
 
-    <Style x:Key="Style.Core.Button.IconRound.EmergencyStop" TargetType="Button" BasedOn="{StaticResource RoundMaterialDesignStyle.Core.Button.Icon}">
+    <Style x:Key="Style.Core.Button.IconRound.EmergencyStop" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
         <Setter Property="Background" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
         <Setter Property="TextColor" Value="{StaticResource White}" />

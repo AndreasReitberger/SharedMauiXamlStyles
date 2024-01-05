@@ -40,8 +40,12 @@
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 
+    <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
+        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.VectorSquare}" />
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
+    </Style>
 
-    <Style x:Key="Style.Core.Label.Icon.MaterialDesign.TextInputLayout" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
+    <Style x:Key="Style.Core.Label.Icon.MaterialDesign.TextInputLayout" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}">
         <Setter Property="HorizontalTextAlignment" Value="Start" />
         <Setter Property="Margin" Value="0" />
     </Style>

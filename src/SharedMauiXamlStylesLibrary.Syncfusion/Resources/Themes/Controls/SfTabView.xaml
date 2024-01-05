@@ -42,7 +42,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="MaterialIconSfTabViewItemStyle" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
+    <Style x:Key="Style.Syncfusion.SfTabItem.Icon.MaterialDesign" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
         <Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
     </Style>
