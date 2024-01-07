@@ -85,7 +85,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         {
             ArrayList list = new(SelectedItemsList);
             // Add new items
-            if(e?.AddedItems is not null)
+            if (e?.AddedItems is not null)
                 foreach (var item in e.AddedItems)
                     if (!list.Contains(item))
                         list.Add(item);
