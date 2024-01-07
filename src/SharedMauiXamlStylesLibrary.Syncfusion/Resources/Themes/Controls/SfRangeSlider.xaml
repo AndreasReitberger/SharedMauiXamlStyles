@@ -40,7 +40,7 @@
                                         />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="LabelStyle">
+                            <Setter Property="Style.Core.Label.Default">
                                 <Setter.Value>
                                     <sliders:SliderLabelStyle
                                         ActiveTextColor = "{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
@@ -74,7 +74,7 @@
                                         />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="LabelStyle">
+                            <Setter Property="Style.Core.Label.Default">
                                 <Setter.Value>
                                     <sliders:SliderLabelStyle
                                         ActiveTextColor = "{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}"

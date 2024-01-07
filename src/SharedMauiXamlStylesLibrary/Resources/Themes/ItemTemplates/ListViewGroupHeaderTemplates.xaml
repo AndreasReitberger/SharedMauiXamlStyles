@@ -17,13 +17,13 @@
     <DataTemplate x:Key="GroupHeaderTemplate">
         <ViewCell>
             <StackLayout 
-                Style="{StaticResource StackLayoutHeaderStyle}" 
+                Style="{StaticResource Style.Core.StackLayout.Header}" 
                 Orientation="Horizontal"
                 >
                 <!-- Icon -->
                 <Label Margin="10,4">
                     <Label.Style>
-                        <Style TargetType="Label" BasedOn="{StaticResource MaterialFontFamilyIconLabelStyle}">
+                        <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
                             <Setter Property="Text" Value="{x:Static icons:MaterialIcons.ArrowDown}"/>
                             <Style.Triggers>
                                 <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
@@ -36,7 +36,7 @@
 
                 <Label 
                     Text="{Binding Key}" 
-                    Style="{StaticResource GroupingHeaderLabelStyle}"
+                    Style="{StaticResource Style.Core.Label.GroupingHeader}"
                     FontAttributes="Bold"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Start"
