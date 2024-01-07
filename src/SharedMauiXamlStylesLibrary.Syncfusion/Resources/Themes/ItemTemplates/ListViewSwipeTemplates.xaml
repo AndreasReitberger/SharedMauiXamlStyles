@@ -408,7 +408,7 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="DataTemplate.Syncfusion.SwipePrint3dView ">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print3dView">
         <Grid
             ColumnDefinitions="*,*"
             >
