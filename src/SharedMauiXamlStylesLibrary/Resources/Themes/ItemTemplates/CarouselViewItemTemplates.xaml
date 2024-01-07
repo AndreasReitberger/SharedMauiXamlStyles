@@ -14,7 +14,7 @@
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     <converters:ColorToStringConverter x:Key="ColorToStringConverter" />
 
-    <DataTemplate x:Key="DefaultThemeColorInfoItemTemplate" x:DataType="theme:ThemeColorInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ThemeColorInfo.Enhanced" x:DataType="theme:ThemeColorInfo">
         <Grid>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">

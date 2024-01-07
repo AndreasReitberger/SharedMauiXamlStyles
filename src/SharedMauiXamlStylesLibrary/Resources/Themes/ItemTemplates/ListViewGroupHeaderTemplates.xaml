@@ -14,7 +14,7 @@
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
-    <DataTemplate x:Key="GroupHeaderTemplate">
+    <DataTemplate x:Key="DataTemplate.Core.Header.Group">
         <ViewCell>
             <StackLayout 
                 Style="{StaticResource Style.Core.StackLayout.Header}" 

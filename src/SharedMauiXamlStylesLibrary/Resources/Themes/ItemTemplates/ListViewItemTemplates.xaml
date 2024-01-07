@@ -14,7 +14,7 @@
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
-    <DataTemplate x:Key="ProFeatureItemTemplate" x:DataType="documentation:ProVersionFeature">
+    <DataTemplate x:Key="DataTemplate.Core.ProVersionFeature.Default" x:DataType="documentation:ProVersionFeature">
         <ViewCell>
             <Grid 
                 Padding="8,6"
@@ -46,7 +46,7 @@
         </ViewCell>
     </DataTemplate>
 
-    <DataTemplate x:Key="AppEventTemplate" x:DataType="eventLogger:AppEvent">
+    <DataTemplate x:Key="DataTemplate.Core.AppEvent.Default" x:DataType="eventLogger:AppEvent">
         <ViewCell>
             <Grid 
                 x:Name="Grid"
@@ -126,7 +126,7 @@
     </DataTemplate>
 
     <!-- Localization -->
-    <DataTemplate x:Key="LanguageItemTemplate" x:DataType="language:LocalizationInfo">
+    <DataTemplate x:Key="DataTemplate.Core.LocalizationInfo.Default" x:DataType="language:LocalizationInfo">
         <ViewCell>
             <Grid 
                 Padding="2" 
@@ -167,7 +167,7 @@
         </ViewCell>
     </DataTemplate>
 
-    <DataTemplate x:Key="LanguageSelectedItemTemplate" x:DataType="language:LocalizationInfo">
+    <DataTemplate x:Key="DataTemplate.Core.LocalizationInfo.Selected" x:DataType="language:LocalizationInfo">
         <ViewCell>
             <Grid 
                 Padding="2"
@@ -213,7 +213,7 @@
     </DataTemplate>
 
     <!-- Documentation -->
-    <DataTemplate x:Key="ChangelogItemTemplate" x:DataType="documentation:ChangelogInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ChangelogInfo.Default" x:DataType="documentation:ChangelogInfo">
         <ViewCell>
             <Grid
                 x:Name="Grid"
@@ -245,7 +245,7 @@
         </ViewCell>
     </DataTemplate>
 
-    <DataTemplate x:Key="ChangeInfoItemTemplate" x:DataType="documentation:ChangeInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ChangeInfo.Default" x:DataType="documentation:ChangeInfo">
         <ViewCell>
             <Grid
                 x:Name="Grid"
@@ -278,7 +278,7 @@
     </DataTemplate>
 
     <!-- Theme -->
-    <DataTemplate x:Key="DefaultThemeColorInfoListViewItemTemplate" x:DataType="theme:ThemeColorInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ThemeColorInfo.Default" x:DataType="theme:ThemeColorInfo">
         <Grid>
             <Border
                 StrokeShape="RoundRectangle 10"
@@ -345,7 +345,7 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="ColorInfoListViewItemTemplate" x:DataType="theme:ColorInfo">
+    <DataTemplate x:Key="DataTemplate.Core.ColorInfo.Default" x:DataType="theme:ColorInfo">
         <Grid>
             <Border
                 StrokeShape="RoundRectangle 5"
