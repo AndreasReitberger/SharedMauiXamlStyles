@@ -26,7 +26,7 @@
     <Style x:Key="Style.Syncfusion.SfListView.Swipe.DeleteEdit" TargetType="listView:SfListView" BasedOn="{StaticResource Style.Syncfusion.SfListView.Default}">
         <Setter Property="AllowSwiping" Value="True" />
         <Setter Property="SwipeThreshold" Value="70" />
-        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
-        <Setter Property="EndSwipeTemplate" Value="{StaticResource EditGestureSwipeTemplate}" />
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Delete}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Edit}" />
     </Style>
 </ResourceDictionary>

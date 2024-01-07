@@ -12,8 +12,8 @@
         <shared:Colors />
         <ResourceDictionary Source="/Resources/Themes/ItemTemplates/ListViewSwipeTemplates.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <Style TargetType="controls:EnhancedListView">
+
+    <Style x:Key="Style.Syncfusion.EnhancedListView.Default" TargetType="controls:EnhancedListView">
         <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="controls:EnhancedListView">
@@ -22,28 +22,30 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="DeleteGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" >
+    <Style TargetType="controls:EnhancedListView" BasedOn="{StaticResource Style.Syncfusion.EnhancedListView.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.EnhancedListView.DeleteGestureSwipe" TargetType="controls:EnhancedListView" >
         <Setter Property="AllowSwiping" Value="True" />
         <Setter Property="SwipeThreshold" Value="70" />
-        <Setter Property="EndSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Delete}" />
     </Style>
 
-    <Style x:Key="DeleteEditGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
-        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
-        <Setter Property="EndSwipeTemplate" Value="{StaticResource EditDeleteGestureSwipeTemplate}" />
+    <Style x:Key="DeleteEditGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource Style.Syncfusion.EnhancedListView.DeleteGestureSwipe}">
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Delete}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.EditDelete}" />
     </Style>
 
-    <Style x:Key="PrintDeleteViewGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
-        <Setter Property="StartSwipeTemplate" Value="{StaticResource PrintGestureSwipeTemplate}" />
-        <Setter Property="EndSwipeTemplate" Value="{StaticResource ViewDeleteGestureSwipeTemplate}" />
+    <Style x:Key="PrintDeleteViewGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource Style.Syncfusion.EnhancedListView.DeleteGestureSwipe}">
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Print3d}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.ViewDelete}" />
     </Style>
 
-    <Style x:Key="DeleteViewPrintGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
-        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
-        <Setter Property="EndSwipeTemplate" Value="{StaticResource PrintViewGestureSwipeTemplate}" />
+    <Style x:Key="DeleteViewPrintGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource Style.Syncfusion.EnhancedListView.DeleteGestureSwipe}">
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Delete}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Print3dView }" />
     </Style>
-    <Style x:Key="DeleteEditExecuteGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource DeleteGestureSwipeEnhancedListViewStyle}">
-        <Setter Property="StartSwipeTemplate" Value="{StaticResource DeleteGestureSwipeTemplate}" />
-        <Setter Property="EndSwipeTemplate" Value="{StaticResource ExecuteEditGestureSwipeTemplate}" />
+    <Style x:Key="DeleteEditExecuteGestureSwipeEnhancedListViewStyle" TargetType="controls:EnhancedListView" BasedOn="{StaticResource Style.Syncfusion.EnhancedListView.DeleteGestureSwipe}">
+        <Setter Property="StartSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.Delete}" />
+        <Setter Property="EndSwipeTemplate" Value="{StaticResource DataTemplate.Syncfusion.Swipe.ExecuteEdit}" />
     </Style>
 </ResourceDictionary>
