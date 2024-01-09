@@ -44,6 +44,10 @@
         </Setter>
     </Style>
 
+    <Style x:Key="Style.Syncfusion.SfNumericEntry.Transparent" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Default}">
+        <Setter Property="Background" Value="{StaticResource Transparent}" />
+    </Style>
+
     <Style x:Key="Style.Syncfusion.SfNumericEntry.Currency" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Default}">
         <Setter Property="CustomFormat" Value="C2" />
     </Style>
