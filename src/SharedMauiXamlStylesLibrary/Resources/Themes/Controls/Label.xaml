@@ -40,6 +40,10 @@
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 
+    <Style x:Key="Style.Core.Label.IconSmall.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
+        <Setter Property="FontSize" Value="Small"/>
+    </Style>
+
     <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
         <Setter Property="Text" Value="{x:Static icons:MaterialIcons.VectorSquare}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />

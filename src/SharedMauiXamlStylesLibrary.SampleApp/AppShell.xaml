@@ -11,8 +11,8 @@
     FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
     FlyoutBackgroundColor="{AppThemeBinding Light={OnPlatform WinUI={StaticResource Gray100}, Default={StaticResource White}}, Dark={OnPlatform WinUI={StaticResource Gray900}, Default={StaticResource Black}}}"
     
-    Shell.ItemTemplate="{StaticResource DefaultFlyoutTemplate}"
-    Shell.MenuItemTemplate="{StaticResource DefaultFlyoutTemplate}"
+    Shell.ItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
+    Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
     x:DataType="viewModels:AppShellViewModel"
     >
 
