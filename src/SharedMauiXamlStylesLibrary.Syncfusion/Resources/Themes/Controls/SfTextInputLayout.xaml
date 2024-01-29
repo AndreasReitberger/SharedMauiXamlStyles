@@ -49,7 +49,7 @@
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"/>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200},Dark={StaticResource Gray800}}"/>
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Focused">
