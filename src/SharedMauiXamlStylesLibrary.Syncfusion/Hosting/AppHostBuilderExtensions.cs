@@ -1,4 +1,5 @@
-﻿using Syncfusion.Maui.Core.Hosting;
+﻿using Microsoft.Maui.Handlers;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace AndreasReitberger.Shared.Syncfusion.Hosting
 {
@@ -10,6 +11,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Hosting
                 .RegisterSharedSyncfusionFonts()
                 .ConfigureSyncfusionAddons()
                 ;
+            ConfigureSharedStyleMappers();
             return builder;
         }
         public static MauiAppBuilder RegisterSharedSyncfusionFonts(this MauiAppBuilder builder)
@@ -36,6 +38,30 @@ namespace AndreasReitberger.Shared.Syncfusion.Hosting
                 .ConfigureSyncfusionCore()
                 ;
             return builder;
+        }
+
+
+        /// <summary>
+        /// Configure custom mappers.
+        /// </summary>
+        public static void ConfigureSharedStyleMappers()
+        {
+#if WINDOWS
+
+            // Fixed according to this post: https://feedback.telerik.com/maui/1635441-icon-not-displayed-when-using-windowspackagetype-none-windowspackagetype
+#if Workaround_9104
+            ///Ref: https://github.com/dotnet/maui/issues/9104#issuecomment-1623140740
+            LabelHandler.Mapper.AppendToMapping("FontFamily", (handler, element) =>
+            {
+                if (element.Font.Family == "UIFontIcons")
+                {
+                    // "UIFontIcons.ttf", "UIFontIcons" 
+                    const string FontAwesomeFamily = "ms-appx:///UIFontIcons.ttf#UIFontIcons";
+                    handler.PlatformView.FontFamily = new Microsoft.UI.Xaml.Media.FontFamily(FontAwesomeFamily);
+                }
+            });
+#endif
+#endif
         }
     }
 }
