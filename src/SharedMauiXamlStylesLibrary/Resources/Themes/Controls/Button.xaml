@@ -131,6 +131,12 @@
         <Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />
     </Style>
 
+    <Style x:Key="Style.Core.Button.IconSmall.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=Small, Default=Default}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
+    </Style>
+
     <Style x:Key="Style.Core.Button.IconPrimary.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />

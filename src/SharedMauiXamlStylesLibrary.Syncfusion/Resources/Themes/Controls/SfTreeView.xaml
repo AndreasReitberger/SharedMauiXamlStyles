@@ -15,7 +15,7 @@
 
     <Style x:Key="Style.Syncfusion.SfTreeView.Default" TargetType="treeView:SfTreeView">
         <Setter Property="SelectionForeground" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
 
