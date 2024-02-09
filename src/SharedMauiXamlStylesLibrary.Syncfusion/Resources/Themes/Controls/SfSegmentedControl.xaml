@@ -17,27 +17,32 @@
 
     <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter"/>
 
-    <!-- Docs: https://help.syncfusion.com/maui/segmented-control/overviews-->
+    <!-- Docs: https://help.syncfusion.com/maui/segmented-control/overviews -->
     <Style x:Key="Style.Syncfusion.SfSegmentedControl.Default" TargetType="buttons:SfSegmentedControl">
         <Setter Property="TextStyle">
             <Setter.Value>
                 <buttons:SegmentTextStyle
                     FontSize="{OnIdiom Phone=14, Default=18}"
                     FontFamily="{StaticResource MontserratBold}"
-                    TextColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"                  
+                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"   
                     />
             </Setter.Value>
         </Setter>
+        <!--
+            Causes exception => Operation is not valid due to the current state of the object.
+            TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"  
+        -->
         <Setter Property="SelectionIndicatorSettings">
             <Setter.Value>
                 <buttons:SelectionIndicatorSettings
                     Background="{DynamicResource PrimaryColor}"
-                    TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"                    
+                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
                     />
             </Setter.Value>
         </Setter>
-        <Setter Property="StrokeThickness" Value="0" />
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        
+        <Setter Property="StrokeThickness" Value="2" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="CornerRadius" Value="8" />
         <Setter Property="SegmentCornerRadius" Value="0" />
     </Style>
@@ -48,14 +53,32 @@
         <Setter Property="SegmentWidth" Value="48" />
     </Style>
 
-    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Profiles" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
+    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Borderless" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
         <Setter Property="TextStyle">
             <Setter.Value>
                 <buttons:SegmentTextStyle
-                     FontSize="{OnIdiom Phone=10, Default=14}"            
-                     />
+                    FontSize="{OnIdiom Phone=10, Default=14}"   
+                    FontFamily="{StaticResource MontserratBold}"
+                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"   
+                    />    
             </Setter.Value>
         </Setter>
-        <Setter Property="SegmentWidth" Value="{OnIdiom Tablet=92, Default=64}" />
+        <!--
+            Causes exception => Operation is not valid due to the current state of the object.
+            TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"  
+        -->
+        <Setter Property="SelectionIndicatorSettings">
+            <Setter.Value>
+                <buttons:SelectionIndicatorSettings
+                    Background="{DynamicResource PrimaryColor}"
+                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                    SelectionIndicatorPlacement="Border"
+                    />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="SegmentWidth" Value="{OnIdiom Phone=32, Default=64}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Phone=16, Default=32}" />
+        <Setter Property="SegmentCornerRadius" Value="{OnIdiom Phone=16, Default=32}" />
     </Style>
 </ResourceDictionary>

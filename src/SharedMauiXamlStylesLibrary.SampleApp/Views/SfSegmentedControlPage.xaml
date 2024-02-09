@@ -28,15 +28,23 @@
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
-            <!---->
-            <buttons:SfSegmentedControl
+            <!--        
                 Style="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}"
+            -->
+            <buttons:SfSegmentedControl
+                Margin="4,16"
                 ItemsSource="{Binding Sizes}"
-                SelectedIndex="{Binding SelectedSizeIndex}"
-                >
-                
-            </buttons:SfSegmentedControl>
-            
+                SelectedIndex="{Binding SelectedSizeIndex, Mode=TwoWay}"
+                Style="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}"
+                />
+
+            <buttons:SfSegmentedControl
+                Margin="4,16"
+                ItemsSource="{Binding Sizes}"
+                SelectedIndex="{Binding SelectedSizeIndex, Mode=TwoWay}"
+                Style="{StaticResource Style.Syncfusion.SfSegmentedControl.Borderless}"
+                />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
