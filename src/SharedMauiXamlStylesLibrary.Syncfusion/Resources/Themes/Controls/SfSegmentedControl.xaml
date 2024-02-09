@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Docs: https://help.syncfusion.com/maui/segmented-control/overviews-->
+    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Default" TargetType="buttons:SfSegmentedControl">
+        <Setter Property="TextStyle">
+            <Setter.Value>
+                <buttons:SegmentTextStyle
+                    FontSize="{OnIdiom Phone=14, Default=18}"
+                    FontFamily="{StaticResource MontserratBold}"
+                    TextColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"                  
+                    />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="SelectionIndicatorSettings">
+            <Setter.Value>
+                <buttons:SelectionIndicatorSettings
+                    Background="{DynamicResource PrimaryColor}"
+                    TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"                    
+                    />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="SegmentCornerRadius" Value="0" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Printers" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
+        <Setter Property="SegmentBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="SegmentWidth" Value="48" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfSegmentedControl.Profiles" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
+        <Setter Property="TextStyle">
+            <Setter.Value>
+                <buttons:SegmentTextStyle
+                     FontSize="{OnIdiom Phone=10, Default=14}"            
+                     />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="SegmentWidth" Value="{OnIdiom Tablet=92, Default=64}" />
+    </Style>
+</ResourceDictionary>

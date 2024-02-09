@@ -25,7 +25,6 @@
         <!-- Set Background before setting the TextColor due to the Converter -->
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-        <!--<Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=BackgroundColor, Converter={StaticResource ColorToBlackWhiteConverter}}" /> -->
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="Small" />
         <Setter Property="VisualStateManager.VisualStateGroups">
