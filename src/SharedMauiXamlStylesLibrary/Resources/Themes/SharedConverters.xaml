@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.SharedConverters"
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    >
+    <!-- Common Converters -->
+    <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+    <converters:BooleanReverseVisibilityConverter x:Key="BooleanReverseVisibilityConverter" />
+    <converters:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
+    <converters:DoubleHoursToTimeSpanConverter x:Key="DoubleHoursToTimeSpanConverter" />
+    <converters:DoubleSecondsToETAConverter x:Key="DoubleSecondsToETAConverter" />
+    <converters:UnixDoubleHoursToTimeSpanConverter x:Key="UnixDoubleHoursToTimeSpanConverter" />
+    <converters:LongToGigaByteConverter x:Key="LongToGigaByteConverter" />
+    <converters:LongToMegaByteConverter x:Key="LongToMegaByteConverter" />
+    <converters:StringToColorConverter x:Key="StringToColorConverter" />
+    <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    <converters:UriToStringConverter x:Key="UriToStringConverter" />
+</ResourceDictionary>

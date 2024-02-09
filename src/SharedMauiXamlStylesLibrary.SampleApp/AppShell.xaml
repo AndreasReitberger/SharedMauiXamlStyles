@@ -32,6 +32,11 @@
         Route="EntryPage" />
 
     <ShellContent
+        Title="SfSegmentedControl"
+        ContentTemplate="{DataTemplate views:SfSegmentedControlPage}"
+        Route="SfSegmentedControlPage" />
+
+    <ShellContent
         Title="TabView"
         ContentTemplate="{DataTemplate views:TabViewPage}"
         Route="TabViewPage" />

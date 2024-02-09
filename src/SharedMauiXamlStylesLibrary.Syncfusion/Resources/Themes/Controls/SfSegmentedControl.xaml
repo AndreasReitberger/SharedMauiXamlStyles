@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
@@ -13,6 +14,8 @@
         <shared:Fonts />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter"/>
 
     <!-- Docs: https://help.syncfusion.com/maui/segmented-control/overviews-->
     <Style x:Key="Style.Syncfusion.SfSegmentedControl.Default" TargetType="buttons:SfSegmentedControl">

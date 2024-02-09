@@ -10,6 +10,7 @@
         <shared:Colors />
         <shared:Fonts />
 
+        <ResourceDictionary Source="/Resources/Themes/SharedConverters.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
         <!-- Templates must come for styles! -->
         <ResourceDictionary Source="/Resources/Themes/SharedTemplates.xaml" />
