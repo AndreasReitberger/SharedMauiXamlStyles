@@ -54,6 +54,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\SfSegmentedControlPage.xaml.cs">
+	    <DependentUpon>SfSegmentedControlPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\EntryPage.xaml.cs">
 	    <DependentUpon>EntryPage.xaml</DependentUpon>
 	  </Compile>
@@ -85,6 +88,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LabelsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfSegmentedControlPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
