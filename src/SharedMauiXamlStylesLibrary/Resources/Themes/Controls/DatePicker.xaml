@@ -11,7 +11,7 @@
 
     <Style x:Key="Style.Core.DatePicker.Default" TargetType="DatePicker">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="Default"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
