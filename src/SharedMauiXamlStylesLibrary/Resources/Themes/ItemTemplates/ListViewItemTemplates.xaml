@@ -5,10 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.Themes.ItemTemplates.ListViewItemTemplates"
     
-    xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedMauiCoreLibrary"
-    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedMauiCoreLibrary"
+    xmlns:eventLogger="clr-namespace:AndreasReitberger.Shared.Core.EventLogger;assembly=SharedNetCoreLibrary"
+    xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedNetCoreLibrary"
+    xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedNetCoreLibrary"
     xmlns:theme="clr-namespace:AndreasReitberger.Shared.Core.Theme;assembly=SharedMauiCoreLibrary"
-    xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedMauiCoreLibrary"  
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"   
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
     >
