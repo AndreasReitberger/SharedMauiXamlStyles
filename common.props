@@ -18,6 +18,11 @@
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
+		
+		<!-- Warnings as error -->
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<!-- https://github.com/dotnet/maui/pull/19360 -->
+	    <WarningsAsErrors>XC0022,XC0023</WarningsAsErrors>
     </PropertyGroup>
 
 <!--
