@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
+    xmlns:iconsCore="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:barcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Barcode"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter"/>
+
+    <!-- Docs: https://help.syncfusion.com/maui/barcode-generator/getting-started -->
+    <Style x:Key="Style.Syncfusion.SfBarcodeGenerator.Default" TargetType="barcode:SfBarcodeGenerator">
+        <Setter Property="ShowText" Value="True" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="ForegroundColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+        <Setter Property="TextStyle">
+            <Setter.Value>
+                <barcode:BarcodeTextStyle
+                    FontFamily="{StaticResource MontserratRegular}"
+                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                    FontSize="8"
+                    />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="barcode:SfBarcodeGenerator" BasedOn="{StaticResource Style.Syncfusion.SfBarcodeGenerator.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfBarcodeGenerator.QRCode" TargetType="barcode:SfBarcodeGenerator" BasedOn="{StaticResource Style.Syncfusion.SfBarcodeGenerator.Default}">
+        <Setter Property="Symbology">
+            <Setter.Value>
+                <barcode:QRCode />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
