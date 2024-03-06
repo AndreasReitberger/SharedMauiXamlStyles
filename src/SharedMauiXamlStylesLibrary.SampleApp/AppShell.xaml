@@ -22,9 +22,19 @@
         Route="LabelsPage" />
 
     <ShellContent
+        Title="Editors and Entries"
+        ContentTemplate="{DataTemplate views:EditorsPage}"
+        Route="EditorsPage" />
+
+    <ShellContent
         Title="Button"
         ContentTemplate="{DataTemplate views:ButtonsPage}"
         Route="ButtonsPage" />
+
+    <ShellContent
+        Title="Grids"
+        ContentTemplate="{DataTemplate views:GridsPage}"
+        Route="GridsPage" />
 
     <ShellContent
         Title="Entry"

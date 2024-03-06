@@ -35,6 +35,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<LabesPageViewModel>();
             builder.Services.AddSingleton<EntryPageViewModel>();
             builder.Services.AddSingleton<ButtonsPageViewModel>();
+            builder.Services.AddSingleton<GridsPageViewModel>();
+            builder.Services.AddSingleton<EditorsPageViewModel>();
             builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
             builder.Services.AddSingleton<TabViewPageViewModel>();
             return builder;
@@ -42,12 +44,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         public static MauiAppBuilder RegisterMainViews(this MauiAppBuilder builder)
         {
             // Example: https://github.com/microsoft/dotnet-podcasts/blob/main/src/Mobile/Pages/PagesExtensions.cs
-            // AppShell doesn't belong here! (@Workaground: https://github.com/symbiogenesis/ServiceProviderInjection/blob/master/MauiApp1/MauiProgram.cs)
             builder.Services.AddSingleton<AppShell>();
             // Main view models
             builder.Services.AddSingleton<ButtonsPage>();
             builder.Services.AddSingleton<EntryPage>();
             builder.Services.AddSingleton<LabelsPage>();
+            builder.Services.AddSingleton<GridsPage>();
+            builder.Services.AddSingleton<EditorsPage>();
             builder.Services.AddSingleton<SfSegmentedControlPage>();
             builder.Services.AddSingleton<TabViewPage>();
             return builder;
@@ -56,7 +59,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         public static MauiAppBuilder RegisterDispatcher(this MauiAppBuilder builder)
         {
             // Example: https://github.com/jamesmontemagno/ToolkitMessenger/blob/master/MauiApp2/MauiProgram.cs
-            //builder.Services.AddSingleton<IDispatcherProvider>(DispatcherProvider.Current);
             builder.Services.AddSingleton(Dispatcher.GetForCurrentThread());
             return builder;
         }

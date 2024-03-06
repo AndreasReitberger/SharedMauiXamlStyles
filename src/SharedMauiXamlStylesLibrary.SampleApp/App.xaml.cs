@@ -6,13 +6,14 @@ namespace SharedMauiXamlStylesLibrary.SampleApp
     {
         readonly string SyncfusionKey = "";
 
-        public App()
+        public App(IServiceProvider serviceProvider)
         {
             SyncfusionLicenseProvider.RegisterLicense(SyncfusionKey);
 
             InitializeComponent();
 
-            MainPage = new AppShell();
+            // Workaroung: https://github.com/dotnet/maui/issues/11485#issuecomment-1416689085
+            MainPage = serviceProvider.GetRequiredService<AppShell>();
         }
     }
 }

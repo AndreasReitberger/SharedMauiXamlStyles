@@ -54,6 +54,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\EditorsPage.xaml.cs">
+	    <DependentUpon>EditorsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\GridsPage.xaml.cs">
+	    <DependentUpon>GridsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SfSegmentedControlPage.xaml.cs">
 	    <DependentUpon>SfSegmentedControlPage.xaml</DependentUpon>
 	  </Compile>
@@ -76,6 +82,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditorsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\GridsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EntryPage.xaml">
