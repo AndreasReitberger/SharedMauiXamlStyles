@@ -121,24 +121,24 @@
     <Color x:Key="Dark_ItemTemplateSeparator">LightGray</Color>
     -->
     
-    <!-- Light -->
+    <!-- Light 
     <Color x:Key="Light_GroupingTemplateBackground">#E4E4E4</Color>
     <Color x:Key="Light_GroupingTemplatePrimary">#1c1c1c</Color>
-
-    <!-- Dark -->
+    -->
+    <!-- Dark 
     <Color x:Key="Dark_GroupingTemplateBackground">#E4E4E4</Color>
     <Color x:Key="Dark_GroupingTemplatePrimary">#1c1c1c</Color>
-
-    <!-- Light -->
+    -->
+    <!-- Light
     <Color x:Key="Light_MenuItemBarBackground">#1c1c1c</Color>
     <Color x:Key="Light_TaptemGridBackground">#ffffff</Color>
     <Color x:Key="Light_PanelBackground">#e8e8e8</Color>
-
-    <!-- Dark -->
+    -->
+    <!-- Dark
     <Color x:Key="Dark_MenuItemBarBackground">#1A202C</Color>
     <Color x:Key="Dark_TaptemGridBackground">#1A202C</Color>
     <Color x:Key="Dark_PanelBackground">#1A202C</Color>
-
+     -->
     <!--
     <Color x:Key="Light">#DFD8F7</Color>
     <Color x:Key="Dark">#B02F35</Color>
