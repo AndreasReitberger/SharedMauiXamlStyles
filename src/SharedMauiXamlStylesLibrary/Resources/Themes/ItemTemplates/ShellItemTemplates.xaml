@@ -81,6 +81,7 @@
                 HorizontalOptions="{OnPlatform WinUI=Start}"
                 HorizontalTextAlignment="{OnPlatform WinUI=Start}"
                 VerticalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
                 TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
                 Margin="{OnPlatform Android='20,0,0,0'}"
                 >

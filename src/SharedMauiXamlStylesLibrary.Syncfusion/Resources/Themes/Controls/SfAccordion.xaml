@@ -32,7 +32,7 @@
                     </VisualState>
                     <VisualState Name="Collapsed">
                         <VisualState.Setters>
-                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Dark}, Dark={StaticResource Light}}"/>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
                             <Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
                         </VisualState.Setters>
                     </VisualState>

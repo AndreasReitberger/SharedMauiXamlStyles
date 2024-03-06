@@ -15,62 +15,6 @@
     <Color x:Key="GradientStart">#FF6138</Color>
     <Color x:Key="GradientEnd">#FF9276</Color>
 
-    <!-- Light -->
-    <Color x:Key="Light_Error">#B00020</Color>
-    <Color x:Key="Light_OnError">#ffffff</Color>
-    <Color x:Key="Light_OnPrimary">#ffffff</Color>
-    <Color x:Key="Light_OnSecondary">#ffffff</Color>
-    <Color x:Key="Light_OnBackground">#121212</Color>
-    <Color x:Key="Light_OnSurface">#121212</Color>
-
-    <!-- Dark -->
-    <Color x:Key="Dark_Error">#CF6679</Color>
-    <Color x:Key="Dark_OnError">#121212</Color>
-    <Color x:Key="Dark_OnPrimary">#121212</Color>
-    <Color x:Key="Dark_OnSecondary">#121212</Color>
-    <Color x:Key="Dark_OnBackground">#ffffff</Color>
-    <Color x:Key="Dark_OnSurface">#ffffff</Color>
-
-    <!-- Light -->
-    <Color x:Key="Light_ItemTemplateOuterBackground">#F0F0F0</Color>
-    <Color x:Key="Light_ItemTemplateInnerBackground">White</Color>
-    <Color x:Key="Light_ItemTemplateSelectedBackground">#E4E4E4</Color>
-    <Color x:Key="Light_ItemTemplateBorder">Transparent</Color>
-    <Color x:Key="Light_ItemTemplatePrimaryText">Black</Color>
-    <Color x:Key="Light_ItemTemplateSecondaryText">Gray</Color>
-    <Color x:Key="Light_ItemTemplatePrimary">#f37921</Color>
-    <Color x:Key="Light_ItemTemplateSecondary">White</Color>
-    <Color x:Key="Light_ItemTemplateSeparator">LightGray</Color>
-
-    <!-- Dark -->
-    <Color x:Key="Dark_ItemTemplateOuterBackground">#1C2939</Color>
-    <Color x:Key="Dark_ItemTemplateInnerBackground">White</Color>
-    <Color x:Key="Dark_ItemTemplateSelectedBackground">#3C8CF1</Color>
-    <Color x:Key="Dark_ItemTemplateBorder">Transparent</Color>
-    <Color x:Key="Dark_ItemTemplatePrimaryText">Black</Color>
-    <Color x:Key="Dark_ItemTemplateSecondaryText">Gray</Color>
-    <Color x:Key="Dark_ItemTemplatePrimary">#f37921</Color>
-    <Color x:Key="Dark_ItemTemplateSecondary">White</Color>
-    <Color x:Key="Dark_ItemTemplateSeparator">LightGray</Color>
-
-    <!-- Light -->
-    <Color x:Key="Light_GroupingTemplateBackground">#E4E4E4</Color>
-    <Color x:Key="Light_GroupingTemplatePrimary">#1c1c1c</Color>
-
-    <!-- Dark -->
-    <Color x:Key="Dark_GroupingTemplateBackground">#E4E4E4</Color>
-    <Color x:Key="Dark_GroupingTemplatePrimary">#1c1c1c</Color>
-
-    <!-- Light -->
-    <Color x:Key="Light_MenuItemBarBackground">#1c1c1c</Color>
-    <Color x:Key="Light_TaptemGridBackground">#ffffff</Color>
-    <Color x:Key="Light_PanelBackground">#e8e8e8</Color>
-
-    <!-- Dark -->
-    <Color x:Key="Dark_MenuItemBarBackground">#1A202C</Color>
-    <Color x:Key="Dark_TaptemGridBackground">#1A202C</Color>
-    <Color x:Key="Dark_PanelBackground">#1A202C</Color>
-
     <!--  Common style for sfCardView  -->
     <x:Array Type="{x:Type Color}" x:Key="ChartColors">
         <Color>#b02f35</Color>
@@ -104,22 +48,5 @@
         <SolidColorBrush Color="#ff6361" />
         <SolidColorBrush Color="#ffa600" />
     </x:Array>
-    <!--
-    <x:Array Type="{x:Type Color}" x:Key="DarkChartColors">
-        <Color>#b02f35</Color>
-        <Color>#8d262a</Color>
-        <Color>#6a1c20</Color>
-        <Color>#c0595d</Color>
-        <Color>#d08286</Color>
-        <Color>#dfacae</Color>
-        <Color>#efd5d7</Color>
-    </x:Array>
-    <x:Array Type="{x:Type Color}" x:Key="DarkTemperatureHistoryColors">
-        <Color>#003f5c</Color>
-        <Color>#58508d</Color>
-        <Color>#bc5090</Color>
-        <Color>#ff6361</Color>
-        <Color>#ffa600</Color>
-    </x:Array>
-    -->
+
 </ResourceDictionary>
