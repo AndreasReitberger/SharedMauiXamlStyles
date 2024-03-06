@@ -19,6 +19,6 @@
     <Style x:Key="Style.Core.Frame.ListViewItem" TargetType="Frame" BasedOn="{StaticResource Style.Core.Frame.Default}" >
         <Setter Property="BorderColor" Value="{StaticResource Transparent}"/>
         <Setter Property="Background" Value="{StaticResource Transparent}" />
-        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Light_ItemTemplateBorder}, Dark={StaticResource Dark_ItemTemplateBorder}}" />
+        <Setter Property="BorderColor" Value="{StaticResource Transparent}" />
     </Style>
 </ResourceDictionary>
