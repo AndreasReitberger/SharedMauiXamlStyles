@@ -27,6 +27,7 @@
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="Small" />
+        <Setter Property="MinimumHeightRequest" Value="50" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
