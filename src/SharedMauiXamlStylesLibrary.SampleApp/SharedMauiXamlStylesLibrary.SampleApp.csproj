@@ -60,6 +60,12 @@
 	  <Compile Update="Views\GridsPage.xaml.cs">
 	    <DependentUpon>GridsPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\ProgressBarsPage.xaml.cs">
+	    <DependentUpon>ProgressBarsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\PickersPage.xaml.cs">
+	    <DependentUpon>PickersPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SfSegmentedControlPage.xaml.cs">
 	    <DependentUpon>SfSegmentedControlPage.xaml</DependentUpon>
 	  </Compile>
@@ -91,6 +97,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ProgressBarsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\PickersPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TabViewPage.xaml">

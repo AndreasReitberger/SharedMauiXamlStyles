@@ -29,6 +29,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
             UpdateVersionBuild();
 
             LoadSettings();
+
+            Darkmode = App.Current.UserAppTheme == AppTheme.Dark;
         }
         void LoadSettings()
         {
