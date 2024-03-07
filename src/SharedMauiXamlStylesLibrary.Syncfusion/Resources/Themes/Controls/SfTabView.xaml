@@ -15,7 +15,7 @@
 
     <Style x:Key="Style.Syncfusion.SfTabView.Default" TargetType="tabView:SfTabView">
         <Setter Property="IndicatorBackground" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
         <Setter Property="IndicatorPlacement" Value="Top"/>
     </Style>
 
