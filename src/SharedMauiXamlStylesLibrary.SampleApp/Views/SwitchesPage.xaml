@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SwitchesPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    
+    Title="SwitchesPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:SwitchesPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Style="{StaticResource Style.Core.Label.Settings}"
+                Text="This is a default switch"
+                />
+            <Switch
+                Margin="8,0"
+                IsToggled="{Binding RefreshOnPageAppearing}"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

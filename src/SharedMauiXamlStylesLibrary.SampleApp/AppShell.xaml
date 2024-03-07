@@ -51,6 +51,10 @@
         Title="Sliders"
         ContentTemplate="{DataTemplate views:SlidersPage}"
         Route="SlidersPage" />
+    <ShellContent
+        Title="Switches"
+        ContentTemplate="{DataTemplate views:SwitchesPage}"
+        Route="SwitchesPage" />
     
     <ShellContent
         Title="Entries (Syncfusion)"
