@@ -57,8 +57,17 @@
 	  <Compile Update="Views\EditorsPage.xaml.cs">
 	    <DependentUpon>EditorsPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\BoxViewsPage.xaml.cs">
+	    <DependentUpon>BoxViewsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SlidersPage.xaml.cs">
+	    <DependentUpon>SlidersPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\GridsPage.xaml.cs">
 	    <DependentUpon>GridsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\FramesPage.xaml.cs">
+	    <DependentUpon>FramesPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\ProgressBarsPage.xaml.cs">
 	    <DependentUpon>ProgressBarsPage.xaml</DependentUpon>
@@ -93,10 +102,19 @@
 	  <MauiXaml Update="Views\EditorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\BoxViewsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SlidersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\GridsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\FramesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProgressBarsPage.xaml">

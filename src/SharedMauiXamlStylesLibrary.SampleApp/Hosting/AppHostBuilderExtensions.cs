@@ -35,10 +35,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<LabesPageViewModel>();
             builder.Services.AddSingleton<EntryPageViewModel>();
             builder.Services.AddSingleton<ButtonsPageViewModel>();
+            builder.Services.AddSingleton<BoxViewsPageViewModel>();
             builder.Services.AddSingleton<GridsPageViewModel>();
             builder.Services.AddSingleton<EditorsPageViewModel>();
             builder.Services.AddSingleton<PickersPageViewModel>();
             builder.Services.AddSingleton<ProgressBarsPageViewModel>();
+            builder.Services.AddSingleton<FramesPageViewModel>();
+            builder.Services.AddSingleton<SlidersPageViewModel>();
             builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
             builder.Services.AddSingleton<TabViewPageViewModel>();
             return builder;
@@ -49,12 +52,15 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<AppShell>();
             // Main view models
             builder.Services.AddSingleton<ButtonsPage>();
+            builder.Services.AddSingleton<BoxViewsPage>();
             builder.Services.AddSingleton<EntryPage>();
             builder.Services.AddSingleton<LabelsPage>();
             builder.Services.AddSingleton<GridsPage>();
             builder.Services.AddSingleton<EditorsPage>();
             builder.Services.AddSingleton<PickersPage>();
             builder.Services.AddSingleton<ProgressBarsPage>();
+            builder.Services.AddSingleton<FramesPage>();
+            builder.Services.AddSingleton<SlidersPage>();
             builder.Services.AddSingleton<SfSegmentedControlPage>();
             builder.Services.AddSingleton<TabViewPage>();
             return builder;

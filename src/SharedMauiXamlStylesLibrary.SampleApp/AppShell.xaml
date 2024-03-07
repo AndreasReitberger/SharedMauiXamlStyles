@@ -16,34 +16,41 @@
     >
 
     <ShellContent
-        Title="Labels"
-        ContentTemplate="{DataTemplate views:LabelsPage}"
-        Route="LabelsPage" />
-
-    <ShellContent
-        Title="Editors and Entries"
-        ContentTemplate="{DataTemplate views:EditorsPage}"
-        Route="EditorsPage" />
-
+        Title="BoxView"
+        ContentTemplate="{DataTemplate views:BoxViewsPage}"
+        Route="BoxViewsPage" />
     <ShellContent
         Title="Button"
         ContentTemplate="{DataTemplate views:ButtonsPage}"
         Route="ButtonsPage" />
-
+    <ShellContent
+        Title="Editors and Entries"
+        ContentTemplate="{DataTemplate views:EditorsPage}"
+        Route="EditorsPage" />
+    <ShellContent
+        Title="Frames"
+        ContentTemplate="{DataTemplate views:FramesPage}"
+        Route="FramesPage" />
     <ShellContent
         Title="Grids"
         ContentTemplate="{DataTemplate views:GridsPage}"
         Route="GridsPage" />
-
+    <ShellContent
+        Title="Labels"
+        ContentTemplate="{DataTemplate views:LabelsPage}"
+        Route="LabelsPage" />
     <ShellContent
         Title="Pickers"
         ContentTemplate="{DataTemplate views:PickersPage}"
         Route="PickersPage" />
-    
     <ShellContent
         Title="ProgressBars"
         ContentTemplate="{DataTemplate views:ProgressBarsPage}"
         Route="ProgressBarsPage" />
+    <ShellContent
+        Title="Sliders"
+        ContentTemplate="{DataTemplate views:SlidersPage}"
+        Route="SlidersPage" />
     
     <ShellContent
         Title="Entries (Syncfusion)"
