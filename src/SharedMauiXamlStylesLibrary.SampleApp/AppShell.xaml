@@ -9,7 +9,6 @@
     
     Style="{StaticResource Style.Core.Shell.Default}"
     FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
-    FlyoutBackgroundColor="{AppThemeBinding Light={OnPlatform WinUI={StaticResource Gray100}, Default={StaticResource White}}, Dark={OnPlatform WinUI={StaticResource Gray900}, Default={StaticResource Black}}}"
     
     Shell.ItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
     Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
@@ -17,17 +16,48 @@
     >
 
     <ShellContent
-        Title="Labels"
-        ContentTemplate="{DataTemplate views:LabelsPage}"
-        Route="LabelsPage" />
-
+        Title="BoxView"
+        ContentTemplate="{DataTemplate views:BoxViewsPage}"
+        Route="BoxViewsPage" />
     <ShellContent
         Title="Button"
         ContentTemplate="{DataTemplate views:ButtonsPage}"
         Route="ButtonsPage" />
-
     <ShellContent
-        Title="Entry"
+        Title="Editors and Entries"
+        ContentTemplate="{DataTemplate views:EditorsPage}"
+        Route="EditorsPage" />
+    <ShellContent
+        Title="Frames"
+        ContentTemplate="{DataTemplate views:FramesPage}"
+        Route="FramesPage" />
+    <ShellContent
+        Title="Grids"
+        ContentTemplate="{DataTemplate views:GridsPage}"
+        Route="GridsPage" />
+    <ShellContent
+        Title="Labels"
+        ContentTemplate="{DataTemplate views:LabelsPage}"
+        Route="LabelsPage" />
+    <ShellContent
+        Title="Pickers"
+        ContentTemplate="{DataTemplate views:PickersPage}"
+        Route="PickersPage" />
+    <ShellContent
+        Title="ProgressBars"
+        ContentTemplate="{DataTemplate views:ProgressBarsPage}"
+        Route="ProgressBarsPage" />
+    <ShellContent
+        Title="Sliders"
+        ContentTemplate="{DataTemplate views:SlidersPage}"
+        Route="SlidersPage" />
+    <ShellContent
+        Title="Switches"
+        ContentTemplate="{DataTemplate views:SwitchesPage}"
+        Route="SwitchesPage" />
+    
+    <ShellContent
+        Title="Entries (Syncfusion)"
         ContentTemplate="{DataTemplate views:EntryPage}"
         Route="EntryPage" />
 
@@ -43,7 +73,7 @@
 
     <Shell.FlyoutFooter>
         <VerticalStackLayout
-            BackgroundColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+            BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"
             >
             <Grid
                 ColumnDefinitions="*,Auto"

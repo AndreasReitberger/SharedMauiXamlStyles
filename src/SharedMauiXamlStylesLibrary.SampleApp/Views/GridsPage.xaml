@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.GridsPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    
+    Title="GridsPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:GridsPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Style="{StaticResource Style.Core.Label.Settings}"
+                Text="General"
+                />
+            <Label
+                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Text="This is a Grid container for a setting element."
+                Margin="16,8"
+                />
+            <!--  Function - Refresh on appearing  -->
+            <Grid
+                Style="{StaticResource Style.Core.Grid.Settings}"
+                ColumnDefinitions="Auto,*,Auto"
+                >
+                <Label
+                    Margin="16,0,0,0"
+                    Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
+                    Text="{x:Static icons:MaterialIcons.Reload}"
+                    />
+                <Label
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Settings}"
+                    Text="Refresh data on loading page?"
+                    />
+                <Switch
+                    Grid.Column="2"
+                    Margin="8,0"
+                    IsToggled="{Binding RefreshOnPageAppearing}"
+                    />
+            </Grid>
+            <BoxView
+                Style="{StaticResource Style.Core.BoxView.Separator}"
+                />
+            <Grid
+                Style="{StaticResource Style.Core.Grid.Settings}"
+                ColumnDefinitions="Auto,*,Auto"
+                >
+                <Label
+                    Margin="16,0,0,0"
+                    Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
+                    Text="{x:Static icons:MaterialIcons.Close}"
+                    />
+                <Label
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Settings}"
+                    Text="Confirm on page closing?"
+                    />
+                <Switch
+                    Grid.Column="2"
+                    Margin="8,0"
+                    IsToggled="{Binding ConfirmPageClosing}"
+                    />
+            </Grid>
+            <BoxView
+                Style="{StaticResource Style.Core.BoxView.Separator}"
+                />
+            <Label
+                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Text="This setting grid is disabled."
+                Margin="16,8"
+                />
+            <Grid
+                IsEnabled="False"
+                Style="{StaticResource Style.Core.Grid.Settings}"
+                ColumnDefinitions="Auto,*,Auto"
+                >
+                <Label
+                    Margin="16,0,0,0"
+                    Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
+                    Text="{x:Static icons:MaterialIcons.Close}"
+                    />
+                <Label
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Settings}"
+                    Text="Confirm on page closing?"
+                    />
+                <Switch
+                    Grid.Column="2"
+                    Margin="8,0"
+                    IsToggled="{Binding ConfirmPageClosing}"
+                    />
+            </Grid>
+            <BoxView
+                Style="{StaticResource Style.Core.BoxView.Separator}"
+                />
+            <Label
+                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Text="This is a setting container calling a command."
+                Margin="16,8"
+                />
+            <!--  Danger zone - Delete all settings  -->
+            <controls:TapAnimationGrid
+                Style="{StaticResource Style.Core.TapAnimationGrid.Default}"
+                Command="{Binding DeleteAllSettingsCommand}"
+                Tapped="False"
+                ColumnDefinitions="Auto,*,Auto"
+                Background="{StaticResource Red}"
+                >
+                <Label
+                    Margin="16,0,0,0"
+                    Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
+                    Text="{x:Static icons:MaterialIcons.AlertOutline}"
+                    TextColor="{StaticResource White}"
+                    />
+                <Label
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Settings}"
+                    Text="Delete all settings?"
+                    TextColor="{StaticResource White}"
+                    />
+                <Label
+                    Grid.Column="2"
+                    Style="{StaticResource Style.Core.Label.Icon}"
+                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
+                    TextColor="{StaticResource White}"
+                    />
+            </controls:TapAnimationGrid>
+            <BoxView
+                Style="{StaticResource Style.Core.BoxView.Separator}"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

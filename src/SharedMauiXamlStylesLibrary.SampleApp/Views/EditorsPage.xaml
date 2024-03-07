@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.EditorsPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    
+    Title="EditorsPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:EditorsPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <Grid
+        RowDefinitions="Auto,*,Auto"
+        >
+        <VerticalStackLayout>
+            <Label
+                Style="{StaticResource Style.Core.Label.Settings}"
+                Text="General"
+                />
+            <Label
+                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Text="This is a normal editor control"
+                Margin="16,8"
+                />
+
+        </VerticalStackLayout>
+        <Editor
+            Grid.Row="1"
+            Style="{StaticResource Style.Core.Editor.Default}"
+            Text="{Binding ExampleTextLong}"
+            HorizontalOptions="Fill"
+            />
+
+        <ScrollView
+            Grid.Row="2"
+            >
+            <VerticalStackLayout>
+                <BoxView
+                    Style="{StaticResource Style.Core.BoxView.Separator}"
+                    />
+                <Label
+                    Style="{StaticResource Style.Core.Label.VerySmall}"
+                    Text="This is a normal entry control."
+                    Margin="16,8"
+                    />
+                <Entry
+                    Style="{StaticResource Style.Core.Entry.Default}"
+                    Text="{Binding ExampleText}"
+                    />
+                <Label
+                
+                    Style="{StaticResource Style.Core.Label.VerySmall}"
+                    Text="This is a password entry control."
+                    Margin="16,8"
+                    />
+                <Entry
+                    Style="{StaticResource Style.Core.Entry.Password}"
+                    Text="{Binding ExampleText}"
+                    />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

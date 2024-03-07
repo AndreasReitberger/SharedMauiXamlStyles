@@ -18,7 +18,8 @@
     <Color x:Key="LightGray">#E5E5E1</Color>
     <Color x:Key="MidGray">#969696</Color>
     <Color x:Key="DarkGray">#505050</Color>
-    <Color x:Key="OffBlack">#1f1f1f</Color>
+    <Color x:Key="OffBlack">#1F1F1F</Color>
+    <Color x:Key="OffWhite">#FAF9F6</Color>
     <Color x:Key="Transparent">Transparent</Color>
     <Color x:Key="TappedBackgroundColor">#eaeaea</Color>
 
