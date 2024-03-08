@@ -24,7 +24,7 @@
     <Style x:Key="Style.Syncfusion.SfTabItem.Default" TargetType="tabView:SfTabItem">
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
         <!--<Setter Property="FontSize" Value="Micro" />-->
-        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>

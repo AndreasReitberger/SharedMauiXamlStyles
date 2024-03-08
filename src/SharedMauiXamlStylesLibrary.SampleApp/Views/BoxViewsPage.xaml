@@ -26,7 +26,7 @@
 
             <BoxView
                 Margin="8"
-                Style="{StaticResource Style.Core.BoxView.Default}"
+                Style="{StaticResource Style.Core.BoxView.Separator}"
                 />
 
             <Label 

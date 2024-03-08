@@ -60,6 +60,7 @@
                 />
 
             <BoxView
+                Style="{StaticResource Style.Core.BoxView.Separator}"
                 />
 
             <Label 

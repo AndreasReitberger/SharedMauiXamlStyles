@@ -48,14 +48,14 @@
 
         <Setter Property="Shell.Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
         <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
-        <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={DynamicResource PrimaryColor}, Default={StaticResource White}}" />
-        <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+        <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={DynamicResource PrimaryColor}, Default={AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}}" />
+        <Setter Property="Shell.TitleColor" Value="{OnPlatform WinUI={DynamicResource PrimaryColor}, Default={AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}}" />
         <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray200}}" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
         <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
-        <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+        <Setter Property="Shell.TabBarForegroundColor" Value="{OnPlatform WinUI={DynamicResource PrimaryColor}, Default={AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}}" />
+        <Setter Property="Shell.TabBarTitleColor" Value="{OnPlatform WinUI={DynamicResource PrimaryColor}, Default={AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}}" />
         <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}" />
     </Style>
 

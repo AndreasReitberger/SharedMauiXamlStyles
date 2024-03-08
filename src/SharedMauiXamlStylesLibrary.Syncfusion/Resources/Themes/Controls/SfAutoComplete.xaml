@@ -16,7 +16,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Syncfusion.SfAutocomplete.Default" TargetType="inputs:SfAutocomplete">
-        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />

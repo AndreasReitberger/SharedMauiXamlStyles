@@ -13,7 +13,7 @@
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray850}}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
-        <Setter Property="FontSize" Value="Default"/>
+        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}"/>
         <Setter Property="Margin" Value="8" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

@@ -19,7 +19,7 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
-        <Setter Property="FontSize" Value="Default"/>
+        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}"/>
     </Style>
 
     <!--  Common style for icon label  -->
@@ -27,7 +27,7 @@
         <Setter Property="Margin" Value="16,8" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <!--<Setter Property="FontSize" Value="Medium" />-->
-        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontSize" Value="{OnPlatform WinUI=13, Default='Default'}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
@@ -47,6 +47,7 @@
     </Style>
 
     <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
+        <Setter Property="Margin" Value="4,0,0,0" />
         <Setter Property="Text" Value="{x:Static icons:MaterialIcons.VectorSquare}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
     </Style>
@@ -113,10 +114,10 @@
     <Style x:Key="Style.Core.Label.Settings" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="Margin" Value="16,0,0,0" />
         <!--<Setter Property="FontSize" Value="Small" />-->
-        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=-1, Android=1.25}"/>
-        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=70, Tablet=70, Phone=50, Default=50}"/>
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=70, Tablet=70, Default=50}"/>
         <Setter Property="VerticalTextAlignment" Value="Center"/>
     </Style>
 
@@ -134,7 +135,7 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="FontSize" Value="Large" />
         <Setter Property="FontAttributes" Value="Bold"/>
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
     </Style>
 
     <Style x:Key="Style.Core.Label.HeadlinePrimary" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Headline}">

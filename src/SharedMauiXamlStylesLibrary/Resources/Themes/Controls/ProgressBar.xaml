@@ -9,6 +9,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.ProgressBar.Default" TargetType="ProgressBar">
+        <Setter Property="Margin" Value="8" />
         <Setter Property="ProgressColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

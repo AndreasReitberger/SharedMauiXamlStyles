@@ -78,7 +78,7 @@
                         ColumnDefinitions="Auto,*,Auto"
                         >
                         <Label
-                            Margin="16,0,0,0"
+                            Margin="4,0,0,0"
                             Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
                             Text="{x:Static icons:MaterialIcons.Reload}"
                             />
@@ -102,7 +102,7 @@
                         ColumnDefinitions="Auto,*,Auto"
                         >
                         <Label
-                            Margin="16,0,0,0"
+                            Margin="4,0,0,0"
                             Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
                             Text="{x:Static icons:MaterialIcons.Close}"
                             />

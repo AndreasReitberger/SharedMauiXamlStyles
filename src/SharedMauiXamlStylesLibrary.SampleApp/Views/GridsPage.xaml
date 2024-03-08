@@ -137,7 +137,7 @@
                     />
                 <Label
                     Grid.Column="2"
-                    Style="{StaticResource Style.Core.Label.Icon}"
+                    Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                     Text="{x:Static icons:MaterialIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     />

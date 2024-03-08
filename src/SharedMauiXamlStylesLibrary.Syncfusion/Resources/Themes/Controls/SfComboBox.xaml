@@ -16,7 +16,7 @@
 
 
     <Style x:Key="Style.Syncfusion.SfComboBox.Default" TargetType="inputs:SfComboBox">
-        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
