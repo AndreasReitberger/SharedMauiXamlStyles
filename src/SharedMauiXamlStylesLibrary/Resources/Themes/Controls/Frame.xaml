@@ -20,10 +20,15 @@
     <Style x:Key="Style.Core.Frame.Borderless" TargetType="Frame" BasedOn="{StaticResource Style.Core.Frame.Default}">
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
-    
+
     <Style x:Key="Style.Core.Frame.ListViewItem" TargetType="Frame" BasedOn="{StaticResource Style.Core.Frame.Default}" >
-        <Setter Property="BorderColor" Value="{StaticResource Transparent}"/>
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="BorderColor" Value="{StaticResource Transparent}" />
+    </Style>
+
+    <Style x:Key="Style.Core.Frame.Settings" TargetType="Frame" BasedOn="{StaticResource Style.Core.Frame.Default}" >
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+        <Setter Property="CornerRadius" Value="10" />
     </Style>
 </ResourceDictionary>

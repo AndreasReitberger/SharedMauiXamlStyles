@@ -27,7 +27,7 @@
                 Text="The default ProgressBar uses the PrimaryColor on the Light theme, and White for the Dark theme."
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             <ProgressBar
                 Style="{StaticResource Style.Core.ProgressBar.Default}"
@@ -45,7 +45,7 @@
                 Text="The primary ProgressBar uses the PrimaryColor on the Light and Dark theme."
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             <ProgressBar
                 Style="{StaticResource Style.Core.ProgressBar.Primary}"
@@ -56,7 +56,7 @@
                 Text="The black / white ProgressBar uses the Black on the Light and White on the Dark theme."
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             <Label 
                 Margin="2,16"

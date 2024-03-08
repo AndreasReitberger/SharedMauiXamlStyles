@@ -25,7 +25,8 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-        <Setter Property="FontSize" Value="Small" />
+        <!--<Setter Property="FontSize" Value="Small" />-->
+        <Setter Property="FontSize" Value="9" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
@@ -52,7 +53,8 @@
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />-->
+        <Setter Property="FontSize" Value="{OnIdiom Desktop=18, Default=16}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="HeightRequest" Value="{OnIdiom Phone=40, Default=60}" />

@@ -26,7 +26,7 @@
                 Text="General"
                 />
             <Label
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 Text="This is a Grid container for a setting element."
                 Margin="16,8"
                 />
@@ -80,7 +80,7 @@
                 Style="{StaticResource Style.Core.BoxView.Separator}"
                 />
             <Label
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 Text="This setting grid is disabled."
                 Margin="16,8"
                 />
@@ -110,7 +110,7 @@
                 Style="{StaticResource Style.Core.BoxView.Separator}"
                 />
             <Label
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 Text="This is a setting container calling a command."
                 Margin="16,8"
                 />

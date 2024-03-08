@@ -28,7 +28,7 @@
                 Text="General"
                 />
             <Label
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 Text="This is a normal editor control"
                 Margin="16,8"
                 />
@@ -49,7 +49,7 @@
                     Style="{StaticResource Style.Core.BoxView.Separator}"
                     />
                 <Label
-                    Style="{StaticResource Style.Core.Label.VerySmall}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     Text="This is a normal entry control."
                     Margin="16,8"
                     />
@@ -58,8 +58,7 @@
                     Text="{Binding ExampleText}"
                     />
                 <Label
-                
-                    Style="{StaticResource Style.Core.Label.VerySmall}"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     Text="This is a password entry control."
                     Margin="16,8"
                     />

@@ -23,7 +23,8 @@
 
     <Style x:Key="Style.Syncfusion.SfTabItem.Default" TargetType="tabView:SfTabItem">
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
-        <Setter Property="FontSize" Value="Micro"/>
+        <!--<Setter Property="FontSize" Value="Micro" />-->
+        <Setter Property="FontSize" Value="7" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -44,7 +45,8 @@
 
     <Style x:Key="Style.Syncfusion.SfTabItem.Icon.MaterialDesign" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
-        <Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
+        <!--<Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>-->
+        <Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=7}"/>
     </Style>
 
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}"/>

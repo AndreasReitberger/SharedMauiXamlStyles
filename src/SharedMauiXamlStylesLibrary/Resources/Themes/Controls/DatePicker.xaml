@@ -10,6 +10,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.DatePicker.Default" TargetType="DatePicker">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray850}}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="Default"/>

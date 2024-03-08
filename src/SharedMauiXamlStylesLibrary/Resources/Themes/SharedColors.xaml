@@ -61,6 +61,7 @@
     <Color x:Key="Gray100">#F5F5F5</Color>
     -->
     <!-- From MAUI template -->
+    <Color x:Key="Gray50">#F5F5F5</Color>
     <Color x:Key="Gray100">#E1E1E1</Color>
     <Color x:Key="Gray200">#C8C8C8</Color>
     <Color x:Key="Gray300">#ACACAC</Color>
@@ -69,6 +70,7 @@
     <Color x:Key="Gray600">#404040</Color>
     <Color x:Key="Gray700">#303030</Color>
     <Color x:Key="Gray800">#252525</Color>
+    <Color x:Key="Gray850">#2C2C2C</Color>
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
 

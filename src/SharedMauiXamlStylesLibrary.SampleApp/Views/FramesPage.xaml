@@ -32,7 +32,7 @@
                         Text="This is just some text to be displayed within the frame."
                         VerticalTextAlignment="Center" 
                         HorizontalTextAlignment="Center"
-                        Style="{StaticResource Style.Core.Label.VerySmall}"
+                        Style="{StaticResource Style.Core.Label.Small}"
                         />
                 </VerticalStackLayout>
             </Frame>
@@ -53,7 +53,72 @@
                         Text="This is just some text to be displayed within the frame."
                         VerticalTextAlignment="Center" 
                         HorizontalTextAlignment="Center"
-                        Style="{StaticResource Style.Core.Label.VerySmall}"
+                        Style="{StaticResource Style.Core.Label.Small}"
+                        />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label
+                Text="This is a settings frame container"
+                Style="{StaticResource Style.Core.Label.Default}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                />
+            
+            <Frame
+                Margin="8"
+                Style="{StaticResource Style.Core.Frame.Settings}"
+                >
+                <VerticalStackLayout
+                    Spacing="0"
+                    >
+                    <Grid
+                        Style="{StaticResource Style.Core.Grid.SettingsFrame}"
+                        ColumnDefinitions="Auto,*,Auto"
+                        >
+                        <Label
+                            Margin="16,0,0,0"
+                            Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
+                            Text="{x:Static icons:MaterialIcons.Reload}"
+                            />
+                        <Label
+                            Grid.Column="1"
+                            HorizontalTextAlignment="Start"
+                            Style="{StaticResource Style.Core.Label.Settings}"
+                            Text="Refresh data on loading page?"
+                            />
+                        <Switch
+                            Grid.Column="2"
+                            Margin="8,0"
+                            IsToggled="{Binding RefreshOnPageAppearing}"
+                            />
+                    </Grid>
+                    <BoxView
+                        Style="{StaticResource Style.Core.BoxView.SeparatorFrame}"
+                        />
+                    <Grid
+                        Style="{StaticResource Style.Core.Grid.SettingsFrame}"
+                        ColumnDefinitions="Auto,*,Auto"
+                        >
+                        <Label
+                            Margin="16,0,0,0"
+                            Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
+                            Text="{x:Static icons:MaterialIcons.Close}"
+                            />
+                        <Label
+                            Grid.Column="1"
+                            HorizontalTextAlignment="Start"
+                            Style="{StaticResource Style.Core.Label.Settings}"
+                            Text="Confirm on page closing?"
+                            />
+                        <Switch
+                            Grid.Column="2"
+                            Margin="8,0"
+                            IsToggled="{Binding ConfirmPageClosing}"
+                            />
+                    </Grid>
+                    <BoxView
+                        Style="{StaticResource Style.Core.BoxView.SeparatorFrame}"
                         />
                 </VerticalStackLayout>
             </Frame>
