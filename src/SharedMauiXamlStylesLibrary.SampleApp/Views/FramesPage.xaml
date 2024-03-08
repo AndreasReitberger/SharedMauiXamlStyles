@@ -25,14 +25,14 @@
                         Text="This is a default Frame"
                         VerticalTextAlignment="Center" 
                         HorizontalTextAlignment="Center"
-                        Style="{StaticResource Style.Core.Label.Default}"
+                        Style="{StaticResource Style.Core.Label.Medium}"
                         />
                     <Label 
                         Margin="2,16"
                         Text="This is just some text to be displayed within the frame."
                         VerticalTextAlignment="Center" 
                         HorizontalTextAlignment="Center"
-                        Style="{StaticResource Style.Core.Label.Small}"
+                        Style="{StaticResource Style.Core.Label.Default}"
                         />
                 </VerticalStackLayout>
             </Frame>
@@ -46,14 +46,14 @@
                         Text="This is a borderless Frame"
                         VerticalTextAlignment="Center" 
                         HorizontalTextAlignment="Center"
-                        Style="{StaticResource Style.Core.Label.Default}"
+                        Style="{StaticResource Style.Core.Label.Medium}"
                         />
                     <Label 
                         Margin="2,16"
                         Text="This is just some text to be displayed within the frame."
                         VerticalTextAlignment="Center" 
                         HorizontalTextAlignment="Center"
-                        Style="{StaticResource Style.Core.Label.Small}"
+                        Style="{StaticResource Style.Core.Label.Default}"
                         />
                 </VerticalStackLayout>
             </Frame>
@@ -63,6 +63,7 @@
                 Style="{StaticResource Style.Core.Label.Default}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
+                Margin="16"
                 />
             
             <Frame
@@ -117,9 +118,6 @@
                             IsToggled="{Binding ConfirmPageClosing}"
                             />
                     </Grid>
-                    <BoxView
-                        Style="{StaticResource Style.Core.BoxView.SeparatorFrame}"
-                        />
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>
