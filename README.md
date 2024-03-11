@@ -483,7 +483,17 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 | -------------------------------------------|:-------------------:| ---------:|
 | Style.Syncfusion.SfTextInputLayout.Default | SfTextInputLayout   | Syncfusion|
 
+# Workarounds
 
+1. There is a bug with the static `FontSizes` provided by MAUI. So the library uses numeric `FontSizes` till this is fixed
+Ref: https://github.com/dotnet/maui/issues/21074
+
+- Default: 11 (for reference)
+- Body: 11
+- Small: 9
+- Micro: 7
+- Medium: 13
+ 
 # Licenses & Thirdparty
 This project uses thirdparty fonts. All licenses can be found in the project folder under Licenses -> LicenseFiles.
 It's mandatory to also add those licenses to your final App. In this case you can use the LicenseManager class to get a List of all

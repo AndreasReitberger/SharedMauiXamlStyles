@@ -77,4 +77,11 @@
         <!--<Setter Property="HeightRequest" Value="150" />-->
         <!--<Setter Property="Padding" Value="0, 10" />-->
     </Style>
+
+    <!-- Round Settings -->
+    <Style x:Key="Style.Core.Grid.SettingsFrame" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
 </ResourceDictionary>

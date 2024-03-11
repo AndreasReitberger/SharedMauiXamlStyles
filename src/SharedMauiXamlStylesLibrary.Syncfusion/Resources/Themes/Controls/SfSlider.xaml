@@ -10,6 +10,7 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
+        <shared:FontSizes />
     </ResourceDictionary.MergedDictionaries>
     
     <!-- Docs: https://help.syncfusion.com/maui/range-slider/getting-started -->

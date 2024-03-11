@@ -60,7 +60,10 @@
                 Style="{StaticResource Style.Core.Button.RoundedLong}"
                 />
             
-            <BoxView />
+            <BoxView
+                Style="{StaticResource Style.Core.BoxView.PrimarySeparator}"
+                Margin="4"
+                />
 
             <Label 
                 Margin="2,16"

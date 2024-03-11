@@ -20,23 +20,27 @@
         <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     </ContentPage.Resources>
     <tabView:SfTabView
-        Style="{StaticResource Style.Syncfusion.SfTabView.Default}"
+        Style="{StaticResource Style.Syncfusion.SfTabView.BlackWhite}"
         >
         <tabView:SfTabItem
             Header="Tab1"
+            Style="{StaticResource Style.Syncfusion.SfTabItem.BlackWhite}"
             >
             <VerticalStackLayout>
                 <Label
                     Text="Text"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     />
             </VerticalStackLayout>
         </tabView:SfTabItem>
         <tabView:SfTabItem
             Header="Tab2"
+            Style="{StaticResource Style.Syncfusion.SfTabItem.BlackWhite}"
             >
             <VerticalStackLayout>
                 <Label
                     Text="Text"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     />
             </VerticalStackLayout>
         </tabView:SfTabItem>

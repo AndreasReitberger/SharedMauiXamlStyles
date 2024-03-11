@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.AccordionsPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:expander="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander"
+    
+    Title="AccordionsPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:AccordionsPageViewModel"   
+    >
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Label 
+                Margin="2,16"
+                Text="This is a default Accordion"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+
+            <expander:SfAccordion
+                Style="{StaticResource Style.Syncfusion.SfAccordion.Default}"
+                Margin="8"
+                >
+                <expander:AccordionItem
+                    Style="{StaticResource Style.Syncfusion.AccordionItem.Default}"
+                    >
+                    <expander:AccordionItem.Header>
+                        <Grid
+                            HeightRequest="48"
+                            >
+                            <Label 
+                                Margin="8,4"
+                                Text="Item #1"
+                                Style="{StaticResource Style.Core.Label.Default}"
+                                VerticalTextAlignment="Center"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Header>
+                    <expander:AccordionItem.Content>
+                        <Grid>
+                            <Label 
+                                Margin="2,16"
+                                Text="This is a sample text"
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource Style.Core.Label.Small}"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Content>
+                </expander:AccordionItem>
+                <expander:AccordionItem
+                    Style="{StaticResource Style.Syncfusion.AccordionItem.Default}"
+                    >
+                    <expander:AccordionItem.Header>
+                        <Grid
+                            HeightRequest="48"
+                            >
+                            <Label 
+                                Margin="8,4"
+                                Text="Item #2"
+                                Style="{StaticResource Style.Core.Label.Default}"
+                                VerticalTextAlignment="Center"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Header>
+                    <expander:AccordionItem.Content>
+                        <Grid>
+                            <Label 
+                                Margin="2,16"
+                                Text="This is a sample text"
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource Style.Core.Label.Small}"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Content>
+                </expander:AccordionItem>
+                <expander:AccordionItem
+                    Style="{StaticResource Style.Syncfusion.AccordionItem.Default}"
+                    >
+                    <expander:AccordionItem.Header>
+                        <Grid
+                            HeightRequest="48"
+                            >
+                            <Label 
+                                Margin="8,4"
+                                Text="Item #3"
+                                Style="{StaticResource Style.Core.Label.Default}"
+                                VerticalTextAlignment="Center"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Header>
+                    <expander:AccordionItem.Content>
+                        <Grid>
+                            <Label 
+                                Margin="2,16"
+                                Text="This is a sample text"
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource Style.Core.Label.Small}"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Content>
+                </expander:AccordionItem>
+            </expander:SfAccordion>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -70,6 +70,7 @@
     <Color x:Key="Gray600">#404040</Color>
     <Color x:Key="Gray700">#303030</Color>
     <Color x:Key="Gray800">#252525</Color>
+    <Color x:Key="Gray850">#2C2C2C</Color>
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
 

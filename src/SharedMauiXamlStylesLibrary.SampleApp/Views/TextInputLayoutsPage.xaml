@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.TextInputLayoutsPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"  
+    
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+    
+    Title="TextInputLayoutsPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:TextInputLayoutsPageViewModel"   
+    >
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="This is a medium label"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Medium}"
+                />
+            <!-- Name -->
+            <core:SfTextInputLayout
+                Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
+                Hint="Name"
+                ErrorText=""
+                >
+                <core:SfTextInputLayout.LeadingView>
+                    <Label
+                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
+                         Text="{x:Static icons:MaterialIcons.Pencil}"
+                         />
+                </core:SfTextInputLayout.LeadingView>
+                <controls:BorderlessEntry 
+                    Style="{StaticResource Style.Core.BorderlessEntry.Default}"
+                    Background="{Binding Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
+                    Text="{Binding Name, Mode=TwoWay}" 
+                    Keyboard="Default"
+                    />
+            </core:SfTextInputLayout>
+
+            <!-- Package Size -->
+            <core:SfTextInputLayout
+                Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
+                Hint="Numeric"
+                ErrorText=""
+                >
+                <core:SfTextInputLayout.LeadingView>
+                    <Label
+                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
+                         Text="{x:Static icons:MaterialIcons.Numeric}"
+                         />
+                </core:SfTextInputLayout.LeadingView>
+                <inputs:SfNumericEntry
+                     Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
+                     Background="{Binding Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
+                     Value="{Binding PackageSize, Mode=TwoWay}" 
+                     Margin="5,0"
+                     />
+            </core:SfTextInputLayout>
+
+            <!-- Price -->
+            <core:SfTextInputLayout
+                Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
+                Hint="Currency"
+                ErrorText=""
+                >
+                <core:SfTextInputLayout.LeadingView>
+                    <Label
+                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
+                         Text="{x:Static icons:MaterialIcons.CurrencyUsd}"
+                         />
+                </core:SfTextInputLayout.LeadingView>
+                <inputs:SfNumericEntry
+                     Style="{StaticResource Style.Syncfusion.SfNumericEntry.Currency}"
+                     Background="{Binding Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
+                     Value="{Binding Price, Mode=TwoWay}" 
+                     Margin="5,0"
+                     />
+            </core:SfTextInputLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

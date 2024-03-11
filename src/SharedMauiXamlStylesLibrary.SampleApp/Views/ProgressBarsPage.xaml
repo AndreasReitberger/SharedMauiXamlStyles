@@ -20,14 +20,14 @@
                 Text="This is a default ProgressBar"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Default}"
+                Style="{StaticResource Style.Core.Label.Headline}"
                 />
             <Label 
                 Margin="2,16"
                 Text="The default ProgressBar uses the PrimaryColor on the Light theme, and White for the Dark theme."
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             <ProgressBar
                 Style="{StaticResource Style.Core.ProgressBar.Default}"
@@ -38,14 +38,14 @@
                 Text="This is a primary ProgressBar"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Default}"
+                Style="{StaticResource Style.Core.Label.Headline}"
                 />
             <Label 
                 Margin="2,16"
                 Text="The primary ProgressBar uses the PrimaryColor on the Light and Dark theme."
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             <ProgressBar
                 Style="{StaticResource Style.Core.ProgressBar.Primary}"
@@ -53,14 +53,14 @@
                 />
             <Label 
                 Margin="2,16"
-                Text="The black / white ProgressBar uses the Black on the Light and White on the Dark theme."
+                Text="This is a black / white ProgressBar"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.VerySmall}"
+                Style="{StaticResource Style.Core.Label.Headline}"
                 />
             <Label 
                 Margin="2,16"
-                Text="This is a black / white ProgressBar"
+                Text="The black / white ProgressBar uses the Black on the Light and White on the Dark theme."
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"

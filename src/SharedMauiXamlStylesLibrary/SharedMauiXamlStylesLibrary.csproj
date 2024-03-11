@@ -68,6 +68,9 @@
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedConverters.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Themes\SharedFontSizes.xaml.cs">
+	    <DependentUpon>SharedFontSizes.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\SharedTemplates.xaml.cs">
 	    <DependentUpon>SharedTemplates.xaml</DependentUpon>
 	  </Compile>
@@ -107,8 +110,6 @@
 	
 	<ItemGroup>
 	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.7" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
 	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="8.0.0" />
 	</ItemGroup>
 </Project>
