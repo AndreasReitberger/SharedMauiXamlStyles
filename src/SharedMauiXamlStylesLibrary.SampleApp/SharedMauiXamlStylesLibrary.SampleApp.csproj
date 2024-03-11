@@ -55,6 +55,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\BordersPage.xaml.cs">
+	    <DependentUpon>BordersPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\ComboBoxesPage.xaml.cs">
 	    <DependentUpon>ComboBoxesPage.xaml</DependentUpon>
 	  </Compile>
@@ -110,6 +113,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BordersPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ComboBoxesPage.xaml">

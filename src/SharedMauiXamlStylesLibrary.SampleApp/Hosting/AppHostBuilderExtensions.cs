@@ -33,10 +33,11 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             // Main view models
             builder.Services.AddSingleton<AppShellViewModel>();
             builder.Services.AddSingleton<AccordionsPageViewModel>();
+            builder.Services.AddSingleton<BordersPageViewModel>();
+            builder.Services.AddSingleton<ButtonsPageViewModel>();
             builder.Services.AddSingleton<LabesPageViewModel>();
             builder.Services.AddSingleton<ComboBoxesPageViewModel>();
             builder.Services.AddSingleton<EntryPageViewModel>();
-            builder.Services.AddSingleton<ButtonsPageViewModel>();
             builder.Services.AddSingleton<BoxViewsPageViewModel>();
             builder.Services.AddSingleton<GridsPageViewModel>();
             builder.Services.AddSingleton<EditorsPageViewModel>();
@@ -56,6 +57,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<AppShell>();
             // Main view models
             builder.Services.AddSingleton<AccordionsPage>();
+            builder.Services.AddSingleton<BordersPage>();
             builder.Services.AddSingleton<ButtonsPage>();
             builder.Services.AddSingleton<BoxViewsPage>();
             builder.Services.AddSingleton<ComboBoxesPage>();
