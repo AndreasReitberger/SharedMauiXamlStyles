@@ -32,9 +32,12 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         {
             // Main view models
             builder.Services.AddSingleton<AppShellViewModel>();
-            builder.Services.AddSingleton<LabesPageViewModel>();
-            builder.Services.AddSingleton<EntryPageViewModel>();
+            builder.Services.AddSingleton<AccordionsPageViewModel>();
+            builder.Services.AddSingleton<BordersPageViewModel>();
             builder.Services.AddSingleton<ButtonsPageViewModel>();
+            builder.Services.AddSingleton<LabesPageViewModel>();
+            builder.Services.AddSingleton<ComboBoxesPageViewModel>();
+            builder.Services.AddSingleton<EntryPageViewModel>();
             builder.Services.AddSingleton<BoxViewsPageViewModel>();
             builder.Services.AddSingleton<GridsPageViewModel>();
             builder.Services.AddSingleton<EditorsPageViewModel>();
@@ -45,6 +48,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SwitchesPageViewModel>();
             builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
             builder.Services.AddSingleton<TabViewPageViewModel>();
+            builder.Services.AddSingleton<TextInputLayoutsPageViewModel>();
             return builder;
         }
         public static MauiAppBuilder RegisterMainViews(this MauiAppBuilder builder)
@@ -52,8 +56,11 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             // Example: https://github.com/microsoft/dotnet-podcasts/blob/main/src/Mobile/Pages/PagesExtensions.cs
             builder.Services.AddSingleton<AppShell>();
             // Main view models
+            builder.Services.AddSingleton<AccordionsPage>();
+            builder.Services.AddSingleton<BordersPage>();
             builder.Services.AddSingleton<ButtonsPage>();
             builder.Services.AddSingleton<BoxViewsPage>();
+            builder.Services.AddSingleton<ComboBoxesPage>();
             builder.Services.AddSingleton<EntryPage>();
             builder.Services.AddSingleton<LabelsPage>();
             builder.Services.AddSingleton<GridsPage>();
@@ -65,6 +72,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SwitchesPage>();
             builder.Services.AddSingleton<SfSegmentedControlPage>();
             builder.Services.AddSingleton<TabViewPage>();
+            builder.Services.AddSingleton<TextInputLayoutsPage>();
             return builder;
         }
 

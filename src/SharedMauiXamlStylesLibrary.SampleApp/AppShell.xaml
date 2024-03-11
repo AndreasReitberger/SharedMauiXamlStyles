@@ -24,6 +24,10 @@
         ContentTemplate="{DataTemplate views:ButtonsPage}"
         Route="ButtonsPage" />
     <ShellContent
+        Title="Border"
+        ContentTemplate="{DataTemplate views:BordersPage}"
+        Route="BordersPage" />
+    <ShellContent
         Title="Editors and Entries"
         ContentTemplate="{DataTemplate views:EditorsPage}"
         Route="EditorsPage" />
@@ -57,19 +61,34 @@
         Route="SwitchesPage" />
     
     <ShellContent
+        Title="Accordions (Syncfusion)"
+        ContentTemplate="{DataTemplate views:AccordionsPage}"
+        Route="AccordionsPage" />
+    
+    <ShellContent
+        Title="ComboBoxes (Syncfusion)"
+        ContentTemplate="{DataTemplate views:ComboBoxesPage}"
+        Route="ComboBoxesPage" />
+    
+    <ShellContent
         Title="Entries (Syncfusion)"
         ContentTemplate="{DataTemplate views:EntryPage}"
         Route="EntryPage" />
 
     <ShellContent
-        Title="SfSegmentedControl"
+        Title="SegmentedControl (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfSegmentedControlPage}"
         Route="SfSegmentedControlPage" />
 
     <ShellContent
-        Title="TabView"
+        Title="TabView (Syncfusion)"
         ContentTemplate="{DataTemplate views:TabViewPage}"
         Route="TabViewPage" />
+
+    <ShellContent
+        Title="TextInputLayout (Syncfusion)"
+        ContentTemplate="{DataTemplate views:TextInputLayoutsPage}"
+        Route="TextInputLayoutsPage" />
 
     <Shell.FlyoutFooter>
         <VerticalStackLayout

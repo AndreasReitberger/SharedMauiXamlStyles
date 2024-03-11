@@ -14,6 +14,7 @@
     -->
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedFontSizes.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -26,7 +27,8 @@
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <Setter Property="FontSize" Value="Small" />
+        <!--<Setter Property="FontSize" Value="Small" />-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="MinimumHeightRequest" Value="50" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -78,7 +80,9 @@
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />-->
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=18, Default=16}" />-->
+        <Setter Property="FontSize" Value="{StaticResource LargeIconSize}" />
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
         <Setter Property="BorderWidth" Value="0" />
@@ -128,11 +132,15 @@
 
     <Style x:Key="Style.Core.Button.Icon.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />-->
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=18, Default=16}" />-->
+        <Setter Property="FontSize" Value="{StaticResource LargeIconSize}" />
     </Style>
 
     <Style x:Key="Style.Core.Button.IconSmall.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=Small, Default=Default}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=Small, Default=Default}" /> -->
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=9, Default=Default}" />-->
+        <Setter Property="FontSize" Value="{StaticResource SmallTextSize}" />
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
     </Style>
@@ -164,7 +172,7 @@
         <Setter Property="Margin" Value="4,6" />
         <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{StaticResource Blue}" />
-        <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
@@ -205,7 +213,8 @@
     <Style x:Key="Style.Core.Button.RoundedLong" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="Margin" Value="20" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
-        <Setter Property="FontSize" Value="Small" />
+        <!--<Setter Property="FontSize" Value="Small" />-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
         <Setter Property="CornerRadius" Value="{OnIdiom Desktop=30, Tablet=30, Default=20}" />
@@ -233,7 +242,7 @@
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="FontSize" Value="{StaticResource LargeTextSize}" />
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=64, Tablet=64, Default=50}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=64, Tablet=64, Default=50}" />
         <Setter Property="CornerRadius" Value="{OnIdiom Desktop=32, Tablet=32, Default=25}" />

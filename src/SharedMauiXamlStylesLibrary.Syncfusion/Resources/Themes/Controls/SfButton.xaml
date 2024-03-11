@@ -15,6 +15,7 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
+        <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -25,7 +26,8 @@
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-        <Setter Property="FontSize" Value="Small" />
+        <!--<Setter Property="FontSize" Value="Small" />-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
@@ -52,7 +54,8 @@
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />
+        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="HeightRequest" Value="{OnIdiom Phone=40, Default=60}" />
@@ -61,14 +64,14 @@
 
     <Style x:Key="Style.Syncfusion.SfButton.Icon.MaterialDesign" TargetType="buttons:SfButton" BasedOn="{StaticResource Style.Syncfusion.SfButton.Icon}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=26, Default=22}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
     </Style>
 
     <Style x:Key="Style.Syncfusion.SfButton.IconRound.MaterialDesign" TargetType="buttons:SfButton">
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <Setter Property="FontSize" Value="{OnIdiom Desktop=32, Tablet=32, Phone=22, Default=22}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="HeightRequest" Value="{OnIdiom Phone=40, Default=60}" />

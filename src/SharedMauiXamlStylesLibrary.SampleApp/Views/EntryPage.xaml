@@ -39,7 +39,6 @@
                 Margin="8,16"
                 Value="{Binding SampleValue}"
                 Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
-                Background="Green"
                 />
             
         </VerticalStackLayout>

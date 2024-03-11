@@ -10,6 +10,7 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
+        <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -21,19 +22,28 @@
 
     <Style TargetType="tabView:SfTabView" BasedOn="{StaticResource Style.Syncfusion.SfTabView.Default}" />
 
+    <Style x:Key="Style.Syncfusion.SfTabView.BlackWhite" TargetType="tabView:SfTabView" BasedOn="{StaticResource Style.Syncfusion.SfTabView.Default}">
+        <Setter Property="IndicatorBackground" Value="{AppThemeBinding Light={StaticResource OffBlack}, Dark={StaticResource OffWhite}}"/>
+        <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="IndicatorPlacement" Value="Top"/>
+    </Style>
+    
     <Style x:Key="Style.Syncfusion.SfTabItem.Default" TargetType="tabView:SfTabItem">
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
-        <Setter Property="FontSize" Value="Micro"/>
+        <!--<Setter Property="FontSize" Value="Micro" />-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
                     <VisualState x:Name="Normal" >
                         <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Selected">
                         <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
                             <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
                         </VisualState.Setters>
                     </VisualState>
@@ -44,9 +54,31 @@
 
     <Style x:Key="Style.Syncfusion.SfTabItem.Icon.MaterialDesign" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
-        <Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>
+        <!--<Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
     </Style>
 
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfTabItem.BlackWhite" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Normal" >
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>

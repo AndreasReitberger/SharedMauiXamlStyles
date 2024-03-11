@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.FontSizes"
+    >
+    <!-- Allows binding as StaticResource in the Main Project -->
+    <OnPlatform x:Key="HeaderTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>46</OnIdiom.Tablet>
+                    <OnIdiom.Default>42</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>46</OnIdiom.Tablet>
+                    <OnIdiom.Default>42</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">46</On>
+            <On Platform="Default">46</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="TitleTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
+                    <OnIdiom.Default>22</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
+                    <OnIdiom.Default>22</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">24</On>
+            <On Platform="Default">24</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="SubtitleTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Default>20</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>22</OnIdiom.Tablet>
+                    <OnIdiom.Default>20</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">20</On>
+            <On Platform="Default">20</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="LargeTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
+                    <OnIdiom.Default>22</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
+                    <OnIdiom.Default>22</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">22</On>
+            <On Platform="Default">22</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="LargeIconSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
+                    <OnIdiom.Default>18</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">20</On>
+            <On Platform="Default">18</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="MediumTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
+                    <OnIdiom.Default>17</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
+                    <OnIdiom.Default>17</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">18</On>
+            <On Platform="Default">17</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="DefaultTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>14</OnIdiom.Tablet>
+                    <OnIdiom.Default>13</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>12</OnIdiom.Tablet>
+                    <OnIdiom.Default>11</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">14</On>
+            <On Platform="Default">11</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="DefaultIconSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>16</OnIdiom.Tablet>
+                    <OnIdiom.Default>15</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>16</OnIdiom.Tablet>
+                    <OnIdiom.Default>15</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">18</On>
+            <On Platform="Default">15</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="SmallTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>10</OnIdiom.Tablet>
+                    <OnIdiom.Default>9</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>10</OnIdiom.Tablet>
+                    <OnIdiom.Default>9</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">12</On>
+            <On Platform="Default">9</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+    <OnPlatform x:Key="MicroTextSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>8</OnIdiom.Tablet>
+                    <OnIdiom.Default>7</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>8</OnIdiom.Tablet>
+                    <OnIdiom.Default>7</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">10</On>
+            <On Platform="Default">7</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
+</ResourceDictionary>

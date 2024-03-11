@@ -74,7 +74,7 @@
 
     <Style x:Key="Style.Core.Border.BrightMinimalPanelCardView" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.MinimalPanelCardView}">
         <Setter Property="Margin" Value="4,8"/>
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+        <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>-->
     </Style>
 
     <Style x:Key="Style.Core.Border.Circle" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Profile}">
