@@ -5,6 +5,7 @@
     x:Class="AndreasReitberger.Shared.DefaultTheme"
     >
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Themes/SharedFontSizes.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedConverters.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />

@@ -6,6 +6,7 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedFontSizes.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -14,7 +15,8 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="TitleColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
-        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}"/>
+        <!--<Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}"/>-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}"/>
         <Setter Property="Margin" Value="8" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

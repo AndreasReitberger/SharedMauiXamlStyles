@@ -47,6 +47,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SwitchesPageViewModel>();
             builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
             builder.Services.AddSingleton<TabViewPageViewModel>();
+            builder.Services.AddSingleton<TextInputLayoutsPageViewModel>();
             return builder;
         }
         public static MauiAppBuilder RegisterMainViews(this MauiAppBuilder builder)
@@ -69,6 +70,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SwitchesPage>();
             builder.Services.AddSingleton<SfSegmentedControlPage>();
             builder.Services.AddSingleton<TabViewPage>();
+            builder.Services.AddSingleton<TextInputLayoutsPage>();
             return builder;
         }
 

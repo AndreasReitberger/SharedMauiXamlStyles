@@ -72,14 +72,19 @@
         Route="EntryPage" />
 
     <ShellContent
-        Title="SfSegmentedControl"
+        Title="SegmentedControl (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfSegmentedControlPage}"
         Route="SfSegmentedControlPage" />
 
     <ShellContent
-        Title="TabView"
+        Title="TabView (Syncfusion)"
         ContentTemplate="{DataTemplate views:TabViewPage}"
         Route="TabViewPage" />
+
+    <ShellContent
+        Title="TextInputLayout (Syncfusion)"
+        ContentTemplate="{DataTemplate views:TextInputLayoutsPage}"
+        Route="TextInputLayoutsPage" />
 
     <Shell.FlyoutFooter>
         <VerticalStackLayout

@@ -11,6 +11,7 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
+        <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" Black="{StaticResource Black}" White="{StaticResource White}" />

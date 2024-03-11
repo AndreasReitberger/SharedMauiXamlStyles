@@ -68,6 +68,9 @@
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedConverters.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Themes\SharedFontSizes.xaml.cs">
+	    <DependentUpon>SharedFontSizes.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\SharedTemplates.xaml.cs">
 	    <DependentUpon>SharedTemplates.xaml</DependentUpon>
 	  </Compile>

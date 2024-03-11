@@ -10,6 +10,7 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
+        <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
@@ -21,7 +22,7 @@
         <Setter Property="HintLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="{OnPlatform iOS=Micro, Default=Small}"
+                    FontSize="{OnPlatform iOS=9, Default=11}"
                     FontFamily="{StaticResource MontserratRegular}"
                     TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
                     />
@@ -30,7 +31,7 @@
         <Setter Property="HelperLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="{OnPlatform iOS=Micro, Default=Small}"
+                    FontSize="{OnPlatform iOS=9, Default=11}"
                     FontFamily="{StaticResource MontserratRegular}"
                     TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
                     />
@@ -39,7 +40,7 @@
         <Setter Property="ErrorLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="{OnPlatform iOS=Micro, Default=Small}"
+                    FontSize="{OnPlatform iOS=9, Default=11}"
                     FontFamily="{StaticResource MontserratRegular}"
                     />
             </Setter.Value>

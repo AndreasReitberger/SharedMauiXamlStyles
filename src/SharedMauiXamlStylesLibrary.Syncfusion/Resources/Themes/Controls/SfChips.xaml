@@ -10,13 +10,14 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
+        <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Docs: https://help.syncfusion.com/maui/chips -->
     <!-- MissingFieldException: Field not found: 'Syncfusion.Maui.Core.SfChip.FontSizeProperty  on Net8? -->
     <Style x:Key="Style.Syncfusion.SfChip.Default" TargetType="inputLayout:SfChip">
-        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
         <Setter Property="StrokeThickness" Value="0"/>
         <Setter Property="Padding" Value="2"/>
@@ -36,7 +37,7 @@
         <Setter Property="SelectionIndicatorColor" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="ChipBackground" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="ChipTextSize" Value="12" />
+        <Setter Property="ChipTextSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="Background" Value="{StaticResource Transparent}" />
         <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
         <Setter Property="ChipLayout">

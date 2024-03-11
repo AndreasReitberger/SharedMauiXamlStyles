@@ -22,7 +22,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label
-                Style="{StaticResource Style.Core.Label.Settings}"
+                Style="{StaticResource Style.Core.Label.Headline}"
                 Text="General"
                 />
             <Label

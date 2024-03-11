@@ -91,6 +91,9 @@
 	  <Compile Update="Views\EntryPage.xaml.cs">
 	    <DependentUpon>EntryPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\TextInputLayoutsPage.xaml.cs">
+	    <DependentUpon>TextInputLayoutsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\TabViewPage.xaml.cs">
 	    <DependentUpon>TabViewPage.xaml</DependentUpon>
 	  </Compile>
@@ -142,6 +145,9 @@
 	  <MauiXaml Update="Views\PickersPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TextInputLayoutsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TabViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -159,6 +165,6 @@
 	<ItemGroup>
 	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.7" />
 	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
-	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
 	</ItemGroup>
 </Project>

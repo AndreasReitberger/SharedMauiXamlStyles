@@ -29,6 +29,7 @@
             <VerticalStackLayout>
                 <Label
                     Text="Text"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     />
             </VerticalStackLayout>
         </tabView:SfTabItem>
@@ -39,6 +40,7 @@
             <VerticalStackLayout>
                 <Label
                     Text="Text"
+                    Style="{StaticResource Style.Core.Label.Default}"
                     />
             </VerticalStackLayout>
         </tabView:SfTabItem>

@@ -8,13 +8,15 @@
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedFontSizes.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.Editor.Default" TargetType="Editor">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
-        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
+        <!--<Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}"/>-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}"/>
         <Setter Property="Margin" Value="8" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -40,7 +42,8 @@
     <Style x:Key="Style.Core.BorderlessEditor.Default" TargetType="control:BorderlessEditor">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
-        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
+        <!--<Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}"/>-->
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}"/>
         <Setter Property="Margin" Value="8" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">

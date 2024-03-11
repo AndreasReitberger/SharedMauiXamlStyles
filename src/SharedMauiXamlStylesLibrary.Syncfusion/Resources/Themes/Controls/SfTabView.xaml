@@ -10,6 +10,7 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
+        <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -30,7 +31,7 @@
     <Style x:Key="Style.Syncfusion.SfTabItem.Default" TargetType="tabView:SfTabItem">
         <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
         <!--<Setter Property="FontSize" Value="Micro" />-->
-        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -52,7 +53,7 @@
     <Style x:Key="Style.Syncfusion.SfTabItem.Icon.MaterialDesign" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
         <!--<Setter Property="FontSize" Value="{OnPlatform Android=Default, Default=Small}"/>-->
-        <Setter Property="FontSize" Value="Default"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
     </Style>
 
     <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}"/>
