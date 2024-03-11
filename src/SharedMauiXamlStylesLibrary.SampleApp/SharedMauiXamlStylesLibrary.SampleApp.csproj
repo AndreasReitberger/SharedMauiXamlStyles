@@ -169,8 +169,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.7" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
 	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
 	</ItemGroup>
 </Project>
