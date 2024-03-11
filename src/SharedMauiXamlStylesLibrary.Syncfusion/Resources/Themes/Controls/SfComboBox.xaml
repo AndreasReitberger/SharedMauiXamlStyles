@@ -16,15 +16,15 @@
 
 
     <Style x:Key="Style.Syncfusion.SfComboBox.Default" TargetType="inputs:SfComboBox">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
         <Setter Property="Margin" Value="4,2"/>
-        <!--<Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />-->
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" /><!---->
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{DynamicResource PrimaryColor}" />
         <!--
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -48,12 +48,14 @@
     <Style TargetType="inputs:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Default}"/>
 
     <Style x:Key="Style.Syncfusion.MultiSelectComboBox.Default" TargetType="controls:MultiSelectComboBox">
-        <Setter Property="FontSize" Value="Default" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
+        <Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />
         <Setter Property="DropDownIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <!--<Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>-->
+        <Setter Property="Stroke" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="Margin" Value="4,2"/>
         <!--
         <Setter Property="VisualStateManager.VisualStateGroups">

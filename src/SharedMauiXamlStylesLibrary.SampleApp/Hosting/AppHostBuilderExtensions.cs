@@ -32,7 +32,9 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         {
             // Main view models
             builder.Services.AddSingleton<AppShellViewModel>();
+            builder.Services.AddSingleton<AccordionsPageViewModel>();
             builder.Services.AddSingleton<LabesPageViewModel>();
+            builder.Services.AddSingleton<ComboBoxesPageViewModel>();
             builder.Services.AddSingleton<EntryPageViewModel>();
             builder.Services.AddSingleton<ButtonsPageViewModel>();
             builder.Services.AddSingleton<BoxViewsPageViewModel>();
@@ -52,8 +54,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             // Example: https://github.com/microsoft/dotnet-podcasts/blob/main/src/Mobile/Pages/PagesExtensions.cs
             builder.Services.AddSingleton<AppShell>();
             // Main view models
+            builder.Services.AddSingleton<AccordionsPage>();
             builder.Services.AddSingleton<ButtonsPage>();
             builder.Services.AddSingleton<BoxViewsPage>();
+            builder.Services.AddSingleton<ComboBoxesPage>();
             builder.Services.AddSingleton<EntryPage>();
             builder.Services.AddSingleton<LabelsPage>();
             builder.Services.AddSingleton<GridsPage>();

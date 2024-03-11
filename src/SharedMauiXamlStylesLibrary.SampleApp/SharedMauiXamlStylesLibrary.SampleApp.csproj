@@ -28,6 +28,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<UserSecretsId>2be31e8c-9662-4012-a2ef-27b9db67db75</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -54,6 +55,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\ComboBoxesPage.xaml.cs">
+	    <DependentUpon>ComboBoxesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\AccordionsPage.xaml.cs">
+	    <DependentUpon>AccordionsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\EditorsPage.xaml.cs">
 	    <DependentUpon>EditorsPage.xaml</DependentUpon>
 	  </Compile>
@@ -102,6 +109,12 @@
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\ComboBoxesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AccordionsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\EditorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -146,5 +159,6 @@
 	<ItemGroup>
 	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.7" />
 	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
 	</ItemGroup>
 </Project>

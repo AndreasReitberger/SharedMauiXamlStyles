@@ -57,6 +57,16 @@
         Route="SwitchesPage" />
     
     <ShellContent
+        Title="Accordions (Syncfusion)"
+        ContentTemplate="{DataTemplate views:AccordionsPage}"
+        Route="AccordionsPage" />
+    
+    <ShellContent
+        Title="ComboBoxes (Syncfusion)"
+        ContentTemplate="{DataTemplate views:ComboBoxesPage}"
+        Route="ComboBoxesPage" />
+    
+    <ShellContent
         Title="Entries (Syncfusion)"
         ContentTemplate="{DataTemplate views:EntryPage}"
         Route="EntryPage" />
