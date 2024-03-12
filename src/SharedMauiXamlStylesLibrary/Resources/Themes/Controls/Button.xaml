@@ -108,8 +108,10 @@
     </Style>
 
     <Style x:Key="Style.Core.Button.IconPrimary" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
+        <!--
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+        -->
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">

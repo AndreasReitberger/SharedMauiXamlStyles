@@ -40,7 +40,7 @@
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <!--<Setter Property="FontSize" Value="Large"/>-->
         <Setter Property="FontSize" Value="{StaticResource LargeTextSize}"/>
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 

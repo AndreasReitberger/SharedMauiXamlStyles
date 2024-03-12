@@ -24,7 +24,7 @@
 
     <Style x:Key="Style.Syncfusion.SfTabView.BlackWhite" TargetType="tabView:SfTabView" BasedOn="{StaticResource Style.Syncfusion.SfTabView.Default}">
         <Setter Property="IndicatorBackground" Value="{AppThemeBinding Light={StaticResource OffBlack}, Dark={StaticResource OffWhite}}"/>
-        <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource OffBlack}}" />
         <Setter Property="IndicatorPlacement" Value="Top"/>
     </Style>
     
@@ -43,7 +43,7 @@
                     </VisualState>
                     <VisualState x:Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource OffBlack}}" />
                             <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
                         </VisualState.Setters>
                     </VisualState>
