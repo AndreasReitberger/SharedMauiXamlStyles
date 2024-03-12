@@ -23,7 +23,7 @@
     <!-- Docs: https://help.syncfusion.com/maui/barcode-generator/getting-started -->
     <Style x:Key="Style.Syncfusion.SfBarcodeGenerator.Default" TargetType="barcode:SfBarcodeGenerator">
         <Setter Property="ShowText" Value="True" />
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
         <Setter Property="ForegroundColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="TextStyle">
             <Setter.Value>

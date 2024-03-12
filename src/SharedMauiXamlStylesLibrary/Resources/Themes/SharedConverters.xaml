@@ -18,4 +18,6 @@
     <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
+    <converters:NullToBooleanVisibilityConverter x:Key="NullToBooleanVisibilityConverter" />
+    <!--<converters:NullOrEmptyToBooleanVisibilityConverter x:Key="NullOrEmptyToBooleanVisibilityConverter" />-->
 </ResourceDictionary>

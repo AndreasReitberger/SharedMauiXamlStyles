@@ -18,11 +18,11 @@
     <Style x:Key="Style.Syncfusion.SfTextInputLayout.Default" TargetType="inputLayout:SfTextInputLayout">
         <Setter Property="ContainerType" Value="Outlined"/>
         <Setter Property="LeadingViewPosition" Value="Inside"/>
-        <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray100},Dark={StaticResource Gray950}}"/>
+        <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray50},Dark={StaticResource Gray950}}"/>
         <Setter Property="HintLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="{OnPlatform iOS=9, Default=11}"
+                    FontSize="{OnPlatform iOS=10, Default=13}"
                     FontFamily="{StaticResource MontserratRegular}"
                     TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
                     />
@@ -31,7 +31,7 @@
         <Setter Property="HelperLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="{OnPlatform iOS=9, Default=11}"
+                    FontSize="{OnPlatform iOS=10, Default=13}"
                     FontFamily="{StaticResource MontserratRegular}"
                     TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
                     />
@@ -40,7 +40,7 @@
         <Setter Property="ErrorLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
-                    FontSize="{OnPlatform iOS=9, Default=11}"
+                    FontSize="{OnPlatform iOS=10, Default=13}"
                     FontFamily="{StaticResource MontserratRegular}"
                     />
             </Setter.Value>
