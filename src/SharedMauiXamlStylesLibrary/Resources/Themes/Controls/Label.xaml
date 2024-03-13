@@ -24,6 +24,34 @@
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}"/>
     </Style>
 
+    <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}" />
+
+    <Style x:Key="Style.Core.Label.Header" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="16,4" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    
     <!--  Common style for icon label  -->
     <Style x:Key="Style.Core.Label.Icon" TargetType="Label">
         <Setter Property="Margin" Value="16,8" />
@@ -89,8 +117,8 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
-                <VisualState x:Name="PointerOver" />
             </VisualStateGroupList>
         </Setter>
     </Style>
@@ -246,8 +274,10 @@
 
     <Style x:Key="Style.Core.Span.Default" TargetType="Span">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
-        <Setter Property="FontSize" Value="{StaticResource MediumTextSize}" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
+        <!--<Setter Property="FontSize" Value="{StaticResource MediumTextSize}" />-->
+        <!--<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>-->
+        <Setter Property="FontSize" Value="{Binding Source={RelativeSource AncestorType={x:Type Label}}, Path=FontSize}" />
+        <Setter Property="TextColor" Value="{Binding Source={RelativeSource AncestorType={x:Type Label}}, Path=TextColor}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
     </Style>
 
