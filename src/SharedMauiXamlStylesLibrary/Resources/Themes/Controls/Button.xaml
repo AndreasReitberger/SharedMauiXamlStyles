@@ -45,6 +45,7 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -52,6 +53,31 @@
     
     <Style TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}"/>
 
+    <Style x:Key="Style.Core.Button.Header" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
+        <Setter Property="MinimumHeightRequest" Value="50" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    
     <Style x:Key="Style.Core.ImageButton.Default" TargetType="ImageButton">
         <Setter Property="BorderColor" Value="Transparent"/>
         <Setter Property="BorderWidth" Value="0"/>
@@ -69,6 +95,7 @@
                             <Setter Property="Opacity" Value="0.5" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -101,6 +128,7 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -126,6 +154,7 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -164,6 +193,7 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -189,6 +219,7 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
