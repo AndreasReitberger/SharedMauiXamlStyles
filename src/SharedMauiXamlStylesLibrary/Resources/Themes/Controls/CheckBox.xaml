@@ -8,19 +8,24 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFontSizes.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedConverters.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.CheckBox.Default" TargetType="CheckBox">
         <Setter Property="VerticalOptions" Value="Center" />
-        <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+                            <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                            <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />-->
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="IsChecked">
+                        <VisualState.Setters>
+                            <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+                            <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />-->
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
@@ -28,10 +33,41 @@
                             <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
     </Style>
 
     <Style TargetType="CheckBox" BasedOn="{StaticResource Style.Core.CheckBox.Default}"/>
+
+    <Style x:Key="Style.Core.CheckBox.Primary" TargetType="CheckBox" BasedOn="{StaticResource Style.Core.CheckBox.Default}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Color" Value="{DynamicResource PrimaryColor}" />
+                            <!--<Setter Property="Background" Value="{Binding Source={RelativeSource Self}, Path=Color, Converter={StaticResource BrushToBlackWhiteConverter}}" />-->
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="IsChecked">
+                        <VisualState.Setters>
+                            <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+                            <!--
+                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
+                            <Setter Property="Color" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                            -->
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
 </ResourceDictionary>

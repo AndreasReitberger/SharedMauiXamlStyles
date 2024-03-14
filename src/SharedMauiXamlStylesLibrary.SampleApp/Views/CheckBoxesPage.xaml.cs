@@ -2,9 +2,9 @@ using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Views;
 
-public partial class LabelsPage : ContentPage
+public partial class CheckBoxesPage : ContentPage
 {
-    public LabelsPage(LablesPageViewModel viewModel)
+    public CheckBoxesPage(CheckBoxesPageViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;

@@ -16,11 +16,8 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFontSizes.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedConverters.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  />
-    <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
-    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
 
     <Style x:Key="Style.Core.Button.Default" TargetType="Button">
         <!-- Set Background before setting the TextColor due to the Converter -->

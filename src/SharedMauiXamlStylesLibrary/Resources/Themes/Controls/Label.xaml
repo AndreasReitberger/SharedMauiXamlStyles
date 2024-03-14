@@ -11,9 +11,8 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFontSizes.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/SharedConverters.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
 
     <Style x:Key="Style.Core.Label.Default" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />

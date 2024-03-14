@@ -2,7 +2,7 @@
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
-    public partial class LabesPageViewModel : BaseViewModel
+    public partial class CheckBoxesPageViewModel : BaseViewModel
     {
 
         #region Properties
@@ -10,11 +10,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         [ObservableProperty]
         string sampleText = "This is just a sample text";
 
+        [ObservableProperty]
+        bool isChecked = false;
         #endregion
 
         #region Constructor, LoadSettings
 
-        public LabesPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
+        public CheckBoxesPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
             UpdateVersionBuild();
