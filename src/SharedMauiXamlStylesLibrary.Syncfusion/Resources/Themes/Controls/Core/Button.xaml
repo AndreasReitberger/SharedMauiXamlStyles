@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:themes="clr-namespace:AndreasReitberger.Shared.Themes.ItemTemplates;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    >
+    <!--
+    Important notes:
+    - Always set the `Background` or `BackgroundColor` property before setting the `TextColor` property!
+    - If using `BackgroundColor`. use the `Color...` converters, otherwise the `Brush...` converters
+    -->
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Styles />
+        <shared:FontSizes />
+        <shared:Fonts />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <converters:ColorToLightForgroundConverter x:Key="ColorToLightForgroundConverter"  />
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+
+    <Style x:Key="Style.Core.Button.Icon" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
+        <Setter Property="Background" Value="{StaticResource Transparent}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontSize" Value="{StaticResource LargeIconSize}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=60, Tablet=60, Default=50}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource Transparent}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Core.Button.IconPrimary" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Core.Button.IconRound" BasedOn="{StaticResource Style.Core.Button.Icon}" TargetType="Button">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=64, Tablet=64, Default=50}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=64, Tablet=64, Default=50}" />
+        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=32, Tablet=32, Default=25}" />
+    </Style>
+
+    <Style x:Key="Style.Core.Button.Swipe" TargetType="Button">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="HeightRequest" Value="32" />
+        <Setter Property="WidthRequest" Value="32" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="CornerRadius" Value="16" />
+    </Style>
+    
+</ResourceDictionary>
