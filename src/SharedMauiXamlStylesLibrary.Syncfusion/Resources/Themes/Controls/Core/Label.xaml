@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:themes="clr-namespace:AndreasReitberger.Shared.Themes.ItemTemplates;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Styles />
+        <shared:FontSizes />
+        <shared:Fonts />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+
+    <Style x:Key="Style.Core.Label.Icon" TargetType="Label">
+        <Setter Property="Margin" Value="16,8" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+    </Style>
+
+    <Style x:Key="Style.Core.Label.IconHeader" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Core.Label.Medium" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}" />
+        <Setter Property="FontSize" Value="{StaticResource MediumTextSize}" />
+        <Setter Property="Margin" Value="16, 12" />
+    </Style>
+
+    <Style x:Key="Style.Core.Label.IconSwipe" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
+    </Style>
+
+    <Style x:Key="Style.Core.Span.Icon" TargetType="Span" BasedOn="{StaticResource Style.Core.Span.Default}">
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+    </Style>
+
+</ResourceDictionary>

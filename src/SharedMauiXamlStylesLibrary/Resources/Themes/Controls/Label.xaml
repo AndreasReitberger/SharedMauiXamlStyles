@@ -15,12 +15,10 @@
 
     <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
 
-    <!-- DEFAULT LABEL STYLE -->
     <Style x:Key="Style.Core.Label.Default" TargetType="Label">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
-        <!--<Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}"/>-->
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}"/>
     </Style>
 
@@ -52,52 +50,16 @@
         </Setter>
     </Style>
     
-    <!--  Common style for icon label  -->
-    <Style x:Key="Style.Core.Label.Icon" TargetType="Label">
+    <Style x:Key="Style.Core.Label.Icon.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="Margin" Value="16,8" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
-        <!--<Setter Property="FontSize" Value="Medium" />-->
-        <!--<Setter Property="FontSize" Value="{OnPlatform WinUI=13, Default='Default'}" />-->
-        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
-        <Setter Property="HorizontalTextAlignment" Value="Center" />
-        <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
-    </Style>
-
-    <Style x:Key="Style.Core.Label.Icon.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-        <!--<Setter Property="FontSize" Value="Large"/>-->
-        <Setter Property="FontSize" Value="{StaticResource LargeTextSize}"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
-    </Style>
-
-    <Style x:Key="Style.Core.Label.IconHeader" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
-        <Setter Property="Margin" Value="0" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
-                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="PointerOver" />
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
     </Style>
 
-    <!--  Common style for icon label  -->
     <Style x:Key="Style.Core.Label.IconHeader.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
         <Setter Property="Margin" Value="0" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
@@ -124,11 +86,10 @@
     </Style>
 
     <Style x:Key="Style.Core.Label.IconSmall.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
-        <!--<Setter Property="FontSize" Value="Small" />-->
         <Setter Property="FontSize" Value="{StaticResource SmallTextSize}" />
     </Style>
 
-    <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
+    <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
         <Setter Property="Margin" Value="4,0,0,0" />
         <Setter Property="Text" Value="{x:Static icons:MaterialIcons.VectorSquare}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
@@ -151,12 +112,10 @@
 
     <Style x:Key="Style.Core.Label.Small" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
-        <!--<Setter Property="FontSize" Value="Small" />-->
         <Setter Property="FontSize" Value="{StaticResource SmallTextSize}" />
     </Style>
 
     <Style x:Key="Style.Core.Label.VerySmall" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Small}">
-        <!--<Setter Property="FontSize" Value="Micro" />-->
         <Setter Property="FontSize" Value="{StaticResource MicroTextSize}" />
     </Style>
 
@@ -195,8 +154,6 @@
 
     <Style x:Key="Style.Core.Label.Settings" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="Margin" Value="16,0,0,0" />
-        <!--<Setter Property="FontSize" Value="Small" />-->
-        <!--<Setter Property="FontSize" Value="{OnPlatform WinUI='Default', Default='Small'}" />-->
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=-1, Android=1.25}"/>
@@ -210,8 +167,6 @@
         <Setter Property="VerticalTextAlignment" Value="Center"/>
     </Style>
 
-    <!-- HEADLINES -->
-    <!-- Default headline label style -->
     <Style x:Key="Style.Core.Label.Headline" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="VerticalTextAlignment" Value="Center"/>
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
@@ -228,27 +183,21 @@
 
     <Style x:Key="Style.Core.Label.TitleView" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.HeadlinePrimary}">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>
-        <!--<Setter Property="FontSize" Value="Medium" />-->
         <Setter Property="FontSize" Value="{StaticResource MediumTextSize}" />
     </Style>
 
-    <!-- PrimaryColor Dark Headline -->
     <Style x:Key="Style.Core.Label.HeadlinePrimaryDark" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Headline}">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkColor}"/>
     </Style>
 
-    <!--  Common style for swipe template content button control  -->
-    <Style x:Key="Style.Core.Label.IconSwipe" TargetType="Label">
-        <!-- Check if needed 
-        <Setter Property="Background" Value="Transparent" />-->
+    <Style x:Key="Style.Core.Label.IconSwipe.MaterialDesign" TargetType="Label">
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
     </Style>
 
-    <!--  Common style for option labels  -->
     <Style
         x:Key="Style.Core.Label.Option"
         BasedOn="{StaticResource Style.Core.Label.Default}"
@@ -258,8 +207,6 @@
 
     <Style x:Key="Style.Core.Label.GroupingHeader" TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=Medium, Default=Large}" />-->
-        <!--<Setter Property="FontSize" Value="{OnIdiom Desktop=18, Default=16}" /> -->
         <Setter Property="FontSize" Value="{StaticResource MediumTextSize}" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
@@ -267,15 +214,8 @@
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.5, iOS=-1}" />
     </Style>
 
-    <!--  Common style for swipe template content button control  -->
-    <Style x:Key="Style.Core.Label.IconSwipe.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.IconSwipe}">
-        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-    </Style>
-
     <Style x:Key="Style.Core.Span.Default" TargetType="Span">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
-        <!--<Setter Property="FontSize" Value="{StaticResource MediumTextSize}" />-->
-        <!--<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"/>-->
         <Setter Property="FontSize" Value="{Binding Source={RelativeSource AncestorType={x:Type Label}}, Path=FontSize}" />
         <Setter Property="TextColor" Value="{Binding Source={RelativeSource AncestorType={x:Type Label}}, Path=TextColor}" />
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
@@ -283,10 +223,6 @@
 
     <Style x:Key="Style.Core.Span.Icon.MaterialDesign" TargetType="Span" BasedOn="{StaticResource Style.Core.Span.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
-    </Style>
-
-    <Style x:Key="Style.Core.Span.Icon" TargetType="Span" BasedOn="{StaticResource Style.Core.Span.Icon.MaterialDesign}">
-        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
 
     <Style x:Key="Style.Core.Span.IconTiny.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">

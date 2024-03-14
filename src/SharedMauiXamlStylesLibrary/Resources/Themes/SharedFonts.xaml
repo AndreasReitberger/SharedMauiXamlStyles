@@ -13,6 +13,5 @@
     <x:String x:Key="MontserratMedium">MontserratMedium</x:String>
     <x:String x:Key="MontserratRegular">MontserratRegular</x:String>
     <x:String x:Key="MontserratSemiBold">MontserratSemiBold</x:String>
-    <x:String x:Key="FontIcons">UIFontIcons</x:String>
 
 </ResourceDictionary>

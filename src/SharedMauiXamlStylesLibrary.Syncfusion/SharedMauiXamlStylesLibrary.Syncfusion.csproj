@@ -115,6 +115,12 @@
 	  <MauiXaml Update="ContentViews\SortFilterHeaderConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Core\Button.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Core\Label.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfBarcodeGenerator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
