@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.ContentViews.SortFilterHeaderConventView"
+    >
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Grid
+                Background="{TemplateBinding Background}"
+                HorizontalOptions="FillAndExpand"
+                ColumnDefinitions="*,Auto"
+                >
+                <HorizontalStackLayout
+                    Margin="4,0"
+                    Grid.Column="1"
+                    CompressedLayout.IsHeadless="True"
+                    >
+                    <Label
+                        Style="{StaticResource Style.Core.Label.Header}"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span 
+                                    Text="{TemplateBinding SortButtonIconText}"
+                                    FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                                    Style="{StaticResource Style.Core.Span.Icon}" 
+                                    />
+                                <Span Text="  " />
+                                <Span Text="{TemplateBinding SortButtonText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Command="{TemplateBinding SortButtonCommand}"
+                                CommandParameter="{Binding .}"
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label
+                        Style="{StaticResource Style.Core.Label.Header}"
+                        VerticalTextAlignment="Center"
+                        IsVisible="{TemplateBinding ShowFilterButton}"
+                        >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span 
+                                    Text="{TemplateBinding FilterButtonIconText}"
+                                    FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                                    Style="{StaticResource Style.Core.Span.Icon}" 
+                                    />
+                                <Span Text="  " />
+                                <Span Text="{TemplateBinding FilterButtonText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Command="{TemplateBinding FilterButtonCommand}"
+                                CommandParameter="{Binding .}"
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <!-- Clear Filter -->
+                    <Button
+                        Margin="2,4"
+                        Text="{TemplateBinding ClearButtonIconText}"
+                        FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                        Command="{TemplateBinding ClearButtonCommand}"
+                        TextColor="{DynamicResource PrimaryColor}"
+                        FontSize="{OnPlatform Android=Small, Default=Default}"
+                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                        WidthRequest="{OnPlatform Android=40, Default=48}"
+                        HeightRequest="{OnPlatform Android=40, Default=48}"
+                        CornerRadius="{OnPlatform Android=20, Default=24}"
+                        >
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon}">
+                                <Setter Property="IsVisible" Value="False"/>
+                                <Style.Triggers>
+                                    <DataTrigger
+                                        TargetType="Button" 
+                                        Binding="{TemplateBinding IsFiltered}"
+                                        Value="True"
+                                        >
+                                        <Setter Property="IsVisible" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </HorizontalStackLayout>
+            </Grid>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>
