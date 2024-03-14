@@ -57,6 +57,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentViews\SortFilterHeaderConventView.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\ItemTemplates\CarouselViewItemTemplates.xaml.cs">
 	    <SubType>Code</SubType>
 	    <DependentUpon>CarouselViewItemTemplates.xaml</DependentUpon>
@@ -103,6 +106,9 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <MauiXaml Update="ContentViews\SortFilterHeaderConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\SharedConverters.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

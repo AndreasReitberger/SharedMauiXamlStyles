@@ -94,6 +94,9 @@
 	  <Compile Update="Views\EntryPage.xaml.cs">
 	    <DependentUpon>EntryPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\SfListViewPage.xaml.cs">
+	    <DependentUpon>SfListViewPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\TextInputLayoutsPage.xaml.cs">
 	    <DependentUpon>TextInputLayoutsPage.xaml</DependentUpon>
 	  </Compile>
@@ -149,6 +152,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PickersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfListViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TextInputLayoutsPage.xaml">

@@ -86,6 +86,11 @@
         Route="TabViewPage" />
 
     <ShellContent
+        Title="ListView (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfListViewPage}"
+        Route="SfListViewPage" />
+
+    <ShellContent
         Title="TextInputLayout (Syncfusion)"
         ContentTemplate="{DataTemplate views:TextInputLayoutsPage}"
         Route="TextInputLayoutsPage" />
