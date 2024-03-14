@@ -70,6 +70,9 @@
 	  <Compile Update="Views\BoxViewsPage.xaml.cs">
 	    <DependentUpon>BoxViewsPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\CheckBoxesPage.xaml.cs">
+	    <DependentUpon>CheckBoxesPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SwitchesPage.xaml.cs">
 	    <DependentUpon>SwitchesPage.xaml</DependentUpon>
 	  </Compile>
@@ -131,6 +134,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\BoxViewsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CheckBoxesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SwitchesPage.xaml">

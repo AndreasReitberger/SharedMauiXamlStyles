@@ -28,6 +28,10 @@
         ContentTemplate="{DataTemplate views:BordersPage}"
         Route="BordersPage" />
     <ShellContent
+        Title="CheckBox"
+        ContentTemplate="{DataTemplate views:CheckBoxesPage}"
+        Route="CheckBoxesPage" />
+    <ShellContent
         Title="Editors and Entries"
         ContentTemplate="{DataTemplate views:EditorsPage}"
         Route="EditorsPage" />
