@@ -43,12 +43,19 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
     </Style>
-
+    
     <Style TargetType="buttons:SfButton" BasedOn="{StaticResource Style.Syncfusion.SfButton.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfButton.ImageButton" TargetType="buttons:SfButton" BasedOn="{StaticResource Style.Syncfusion.SfButton.Default}">
+        <Setter Property="ShowIcon" Value="True" />
+        <Setter Property="ImageSize" Value="{StaticResource DefaultIconSize}" />
+        <Setter Property="ImageAlignment" Value="Left" />
+    </Style>
 
     <Style x:Key="Style.Syncfusion.SfButton.Icon" TargetType="buttons:SfButton" BasedOn="{StaticResource Style.Syncfusion.SfButton.Default}">
         <Setter Property="Background" Value="{StaticResource Transparent}" />

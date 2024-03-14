@@ -23,7 +23,7 @@
         </Setter>
         <Setter Property="IsAnimated" Value="False"/>
         <Setter Property="ColumnSpacing" Value="0"/>
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="control:TapAnimationGrid">
                 <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>

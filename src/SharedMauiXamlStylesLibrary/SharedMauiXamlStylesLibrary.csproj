@@ -55,7 +55,7 @@
 	<ItemGroup>
 	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.2" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
 	  <Compile Update="Resources\Themes\ItemTemplates\CarouselViewItemTemplates.xaml.cs">
 	    <SubType>Code</SubType>

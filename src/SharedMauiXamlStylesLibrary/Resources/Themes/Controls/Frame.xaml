@@ -9,9 +9,10 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.Frame.Default" TargetType="Frame">
+        <Setter Property="Margin" Value="12,16" />
         <Setter Property="HasShadow" Value="False" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
         <Setter Property="CornerRadius" Value="8" />
     </Style>
 

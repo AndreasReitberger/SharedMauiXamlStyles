@@ -9,7 +9,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.StackLayout.Header" TargetType="StackLayout">
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
         <Setter Property="Padding" Value="4,4,4,4" />
     </Style>
     <Style x:Key="Style.Core.StackLayout.Modal" TargetType="StackLayout">
@@ -18,7 +18,7 @@
     </Style>
 
     <Style x:Key="Style.Core.VerticalStackLayout.Header" TargetType="VerticalStackLayout">
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
         <Setter Property="Padding" Value="4,4,4,4" />
     </Style>
     <Style x:Key="Style.Core.VerticalStackLayout.Modal" TargetType="VerticalStackLayout">
@@ -27,7 +27,7 @@
     </Style>
 
     <Style x:Key="Style.Core.HorizontalStackLayout.Header" TargetType="HorizontalStackLayout">
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
         <Setter Property="Padding" Value="4,4,4,4" />
     </Style>
     <Style x:Key="Style.Core.HorizontalStackLayout.Modal" TargetType="HorizontalStackLayout">

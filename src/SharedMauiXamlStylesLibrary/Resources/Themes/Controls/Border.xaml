@@ -13,7 +13,7 @@
     Docs: https://docs.microsoft.com/de-de/dotnet/maui/user-interface/controls/border
     -->
     <Style x:Key="Style.Core.Border.Default" TargetType="Border">
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
         <Setter Property="StrokeShape" Value="Rectangle"/>
         <Setter Property="StrokeThickness" Value="1"/>
     </Style>
@@ -50,8 +50,8 @@
             </Setter.Value>
         </Setter>
         -->
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}"/>
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}"/>
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}"/>
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}"/>
     </Style>
 
     <Style x:Key="Style.Core.Border.PanelCardView" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.CardView}">
@@ -85,7 +85,7 @@
                 <RoundRectangle CornerRadius="{OnIdiom Phone=32, Default=36}" />
             </Setter.Value>
         </Setter>
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
     </Style>
 
     <Style x:Key="Style.Core.Border.MenuSeparator" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Profile}">
