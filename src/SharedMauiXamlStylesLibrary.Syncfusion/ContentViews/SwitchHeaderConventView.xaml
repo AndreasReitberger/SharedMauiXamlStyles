@@ -37,6 +37,7 @@
                 </Label>
                 <Label 
                     Grid.Column="1"
+                    FormattedText="{TemplateBinding TitleLabelFormattedString}"
                     Text="{TemplateBinding TitleLabelText}"
                     Style="{StaticResource Style.Core.Label.Default}"
                     VerticalTextAlignment="Center"
