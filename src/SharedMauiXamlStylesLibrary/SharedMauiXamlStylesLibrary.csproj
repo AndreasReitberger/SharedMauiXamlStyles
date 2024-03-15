@@ -57,6 +57,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentViews\SwitchHeaderConventView.xaml.cs">
+	    <DependentUpon>SwitchHeaderConventView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ContentViews\SortFilterHeaderConventView.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
@@ -106,6 +109,9 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <MauiXaml Update="ContentViews\SwitchHeaderConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\SortFilterHeaderConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

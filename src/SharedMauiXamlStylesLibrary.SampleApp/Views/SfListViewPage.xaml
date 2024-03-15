@@ -11,7 +11,8 @@
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-    
+    xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+        
     xmlns:views="clr-namespace:AndreasReitberger.Shared.ContentViews;assembly=SharedMauiXamlStylesLibrary"
     
     Title="SfListViewPage"
@@ -39,12 +40,62 @@
                     />
             </ViewCell>
         </DataTemplate>
+        <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchYear">
+            <ViewCell>
+                <views:SwitchHeaderConventView
+                     Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+                     BackButtonCommand="{Binding ValueBackCommand}"
+                     BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
+                     BackButtonText=""
+                     NextButtonCommand="{Binding ValueNextCommand}"
+                     NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
+                     NextButtonText=""
+                     TitleLabelText="Year"
+                     />
+            </ViewCell>
+        </DataTemplate>
+        <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchPage">
+            <ViewCell>
+                <views:SwitchHeaderConventView
+                     Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+                     BackButtonCommand="{Binding ValueBackCommand}"
+                     BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
+                     BackButtonText=""
+                     NextButtonCommand="{Binding ValueNextCommand}"
+                     NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
+                     NextButtonText=""
+                     TitleLabelText="Page"
+                     />
+            </ViewCell>
+        </DataTemplate>
     </ContentPage.Resources>
-    <listView:SfListView
-        Style="{StaticResource Style.Syncfusion.SfListView.Default}"
-        HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.Custom}"
-        ItemsSource="{Binding Items}"
-        SelectedItem="{Binding Item}"
+
+    <tabView:SfTabView
+        Style="{StaticResource Style.Syncfusion.SfTabView.Default}"
         >
-    </listView:SfListView>
+        <tabView:SfTabItem
+            Header="Default"
+            Style="{StaticResource Style.Syncfusion.SfTabItem.Default}"
+            >
+            <listView:SfListView
+                Style="{StaticResource Style.Syncfusion.SfListView.Default}"
+                HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.Custom}"
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding Item}"
+                >
+            </listView:SfListView>
+        </tabView:SfTabItem>
+        <tabView:SfTabItem
+            Header="Switch"
+            Style="{StaticResource Style.Syncfusion.SfTabItem.Default}"
+            >
+            <listView:SfListView
+                Style="{StaticResource Style.Syncfusion.SfListView.Default}"
+                HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.SwitchYear}"
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding Item}"
+                >
+            </listView:SfListView>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>
 </ContentPage>

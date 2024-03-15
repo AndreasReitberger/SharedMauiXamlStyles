@@ -72,6 +72,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentViews\SwitchHeaderConventView.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\SharedConverters.xaml.cs">
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedConverters.xaml</DependentUpon>
@@ -113,6 +116,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="ContentViews\SortFilterHeaderConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\SwitchHeaderConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\Core\Button.xaml">
