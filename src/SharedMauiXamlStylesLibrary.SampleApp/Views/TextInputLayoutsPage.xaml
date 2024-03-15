@@ -62,7 +62,7 @@
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
                      Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
-                     Background="{Binding Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
+                     Background="Transparent"
                      Value="{Binding PackageSize, Mode=TwoWay}" 
                      Margin="5,0"
                      />
@@ -82,7 +82,7 @@
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
                      Style="{StaticResource Style.Syncfusion.SfNumericEntry.Currency}"
-                     Background="{Binding Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
+                     Background="Transparent"
                      Value="{Binding Price, Mode=TwoWay}" 
                      Margin="5,0"
                      />

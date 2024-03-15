@@ -124,6 +124,9 @@
 	  <MauiXaml Update="Resources\Themes\Controls\SfBarcodeGenerator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\SfCheckBox.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -28,7 +28,7 @@
         ContentTemplate="{DataTemplate views:BordersPage}"
         Route="BordersPage" />
     <ShellContent
-        Title="CheckBox"
+        Title="CheckBoxes"
         ContentTemplate="{DataTemplate views:CheckBoxesPage}"
         Route="CheckBoxesPage" />
     <ShellContent
@@ -63,12 +63,15 @@
         Title="Switches"
         ContentTemplate="{DataTemplate views:SwitchesPage}"
         Route="SwitchesPage" />
-    
+
     <ShellContent
         Title="Accordions (Syncfusion)"
         ContentTemplate="{DataTemplate views:AccordionsPage}"
         Route="AccordionsPage" />
-    
+    <ShellContent
+        Title="CheckBoxes (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfCheckBoxesPage}"
+        Route="SfCheckBoxesPage" />
     <ShellContent
         Title="ComboBoxes (Syncfusion)"
         ContentTemplate="{DataTemplate views:ComboBoxesPage}"
