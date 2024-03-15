@@ -60,5 +60,10 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+    <Style x:Key="Style.Core.Slider.RGB" TargetType="Slider" BasedOn="{StaticResource Style.Core.Slider.Default}">
+        <Setter Property="Margin" Value="8,4" />
+        <Setter Property="Minimum" Value="0" />
+        <Setter Property="Maximum" Value="255" />
+    </Style>
 
 </ResourceDictionary>

@@ -12,7 +12,7 @@ public partial class SwitchHeaderConventView : ContentView
     public static readonly BindableProperty BackButtonTextProperty = BindableProperty.Create(nameof(BackButtonText), typeof(string), typeof(SwitchHeaderConventView), string.Empty);
     public static readonly BindableProperty NextButtonTextProperty = BindableProperty.Create(nameof(NextButtonText), typeof(string), typeof(SwitchHeaderConventView), string.Empty);
     
-    public static readonly BindableProperty TitleLabelTextProperty = BindableProperty.Create(nameof(TitleLabelText), typeof(string), typeof(SwitchHeaderConventView), string.Empty);
+    public static readonly BindableProperty TitleLabelTextProperty = BindableProperty.Create(nameof(TitleLabelText), typeof(string), typeof(SwitchHeaderConventView), null);
     public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(SwitchHeaderConventView), null);
     
     public static readonly BindableProperty BackButtonIconTextProperty = BindableProperty.Create(nameof(BackButtonIconText), typeof(string), typeof(SwitchHeaderConventView), MaterialIcons.Filter);

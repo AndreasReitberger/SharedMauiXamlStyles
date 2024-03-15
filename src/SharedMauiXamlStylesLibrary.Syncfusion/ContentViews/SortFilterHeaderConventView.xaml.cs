@@ -12,6 +12,7 @@ public partial class SortFilterHeaderConventView : ContentView
     public static readonly BindableProperty ShowFilterButtonProperty = BindableProperty.Create(nameof(ShowFilterButton), typeof(bool), typeof(SortFilterHeaderConventView), true);
 
     public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SortFilterHeaderConventView), "UIFontIcons");
+    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(object), typeof(SortFilterHeaderConventView), null);
 
     public static readonly BindableProperty SortButtonTextProperty = BindableProperty.Create(nameof(SortButtonText), typeof(string), typeof(SortFilterHeaderConventView), string.Empty);
     public static readonly BindableProperty FilterButtonTextProperty = BindableProperty.Create(nameof(FilterButtonText), typeof(string), typeof(SortFilterHeaderConventView), string.Empty);
@@ -59,6 +60,12 @@ public partial class SortFilterHeaderConventView : ContentView
         get => (string)GetValue(ButtonIconFontFamilyProperty);
         set => SetValue(ButtonIconFontFamilyProperty, value);
     }
+    public object CommandParameter
+    {
+        get => (object)GetValue(CommandParameterProperty);
+        set => SetValue(CommandParameterProperty, value);
+    }
+
 
     public bool IsFiltered
     {

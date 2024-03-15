@@ -5,6 +5,9 @@
     x:Class="AndreasReitberger.Shared.Styles"
     >
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary>
+            <x:String x:Key="LineBreak">&#x0d;&#x0a;</x:String>
+        </ResourceDictionary>
         <!-- Must come for Border! -->
         <ResourceDictionary Source="/Resources/Themes/Controls/Shadow.xaml" />
         
