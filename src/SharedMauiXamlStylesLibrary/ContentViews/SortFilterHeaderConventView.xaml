@@ -35,7 +35,7 @@
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Command="{TemplateBinding SortButtonCommand}"
-                                CommandParameter="{Binding .}"
+                                CommandParameter="{TemplateBinding CommandParameter}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>
@@ -60,7 +60,7 @@
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Command="{TemplateBinding FilterButtonCommand}"
-                                CommandParameter="{Binding .}"
+                                CommandParameter="{TemplateBinding CommandParameter}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>
