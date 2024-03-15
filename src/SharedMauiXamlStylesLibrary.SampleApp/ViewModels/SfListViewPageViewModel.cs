@@ -29,6 +29,9 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
             new() { Name = "Test4", Counter = 4 },
             ];
 
+        [ObservableProperty]
+        int index = 0;
+
         #endregion
 
         #region Constructor, LoadSettings
@@ -52,6 +55,16 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         [RelayCommand]
         Task Clear() => Shell.Current.DisplayAlert("Clear", "Clear command placeholder...", "OK");
 
+        [RelayCommand]
+        void ValueNext()
+        {
+            Index++;
+        }
+        [RelayCommand]
+        void ValueBack()
+        {
+            Index--;
+        }
         #endregion
     }
 }

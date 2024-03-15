@@ -25,7 +25,7 @@
                                 <Span 
                                     Text="{TemplateBinding SortButtonIconText}"
                                     FontFamily="{TemplateBinding ButtonIconFontFamily}"
-                                    Style="{StaticResource Style.Core.Span.Icon}" 
+                                    Style="{StaticResource Style.Core.Span.Icon.MaterialDesign}" 
                                     />
                                 <Span Text="  " />
                                 <Span Text="{TemplateBinding SortButtonText}" />
@@ -50,7 +50,7 @@
                                 <Span 
                                     Text="{TemplateBinding FilterButtonIconText}"
                                     FontFamily="{TemplateBinding ButtonIconFontFamily}"
-                                    Style="{StaticResource Style.Core.Span.Icon}" 
+                                    Style="{StaticResource Style.Core.Span.Icon.MaterialDesign}" 
                                     />
                                 <Span Text="  " />
                                 <Span Text="{TemplateBinding FilterButtonText}" />
