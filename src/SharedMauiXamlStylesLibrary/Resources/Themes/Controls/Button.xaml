@@ -341,6 +341,37 @@
         <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
     </Style>
 
+    <Style x:Key="Style.Core.Button.Error" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.RoundedLong}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="PointerOver" >
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"/>
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Light_OnError}, Dark={StaticResource Dark_OnError}}"/>
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <!--
+                    <VisualState x:Name="Focused" />
+                    <VisualState x:Name="Selected" />
+                    -->
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
     <Style x:Key="Style.Core.Button.IconRound.EmergencyStop" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
         <Setter Property="Background" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
