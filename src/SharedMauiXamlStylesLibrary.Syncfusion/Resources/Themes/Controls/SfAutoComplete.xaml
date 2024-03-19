@@ -20,13 +20,11 @@
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
-        <!--
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        -->
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="DropDownStroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="SelectedDropDownItemBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
         <!-- Seems to cause a crash -->
-        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/><!---->
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -34,13 +32,17 @@
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding Source={RelativeSource Self}, Path=TextColor}" />
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                            <Setter Property="DropDownBackground" Value="{Binding Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding Source={RelativeSource Self}, Path=TextColor}" />
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="DropDownBackground" Value="{Binding Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -53,14 +55,10 @@
     <Style x:Key="Style.Syncfusion.MultiSelectAutoComplete.Default" TargetType="controls:MultiSelectAutoComplete">
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="IsClearButtonVisible" Value="True" />
-        <!--
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        -->
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
-        <!-- Seems to cause a crash -->
-        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/><!---->
+        <Setter Property="DropDownStroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="SelectedDropDownItemBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -68,13 +66,17 @@
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding Source={RelativeSource Self}, Path=TextColor}" />
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                            <Setter Property="DropDownBackground" Value="{Binding Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding Source={RelativeSource Self}, Path=TextColor}" />
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="DropDownBackground" Value="{Binding Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
