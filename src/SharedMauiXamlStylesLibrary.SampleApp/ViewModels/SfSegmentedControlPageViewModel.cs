@@ -10,13 +10,17 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         [ObservableProperty]
         ObservableCollection<string> sizes = [
-            "S", "M", "L", "XL", "XXL"
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
             ];
 
         [ObservableProperty]
         int selectedSizeIndex = 0;
         partial void OnSelectedSizeIndexChanged(int value) => SelectedSize = Sizes[value];
-        
+
         [ObservableProperty]
         string selectedSize = string.Empty;
         #endregion

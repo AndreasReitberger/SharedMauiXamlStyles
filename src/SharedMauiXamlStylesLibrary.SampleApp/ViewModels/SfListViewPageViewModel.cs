@@ -27,7 +27,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
             new() { Name = "Test2", Counter = 2 },
             new() { Name = "Test3", Counter = 3 },
             new() { Name = "Test4", Counter = 4 },
-            ];
+        ];
 
         [ObservableProperty]
         int index = 0;
