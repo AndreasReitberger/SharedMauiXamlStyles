@@ -9,13 +9,13 @@ public partial class SortFilterHeaderConventView : ContentView
 
     public static readonly BindableProperty IsFilteredProperty = BindableProperty.Create(nameof(IsFiltered), typeof(bool), typeof(SortFilterHeaderConventView), false);
     public static readonly BindableProperty ShowFilterButtonProperty = BindableProperty.Create(nameof(ShowFilterButton), typeof(bool), typeof(SortFilterHeaderConventView), true);
-    
+
     public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SortFilterHeaderConventView), "MaterialDesignIcons");
     public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(object), typeof(SortFilterHeaderConventView), null);
-    
+
     public static readonly BindableProperty SortButtonTextProperty = BindableProperty.Create(nameof(SortButtonText), typeof(string), typeof(SortFilterHeaderConventView), string.Empty);
     public static readonly BindableProperty FilterButtonTextProperty = BindableProperty.Create(nameof(FilterButtonText), typeof(string), typeof(SortFilterHeaderConventView), string.Empty);
-    
+
     public static readonly BindableProperty SortButtonIconTextProperty = BindableProperty.Create(nameof(SortButtonIconText), typeof(string), typeof(SortFilterHeaderConventView), MaterialIcons.Sort);
     public static readonly BindableProperty FilterButtonIconTextProperty = BindableProperty.Create(nameof(FilterButtonIconText), typeof(string), typeof(SortFilterHeaderConventView), MaterialIcons.Filter);
     public static readonly BindableProperty ClearButtonIconTextProperty = BindableProperty.Create(nameof(ClearButtonIconText), typeof(string), typeof(SortFilterHeaderConventView), MaterialIcons.Close);
@@ -95,7 +95,7 @@ public partial class SortFilterHeaderConventView : ContentView
     #endregion
 
     public SortFilterHeaderConventView()
-	{
-		InitializeComponent();
-	}
+    {
+        InitializeComponent();
+    }
 }
