@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.ContentViews.BiometricAuthConventView"
+    >
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Grid
+                IsVisible="{TemplateBinding IsVisible}"
+                Background="{TemplateBinding Background}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                RowDefinitions="*,Auto,*"
+                >
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    >
+                    <Label
+                        Margin="12,4"
+                        Style="{StaticResource Style.Core.Label.Default}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        FormattedText="{TemplateBinding TitleLabelFormattedString}"
+                        Text="{TemplateBinding TitleLabelText}"
+                        >
+                    </Label>
+                    <Button
+                        Margin="12,16"
+                        Text="{TemplateBinding AuthButtonText}"
+                        Style="{StaticResource Style.Core.Button.Default}"
+                        Command="{TemplateBinding AuthButtonCommand}"
+                        />
+                </VerticalStackLayout>
+            </Grid>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>
