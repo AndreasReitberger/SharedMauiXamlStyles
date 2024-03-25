@@ -16,7 +16,7 @@ public partial class TitleViewAccountConventView : ContentView
     public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null);
     */
     public static readonly BindableProperty AccountLabelTextProperty = BindableProperty.Create(nameof(AccountLabelText), typeof(string), typeof(TitleViewAccountConventView), null);
-    public static readonly BindableProperty AccountLabelFormattedStringProperty = BindableProperty.Create(nameof(AccountLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null);
+    public static readonly BindableProperty AccountLabelFormattedStringProperty = BindableProperty.Create(nameof(AccountLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null, BindingMode.TwoWay);
     
     public static readonly BindableProperty AuthLabelTextProperty = BindableProperty.Create(nameof(AuthLabelText), typeof(string), typeof(TitleViewAccountConventView), null);
     public static readonly BindableProperty AuthLabelFormattedStringProperty = BindableProperty.Create(nameof(AuthLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null);

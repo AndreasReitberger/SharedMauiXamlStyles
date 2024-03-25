@@ -24,7 +24,6 @@
         <Setter Property="Margin" Value="0,8" />
         <Setter Property="HeightRequest" Value="50" />
         <Setter Property="WidthRequest" Value="50" />
-        <Setter Property="CornerRadius" Value="25" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -49,6 +48,10 @@
     </Style>
 
     <Style TargetType="core:SfAvatarView" BasedOn="{StaticResource Style.Syncfusion.SfAvatarView.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfAvatarView.Round" TargetType="core:SfAvatarView" BasedOn="{StaticResource Style.Syncfusion.SfAvatarView.Default}">
+        <Setter Property="CornerRadius" Value="25" />
+    </Style>
 
     <Style x:Key="Style.Syncfusion.SfAvatarView.Initials" TargetType="core:SfAvatarView" BasedOn="{StaticResource Style.Syncfusion.SfAvatarView.Default}">
         <Setter Property="ContentType" Value="Initials" />
