@@ -75,6 +75,9 @@
 	  <Compile Update="ContentViews\SwitchHeaderConventView.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
+	  <Compile Update="ContentViews\AccountConventView.xaml.cs">
+	    <DependentUpon>AccountConventView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ContentViews\TitleViewAccountConventView.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
@@ -122,6 +125,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\SwitchHeaderConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\AccountConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\TitleViewAccountConventView.xaml">
