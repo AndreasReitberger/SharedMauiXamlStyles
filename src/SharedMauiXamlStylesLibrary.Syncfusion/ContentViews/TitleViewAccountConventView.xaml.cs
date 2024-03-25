@@ -11,10 +11,10 @@ public partial class TitleViewAccountConventView : ContentView
 
     public static readonly BindableProperty IsLoggedInProperty = BindableProperty.Create(nameof(IsLoggedIn), typeof(bool), typeof(TitleViewAccountConventView), false);
     public static readonly BindableProperty HideAccountAreaProperty = BindableProperty.Create(nameof(HideAccountArea), typeof(bool), typeof(TitleViewAccountConventView), false);
-
+    /*
     public static readonly BindableProperty TitleLabelTextProperty = BindableProperty.Create(nameof(TitleLabelText), typeof(string), typeof(TitleViewAccountConventView), null);
     public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null);
-    
+    */
     public static readonly BindableProperty AccountLabelTextProperty = BindableProperty.Create(nameof(AccountLabelText), typeof(string), typeof(TitleViewAccountConventView), null);
     public static readonly BindableProperty AccountLabelFormattedStringProperty = BindableProperty.Create(nameof(AccountLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null);
     
@@ -42,6 +42,7 @@ public partial class TitleViewAccountConventView : ContentView
         get => (bool)GetValue(IsLoggedInProperty);
         set => SetValue(IsLoggedInProperty, value);
     }
+    /*
     public string TitleLabelText
     {
         get => (string)GetValue(TitleLabelTextProperty);
@@ -52,6 +53,7 @@ public partial class TitleViewAccountConventView : ContentView
         get => (FormattedString)GetValue(TitleLabelFormattedStringProperty);
         set => SetValue(TitleLabelFormattedStringProperty, value);
     }
+    */
     public string AccountLabelText
     {
         get => (string)GetValue(AccountLabelTextProperty);
