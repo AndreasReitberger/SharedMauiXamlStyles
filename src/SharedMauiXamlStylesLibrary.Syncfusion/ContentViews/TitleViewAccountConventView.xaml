@@ -19,13 +19,16 @@
                 IsEnabled="{TemplateBinding IsEnabled}"
                 Background="{TemplateBinding Background}"
                 HeightRequest="{TemplateBinding HeightRequest}"
-                ColumnDefinitions="*,180"
+                ColumnDefinitions="*,Auto"
                 >
+                <ContentPresenter />
+                <!--
                 <Label
                     Style="{StaticResource Style.Core.Label.Shell}"
                     FormattedText="{TemplateBinding TitleLabelFormattedString}"
                     Text="{TemplateBinding TitleLabelText}"
                     />
+                -->
                 <Grid
                     Grid.Column="1"
                     IsVisible="{TemplateBinding HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
