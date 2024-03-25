@@ -19,7 +19,7 @@
                 IsEnabled="{TemplateBinding IsEnabled}"
                 Background="{TemplateBinding Background}"
                 HeightRequest="{TemplateBinding HeightRequest}"
-                ColumnDefinitions="Auto,*"
+                ColumnDefinitions="Auto,*,Auto"
                 >
                 <core:SfAvatarView
                     AvatarName="{TemplateBinding UsernameText}"
@@ -29,6 +29,20 @@
                 <ContentPresenter
                     Grid.Column="1"
                     />
+                <HorizontalStackLayout
+                    Grid.Column="2"
+                    IsVisible="{TemplateBinding IsSyncing}"
+                    >
+                    <ActivityIndicator
+                        IsRunning="{TemplateBinding IsSyncing}"
+                        />
+                    <Label
+                        Text="{TemplateBinding IsSyncingText}"
+                        Style="{StaticResource Style.Core.Label.Default}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        />
+                </HorizontalStackLayout>
             </Grid>
         </ControlTemplate>
     </ContentView.ControlTemplate>
