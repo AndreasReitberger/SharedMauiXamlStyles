@@ -11,6 +11,7 @@
         
         <ResourceDictionary Source="/Resources/Themes/Controls/SfAccordion.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfAutoComplete.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfAvatarView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfBadgeView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfBarcodeGenerator.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfBusyIndicator.xaml" />

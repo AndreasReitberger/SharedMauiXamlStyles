@@ -15,7 +15,6 @@
         <shared:SharedConverters />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" Black="{StaticResource Black}" White="{StaticResource White}" />
 
     <!-- Docs: https://help.syncfusion.com/maui/accordion/ -->
     <Style x:Key="Style.Syncfusion.SfAccordion.Default" TargetType="expander:SfAccordion">

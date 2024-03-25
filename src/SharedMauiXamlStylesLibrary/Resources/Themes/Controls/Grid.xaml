@@ -74,7 +74,7 @@
 
     <!--  Common style for Shell.TitleView -->
     <Style x:Key="Style.Core.Grid.ShellTitleView" TargetType="Grid">
-        <!--<Setter Property="HeightRequest" Value="150" />-->
+        <Setter Property="HeightRequest" Value="50" />
         <!--<Setter Property="Padding" Value="0, 10" />-->
     </Style>
 
