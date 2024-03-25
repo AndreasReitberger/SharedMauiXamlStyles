@@ -13,6 +13,7 @@
         <shared:Colors />
         <shared:Fonts />
         <shared:FontSizes />
+        <shared:SharedConverters />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 

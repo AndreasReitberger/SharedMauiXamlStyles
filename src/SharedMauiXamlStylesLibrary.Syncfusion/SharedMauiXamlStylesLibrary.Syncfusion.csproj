@@ -75,6 +75,9 @@
 	  <Compile Update="ContentViews\SwitchHeaderConventView.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
+	  <Compile Update="ContentViews\TitleViewAccountConventView.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\SharedConverters.xaml.cs">
 	    <SubType>Code</SubType>
 	    <DependentUpon>SharedConverters.xaml</DependentUpon>
@@ -121,6 +124,9 @@
 	  <MauiXaml Update="ContentViews\SwitchHeaderConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\TitleViewAccountConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\Core\Button.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -128,6 +134,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfBarcodeGenerator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\SfAvatarView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfCheckBox.xaml">
