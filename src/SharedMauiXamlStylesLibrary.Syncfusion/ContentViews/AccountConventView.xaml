@@ -27,6 +27,7 @@
                     Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
                     />
                 <ContentPresenter
+                    IsVisible="{TemplateBinding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                     Grid.Column="1"
                     />
                 <HorizontalStackLayout
@@ -34,11 +35,14 @@
                     IsVisible="{TemplateBinding IsSyncing}"
                     >
                     <ActivityIndicator
+                        Margin="2"
                         IsRunning="{TemplateBinding IsSyncing}"
+                        Style="{StaticResource Style.Core.ActivityIndicator.Default}"
                         />
                     <Label
+                        Margin="4,2"
                         Text="{TemplateBinding IsSyncingText}"
-                        Style="{StaticResource Style.Core.Label.Default}"
+                        Style="{StaticResource Style.Core.Label.Small}"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
                         />

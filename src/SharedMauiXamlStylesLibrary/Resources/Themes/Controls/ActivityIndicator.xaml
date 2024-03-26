@@ -15,4 +15,8 @@
 
     <Style TargetType="ActivityIndicator" BasedOn="{StaticResource Style.Core.ActivityIndicator.Default}"/>
 
+    <Style x:Key="Style.Core.ActivityIndicator.Primary" TargetType="ActivityIndicator" BasedOn="{StaticResource Style.Core.ActivityIndicator.Default}">
+        <Setter Property="Color" Value="{DynamicResource PrimaryColor}" />
+    </Style>
+
 </ResourceDictionary>
