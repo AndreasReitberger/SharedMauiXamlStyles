@@ -32,6 +32,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="..\..\licenses\syncfusion_essential_studio_eula.pdf" Link="Licenses\LicenseFiles\syncfusion_essential_studio_eula.pdf" />
 		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
 		<None Include="readme.txt" Pack="true" PackagePath="." />
 	</ItemGroup>
@@ -55,20 +56,20 @@
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
-	  <PackageReference Include="Syncfusion.Maui.Barcode" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Buttons" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Charts" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Expander" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Picker" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="25.1.35" />
-	  <PackageReference Include="Syncfusion.Maui.TreeView" Version="25.1.35" />
+	  <PackageReference Include="Syncfusion.Maui.Barcode" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Buttons" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Charts" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.DataGrid" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Expander" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Inputs" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Picker" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.Sliders" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="25.1.37" />
+	  <PackageReference Include="Syncfusion.Maui.TreeView" Version="25.1.37" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -252,6 +253,10 @@
 	  <MauiXaml Update="Resources\Themes\DefaultTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Licenses\LicenseFiles\" />
 	</ItemGroup>
 	
 
