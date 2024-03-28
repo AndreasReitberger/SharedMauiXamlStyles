@@ -41,6 +41,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Include="..\..\licenses\FontAwesome.txt" Link="Licenses\LicenseFiles\FontAwesome.txt" />
+	  <None Include="..\..\licenses\MaterialDesignIcons.txt" Link="Licenses\LicenseFiles\MaterialDesignIcons.txt" />
+	  <None Include="..\..\licenses\Microsoft.Maui.Controls.Compatibility.txt" Link="Licenses\LicenseFiles\Microsoft.Maui.Controls.Compatibility.txt" />
+	  <None Include="..\..\licenses\Microsoft.Maui.Controls.txt" Link="Licenses\LicenseFiles\Microsoft.Maui.Controls.txt" />
+	  <None Include="..\..\licenses\Microsoft.SourceLink.GitHub.txt" Link="Licenses\LicenseFiles\Microsoft.SourceLink.GitHub.txt" />
+	  <None Include="..\..\licenses\Montserrat.txt" Link="Licenses\LicenseFiles\Montserrat.txt" />
+	  <None Include="..\..\licenses\SharedMauiCoreLibrary.txt" Link="Licenses\LicenseFiles\SharedMauiCoreLibrary.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <EmbeddedResource Include="Resources\Fonts\FluentFontIcons.ttf" />
 	  <EmbeddedResource Include="Resources\Fonts\FontAwesome5Brands.otf" />
 	  <EmbeddedResource Include="Resources\Fonts\FontAwesome5Regular.otf" />
@@ -53,7 +63,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.4" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.6" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -129,5 +139,9 @@
 	<ItemGroup>
 	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="8.0.0" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="Licenses\LicenseFiles\" />
 	</ItemGroup>
 </Project>
