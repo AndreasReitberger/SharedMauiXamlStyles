@@ -67,6 +67,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentViews\ProFeatureLockedContentView.xaml.cs">
+	    <DependentUpon>ProFeatureLockedContentView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\ProFeatureLockedUpgradeContentView.xaml.cs">
+	    <DependentUpon>ProFeatureLockedUpgradeContentView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ContentViews\BiometricAuthConventView.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
@@ -122,6 +128,12 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <MauiXaml Update="ContentViews\ProFeatureLockedContentView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\ProFeatureLockedUpgradeContentView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\BiometricAuthConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
