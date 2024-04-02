@@ -25,7 +25,7 @@
     <Color x:Key="Transparent">Transparent</Color>
     <Color x:Key="TappedBackgroundColor">#eaeaea</Color>
 
-    <!-- Colours -->
+    <!-- Colors -->
     <Color x:Key="MidnightBlue">#190649</Color>
     <Color x:Key="Green">#33AD79</Color>
     <Color x:Key="LightGreen">#38ef7d</Color>
@@ -50,6 +50,17 @@
     <Color x:Key="TempMiddle">#B72316</Color>
     <Color x:Key="TempHigh">#93291e</Color>
 
+    <!-- From Maui template Colors.xml -->
+    <Color x:Key="Yellow100Accent">#F7B548</Color>
+    <Color x:Key="Yellow200Accent">#FFD590</Color>
+    <Color x:Key="Yellow300Accent">#FFE5B9</Color>
+    <Color x:Key="Cyan100Accent">#28C2D1</Color>
+    <Color x:Key="Cyan200Accent">#7BDDEF</Color>
+    <Color x:Key="Cyan300Accent">#C3F2F4</Color>
+    <Color x:Key="Blue100Accent">#3E8EED</Color>
+    <Color x:Key="Blue200Accent">#72ACF1</Color>
+    <Color x:Key="Blue300Accent">#A7CBF6</Color>
+    
     <!-- https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
     <Color x:Key="Gray950">#141414</Color>
     <Color x:Key="Gray900">#212121</Color>
@@ -104,55 +115,6 @@
     <Color x:Key="Dark_OnBackground">#ffffff</Color>
     <Color x:Key="Dark_OnSurface">#ffffff</Color>
 
-    <!-- Light 
-    <Color x:Key="Light_ItemTemplateOuterBackground">#F0F0F0</Color>
-    <Color x:Key="Light_ItemTemplateInnerBackground">White</Color>
-    <Color x:Key="Light_ItemTemplateSelectedBackground">#E4E4E4</Color>
-    <Color x:Key="Light_ItemTemplateBorder">Transparent</Color>
-    <Color x:Key="Light_ItemTemplatePrimaryText">Black</Color>
-    <Color x:Key="Light_ItemTemplateSecondaryText">Gray</Color>
-    <Color x:Key="Light_ItemTemplatePrimary">#f37921</Color>
-    <Color x:Key="Light_ItemTemplateSecondary">White</Color>
-    <Color x:Key="Light_ItemTemplateSeparator">LightGray</Color>
-    -->
-    <!-- Dark 
-    <Color x:Key="Dark_ItemTemplateOuterBackground">#1C2939</Color>
-    <Color x:Key="Dark_ItemTemplateInnerBackground">White</Color>
-    <Color x:Key="Dark_ItemTemplateSelectedBackground">#3C8CF1</Color>
-    <Color x:Key="Dark_ItemTemplateBorder">Transparent</Color>
-    <Color x:Key="Dark_ItemTemplatePrimaryText">Black</Color>
-    <Color x:Key="Dark_ItemTemplateSecondaryText">Gray</Color>
-    <Color x:Key="Dark_ItemTemplatePrimary">#f37921</Color>
-    <Color x:Key="Dark_ItemTemplateSecondary">White</Color>
-    <Color x:Key="Dark_ItemTemplateSeparator">LightGray</Color>
-    -->
-    
-    <!-- Light 
-    <Color x:Key="Light_GroupingTemplateBackground">#E4E4E4</Color>
-    <Color x:Key="Light_GroupingTemplatePrimary">#1c1c1c</Color>
-    -->
-    <!-- Dark 
-    <Color x:Key="Dark_GroupingTemplateBackground">#E4E4E4</Color>
-    <Color x:Key="Dark_GroupingTemplatePrimary">#1c1c1c</Color>
-    -->
-    <!-- Light
-    <Color x:Key="Light_MenuItemBarBackground">#1c1c1c</Color>
-    <Color x:Key="Light_TaptemGridBackground">#ffffff</Color>
-    <Color x:Key="Light_PanelBackground">#e8e8e8</Color>
-    -->
-    <!-- Dark
-    <Color x:Key="Dark_MenuItemBarBackground">#1A202C</Color>
-    <Color x:Key="Dark_TaptemGridBackground">#1A202C</Color>
-    <Color x:Key="Dark_PanelBackground">#1A202C</Color>
-     -->
-    <!--
-    <Color x:Key="Light">#DFD8F7</Color>
-    <Color x:Key="Dark">#B02F35</Color>
-    
-    <SolidColorBrush x:Key="LightBrush" Color="{StaticResource Light}"/>
-    <SolidColorBrush x:Key="DarkBrush" Color="{StaticResource Dark}"/>
-    -->
-    
     <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource PrimaryColor}"/>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
     <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.ContentViews.ProFeatureLockedContentView"
+    >
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Frame   
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                Padding="4"
+                >
+                <Grid
+                    CompressedLayout.IsHeadless="True"
+                    >
+                    <Grid
+                        Background="{TemplateBinding Background}"
+                        Opacity="{TemplateBinding Opacity}"
+                        />
+                    <Label
+                        Text="{TemplateBinding ContentText}"
+                        Style="{StaticResource Style.Core.Label.Default}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>
