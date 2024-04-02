@@ -99,4 +99,15 @@
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray600}}" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray600}}" />
     </Style>
+    
+    <Style x:Key="Style.Core.Border.Expander" TargetType="Border" BasedOn="{StaticResource Style.Core.Border.Default}">
+        <Setter Property="Margin" Value="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="StrokeShape">
+            <Setter.Value>
+                <RoundRectangle CornerRadius="8" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="StrokeThickness" Value="{OnPlatform MacCatalyst=2,Default=1}"/>
+    </Style>
 </ResourceDictionary>
