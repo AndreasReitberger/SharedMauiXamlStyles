@@ -166,6 +166,11 @@
         <Setter Property="VerticalTextAlignment" Value="Center"/>
     </Style>
 
+    <Style x:Key="Style.Core.Label.Expander" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Settings}">
+        <Setter Property="FontSize" Value="{StaticResource SmallTextSize}" />
+        <Setter Property="LineHeight" Value="0.25"/>
+    </Style>
+
     <Style x:Key="Style.Core.Label.Headline" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="VerticalTextAlignment" Value="Center"/>
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
