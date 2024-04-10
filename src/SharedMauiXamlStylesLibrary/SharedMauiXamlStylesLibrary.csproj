@@ -51,18 +51,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Fonts\FluentFontIcons.ttf" />
-	  <EmbeddedResource Include="Resources\Fonts\FontAwesome5Brands.otf" />
-	  <EmbeddedResource Include="Resources\Fonts\FontAwesome5Regular.otf" />
-	  <EmbeddedResource Include="Resources\Fonts\FontAwesome5Solid.otf" />
-	  <EmbeddedResource Include="Resources\Fonts\materialdesignicons-webfont.ttf" />
-	  <EmbeddedResource Include="Resources\Fonts\Montserrat-Bold.ttf" />
-	  <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
-	  <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.ttf" />
-	  <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.6" />
 	</ItemGroup>
 

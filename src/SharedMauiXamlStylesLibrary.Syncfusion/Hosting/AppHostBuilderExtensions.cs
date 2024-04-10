@@ -25,8 +25,8 @@ namespace AndreasReitberger.Shared.Syncfusion.Hosting
                         FontDescriptor fontDescriptor = fonts.FirstOrDefault(f => f.Filename == font.Key);
                         if (fontDescriptor == null)
                         {
-                            fonts.AddEmbeddedResourceFont(typeof(AppHostBuilderExtensions).Assembly, font.Key, font.Value);
-                            //fonts.AddFont(font.Key, font.Value);
+                            //fonts.AddEmbeddedResourceFont(typeof(AppHostBuilderExtensions).Assembly, font.Key, font.Value);
+                            fonts.AddFont(font.Key, font.Value);
                         }
                     }
                 });
