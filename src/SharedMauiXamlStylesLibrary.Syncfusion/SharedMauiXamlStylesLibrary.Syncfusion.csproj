@@ -250,6 +250,11 @@
 	<ItemGroup>
 	  <Folder Include="Licenses\LicenseFiles\" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.20" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.20" />
+	</ItemGroup>
 	
 
 </Project>
