@@ -1,0 +1,13 @@
+<Project>
+    <!-- https://github.com/dotnet/maui/issues/10019#issuecomment-1248032520 -->
+  <ItemGroup>
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\FluentFontIcons.ttf" />
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\FontAwesome5Brands.otf" />
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\FontAwesome5Solid.otf" />
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\materialdesignicons-webfont.ttf" />
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\Montserrat-Bold.ttf" />
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\Montserrat-Medium.ttf" />
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\Montserrat-Regular.ttf" />
+    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\Montserrat-SemiBold.ttf" />
+  </ItemGroup>
+</Project>
