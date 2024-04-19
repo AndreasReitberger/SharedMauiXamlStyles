@@ -37,9 +37,13 @@
 
 	<ItemGroup>
 		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
+		<MauiFont Include="Resources\Fonts\*" Pack="True" PackagePath="buildTransitive\Fonts\" />
 	</ItemGroup>
-
+	<!-- Workaround: https://github.com/dotnet/maui/issues/10019#issuecomment-1248032520 -->
+	<ItemGroup>
+		<None Include="..\..\SharedMauiXamlStylesLibrary.targets" Pack="True" PackagePath="buildTransitive\" />
+	</ItemGroup>
+	
 	<ItemGroup>
 	  <None Include="..\..\licenses\FontAwesome.txt" Link="Licenses\LicenseFiles\FontAwesome.txt" />
 	  <None Include="..\..\licenses\MaterialDesignIcons.txt" Link="Licenses\LicenseFiles\MaterialDesignIcons.txt" />

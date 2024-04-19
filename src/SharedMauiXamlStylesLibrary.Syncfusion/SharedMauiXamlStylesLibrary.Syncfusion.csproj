@@ -39,11 +39,16 @@
 
 	<ItemGroup>
 		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
+		<MauiFont Include="Resources\Fonts\*" Pack="True" PackagePath="buildTransitive\Fonts\"/>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\UIFontIcons.ttf" />
+	</ItemGroup>
+
+	<!-- Workaround: https://github.com/dotnet/maui/issues/10019#issuecomment-1248032520 -->
+	<ItemGroup>
+		<None Include="..\..\SharedMauiXamlStylesLibrary.Syncfusion.targets" Pack="True" PackagePath="buildTransitive\" />
 	</ItemGroup>
 	
 	<ItemGroup>
