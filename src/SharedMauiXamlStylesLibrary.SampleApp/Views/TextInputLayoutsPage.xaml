@@ -42,7 +42,6 @@
                 </core:SfTextInputLayout.LeadingView>
                 <controls:BorderlessEntry 
                     Style="{StaticResource Style.Core.BorderlessEntry.Default}"
-                    Background="{Binding Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
                     Text="{Binding Name, Mode=TwoWay}" 
                     Keyboard="Default"
                     />
@@ -62,7 +61,6 @@
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
                      Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
-                     Background="Transparent"
                      Value="{Binding PackageSize, Mode=TwoWay}" 
                      Margin="5,0"
                      />
@@ -82,7 +80,6 @@
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
                      Style="{StaticResource Style.Syncfusion.SfNumericEntry.Currency}"
-                     Background="Transparent"
                      Value="{Binding Price, Mode=TwoWay}" 
                      Margin="5,0"
                      />

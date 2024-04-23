@@ -13,12 +13,46 @@
         <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
+
+    <Style x:Key="Style.Syncfusion.LabelStyle.Default" TargetType="inputLayout:LabelStyle">
+        <Setter Property="FontSize" Value="{OnPlatform iOS=10, Default=13}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}" />
+        <!--<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}" />-->
+    </Style>
+    <Style x:Key="Style.Syncfusion.LabelStyle.Light" TargetType="inputLayout:LabelStyle" BasedOn="{StaticResource Style.Syncfusion.LabelStyle.Default}">
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+    </Style>
+    <Style x:Key="Style.Syncfusion.LabelStyle.Dark" TargetType="inputLayout:LabelStyle" BasedOn="{StaticResource Style.Syncfusion.LabelStyle.Default}">
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+    </Style>
+    <Style x:Key="Style.Syncfusion.LabelStyle.Error" TargetType="inputLayout:LabelStyle" BasedOn="{StaticResource Style.Syncfusion.LabelStyle.Default}">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Light_Error}, Dark={StaticResource Dark_Error}}" />
+    </Style>
+    <Style x:Key="Style.Syncfusion.LabelStyle.Error.Light" TargetType="inputLayout:LabelStyle" BasedOn="{StaticResource Style.Syncfusion.LabelStyle.Error}">
+        <Setter Property="TextColor" Value="{StaticResource Light_Error}" />
+    </Style>
+    <Style x:Key="Style.Syncfusion.LabelStyle.Error.Dark" TargetType="inputLayout:LabelStyle" BasedOn="{StaticResource Style.Syncfusion.LabelStyle.Error}">
+        <Setter Property="TextColor" Value="{StaticResource Dark_Error}" />
+    </Style>
+
     <!-- Docs: https://help.syncfusion.com/maui/textinputlayout/states-and-colors -->
     <Style x:Key="Style.Syncfusion.SfTextInputLayout.Default" TargetType="inputLayout:SfTextInputLayout">
         <Setter Property="ContainerType" Value="Outlined"/>
         <Setter Property="LeadingViewPosition" Value="Inside"/>
         <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray50},Dark={StaticResource Gray950}}"/>
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray800},Dark={StaticResource Gray200}}"/>
+        <!-- Also doesn't work
+        <Setter Property="HintLabelStyle" Value="{AppThemeBinding Light={StaticResource Style.Syncfusion.LabelStyle.Light}, Dark={StaticResource Style.Syncfusion.LabelStyle.Dark}}" />
+        <Setter Property="HelperLabelStyle" Value="{AppThemeBinding Light={StaticResource Style.Syncfusion.LabelStyle.Light}, Dark={StaticResource Style.Syncfusion.LabelStyle.Dark}}" />
+        <Setter Property="ErrorLabelStyle" Value="{AppThemeBinding Light={StaticResource Style.Syncfusion.LabelStyle.Error.Light}, Dark={StaticResource Style.Syncfusion.LabelStyle.Error.Dark}}" />
+        -->
+        <!-- Doesn't work, too -->
+        <Setter Property="HintLabelStyle" Value="{StaticResource Style.Syncfusion.LabelStyle.Default}" />
+        <Setter Property="HelperLabelStyle" Value="{StaticResource Style.Syncfusion.LabelStyle.Default}" />
+        <Setter Property="ErrorLabelStyle" Value="{StaticResource Style.Syncfusion.LabelStyle.Error}" />
+        
+        <!-- Doesn't update the TextColor on theme changes
         <Setter Property="HintLabelStyle">
             <Setter.Value>
                 <inputLayout:LabelStyle
@@ -45,12 +79,14 @@
                     />
             </Setter.Value>
         </Setter>
+        -->
+        <!-- -->
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200},Dark={StaticResource Gray800}}"/>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"/>
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Focused">
@@ -60,12 +96,13 @@
                     </VisualState>
                     <VisualState Name="Error">
                         <VisualState.Setters>
-                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Light_Error},Dark={StaticResource Dark_Error}}"/>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Light_Error}, Dark={StaticResource Dark_Error}}"/>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
+        
     </Style>
 
     <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"/>
