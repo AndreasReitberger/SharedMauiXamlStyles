@@ -17,16 +17,16 @@ public partial class TitleViewAccountConventView : ContentView
     */
     public static readonly BindableProperty AccountLabelTextProperty = BindableProperty.Create(nameof(AccountLabelText), typeof(string), typeof(TitleViewAccountConventView), null);
     public static readonly BindableProperty AccountLabelFormattedStringProperty = BindableProperty.Create(nameof(AccountLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null, BindingMode.TwoWay);
-    
+
     public static readonly BindableProperty AuthLabelTextProperty = BindableProperty.Create(nameof(AuthLabelText), typeof(string), typeof(TitleViewAccountConventView), null);
     public static readonly BindableProperty AuthLabelFormattedStringProperty = BindableProperty.Create(nameof(AuthLabelFormattedString), typeof(FormattedString), typeof(TitleViewAccountConventView), null);
 
     public static readonly BindableProperty UsernameTextProperty = BindableProperty.Create(nameof(UsernameText), typeof(string), typeof(TitleViewAccountConventView), string.Empty);
     public static readonly BindableProperty UserImageProperty = BindableProperty.Create(nameof(UserImage), typeof(ImageSource), typeof(TitleViewAccountConventView), null);
-    
+
     public static readonly BindableProperty AccountButtonCommandProperty = BindableProperty.Create(nameof(AccountButtonCommand), typeof(ICommand), typeof(TitleViewAccountConventView), null);
     public static readonly BindableProperty AuthButtonCommandProperty = BindableProperty.Create(nameof(AccountButtonCommand), typeof(ICommand), typeof(TitleViewAccountConventView), null);
-    
+
     #endregion
 
     #region Properties

@@ -16,9 +16,9 @@ public partial class BiometricAuthConventView : ContentView
     public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(BiometricAuthConventView), null);
 
     public static readonly BindableProperty AuthButtonIconTextProperty = BindableProperty.Create(nameof(AuthButtonIconText), typeof(string), typeof(BiometricAuthConventView), MaterialIcons.Filter);
-    
+
     public static readonly BindableProperty AuthButtonCommandProperty = BindableProperty.Create(nameof(AuthButtonCommand), typeof(ICommand), typeof(BiometricAuthConventView), null);
-    
+
     #endregion
 
     #region Properties
