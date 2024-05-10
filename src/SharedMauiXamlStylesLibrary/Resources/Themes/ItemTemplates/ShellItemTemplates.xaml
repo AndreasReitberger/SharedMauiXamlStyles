@@ -21,8 +21,8 @@
         <Grid
             x:Name="FlyoutItemLayout"
             HeightRequest="{OnPlatform 44, Android=50}"
-            ColumnSpacing="{OnPlatform WinUI=0}"
-            RowSpacing="{OnPlatform WinUI=0}"
+            ColumnSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            RowSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
             >
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroupList>
@@ -36,7 +36,7 @@
                             <VisualState.Setters>
                                 <Setter
                                     Property="Background"
-                                    Value="{OnPlatform WinUI=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
                                     />
                             </VisualState.Setters>
                         </VisualState>
@@ -44,7 +44,7 @@
                             <VisualState.Setters>
                                 <Setter
                                     Property="Background"
-                                    Value="{OnPlatform WinUI=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
                                     />
                             </VisualState.Setters>
                         </VisualState>
@@ -52,22 +52,22 @@
                 </VisualStateGroupList>
             </VisualStateManager.VisualStateGroups>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="{OnPlatform Android=54, iOS=50, WinUI=Auto}" />
+                <ColumnDefinition Width="{OnPlatform Android=54, iOS=50, WinUI=Auto, MacCatalyst=Auto}" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Image
                 x:Name="FlyoutItemImage"
                 Source="{Binding FlyoutIcon}"
                 VerticalOptions="Center"
-                HorizontalOptions="{OnPlatform Default=Center, WinUI=Start}"
-                HeightRequest="{OnPlatform Android=20, iOS=18, WinUI=16}"
-                WidthRequest="{OnPlatform Android=204, iOS=18, WinUI=16}"
+                HorizontalOptions="{OnPlatform Default=Center, WinUI=Start, MacCatalyst=Start}"
+                HeightRequest="{OnPlatform Android=20, iOS=18, WinUI=16, MacCatalyst=16}"
+                WidthRequest="{OnPlatform Android=204, iOS=18, WinUI=16, MacCatalyst=16}"
                 >
                 <Image.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <OnPlatform.Platforms>
-                            <On Platform="WinUI"
-                            Value="12,0,12,0" />
+                            <On Platform="WinUI" Value="12,0,12,0" />
+                            <On Platform="MacCatalyst" Value="12,0,12,0" />
                         </OnPlatform.Platforms>
                     </OnPlatform>
                 </Image.Margin>
@@ -79,8 +79,8 @@
                 FontSize="{OnPlatform Android=14, iOS=14}"
                 FontAttributes="{OnPlatform iOS=Bold}"
                 FontFamily="{StaticResource MontserratMedium}"
-                HorizontalOptions="{OnPlatform WinUI=Start}"
-                HorizontalTextAlignment="{OnPlatform WinUI=Start}"
+                HorizontalOptions="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                HorizontalTextAlignment="{OnPlatform WinUI=Start, MacCatalyst=Start}"
                 VerticalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
