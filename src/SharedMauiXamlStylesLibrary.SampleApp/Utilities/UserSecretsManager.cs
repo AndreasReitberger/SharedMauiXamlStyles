@@ -56,7 +56,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
                     }
                     return node.ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return string.Empty;
                 }
