@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+    
+    <PropertyGroup>
+        <PackMauiItems Condition="'$(PackMauiItems)' == ''">true</PackMauiItems>
+        <!-- Defaults to '$(PackageId).targets' if no path was specified -->
+        <PackMauiItemsTargetsFileName Condition="'$(PackMauiItemsTargetsFileName)' == ''"></PackMauiItemsTargetsFileName>
+        <PackMauiItemsExcludes>**\.DS_Store</PackMauiItemsExcludes>
+    </PropertyGroup>
+
+    <!-- Collect all .NET MAUI items -->
+    <ItemGroup Condition="'$(TargetFramework)' == '' and '$(PackMauiItems)' == 'true'">
+
+        <_SafeMauiImage Include="@(MauiImage)" Exclude="$(PackMauiItemsExcludes)" />
+        <_SafeMauiIcon Include="@(MauiIcon)" Exclude="$(PackMauiItemsExcludes)" />
+        <_SafeMauiSplashScreen Include="@(MauiSplashScreen)" Exclude="$(PackMauiItemsExcludes)" />
+        <_SafeMauiAsset Include="@(MauiAsset)" Exclude="$(PackMauiItemsExcludes)" />
+        <_SafeMauiFont Include="@(MauiFont)" Exclude="$(PackMauiItemsExcludes)" />
+        
+        <!-- MauiImage -->
+        <_PackageFiles Include="@(_SafeMauiImage)" Pack="True" PackagePath="buildTransitive\_MauiItems\Images\%(Filename)%(Extension)" />
+        <_MauiImageForegroundProxy Include="@(_SafeMauiImage->HasMetadata('ForegroundFile'))" BackgroundFile="%(Filename)%(Extension)" />
+        <_PackageFiles Include="@(_MauiImageForegroundProxy->'%(ForegroundFile)')" Pack="True" PackagePath="buildTransitive\_MauiItems\Images\Foreground\%(BackgroundFile)" />
+        <!-- MauiIcon -->
+        <_PackageFiles Include="@(_SafeMauiIcon)" Pack="True" PackagePath="buildTransitive\_MauiItems\AppIcon\%(Filename)%(Extension)" />
+        <_MauiIconForegroundProxy Include="@(_SafeMauiIcon->HasMetadata('ForegroundFile'))" BackgroundFile="%(Filename)%(Extension)" />
+        <_PackageFiles Include="@(_MauiIconForegroundProxy->'%(ForegroundFile)')" Pack="True" PackagePath="buildTransitive\_MauiItems\AppIcon\Foreground\%(BackgroundFile)" />
+        <!-- MauiSplashScreen -->
+        <_PackageFiles Include="@(_SafeMauiSplashScreen)" Pack="True" PackagePath="buildTransitive\_MauiItems\Splash\%(Filename)%(Extension)" />
+        <!-- MauiFont -->
+        <_PackageFiles Include="@(_SafeMauiFont)" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\%(Filename)%(Extension)" />
+        <!-- MauiAsset -->
+        <_PackageFiles Include="@(_SafeMauiAsset)" Pack="True" PackagePath="buildTransitive\_MauiItems\Raw\%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <Target Name="GenerateIncludeMauiItemsTargets" BeforeTargets="GenerateNuspec" Condition="'$(PackMauiItems)' == 'true'">
+
+        <PropertyGroup>
+            <_IncludeMauiItemsTargetsBoilerplate>
+                <![CDATA[
+<Project>
+    <ItemGroup>
+        {{MauiItems}}
+    </ItemGroup>
+</Project>
+                ]]>
+            </_IncludeMauiItemsTargetsBoilerplate>
+        </PropertyGroup>
+
+        <!-- Add all items to the generated targets file -->
+        <ItemGroup>
+            <!-- MauiImage -->
+            <_IncludeMauiItems Include="@(_SafeMauiImage->'&lt;MauiImage
+            Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\Images\%(Filename)%(Extension)&quot;
+            Link=&quot;%(Link)&quot;
+            BaseSize=&quot;%(BaseSize)&quot;
+            Resize=&quot;%(Resize)&quot;
+            TintColor=&quot;%(TintColor)&quot;
+            Color=&quot;%(Color)&quot;
+            Visible=&quot;False&quot;
+            /&gt;')" />
+            <!-- MauiIcon -->
+            <_IncludeMauiItems Include="@(_SafeMauiIcon->'&lt;MauiIcon
+            Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\AppIcon\%(Filename)%(Extension)&quot;
+            ForegroundFile=&quot;%24(MSBuildThisFileDirectory)_MauiItems\AppIcon\Foreground\%(Filename)%(Extension)&quot;
+            Link=&quot;%(Link)&quot;
+            BaseSize=&quot;%(BaseSize)&quot;
+            Resize=&quot;%(Resize)&quot;
+            TintColor=&quot;%(TintColor)&quot;
+            Color=&quot;%(Color)&quot;
+            ForegroundScale=&quot;%(ForegroundScale)&quot;
+            Visible=&quot;False&quot;
+            /&gt;')" />
+            <!-- MauiSplashScreen -->
+            <_IncludeMauiItems Include="@(_SafeMauiSplashScreen->'&lt;MauiSplashScreen
+            Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\Splash\%(Filename)%(Extension)&quot;
+            Link=&quot;%(Link)&quot;
+            BaseSize=&quot;%(BaseSize)&quot;
+            Resize=&quot;%(Resize)&quot;
+            TintColor=&quot;%(TintColor)&quot;
+            Color=&quot;%(Color)&quot;
+            Visible=&quot;False&quot;
+            /&gt;')" />
+            <!-- MauiFont -->
+            <_IncludeMauiItems Include="@(_SafeMauiFont->'&lt;MauiFont
+            Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\Fonts\%(Filename)%(Extension)&quot;
+            Link=&quot;%(Link)&quot;
+            Visible=&quot;False&quot;
+            /&gt;')" />
+            <!-- MauiAsset -->
+            <_IncludeMauiItems Include="@(_SafeMauiAsset->'&lt;MauiAsset
+            Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\Raw\%(RecursiveDir)%(Filename)%(Extension)&quot;
+            Link=&quot;%(Link)&quot;
+            LogicalName=&quot;%(LogicalName)&quot;
+            Visible=&quot;False&quot;
+            /&gt;')" />
+        </ItemGroup>
+        
+        <!-- Generate the targets file -->
+        <PropertyGroup>
+            <_IncludeMauiItem>@(_IncludeMauiItems, '%0A        ')</_IncludeMauiItem>
+            <_IncludeMauiItemsTargetsBoilerplate>$(_IncludeMauiItemsTargetsBoilerplate.Replace('{{MauiItems}}', '$(_IncludeMauiItem)'))</_IncludeMauiItemsTargetsBoilerplate>
+            <_FinalPackMauiItemsTargetsFileName>$(PackageId).targets</_FinalPackMauiItemsTargetsFileName>
+        </PropertyGroup>
+        <ItemGroup>
+            <_IncludeMauiItemsTargetsLines Include="$(_IncludeMauiItemsTargetsBoilerplate)" />
+        </ItemGroup>
+        <WriteLinesToFile File="$(IntermediateOutputPath)_IncludeMauiAssets.g.targets"
+                          Lines="@(_IncludeMauiItemsTargetsLines)"
+                          Overwrite="true"
+                          WriteOnlyWhenDifferent="true" />
+        <ItemGroup>
+            <FileWrites Include="$(IntermediateOutputPath)_IncludeMauiAssets.g.targets" />
+            <_PackageFiles Include="$(IntermediateOutputPath)_IncludeMauiAssets.g.targets" Pack="True" PackagePath="buildTransitive\$(_FinalPackMauiItemsTargetsFileName)" />
+        </ItemGroup>
+
+    </Target>
+
+</Project>
