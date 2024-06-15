@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.ContentViews.AccountConventView"
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ContentView.Resources>
+        <shared:SharedConverters />
+    </ContentView.Resources>
+    
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Grid
+                Style="{StaticResource Style.Core.Grid.ShellTitleView}"
+                IsVisible="{TemplateBinding IsVisible}"
+                IsEnabled="{TemplateBinding IsEnabled}"
+                Background="{TemplateBinding Background}"
+                HeightRequest="{TemplateBinding HeightRequest}"
+                ColumnDefinitions="*,Auto"
+                >
+                <ContentPresenter
+                    IsVisible="{TemplateBinding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    />
+                <HorizontalStackLayout
+                    Grid.Column="1"
+                    IsVisible="{TemplateBinding IsSyncing}"
+                    >
+                    <ActivityIndicator
+                        Margin="2"
+                        IsRunning="{TemplateBinding IsSyncing}"
+                        Style="{StaticResource Style.Core.ActivityIndicator.Default}"
+                        />
+                    <Label
+                        Margin="4,2"
+                        Text="{TemplateBinding IsSyncingText}"
+                        Style="{StaticResource Style.Core.Label.Small}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        />
+                </HorizontalStackLayout>
+            </Grid>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>
