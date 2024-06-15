@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.ContentViews.TitleViewAccountConventView"
+    
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared"
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
+    >
+    <ContentView.Resources>
+        <shared:SharedConverters />
+    </ContentView.Resources>
+    
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Grid
+                Style="{StaticResource Style.Core.Grid.ShellTitleView}"
+                IsVisible="{TemplateBinding IsVisible}"
+                IsEnabled="{TemplateBinding IsEnabled}"
+                Background="{TemplateBinding Background}"
+                HeightRequest="{TemplateBinding HeightRequest}"
+                ColumnDefinitions="*,Auto"
+                >
+                <ContentPresenter />
+                <Grid
+                    Grid.Column="1"
+                    IsVisible="{TemplateBinding HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    ColumnDefinitions="Auto,*"
+                    >
+                    <Label
+                        IsVisible="{TemplateBinding IsLoggedIn}"
+                        Text="{x:Static icons:MaterialIcons.AccountOutline}"
+                        Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
+                        />
+                    <Label
+                        IsVisible="{TemplateBinding IsLoggedIn}"
+                        Grid.Column="1"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        FormattedText="{TemplateBinding AccountLabelFormattedString}"
+                        Text="{TemplateBinding AccountLabelText}"
+                        Style="{StaticResource Style.Core.Label.Header}"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Command="{TemplateBinding AccountButtonCommand}"
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label
+                        IsVisible="{TemplateBinding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                        Grid.Column="1"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        FormattedText="{TemplateBinding AuthLabelFormattedString}"
+                        Text="{TemplateBinding AuthLabelText}"
+                        Style="{StaticResource Style.Core.Label.Header}"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Command="{TemplateBinding AuthButtonCommand}"
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>

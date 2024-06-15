@@ -69,6 +69,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentViews\AccountConventView.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
 	  <Compile Update="ContentViews\ProFeatureLockedContentView.xaml.cs">
 	    <DependentUpon>ProFeatureLockedContentView.xaml</DependentUpon>
 	  </Compile>
@@ -82,6 +85,9 @@
 	    <DependentUpon>SwitchHeaderConventView.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="ContentViews\SortFilterHeaderConventView.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\TitleViewAccountConventView.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Themes\ItemTemplates\CarouselViewItemTemplates.xaml.cs">
@@ -130,6 +136,9 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <MauiXaml Update="ContentViews\AccountConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\ProFeatureLockedContentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -143,6 +152,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\SortFilterHeaderConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\TitleViewAccountConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\SharedConverters.xaml">
