@@ -4,6 +4,46 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.Syncfusion.Themes.ItemTemplates.GeneralItemTemplates"
+     
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     >
-  
+
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Contact.Default">
+        <ViewCell>
+            <Grid 
+                Padding="8,6"
+                ColumnSpacing="4"
+                RowSpacing="4"
+                ColumnDefinitions="Auto,*"
+                >
+                <!-- Check icon -->
+                <Border
+                    Style="{StaticResource Style.Core.Border.Profile}"
+                    Background="{StaticResource LightGreen}"
+                    Margin="0"
+                    >
+                    <core:SfAvatarView
+                        AvatarName="{Binding Name}"
+                        Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
+                        />
+                </Border>
+
+                <Label 
+                    Grid.Column="1"
+                    Text="{Binding Feature}"
+                    Style="{StaticResource Style.Core.Label.Default}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding LastName}" />
+                            <Span Text=", " />
+                            <Span Text="{Binding FirstName}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
 </ResourceDictionary>
