@@ -65,10 +65,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.7" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.10" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentViews\AccountConventView.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
 	  <Compile Update="ContentViews\ProFeatureLockedContentView.xaml.cs">
 	    <DependentUpon>ProFeatureLockedContentView.xaml</DependentUpon>
 	  </Compile>
@@ -82,6 +85,9 @@
 	    <DependentUpon>SwitchHeaderConventView.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="ContentViews\SortFilterHeaderConventView.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\TitleViewAccountConventView.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Themes\ItemTemplates\CarouselViewItemTemplates.xaml.cs">
@@ -130,6 +136,9 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <MauiXaml Update="ContentViews\AccountConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\ProFeatureLockedContentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -145,19 +154,18 @@
 	  <MauiXaml Update="ContentViews\SortFilterHeaderConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\TitleViewAccountConventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\SharedConverters.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
-	
-	<ItemGroup>
-	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.20" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.20" />
-	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="8.0.0" />
-	</ItemGroup>
-	
 	<ItemGroup>
 	  <Folder Include="Licenses\LicenseFiles\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.80" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.80" />
 	</ItemGroup>
 </Project>

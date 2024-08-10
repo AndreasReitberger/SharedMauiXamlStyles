@@ -1,4 +1,4 @@
-namespace AndreasReitberger.Shared.Syncfusion.ContentViews;
+namespace AndreasReitberger.Shared.ContentViews;
 
 public partial class AccountConventView : ContentView
 {

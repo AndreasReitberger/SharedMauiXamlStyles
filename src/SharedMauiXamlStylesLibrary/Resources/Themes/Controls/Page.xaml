@@ -42,7 +42,7 @@
 
     <Style x:Key="Style.Core.ContentPage.Modal" TargetType="ContentPage" BasedOn="{StaticResource Style.Core.ContentPage.Default}">
         <Setter Property="Shell.PresentationMode" Value="ModalAnimated" />
-        <Setter Property="ios:Page.ModalPresentationStyle" Value="{OnIdiom Tablet=Automatic, Default=FormSheet}" />
+        <Setter Property="ios:Page.ModalPresentationStyle" Value="{OnIdiom Tablet=Automatic, Desktop=OverFullScreen, Default=FormSheet}" />
         <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />-->
     </Style>
 
