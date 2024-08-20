@@ -28,16 +28,10 @@
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="MinimumHeightRequest" Value="50" />
         <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="ContentLayout" Value="Left, 10" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="PointerOver" >
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{DynamicResource PrimaryDarkenColor}"/>
-                            <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>-->
-                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-                        </VisualState.Setters>
-                    </VisualState>
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
@@ -48,6 +42,13 @@
                         <VisualState.Setters>
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" >
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{DynamicResource PrimaryDarkenColor}"/>
+                            <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>-->
+                            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <!--

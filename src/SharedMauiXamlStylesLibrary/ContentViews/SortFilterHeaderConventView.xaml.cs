@@ -8,10 +8,11 @@ public partial class SortFilterHeaderConventView : ContentView
     #region Bindings
 
     public static readonly BindableProperty IsFilteredProperty = BindableProperty.Create(nameof(IsFiltered), typeof(bool), typeof(SortFilterHeaderConventView), false);
+    public static readonly BindableProperty ContainerHeightProperty = BindableProperty.Create(nameof(ContainerHeight), typeof(int), typeof(SortFilterHeaderConventView), 45);
     public static readonly BindableProperty ShowFilterButtonProperty = BindableProperty.Create(nameof(ShowFilterButton), typeof(bool), typeof(SortFilterHeaderConventView), true);
 
     public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SortFilterHeaderConventView), "MaterialDesignIcons");
-    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(object), typeof(SortFilterHeaderConventView), null);
+    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(SortFilterHeaderConventView), null);
 
     public static readonly BindableProperty SortButtonTextProperty = BindableProperty.Create(nameof(SortButtonText), typeof(string), typeof(SortFilterHeaderConventView), string.Empty);
     public static readonly BindableProperty FilterButtonTextProperty = BindableProperty.Create(nameof(FilterButtonText), typeof(string), typeof(SortFilterHeaderConventView), string.Empty);
@@ -69,6 +70,12 @@ public partial class SortFilterHeaderConventView : ContentView
     {
         get => (bool)GetValue(IsFilteredProperty);
         set => SetValue(IsFilteredProperty, value);
+    }
+
+    public int ContainerHeight
+    {
+        get => (int)GetValue(ContainerHeightProperty);
+        set => SetValue(ContainerHeightProperty, value);
     }
 
     public bool ShowFilterButton

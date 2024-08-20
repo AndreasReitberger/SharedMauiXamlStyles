@@ -15,7 +15,28 @@
                     Margin="4,0"
                     Grid.Column="1"
                     CompressedLayout.IsHeadless="True"
+                    HeightRequest="{TemplateBinding ContainerHeight}"
                     >
+                    <Button
+                        MinimumWidthRequest="{OnIdiom Phone=92, Default=144}"
+                        Margin="0"
+                        CornerRadius="0"
+                        Text="{TemplateBinding SortButtonText}"
+                        Command="{TemplateBinding SortButtonCommand}"
+                        CommandParameter="{TemplateBinding CommandParameter}"
+                        BorderWidth="0"
+                        Style="{StaticResource Style.Core.Button.Default}"
+                        >
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                                Glyph="{TemplateBinding SortButtonIconText}"
+                                Color="{Binding Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
+                                Size="Small"
+                                />
+                        </Button.ImageSource>
+                    </Button>
+                    <!-- Workaround (not needed any more)
                     <Label
                         Style="{StaticResource Style.Core.Label.Header}"
                         VerticalTextAlignment="Center"
@@ -39,7 +60,28 @@
                                 />
                         </Label.GestureRecognizers>
                     </Label>
-
+                    -->
+                    <Button
+                        IsVisible="{TemplateBinding ShowFilterButton}"
+                        MinimumWidthRequest="{OnIdiom Phone=92, Default=144}"
+                        Margin="0"
+                        CornerRadius="0"
+                        Text="{TemplateBinding FilterButtonText}"
+                        Command="{TemplateBinding FilterButtonCommand}"
+                        CommandParameter="{TemplateBinding CommandParameter}"
+                        BorderWidth="0"
+                        Style="{StaticResource Style.Core.Button.Default}"
+                        >
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                                Glyph="{TemplateBinding FilterButtonIconText}"
+                                Color="{Binding Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
+                                Size="Small"
+                                />
+                        </Button.ImageSource>
+                    </Button>
+                    <!-- Workaround (not needed any more)
                     <Label
                         Style="{StaticResource Style.Core.Label.Header}"
                         VerticalTextAlignment="Center"
@@ -64,6 +106,7 @@
                                 />
                         </Label.GestureRecognizers>
                     </Label>
+                    -->                  
                     <!-- Clear Filter -->
                     <Button
                         Margin="2,4"
