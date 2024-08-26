@@ -18,8 +18,7 @@
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
     <DataTemplate x:Key="DataTemplate.Syncfusion.ProVersionFeature.Default" x:DataType="documentation:ProVersionFeature">
-        <ViewCell>
-            <Grid 
+        <Grid 
                 Padding="8,6"
                 ColumnSpacing="4"
                 RowSpacing="4"
@@ -46,6 +45,5 @@
                     HorizontalTextAlignment="Start"
                     />
             </Grid>
-        </ViewCell>
     </DataTemplate>
 </ResourceDictionary>

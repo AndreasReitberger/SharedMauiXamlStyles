@@ -9,8 +9,7 @@
     >
 
     <DataTemplate x:Key="DataTemplate.Syncfusion.Contact.Default">
-        <ViewCell>
-            <Grid 
+        <Grid 
                 Padding="8,6"
                 ColumnSpacing="4"
                 RowSpacing="4"
@@ -44,6 +43,5 @@
                     </Label.FormattedText>
                 </Label>
             </Grid>
-        </ViewCell>
     </DataTemplate>
 </ResourceDictionary>
