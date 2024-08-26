@@ -21,52 +21,52 @@
     >
     <ContentPage.Resources>
         <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+        <DataTemplate x:Key="DataTemplate.Syncfusion.DemoItem" x:DataType="viewModels:DemoItem">
+            <Label
+                Text="{Binding Name}"
+                Style="{StaticResource Style.Core.Label.Medium}"
+                />
+        </DataTemplate>
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.Custom">
-            <ViewCell>
-                <!-- 
-                    IsFiltered="{Binding Source={RelativeSource AncestorType={x:Type controls:SearchableListView}}, Path=IsFiltered}"
-                -->
-                <views:SortFilterHeaderConventView
-                    Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
-                    SortButtonCommand="{Binding SortCommand}"
-                    SortButtonIconText="{x:Static icons:MaterialIcons.Sort}"
-                    SortButtonText="Sort"
-                    FilterButtonCommand="{Binding FilterCommand}"
-                    FilterButtonIconText="{x:Static icons:MaterialIcons.Filter}"
-                    FilterButtonText="Filter"
-                    ClearButtonCommand="{Binding ClearCommand}"
-                    ClearButtonIconText="{x:Static icons:MaterialIcons.Close}"
-                    IsFiltered="True"
-                    />
-            </ViewCell>
+            <!-- 
+                IsFiltered="{Binding Source={RelativeSource AncestorType={x:Type controls:SearchableListView}}, Path=IsFiltered}"
+            -->
+            <views:SortFilterHeaderConventView
+                Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+                SortButtonCommand="{Binding SortCommand}"
+                SortButtonIconText="{x:Static icons:MaterialIcons.Sort}"
+                SortButtonText="Sort"
+                FilterButtonCommand="{Binding FilterCommand}"
+                FilterButtonIconText="{x:Static icons:MaterialIcons.Filter}"
+                FilterButtonText="Filter"
+                ClearButtonCommand="{Binding ClearCommand}"
+                ClearButtonIconText="{x:Static icons:MaterialIcons.Close}"
+                IsFiltered="True"
+                />
         </DataTemplate>
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchYear">
-            <ViewCell>
-                <views:SwitchHeaderConventView
-                     Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
-                     BackButtonCommand="{Binding ValueBackCommand}"
-                     BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
-                     BackButtonText=""
-                     NextButtonCommand="{Binding ValueNextCommand}"
-                     NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
-                     NextButtonText=""
-                     TitleLabelText="Year"
-                     />
-            </ViewCell>
+            <views:SwitchHeaderConventView
+                Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+                BackButtonCommand="{Binding ValueBackCommand}"
+                BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
+                BackButtonText=""
+                NextButtonCommand="{Binding ValueNextCommand}"
+                NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
+                NextButtonText=""
+                TitleLabelText="Year"
+                />
         </DataTemplate>
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchPage">
-            <ViewCell>
-                <views:SwitchHeaderConventView
-                     Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
-                     BackButtonCommand="{Binding ValueBackCommand}"
-                     BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
-                     BackButtonText=""
-                     NextButtonCommand="{Binding ValueNextCommand}"
-                     NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
-                     NextButtonText=""
-                     TitleLabelText="Page"
-                     />
-            </ViewCell>
+            <views:SwitchHeaderConventView
+                    Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+                    BackButtonCommand="{Binding ValueBackCommand}"
+                    BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
+                    BackButtonText=""
+                    NextButtonCommand="{Binding ValueNextCommand}"
+                    NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
+                    NextButtonText=""
+                    TitleLabelText="Page"
+                    />
         </DataTemplate>
     </ContentPage.Resources>
 
@@ -80,6 +80,7 @@
             <listView:SfListView
                 Style="{StaticResource Style.Syncfusion.SfListView.Default}"
                 HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.Custom}"
+                ItemTemplate="{StaticResource DataTemplate.Syncfusion.DemoItem}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding Item}"
                 >
@@ -91,6 +92,7 @@
             >
             <listView:SfListView
                 Style="{StaticResource Style.Syncfusion.SfListView.Default}"
+                ItemTemplate="{StaticResource DataTemplate.Syncfusion.DemoItem}"
                 HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.SwitchYear}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding Item}"

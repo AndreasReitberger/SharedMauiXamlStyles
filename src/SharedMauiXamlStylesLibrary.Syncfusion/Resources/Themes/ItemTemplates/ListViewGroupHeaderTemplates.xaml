@@ -19,8 +19,7 @@
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
     <DataTemplate x:Key="DataTemplate.Syncfusion.Header.Group">
-        <ViewCell>
-            <StackLayout 
+        <StackLayout 
                 Style="{StaticResource Style.Core.StackLayout.Header}" 
                 Orientation="Horizontal"
                 >
@@ -47,6 +46,5 @@
                     Margin="0,4"
                     />
             </StackLayout>
-        </ViewCell>
     </DataTemplate>
 </ResourceDictionary>

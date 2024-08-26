@@ -15,34 +15,32 @@
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
     <DataTemplate x:Key="DataTemplate.Core.Header.Group">
-        <ViewCell>
-            <StackLayout 
-                Style="{StaticResource Style.Core.StackLayout.Header}" 
-                Orientation="Horizontal"
-                >
-                <!-- Icon -->
-                <Label Margin="10,4">
-                    <Label.Style>
-                        <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
-                            <Setter Property="Text" Value="{x:Static icons:MaterialIcons.ArrowDown}"/>
-                            <Style.Triggers>
-                                <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
-                                    <Setter Property="Text" Value="{x:Static icons:MaterialIcons.ArrowUp}"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Label.Style>
-                </Label>
+        <StackLayout 
+            Style="{StaticResource Style.Core.StackLayout.Header}" 
+            Orientation="Horizontal"
+            >
+            <!-- Icon -->
+            <Label Margin="10,4">
+                <Label.Style>
+                    <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
+                        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.ArrowDown}"/>
+                        <Style.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
+                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.ArrowUp}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Label.Style>
+            </Label>
 
-                <Label 
-                    Text="{Binding Key}" 
-                    Style="{StaticResource Style.Core.Label.GroupingHeader}"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Start"
-                    Margin="0,4"
-                    />
-            </StackLayout>
-        </ViewCell>
+            <Label 
+                Text="{Binding Key}" 
+                Style="{StaticResource Style.Core.Label.GroupingHeader}"
+                FontAttributes="Bold"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
+                Margin="0,4"
+                />
+        </StackLayout>
     </DataTemplate>
 </ResourceDictionary>
