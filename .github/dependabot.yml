@@ -1,9 +1,19 @@
 version: 2
+#registries:
+#  custom-nuget:
+#    type: nuget-feed
+#    url: https://api.nuget.org/v3/index.json
 updates:
 - package-ecosystem: nuget
-    directory: "/src/"
-    schedule:
-      interval: "daily"
+  directory: "/src/"
+#  registries:
+#    - custom-nuget
+  schedule:
+    interval: daily
+    # Run at 10pm Pacific time
+    time: "22:00"
+    timezone: "America/Los_Angeles"
+  open-pull-requests-limit: 25
   labels:
       - "nuget"
       - "dependencies"
