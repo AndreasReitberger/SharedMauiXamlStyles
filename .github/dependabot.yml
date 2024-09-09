@@ -15,6 +15,9 @@ updates:
     timezone: "America/Los_Angeles"
   open-pull-requests-limit: 25
   groups:
+    default:
+      patterns:
+        - "*"
     AndroidX:
       patterns:
         - "Xamarin.AndroidX.*"
