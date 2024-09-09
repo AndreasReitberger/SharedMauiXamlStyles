@@ -4,7 +4,9 @@ updates:
     directory: "/src/"
     schedule:
       interval: "daily"
-
+  labels:
+      - "nuget"
+      - "dependencies"
 #version: 2
 #registries:
 #  custom-nuget:
@@ -37,6 +39,3 @@ updates:
 #  ignore:
 #    - dependency-name: "MicrosoftMauiGraphicsVersion"         # maestro
       
-  labels:
-      - "nuget"
-      - "dependencies"
