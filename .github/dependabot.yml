@@ -18,29 +18,15 @@ updates:
     default:
       patterns:
         - "*"
-    AndroidX:
-      patterns:
-        - "Xamarin.AndroidX.*"
-        - "Xamarin.Build.Download"
-        - "Xamarin.Google.Android.Material"
-        - "Xamarin.Google.Crypto.Tink.Android"
-        - "Xamarin.GooglePlayServices.Maps"
-        - "Xamarin.Android.Glide*"
     Syncfusion:
       patterns:
-        - "Syncfusion.*"
+        - "Syncfusion.Maui*"
     MicrosoftExtensions:
       patterns:
         - "Microsoft.Extensions.*"
-    WindowsAppSDK:
+    MicrosoftMaui:
       patterns:
-        - "Microsoft.Graphics.Win2D"
-        - "Microsoft.Windows.SDK.BuildTools"
-        - "Microsoft.WindowsAppSDK"
-    xunit:
-      patterns:
-        - "xunit"
-        - "xunit.runner.*"
+        - "Microsoft.Maui.*"
 #  ignore:
 #    - dependency-name: "MicrosoftMauiGraphicsVersion"         # maestro
       
