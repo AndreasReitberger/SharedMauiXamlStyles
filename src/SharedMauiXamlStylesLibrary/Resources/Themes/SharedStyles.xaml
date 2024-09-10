@@ -16,6 +16,7 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/BoxView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/Button.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/CheckBox.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/CollectionView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/DatePicker.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/Editor.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/Entry.xaml" />

@@ -26,6 +26,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         {
             Assembly assembly = IntrospectionExtensions.GetTypeInfo(typeof(UserSecretsManager)).Assembly;
             Stream stream = assembly.GetManifestResourceStream($"{Namespace}.{UserSecretsFileName}");
+            // Double check that your secrets.json file exists and is valid on exception here!!
             using StreamReader reader = new(stream);
             string json = reader.ReadToEnd();
             _secrets = JObject.Parse(json);
