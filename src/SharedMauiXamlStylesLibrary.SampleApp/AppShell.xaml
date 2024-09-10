@@ -16,6 +16,10 @@
     >
 
     <ShellContent
+        Title="ActivityIndicators"
+        ContentTemplate="{DataTemplate views:ActivityIndicatorsPage}"
+        Route="ActivityIndicatorsPage" />
+    <ShellContent
         Title="BoxView"
         ContentTemplate="{DataTemplate views:BoxViewsPage}"
         Route="BoxViewsPage" />
