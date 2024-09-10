@@ -36,6 +36,10 @@
         ContentTemplate="{DataTemplate views:CheckBoxesPage}"
         Route="CheckBoxesPage" />
     <ShellContent
+        Title="CollectionViews"
+        ContentTemplate="{DataTemplate views:CollectionViewPage}"
+        Route="CollectionViewPage" />
+    <ShellContent
         Title="Editors and Entries"
         ContentTemplate="{DataTemplate views:EditorsPage}"
         Route="EditorsPage" />
