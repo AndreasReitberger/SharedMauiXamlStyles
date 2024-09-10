@@ -9,7 +9,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        ObservableCollection<string> list = 
+        ObservableCollection<string> list =
         [
             "Text 1",
             "Text 2",
