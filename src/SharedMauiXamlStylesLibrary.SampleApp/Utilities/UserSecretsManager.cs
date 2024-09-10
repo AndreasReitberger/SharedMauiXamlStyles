@@ -12,7 +12,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
     {
         #region Variables
         private static UserSecretsManager _instance;
-        private JObject _secrets;
+        private readonly JObject _secrets;
 
         // Default namespace of the project
         private const string Namespace = "SharedMauiXamlStylesLibrary.SampleApp";
