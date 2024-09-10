@@ -58,6 +58,9 @@
 	  <Compile Update="Views\BordersPage.xaml.cs">
 	    <DependentUpon>BordersPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\ActivityIndicatorsPage.xaml.cs">
+	    <DependentUpon>ActivityIndicatorsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\CollectionViewPage.xaml.cs">
 	    <DependentUpon>CollectionViewPage.xaml</DependentUpon>
 	  </Compile>
@@ -128,6 +131,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\BordersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ActivityIndicatorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CollectionViewPage.xaml">
