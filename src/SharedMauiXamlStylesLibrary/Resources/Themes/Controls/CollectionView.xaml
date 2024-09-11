@@ -38,6 +38,7 @@
     <Style TargetType="CollectionView" BasedOn="{StaticResource Style.Core.CollectionView.Default}"/>
 
     <!-- Source: https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview/selection?view=net-maui-8.0&viewFallbackFrom=net-maui-7.0#change-selected-item-color-->
+    <!-- Deprecated, use Style.Core.Grid.ListItem instead -->
     <Style x:Key="Style.Core.Grid.CollectionView" TargetType="Grid">
         <Setter Property="Padding" Value="10,5" />
         <Setter Property="VisualStateManager.VisualStateGroups">
