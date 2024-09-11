@@ -1,4 +1,6 @@
-﻿using Microsoft.Maui.Handlers;
+﻿#if WINDOWS
+using Microsoft.Maui.Handlers;
+#endif
 using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 using SharedMauiXamlStylesLibrary.SampleApp.Views;
 
@@ -9,7 +11,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         /*
          * The view models do not inherit from an interface, so they only need their concrete type provided to the AddSingleton<T> and AddTransient<T> methods.
          */
-
         public static MauiAppBuilder ConfigureApp(this MauiAppBuilder builder)
         {
             builder

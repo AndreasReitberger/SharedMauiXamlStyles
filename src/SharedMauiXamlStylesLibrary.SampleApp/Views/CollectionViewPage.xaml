@@ -20,7 +20,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid
-                        Style="{StaticResource Style.Core.Grid.CollectionView}"
+                        Style="{StaticResource Style.Core.Grid.ListItem}"
                         >
                         <Label
                             Text="{Binding .}"
