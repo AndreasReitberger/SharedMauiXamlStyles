@@ -47,13 +47,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Command
 
         [RelayCommand]
-        Task Sort() => Shell.Current.DisplayAlert("Sort", "Sort command placeholder...", "OK");
+        static Task Sort() => Shell.Current.DisplayAlert("Sort", "Sort command placeholder...", "OK");
 
         [RelayCommand]
-        Task Filter() => Shell.Current.DisplayAlert("Filter", "Filter command placeholder...", "OK");
+        static Task Filter() => Shell.Current.DisplayAlert("Filter", "Filter command placeholder...", "OK");
 
         [RelayCommand]
-        Task Clear() => Shell.Current.DisplayAlert("Clear", "Clear command placeholder...", "OK");
+        static Task Clear() => Shell.Current.DisplayAlert("Clear", "Clear command placeholder...", "OK");
 
         [RelayCommand]
         void ValueNext()
