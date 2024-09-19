@@ -7,7 +7,7 @@
     <!-- https://material.io/design/color/the-color-system.html#tools-for-picking-colors -->
     <!-- Common -->
     <Color x:Key="PrimaryColor">#512BD4</Color>
-    <Color x:Key="PrimaryDarkenColor">#512BD4</Color>
+    <Color x:Key="PrimaryDarkenColor">#391E94</Color>
     <Color x:Key="PrimaryLighterColor">#edcacd</Color>
     <Color x:Key="PrimaryLight">#ffe8f4</Color>
     <Color x:Key="SecondaryGradient">#7644ad</Color>
