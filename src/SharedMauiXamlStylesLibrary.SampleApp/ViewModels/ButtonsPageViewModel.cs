@@ -10,6 +10,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         [ObservableProperty]
         string sampleText = "This is just a sample text";
 
+        [ObservableProperty]
+        bool enabled = true;
         #endregion
 
         #region Constructor, LoadSettings

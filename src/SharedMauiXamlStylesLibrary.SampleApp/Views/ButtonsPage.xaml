@@ -18,104 +18,149 @@
     <ContentPage.Resources>
         <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     </ContentPage.Resources>
-    <ScrollView>
-        <VerticalStackLayout>
-            <Label 
-                Margin="2,16"
-                Text="Text Buttons"
-                VerticalTextAlignment="Center" 
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Default}"
-                />
-            
-            <Button 
-                Margin="8,16"
-                Text="This is a normal button"
-                Style="{StaticResource Style.Core.Button.Default}"
-                />
-            
-            <Button 
-                Margin="8,16"
-                Text="This is a green button"
-                Style="{StaticResource Style.Core.Button.Default}"
-                Background="Green"
-                />
-            
-            <Button 
-                Margin="8,16"
-                Text="This is a link styled button"
-                Style="{StaticResource Style.Core.Button.Link}"
-                />
-            
-            
-            <Button 
-                Margin="8,16"
-                Text="This is a link styled button with a round frame"
-                Style="{StaticResource Style.Core.Button.LinkRound}"
-                />
-            
-            <Button 
-                Margin="8,16"
-                Text="This is a normal button"
-                Style="{StaticResource Style.Core.Button.RoundedLong}"
-                />
-            
-            <BoxView
-                Style="{StaticResource Style.Core.BoxView.PrimarySeparator}"
-                Margin="4"
-                />
-
-            <Label 
-                Margin="2,16"
-                Text="Icon Buttons"
-                VerticalTextAlignment="Center" 
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Default}"
-                />
-
-            <Grid
-                ColumnDefinitions="*,*,*"
-                RowDefinitions="*,*"
-                >
-            <Button 
-                Margin="8,16"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Favourite}"
-                Style="{StaticResource Style.Core.Button.IconPrimary}"
-                />
-            <Button 
-                Grid.Column="1"
-                Margin="8,16"
-                Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
-                Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
-                />
-            <Button 
-                Grid.Column="2"
-                Margin="8,16"
-                Text="{x:Static icons:MaterialIcons.ProgressCheck}"
-                Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
-                />
-            <Button 
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="8,16"
-                Text="{x:Static icons:MaterialIcons.ProgressCheck}"
-                Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
-                />
-            <Button 
-                Grid.Row="1"
-                Grid.Column="1"
-                Margin="8,16"
-                Text="{x:Static icons:MaterialIcons.AlertCircleCheckOutline}"
-                Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Critical}"
-                />
-            <Button 
-                Grid.Row="1"
-                Grid.Column="2"
-                Margin="8,16"
-                Text="{x:Static icons:MaterialIcons.ScriptOutline}"
-                Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Error}"
-                />
-            </Grid>
-        </VerticalStackLayout>
-    </ScrollView>
+    <Grid
+        ColumnDefinitions="*,Auto"
+        RowDefinitions="Auto,*"
+        >
+        <Label
+            Margin="16,8"
+            Text="Switch button enable state"
+            />
+        <Switch
+            Grid.Column="1"
+            IsToggled="{Binding Enabled}"
+            />
+        <ScrollView
+            Grid.ColumnSpan="2"
+            Grid.Row="1"
+            >
+            <VerticalStackLayout>
+                <Label 
+                    Margin="2,16"
+                    Text="Text Buttons"
+                    VerticalTextAlignment="Center" 
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource Style.Core.Label.Default}"
+                    />
+                <Button
+                    IsEnabled="{Binding Enabled}"
+                    Margin="8,16"
+                    Text="This is a normal button"
+                    Style="{StaticResource Style.Core.Button.Default}"
+                    />
+                <Button
+                    IsEnabled="{Binding Enabled}"
+                    Margin="8,16"
+                    Text="This is a transparent button"
+                    Style="{StaticResource Style.Core.Button.Default.Transparent}"
+                    />
+                <Button 
+                    IsEnabled="{Binding Enabled}"
+                    Margin="8,16"
+                    Text="This is a green button"
+                    Style="{StaticResource Style.Core.Button.Default}"
+                    Background="Green"
+                    >
+                    <!-- If you change the Background, also remember to also update the PointOver VisualState -->
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+                                        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray600}}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="PointerOver" >
+                                    <VisualState.Setters>
+                                        <Setter Property="Background" Value="DarkGreen"/>
+                                        <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+                <Button 
+                    IsEnabled="{Binding Enabled}"
+                    Margin="8,16"
+                    Text="This is a link styled button"
+                    Style="{StaticResource Style.Core.Button.Link}"
+                    />
+                <Button 
+                    IsEnabled="{Binding Enabled}"
+                    Margin="8,16"
+                    Text="This is a link styled button with a round frame"
+                    Style="{StaticResource Style.Core.Button.LinkRound}"
+                    />
+                <Button 
+                    IsEnabled="{Binding Enabled}"
+                    Margin="8,16"
+                    Text="This is a normal button"
+                    Style="{StaticResource Style.Core.Button.RoundedLong}"
+                    />
+                <BoxView
+                    Style="{StaticResource Style.Core.BoxView.PrimarySeparator}"
+                    Margin="4"
+                    />
+                <Label 
+                    Margin="2,16"
+                    Text="Icon Buttons"
+                    VerticalTextAlignment="Center" 
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource Style.Core.Label.Default}"
+                    />
+                <Grid
+                    ColumnDefinitions="*,*,*"
+                    RowDefinitions="*,*"
+                    >
+                    <Button 
+                        IsEnabled="{Binding Enabled}"
+                        Margin="8,16"
+                        Text="{x:Static iconsSyncfusion:SyncfusionIcons.Favourite}"
+                        Style="{StaticResource Style.Core.Button.IconPrimary}"
+                        />
+                    <Button 
+                        IsEnabled="{Binding Enabled}"
+                        Grid.Column="1"
+                        Margin="8,16"
+                        Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
+                        Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
+                        />
+                    <Button 
+                        IsEnabled="{Binding Enabled}"
+                        Grid.Column="2"
+                        Margin="8,16"
+                        Text="{x:Static icons:MaterialIcons.ProgressCheck}"
+                        Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
+                        />
+                    <Button 
+                        IsEnabled="{Binding Enabled}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="8,16"
+                        Text="{x:Static icons:MaterialIcons.ProgressCheck}"
+                        Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
+                        />
+                    <Button 
+                        IsEnabled="{Binding Enabled}"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="8,16"
+                        Text="{x:Static icons:MaterialIcons.AlertCircleCheckOutline}"
+                        Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Critical}"
+                        />
+                    <Button 
+                        IsEnabled="{Binding Enabled}"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="8,16"
+                        Text="{x:Static icons:MaterialIcons.ScriptOutline}"
+                        Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Error}"
+                        />
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
