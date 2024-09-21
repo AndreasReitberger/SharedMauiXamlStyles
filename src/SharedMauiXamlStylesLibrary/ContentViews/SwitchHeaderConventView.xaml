@@ -12,6 +12,19 @@
                 HorizontalOptions="FillAndExpand"
                 ColumnDefinitions="Auto,*,Auto"
                 >
+                <!--  Back Button  -->
+                <Button
+                    HeightRequest="{OnPlatform Android=40, Default=50}"
+                    Margin="0"
+                    Padding="0"
+                    Command="{TemplateBinding BackButtonCommand}"
+                    CommandParameter="{Binding .}"
+                    CornerRadius="0"
+                    Text="{TemplateBinding BackButtonIconText}"
+                    FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                    Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
+                    />
+                <!-- Workaround (not needed any more)
                 <Label
                     Style="{StaticResource Style.Core.Label.Header}"
                     VerticalTextAlignment="Center"
@@ -35,6 +48,7 @@
                                 />
                     </Label.GestureRecognizers>
                 </Label>
+                -->
                 <Label 
                     Grid.Column="1"
                     FormattedText="{TemplateBinding TitleLabelFormattedString}"
@@ -43,6 +57,20 @@
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     />
+                <!--  Next Button  -->
+                <Button
+                    HeightRequest="{OnPlatform Android=40, Default=50}"
+                    Grid.Column="2"
+                    Margin="0"
+                    Padding="0"
+                    Command="{TemplateBinding BackButtonCommand}"
+                    CommandParameter="{Binding .}"
+                    CornerRadius="0"
+                    Text="{TemplateBinding NextButtonIconText}"
+                    FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                    Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
+                    />
+                <!-- Workaround (not needed any more)
                 <Label
                     Grid.Column="2"
                     Style="{StaticResource Style.Core.Label.Header}"
@@ -67,6 +95,7 @@
                                 />
                     </Label.GestureRecognizers>
                 </Label>
+                -->
             </Grid>
         </ControlTemplate>
     </ContentView.ControlTemplate>
