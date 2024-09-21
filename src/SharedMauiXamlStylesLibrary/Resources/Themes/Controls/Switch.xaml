@@ -26,14 +26,12 @@
                         <VisualState.Setters>
                             <Setter Property="OnColor" Value="{OnPlatform Android={DynamicResource PrimaryColorLight}, Default={AppThemeBinding Light={StaticResource LightGreen}, Dark={StaticResource LightGreen}}}" />
                             <Setter Property="ThumbColor" Value="{OnPlatform Android={DynamicResource PrimaryColor}, Default={StaticResource White}}" />
-                            <!--<Setter Property="ThumbColor" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />-->
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Off">
                         <VisualState.Setters>
                             <Setter Property="ThumbColor" Value="{StaticResource White}" />
                             <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
-                            <!--<Setter Property="ThumbColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />-->
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
