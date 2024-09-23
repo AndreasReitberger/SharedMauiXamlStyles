@@ -8,6 +8,8 @@ public partial class SortFilterHeaderConventView : ContentView
     #region Bindings
 
     public static readonly BindableProperty IsFilteredProperty = BindableProperty.Create(nameof(IsFiltered), typeof(bool), typeof(SortFilterHeaderConventView), false);
+
+    [Obsolete("Use `HeightRequest` instead")]
     public static readonly BindableProperty ContainerHeightProperty = BindableProperty.Create(nameof(ContainerHeight), typeof(int), typeof(SortFilterHeaderConventView), 45);
     public static readonly BindableProperty ShowFilterButtonProperty = BindableProperty.Create(nameof(ShowFilterButton), typeof(bool), typeof(SortFilterHeaderConventView), true);
 
@@ -72,6 +74,7 @@ public partial class SortFilterHeaderConventView : ContentView
         set => SetValue(IsFilteredProperty, value);
     }
 
+    [Obsolete("Use `HeightRequest` instead")]
     public int ContainerHeight
     {
         get => (int)GetValue(ContainerHeightProperty);

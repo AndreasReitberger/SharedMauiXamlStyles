@@ -7,6 +7,7 @@
     <ContentView.ControlTemplate>
         <ControlTemplate>
             <Grid
+                x:Name="root"
                 Background="{TemplateBinding Background}"
                 HeightRequest="{TemplateBinding HeightRequest}"
                 HorizontalOptions="FillAndExpand"
@@ -14,7 +15,6 @@
                 >
                 <!--  Back Button  -->
                 <Button
-                    HeightRequest="{OnPlatform Android=40, Default=50}"
                     Margin="0"
                     Padding="0"
                     Command="{TemplateBinding BackButtonCommand}"
@@ -23,32 +23,9 @@
                     Text="{TemplateBinding BackButtonIconText}"
                     FontFamily="{TemplateBinding ButtonIconFontFamily}"
                     Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
+                    MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
+                    HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
                     />
-                <!-- Workaround (not needed any more)
-                <Label
-                    Style="{StaticResource Style.Core.Label.Header}"
-                    VerticalTextAlignment="Center"
-                    >
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="{TemplateBinding BackButtonIconText}"
-                                FontFamily="{TemplateBinding ButtonIconFontFamily}"
-                                Style="{StaticResource Style.Core.Span.Icon.MaterialDesign}" 
-                                />
-                            <Span Text="  " />
-                            <Span Text="{TemplateBinding BackButtonText}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer
-                                NumberOfTapsRequired="1"
-                                Command="{TemplateBinding BackButtonCommand}"
-                                CommandParameter="{Binding .}"
-                                />
-                    </Label.GestureRecognizers>
-                </Label>
-                -->
                 <Label 
                     Grid.Column="1"
                     FormattedText="{TemplateBinding TitleLabelFormattedString}"
@@ -59,43 +36,18 @@
                     />
                 <!--  Next Button  -->
                 <Button
-                    HeightRequest="{OnPlatform Android=40, Default=50}"
                     Grid.Column="2"
                     Margin="0"
                     Padding="0"
-                    Command="{TemplateBinding BackButtonCommand}"
+                    Command="{TemplateBinding NextButtonCommand}"
                     CommandParameter="{Binding .}"
                     CornerRadius="0"
                     Text="{TemplateBinding NextButtonIconText}"
                     FontFamily="{TemplateBinding ButtonIconFontFamily}"
                     Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
+                    MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
+                    HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
                     />
-                <!-- Workaround (not needed any more)
-                <Label
-                    Grid.Column="2"
-                    Style="{StaticResource Style.Core.Label.Header}"
-                    VerticalTextAlignment="Center"
-                    >
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="{TemplateBinding NextButtonIconText}"
-                                FontFamily="{TemplateBinding ButtonIconFontFamily}"
-                                Style="{StaticResource Style.Core.Span.Icon.MaterialDesign}" 
-                                />
-                            <Span Text="  " />
-                            <Span Text="{TemplateBinding NextButtonText}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer
-                                NumberOfTapsRequired="1"
-                                Command="{TemplateBinding NextButtonCommand}"
-                                CommandParameter="{Binding .}"
-                                />
-                    </Label.GestureRecognizers>
-                </Label>
-                -->
             </Grid>
         </ControlTemplate>
     </ContentView.ControlTemplate>
