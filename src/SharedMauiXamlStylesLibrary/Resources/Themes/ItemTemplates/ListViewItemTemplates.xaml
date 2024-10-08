@@ -127,14 +127,14 @@
             Style="{StaticResource Style.Core.Grid.ListItem}"
             Padding="2" 
             Margin="1" 
-            ColumnDefinitions="48,*"
+            ColumnDefinitions="48,*,50,50"
             RowDefinitions="{OnIdiom Tablet=80, Default=60}"
             >
-            <!-- Flag -->
+            <!-- Flag 
             <Image 
                 HeightRequest="24"                                          
                 Source="{Binding FlagUri, Converter={StaticResource UriToStringConverter}}"
-                />
+                />-->
             <!-- Infos -->
             <StackLayout
                 Grid.Column="1"
@@ -156,6 +156,42 @@
                     FontSize="12"
                     />
             </StackLayout>
+            <!-- State -->
+            <Label
+                Grid.Column="2"
+                >
+                <Label.Style>
+                    <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
+                        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.Check}"/>
+                        <Setter Property="TextColor" Value="{StaticResource Green}"/>
+                        <Style.Triggers>
+                            <DataTrigger
+                                Binding="{Binding IsOfficial}"
+                                Value="False"
+                                TargetType="Label"
+                                >
+                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AccountBadge}"/>
+                                <Setter Property="TextColor" Value="{StaticResource Orange}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <!-- Progress -->
+            <Label
+                Grid.Column="3"
+                Style="{StaticResource Style.Core.Label.Default}"
+                VerticalTextAlignment="Center"
+                >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="{Binding PercentTranslated}" />
+                            <Span Text=" %" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </Grid>
     </DataTemplate>
 
@@ -165,7 +201,7 @@
             Padding="2"
             Margin="1"
             Background="{DynamicResource PrimaryColor}"
-            ColumnDefinitions="48,*"
+            ColumnDefinitions="48,*,Auto,Auto"
             RowDefinitions="{OnIdiom Tablet=80, Default=60}"
             >
             <!-- Flag -->
@@ -195,8 +231,44 @@
                     TextColor="{StaticResource White}"
                     FontSize="12"
                     />
-                </StackLayout>
-            </Grid>
+            </StackLayout>
+            <!-- State -->
+            <Label
+                Grid.Column="2"
+                >
+                <Label.Style>
+                    <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
+                        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.Check}"/>
+                        <Setter Property="TextColor" Value="{StaticResource Green}"/>
+                        <Style.Triggers>
+                            <DataTrigger
+                                Binding="{Binding IsOfficial}"
+                                Value="False"
+                                TargetType="Label"
+                                >
+                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AccountBadge}"/>
+                                <Setter Property="TextColor" Value="{StaticResource Orange}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <!-- Progress -->
+            <Label
+                Grid.Column="3"
+                Style="{StaticResource Style.Core.Label.Default}"
+                VerticalTextAlignment="Center"
+                >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="{Binding PercentTranslated}" />
+                            <Span Text=" %" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
     </DataTemplate>
 
     <!-- Documentation -->
