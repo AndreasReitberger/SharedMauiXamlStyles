@@ -56,6 +56,10 @@
         ContentTemplate="{DataTemplate views:LabelsPage}"
         Route="LabelsPage" />
     <ShellContent
+        Title="Languages"
+        ContentTemplate="{DataTemplate views:LanguagesPage}"
+        Route="LanguagesPage" />
+    <ShellContent
         Title="Pickers"
         ContentTemplate="{DataTemplate views:PickersPage}"
         Route="PickersPage" />
