@@ -212,7 +212,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.90" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.90" />
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.91" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.91" />
 	</ItemGroup>
 </Project>
