@@ -15,7 +15,7 @@ on:
 env:
   BUILD_CONFIGURATION: Release
   DOTNET_VERSION: 8.0.x
-  CSPROJ_TO_BUILD: SharedMauiXamlStylesLibrary.SampleApp.csproj
+  CSPROJ_TO_BUILD: /src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj
 
 jobs:
   build-ci:
