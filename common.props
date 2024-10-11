@@ -13,8 +13,8 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Authors>Andreas Reitberger</Authors>
         <Copyright>Andreas Reitberger</Copyright>
-        <PublishReadyToRun>false</PublishReadyToRun>
 		<LangVersion>12</LangVersion>
+		<Nullable>enable</Nullable>
 
         <!--Source-Linking-->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -25,8 +25,7 @@
 		<!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
 		<!-- https://github.com/dotnet/maui/pull/19360 
 	    <WarningsAsErrors>XC0022,XC0023</WarningsAsErrors>
-		-->
-		
+		-->		
     </PropertyGroup>
 
     <ItemGroup>
