@@ -195,4 +195,9 @@
 	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.1" />
 	  <PackageReference Include="System.Text.Json" Version="8.0.5" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.92" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
+	</ItemGroup>
 </Project>

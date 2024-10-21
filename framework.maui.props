@@ -3,7 +3,7 @@
     <PropertyGroup>
 		<TargetFrameworks>net8.0-android</TargetFrameworks>
 		<!-- Needed for GitHub action, iOS and MacOS is not workig on Linux -->
-		<TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net8.0-ios;net8.0-maccatalyst;net8.0-macos</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
 		
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
@@ -29,7 +29,7 @@
     </PropertyGroup>
 		
 	<!-- https://github.com/dotnet/maui/issues/9299 -->
-	<PropertyGroup Condition=" $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' == 'Release' ">
+	<PropertyGroup Condition=" $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' == 'Release' and '$(OutputType)' != 'Library'">
 		<PublishReadyToRun>true</PublishReadyToRun>
 	</PropertyGroup>
 </Project>
