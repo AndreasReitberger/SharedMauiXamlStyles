@@ -22,7 +22,7 @@
     <Style TargetType="gauge:SfRadialGauge" BasedOn="{StaticResource Style.Syncfusion.SfRadialGauge.Default}" />
 
     <Style x:Key="Style.Syncfusion.RadialLineStyle.Default" TargetType="gauge:RadialLineStyle">
-        <Setter Property="Background" Value="{StaticResource Transparent}" />
+        <!--<Setter Property="Background" Value="{StaticResource Transparent}" />-->
         <Setter Property="Fill" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
         <Setter Property="Thickness" Value="4" />
         <Setter Property="ThicknessUnit" Value="Pixel" />
