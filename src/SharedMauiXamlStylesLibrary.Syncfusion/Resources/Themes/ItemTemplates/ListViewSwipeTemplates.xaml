@@ -119,6 +119,26 @@
         </Label>
     </DataTemplate>
 
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Export">
+        <Label
+            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
+            Text="{x:Static icons:MaterialIcons.FileExportOutline}"
+            TextColor="{StaticResource White}"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            Background="{StaticResource Yellow}"
+            Margin="0"
+            >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Command="{Binding BindingContext.ExportItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                    CommandParameter="{Binding .}"
+                    />
+            </Label.GestureRecognizers>
+        </Label>
+    </DataTemplate>
+
     <!-- Double Swipe Templates -->
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.EditDelete">
         <Grid
