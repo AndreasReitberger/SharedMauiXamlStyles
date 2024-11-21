@@ -70,4 +70,8 @@
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
 
+    <Style x:Key="Style.Core.Span.IconTiny" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}"/>
+    </Style>
+
 </ResourceDictionary>
