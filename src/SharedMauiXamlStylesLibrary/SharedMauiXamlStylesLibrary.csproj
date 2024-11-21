@@ -2,7 +2,8 @@
 	<Import Project="..\..\common.props" />
 
 	<PropertyGroup>
-		<TargetFrameworks>$(TargetFrameworks);net8.0</TargetFrameworks>
+		<TargetFrameworks>$(TargetFrameworks);net9.0</TargetFrameworks>
+		<TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net9.0-macos</TargetFrameworks>
 		<OutputType>Library</OutputType>
 		
 		<RootNamespace>AndreasReitberger.Shared</RootNamespace>
@@ -152,8 +153,8 @@
 	  <Folder Include="Licenses\LicenseFiles\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.92" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
+	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.10" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="9.0.10" />
 	</ItemGroup>
 </Project>

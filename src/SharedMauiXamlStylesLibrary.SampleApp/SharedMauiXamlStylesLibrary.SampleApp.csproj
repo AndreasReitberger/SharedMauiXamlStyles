@@ -192,12 +192,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.1" />
-	  <PackageReference Include="System.Text.Json" Version="8.0.5" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.0" />
+	  <PackageReference Include="System.Text.Json" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.92" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
+	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.10" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="9.0.10" />
 	</ItemGroup>
 </Project>
