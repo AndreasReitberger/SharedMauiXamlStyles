@@ -154,7 +154,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.12" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="9.0.12" />
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.21" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="9.0.21" />
 	</ItemGroup>
 </Project>
