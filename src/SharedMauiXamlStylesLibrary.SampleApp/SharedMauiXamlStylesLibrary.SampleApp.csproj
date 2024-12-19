@@ -193,6 +193,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.0" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.14-preview1" />
 	  <PackageReference Include="System.Text.Json" Version="9.0.0" />
 	</ItemGroup>
 
