@@ -9,7 +9,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
     public partial class ThemeManager : ObservableObject, IThemeManager
     {
         #region Instance
-        static ThemeManager _instance = null;
+        static ThemeManager? _instance = null;
         static readonly object Lock = new();
         public static ThemeManager Instance
         {
@@ -17,12 +17,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
             {
                 lock (Lock)
                 {
-                    if (_instance == null)
-                        _instance = new ThemeManager();
+                    _instance ??= new ThemeManager();
                 }
                 return _instance;
             }
-
             set
             {
                 if (_instance == value) return;
@@ -31,7 +29,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
                     _instance = value;
                 }
             }
-
         }
         #endregion
 
@@ -39,8 +36,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         public AppTheme Theme { get; } = AppTheme.Light;
 
         [ObservableProperty]
-        List<ThemeColorInfo> availableThemes = new()
-        {
+        public partial List<ThemeColorInfo> AvailableThemes { get; set; } =
+        [
             new ThemeColorInfo() { ThemeName = "Default", PrimaryColor = Color.FromArgb("#377dff"), IsAppDefault = true },
             new ThemeColorInfo() { ThemeName = Colors.Gray.ToHex(), PrimaryColor = Colors.Gray },
             new ThemeColorInfo() { ThemeName = Colors.Brown.ToHex(), PrimaryColor = Colors.Brown },
@@ -56,12 +53,11 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
             new ThemeColorInfo() { ThemeName = Colors.Violet.ToHex(), PrimaryColor = Colors.Violet },
             new ThemeColorInfo() { ThemeName = Colors.Silver.ToHex(), PrimaryColor = Colors.Silver },
             new ThemeColorInfo() { ThemeName = Colors.Gold.ToHex(), PrimaryColor = Colors.Gold },
-        };
-
+        ];
         [ObservableProperty]
-        public ThemeColorInfo selectedTheme;
+        public partial ThemeColorInfo? SelectedTheme { get; set; }
 
-        public ThemeColorInfo AppDefaultTheme => AvailableThemes?.FirstOrDefault(themeInfo => themeInfo.IsAppDefault);
+        public ThemeColorInfo? AppDefaultTheme => AvailableThemes?.FirstOrDefault(themeInfo => themeInfo.IsAppDefault);
         #endregion
 
         #region Methods
@@ -123,7 +119,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         /// Updates the `PrimaryColor` for platform specific resources, as the StatusBar
         /// </summary>
         /// <param name="theme">The ThemeColorInfo to be changed to</param>
-        public void UpdatePlatformThemeColor(ThemeColorInfo theme)
+        public void UpdatePlatformThemeColor(ThemeColorInfo? theme)
         {
             try
             {
@@ -135,16 +131,17 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
             }
         }
 
-        public ThemeColorInfo FindTheme(string primaryColorHexCode, bool createCustomIfNull = true) => AvailableThemes?.FirstOrDefault(theme => theme.PrimaryColor?.ToArgbHex() == primaryColorHexCode) ??
+        public ThemeColorInfo? FindTheme(string primaryColorHexCode, bool createCustomIfNull = true) => AvailableThemes?.FirstOrDefault(theme => theme.PrimaryColor?.ToArgbHex() == primaryColorHexCode) ??
             (createCustomIfNull ? new ThemeColorInfo() { ThemeName = primaryColorHexCode, PrimaryColor = Color.FromArgb(primaryColorHexCode) } : null);
 
-        public ThemeColorInfo FindThemeOrDefault(string primaryColorHexCode) => FindTheme(primaryColorHexCode) ?? AppDefaultTheme;
+        public ThemeColorInfo? FindThemeOrDefault(string primaryColorHexCode) => FindTheme(primaryColorHexCode) ?? AppDefaultTheme;
 
-        public Color GetThemeColorFromResource(string resourceName, Application app = null)
+        public Color? GetThemeColorFromResource(string resourceName, Application? app = null)
         {
             try
             {
-                Application instance = app ?? Application.Current;
+                Application? instance = app ?? Application.Current;
+                if (instance is null) return null;
                 instance.Resources.TryGetValue(resourceName, out object resource);
                 if (resource is Color color)
                 {

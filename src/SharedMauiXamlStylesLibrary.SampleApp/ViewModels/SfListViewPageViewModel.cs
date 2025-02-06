@@ -7,10 +7,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
     public partial class DemoItem : ObservableObject
     {
         [ObservableProperty]
-        string name = "";
+        public partial string Name { get; set; } = "";
 
         [ObservableProperty]
-        int counter = 0;
+        public partial int Counter { get; set; } = 0;
     }
 
     public partial class SfListViewPageViewModel : BaseViewModel
@@ -19,10 +19,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        DemoItem item;
+        public partial DemoItem Item { get; set; }
 
         [ObservableProperty]
-        ObservableCollection<DemoItem> items = [
+        public partial ObservableCollection<DemoItem> Items { get; set; } = [
             new() { Name = "Test1", Counter = 1 },
             new() { Name = "Test2", Counter = 2 },
             new() { Name = "Test3", Counter = 3 },
@@ -30,7 +30,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         ];
 
         [ObservableProperty]
-        int index = 0;
+        public partial int Index { get; set; } = 0;
 
         #endregion
 

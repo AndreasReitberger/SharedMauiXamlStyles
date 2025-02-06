@@ -12,17 +12,17 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        LocalizationInfo language;
+        public partial LocalizationInfo Language { get; set; }
 
         [ObservableProperty]
-        ObservableCollection<LocalizationInfo> languages = [
+        public partial ObservableCollection<LocalizationInfo> Languages { get; set; } = [
             new() { Name = "German", Code = "de-DE", Translator = "Andreas", PercentTranslated = 100, IsOfficial = true },
             new() { Name = "English", Code = "en-US", Translator = "Andreas", PercentTranslated = 75, IsOfficial = true },
             new() { Name = "Italian", Code = "it-IT", Translator = "Some other guy", PercentTranslated = 50, IsOfficial = false },
         ];
 
         [ObservableProperty]
-        int index = 0;
+        public partial int Index { get; set; } = 0;
 
         #endregion
 

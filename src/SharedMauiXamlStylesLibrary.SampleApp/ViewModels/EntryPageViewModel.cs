@@ -8,10 +8,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        string sampleText = "This is just a sample text";
+        public partial string SampleText { get; set; } = "This is just a sample text";
 
         [ObservableProperty]
-        double sampleValue = 2;
+        public partial double SampleValue { get; set; } = 2;
 
         #endregion
 

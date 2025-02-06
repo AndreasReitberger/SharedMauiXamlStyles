@@ -9,20 +9,19 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         public MultiSelectComboBox()
         {
             SelectionChanged += ComboBoxItemSelect_SelectionChanged;
-
         }
 
-        void ComboBoxItemSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        void ComboBoxItemSelect_SelectionChanged(object? sender, SelectionChangedEventArgs e)
         {
             ArrayList list = new(SelectedItemsList);
             // Add new items
             if (e?.AddedItems is not null)
-                foreach (var item in e?.AddedItems)
+                foreach (var item in e.AddedItems)
                     if (!list.Contains(item))
                         list.Add(item);
             // Remove items
             if (e?.RemovedItems is not null)
-                foreach (var item in e?.RemovedItems)
+                foreach (var item in e.RemovedItems)
                     if (list.Contains(item))
                         list.Remove(item);
             // Update list

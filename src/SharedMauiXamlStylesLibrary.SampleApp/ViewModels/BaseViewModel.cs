@@ -10,48 +10,49 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
     {
         #region App
         [ObservableProperty]
-        string version = string.Empty;
+        public partial string Version { get; set; } = string.Empty;
 
         [ObservableProperty]
-        string build = string.Empty;
+        public partial string Build { get; set; } = string.Empty;
 
         [ObservableProperty]
-        bool isTabletMode = false;
+        public partial bool IsTabletMode { get; set; } = false;
 
         [ObservableProperty]
-        double progress = 0;
+        public partial double Progress { get; set; } = 0;
 
         [ObservableProperty]
-        bool licenseActivationShown = false;
+        public partial bool LicenseActivationShown { get; set; } = false;
         #endregion
 
         #region Navigation
         [ObservableProperty]
-        bool isViewShown = false;
+        public partial bool IsViewShown { get; set; } = false;
 
         #endregion
 
         #region Connection
         [ObservableProperty]
-        bool isConnecting = false;
+        public partial bool IsConnecting { get; set; } = false;
 
         #endregion
 
         #region States
         [ObservableProperty]
-        bool isListening = false;
+        public partial bool IsListening { get; set; } = false;
 
         [ObservableProperty]
-        bool isListeningToWebSocket = false;
+        public partial bool IsListeningToWebSocket { get; set; } = false;
 
         [ObservableProperty]
-        bool closeWebSocketWhenLeaving = false;
+        public partial bool CloseWebSocketWhenLeaving { get; set; } = false;
 
         #endregion
 
         #region Theme
         [ObservableProperty]
-        bool darkmode = false;
+        public partial bool Darkmode { get; set; } = false;
+
         partial void OnDarkmodeChanged(bool value)
         {
             if (!IsLoading)
@@ -64,7 +65,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
 
         [ObservableProperty]
-        string hexCode = string.Empty;
+        public partial string HexCode { get; set; } = string.Empty;
+
         partial void OnHexCodeChanged(string value)
         {
             if (!IsLoading)

@@ -8,13 +8,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        string name = "This is just a sample text";
+        public partial string Name { get; set; } = "This is just a sample text";
 
         [ObservableProperty]
-        double packageSize = 5.34;
+        public partial double PackageSize { get; set; } = 5.34;
 
         [ObservableProperty]
-        double price = 19.99;
+        public partial double Price { get; set; } = 19.99;
         #endregion
 
         #region Constructor, LoadSettings

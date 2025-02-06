@@ -46,7 +46,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         /// </summary>
         //string searchText;
         //ListViewFilterBase filter;
-        SortDescriptor defaultSortDescriptor;
+        SortDescriptor? defaultSortDescriptor;
         #endregion
 
         #region Property
@@ -60,7 +60,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             set { SetValue(SearchTextProperty, value); }
         }
         /**/
-        public object Filter
+        public object? Filter
         {
             get { return GetValue(FilterObjectProperty); }
             set { SetValue(FilterObjectProperty, value); }
@@ -73,7 +73,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             set { SetValue(IsFilterProperty, value); }
         }
 
-        public SortDescriptor DefaultSortDescriptor
+        public SortDescriptor? DefaultSortDescriptor
         {
             get { return (SortDescriptor)GetValue(DefaultSortDescriptorProperty); }
             set { SetValue(DefaultSortDescriptorProperty, value); }
@@ -81,7 +81,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         #endregion
 
         #region Method
-        void ItemSelect_SelectionChanged(object sender, ItemSelectionChangedEventArgs e)
+        void ItemSelect_SelectionChanged(object? sender, ItemSelectionChangedEventArgs e)
         {
             ArrayList list = new(SelectedItemsList);
             // Add new items
@@ -101,11 +101,11 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
 
         static void OnSelectionChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            EnhancedListView listView = bindable as EnhancedListView;
+            EnhancedListView? listView = bindable as EnhancedListView;
             if (newValue is IList selectedItems)
             {
-                listView.SetValue(SelectedItemsListProperty, selectedItems);
-                if (selectedItems?.Count > 0 && listView.SelectedItems.Count == 0)
+                listView?.SetValue(SelectedItemsListProperty, selectedItems);
+                if (selectedItems?.Count > 0 && listView?.SelectedItems?.Count == 0)
                 {
                     foreach (var item in selectedItems)
                         listView.SelectedItems.Add(item);
@@ -169,7 +169,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
                     listView.DataSource.Refresh();
                     //listView.DataSource.RefreshFilter();
                     // Refresh causes exception if LayoutBase is GridLayout
-                    if (listView.ItemsLayout.GetType() == typeof(LinearLayout))
+                    if (listView?.ItemsLayout?.GetType() == typeof(LinearLayout))
                         listView.RefreshView();
                 }
             }
@@ -177,7 +177,6 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             {
                 Console.WriteLine($"Exception: {exc?.Message}");
             }
-
         }
 
         #endregion
@@ -196,12 +195,12 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             //SelectionChanged += ItemSelect_SelectionChanged;
         }
 
-        void SearchableListView_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        void SearchableListView_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
 
-            EnhancedListView listView = (EnhancedListView)sender;
+            EnhancedListView? listView = (EnhancedListView?)sender;
             if (e == null) return;
-            string propertyName = e.PropertyName;
+            string? propertyName = e.PropertyName;
             if (!string.IsNullOrEmpty(propertyName))
             {
                 if (listView != null)
@@ -241,7 +240,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             }
         }
 
-        void SelectedItems_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void SelectedItems_CollectionChanged(object? sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             if (sender is ObservableCollection<object> items)
             {
@@ -259,7 +258,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         #endregion
 
         #region Event Handlers
-        public event EventHandler<EnhancedListViewFilterChangedEventArgs> FilterChanged;
+        public event EventHandler<EnhancedListViewFilterChangedEventArgs>? FilterChanged;
         protected virtual void OnFilterChanged(EnhancedListViewFilterChangedEventArgs e)
         {
             FilterChanged?.Invoke(this, e);
