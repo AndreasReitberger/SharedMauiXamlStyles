@@ -27,9 +27,9 @@
             RowDefinitions="*,64,Auto"
             >
             <!-- Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" -->
-            <Frame
+            <Border
                 Margin="20,16"
-                BorderColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                Stroke="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
                 Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}"
                 >
                 <Image
@@ -38,7 +38,7 @@
                     Aspect="AspectFit"
                     SemanticProperties.Description="{Binding Heading}"
                     />
-            </Frame>
+            </Border>
             <Label 
                 Grid.Row="1"
                 Text="{Binding Heading}"
