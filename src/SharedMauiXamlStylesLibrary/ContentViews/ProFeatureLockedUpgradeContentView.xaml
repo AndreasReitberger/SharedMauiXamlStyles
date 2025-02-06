@@ -6,7 +6,7 @@
     >
     <ContentView.ControlTemplate>
         <ControlTemplate>
-            <Frame   
+            <Border   
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
                 Padding="4"
                 >
@@ -36,7 +36,7 @@
                             />
                     </Grid>
                 </Grid>
-            </Frame>
+            </Border>
         </ControlTemplate>
     </ContentView.ControlTemplate>
 </ContentView>
