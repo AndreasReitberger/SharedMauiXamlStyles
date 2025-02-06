@@ -9,7 +9,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        ObservableCollection<string> sizes = [
+        public partial ObservableCollection<string> Sizes { get; set; } = [
             "S",
             "M",
             "L",
@@ -18,11 +18,12 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
             ];
 
         [ObservableProperty]
-        int selectedSizeIndex = 0;
+        public partial int SelectedSizeIndex { get; set; } = 0;
+
         partial void OnSelectedSizeIndexChanged(int value) => SelectedSize = Sizes[value];
 
         [ObservableProperty]
-        string selectedSize = string.Empty;
+        public partial string SelectedSize { get; set; } = string.Empty;
         #endregion
 
         #region Constructor, LoadSettings

@@ -9,10 +9,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        bool refreshOnPageAppearing = false;
+        public partial bool RefreshOnPageAppearing { get; set; } = false;
 
         [ObservableProperty]
-        bool confirmPageClosing = false;
+        public partial bool ConfirmPageClosing { get; set; } = false;
 
         #endregion
 

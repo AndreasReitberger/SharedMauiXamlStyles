@@ -9,7 +9,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        ObservableCollection<string> list =
+        public partial ObservableCollection<string> List { get; set; } =
         [
             "Text 1",
             "Text 2",

@@ -13,7 +13,7 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Authors>Andreas Reitberger</Authors>
         <Copyright>Andreas Reitberger</Copyright>
-		<LangVersion>12</LangVersion>
+		<LangVersion>Preview</LangVersion>
 		<Nullable>enable</Nullable>
 
         <!--Source-Linking-->

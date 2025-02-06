@@ -8,16 +8,16 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        double progress = 0.50;
+        public partial double Progress { get; set; } = 0.50;
 
         [ObservableProperty]
-        double progressSecond = 0.75;
+        public partial double ProgressSecond { get; set; } = 0.75;
 
         [ObservableProperty]
-        bool refreshOnPageAppearing = false;
+        public partial bool RefreshOnPageAppearing { get; set; } = false;
 
         [ObservableProperty]
-        bool confirmPageClosing = false;
+        public partial bool ConfirmPageClosing { get; set; } = false;
 
         #endregion
 

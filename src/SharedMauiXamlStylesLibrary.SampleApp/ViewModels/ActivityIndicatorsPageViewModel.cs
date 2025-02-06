@@ -8,7 +8,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        bool busy = true;
+        public partial bool Busy { get; set; } = true;
         #endregion
 
         #region Constructor, LoadSettings

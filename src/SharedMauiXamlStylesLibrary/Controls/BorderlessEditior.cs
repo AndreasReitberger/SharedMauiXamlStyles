@@ -17,7 +17,7 @@
         /// </summary>
         /// <param name="sender">The editor</param>
         /// <param name="e">Text changed event args</param>
-        void ExtendableEditor_TextChanged(object sender, TextChangedEventArgs e)
+        void ExtendableEditor_TextChanged(object? sender, TextChangedEventArgs e)
         {
             InvalidateMeasure();
         }

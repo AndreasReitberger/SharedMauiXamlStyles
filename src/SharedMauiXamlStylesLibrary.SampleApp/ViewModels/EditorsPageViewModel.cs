@@ -9,10 +9,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        string exampleText = "This is a small text example...";
+        public partial string ExampleText { get; set; } = "This is a small text example...";
 
         [ObservableProperty]
-        string exampleTextLong = "This is a very long text example for an editor control...";
+        public partial string ExampleTextLong { get; set; } = "This is a very long text example for an editor control...";
 
         #endregion
 

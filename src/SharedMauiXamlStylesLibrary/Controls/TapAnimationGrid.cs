@@ -29,7 +29,7 @@ namespace AndreasReitberger.Shared.Controls
             BindableProperty.Create(nameof(IsAnimated), typeof(bool), typeof(TapAnimationGrid), false, BindingMode.TwoWay,
                 null, propertyChanged: OnTapped);
 
-        ICommand tappedCommand;
+        ICommand? tappedCommand;
 
         #endregion
 
@@ -118,7 +118,7 @@ namespace AndreasReitberger.Shared.Controls
         {
 
             TapAnimationGrid grid = (TapAnimationGrid)bindable;
-            if (grid.IsAnimated)
+            if (grid.IsAnimated && Application.Current is not null)
             {
                 Application.Current.Resources.TryGetValue($"{(Application.Current.RequestedTheme == AppTheme.Light ? "Gray100" : "Gray900")}", out var retVal);
                 grid.Background = (Brush)retVal;

@@ -9,7 +9,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        ObservableCollection<string> items =
+        public partial ObservableCollection<string> Items { get; set; } =
          [
          "Item 1",
              "Item 2",
@@ -17,7 +17,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
          ];
 
         [ObservableProperty]
-        string selectedItem = "";
+        public partial string SelectedItem { get; set; } = "";
 
         #endregion
 

@@ -11,10 +11,11 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        ObservableCollection<ThemeColorInfo> themes = new();
+        public partial ObservableCollection<ThemeColorInfo> Themes { get; set; } = new();
 
         [ObservableProperty]
-        ThemeColorInfo theme;
+        public partial ThemeColorInfo Theme { get; set; }
+
         partial void OnThemeChanged(ThemeColorInfo value)
         {
             HexCode = value?.PrimaryColor.ToArgbHex();
