@@ -8,7 +8,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        public partial double Progress { get; set; } = 0.50;
+        public new partial double Progress { get; set; } = 0.50;
 
         [ObservableProperty]
         public partial double ProgressSecond { get; set; } = 0.75;

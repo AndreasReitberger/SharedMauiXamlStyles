@@ -11,8 +11,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
     public class UserSecretsManager
     {
         #region Variables
-        private static UserSecretsManager _instance;
-        private readonly JObject _secrets;
+        private static UserSecretsManager? _instance;
+        private readonly JObject? _secrets;
 
         // Default namespace of the project
         private const string Namespace = "SharedMauiXamlStylesLibrary.SampleApp";
@@ -25,11 +25,14 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         private UserSecretsManager()
         {
             Assembly assembly = IntrospectionExtensions.GetTypeInfo(typeof(UserSecretsManager)).Assembly;
-            Stream stream = assembly.GetManifestResourceStream($"{Namespace}.{UserSecretsFileName}");
+            Stream? stream = assembly.GetManifestResourceStream($"{Namespace}.{UserSecretsFileName}");
             // Double check that your secrets.json file exists and is valid on exception here!!
-            using StreamReader reader = new(stream);
-            string json = reader.ReadToEnd();
-            _secrets = JObject.Parse(json);
+            if (stream is not null)
+            {
+                using StreamReader reader = new(stream);
+                string json = reader.ReadToEnd();
+                _secrets = JObject.Parse(json);
+            }
         }
         #endregion
 
@@ -49,13 +52,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
             {
                 try
                 {
-                    var path = name.Split(':');
-                    JToken node = _secrets[path[0]];
+                    string[] path = name.Split(':');
+                    JToken? node = _secrets?[path[0]];
                     for (int index = 1; index < path.Length; index++)
                     {
-                        node = node[path[index]];
+                        node = node?[path[index]];
                     }
-                    return node.ToString();
+                    return node?.ToString() ?? string.Empty;
                 }
                 catch (Exception)
                 {

@@ -14,9 +14,9 @@ namespace AndreasReitberger.Shared.Syncfusion.Converters
 
         #endregion
 
-        public ChartSeriesCollection SeriesCollection { get; set; } = new();
+        public ChartSeriesCollection SeriesCollection { get; set; } = [];
 
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
         {
             if (value is Dictionary<string, List<double>> data)
             {
@@ -25,7 +25,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Converters
                     List<double> lastValues = keypair.Value.Skip(Math.Max(0, keypair.Value.Count() - 100)).ToList();
 
                     //ChartSeries series = ChartSeries.FirstOrDefault(s => s.AutomationId == keypair.Key);
-                    ChartSeries series = SeriesCollection.FirstOrDefault(s => ((SplineAreaSeries)s).XAxisName == keypair.Key);
+                    ChartSeries? series = SeriesCollection.FirstOrDefault(s => ((SplineAreaSeries)s).XAxisName == keypair.Key);
                     if (series is SplineAreaSeries splineSeries)
                     {
                         splineSeries.ItemsSource = new ObservableCollection<ChartValueTimeItem>(lastValues.Select((value, index) => new ChartValueTimeItem()
@@ -60,7 +60,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Converters
             }
             return SeriesCollection;
         }
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
         {
             throw new NotSupportedException();
         }

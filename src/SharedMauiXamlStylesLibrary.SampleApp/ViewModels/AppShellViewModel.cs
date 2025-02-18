@@ -18,7 +18,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         partial void OnThemeChanged(ThemeColorInfo value)
         {
-            HexCode = value?.PrimaryColor.ToArgbHex();
+            if (value?.PrimaryColor is not null)
+                HexCode = value.PrimaryColor.ToArgbHex();
         }
         #endregion
 
