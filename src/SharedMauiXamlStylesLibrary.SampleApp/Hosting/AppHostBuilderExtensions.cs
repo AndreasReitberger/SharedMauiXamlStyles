@@ -92,7 +92,9 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         public static MauiAppBuilder RegisterDispatcher(this MauiAppBuilder builder)
         {
             // Example: https://github.com/jamesmontemagno/ToolkitMessenger/blob/master/MauiApp2/MauiProgram.cs
-            builder.Services.AddSingleton(Dispatcher.GetForCurrentThread());
+            IDispatcher? dispatcher = Dispatcher.GetForCurrentThread();
+            if (dispatcher is not null)
+                builder.Services.AddSingleton(dispatcher);
             return builder;
         }
         public static void ConfigureMappers()

@@ -151,7 +151,6 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         {
             //var listView = bindable as EnhancedListView;
             return;
-
         }
 
         static void OnDefaultSortDescriptorChanged(BindableObject bindable, object oldValue, object newValue)
@@ -197,7 +196,6 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
 
         void SearchableListView_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-
             EnhancedListView? listView = (EnhancedListView?)sender;
             if (e == null) return;
             string? propertyName = e.PropertyName;

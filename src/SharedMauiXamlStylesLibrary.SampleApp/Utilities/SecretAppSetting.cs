@@ -6,6 +6,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
     /// </summary>
     public class SecretAppSetting
     {
-        public string SyncfusionApiKey { get; set; }
+        public string SyncfusionApiKey { get; set; } = string.Empty;
     }
 }

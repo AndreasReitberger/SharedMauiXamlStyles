@@ -50,7 +50,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.14-preview1" />
+	  <PackageReference Include="SharedMauiCoreLibrary" Version="1.1.14-preview2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -153,8 +153,8 @@
 	  <Folder Include="Licenses\LicenseFiles\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="9.0.1" />
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.30" />
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="9.0.30" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.40" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.40" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.2" />
 	</ItemGroup>
 </Project>

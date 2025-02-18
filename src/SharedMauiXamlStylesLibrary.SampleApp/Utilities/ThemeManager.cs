@@ -61,18 +61,17 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         #endregion
 
         #region Methods
-        public void ApplyTheme(AppTheme theme, Application app)
+        public void ApplyTheme(AppTheme theme, Application? app)
         {
             try
             {
-                if (app.UserAppTheme != theme)
+                if (app is not null && app.UserAppTheme != theme)
                     app.UserAppTheme = theme;
             }
             catch (Exception exc)
             {
                 Debug.WriteLine(exc);
             }
-
         }
 
         /// <summary>
@@ -80,11 +79,11 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         /// </summary>
         /// <param name="theme">The ThemeColorInfo to be changed to</param>
         /// <param name="app">The current app</param>
-        public void UpdatePrimaryThemeColor(ThemeColorInfo theme, Application app)
+        public void UpdatePrimaryThemeColor(ThemeColorInfo theme, Application? app)
         {
             try
             {
-                if (SelectedTheme == theme) return;
+                if (app is null || SelectedTheme == theme) return;
                 SelectedTheme = theme;
                 app.Resources["PrimaryColor"] = theme.PrimaryColor;
                 app.Resources["GradientStart"] = theme.PrimaryColor;
@@ -123,7 +122,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         {
             try
             {
-                new PlatformThemeService()?.SetStatusBarColor(theme?.PrimaryColor);
+                if (theme?.PrimaryColor is not null)
+                    new PlatformThemeService()?.SetStatusBarColor(theme.PrimaryColor);
             }
             catch (Exception exc)
             {
