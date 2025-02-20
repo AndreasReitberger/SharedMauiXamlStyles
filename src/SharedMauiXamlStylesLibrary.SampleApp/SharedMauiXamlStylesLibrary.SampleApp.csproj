@@ -11,6 +11,9 @@
 		<ApplicationId>com.companyname.sharedmauixamlstyleslibrary.sampleapp</ApplicationId>
 		<ApplicationIdGuid>8eed554f-d7ea-4289-b51d-d3c58fcbed6b</ApplicationIdGuid>
 
+		<!----><DefineConstants>$(DefineConstants);WinBuild_Exe</DefineConstants>
+		<!--<DefineConstants>$(DefineConstants);WinBuild_Package</DefineConstants>-->
+
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
@@ -35,6 +38,28 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+
+	<!-- Windows build settings for Windows (Executable)-->
+	<PropertyGroup Condition="'$(DefineConstants.Contains(WinBuild_Exe))'">
+		<!-- https://stackoverflow.com/a/75589936/10083577 -->
+		<WindowsPackageType Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">None</WindowsPackageType>
+		<WindowsAppSDKSelfContained Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">true</WindowsAppSDKSelfContained>
+		<WindowsAppSdkDeploymentManagerInitialize Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">false</WindowsAppSdkDeploymentManagerInitialize>
+		<!-- set false to build an exe file instead -->
+		<GenerateAppxPackageOnBuild>false</GenerateAppxPackageOnBuild>
+		<!-- Workaround:  https://github.com/dotnet/maui/issues/20677 
+			<ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>-->
+		<!--
+			<AppxBundle>Always</AppxBundle>
+			<AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+			-->
+	</PropertyGroup>
+	<!-- Windows build settings for Windows (Package)-->
+	<PropertyGroup Condition="'$(DefineConstants.Contains(WinBuild_Package))'">
+		<GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
+		<AppxBundle>Always</AppxBundle>
+		<AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+	</PropertyGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary.Syncfusion\SharedMauiXamlStylesLibrary.Syncfusion.csproj" />

@@ -11,8 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		..\common.props = ..\common.props
 		..\framework.maui.props = ..\framework.maui.props
-		..\SharedMauiXamlStylesLibrary.Syncfusion.targets = ..\SharedMauiXamlStylesLibrary.Syncfusion.targets
-		..\SharedMauiXamlStylesLibrary.targets = ..\SharedMauiXamlStylesLibrary.targets
+		..\PackMauiAssets.targets = ..\PackMauiAssets.targets
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedMauiXamlStylesLibrary.SampleApp", "SharedMauiXamlStylesLibrary.SampleApp\SharedMauiXamlStylesLibrary.SampleApp.csproj", "{70168733-B647-481A-92C3-49C4F28D1DB4}"
