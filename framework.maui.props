@@ -8,7 +8,7 @@
 		
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net9.0-tizen</TargetFrameworks> -->
-		<WindowsSdkPackageVersion>10.0.19041.41</WindowsSdkPackageVersion>
+		<!--<WindowsSdkPackageVersion Condition="'$(OutputType)' == 'Library'">10.0.19041.41</WindowsSdkPackageVersion>-->
 
 		<!-- General -->
 		<UseMaui>true</UseMaui>

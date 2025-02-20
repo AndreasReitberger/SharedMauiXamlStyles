@@ -1,6 +1,0 @@
-<Project>
-    <!-- https://github.com/dotnet/maui/issues/10019#issuecomment-1248032520 -->
-  <ItemGroup>
-    <MauiFont Include="$(MSBuildThisFileDirectory)\Fonts\UIFontIcons.ttf" />
-  </ItemGroup>
-</Project>
