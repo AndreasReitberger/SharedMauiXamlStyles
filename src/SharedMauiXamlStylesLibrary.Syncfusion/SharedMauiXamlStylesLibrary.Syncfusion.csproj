@@ -21,16 +21,9 @@
 		<None Include="readme.txt" Pack="true" PackagePath="." />
 	</ItemGroup>
 
-	<!-- Workaround: https://github.com/dotnet/maui/issues/10019#issuecomment-1248032520 -->
-	<ItemGroup>
-		<!--<None Include="..\..\SharedMauiXamlStylesLibrary.Syncfusion.targets" Pack="True" PackagePath="buildTransitive\" />-->
-		<!----><None Include="PackMauiAssets.targets" Pack="True" PackagePath="buildTransitive\" />
-	</ItemGroup>
 	<ItemGroup>
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
-		<!-- Workaround: https://github.com/dotnet/maui/issues/10019#issuecomment-1251521410 -->
-		<None Include="Resources\Fonts\UIFontIcons.ttf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />	
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -250,4 +243,7 @@
 	<ItemGroup>
 	  <Folder Include="Licenses\LicenseFiles\" />
 	</ItemGroup>
+
+	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->
+	<Import Project="PackMauiAssets.targets" />
 </Project>

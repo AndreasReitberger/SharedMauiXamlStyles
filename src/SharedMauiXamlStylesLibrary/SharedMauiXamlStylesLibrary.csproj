@@ -22,27 +22,11 @@
 		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
 		<None Include="readme.txt" Pack="true" PackagePath="." />
 	</ItemGroup>
-	
-	<!-- Workaround: https://github.com/dotnet/maui/issues/10019#issuecomment-1248032520 -->
-	<ItemGroup>
-		<None Include="PackMauiAssets.targets" Pack="True" PackagePath="buildTransitive\" />
-	</ItemGroup>
-	
+
 	<!-- Workaround: https://github.com/dotnet/maui/issues/10019#issuecomment-1248032520 -->
 	<ItemGroup>
 		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
-		<!-- Workaround: https://github.com/dotnet/maui/issues/10019#issuecomment-1251521410 -->
-		<!---->
-		<None Include="Resources\Fonts\FluentFontIcons.ttf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\FontAwesome5Brands.otf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\FontAwesome5Regular.otf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\FontAwesome5Solid.otf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\materialdesignicons-webfont.ttf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\Montserrat-Bold.ttf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\Montserrat-Medium.ttf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\Montserrat-Regular.ttf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />
-		<None Include="Resources\Fonts\Montserrat-SemiBold.ttf" Pack="True" PackagePath="buildTransitive\_MauiItems\Fonts\" />		
+		<MauiFont Include="Resources\Fonts\*" />	
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -163,4 +147,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.40" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.2" />
 	</ItemGroup>
+
+	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->
+	<Import Project="PackMauiAssets.targets" />
 </Project>
