@@ -13,6 +13,7 @@
     Docs: https://docs.microsoft.com/de-de/dotnet/maui/user-interface/controls/border
     -->
     <Style x:Key="Style.Core.Border.Default" TargetType="Border">
+        <Setter Property="Margin" Value="12,16" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
         <Setter Property="StrokeShape" Value="Rectangle"/>
         <Setter Property="StrokeThickness" Value="1"/>
