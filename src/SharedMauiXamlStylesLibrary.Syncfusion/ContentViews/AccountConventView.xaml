@@ -15,33 +15,33 @@
         <ControlTemplate>
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
-                IsVisible="{TemplateBinding IsVisible}"
-                IsEnabled="{TemplateBinding IsEnabled}"
-                Background="{TemplateBinding Background}"
-                HeightRequest="{TemplateBinding HeightRequest}"
+                IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsVisible}"
+                IsEnabled="{Binding Source={RelativeSource TemplatedParent}, Path=IsEnabled}"
+                Background="{Binding Source={RelativeSource TemplatedParent}, Path=Background}"
+                HeightRequest="{Binding Source={RelativeSource TemplatedParent}, Path=HeightRequest}"
                 ColumnDefinitions="Auto,*,Auto"
                 >
                 <core:SfAvatarView
-                    AvatarName="{TemplateBinding UsernameText}"
-                    ImageSource="{TemplateBinding UserImage}"
+                    AvatarName="{Binding Source={RelativeSource TemplatedParent}, Path=UsernameText}"
+                    ImageSource="{Binding Source={RelativeSource TemplatedParent}, Path=UserImage}"
                     Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
                     />
                 <ContentPresenter
-                    IsVisible="{TemplateBinding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                     Grid.Column="1"
                     />
                 <HorizontalStackLayout
                     Grid.Column="2"
-                    IsVisible="{TemplateBinding IsSyncing}"
+                    IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncing}"
                     >
                     <ActivityIndicator
                         Margin="2"
-                        IsRunning="{TemplateBinding IsSyncing}"
+                        IsRunning="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncing}"
                         Style="{StaticResource Style.Core.ActivityIndicator.Default}"
                         />
                     <Label
                         Margin="4,2"
-                        Text="{TemplateBinding IsSyncingText}"
+                        Text="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncingText}"
                         Style="{StaticResource Style.Core.Label.Small}"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"

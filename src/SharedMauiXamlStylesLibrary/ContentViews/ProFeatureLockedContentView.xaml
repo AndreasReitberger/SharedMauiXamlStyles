@@ -14,11 +14,11 @@
                     CompressedLayout.IsHeadless="True"
                     >
                     <Grid
-                        Background="{TemplateBinding Background}"
-                        Opacity="{TemplateBinding Opacity}"
+                        Background="{Binding Source={RelativeSource TemplatedParent}, Path=Background}"
+                        Opacity="{Binding Source={RelativeSource TemplatedParent}, Path=Opacity}"
                         />
                     <Label
-                        Text="{TemplateBinding ContentText}"
+                        Text="{Binding Source={RelativeSource TemplatedParent}, Path=ContentText}"
                         Style="{StaticResource Style.Core.Label.Default}"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center"

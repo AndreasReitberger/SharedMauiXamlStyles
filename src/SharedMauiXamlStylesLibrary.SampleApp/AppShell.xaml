@@ -56,10 +56,6 @@
         ContentTemplate="{DataTemplate views:LabelsPage}"
         Route="LabelsPage" />
     <ShellContent
-        Title="Languages"
-        ContentTemplate="{DataTemplate views:LanguagesPage}"
-        Route="LanguagesPage" />
-    <ShellContent
         Title="Pickers"
         ContentTemplate="{DataTemplate views:PickersPage}"
         Route="PickersPage" />
@@ -75,7 +71,15 @@
         Title="Switches"
         ContentTemplate="{DataTemplate views:SwitchesPage}"
         Route="SwitchesPage" />
+    <ShellContent
+        Title="Templates"
+        ContentTemplate="{DataTemplate views:TemplatePage}"
+        Route="TemplatePage" />
 
+    <ShellContent
+        Title="Languages (Syncfusion)"
+        ContentTemplate="{DataTemplate views:LanguagesPage}"
+        Route="LanguagesPage" />
     <ShellContent
         Title="Accordions (Syncfusion)"
         ContentTemplate="{DataTemplate views:AccordionsPage}"

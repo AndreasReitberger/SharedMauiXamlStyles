@@ -15,60 +15,60 @@
         <ControlTemplate>
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
-                IsVisible="{TemplateBinding IsVisible}"
-                IsEnabled="{TemplateBinding IsEnabled}"
-                Background="{TemplateBinding Background}"
-                HeightRequest="{TemplateBinding HeightRequest}"
+                IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsVisible}"
+                IsEnabled="{Binding Source={RelativeSource TemplatedParent}, Path=IsEnabled}"
+                Background="{Binding Source={RelativeSource TemplatedParent}, Path=Background}"
+                HeightRequest="{Binding Source={RelativeSource TemplatedParent}, Path=HeightRequest}"
                 ColumnDefinitions="*,Auto"
                 >
                 <ContentPresenter />
                 <!--
                 <Label
                     Style="{StaticResource Style.Core.Label.Shell}"
-                    FormattedText="{TemplateBinding TitleLabelFormattedString}"
-                    Text="{TemplateBinding TitleLabelText}"
+                    FormattedText="{Binding Source={RelativeSource TemplatedParent}, Path=TitleLabelFormattedString}"
+                    Text="{Binding Source={RelativeSource TemplatedParent}, Path=TitleLabelText}"
                     />
                 -->
                 <Grid
                     Grid.Column="1"
-                    IsVisible="{TemplateBinding HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                     ColumnDefinitions="Auto,*"
                     >
                     <core:SfAvatarView
-                        IsVisible="{TemplateBinding IsLoggedIn}"
-                        AvatarName="{TemplateBinding UsernameText}"
-                        ImageSource="{TemplateBinding UserImage}"
+                        IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsLoggedIn}"
+                        AvatarName="{Binding Source={RelativeSource TemplatedParent}, Path=UsernameText}"
+                        ImageSource="{Binding Source={RelativeSource TemplatedParent}, Path=UserImage}"
                         Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
                         />
                     <Label
-                        IsVisible="{TemplateBinding IsLoggedIn}"
+                        IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsLoggedIn}"
                         Grid.Column="1"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
-                        FormattedText="{TemplateBinding AccountLabelFormattedString}"
-                        Text="{TemplateBinding AccountLabelText}"
+                        FormattedText="{Binding Source={RelativeSource TemplatedParent}, Path=AccountLabelFormattedString}"
+                        Text="{Binding Source={RelativeSource TemplatedParent}, Path=AccountLabelText}"
                         Style="{StaticResource Style.Core.Label.Header}"
                         >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Command="{TemplateBinding AccountButtonCommand}"
+                                Command="{Binding Source={RelativeSource TemplatedParent}, Path=AccountButtonCommand}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label
-                        IsVisible="{TemplateBinding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                        IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                         Grid.Column="1"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
-                        FormattedText="{TemplateBinding AuthLabelFormattedString}"
-                        Text="{TemplateBinding AuthLabelText}"
+                        FormattedText="{Binding Source={RelativeSource TemplatedParent}, Path=AuthLabelFormattedString}"
+                        Text="{Binding Source={RelativeSource TemplatedParent}, Path=AuthLabelText}"
                         Style="{StaticResource Style.Core.Label.Header}"
                         >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Command="{TemplateBinding AuthButtonCommand}"
+                                Command="{Binding Source={RelativeSource TemplatedParent}, Path=AuthButtonCommand}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>

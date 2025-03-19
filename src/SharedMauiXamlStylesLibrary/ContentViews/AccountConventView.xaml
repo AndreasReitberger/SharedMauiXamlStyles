@@ -14,32 +14,45 @@
         <ControlTemplate>
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
-                IsVisible="{TemplateBinding IsVisible}"
-                IsEnabled="{TemplateBinding IsEnabled}"
-                Background="{TemplateBinding Background}"
-                HeightRequest="{TemplateBinding HeightRequest}"
-                ColumnDefinitions="*,Auto"
+                IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsVisible}"
+                IsEnabled="{Binding Source={RelativeSource TemplatedParent}, Path=IsEnabled}"
+                Background="{Binding Source={RelativeSource TemplatedParent}, Path=Background}"
+                HeightRequest="{Binding Source={RelativeSource TemplatedParent}, Path=HeightRequest}"
+                ColumnDefinitions="*,Auto,Auto"
                 >
                 <ContentPresenter
-                    IsVisible="{TemplateBinding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                     />
                 <HorizontalStackLayout
                     Grid.Column="1"
-                    IsVisible="{TemplateBinding IsSyncing}"
+                    IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncing}"
                     >
                     <ActivityIndicator
                         Margin="2"
-                        IsRunning="{TemplateBinding IsSyncing}"
+                        IsRunning="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncing}"
                         Style="{StaticResource Style.Core.ActivityIndicator.Default}"
                         />
                     <Label
                         Margin="4,2"
-                        Text="{TemplateBinding IsSyncingText}"
+                        Text="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncingText}"
                         Style="{StaticResource Style.Core.Label.Small}"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
                         />
                 </HorizontalStackLayout>
+                <Border
+                    IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"                   
+                    HeightRequest="{Binding Source={RelativeSource TemplatedParent}, Path=HeightRequest}"
+                    WidthRequest="50"
+                    Grid.Column="2"
+                    Style="{StaticResource Style.Core.Border.Profile}"
+                    StrokeShape="RoundRectangle 25"
+                    >
+                    <Image             
+                        Source="{Binding Source={RelativeSource TemplatedParent}, Path=UserImage}"
+                        Aspect="AspectFit"
+                        />
+                </Border>
             </Grid>
         </ControlTemplate>
     </ContentView.ControlTemplate>

@@ -54,6 +54,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfCheckBoxesPageViewModel>();
             builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
             builder.Services.AddSingleton<TabViewPageViewModel>();
+            builder.Services.AddSingleton<TemplatePageViewModel>();
             builder.Services.AddSingleton<SfListViewPageViewModel>();
             builder.Services.AddSingleton<TextInputLayoutsPageViewModel>();
             return builder;
@@ -84,6 +85,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfCheckBoxesPage>();
             builder.Services.AddSingleton<SfSegmentedControlPage>();
             builder.Services.AddSingleton<TabViewPage>();
+            builder.Services.AddSingleton<TemplatePage>();
             builder.Services.AddSingleton<SfListViewPage>();
             builder.Services.AddSingleton<TextInputLayoutsPage>();
             return builder;
