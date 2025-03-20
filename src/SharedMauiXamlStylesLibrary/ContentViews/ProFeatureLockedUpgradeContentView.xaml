@@ -14,8 +14,8 @@
                     CompressedLayout.IsHeadless="True"
                     >
                     <Grid
-                        Background="{Binding Source={RelativeSource TemplatedParent}, Path=Background}"
-                        Opacity="{Binding Source={RelativeSource TemplatedParent}, Path=Opacity}"
+                        Background="{Binding Background}"
+                        Opacity="{Binding Opacity}"
                         />
                     <Grid
                         CompressedLayout.IsHeadless="True"
@@ -23,15 +23,15 @@
                         >
                         <Label
                             Grid.Row="1"
-                            Text="{Binding Source={RelativeSource TemplatedParent}, Path=ContentText}"
+                            Text="{Binding ContentText}"
                             Style="{StaticResource Style.Core.Label.Default}"
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Center"
                             />
                         <Button
                             Grid.Row="2"
-                            Text="{Binding Source={RelativeSource TemplatedParent}, Path=ButtonText}"
-                            Command="{Binding Source={RelativeSource TemplatedParent}, Path=ButtonCommand}"
+                            Text="{Binding ButtonText}"
+                            Command="{Binding ButtonCommand}"
                             Style="{StaticResource Style.Core.Button.RoundedLong}"
                             />
                     </Grid>

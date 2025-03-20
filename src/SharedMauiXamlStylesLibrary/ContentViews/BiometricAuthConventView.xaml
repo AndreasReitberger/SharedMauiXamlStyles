@@ -7,8 +7,9 @@
     <ContentView.ControlTemplate>
         <ControlTemplate>
             <Grid
-                IsVisible="{Binding Source={RelativeSource TemplatedParent}, Path=IsVisible}"
-                Background="{Binding Source={RelativeSource TemplatedParent}, Path=Background}"
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                IsVisible="{Binding IsVisible}"
+                Background="{Binding Background}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 RowDefinitions="*,Auto,*"
@@ -21,15 +22,15 @@
                         Style="{StaticResource Style.Core.Label.Default}"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center"
-                        FormattedText="{Binding Source={RelativeSource TemplatedParent}, Path=TitleLabelFormattedString}"
-                        Text="{Binding Source={RelativeSource TemplatedParent}, Path=TitleLabelText}"
+                        FormattedText="{Binding TitleLabelFormattedString}"
+                        Text="{Binding TitleLabelText}"
                         >
                     </Label>
                     <Button
                         Margin="12,16"
-                        Text="{Binding Source={RelativeSource TemplatedParent}, Path=AuthButtonText}"
+                        Text="{Binding AuthButtonText}"
                         Style="{StaticResource Style.Core.Button.Default}"
-                        Command="{Binding Source={RelativeSource TemplatedParent}, Path=AuthButtonCommand}"
+                        Command="{Binding AuthButtonCommand}"
                         />
                 </VerticalStackLayout>
             </Grid>
