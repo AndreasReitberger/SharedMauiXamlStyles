@@ -28,7 +28,6 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/RadioButton.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/Grid.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/IndicatorView.xaml" />
-        <ResourceDictionary Source="/Resources/Themes/Controls/Frame.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/RefreshView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SearchBar.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SearchHandler.xaml" />
