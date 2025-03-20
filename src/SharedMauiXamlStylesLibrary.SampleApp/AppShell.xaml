@@ -44,10 +44,6 @@
         ContentTemplate="{DataTemplate views:EditorsPage}"
         Route="EditorsPage" />
     <ShellContent
-        Title="Frames"
-        ContentTemplate="{DataTemplate views:FramesPage}"
-        Route="FramesPage" />
-    <ShellContent
         Title="Grids"
         ContentTemplate="{DataTemplate views:GridsPage}"
         Route="GridsPage" />

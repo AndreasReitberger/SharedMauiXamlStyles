@@ -13,6 +13,12 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         [ObservableProperty]
         public partial double ProgressSecond { get; set; } = 0.75;
 
+        [ObservableProperty]
+        public partial bool RefreshOnPageAppearing { get; set; } = false;
+
+        [ObservableProperty]
+        public partial bool ConfirmPageClosing { get; set; } = false;
+
         #endregion
 
         #region Constructor, LoadSettings
