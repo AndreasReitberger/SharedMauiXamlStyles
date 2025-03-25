@@ -6,6 +6,7 @@
     
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.Syncfusion.ContentViews"
     >
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />

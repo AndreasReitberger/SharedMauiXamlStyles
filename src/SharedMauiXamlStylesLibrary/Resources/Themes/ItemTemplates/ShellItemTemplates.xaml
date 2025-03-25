@@ -17,7 +17,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-    <DataTemplate x:Key="DataTemplate.Core.Flyout.Default">
+    <DataTemplate x:Key="DataTemplate.Core.Flyout.Default" x:DataType="FlyoutItem">
         <Grid
             x:Name="FlyoutItemLayout"
             HeightRequest="{OnPlatform 44, Android=50}"

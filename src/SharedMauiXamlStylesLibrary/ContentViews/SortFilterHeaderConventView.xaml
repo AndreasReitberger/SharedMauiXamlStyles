@@ -3,9 +3,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.SortFilterHeaderConventView"
+    xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="conventViews:SortFilterHeaderConventView">
             <Grid
                 x:Name="root"
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
@@ -31,7 +32,7 @@
                         <FontImageSource
                             FontFamily="{Binding ButtonIconFontFamily}"
                             Glyph="{Binding SortButtonIconText}"
-                            Color="{Binding Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
+                            Color="{Binding x:DataType='Button', Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
                             Size="Small"
                             />
                     </Button.ImageSource>
@@ -54,7 +55,7 @@
                         <FontImageSource
                             FontFamily="{Binding ButtonIconFontFamily}"
                             Glyph="{Binding FilterButtonIconText}"
-                            Color="{Binding Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
+                            Color="{Binding x:DataType='Button', Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
                             Size="Small"
                             />
                     </Button.ImageSource>

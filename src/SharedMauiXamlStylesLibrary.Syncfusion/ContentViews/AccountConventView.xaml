@@ -6,13 +6,14 @@
     
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.Syncfusion.ContentViews"
     >
     <ContentView.Resources>
         <shared:SharedConverters />
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="contentViews:AccountConventView">
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"

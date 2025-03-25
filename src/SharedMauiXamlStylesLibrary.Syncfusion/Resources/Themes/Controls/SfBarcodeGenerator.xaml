@@ -24,7 +24,7 @@
     <Style x:Key="Style.Syncfusion.SfBarcodeGenerator.Default" TargetType="barcode:SfBarcodeGenerator">
         <Setter Property="ShowText" Value="True" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
-        <Setter Property="ForegroundColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+        <Setter Property="ForegroundColor" Value="{Binding x:DataType='barcode:SfBarcodeGenerator', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="TextStyle">
             <Setter.Value>
                 <barcode:BarcodeTextStyle

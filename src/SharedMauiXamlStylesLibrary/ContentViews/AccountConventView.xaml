@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.AccountConventView"
     
+    xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
     >
     <ContentView.Resources>
@@ -11,7 +12,7 @@
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="conventViews:AccountConventView">
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"

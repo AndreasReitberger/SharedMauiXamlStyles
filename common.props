@@ -26,7 +26,9 @@
 		<!-- https://github.com/dotnet/maui/pull/19360 
 	    <WarningsAsErrors>XC0022,XC0023</WarningsAsErrors>
 		-->
-		<NoWarn>$(NoWarn);XC0022;XC0023</NoWarn>
+		<!-- Binding not found -->
+	    <WarningsAsErrors>XC0045</WarningsAsErrors>
+		<!--<NoWarn>$(NoWarn);XC0022;XC0023</NoWarn>-->
 		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
     </PropertyGroup>
 
