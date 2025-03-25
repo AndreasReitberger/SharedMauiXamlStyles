@@ -106,9 +106,6 @@
 	  <Compile Update="Views\GridsPage.xaml.cs">
 	    <DependentUpon>GridsPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\FramesPage.xaml.cs">
-	    <DependentUpon>FramesPage.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Views\ProgressBarsPage.xaml.cs">
 	    <DependentUpon>ProgressBarsPage.xaml</DependentUpon>
 	  </Compile>
@@ -185,9 +182,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EntryPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\FramesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProgressBarsPage.xaml">
