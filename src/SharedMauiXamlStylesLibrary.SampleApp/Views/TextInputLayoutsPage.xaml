@@ -42,7 +42,7 @@
                 </core:SfTextInputLayout.LeadingView>
                 <controls:BorderlessEntry 
                     Style="{StaticResource Style.Core.BorderlessEntry.Default}"
-                    Background="{Binding Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
+                    Background="{Binding x:DataType='core:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
                     Text="{Binding Name, Mode=TwoWay}" 
                     Keyboard="Default"
                     />
