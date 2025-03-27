@@ -28,7 +28,7 @@
                     <VisualState Name="Expanded">
                         <VisualState.Setters>
                             <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
-                            <Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+                            <Setter Property="HeaderIconColor" Value="{Binding x:DataType='expander:AccordionItem', Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Collapsed">

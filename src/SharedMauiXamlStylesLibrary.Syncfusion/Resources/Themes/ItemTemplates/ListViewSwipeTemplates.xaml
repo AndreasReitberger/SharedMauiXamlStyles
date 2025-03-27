@@ -91,10 +91,10 @@
             >
             <Label.GestureRecognizers>
                 <TapGestureRecognizer
-                        NumberOfTapsRequired="1"
-                        Command="{Binding BindingContext.PrintItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
-                        CommandParameter="{Binding .}"
-                        />
+                    NumberOfTapsRequired="1"
+                    Command="{Binding BindingContext.PrintItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                    CommandParameter="{Binding .}"
+                    />
             </Label.GestureRecognizers>
         </Label>
     </DataTemplate>

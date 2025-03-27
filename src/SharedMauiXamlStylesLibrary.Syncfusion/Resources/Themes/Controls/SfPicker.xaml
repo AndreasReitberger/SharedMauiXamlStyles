@@ -59,7 +59,7 @@
                 <picker:PickerTextStyle
                     FontSize="12"
                     FontFamily="{StaticResource MontserratRegular}"
-                    TextColor="{Binding Source={RelativeSource AncestorType={x:Type picker:SfPicker}}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"            
+                    TextColor="{Binding x:DataType='picker:SfPicker', Source={RelativeSource AncestorType={x:Type picker:SfPicker}}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"            
                     >
                 </picker:PickerTextStyle>
             </Setter.Value>
@@ -133,7 +133,7 @@
                 <picker:PickerTextStyle
                     FontSize="12"
                     FontFamily="{StaticResource MontserratRegular}"
-                    TextColor="{Binding Source={RelativeSource AncestorType={x:Type picker:SfDateTimePicker}}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                    TextColor="{Binding x:DataType='picker:SfDateTimePicker', Source={RelativeSource AncestorType={x:Type picker:SfDateTimePicker}}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
                     >
                 </picker:PickerTextStyle>
             </Setter.Value>

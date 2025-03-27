@@ -75,7 +75,7 @@
                                 <VisualState x:Name="PointerOver" >
                                     <VisualState.Setters>
                                         <Setter Property="Background" Value="DarkGreen"/>
-                                        <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                                        <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.TemplatePage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.ContentViews;assembly=SharedMauiXamlStylesLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    
+    Title="TemplatePage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:TemplatePageViewModel"   
+    >
+    <Shell.TitleView>
+        <contentViews:AccountConventView   
+            IsVisible="True"
+            UserImage="{Binding UserPhoto}"
+            UsernameText="{Binding UserDisplayName}"
+            IsSyncing="{Binding IsLoading}"
+            IsSyncingText="{Binding SyncingText}"
+            >
+            <Grid
+                CompressedLayout.IsHeadless="True"
+                >
+                <Label
+                    IsVisible="{Binding IsLoggedIn}"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Header}"
+                    >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Hello" />
+                            <Span Text=", " />
+                            <Span Text="{Binding UserDisplayName, Mode=TwoWay}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                        IsVisible="{Binding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                        Grid.Column="1"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Login"
+                        Style="{StaticResource Style.Core.Label.Header}"
+                        >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </contentViews:AccountConventView>
+    </Shell.TitleView>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="Check the TitleView here"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

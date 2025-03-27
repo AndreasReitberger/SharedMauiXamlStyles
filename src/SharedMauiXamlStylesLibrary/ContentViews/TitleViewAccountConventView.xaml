@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.TitleViewAccountConventView"
     
+    xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
     >
@@ -12,55 +13,56 @@
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="conventViews:TitleViewAccountConventView">
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
-                IsVisible="{TemplateBinding IsVisible}"
-                IsEnabled="{TemplateBinding IsEnabled}"
-                Background="{TemplateBinding Background}"
-                HeightRequest="{TemplateBinding HeightRequest}"
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                IsVisible="{Binding IsVisible}"
+                IsEnabled="{Binding IsEnabled}"
+                Background="{Binding Background}"
+                HeightRequest="{Binding HeightRequest}"
                 ColumnDefinitions="*,Auto"
                 >
                 <ContentPresenter />
                 <Grid
                     Grid.Column="1"
-                    IsVisible="{TemplateBinding HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    IsVisible="{Binding HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                     ColumnDefinitions="Auto,*"
                     >
                     <Label
-                        IsVisible="{TemplateBinding IsLoggedIn}"
+                        IsVisible="{Binding IsLoggedIn}"
                         Text="{x:Static icons:MaterialIcons.AccountOutline}"
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                         />
                     <Label
-                        IsVisible="{TemplateBinding IsLoggedIn}"
+                        IsVisible="{Binding IsLoggedIn}"
                         Grid.Column="1"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
-                        FormattedText="{TemplateBinding AccountLabelFormattedString}"
-                        Text="{TemplateBinding AccountLabelText}"
+                        FormattedText="{Binding AccountLabelFormattedString}"
+                        Text="{Binding AccountLabelText}"
                         Style="{StaticResource Style.Core.Label.Header}"
                         >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Command="{TemplateBinding AccountButtonCommand}"
+                                Command="{Binding AccountButtonCommand}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label
-                        IsVisible="{TemplateBinding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                        IsVisible="{Binding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                         Grid.Column="1"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
-                        FormattedText="{TemplateBinding AuthLabelFormattedString}"
-                        Text="{TemplateBinding AuthLabelText}"
+                        FormattedText="{Binding AuthLabelFormattedString}"
+                        Text="{Binding AuthLabelText}"
                         Style="{StaticResource Style.Core.Label.Header}"
                         >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Command="{TemplateBinding AuthButtonCommand}"
+                                Command="{Binding AuthButtonCommand}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>

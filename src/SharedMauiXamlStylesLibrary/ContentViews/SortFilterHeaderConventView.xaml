@@ -3,13 +3,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.SortFilterHeaderConventView"
+    xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="conventViews:SortFilterHeaderConventView">
             <Grid
                 x:Name="root"
-                Background="{TemplateBinding Background}"
-                HeightRequest="{TemplateBinding HeightRequest}"
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                Background="{Binding Background}"
+                HeightRequest="{Binding HeightRequest}"
                 HorizontalOptions="FillAndExpand"
                 ColumnDefinitions="*,Auto,Auto,Auto"
                 >
@@ -18,9 +20,9 @@
                     MinimumWidthRequest="{OnIdiom Phone=92, Default=144}"
                     Margin="0"
                     CornerRadius="0"
-                    Text="{TemplateBinding SortButtonText}"
-                    Command="{TemplateBinding SortButtonCommand}"
-                    CommandParameter="{TemplateBinding CommandParameter}"
+                    Text="{Binding SortButtonText}"
+                    Command="{Binding SortButtonCommand}"
+                    CommandParameter="{Binding CommandParameter}"
                     BorderWidth="0"
                     Style="{StaticResource Style.Core.Button.Default}"
                     MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
@@ -28,22 +30,22 @@
                     >
                     <Button.ImageSource>
                         <FontImageSource
-                            FontFamily="{TemplateBinding ButtonIconFontFamily}"
-                            Glyph="{TemplateBinding SortButtonIconText}"
-                            Color="{Binding Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
+                            FontFamily="{Binding ButtonIconFontFamily}"
+                            Glyph="{Binding SortButtonIconText}"
+                            Color="{Binding x:DataType='Button', Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
                             Size="Small"
                             />
                     </Button.ImageSource>
                 </Button>
                 <Button
                     Grid.Column="2"
-                    IsVisible="{TemplateBinding ShowFilterButton}"
+                    IsVisible="{Binding ShowFilterButton}"
                     MinimumWidthRequest="{OnIdiom Phone=92, Default=144}"
                     Margin="0"
                     CornerRadius="0"
-                    Text="{TemplateBinding FilterButtonText}"
-                    Command="{TemplateBinding FilterButtonCommand}"
-                    CommandParameter="{TemplateBinding CommandParameter}"
+                    Text="{Binding FilterButtonText}"
+                    Command="{Binding FilterButtonCommand}"
+                    CommandParameter="{Binding CommandParameter}"
                     BorderWidth="0"
                     Style="{StaticResource Style.Core.Button.Default}"
                     MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
@@ -51,9 +53,9 @@
                     >
                     <Button.ImageSource>
                         <FontImageSource
-                            FontFamily="{TemplateBinding ButtonIconFontFamily}"
-                            Glyph="{TemplateBinding FilterButtonIconText}"
-                            Color="{Binding Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
+                            FontFamily="{Binding ButtonIconFontFamily}"
+                            Glyph="{Binding FilterButtonIconText}"
+                            Color="{Binding x:DataType='Button', Source={RelativeSource AncestorType={x:Type Button}, AncestorLevel=1}, Path=TextColor}"
                             Size="Small"
                             />
                     </Button.ImageSource>
@@ -61,9 +63,9 @@
                 <Button
                     Grid.Column="3"
                     Margin="0"
-                    Text="{TemplateBinding ClearButtonIconText}"
-                    FontFamily="{TemplateBinding ButtonIconFontFamily}"
-                    Command="{TemplateBinding ClearButtonCommand}"
+                    Text="{Binding ClearButtonIconText}"
+                    FontFamily="{Binding ButtonIconFontFamily}"
+                    Command="{Binding ClearButtonCommand}"
                     FontSize="{OnPlatform Android=Small, Default=Default}"
                     MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
                     HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
@@ -101,7 +103,7 @@
                             <Style.Triggers>
                                 <DataTrigger
                                         TargetType="Button" 
-                                        Binding="{TemplateBinding IsFiltered}"
+                                        Binding="{Binding IsFiltered}"
                                         Value="True"
                                         >
                                     <Setter Property="IsVisible" Value="True"/>

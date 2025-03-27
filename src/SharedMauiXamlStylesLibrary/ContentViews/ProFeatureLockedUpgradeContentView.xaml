@@ -3,9 +3,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.ProFeatureLockedUpgradeContentView"
+    xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="conventViews:ProFeatureLockedUpgradeContentView">
             <Border   
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
                 Padding="4"
@@ -14,8 +15,8 @@
                     CompressedLayout.IsHeadless="True"
                     >
                     <Grid
-                        Background="{TemplateBinding Background}"
-                        Opacity="{TemplateBinding Opacity}"
+                        Background="{Binding Background}"
+                        Opacity="{Binding Opacity}"
                         />
                     <Grid
                         CompressedLayout.IsHeadless="True"
@@ -23,15 +24,15 @@
                         >
                         <Label
                             Grid.Row="1"
-                            Text="{TemplateBinding ContentText}"
+                            Text="{Binding ContentText}"
                             Style="{StaticResource Style.Core.Label.Default}"
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Center"
                             />
                         <Button
                             Grid.Row="2"
-                            Text="{TemplateBinding ButtonText}"
-                            Command="{TemplateBinding ButtonCommand}"
+                            Text="{Binding ButtonText}"
+                            Command="{Binding ButtonCommand}"
                             Style="{StaticResource Style.Core.Button.RoundedLong}"
                             />
                     </Grid>

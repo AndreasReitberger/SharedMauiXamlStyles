@@ -67,6 +67,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\TemplatePage.xaml.cs">
+	    <DependentUpon>TemplatePage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\BordersPage.xaml.cs">
 	    <DependentUpon>BordersPage.xaml</DependentUpon>
 	  </Compile>
@@ -140,6 +143,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TemplatePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\BordersPage.xaml">

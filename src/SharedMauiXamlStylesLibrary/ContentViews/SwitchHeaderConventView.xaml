@@ -3,13 +3,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.SwitchHeaderConventView"
+    xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="conventViews:SwitchHeaderConventView">
             <Grid
                 x:Name="root"
-                Background="{TemplateBinding Background}"
-                HeightRequest="{TemplateBinding HeightRequest}"
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                Background="{Binding Background}"
+                HeightRequest="{Binding HeightRequest}"
                 HorizontalOptions="FillAndExpand"
                 ColumnDefinitions="Auto,*,Auto"
                 >
@@ -17,19 +19,19 @@
                 <Button
                     Margin="0"
                     Padding="0"
-                    Command="{TemplateBinding BackButtonCommand}"
+                    Command="{Binding BackButtonCommand}"
                     CommandParameter="{Binding .}"
                     CornerRadius="0"
-                    Text="{TemplateBinding BackButtonIconText}"
-                    FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                    Text="{Binding BackButtonIconText}"
+                    FontFamily="{Binding ButtonIconFontFamily}"
                     Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                     MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
                     HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
                     />
                 <Label 
                     Grid.Column="1"
-                    FormattedText="{TemplateBinding TitleLabelFormattedString}"
-                    Text="{TemplateBinding TitleLabelText}"
+                    FormattedText="{Binding TitleLabelFormattedString}"
+                    Text="{Binding TitleLabelText}"
                     Style="{StaticResource Style.Core.Label.Default}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -39,11 +41,11 @@
                     Grid.Column="2"
                     Margin="0"
                     Padding="0"
-                    Command="{TemplateBinding NextButtonCommand}"
+                    Command="{Binding NextButtonCommand}"
                     CommandParameter="{Binding .}"
                     CornerRadius="0"
-                    Text="{TemplateBinding NextButtonIconText}"
-                    FontFamily="{TemplateBinding ButtonIconFontFamily}"
+                    Text="{Binding NextButtonIconText}"
+                    FontFamily="{Binding ButtonIconFontFamily}"
                     Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                     MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
                     HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"

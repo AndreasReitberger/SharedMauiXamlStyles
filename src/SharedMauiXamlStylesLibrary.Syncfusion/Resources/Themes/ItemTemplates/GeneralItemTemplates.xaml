@@ -6,42 +6,42 @@
     x:Class="AndreasReitberger.Shared.Syncfusion.Themes.ItemTemplates.GeneralItemTemplates"
      
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared.Core.Contacts;assembly=SharedNetCoreLibrary"
     >
 
-    <DataTemplate x:Key="DataTemplate.Syncfusion.Contact.Default">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Contact.Default" x:DataType="shared:Contact">
         <Grid 
-                Padding="8,6"
-                ColumnSpacing="4"
-                RowSpacing="4"
-                ColumnDefinitions="Auto,*"
+            Padding="8,6"
+            ColumnSpacing="4"
+            RowSpacing="4"
+            ColumnDefinitions="Auto,*"
+            >
+            <!-- Check icon -->
+            <Border
+                Style="{StaticResource Style.Core.Border.Profile}"
+                Background="{StaticResource LightGreen}"
+                Margin="0"
                 >
-                <!-- Check icon -->
-                <Border
-                    Style="{StaticResource Style.Core.Border.Profile}"
-                    Background="{StaticResource LightGreen}"
-                    Margin="0"
-                    >
-                    <core:SfAvatarView
-                        AvatarName="{Binding Name}"
-                        Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
-                        />
-                </Border>
+                <core:SfAvatarView
+                    AvatarName="{Binding Name}"
+                    Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
+                    />
+            </Border>
 
-                <Label 
-                    Grid.Column="1"
-                    Text="{Binding Feature}"
-                    Style="{StaticResource Style.Core.Label.Default}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Start"
-                    >
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="{Binding LastName}" />
-                            <Span Text=", " />
-                            <Span Text="{Binding FirstName}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </Grid>
+            <Label 
+                Grid.Column="1"
+                Style="{StaticResource Style.Core.Label.Default}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
+                >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding LastName}" />
+                        <Span Text=", " />
+                        <Span Text="{Binding FirstName}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
     </DataTemplate>
 </ResourceDictionary>

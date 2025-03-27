@@ -67,6 +67,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentViews\SwipePrint3dView.xaml.cs">
+	    <DependentUpon>SwipePrint3dView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\SwipePrintView.xaml.cs">
+	    <DependentUpon>SwipePrintView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\SwipeBasementView.xaml.cs">
+	    <DependentUpon>SwipeBasementView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\SwipeShowView.xaml.cs">
+	    <DependentUpon>SwipeShowView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\SwipeEditView.xaml.cs">
+	    <DependentUpon>SwipeEditView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ContentViews\SwipeDeleteView.xaml.cs">
+	    <DependentUpon>SwipeDeleteView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ContentViews\AccountConventView.xaml.cs">
 	    <DependentUpon>AccountConventView.xaml</DependentUpon>
 	  </Compile>
@@ -113,6 +131,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ContentViews\SwipePrint3dView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\SwipePrintView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\SwipeBasementView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\SwipeShowView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\SwipeEditView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentViews\SwipeDeleteView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ContentViews\AccountConventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

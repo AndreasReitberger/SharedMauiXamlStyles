@@ -58,15 +58,15 @@
         </DataTemplate>
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchPage">
             <views:SwitchHeaderConventView
-                    Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
-                    BackButtonCommand="{Binding ValueBackCommand}"
-                    BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
-                    BackButtonText=""
-                    NextButtonCommand="{Binding ValueNextCommand}"
-                    NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
-                    NextButtonText=""
-                    TitleLabelText="Page"
-                    />
+                Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+                BackButtonCommand="{Binding ValueBackCommand}"
+                BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
+                BackButtonText=""
+                NextButtonCommand="{Binding ValueNextCommand}"
+                NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
+                NextButtonText=""
+                TitleLabelText="Page"
+                />
         </DataTemplate>
     </ContentPage.Resources>
 

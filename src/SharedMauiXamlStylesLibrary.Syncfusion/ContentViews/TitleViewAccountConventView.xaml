@@ -6,69 +6,71 @@
     
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.Syncfusion.ContentViews"
     >
     <ContentView.Resources>
         <shared:SharedConverters />
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate>
+        <ControlTemplate x:DataType="contentViews:TitleViewAccountConventView">
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
-                IsVisible="{TemplateBinding IsVisible}"
-                IsEnabled="{TemplateBinding IsEnabled}"
-                Background="{TemplateBinding Background}"
-                HeightRequest="{TemplateBinding HeightRequest}"
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                IsVisible="{Binding IsVisible}"
+                IsEnabled="{Binding IsEnabled}"
+                Background="{Binding Background}"
+                HeightRequest="{Binding HeightRequest}"
                 ColumnDefinitions="*,Auto"
                 >
                 <ContentPresenter />
                 <!--
                 <Label
                     Style="{StaticResource Style.Core.Label.Shell}"
-                    FormattedText="{TemplateBinding TitleLabelFormattedString}"
-                    Text="{TemplateBinding TitleLabelText}"
+                    FormattedText="{Binding TitleLabelFormattedString}"
+                    Text="{Binding TitleLabelText}"
                     />
                 -->
                 <Grid
                     Grid.Column="1"
-                    IsVisible="{TemplateBinding HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    IsVisible="{Binding HideAccountArea, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                     ColumnDefinitions="Auto,*"
                     >
                     <core:SfAvatarView
-                        IsVisible="{TemplateBinding IsLoggedIn}"
-                        AvatarName="{TemplateBinding UsernameText}"
-                        ImageSource="{TemplateBinding UserImage}"
+                        IsVisible="{Binding IsLoggedIn}"
+                        AvatarName="{Binding UsernameText}"
+                        ImageSource="{Binding UserImage}"
                         Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
                         />
                     <Label
-                        IsVisible="{TemplateBinding IsLoggedIn}"
+                        IsVisible="{Binding IsLoggedIn}"
                         Grid.Column="1"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
-                        FormattedText="{TemplateBinding AccountLabelFormattedString}"
-                        Text="{TemplateBinding AccountLabelText}"
+                        FormattedText="{Binding AccountLabelFormattedString}"
+                        Text="{Binding AccountLabelText}"
                         Style="{StaticResource Style.Core.Label.Header}"
                         >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Command="{TemplateBinding AccountButtonCommand}"
+                                Command="{Binding AccountButtonCommand}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label
-                        IsVisible="{TemplateBinding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                        IsVisible="{Binding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
                         Grid.Column="1"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Start"
-                        FormattedText="{TemplateBinding AuthLabelFormattedString}"
-                        Text="{TemplateBinding AuthLabelText}"
+                        FormattedText="{Binding AuthLabelFormattedString}"
+                        Text="{Binding AuthLabelText}"
                         Style="{StaticResource Style.Core.Label.Header}"
                         >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Command="{TemplateBinding AuthButtonCommand}"
+                                Command="{Binding AuthButtonCommand}"
                                 />
                         </Label.GestureRecognizers>
                     </Label>
