@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Syncfusion.ContentViews.SwipeDeleteView"
+    
+    xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.Syncfusion.ContentViews"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
+    >
+    <ContentView.ControlTemplate>
+        <ControlTemplate x:DataType="contentViews:SwipeDeleteView">
+            <contentViews:SwipeBasementView
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                IconText="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                IconFontFamily="{StaticResource FontIcons}"
+                IconFontBrush="{StaticResource White}"
+                Background="{StaticResource Red}"
+                SwipeCommand="{Binding DeleteCommand}"
+                SwipeCommandParameter="{Binding DeleteCommandParameter}"
+                />
+            <!--
+            <Label
+                Style="{StaticResource Style.Core.Label.Icon}"
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                TextColor="{StaticResource White}"
+                Background="{StaticResource Red}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding DeleteCommand}"
+                        CommandParameter="{Binding DeleteCommandParameter}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+            -->
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>

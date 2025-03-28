@@ -37,7 +37,6 @@
                     </Style>
                 </Label.Style>
             </Label>
-
             <Label 
                 Text="{Binding Key}" 
                 Style="{StaticResource Style.Core.Label.GroupingHeader}"
