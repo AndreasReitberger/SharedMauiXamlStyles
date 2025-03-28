@@ -16,7 +16,9 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<PublishReadyToRun>false</PublishReadyToRun>
 		<IsRidAgnostic Condition="'$(OutputType)' == 'Library'">true</IsRidAgnostic>
-
+		
+		<!-- Compiled bindings -->
+		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
 		<!-- Needed with latest SDK 8 version? -->
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 

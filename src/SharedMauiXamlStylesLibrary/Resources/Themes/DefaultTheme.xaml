@@ -10,6 +10,7 @@
         <ResourceDictionary Source="/Resources/Themes/SharedColors.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
         <!-- Templates must come for styles! -->
+        <ResourceDictionary Source="/Resources/Themes/SharedControlTemplates.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedTemplates.xaml" />
         <ResourceDictionary Source="/Resources/Themes/SharedStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
