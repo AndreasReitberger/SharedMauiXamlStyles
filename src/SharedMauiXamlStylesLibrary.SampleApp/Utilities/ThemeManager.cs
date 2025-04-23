@@ -118,12 +118,12 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         /// Updates the `PrimaryColor` for platform specific resources, as the StatusBar
         /// </summary>
         /// <param name="theme">The ThemeColorInfo to be changed to</param>
-        public void UpdatePlatformThemeColor(ThemeColorInfo? theme)
+        public static void UpdatePlatformThemeColor(ThemeColorInfo? theme)
         {
             try
             {
                 if (theme?.PrimaryColor is not null)
-                    new PlatformThemeService()?.SetStatusBarColor(theme.PrimaryColor);
+                    PlatformThemeService.SetStatusBarColor(theme.PrimaryColor);
             }
             catch (Exception exc)
             {
@@ -136,7 +136,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
 
         public ThemeColorInfo? FindThemeOrDefault(string primaryColorHexCode) => FindTheme(primaryColorHexCode) ?? AppDefaultTheme;
 
-        public Color? GetThemeColorFromResource(string resourceName, Application? app = null)
+        public static Color? GetThemeColorFromResource(string resourceName, Application? app = null)
         {
             try
             {
