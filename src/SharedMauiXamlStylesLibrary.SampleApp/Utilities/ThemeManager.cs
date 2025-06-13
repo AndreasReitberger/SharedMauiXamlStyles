@@ -10,7 +10,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
     {
         #region Instance
         static ThemeManager? _instance = null;
-        static readonly object Lock = new();
+        static readonly Lock Lock = new();
         public static ThemeManager Instance
         {
             get
