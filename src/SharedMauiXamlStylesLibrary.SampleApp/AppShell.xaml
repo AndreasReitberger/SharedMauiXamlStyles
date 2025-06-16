@@ -14,7 +14,6 @@
     Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
     x:DataType="viewModels:AppShellViewModel"
     >
-
     <ShellContent
         Title="ActivityIndicators"
         ContentTemplate="{DataTemplate views:ActivityIndicatorsPage}"
