@@ -79,6 +79,9 @@
 	  <Compile Update="Resources\Themes\SharedFontSizes.xaml.cs">
 	    <DependentUpon>SharedFontSizes.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Themes\SharedControlTemplates.xaml.cs">
+	    <DependentUpon>SharedControlTemplates.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Themes\SharedTemplates.xaml.cs">
 	    <DependentUpon>SharedTemplates.xaml</DependentUpon>
 	  </Compile>
@@ -98,6 +101,10 @@
 	    <SubType>Code</SubType>
 	    <DependentUpon>GeneralItemTemplates.xaml</DependentUpon>
 	  </Compile>
+	<Compile Update="Resources\Themes\ControlTemplates\ControlTemplate.xaml.cs">
+		<SubType>Code</SubType>
+		<DependentUpon>ControlTemplate.xaml</DependentUpon>
+	</Compile>
 	  <Compile Update="Resources\Themes\ItemTemplates\ListViewItemTemplates.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
@@ -133,6 +140,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\CollectionView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\ControlTemplates\ControlTemplate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\SharedConverters.xaml">

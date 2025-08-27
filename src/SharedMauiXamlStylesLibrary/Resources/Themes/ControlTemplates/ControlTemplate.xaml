@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AndreasReitberger.Shared.Themes.ControlTemplates.ControlTemplate"
+        
+    xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
+    >
+    <!---->
+    <ControlTemplate x:Key="ControlTemplate.Core.Account" x:DataType="contentViews:AccountConventView">
+        <Grid
+            Style="{StaticResource Style.Core.Grid.ShellTitleView}"
+            BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+            IsVisible="{Binding IsVisible}"
+            IsEnabled="{Binding IsEnabled}"
+            Background="{Binding Background}"
+            HeightRequest="{Binding HeightRequest}"
+            ColumnDefinitions="*,Auto,Auto"
+            >
+            <ContentPresenter
+                IsVisible="{Binding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                />
+            <HorizontalStackLayout
+                Grid.Column="1"
+                IsVisible="{Binding IsSyncing}"
+                >
+                <ActivityIndicator
+                    Margin="2"
+                    IsRunning="{Binding IsSyncing}"
+                    Style="{StaticResource Style.Core.ActivityIndicator.Default}"
+                    />
+                <Label
+                    Margin="4,2"
+                    Text="{Binding IsSyncingText}"
+                    Style="{StaticResource Style.Core.Label.Small}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    />
+            </HorizontalStackLayout>
+            <Border
+                IsVisible="{Binding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"                   
+                HeightRequest="{Binding HeightRequest}"
+                WidthRequest="50"
+                Grid.Column="2"
+                Style="{StaticResource Style.Core.Border.Profile}"
+                StrokeShape="RoundRectangle 25"
+                >
+                <Image             
+                    Source="{Binding UserImage}"
+                    Aspect="AspectFit"
+                    />
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    <!---->
+</ResourceDictionary>
