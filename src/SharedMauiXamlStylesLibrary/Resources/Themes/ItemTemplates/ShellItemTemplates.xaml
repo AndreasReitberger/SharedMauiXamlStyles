@@ -57,11 +57,11 @@
             </Grid.ColumnDefinitions>
             <Image
                 x:Name="FlyoutItemImage"
-                Source="{Binding FlyoutIcon}"
+                Source="{Binding FlyoutIcon, Mode=TwoWay}"
                 VerticalOptions="Center"
                 HorizontalOptions="{OnPlatform Default=Center, WinUI=Start, MacCatalyst=Start}"
-                HeightRequest="{OnPlatform Android=20, iOS=18, WinUI=16, MacCatalyst=16}"
-                WidthRequest="{OnPlatform Android=204, iOS=18, WinUI=16, MacCatalyst=16}"
+                HeightRequest="{OnPlatform 16, Android=20, iOS=18}"
+                WidthRequest="{OnPlatform 16, Android=204, iOS=18}"
                 >
                 <Image.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
@@ -75,7 +75,80 @@
             <Label
                 x:Name="FlyoutItemLabel"
                 Grid.Column="1"
-                Text="{Binding Title}"
+                Text="{Binding Title, Mode=TwoWay}"
+                FontSize="{OnPlatform Android=14, iOS=14}"
+                FontAttributes="{OnPlatform iOS=Bold}"
+                FontFamily="{StaticResource MontserratMedium}"
+                HorizontalOptions="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                HorizontalTextAlignment="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                VerticalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                Margin="{OnPlatform Android='20,0,0,0'}"
+                >
+            </Label>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DataTemplate.Core.MenuItem.Default" x:DataType="MenuItem">
+        <Grid
+            x:Name="MenuItemLayout"
+            HeightRequest="{OnPlatform 44, Android=50}"
+            ColumnSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            RowSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Background" Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{OnPlatform Android=54, iOS=50, WinUI=Auto, MacCatalyst=Auto}" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                x:Name="MenuItemImage"
+                Source="{Binding IconImageSource, Mode=TwoWay}"
+                VerticalOptions="Center"
+                HorizontalOptions="{OnPlatform Default=Center, WinUI=Start, MacCatalyst=Start}"
+                HeightRequest="{OnPlatform 16, Android=20, iOS=18}"
+                WidthRequest="{OnPlatform 16, Android=204, iOS=18}"
+                >
+                <Image.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Platforms>
+                            <On Platform="WinUI" Value="12,0,12,0" />
+                            <On Platform="MacCatalyst" Value="12,0,12,0" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </Image.Margin>
+            </Image>
+            <Label
+                x:Name="FlyoutItemLabel"
+                Grid.Column="1"
+                Text="{Binding Text, Mode=TwoWay}"
                 FontSize="{OnPlatform Android=14, iOS=14}"
                 FontAttributes="{OnPlatform iOS=Bold}"
                 FontFamily="{StaticResource MontserratMedium}"

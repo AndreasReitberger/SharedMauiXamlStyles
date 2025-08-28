@@ -11,9 +11,14 @@
     FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
     
     Shell.ItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
-    Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
+    Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.MenuItem.Default}"
     x:DataType="viewModels:AppShellViewModel"
     >
+    <MenuItem 
+        Text="Test" 
+        >
+    </MenuItem>
+    
     <ShellContent
         Title="ActivityIndicators"
         ContentTemplate="{DataTemplate views:ActivityIndicatorsPage}"

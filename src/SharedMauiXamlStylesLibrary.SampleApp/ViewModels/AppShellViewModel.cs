@@ -11,12 +11,12 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        public partial ObservableCollection<ThemeColorInfo> Themes { get; set; } = new();
+        public partial ObservableCollection<ThemeColorInfo> Themes { get; set; } = [];
 
         [ObservableProperty]
-        public partial ThemeColorInfo Theme { get; set; }
+        public partial ThemeColorInfo? Theme { get; set; }
 
-        partial void OnThemeChanged(ThemeColorInfo value)
+        partial void OnThemeChanged(ThemeColorInfo? value)
         {
             if (value?.PrimaryColor is not null)
                 HexCode = value.PrimaryColor.ToArgbHex();
@@ -32,15 +32,15 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
             LoadSettings();
 
-            Darkmode = App.Current.UserAppTheme == AppTheme.Dark;
+            Darkmode = Application.Current?.UserAppTheme == AppTheme.Dark;
         }
         void LoadSettings()
         {
             IsLoading = true;
             Themes = new(ThemeManager.Instance.AvailableThemes);
             Theme =
-                Themes?.FirstOrDefault(theme => theme.PrimaryColor?.ToArgbHex() == HexCode) ??
-                Themes?.FirstOrDefault();
+                Themes.FirstOrDefault(theme => theme.PrimaryColor?.ToArgbHex() == HexCode) ??
+                Themes.FirstOrDefault();
             IsLoading = false;
         }
         #endregion
