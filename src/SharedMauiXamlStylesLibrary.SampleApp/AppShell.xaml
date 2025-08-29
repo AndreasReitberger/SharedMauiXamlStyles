@@ -10,12 +10,19 @@
     Style="{StaticResource Style.Core.Shell.Default}"
     FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
     
-    Shell.ItemTemplate="{StaticResource DataTemplate.Core.Flyout.Default}"
-    Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.MenuItem.Default}"
+    Shell.ItemTemplate="{StaticResource DataTemplate.Core.ShellItem.Default}"
+    Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.ShellItem.Default}"
     x:DataType="viewModels:AppShellViewModel"
     >
+    <Shell.FlyoutHeader>
+        <Label
+            Text="Demo"
+            Style="{StaticResource Style.Core.Label.Headline}"
+            />
+    </Shell.FlyoutHeader>
+    
     <MenuItem 
-        Text="Test" 
+        Text="Test Menu" 
         >
     </MenuItem>
     
