@@ -17,7 +17,228 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-    <DataTemplate x:Key="DataTemplate.Core.Flyout.Default" x:DataType="FlyoutItem">
+    <!-- This template has no specific data type (example from MS website) -->
+    <!-- Source: https://learn.microsoft.com/de-de/dotnet/maui/fundamentals/shell/flyout?view=net-maui-9.0 -->
+    <DataTemplate x:Key="DataTemplate.Core.Fylout.Default">
+        <Grid
+            x:Name="FlyoutItemLayout"
+            HeightRequest="{OnPlatform 44, Android=50}"
+            ColumnSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            RowSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Background" Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{OnPlatform Android=54, iOS=50, WinUI=Auto, MacCatalyst=Auto}" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                x:Name="FlyoutItemImage"
+                Source="{Binding FlyoutIcon, Mode=TwoWay}"
+                VerticalOptions="Center"
+                HorizontalOptions="{OnPlatform Default=Center, WinUI=Start, MacCatalyst=Start}"
+                HeightRequest="{OnPlatform 16, Android=20, iOS=18}"
+                WidthRequest="{OnPlatform 16, Android=204, iOS=18}"
+                >
+                <Image.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Platforms>
+                            <On Platform="WinUI" Value="12,0,12,0" />
+                            <On Platform="MacCatalyst" Value="12,0,12,0" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </Image.Margin>
+            </Image>
+            <Label
+                x:Name="FlyoutItemLabel"
+                Grid.Column="1"
+                Text="{Binding Title, Mode=TwoWay}"
+                FontSize="{OnPlatform Android=14, iOS=14}"
+                FontAttributes="{OnPlatform iOS=Bold}"
+                FontFamily="{StaticResource MontserratMedium}"
+                HorizontalOptions="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                HorizontalTextAlignment="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                VerticalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                Margin="{OnPlatform Android='20,0,0,0'}"
+                >
+            </Label>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DataTemplate.Core.FlyoutItem.Default" x:DataType="FlyoutItem">
+        <Grid
+            x:Name="FlyoutItemLayout"
+            HeightRequest="{OnPlatform 44, Android=50}"
+            ColumnSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            RowSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Background" Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{OnPlatform Android=54, iOS=50, WinUI=Auto, MacCatalyst=Auto}" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                x:Name="FlyoutItemImage"
+                Source="{Binding FlyoutIcon, Mode=TwoWay}"
+                VerticalOptions="Center"
+                HorizontalOptions="{OnPlatform Default=Center, WinUI=Start, MacCatalyst=Start}"
+                HeightRequest="{OnPlatform 16, Android=20, iOS=18}"
+                WidthRequest="{OnPlatform 16, Android=204, iOS=18}"
+                >
+                <Image.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Platforms>
+                            <On Platform="WinUI" Value="12,0,12,0" />
+                            <On Platform="MacCatalyst" Value="12,0,12,0" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </Image.Margin>
+            </Image>
+            <Label
+                x:Name="FlyoutItemLabel"
+                Grid.Column="1"
+                Text="{Binding Title, Mode=TwoWay}"
+                FontSize="{OnPlatform Android=14, iOS=14}"
+                FontAttributes="{OnPlatform iOS=Bold}"
+                FontFamily="{StaticResource MontserratMedium}"
+                HorizontalOptions="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                HorizontalTextAlignment="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                VerticalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                Margin="{OnPlatform Android='20,0,0,0'}"
+                >
+            </Label>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DataTemplate.Core.ShellContent.Default" x:DataType="ShellContent">
+        <Grid
+            x:Name="FlyoutItemLayout"
+            HeightRequest="{OnPlatform 44, Android=50}"
+            ColumnSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            RowSpacing="{OnPlatform WinUI=0, MacCatalyst=0}"
+            >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Background" Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="Background"
+                                    Value="{OnPlatform WinUI=Transparent, MacCatalyst=Transparent, Default={AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}}"
+                                    />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{OnPlatform Android=54, iOS=50, WinUI=Auto, MacCatalyst=Auto}" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                x:Name="FlyoutItemImage"
+                Source="{Binding FlyoutIcon}"
+                VerticalOptions="Center"
+                HorizontalOptions="{OnPlatform Default=Center, WinUI=Start, MacCatalyst=Start}"
+                HeightRequest="{OnPlatform Android=20, iOS=18, WinUI=16, MacCatalyst=16}"
+                WidthRequest="{OnPlatform Android=204, iOS=18, WinUI=16, MacCatalyst=16}"
+                >
+                <Image.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Platforms>
+                            <On Platform="WinUI" Value="12,0,12,0" />
+                            <On Platform="MacCatalyst" Value="12,0,12,0" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </Image.Margin>
+            </Image>
+            <Label
+                x:Name="FlyoutItemLabel"
+                Grid.Column="1"
+                Text="{Binding Title}"
+                FontSize="{OnPlatform Android=14, iOS=14}"
+                FontAttributes="{OnPlatform iOS=Bold}"
+                FontFamily="{StaticResource MontserratMedium}"
+                HorizontalOptions="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                HorizontalTextAlignment="{OnPlatform WinUI=Start, MacCatalyst=Start}"
+                VerticalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                Margin="{OnPlatform Android='20,0,0,0'}"
+                >
+            </Label>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DataTemplate.Core.ShellItem.Default" x:DataType="BaseShellItem">
         <Grid
             x:Name="FlyoutItemLayout"
             HeightRequest="{OnPlatform 44, Android=50}"
