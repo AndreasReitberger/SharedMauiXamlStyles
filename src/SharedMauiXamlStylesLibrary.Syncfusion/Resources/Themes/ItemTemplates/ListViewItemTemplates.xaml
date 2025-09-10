@@ -19,31 +19,31 @@
 
     <DataTemplate x:Key="DataTemplate.Syncfusion.ProVersionFeature.Default" x:DataType="documentation:ProVersionFeature">
         <Grid 
-                Padding="8,6"
-                ColumnSpacing="4"
-                RowSpacing="4"
-                ColumnDefinitions="Auto,*"
+            Padding="8,6"
+            ColumnSpacing="4"
+            RowSpacing="4"
+            ColumnDefinitions="Auto,*"
+            >
+            <!-- Check icon -->
+            <Border
+                Style="{StaticResource Style.Core.Border.Profile}"
+                Background="{StaticResource LightGreen}"
+                Margin="0"
                 >
-                <!-- Check icon -->
-                <Border
-                    Style="{StaticResource Style.Core.Border.Profile}"
-                    Background="{StaticResource LightGreen}"
-                    Margin="0"
-                    >
-                    <Label 
-                        Style="{StaticResource Style.Core.Label.Icon}"
-                        Text="{x:Static iconsSyncfusion:SyncfusionIcons.Sent}"
-                        TextColor="{StaticResource White}"
-                        />
-                </Border>
-
                 <Label 
-                    Grid.Column="1"
-                    Text="{Binding Feature}"
-                    Style="{StaticResource Style.Core.Label.Default}"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Icon}"
+                    Text="{x:Static iconsSyncfusion:SyncfusionIcons.Sent}"
+                    TextColor="{StaticResource White}"
                     />
-            </Grid>
+            </Border>
+
+            <Label 
+                Grid.Column="1"
+                Text="{Binding Feature}"
+                Style="{StaticResource Style.Core.Label.Default}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
+                />
+        </Grid>
     </DataTemplate>
 </ResourceDictionary>
