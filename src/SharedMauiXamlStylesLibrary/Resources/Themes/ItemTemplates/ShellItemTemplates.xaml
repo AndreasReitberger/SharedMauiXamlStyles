@@ -19,6 +19,7 @@
     
     <!-- This template has no specific data type (example from MS website) -->
     <!-- Source: https://learn.microsoft.com/de-de/dotnet/maui/fundamentals/shell/flyout?view=net-maui-9.0 -->
+    <!-- It seems to be not needed, the default layout is exactly the same, will be removed in an upcoming release... -->
     <DataTemplate x:Key="DataTemplate.Core.Fylout.Default">
         <Grid
             x:Name="FlyoutItemLayout"

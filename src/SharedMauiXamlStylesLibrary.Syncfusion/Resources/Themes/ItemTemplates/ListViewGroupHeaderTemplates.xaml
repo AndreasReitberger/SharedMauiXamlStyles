@@ -24,7 +24,6 @@
             Style="{StaticResource Style.Core.StackLayout.Header}" 
             Orientation="Horizontal"
             >
-            <!-- Icon -->
             <Label Margin="10,4">
                 <Label.Style>
                     <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
@@ -37,7 +36,6 @@
                     </Style>
                 </Label.Style>
             </Label>
-
             <Label 
                 Text="{Binding Key}" 
                 Style="{StaticResource Style.Core.Label.GroupingHeader}"

@@ -14,7 +14,7 @@
     xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
         
     xmlns:views="clr-namespace:AndreasReitberger.Shared.ContentViews;assembly=SharedMauiXamlStylesLibrary"
-    
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Syncfusion.Controls;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     Title="SfListViewPage"
     Style="{StaticResource Style.Core.ContentPage.Default}"
     x:DataType="viewModels:SfListViewPageViewModel"   
@@ -33,13 +33,13 @@
             -->
             <views:SortFilterHeaderConventView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
-                SortButtonCommand="{Binding SortCommand}"
+                SortButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=SortCommand}"
                 SortButtonIconText="{x:Static icons:MaterialIcons.Sort}"
                 SortButtonText="Sort"
-                FilterButtonCommand="{Binding FilterCommand}"
+                FilterButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=FilterCommand}"
                 FilterButtonIconText="{x:Static icons:MaterialIcons.Filter}"
                 FilterButtonText="Filter"
-                ClearButtonCommand="{Binding ClearCommand}"
+                ClearButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ClearFilterCommand}"
                 ClearButtonIconText="{x:Static icons:MaterialIcons.Close}"
                 IsFiltered="True"
                 />
@@ -47,25 +47,25 @@
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchYear">
             <views:SwitchHeaderConventView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
-                BackButtonCommand="{Binding ValueBackCommand}"
+                BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
                 BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
                 BackButtonText=""
-                NextButtonCommand="{Binding ValueNextCommand}"
+                NextButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueNextCommand}"
                 NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
                 NextButtonText=""
-                TitleLabelText="Year"
+                TitleLabelText="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=CurrentPage}"
                 />
         </DataTemplate>
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchPage">
             <views:SwitchHeaderConventView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
-                BackButtonCommand="{Binding ValueBackCommand}"
+                BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
                 BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
                 BackButtonText=""
-                NextButtonCommand="{Binding ValueNextCommand}"
+                NextButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueNextCommand}"
                 NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
                 NextButtonText=""
-                TitleLabelText="Page"
+                TitleLabelText="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=CurrentPage}"
                 />
         </DataTemplate>
     </ContentPage.Resources>
@@ -77,27 +77,33 @@
             Header="Default"
             Style="{StaticResource Style.Syncfusion.SfTabItem.Default}"
             >
-            <listView:SfListView
+            <controls:EnhancedListView
                 Style="{StaticResource Style.Syncfusion.SfListView.Default}"
                 HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.Custom}"
                 ItemTemplate="{StaticResource DataTemplate.Syncfusion.DemoItem}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding Item}"
+                SortCommand="{Binding SortCommand}"
+                FilterCommand="{Binding FilterCommand}"
+                ClearFilterCommand="{Binding ClearCommand}"
                 >
-            </listView:SfListView>
+            </controls:EnhancedListView>
         </tabView:SfTabItem>
         <tabView:SfTabItem
             Header="Switch"
             Style="{StaticResource Style.Syncfusion.SfTabItem.Default}"
             >
-            <listView:SfListView
+            <controls:EnhancedListView
                 Style="{StaticResource Style.Syncfusion.SfListView.Default}"
                 ItemTemplate="{StaticResource DataTemplate.Syncfusion.DemoItem}"
                 HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.SwitchYear}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding Item}"
+                SortCommand="{Binding SortCommand}"
+                FilterCommand="{Binding FilterCommand}"
+                ClearFilterCommand="{Binding ClearCommand}"
                 >
-            </listView:SfListView>
+            </controls:EnhancedListView>
         </tabView:SfTabItem>
     </tabView:SfTabView>
 </ContentPage>

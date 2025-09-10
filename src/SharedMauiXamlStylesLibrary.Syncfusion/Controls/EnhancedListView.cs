@@ -3,27 +3,24 @@ using Syncfusion.Maui.DataSource;
 using Syncfusion.Maui.ListView;
 using System.Collections;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace AndreasReitberger.Shared.Syncfusion.Controls
 {
     public partial class EnhancedListView : SfListView
     {
-        #region Field
+        #region Fields
 
-        public IList SelectedItemsList
-        {
-            get => (IList)GetValue(SelectedItemsListProperty);
-            set => SetValue(SelectedItemsListProperty, value);
-        }
+        /// <summary>
+        /// Gets or sets the text value used to search.
+        /// </summary>
+        //SortDescriptor? defaultSortDescriptor;
+        #endregion
+
+        #region Bindings
 
         public static readonly BindableProperty SelectedItemsListProperty =
-            BindableProperty.Create(nameof(SelectedItemsList),
-                typeof(IList),
-                typeof(EnhancedListView),
-                new ArrayList(),
-                BindingMode.TwoWay,
-                null,
-                OnSelectionChanged);
+            BindableProperty.Create(nameof(SelectedItemsList), typeof(IList), typeof(EnhancedListView), new ArrayList(), BindingMode.TwoWay, null, OnSelectionChanged);
 
         /// <summary>
         /// Gets or sets the text value used to search.
@@ -31,7 +28,6 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         public static readonly BindableProperty SearchTextProperty =
             BindableProperty.Create(nameof(SearchText), typeof(string), typeof(EnhancedListView), string.Empty, BindingMode.TwoWay, null, OnSearchTextChanged);
 
-        /**/
         public static readonly BindableProperty FilterObjectProperty =
             BindableProperty.Create(nameof(Filter), typeof(object), typeof(EnhancedListView), null, BindingMode.TwoWay, null, OnFilterChanged);
 
@@ -41,16 +37,48 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
         public static readonly BindableProperty DefaultSortDescriptorProperty =
             BindableProperty.Create(nameof(DefaultSortDescriptor), typeof(SortDescriptor), typeof(EnhancedListView), null, BindingMode.TwoWay, null, OnDefaultSortDescriptorChanged);
 
-        /// <summary>
-        /// Gets or sets the text value used to search.
-        /// </summary>
-        //string searchText;
-        //ListViewFilterBase filter;
-        SortDescriptor? defaultSortDescriptor;
+        public static readonly BindableProperty CurrentPageProperty =
+           BindableProperty.Create(nameof(CurrentPage), typeof(int), typeof(EnhancedListView), 0);
+
+        public static readonly BindableProperty FilterCommandProperty =
+            BindableProperty.Create(nameof(FilterCommand), typeof(ICommand), typeof(EnhancedListView), null);
+
+        public static readonly BindableProperty FilterCommandParameterProperty =
+            BindableProperty.Create(nameof(FilterCommandParameter), typeof(object), typeof(EnhancedListView), default);
+
+        public static readonly BindableProperty OnFilterChangedCommandProperty =
+            BindableProperty.Create(nameof(OnFilterChangedCommand), typeof(ICommand), typeof(EnhancedListView), null);
+
+        public static readonly BindableProperty OnFilterChangedCommandParameterProperty =
+            BindableProperty.Create(nameof(OnFilterChangedCommandParameter), typeof(object), typeof(EnhancedListView), default);
+
+        public static readonly BindableProperty SortCommandProperty =
+            BindableProperty.Create(nameof(SortCommand), typeof(ICommand), typeof(EnhancedListView), null);
+
+        public static readonly BindableProperty SortCommandParameterProperty =
+            BindableProperty.Create(nameof(SortCommandParameter), typeof(object), typeof(EnhancedListView), default);
+
+        public static readonly BindableProperty ClearFilterCommandProperty =
+            BindableProperty.Create(nameof(ClearFilterCommand), typeof(ICommand), typeof(EnhancedListView), null);
+
+        public static readonly BindableProperty ClearFilterCommandParameterProperty =
+            BindableProperty.Create(nameof(ClearFilterCommandParameter), typeof(object), typeof(EnhancedListView), default);
+
+        public static readonly BindableProperty ValueBackCommandProperty =
+            BindableProperty.Create(nameof(ValueBackCommand), typeof(ICommand), typeof(EnhancedListView), null);
+
+        public static readonly BindableProperty ValueNextCommandProperty =
+            BindableProperty.Create(nameof(ValueNextCommand), typeof(ICommand), typeof(EnhancedListView), null);
+
         #endregion
 
         #region Property
 
+        public IList SelectedItemsList
+        {
+            get => (IList)GetValue(SelectedItemsListProperty);
+            set => SetValue(SelectedItemsListProperty, value);
+        }
         /// <summary>
         /// Gets or sets the text value used to search.
         /// </summary>
@@ -59,24 +87,75 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             get { return (string)GetValue(SearchTextProperty); }
             set { SetValue(SearchTextProperty, value); }
         }
-        /**/
         public object? Filter
         {
             get { return GetValue(FilterObjectProperty); }
             set { SetValue(FilterObjectProperty, value); }
         }
-
-        //bool _isFiltered = false;
         public bool IsFiltered
         {
             get { return (bool)GetValue(IsFilterProperty); }
             set { SetValue(IsFilterProperty, value); }
         }
-
         public SortDescriptor? DefaultSortDescriptor
         {
             get { return (SortDescriptor)GetValue(DefaultSortDescriptorProperty); }
             set { SetValue(DefaultSortDescriptorProperty, value); }
+        }
+        public int CurrentPage
+        {
+            get { return (int)GetValue(CurrentPageProperty); }
+            set { SetValue(CurrentPageProperty, value); }
+        }
+        public ICommand? FilterCommand
+        {
+            get { return (ICommand)GetValue(FilterCommandProperty); }
+            set { SetValue(FilterCommandProperty, value); }
+        }
+        public object? FilterCommandParameter
+        {
+            get { return GetValue(FilterCommandParameterProperty); }
+            set { SetValue(FilterCommandParameterProperty, value); }
+        }
+        public ICommand? OnFilterChangedCommand
+        {
+            get { return (ICommand)GetValue(OnFilterChangedCommandProperty); }
+            set { SetValue(OnFilterChangedCommandProperty, value); }
+        }
+        public object? OnFilterChangedCommandParameter
+        {
+            get { return GetValue(OnFilterChangedCommandParameterProperty); }
+            set { SetValue(OnFilterChangedCommandParameterProperty, value); }
+        }
+        public ICommand? SortCommand
+        {
+            get { return (ICommand)GetValue(SortCommandProperty); }
+            set { SetValue(SortCommandProperty, value); }
+        }
+        public object? SortCommandParameter
+        {
+            get { return GetValue(SortCommandParameterProperty); }
+            set { SetValue(SortCommandParameterProperty, value); }
+        }
+        public ICommand? ClearFilterCommand
+        {
+            get { return (ICommand)GetValue(ClearFilterCommandProperty); }
+            set { SetValue(ClearFilterCommandProperty, value); }
+        }
+        public object? ClearFilterCommandParameter
+        {
+            get { return GetValue(ClearFilterCommandParameterProperty); }
+            set { SetValue(ClearFilterCommandParameterProperty, value); }
+        }
+        public ICommand? ValueNextCommand
+        {
+            get { return (ICommand)GetValue(ValueNextCommandProperty); }
+            set { SetValue(ValueNextCommandProperty, value); }
+        }
+        public ICommand? ValueBackCommand
+        {
+            get { return (ICommand)GetValue(ValueBackCommandProperty); }
+            set { SetValue(ValueBackCommandProperty, value); }
         }
         #endregion
 
@@ -140,6 +219,8 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
                     listView.DataSource.Filter = null;
                     listView.DataSource.RefreshFilter();
                 }
+                if (listView.OnFilterChangedCommand?.CanExecute(listView.OnFilterChangedCommandParameter) is true)
+                    listView.OnFilterChangedCommand?.Execute(listView.OnFilterChangedCommandParameter);
             }
             catch (Exception exc)
             {
@@ -160,10 +241,10 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
                 if (bindable is not EnhancedListView listView) return;
                 if (newValue != null && listView.DataSource != null)
                 {
-                    listView.defaultSortDescriptor = (SortDescriptor)newValue;
+                    listView.DefaultSortDescriptor = (SortDescriptor)newValue;
                     listView.DataSource.SortDescriptors.Clear();
                     if (listView.DefaultSortDescriptor != null)
-                        listView.DataSource.SortDescriptors.Add(listView.defaultSortDescriptor);
+                        listView.DataSource.SortDescriptors.Add(listView.DefaultSortDescriptor);
 
                     listView.DataSource.Refresh();
                     //listView.DataSource.RefreshFilter();
@@ -208,10 +289,10 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
                         case nameof(ItemsSource):
                             // clear selection on source change
                             listView.SelectedItemsList = new ArrayList(); ;
-                            if (listView.DataSource != null && defaultSortDescriptor != null)
+                            if (listView.DataSource != null && DefaultSortDescriptor != null)
                             {
                                 listView.DataSource.SortDescriptors.Clear();
-                                listView.DataSource.SortDescriptors.Add(defaultSortDescriptor);
+                                listView.DataSource.SortDescriptors.Add(DefaultSortDescriptor);
                                 listView.DataSource.Refresh();
 
                             }
@@ -224,10 +305,10 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
                             }
                             break;
                         case nameof(DataSource):
-                            if (listView.DataSource != null && defaultSortDescriptor != null)
+                            if (listView.DataSource != null && DefaultSortDescriptor != null)
                             {
                                 listView.DataSource.SortDescriptors.Clear();
-                                listView.DataSource.SortDescriptors.Add(defaultSortDescriptor);
+                                listView.DataSource.SortDescriptors.Add(DefaultSortDescriptor);
                                 listView.DataSource.Refresh();
                             }
                             break;
