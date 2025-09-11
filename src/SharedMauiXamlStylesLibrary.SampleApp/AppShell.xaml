@@ -7,6 +7,8 @@
     xmlns:views="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.Views"
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"   
     
+    xmlns:core="clr-namespace:AndreasReitberger.Shared.Core.Theme;assembly=SharedMauiCoreLibrary"
+    
     Style="{StaticResource Style.Core.Shell.Default}"
     FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
     
@@ -92,6 +94,10 @@
         ContentTemplate="{DataTemplate views:AccordionsPage}"
         Route="AccordionsPage" />
     <ShellContent
+        Title="Expanders (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfExpandersPage}"
+        Route="SfExpandersPage" />
+    <ShellContent
         Title="CheckBoxes (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfCheckBoxesPage}"
         Route="SfCheckBoxesPage" />
@@ -154,7 +160,7 @@
                     Grid.Column="1"
                     ItemsSource="{Binding Themes}"
                     SelectedItem="{Binding Theme}"
-                    ItemDisplayBinding="{Binding ThemeName}"
+                    ItemDisplayBinding="{Binding x:DataType=core:ThemeColorInfo, Path=ThemeName}"
                     />
             </Grid>
         </VerticalStackLayout>

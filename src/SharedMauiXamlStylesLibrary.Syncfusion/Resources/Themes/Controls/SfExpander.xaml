@@ -14,12 +14,12 @@
         <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" Black="{StaticResource Black}" White="{StaticResource White}" />
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" Black="{StaticResource Black}" White="{StaticResource White}" />
 
     <!-- Docs: https://help.syncfusion.com/maui/accordion/ -->
     <Style x:Key="Style.Syncfusion.SfExpander.Default" TargetType="expander:SfExpander">
         <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="HeaderIconColor" Value="{Binding x:DataType='expander:SfExpander', Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+        <Setter Property="HeaderIconColor" Value="{Binding x:DataType='expander:SfExpander', Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource BrushToBlackWhiteConverter}}" />
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="AnimationDuration" Value="200" />
         <Setter Property="HeaderIconPosition" Value="Start" />
@@ -29,13 +29,13 @@
                     <VisualState Name="Expanded">
                         <VisualState.Setters>
                             <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
-                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+                            <!--<Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>-->
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Collapsed">
                         <VisualState.Setters>
                             <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
-                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}"/>
+                            <!--<Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}"/>-->
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>

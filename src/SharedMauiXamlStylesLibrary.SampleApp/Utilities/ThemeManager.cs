@@ -3,6 +3,7 @@ using AndreasReitberger.Shared.Core.Theme;
 using AndreasReitberger.Shared.Interfaces;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.Versioning;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
 {
@@ -79,11 +80,11 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
         /// </summary>
         /// <param name="theme">The ThemeColorInfo to be changed to</param>
         /// <param name="app">The current app</param>
-        public void UpdatePrimaryThemeColor(ThemeColorInfo theme, Application? app)
+        public void UpdatePrimaryThemeColor(ThemeColorInfo? theme, Application? app)
         {
             try
             {
-                if (app is null || SelectedTheme == theme) return;
+                if (app is null || theme is null || SelectedTheme == theme) return;
                 SelectedTheme = theme;
                 app.Resources["PrimaryColor"] = theme.PrimaryColor;
                 app.Resources["GradientStart"] = theme.PrimaryColor;
