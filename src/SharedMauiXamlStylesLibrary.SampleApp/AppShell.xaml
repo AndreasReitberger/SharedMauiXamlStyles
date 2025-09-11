@@ -101,6 +101,16 @@
         Title="CheckBoxes (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfCheckBoxesPage}"
         Route="SfCheckBoxesPage" />
+    <!--
+    <ShellContent
+        Title="Chat (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfChatPage}"
+        Route="SfChatPage" />
+    -->
+    <ShellContent
+        Title="Popup (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfPopupPage}"
+        Route="SfPopupPage" />
     <ShellContent
         Title="ComboBoxes (Syncfusion)"
         ContentTemplate="{DataTemplate views:ComboBoxesPage}"

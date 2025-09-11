@@ -50,12 +50,14 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<ProgressBarsPageViewModel>();
             builder.Services.AddSingleton<SlidersPageViewModel>();
             builder.Services.AddSingleton<SwitchesPageViewModel>();
+            builder.Services.AddSingleton<SfChatPageViewModel>();
             builder.Services.AddSingleton<SfCheckBoxesPageViewModel>();
             builder.Services.AddSingleton<SfExpandersPageViewModel>();
             builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
             builder.Services.AddSingleton<TabViewPageViewModel>();
             builder.Services.AddSingleton<TemplatePageViewModel>();
             builder.Services.AddSingleton<SfListViewPageViewModel>();
+            builder.Services.AddSingleton<SfPopupPageViewModel>();
             builder.Services.AddSingleton<TextInputLayoutsPageViewModel>();
             return builder;
         }
@@ -82,11 +84,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SlidersPage>();
             builder.Services.AddSingleton<SwitchesPage>();
             builder.Services.AddSingleton<SfCheckBoxesPage>();
+            builder.Services.AddSingleton<SfChatPage>();
             builder.Services.AddSingleton<SfExpandersPage>();
             builder.Services.AddSingleton<SfSegmentedControlPage>();
             builder.Services.AddSingleton<TabViewPage>();
             builder.Services.AddSingleton<TemplatePage>();
             builder.Services.AddSingleton<SfListViewPage>();
+            builder.Services.AddSingleton<SfPopupPage>();
             builder.Services.AddSingleton<TextInputLayoutsPage>();
             return builder;
         }

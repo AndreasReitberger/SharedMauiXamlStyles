@@ -39,28 +39,36 @@
 		<PackageReference Include="Syncfusion.Maui.Cards" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Carousel" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Charts" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.Chat" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Core" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.DataForm" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.DataGrid" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.DataGridExport" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Expander" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Gauges" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.ImageEditor" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Inputs" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Kanban" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.ListView" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.Maps" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.MarkdownViewer" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.NavigationDrawer" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.ParallaxView" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.PdfToImageConverter" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.PdfViewer" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Picker" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.Popup" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.ProgressBar" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.PullToRefresh" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.RadialMenu" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.RichTextEditor" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Rotator" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Scheduler" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.SignaturePad" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.Sliders" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.SunburstChart" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.TabView" Version="31.1.18" />
+		<PackageReference Include="Syncfusion.Maui.Toolbar" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.TreeMap" Version="31.1.18" />
 		<PackageReference Include="Syncfusion.Maui.TreeView" Version="31.1.18" />
 	</ItemGroup>
@@ -158,6 +166,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\Core\Label.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\SfPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\SfChat.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfBarcodeGenerator.xaml">

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- https://help.syncfusion.com/maui/chat/styles -->
+    <Style x:Key="Style.Syncfusion.SfPopup.Default" TargetType="popup:SfPopup">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="AnimationMode" Value="SlideOnBottom" />
+        <Setter Property="PopupStyle">
+            <popup:PopupStyle 
+                HeaderBackground="{DynamicResource PrimaryColor}"
+                HeaderFontAttribute="Bold"
+                HeaderFontFamily="{StaticResource MontserratSemiBold}"
+                HeaderFontSize="{StaticResource DefaultTextSize}"
+                HeaderTextAlignment="Center"
+                HeaderTextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                />
+        </Setter>
+    </Style>
+
+    <Style TargetType="popup:SfPopup" BasedOn="{StaticResource Style.Syncfusion.SfPopup.Default}" />
+
+</ResourceDictionary>
