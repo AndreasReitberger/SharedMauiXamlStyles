@@ -67,6 +67,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\SfPopupPage.xaml.cs">
+	    <DependentUpon>SfPopupPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SfChatPage.xaml.cs">
+	    <DependentUpon>SfChatPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SfExpandersPage.xaml.cs">
 	    <DependentUpon>SfExpandersPage.xaml</DependentUpon>
 	  </Compile>
@@ -146,6 +152,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfPopupPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfChatPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfExpandersPage.xaml">

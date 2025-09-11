@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:chat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- https://help.syncfusion.com/maui/chat/styles -->
+    <Style x:Key="Style.Syncfusion.SfChat.Default" TargetType="chat:SfChat">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        
+    </Style>
+
+    <Style TargetType="chat:SfChat" BasedOn="{StaticResource Style.Syncfusion.SfChat.Default}" />
+
+
+</ResourceDictionary>
