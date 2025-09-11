@@ -67,6 +67,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\SfExpandersPage.xaml.cs">
+	    <DependentUpon>SfExpandersPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\TemplatePage.xaml.cs">
 	    <DependentUpon>TemplatePage.xaml</DependentUpon>
 	  </Compile>
@@ -145,6 +148,9 @@
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\SfExpandersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TemplatePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -217,10 +223,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.9" />
 		<PackageReference Include="SharedMauiCoreLibrary" Version="1.1.17" />
-		<PackageReference Include="System.Text.Json" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.100" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
+		<PackageReference Include="System.Text.Json" Version="9.0.9" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.110" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.9" />
 	</ItemGroup>
 </Project>
