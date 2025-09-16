@@ -7,6 +7,7 @@
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:helpers="clr-namespace:AndreasReitberger.Shared.Helpers;assembly=SharedMauiXamlStylesLibrary"
     
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
@@ -100,6 +101,24 @@
                     Text="This is a normal button"
                     Style="{StaticResource Style.Core.Button.RoundedLong}"
                     />
+                <!-- Example with contrast text helper -->
+                <Label 
+                    Margin="2,16"
+                    Text="Example with contrast TextColor helper"
+                    VerticalTextAlignment="Center" 
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource Style.Core.Label.Default}"
+                    />
+                <Button 
+                    IsEnabled="{Binding Enabled}"
+                    Margin="8,16"
+                    Text="This is a normal button"
+                    Background="{DynamicResource PrimaryColor}"
+                    helpers:ContrastTextColorHelper.EnableAutoTextColor="False"
+                    helpers:ContrastTextColorHelper.DarkTextColor="{StaticResource Blue}"
+                    helpers:ContrastTextColorHelper.LightTextColor="{StaticResource Orange}"
+                    >
+                </Button>
                 <BoxView
                     Style="{StaticResource Style.Core.BoxView.PrimarySeparator}"
                     Margin="4"
