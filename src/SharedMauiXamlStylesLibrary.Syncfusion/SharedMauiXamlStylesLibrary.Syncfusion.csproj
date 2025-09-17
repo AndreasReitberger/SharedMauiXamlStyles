@@ -58,7 +58,7 @@
 		<PackageReference Include="Syncfusion.Maui.Rotator" Version="31.1.19" />
 		<PackageReference Include="Syncfusion.Maui.Scheduler" Version="31.1.19" />
 		<PackageReference Include="Syncfusion.Maui.SignaturePad" Version="31.1.19" />
-		<PackageReference Include="Syncfusion.Maui.Sliders" Version="31.1.19" />
+		<PackageReference Include="Syncfusion.Maui.Sliders" Version="31.1.20" />
 		<PackageReference Include="Syncfusion.Maui.SunburstChart" Version="31.1.19" />
 		<PackageReference Include="Syncfusion.Maui.TabView" Version="31.1.20" />
 		<PackageReference Include="Syncfusion.Maui.TreeMap" Version="31.1.19" />
