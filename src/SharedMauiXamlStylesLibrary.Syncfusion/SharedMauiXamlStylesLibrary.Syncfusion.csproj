@@ -62,7 +62,7 @@
 		<PackageReference Include="Syncfusion.Maui.SunburstChart" Version="31.1.19" />
 		<PackageReference Include="Syncfusion.Maui.TabView" Version="31.1.19" />
 		<PackageReference Include="Syncfusion.Maui.TreeMap" Version="31.1.19" />
-		<PackageReference Include="Syncfusion.Maui.TreeView" Version="31.1.19" />
+		<PackageReference Include="Syncfusion.Maui.TreeView" Version="31.1.20" />
 	</ItemGroup>
 
 	<ItemGroup>
