@@ -1,13 +1,32 @@
+#version: 2
+##registries:
+##  custom-nuget:
+##    type: nuget-feed
+##    url: https://api.nuget.org/v3/index.json
+#updates:
+#- package-ecosystem: nuget
+#  directory: "/src"
+##  registries:
+##    - custom-nuget
+#  schedule:
+#    interval: daily
+#    # Run at 10pm Pacific time
+#    time: "22:00"
+#    timezone: "America/Los_Angeles"
+#  open-pull-requests-limit: 25
+#  labels:
+#      - "nuget"
+#      - "dependencies"
 version: 2
-#registries:
-#  custom-nuget:
-#    type: nuget-feed
-#    url: https://api.nuget.org/v3/index.json
+registries:
+  custom-nuget:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
 updates:
 - package-ecosystem: nuget
   directory: "/src"
-#  registries:
-#    - custom-nuget
+  registries:
+    - custom-nuget
   schedule:
     interval: daily
     # Run at 10pm Pacific time
@@ -17,35 +36,19 @@ updates:
   labels:
       - "nuget"
       - "dependencies"
-#version: 2
-#registries:
-#  custom-nuget:
-#    type: nuget-feed
-#    url: https://api.nuget.org/v3/index.json
-#updates:
-#- package-ecosystem: nuget
-#  directory: "/"
-#  registries:
-#    - custom-nuget
-#  schedule:
-#    interval: daily
-#    # Run at 10pm Pacific time
-#    time: "22:00"
-#    timezone: "America/Los_Angeles"
-#  open-pull-requests-limit: 25
-#  groups:
-##    default:
-##      patterns:
-##        - "*"
-#    Syncfusion:
+  groups:
+#    default:
 #      patterns:
-#        - "Syncfusion.Maui*"
-#    MicrosoftExtensions:
-#      patterns:
-#        - "Microsoft.Extensions.*"
-#    MicrosoftMaui:
-#      patterns:
-#        - "Microsoft.Maui.*"
+#        - "*"
+    Syncfusion:
+      patterns:
+        - "Syncfusion.Maui*"
+    MicrosoftExtensions:
+      patterns:
+        - "Microsoft.Extensions.*"
+    MicrosoftMaui:
+      patterns:
+        - "Microsoft.Maui.*"
 #  ignore:
 #    - dependency-name: "MicrosoftMauiGraphicsVersion"         # maestro
       
