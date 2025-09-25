@@ -27,6 +27,7 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SfPicker.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRadialGauge.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRating.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfScheduler.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSegmentedControl.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSlider.xaml" />
