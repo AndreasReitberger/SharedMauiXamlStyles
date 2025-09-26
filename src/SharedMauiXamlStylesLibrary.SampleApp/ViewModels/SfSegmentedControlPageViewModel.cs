@@ -5,7 +5,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
     public partial class SfSegmentedControlPageViewModel : BaseViewModel
     {
-
         #region Properties
 
         [ObservableProperty]
@@ -31,7 +30,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         public SfSegmentedControlPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
-            UpdateVersionBuild();
         }
 
         #endregion

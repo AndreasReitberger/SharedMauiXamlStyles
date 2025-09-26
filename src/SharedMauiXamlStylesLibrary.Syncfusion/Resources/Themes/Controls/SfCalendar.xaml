@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter"/>
+    
+    <!-- Docs: https://help.syncfusion.com/maui/calendar/getting-started -->
+    <Style x:Key="Style.Syncfusion.SfCalendar.Default" TargetType="calendar:SfCalendar">
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="View" Value="Month" />
+        <Setter Property="SelectionMode" Value="Multiple" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="TodayHighlightBrush" Value="{DynamicResource PrimaryBrush}" />
+        <Setter Property="HeaderView">
+            <calendar:CalendarHeaderView
+                 Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"                             
+                 >
+                <calendar:CalendarHeaderView.TextStyle>
+                    <calendar:CalendarTextStyle
+                         FontFamily="{StaticResource MontserratMedium}"
+                         TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                         FontAttributes="Bold"
+                         FontSize="18"
+                         />
+                </calendar:CalendarHeaderView.TextStyle>
+            </calendar:CalendarHeaderView>
+        </Setter>
+        <Setter Property="MonthView">
+            <calendar:CalendarMonthView 
+                FirstDayOfWeek="Monday"
+                ShowWeekNumber="True"
+                TodayBackground="{DynamicResource PrimaryColor}"
+                Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                TrailingLeadingDatesBackground="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                >
+                <calendar:CalendarMonthView.TextStyle>
+                    <calendar:CalendarTextStyle
+                        FontFamily="{StaticResource MontserratMedium}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        FontSize="10" 
+                        />
+                </calendar:CalendarMonthView.TextStyle>
+                <calendar:CalendarMonthView.TodayTextStyle>
+                    <calendar:CalendarTextStyle
+                        FontFamily="{StaticResource MontserratMedium}"
+                        TextColor="{Binding x:DataType='calendar:CalendarMonthView', Source={RelativeSource AncestorType={x:Type calendar:CalendarMonthView}}, Path=TodayBackground, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                        FontSize="12" 
+                        FontAttributes="Bold"
+                        />
+                </calendar:CalendarMonthView.TodayTextStyle>
+                <calendar:CalendarMonthView.HeaderView>
+                    <calendar:CalendarMonthHeaderView 
+                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"   
+                        TextFormat="ddd"
+                        >
+                        <calendar:CalendarMonthHeaderView.TextStyle>
+                            <calendar:CalendarTextStyle 
+                                FontFamily="{StaticResource MontserratMedium}"
+                                TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                                FontSize="14" 
+                                />
+                        </calendar:CalendarMonthHeaderView.TextStyle>
+                    </calendar:CalendarMonthHeaderView>
+                </calendar:CalendarMonthView.HeaderView>
+                <calendar:CalendarMonthView.WeekNumberStyle>
+                    <calendar:CalendarWeekNumberStyle 
+                        Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                        >
+                        <calendar:CalendarWeekNumberStyle.TextStyle>
+                            <calendar:CalendarTextStyle 
+                                FontFamily="{StaticResource MontserratMedium}"
+                                TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" 
+                                FontSize="12" 
+                                />
+                        </calendar:CalendarWeekNumberStyle.TextStyle>
+                    </calendar:CalendarWeekNumberStyle>
+                </calendar:CalendarMonthView.WeekNumberStyle>
+                <calendar:CalendarMonthView.TrailingLeadingDatesTextStyle>
+                    <calendar:CalendarTextStyle
+                        FontFamily="{StaticResource MontserratMedium}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        FontSize="10" 
+                        />
+                </calendar:CalendarMonthView.TrailingLeadingDatesTextStyle>
+            </calendar:CalendarMonthView>
+        </Setter>
+        <Setter Property="FooterView">
+            <calendar:CalendarFooterView 
+                DividerColor="{DynamicResource PrimaryColor}"
+                Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                Height="70" 
+                ShowActionButtons="False" 
+                ShowTodayButton="True" 
+                >
+                <calendar:CalendarFooterView.TextStyle >
+                    <calendar:CalendarTextStyle 
+                        FontSize="15" 
+                        FontFamily="{StaticResource MontserratMedium}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" 
+                        />
+                </calendar:CalendarFooterView.TextStyle>
+            </calendar:CalendarFooterView>
+        </Setter>
+    </Style>
+
+    <Style TargetType="calendar:SfCalendar" BasedOn="{StaticResource Style.Syncfusion.SfCalendar.Default}" />
+</ResourceDictionary>
