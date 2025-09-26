@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Docs: https://help.syncfusion.com/maui/scheduler/getting-started -->
+    <Style x:Key="Style.Syncfusion.SfScheduler.Default" TargetType="scheduler:SfScheduler">
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="CellBorderBrush" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="TodayHighlightBrush" Value="{DynamicResource PrimaryBrush}" />
+        <Setter Property="ShowWeekNumber" Value="True" />
+        <Setter Property="HeaderView">
+            <scheduler:SchedulerHeaderView
+                 Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"                             
+                 >
+                <scheduler:SchedulerHeaderView.TextStyle>
+                    <scheduler:SchedulerTextStyle
+                         FontFamily="{StaticResource MontserratMedium}"
+                         TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                         FontAttributes="Bold"
+                         FontSize="18"
+                         />
+                </scheduler:SchedulerHeaderView.TextStyle>
+            </scheduler:SchedulerHeaderView>
+        </Setter>
+        <Setter Property="AppointmentTextStyle">
+            <scheduler:SchedulerTextStyle
+                FontFamily="{StaticResource MontserratRegular}"
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                />
+        </Setter>
+        <Setter Property="MonthView">
+            <scheduler:SchedulerMonthView 
+                AppointmentDisplayMode="Text"
+                />
+        </Setter>
+        <Setter Property="CellSelectionView">
+            <scheduler:SchedulerCellSelectionView 
+                Stroke="{DynamicResource PrimaryColor}"
+                />
+        </Setter>
+    </Style>
+
+    <Style TargetType="scheduler:SfScheduler" BasedOn="{StaticResource Style.Syncfusion.SfScheduler.Default}" />
+
+    <Style x:Key="Style.Syncfusion.SfScheduler.Agenda" TargetType="scheduler:SfScheduler" BasedOn="{StaticResource Style.Syncfusion.SfScheduler.Default}">
+        <Setter Property="View" Value="Agenda" />
+        <Setter Property="AgendaView">
+            <scheduler:SchedulerAgendaView>
+                <scheduler:SchedulerAgendaView.MonthHeaderSettings>
+                    <scheduler:SchedulerMonthHeaderSettings
+                        DateFormat="MMM yyy"
+                        Height="48"
+                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                        >
+                        <scheduler:SchedulerMonthHeaderSettings.TextStyle>
+                            <scheduler:SchedulerTextStyle
+                                FontFamily="{StaticResource MontserratBold}"
+                                FontAttributes="Bold"
+                                TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"                                        
+                                FontSize="14"
+                                />
+                        </scheduler:SchedulerMonthHeaderSettings.TextStyle>
+                    </scheduler:SchedulerMonthHeaderSettings>
+                </scheduler:SchedulerAgendaView.MonthHeaderSettings>
+                <scheduler:SchedulerAgendaView.WeekHeaderSettings>
+                    <scheduler:SchedulerWeekHeaderSettings
+                        DateFormat="MM, ddd"
+                        Height="48"
+                        Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                        >
+                        <scheduler:SchedulerWeekHeaderSettings.TextStyle>
+                            <scheduler:SchedulerTextStyle
+                                FontFamily="{StaticResource MontserratBold}"
+                                FontAttributes="Bold"
+                                TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"                                        
+                                FontSize="14"
+                                />
+                        </scheduler:SchedulerWeekHeaderSettings.TextStyle>
+                    </scheduler:SchedulerWeekHeaderSettings>
+                </scheduler:SchedulerAgendaView.WeekHeaderSettings>
+                <scheduler:SchedulerAgendaView.DayHeaderSettings>
+                    <!-- DayFormat="MM, ddd" -->
+                    <scheduler:SchedulerDayHeaderSettings
+                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                        >
+                        <scheduler:SchedulerDayHeaderSettings.DateTextStyle>
+                            <scheduler:SchedulerTextStyle
+                                FontFamily="{StaticResource MontserratRegular}"
+                                TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"                                        
+                                FontSize="12"
+                                />
+                        </scheduler:SchedulerDayHeaderSettings.DateTextStyle>
+                        <scheduler:SchedulerDayHeaderSettings.DayTextStyle>
+                            <scheduler:SchedulerTextStyle
+                                FontFamily="{StaticResource MontserratRegular}"
+                                TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"                                        
+                                FontSize="12"
+                                />
+                        </scheduler:SchedulerDayHeaderSettings.DayTextStyle>
+                    </scheduler:SchedulerDayHeaderSettings>
+                </scheduler:SchedulerAgendaView.DayHeaderSettings>
+            </scheduler:SchedulerAgendaView>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

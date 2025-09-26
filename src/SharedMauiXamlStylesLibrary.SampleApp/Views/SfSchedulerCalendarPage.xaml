@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfSchedulerCalendarPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"  
+    xmlns:behaviors="clr-namespace:AndreasReitberger.Shared.Core.Behaviors;assembly=SharedMauiCoreLibrary"   
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+    
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+    
+    Title="SfSchedulerCalendarPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:SfSchedulerCalendarPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    </ContentPage.Resources>
+
+    <tabView:SfTabView
+        Style="{StaticResource Style.Syncfusion.SfTabView.BlackWhite}"
+        >
+        <tabView:SfTabItem
+            Header="Schedular"
+            Style="{StaticResource Style.Syncfusion.SfTabItem.BlackWhite}"
+            >
+            <ScrollView>
+                <VerticalStackLayout>
+                    <Label 
+                        Margin="2,16"
+                        Text="Schedular"
+                        VerticalTextAlignment="Center" 
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource Style.Core.Label.Default}"
+                        />
+                    <scheduler:SfScheduler    
+                        Style="{StaticResource Style.Syncfusion.SfScheduler.Agenda}"
+                        AppointmentsSource="{Binding Appointments}"
+                        >
+                        <!-- https://help.syncfusion.com/maui/scheduler/events -->
+                        <scheduler:SfScheduler.Behaviors>
+                            <behaviors:EventToCommandBehavior
+                                EventName="Tapped"
+                                Command="{Binding ActionFromTapCommand}"    
+                                />
+                            <behaviors:EventToCommandBehavior
+                                EventName="DoubleTapped"
+                                Command="{Binding ActionFromDoubleTapCommand}"    
+                                />
+                        </scheduler:SfScheduler.Behaviors>
+                        <!-- Mapping -->
+                        <scheduler:SfScheduler.AppointmentMapping>
+                            <scheduler:SchedulerAppointmentMapping
+                                Subject="Name"
+                                StartTime="From"
+                                EndTime="To"
+                                Background="Background"
+                                TextColorMapping="Foreground"
+                                IsAllDay="IsAllDay"
+                                StartTimeZone="StartTimeZone"
+                                EndTimeZone="EndTimeZone"
+                                Id="Id"        
+                                RecurrenceExceptionDates="RecurrenceExceptions"
+                                RecurrenceRule="RecurrenceRule"
+                                RecurrenceId="RecurrenceId"
+                                Notes="Notes"
+                                />
+                        </scheduler:SfScheduler.AppointmentMapping>
+                    </scheduler:SfScheduler>
+                </VerticalStackLayout>
+            </ScrollView>
+        </tabView:SfTabItem>
+        <!-- Calendar -->
+        <tabView:SfTabItem
+            Header="Calendar"
+            Style="{StaticResource Style.Syncfusion.SfTabItem.BlackWhite}"
+            >
+            <ScrollView>
+                <VerticalStackLayout>
+                    <Label 
+                        Margin="2,16"
+                        Text="Calendar"
+                        VerticalTextAlignment="Center" 
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource Style.Core.Label.Default}"
+                        />
+                    <calendar:SfCalendar
+                        Style="{StaticResource Style.Syncfusion.SfCalendar.Default}"
+                        >
+                    </calendar:SfCalendar>
+                </VerticalStackLayout>
+            </ScrollView>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>
+</ContentPage>

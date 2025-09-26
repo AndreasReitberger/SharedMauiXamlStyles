@@ -105,17 +105,18 @@
         Title="ComboBoxes (Syncfusion)"
         ContentTemplate="{DataTemplate views:ComboBoxesPage}"
         Route="ComboBoxesPage" />
-    
     <ShellContent
         Title="Entries (Syncfusion)"
         ContentTemplate="{DataTemplate views:EntryPage}"
         Route="EntryPage" />
-
     <ShellContent
         Title="SegmentedControl (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfSegmentedControlPage}"
         Route="SfSegmentedControlPage" />
-
+    <ShellContent
+        Title="SfScheduler and CalendarPage (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfSchedulerCalendarPage}"
+        Route="SfSchedulerCalendarPage" />
     <ShellContent
         Title="TabView (Syncfusion)"
         ContentTemplate="{DataTemplate views:TabViewPage}"
