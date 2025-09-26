@@ -74,6 +74,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<CollectionViewPage>();
             builder.Services.AddSingleton<ComboBoxesPage>();
             builder.Services.AddSingleton<EntryPage>();
+            builder.Services.AddSingleton<FontSizePage>();
             builder.Services.AddSingleton<LabelsPage>();
             builder.Services.AddSingleton<LanguagesPage>();
             builder.Services.AddSingleton<GridsPage>();

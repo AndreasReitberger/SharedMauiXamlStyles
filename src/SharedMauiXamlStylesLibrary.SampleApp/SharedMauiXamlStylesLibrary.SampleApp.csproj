@@ -67,6 +67,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\FontSizePage.xaml.cs">
+	    <DependentUpon>FontSizePage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SfExpandersPage.xaml.cs">
 	    <DependentUpon>SfExpandersPage.xaml</DependentUpon>
 	  </Compile>
@@ -149,6 +152,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\FontSizePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfExpandersPage.xaml">

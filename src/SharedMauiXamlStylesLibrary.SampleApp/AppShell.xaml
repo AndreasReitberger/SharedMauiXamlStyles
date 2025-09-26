@@ -32,6 +32,11 @@
         Title="ActivityIndicators"
         ContentTemplate="{DataTemplate views:ActivityIndicatorsPage}"
         Route="ActivityIndicatorsPage" />
+    
+    <ShellContent
+        Title="FontSizePage"
+        ContentTemplate="{DataTemplate views:FontSizePage}"
+        Route="FontSizePage" />
     <ShellContent
         Title="BoxView"
         ContentTemplate="{DataTemplate views:BoxViewsPage}"

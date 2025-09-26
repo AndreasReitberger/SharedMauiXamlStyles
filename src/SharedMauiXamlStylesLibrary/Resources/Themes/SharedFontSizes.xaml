@@ -27,18 +27,18 @@
         <OnPlatform.Platforms>
             <On Platform="Android">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
-                    <OnIdiom.Default>22</OnIdiom.Default>
+                    <OnIdiom.Tablet>30</OnIdiom.Tablet>
+                    <OnIdiom.Default>28</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="iOS">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
-                    <OnIdiom.Default>22</OnIdiom.Default>
+                    <OnIdiom.Tablet>30</OnIdiom.Tablet>
+                    <OnIdiom.Default>28</OnIdiom.Default>
                 </OnIdiom>
             </On>
-            <On Platform="WinUI">24</On>
-            <On Platform="Default">24</On>
+            <On Platform="WinUI">36</On>
+            <On Platform="Default">36</On>
         </OnPlatform.Platforms>
     </OnPlatform>
     <OnPlatform x:Key="SubtitleTextSize" x:TypeArguments="x:Double">
@@ -63,18 +63,18 @@
         <OnPlatform.Platforms>
             <On Platform="Android">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
-                    <OnIdiom.Default>22</OnIdiom.Default>
+                    <OnIdiom.Tablet>20</OnIdiom.Tablet>
+                    <OnIdiom.Default>18</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="iOS">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Tablet>24</OnIdiom.Tablet>
-                    <OnIdiom.Default>22</OnIdiom.Default>
+                    <OnIdiom.Tablet>20</OnIdiom.Tablet>
+                    <OnIdiom.Default>18</OnIdiom.Default>
                 </OnIdiom>
             </On>
-            <On Platform="WinUI">22</On>
-            <On Platform="Default">22</On>
+            <On Platform="WinUI">18</On>
+            <On Platform="Default">18</On>
         </OnPlatform.Platforms>
     </OnPlatform>
     <OnPlatform x:Key="LargeIconSize" x:TypeArguments="x:Double">
@@ -99,18 +99,18 @@
         <OnPlatform.Platforms>
             <On Platform="Android">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
-                    <OnIdiom.Default>17</OnIdiom.Default>
+                    <OnIdiom.Tablet>16</OnIdiom.Tablet>
+                    <OnIdiom.Default>14</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="iOS">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
-                    <OnIdiom.Default>17</OnIdiom.Default>
+                    <OnIdiom.Tablet>16</OnIdiom.Tablet>
+                    <OnIdiom.Default>14</OnIdiom.Default>
                 </OnIdiom>
             </On>
-            <On Platform="WinUI">18</On>
-            <On Platform="Default">17</On>
+            <On Platform="WinUI">16</On>
+            <On Platform="Default">16</On>
         </OnPlatform.Platforms>
     </OnPlatform>
     <OnPlatform x:Key="DefaultTextSize" x:TypeArguments="x:Double">
@@ -118,17 +118,17 @@
             <On Platform="Android">
                 <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Tablet>14</OnIdiom.Tablet>
-                    <OnIdiom.Default>13</OnIdiom.Default>
+                    <OnIdiom.Default>12</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="iOS">
                 <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Tablet>12</OnIdiom.Tablet>
-                    <OnIdiom.Default>11</OnIdiom.Default>
+                    <OnIdiom.Default>10</OnIdiom.Default>
                 </OnIdiom>
             </On>
-            <On Platform="WinUI">14</On>
-            <On Platform="Default">11</On>
+            <On Platform="WinUI">12</On>
+            <On Platform="Default">12</On>
         </OnPlatform.Platforms>
     </OnPlatform>
     <OnPlatform x:Key="DefaultIconSize" x:TypeArguments="x:Double">
@@ -163,8 +163,8 @@
                     <OnIdiom.Default>9</OnIdiom.Default>
                 </OnIdiom>
             </On>
-            <On Platform="WinUI">12</On>
-            <On Platform="Default">9</On>
+            <On Platform="WinUI">10</On>
+            <On Platform="Default">10</On>
         </OnPlatform.Platforms>
     </OnPlatform>
     <OnPlatform x:Key="MicroTextSize" x:TypeArguments="x:Double">
@@ -172,17 +172,17 @@
             <On Platform="Android">
                 <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Tablet>8</OnIdiom.Tablet>
-                    <OnIdiom.Default>7</OnIdiom.Default>
+                    <OnIdiom.Default>8</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="iOS">
                 <OnIdiom x:TypeArguments="x:Double">
                     <OnIdiom.Tablet>8</OnIdiom.Tablet>
-                    <OnIdiom.Default>7</OnIdiom.Default>
+                    <OnIdiom.Default>8</OnIdiom.Default>
                 </OnIdiom>
             </On>
-            <On Platform="WinUI">10</On>
-            <On Platform="Default">7</On>
+            <On Platform="WinUI">8</On>
+            <On Platform="Default">8</On>
         </OnPlatform.Platforms>
     </OnPlatform>
 </ResourceDictionary>
