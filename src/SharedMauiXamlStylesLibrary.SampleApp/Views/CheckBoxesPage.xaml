@@ -87,6 +87,30 @@
                     />
             </Grid>
 
+            <Label 
+                Margin="2,8"
+                Text="This is an on and off CheckBox"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Medium}"
+                />
+            <Grid
+                ColumnDefinitions="Auto,*"
+                >
+                <CheckBox
+                    IsChecked="{Binding IsChecked}"
+                    Style="{StaticResource Style.Core.CheckBox.OnOff}"
+                    />
+                <Label 
+                    Grid.Column="1"
+                    Margin="2,8"
+                    Text="This is a normal label"
+                    VerticalTextAlignment="Center" 
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Settings}"
+                    />
+            </Grid>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
