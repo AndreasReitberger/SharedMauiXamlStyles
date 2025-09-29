@@ -119,6 +119,10 @@
         ContentTemplate="{DataTemplate views:SfSegmentedControlPage}"
         Route="SfSegmentedControlPage" />
     <ShellContent
+        Title="SignaturePadPage (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfSignaturePadPage}"
+        Route="SfSignaturePadPage" />
+    <ShellContent
         Title="SfScheduler and CalendarPage (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfSchedulerCalendarPage}"
         Route="SfSchedulerCalendarPage" />

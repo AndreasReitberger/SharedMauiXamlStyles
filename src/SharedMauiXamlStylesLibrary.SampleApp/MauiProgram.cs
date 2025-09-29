@@ -1,4 +1,5 @@
-﻿using AndreasReitberger.Shared.Hosting;
+﻿using AndreasReitberger.Shared.Core.Hosting;
+using AndreasReitberger.Shared.Hosting;
 using AndreasReitberger.Shared.Syncfusion.Hosting;
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
@@ -15,6 +16,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .ConfigureCoreLibrary()
                 .ConfigureSyncfusionCore()
                 .InitializeSharedMauiStyles()
                 .InitializeSharedSyncfusionStyles()
