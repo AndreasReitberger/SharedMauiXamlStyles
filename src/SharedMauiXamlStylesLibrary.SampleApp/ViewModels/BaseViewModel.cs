@@ -1,4 +1,5 @@
 ﻿using AndreasReitberger.Shared.Core;
+using CommunityToolkit.Maui.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
@@ -84,6 +85,14 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         {
             Dispatcher = dispatcher;
             Provider = provider;
+
+            UpdateVersionBuild();
+        }
+        public BaseViewModel(IDispatcher dispatcher, IServiceProvider provider, IFileSaver fileSaver) : base(dispatcher, provider, fileSaver)
+        {
+            Dispatcher = dispatcher;
+            Provider = provider;
+            FileSaver = fileSaver;
 
             UpdateVersionBuild();
         }

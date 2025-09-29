@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfSignaturePadPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"  
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:behaviors="clr-namespace:AndreasReitberger.Shared.Core.Behaviors;assembly=SharedMauiCoreLibrary"   
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+    
+    Title="SfSignaturePadPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:SfSignaturePadPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="Signature Pad (Syncfusion)"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <Border
+                Margin="8"
+                Style="{StaticResource Style.Core.Border.CardView}"
+                >
+                <signaturePad:SfSignaturePad
+                    x:Name="signPad"
+                    Style="{StaticResource Style.Syncfusion.SfSignaturePad.Default}"
+                    >
+                    <signaturePad:SfSignaturePad.Behaviors>
+                        <behaviors:EventToCommandBehavior
+                            EventName="DrawCompleted"
+                            Command="{Binding DrawCompletedCommand}"    
+                            />
+                        <behaviors:EventToCommandBehavior
+                            EventName="DrawStarted"
+                            Command="{Binding DrawStartedCommand}"    
+                            />
+                    </signaturePad:SfSignaturePad.Behaviors>
+                </signaturePad:SfSignaturePad>
+            </Border>
+            <!---->
+            <HorizontalStackLayout>
+                <Button
+                    Margin="8,4"
+                    Text="Clear"
+                    Command="{Binding ClearCommand}"
+                    CommandParameter="{Binding x:DataType='signaturePad:SfSignaturePad', Source={x:Reference signPad}, Path=.}"
+                    />
+                <Button
+                    Margin="8,4"
+                    Text="Save"
+                    Style="{StaticResource Style.Core.Button.Default}"
+                    Command="{Binding SaveCommand}"
+                    CommandParameter="{Binding x:DataType='signaturePad:SfSignaturePad', Source={x:Reference signPad}, Path=.}"
+                    />
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

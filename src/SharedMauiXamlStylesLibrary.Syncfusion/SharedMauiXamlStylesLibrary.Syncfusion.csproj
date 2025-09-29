@@ -175,6 +175,9 @@
 	  <MauiXaml Update="Resources\Themes\Controls\SfCalendar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\SfSignaturePad.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfSegmentedControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
