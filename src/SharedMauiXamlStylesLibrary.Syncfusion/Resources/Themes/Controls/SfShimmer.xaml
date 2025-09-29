@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:shimmer="clr-namespace:Syncfusion.Maui.Shimmer;assembly=Syncfusion.Maui.Core"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Docs: https://help.syncfusion.com/maui/shimmer/getting-started -->
+    <Style x:Key="Style.Syncfusion.SfShimmer.Default" TargetType="shimmer:SfShimmer">
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Fill" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
+        <Setter Property="WaveColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}" />
+    </Style>
+
+    <Style TargetType="shimmer:SfShimmer" BasedOn="{StaticResource Style.Syncfusion.SfShimmer.Default}" />
+
+    <Style x:Key="Style.Syncfusion.SfShimmer.Primary" TargetType="shimmer:SfShimmer" BasedOn="{StaticResource Style.Syncfusion.SfShimmer.Default}">
+        <Setter Property="Fill" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="WaveColor" Value="{DynamicResource PrimaryDarkenColor}" />
+    </Style>
+</ResourceDictionary>

@@ -119,28 +119,30 @@
         ContentTemplate="{DataTemplate views:SfSegmentedControlPage}"
         Route="SfSegmentedControlPage" />
     <ShellContent
-        Title="SignaturePadPage (Syncfusion)"
+        Title="SignaturePad (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfSignaturePadPage}"
         Route="SfSignaturePadPage" />
     <ShellContent
-        Title="SfScheduler and CalendarPage (Syncfusion)"
+        Title="Shimmer (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfShimmerPage}"
+        Route="SfShimmerPage" />
+    <ShellContent
+        Title="Scheduler and Calendar (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfSchedulerCalendarPage}"
         Route="SfSchedulerCalendarPage" />
     <ShellContent
         Title="TabView (Syncfusion)"
         ContentTemplate="{DataTemplate views:TabViewPage}"
         Route="TabViewPage" />
-
     <ShellContent
         Title="ListView (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfListViewPage}"
         Route="SfListViewPage" />
-
     <ShellContent
         Title="TextInputLayout (Syncfusion)"
         ContentTemplate="{DataTemplate views:TextInputLayoutsPage}"
         Route="TextInputLayoutsPage" />
-
+    
     <Shell.FlyoutFooter>
         <VerticalStackLayout
             BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"
