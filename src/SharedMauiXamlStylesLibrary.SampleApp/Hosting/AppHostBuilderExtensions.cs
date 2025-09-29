@@ -54,6 +54,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfExpandersPageViewModel>();
             builder.Services.AddSingleton<SfSchedulerCalendarPageViewModel>();
             builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
+            builder.Services.AddSingleton<SfShimmerPageViewModel>();
             builder.Services.AddSingleton<SfSignaturePadPageViewModel>();
             builder.Services.AddSingleton<TabViewPageViewModel>();
             builder.Services.AddSingleton<TemplatePageViewModel>();
@@ -88,6 +89,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfExpandersPage>();
             builder.Services.AddSingleton<SfSchedulerCalendarPage>();
             builder.Services.AddSingleton<SfSegmentedControlPage>();
+            builder.Services.AddSingleton<SfShimmerPage>();
             builder.Services.AddSingleton<SfSignaturePadPage>();
             builder.Services.AddSingleton<TabViewPage>();
             builder.Services.AddSingleton<TemplatePage>();

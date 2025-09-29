@@ -31,6 +31,7 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SfScheduler.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfRangeSlider.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSegmentedControl.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfShimmer.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSignaturePad.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSlider.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTabView.xaml" />

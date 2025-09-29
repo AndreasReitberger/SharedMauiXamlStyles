@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfShimmerPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"  
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:behaviors="clr-namespace:AndreasReitberger.Shared.Core.Behaviors;assembly=SharedMauiCoreLibrary"   
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:shimmer="clr-namespace:Syncfusion.Maui.Shimmer;assembly=Syncfusion.Maui.Core"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+    
+    Title="SfShimmerPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:SfShimmerPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="Shimmer (Syncfusion)"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <shimmer:SfShimmer
+                Style="{StaticResource Style.Syncfusion.SfShimmer.Default}"
+                IsActive="{Binding IsBusy}"
+                >
+                <VerticalStackLayout>
+                    <Border
+                        Margin="8"
+                        Style="{StaticResource Style.Core.Border.CardView}"
+                        >
+                        <Label
+                            Margin="20,40"
+                            Text="Some text after form has been loaded..."
+                            />
+                    </Border>
+                </VerticalStackLayout>
+            </shimmer:SfShimmer>
+            <shimmer:SfShimmer
+                Style="{StaticResource Style.Syncfusion.SfShimmer.Primary}"
+                IsActive="{Binding IsBusy}"
+                >
+                <VerticalStackLayout>
+                    <Border
+                        Margin="8"
+                        Style="{StaticResource Style.Core.Border.CardView}"
+                        >
+                        <Label
+                            Margin="20,40"
+                            Text="Some text after form has been loaded..."
+                            />
+                    </Border>
+                </VerticalStackLayout>
+            </shimmer:SfShimmer>
+
+            <Button
+                Style="{StaticResource Style.Core.Button.RoundedLong}"
+                Text="Retry"
+                Command="{Binding RetryCommand}"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
