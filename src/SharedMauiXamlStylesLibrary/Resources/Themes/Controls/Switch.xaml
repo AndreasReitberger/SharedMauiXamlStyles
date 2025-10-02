@@ -11,12 +11,12 @@
     <Style x:Key="Style.Core.Switch.Default" TargetType="Switch">
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
-        <Setter Property="ThumbColor" Value="{StaticResource White}" />
+        <!--<Setter Property="ThumbColor" Value="{StaticResource White}" />-->
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <!--
                     <VisualState x:Name="Normal" />
+                    <!--
                     <VisualState x:Name="PointOver">
                         <VisualState.Setters>
                         <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
