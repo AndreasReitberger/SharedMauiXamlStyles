@@ -25,14 +25,17 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         #region Constructor, LoadSettings
 
-        public AppShellViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
+        public AppShellViewModel(IDispatcher dispatcher, IServiceProvider? provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
+            Provider = provider;
             UpdateVersionBuild();
 
             LoadSettings();
-
-            Darkmode = Application.Current?.UserAppTheme == AppTheme.Dark;
+            if(Application.Current?.UserAppTheme is not AppTheme.Unspecified)
+                Darkmode = Application.Current?.UserAppTheme == AppTheme.Dark;
+            else
+                Darkmode = Application.Current?.PlatformAppTheme == AppTheme.Dark;
         }
         void LoadSettings()
         {

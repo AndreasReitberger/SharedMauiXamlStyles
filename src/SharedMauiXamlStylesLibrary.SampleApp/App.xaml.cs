@@ -10,7 +10,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp
         public App(IServiceProvider serviceProvider)
         {
             ServiceProvider = serviceProvider;
-            SecretAppSetting secrets = SecretAppSettingReader.ReadSection<SecretAppSetting>("ExampleApp");
+            SecretAppSetting? secrets = SecretAppSettingReader.ReadSection<SecretAppSetting>("ExampleApp");
             if (secrets is not null)
             {
                 SyncfusionLicenseProvider.RegisterLicense(secrets.SyncfusionApiKey);

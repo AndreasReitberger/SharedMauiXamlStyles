@@ -173,7 +173,8 @@
                     ItemsSource="{Binding Themes}"
                     SelectedItem="{Binding Theme}"
                     ItemDisplayBinding="{Binding x:DataType=core:ThemeColorInfo, Path=ThemeName}"
-                    />
+                    >
+                </Picker>
             </Grid>
         </VerticalStackLayout>
     </Shell.FlyoutFooter>

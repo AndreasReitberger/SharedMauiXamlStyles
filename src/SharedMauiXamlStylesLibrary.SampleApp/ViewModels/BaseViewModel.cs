@@ -81,14 +81,14 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #endregion
 
         #region Constructor
-        public BaseViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
+        public BaseViewModel(IDispatcher dispatcher, IServiceProvider? provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
             Provider = provider;
 
             UpdateVersionBuild();
         }
-        public BaseViewModel(IDispatcher dispatcher, IServiceProvider provider, IFileSaver fileSaver) : base(dispatcher, provider, fileSaver)
+        public BaseViewModel(IDispatcher dispatcher, IServiceProvider? provider, IFileSaver? fileSaver) : base(dispatcher, provider, fileSaver)
         {
             Dispatcher = dispatcher;
             Provider = provider;
