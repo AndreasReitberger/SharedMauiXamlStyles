@@ -75,38 +75,100 @@ public static MauiApp CreateMauiApp()
 
 ## Available control styles
 
-| Control                             | Core  | Syncfusion |
-| ----------------------------------- |:-----:| -------:|
-| BoxView                             | ✅   | ❌      |
-| Button                              | ✅   | ❌      |
-| CheckBox                            | ✅   | ❌      |
-| Editor                              | ✅   | ❌      |
-| Entry                               | ✅   | ❌      |
-| Frame                               | ✅   | ❌      |
-| Grid                                | ✅   | ❌      |
-| Label                               | ✅   | ❌      |
-| Switch                              | ✅   | ❌      |
-| StackPanel                          | ✅   | ❌      |
-| RefreshView                         | ✅   | ❌      |
-| SfTabView                           | ❌   | ✅      |
-| SfListVirew                         | ❌   | ✅      |
+# Core (.NET MAUI)
+Ref: https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/?view=net-maui-9.0
 
-## Migration from Xamarin.Forms (Syncfusion.XForm)
-An overview of the corresponding MAUI controls if you migrate from `Syncfusion.XForm` to `Syncfusion.MAUI`.
+| Control                             | Available? |
+| ----------------------------------- |:----------:|
+| ActivityIndicator                   | ✅         |
+| Border                              | ✅         |
+| BoxView                             | ✅         |
+| Button                              | ✅         |
+| CheckBox                            | ✅         |
+| CollectionView                      | ✅         |
+| DatePicker                          | ✅         |
+| Editor                              | ✅         |
+| Entry                               | ✅         |
+| Grid                                | ✅         |
+| IndicatorView                       | ✅         |
+| Label                               | ✅         |
+| ListView                            | ✅         |
+| Page                                | ✅         |
+| Picker                              | ✅         |
+| ProgressBar                         | ✅         |
+| RadioButton                         | ✅         |
+| RefreshView                         | ✅         |
+| SearchBar                           | ✅         |
+| SearchHandler                       | ✅         |
+| Shadow                              | ✅         |
+| Shell                               | ✅         |
+| Slider                              | ✅         |
+| StackLayout                         | ✅         |
+| SwipeItem                           | ✅         |
+| Switch                              | ✅         |
+| TimePicker                          | ✅         |
+| Shadow                              | ✅         |
+| AbsoluteLayout                      | ❌         |
+| BindableLayout                      | ❌         |
+| FlexLayout                          | ❌         |
+| BlazorWebView                       | ❌         |
+| CarouselView                        | ❌         |
+| ContentView                         | ❌         |
+| Ellipse                             | ❌         |
+| Frame (obsolete)                    | ❌         |
+| GraphicsView                        | ❌         |
+| HybridWebView                       | ❌         |
+| Image                               | ❌         |
+| Line                                | ❌         |
+| Map                                 | ❌         |
+| Path                                | ❌         |
+| Polygon                             | ❌         |
+| Polyline                            | ❌         |
+| Rectangle                           | ❌         |
+| RoundRectangle                      | ❌         |
+| ScrollView                          | ❌         |
+| Stepper                             | ❌         |
+| TableView                           | ❌         |
+| TitleBar                            | ❌         |
+| TwoPaneView                         | ❌         |
+| WebView                             | ❌         |
+| ScrollView                          | ❌         |
+| ScrollView                          | ❌         |
 
-| Syncfusion.XForms                   | MAUI (Core)        | Syncfusion.MAUI |
-| ----------------------------------- |:------------------:| ---------------:|
-| SfButton                            | Button             | ❌             |
-| SfCheckBox                          | CheckBox           | ❌             |
-| SfComboBox                          | Picker?!           | ❌             |
-| SfBorder                            | Border             | ❌             |
-| SfPullToRefresh                     | RefreshView        | ❌             |
-| SfBusyIndicator                     | ActivityIndicator  | ❌             |
-| SfSwitch                            | Switch             | ❌             |
-| SfCircularGauge                     | ❌                 | SfRadialGauge  |
-| SfBadgeView                         | ❌                 | SfBadgeView    |
-| SfTabView                           | ❌                 | SfTabView      |
-| SfListVirew                         | ❌                 | SfListVirew    |
+# Syncfusion
+Ref: https://www.syncfusion.com/maui-controls
+
+| Control                             | Available? |
+| ----------------------------------- |:----------:|
+| SfAccordion                         | ✅         |
+| SfAutoComplete                      | ✅         |
+| SfAvatarView                        | ✅         |
+| SfBadgeView                         | ✅         |
+| SfBarcodeGenerator                  | ✅         |
+| SfBusyIndicator                     | ✅         |
+| SfButton                            | ✅         |
+| SfCalendar                          | ✅         |
+| SfCartesianChart                    | ✅         |
+| SfCheckBox                          | ✅         |
+| SfChips                             | ✅         |
+| SfComboBox                          | ✅         |
+| SfExpander                          | ✅         |
+| SfListView                          | ✅         |
+| SfMaskedEntry                       | ✅         |
+| SfNumericEntry                      | ✅         |
+| SfPicker                            | ✅         |
+| SfRadialGauge                       | ✅         |
+| SfRangeSlider                       | ✅         |
+| SfRating                            | ✅         |
+| SfScheduler                         | ✅         |
+| SfSegmentedControl                  | ✅         |
+| SfScheduler                         | ✅         |
+| SfShimmer                           | ✅         |
+| SfSignaturePad                      | ✅         |
+| SfSlider                            | ✅         |
+| SfTabView                           | ✅         |
+| SfTextInputLayout                   | ✅         |
+| SfTreeView                          | ✅         |
 
 ### RoadMap
 https://www.syncfusion.com/products/roadmap/maui-controls
