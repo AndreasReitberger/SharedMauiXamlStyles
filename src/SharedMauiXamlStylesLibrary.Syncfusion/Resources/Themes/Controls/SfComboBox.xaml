@@ -15,7 +15,6 @@
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-
     <Style x:Key="Style.Syncfusion.SfComboBox.Default" TargetType="inputs:SfComboBox">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
