@@ -5,6 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
      
     xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
@@ -69,4 +71,29 @@
     </Style>
 
     <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfComboBox.SfTextInputLayout" TargetType="inputs:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+    
+    <Style x:Key="Style.Syncfusion.SfMaskedEntry.SfTextInputLayout" TargetType="inputs:SfMaskedEntry" BasedOn="{StaticResource Style.Syncfusion.SfMaskedEntry.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfNumericEntry.SfTextInputLayout" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfPicker.SfTextInputLayout" TargetType="picker:SfPicker" BasedOn="{StaticResource Style.Syncfusion.SfPicker.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.Entry.SfTextInputLayout" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.DatePicker.SfTextInputLayout" TargetType="DatePicker" BasedOn="{StaticResource Style.Core.DatePicker.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+
 </ResourceDictionary>
