@@ -40,21 +40,16 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Commands
 
         [RelayCommand]
-        async Task DrawCompleted(object? parameter)
-        {
-
-        }
+        static Task DrawCompleted(object? parameter)
+            => Shell.Current.DisplayAlert("Draw completed", "Draw completed event triggered.", "OK");
 
         [RelayCommand]
-        async Task DrawStarted(object? parameter)
-        {
-
-        }
+        static Task DrawStarted(object? parameter)
+            => Shell.Current.DisplayAlert("Draw started", "Draw started event triggered.", "OK");
 
         [RelayCommand]
-        async Task Clear(object? parameter)
+        static void Clear(object? parameter)
         {
-
             if (parameter is SfSignaturePad pad)
             {
                 pad.Clear();
@@ -76,8 +71,9 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
                 if (captureResult is not null)
                 {
                     using MemoryStream memStream = new();
-                    await captureResult?.CopyToAsync(memStream, ScreenshotFormat.Png, 100);
-                    await FileSaver?.SaveAsync("signature.png", memStream);
+                    await captureResult.CopyToAsync(memStream, ScreenshotFormat.Png, 100);
+                    if (FileSaver is not null)
+                    _ = await FileSaver.SaveAsync("signature.png", memStream);
                 }
                 ImageSource? imageSource = pad.ToImageSource();
 
