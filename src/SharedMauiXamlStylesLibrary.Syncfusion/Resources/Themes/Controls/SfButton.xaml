@@ -39,8 +39,8 @@
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="PointerOver" />
