@@ -23,10 +23,10 @@
         <VerticalStackLayout>
             <Label 
                 Margin="2,16"
-                Text="This is a medium label"
+                Text="BorderlessEntry"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Medium}"
+                Style="{StaticResource Style.Core.Label.Default}"
                 />
             <!-- Name -->
             <core:SfTextInputLayout
@@ -36,18 +36,49 @@
                 >
                 <core:SfTextInputLayout.LeadingView>
                     <Label
-                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                         Text="{x:Static icons:MaterialIcons.Pencil}"
-                         />
+                        Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
+                        Text="{x:Static icons:MaterialIcons.Pencil}"
+                        />
                 </core:SfTextInputLayout.LeadingView>
                 <controls:BorderlessEntry 
-                    Style="{StaticResource Style.Core.BorderlessEntry.Default}"
-                    Background="{Binding x:DataType='core:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type core:SfTextInputLayout}}, Path=Background}"
+                    Style="{StaticResource Style.Syncfusion.BorderlessEntry.SfTextInputLayout}"
+                    Text="{Binding Name, Mode=TwoWay}" 
+                    Keyboard="Default"
+                    />
+            </core:SfTextInputLayout>
+            
+            <Label 
+                Margin="2,16"
+                Text="Entry"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <core:SfTextInputLayout
+                Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
+                Hint="Name"
+                ErrorText=""
+                >
+                <core:SfTextInputLayout.LeadingView>
+                    <Label
+                        Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
+                        Text="{x:Static icons:MaterialIcons.Pencil}"
+                        />
+                </core:SfTextInputLayout.LeadingView>
+                <Entry
+                    Style="{StaticResource Style.Syncfusion.Entry.SfTextInputLayout}"
                     Text="{Binding Name, Mode=TwoWay}" 
                     Keyboard="Default"
                     />
             </core:SfTextInputLayout>
 
+            <Label 
+                Margin="2,16"
+                Text="SfNumericEntry"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
             <!-- Package Size -->
             <core:SfTextInputLayout
                 Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
@@ -61,13 +92,11 @@
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
-                     Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
-                     Background="Transparent"
+                     Style="{StaticResource Style.Syncfusion.SfNumericEntry.SfTextInputLayout}"
                      Value="{Binding PackageSize, Mode=TwoWay}" 
                      Margin="5,0"
                      />
             </core:SfTextInputLayout>
-
             <!-- Price -->
             <core:SfTextInputLayout
                 Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
@@ -81,11 +110,63 @@
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
-                     Style="{StaticResource Style.Syncfusion.SfNumericEntry.Currency}"
-                     Background="Transparent"
-                     Value="{Binding Price, Mode=TwoWay}" 
+                    Style="{StaticResource Style.Syncfusion.SfNumericEntry.SfTextInputLayout}"
+                    CustomFormat="C2"
+                    Value="{Binding Price, Mode=TwoWay}" 
+                    Margin="5,0"
+                    />
+            </core:SfTextInputLayout>
+
+            <Label 
+                Margin="2,16"
+                Text="SfMaskedEntry"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <!-- Package Size -->
+            <core:SfTextInputLayout
+                Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
+                Hint="Numeric"
+                ErrorText=""
+                >
+                <core:SfTextInputLayout.LeadingView>
+                    <Label
+                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
+                         Text="{x:Static icons:MaterialIcons.Numeric}"
+                         />
+                </core:SfTextInputLayout.LeadingView>
+                <inputs:SfMaskedEntry
+                     Style="{StaticResource Style.Syncfusion.SfMaskedEntry.SfTextInputLayout}"
+                     Value="{Binding Name, Mode=TwoWay}" 
                      Margin="5,0"
                      />
+            </core:SfTextInputLayout>
+            
+            <Label 
+                Margin="2,16"
+                Text="SfComboBox"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <!-- Selection -->
+            <core:SfTextInputLayout
+                Style="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"
+                Hint="Items"
+                ErrorText=""
+                >
+                <core:SfTextInputLayout.LeadingView>
+                    <Label
+                        Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
+                        Text="{x:Static icons:MaterialIcons.ListStatus}"
+                        />
+                </core:SfTextInputLayout.LeadingView>
+                <inputs:SfComboBox
+                    Style="{StaticResource Style.Syncfusion.SfComboBox.SfTextInputLayout}"
+                    Margin="5,0"
+                    ItemsSource="{Binding Items}"
+                    />
             </core:SfTextInputLayout>
         </VerticalStackLayout>
     </ScrollView>

@@ -36,6 +36,7 @@
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="Focused" />
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
@@ -59,6 +60,19 @@
                             <Setter Property="Background" Value="Transparent" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                            <Setter Property="Background" Value="Transparent" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointOver">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="Background" Value="Transparent" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected" />
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
@@ -75,6 +89,14 @@
     </Style>
 
     <Style x:Key="Style.Syncfusion.SfNumericEntry.Percent" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Default}">
+        <Setter Property="CustomFormat" Value="P2" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfNumericEntry.Transparent.Currency" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Transparent}">
+        <Setter Property="CustomFormat" Value="C2" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfNumericEntry.Transparent.Percent" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Transparent}">
         <Setter Property="CustomFormat" Value="P2" />
     </Style>
 

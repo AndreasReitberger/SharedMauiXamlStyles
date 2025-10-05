@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
@@ -15,6 +16,9 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         [ObservableProperty]
         public partial double Price { get; set; } = 19.99;
+
+        [ObservableProperty]
+        public partial ObservableCollection<string> Items { get; set; } = ["Item1", "Item2", "Item3"];
         #endregion
 
         #region Constructor, LoadSettings
