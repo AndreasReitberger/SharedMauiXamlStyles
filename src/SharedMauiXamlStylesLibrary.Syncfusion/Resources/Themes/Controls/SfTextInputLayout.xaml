@@ -8,12 +8,19 @@
     xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
     xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
     >
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
         <shared:FontSizes />
         <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfComboBox.xaml;assembly=SharedMauiXamlStylesLibrary.Syncfusion" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfMaskedEntry.xaml;assembly=SharedMauiXamlStylesLibrary.Syncfusion" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfNumericEntry.xaml;assembly=SharedMauiXamlStylesLibrary.Syncfusion" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfPicker.xaml;assembly=SharedMauiXamlStylesLibrary.Syncfusion" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Entry.xaml;assembly=SharedMauiXamlStylesLibrary" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/DatePicker.xaml;assembly=SharedMauiXamlStylesLibrary" />
     </ResourceDictionary.MergedDictionaries>
     
     <!-- Docs: https://help.syncfusion.com/maui/textinputlayout/states-and-colors -->
@@ -72,16 +79,16 @@
 
     <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource Style.Syncfusion.SfTextInputLayout.Default}"/>
 
-    <Style x:Key="Style.Syncfusion.SfComboBox.SfTextInputLayout" TargetType="inputs:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Default}">
+    <Style x:Key="Style.Syncfusion.SfComboBox.SfTextInputLayout" TargetType="inputs:SfComboBox" BasedOn="{StaticResource Style.Syncfusion.SfComboBox.Transparent}">
         <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
     </Style>
     
-    <Style x:Key="Style.Syncfusion.SfMaskedEntry.SfTextInputLayout" TargetType="inputs:SfMaskedEntry" BasedOn="{StaticResource Style.Syncfusion.SfMaskedEntry.Default}">
-        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    <Style x:Key="Style.Syncfusion.SfMaskedEntry.SfTextInputLayout" TargetType="inputs:SfMaskedEntry" BasedOn="{StaticResource Style.Syncfusion.SfMaskedEntry.Transparent}">
+        <!--<Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />-->
     </Style>
 
-    <Style x:Key="Style.Syncfusion.SfNumericEntry.SfTextInputLayout" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Default}">
-        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    <Style x:Key="Style.Syncfusion.SfNumericEntry.SfTextInputLayout" TargetType="inputs:SfNumericEntry" BasedOn="{StaticResource Style.Syncfusion.SfNumericEntry.Transparent}">
+        <!--<Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />-->
     </Style>
 
     <Style x:Key="Style.Syncfusion.SfPicker.SfTextInputLayout" TargetType="picker:SfPicker" BasedOn="{StaticResource Style.Syncfusion.SfPicker.Default}">
@@ -89,6 +96,10 @@
     </Style>
 
     <Style x:Key="Style.Syncfusion.Entry.SfTextInputLayout" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.BorderlessEntry.SfTextInputLayout" TargetType="controls:BorderlessEntry" BasedOn="{StaticResource Style.Core.BorderlessEntry.Default}">
         <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
     </Style>
 
