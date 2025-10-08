@@ -15,6 +15,18 @@
     >
     <ScrollView>
         <VerticalStackLayout>
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,16"
                 Text="This is a default Picker"
@@ -22,11 +34,14 @@
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
+
             <Picker
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Core.Picker.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
                 />
+            
             <Label 
                 Margin="2,16"
                 Text="This is a default Date picker"
@@ -36,6 +51,7 @@
                 />
 
             <DatePicker
+                IsEnabled="{Binding Enabled}"
                 Date="{Binding SelectedDate}"
                 Style="{StaticResource Style.Core.DatePicker.Default}"
                 />
@@ -48,6 +64,7 @@
                 />
 
             <TimePicker
+                IsEnabled="{Binding Enabled}"
                 Time="{Binding SelectedTime}"
                 Style="{StaticResource Style.Core.TimePicker.Default}"
                 />

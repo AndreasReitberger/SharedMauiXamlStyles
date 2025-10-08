@@ -14,10 +14,10 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Syncfusion.SfListView.Default" TargetType="listView:SfListView">
-        <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
+        <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray850}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="listView:SfListView">
-                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray600}}" />
+                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

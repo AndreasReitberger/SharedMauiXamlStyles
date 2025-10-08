@@ -20,9 +20,21 @@
         <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
     </ContentPage.Resources>
     <Grid
-        RowDefinitions="Auto,*,Auto"
+        RowDefinitions="Auto,200,Auto"
         >
         <VerticalStackLayout>
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label
                 Style="{StaticResource Style.Core.Label.HeadlinePrimary}"
                 Text="General"
@@ -35,6 +47,7 @@
 
         </VerticalStackLayout>
         <Editor
+            IsEnabled="{Binding Enabled}"
             Grid.Row="1"
             Style="{StaticResource Style.Core.Editor.Default}"
             Text="{Binding ExampleTextLong}"
@@ -54,6 +67,7 @@
                     Margin="16,8"
                     />
                 <Entry
+                    IsEnabled="{Binding Enabled}"
                     Style="{StaticResource Style.Core.Entry.Default}"
                     Text="{Binding ExampleText}"
                     />
@@ -63,17 +77,8 @@
                     Margin="16,8"
                     />
                 <Entry
+                    IsEnabled="{Binding Enabled}"
                     Style="{StaticResource Style.Core.Entry.Password}"
-                    Text="{Binding ExampleText}"
-                    />
-                <Label
-                    Style="{StaticResource Style.Core.Label.Default}"
-                    Text="This is a disabled entry control."
-                    Margin="16,8"
-                    />
-                <Entry
-                    IsEnabled="False"
-                    Style="{StaticResource Style.Core.Entry.Default}"
                     Text="{Binding ExampleText}"
                     />
             </VerticalStackLayout>

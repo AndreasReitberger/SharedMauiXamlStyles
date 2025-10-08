@@ -39,6 +39,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #endregion
 
         #region States
+
+        [ObservableProperty]
+        public partial bool Enabled { get; set; } = true;
+
         [ObservableProperty]
         public partial bool IsListening { get; set; } = false;
 
