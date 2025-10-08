@@ -17,6 +17,18 @@
     >
     <ScrollView>
         <VerticalStackLayout>
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,8"
                 Text="This is a default CheckBox"
@@ -25,6 +37,7 @@
                 Style="{StaticResource Style.Core.Label.Medium}"
                 />
             <buttons:SfCheckBox
+                IsEnabled="{Binding Enabled}"
                 IsChecked="{Binding IsChecked}"
                 Style="{StaticResource Style.Core.SfCheckBox.Default}"
                 Text="This is a normal checkbox"
@@ -37,20 +50,7 @@
                 Style="{StaticResource Style.Core.Label.Medium}"
                 />
             <buttons:SfCheckBox
-                Style="{StaticResource Style.Core.SfCheckBox.Default}"
-                Text="This is a normal checkbox"
-                IsThreeState="True"
-                />
-            <Label 
-                Margin="2,8"
-                Text="This is a disabled CheckBox"
-                VerticalTextAlignment="Center" 
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Medium}"
-                />
-            <buttons:SfCheckBox
-                IsEnabled="False"
-                IsChecked="{Binding IsChecked}"
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Core.SfCheckBox.Default}"
                 Text="This is a normal checkbox"
                 IsThreeState="True"

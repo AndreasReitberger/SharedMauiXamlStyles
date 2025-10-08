@@ -38,9 +38,9 @@
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                             <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=TextColor}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
                             <Setter Property="DropDownBackground" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
@@ -90,9 +90,9 @@
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                             <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=TextColor}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
                             <Setter Property="DropDownBackground" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
@@ -124,9 +124,9 @@
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                             <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='controls:MultiSelectComboBox', Source={RelativeSource Self}, Path=TextColor}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
                             <Setter Property="DropDownBackground" Value="{Binding x:DataType='controls:MultiSelectComboBox', Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>

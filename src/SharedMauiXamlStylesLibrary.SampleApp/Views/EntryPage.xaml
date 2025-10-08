@@ -22,6 +22,18 @@
     </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout>
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,16"
                 Text="SfNumericEntry"
@@ -31,18 +43,19 @@
                 />
                     
             <editors:SfNumericEntry 
+                IsEnabled="{Binding Enabled}"
                 Margin="8,16"
                 Value="{Binding SampleValue}"
                 Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
                 />
-            
+                    
             <editors:SfNumericEntry 
-                IsEnabled="False"
+                IsEnabled="{Binding Enabled}"
                 Margin="8,16"
                 Value="{Binding SampleValue}"
-                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Transparent}"
                 />
-            
+                        
             <Label 
                 Margin="2,16"
                 Text="SfMaskedEntry"
@@ -50,20 +63,21 @@
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
-                    
+
             <editors:SfMaskedEntry 
+                IsEnabled="{Binding Enabled}"
                 Margin="8,16"
                 Value="{Binding SampleValue}"
                 Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Default}"
                 />
-                    
+
             <editors:SfMaskedEntry 
-                IsEnabled="False"
+                IsEnabled="{Binding Enabled}"
                 Margin="8,16"
                 Value="{Binding SampleValue}"
-                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Default}"
+                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Transparent}"
                 />
-            
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
