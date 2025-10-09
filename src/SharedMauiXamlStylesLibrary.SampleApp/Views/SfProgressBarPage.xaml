@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfProgressBarPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"  
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:behaviors="clr-namespace:AndreasReitberger.Shared.Core.Behaviors;assembly=SharedMauiCoreLibrary"   
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+    
+    Title="SfProgressBarPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:SfProgressBarPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="Shimmer (Syncfusion)"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <progressBar:SfCircularProgressBar
+                Style="{StaticResource Style.Syncfusion.SfCircularProgressBar.Primary}"
+                Progress="{Binding Progress}"
+                />
+            <!-- More than one progress causes a problem with page rendering?!
+            <HorizontalStackLayout> 
+                <progressBar:SfCircularProgressBar
+                    Style="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}"
+                    Progress="{Binding Progress}"
+                    />
+                <progressBar:SfCircularProgressBar
+                    Style="{StaticResource Style.Syncfusion.SfCircularProgressBar.Half}"
+                    Progress="{Binding Progress}"
+                    />
+            </HorizontalStackLayout>
+            -->
+            <Slider
+                Style="{StaticResource Style.Core.Slider.Primary}"
+                Value="{Binding Progress}"
+                Maximum="100"
+                Minimum="0"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
