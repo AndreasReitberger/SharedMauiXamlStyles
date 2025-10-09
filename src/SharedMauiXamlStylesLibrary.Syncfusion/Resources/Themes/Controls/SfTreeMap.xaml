@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:treeMap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <!-- Docs: https://help.syncfusion.com/maui/treemap/getting-started -->
+    <Style x:Key="Style.Syncfusion.SfTreeMap.Default" TargetType="treeMap:SfTreeMap">
+        <Setter Property="LayoutType" Value="Squarified" />
+        <Setter Property="ShowToolTip" Value="True" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="SelectedItemStroke" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="LeafItemBrushSettings">
+            <treeMap:TreeMapDesaturationBrushSettings 
+                Brush="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                From="1" 
+                To="0.2"
+                />
+        </Setter>
+        <Setter Property="ToolTipSettings">
+            <treeMap:TreeMapToolTipSettings
+                Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                Stroke="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                Duration="0:0:10"
+                >
+                <treeMap:TreeMapToolTipSettings.TextStyle>
+                    <treeMap:TreeMapTextStyle
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        FontSize="{StaticResource DefaultTextSize}"
+                        FontFamily="{StaticResource MontserratRegular}"
+                        />
+                </treeMap:TreeMapToolTipSettings.TextStyle>
+            </treeMap:TreeMapToolTipSettings>
+        </Setter>
+        <Setter Property="LegendSettings">
+            <treeMap:TreeMapLegendSettings
+                ShowLegend="True"
+                >
+                <treeMap:TreeMapLegendSettings.TextStyle>
+                    <treeMap:TreeMapTextStyle 
+                        FontFamily="{StaticResource MontserratBold}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        FontSize="{StaticResource LargeTextSize}"
+                        FontAttributes="Bold"
+                        />
+                </treeMap:TreeMapLegendSettings.TextStyle>
+            </treeMap:TreeMapLegendSettings>
+        </Setter>
+    </Style>
+
+    <Style TargetType="treeMap:SfTreeMap" BasedOn="{StaticResource Style.Syncfusion.SfTreeMap.Default}" />
+
+    <Style x:Key="Style.Syncfusion.SfTreeMap.Primary" TargetType="treeMap:SfTreeMap" BasedOn="{StaticResource Style.Syncfusion.SfTreeMap.Default}">
+        <Setter Property="LeafItemBrushSettings">
+            <treeMap:TreeMapDesaturationBrushSettings 
+                Brush="{DynamicResource PrimaryColor}"
+                From="1" 
+                To="0.2"
+                />
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfTreeMap.Colorful" TargetType="treeMap:SfTreeMap" BasedOn="{StaticResource Style.Syncfusion.SfTreeMap.Default}">
+        <Setter Property="LeafItemBrushSettings">
+            <!-- Brushes="{StaticResource TreeMapPaletteBrushSettings}" -->
+            <treeMap:TreeMapPaletteBrushSettings>
+                <treeMap:TreeMapPaletteBrushSettings.Brushes>
+                    <SolidColorBrush Color="{StaticResource LightGreen}" />
+                    <SolidColorBrush Color="{StaticResource Green}" />
+                    <SolidColorBrush Color="{StaticResource DarkGreen}" />
+                    <SolidColorBrush Color="{StaticResource Red}" />
+                    <SolidColorBrush Color="{StaticResource DarkRed}" />
+                    <SolidColorBrush Color="{StaticResource Orange}" />
+                    <SolidColorBrush Color="{StaticResource DarkOrange}" />
+                    <SolidColorBrush Color="{StaticResource LightBlue}" />
+                    <SolidColorBrush Color="{StaticResource Blue}" />
+                    <SolidColorBrush Color="{StaticResource DarkBlue}" />
+                    <SolidColorBrush Color="{StaticResource MidnightBlue}" />
+                    <SolidColorBrush Color="{StaticResource Liliac}" />
+                    <SolidColorBrush Color="{StaticResource Purpleish-Blue}" />
+                    <SolidColorBrush Color="{StaticResource Pink}" />
+                </treeMap:TreeMapPaletteBrushSettings.Brushes>
+            </treeMap:TreeMapPaletteBrushSettings>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

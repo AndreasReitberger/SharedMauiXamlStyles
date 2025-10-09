@@ -36,6 +36,7 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSlider.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTabView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTextInputLayout.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfTreeMap.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTreeView.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
