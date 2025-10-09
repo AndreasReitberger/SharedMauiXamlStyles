@@ -105,5 +105,22 @@
                 >
             </controls:EnhancedListView>
         </tabView:SfTabItem>
+        <tabView:SfTabItem
+            Header="Disabled"
+            Style="{StaticResource Style.Syncfusion.SfTabItem.Default}"
+            >
+            <controls:EnhancedListView
+                IsEnabled="False"
+                Style="{StaticResource Style.Syncfusion.SfListView.Default}"
+                ItemTemplate="{StaticResource DataTemplate.Syncfusion.DemoItem}"
+                HeaderTemplate="{StaticResource DataTemplate.Syncfusion.Header.SwitchYear}"
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding Item}"
+                SortCommand="{Binding SortCommand}"
+                FilterCommand="{Binding FilterCommand}"
+                ClearFilterCommand="{Binding ClearCommand}"
+                >
+            </controls:EnhancedListView>
+        </tabView:SfTabItem>
     </tabView:SfTabView>
 </ContentPage>

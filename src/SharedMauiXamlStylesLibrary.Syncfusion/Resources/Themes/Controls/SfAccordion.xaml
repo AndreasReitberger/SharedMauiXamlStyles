@@ -27,14 +27,13 @@
                 <VisualStateGroup>
                     <VisualState Name="Expanded">
                         <VisualState.Setters>
-                            <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
-                            <Setter Property="HeaderIconColor" Value="{Binding x:DataType='expander:AccordionItem', Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Collapsed">
                         <VisualState.Setters>
-                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"/>
-                            <!--<Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />-->
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"/>
                             <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
                         </VisualState.Setters>
                     </VisualState>
@@ -48,15 +47,54 @@
                     -->
                     <VisualState Name="PointerOver">
                         <VisualState.Setters>
-                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray600}}"/>
-                            <!--<Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />-->
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"/>
                             <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"/>
-                            <!--<Setter Property="HeaderIconColor" Value="{Binding Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />-->
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.AccordionItem.Primary" TargetType="expander:AccordionItem" BasedOn="{StaticResource Style.Syncfusion.AccordionItem.Default}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState Name="Expanded">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="HeaderIconColor" Value="{Binding x:DataType='expander:AccordionItem', Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Collapsed">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <!--
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    -->
+                    <VisualState Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}"/>
                             <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
                         </VisualState.Setters>
                     </VisualState>

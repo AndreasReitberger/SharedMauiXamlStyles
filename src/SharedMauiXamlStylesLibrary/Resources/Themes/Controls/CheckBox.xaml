@@ -13,21 +13,18 @@
 
     <Style x:Key="Style.Core.CheckBox.Default" TargetType="CheckBox">
         <Setter Property="VerticalOptions" Value="Center" />
-        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray100}}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <!--
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                            <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray100}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <VisualState x:Name="IsChecked">
-                        <VisualState.Setters>
-                        </VisualState.Setters>
-                    </VisualState>
-                    -->
+                    <VisualState x:Name="PointOver" />
+                    <!---->
+                    <VisualState x:Name="IsChecked" />
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
@@ -52,7 +49,7 @@
                     </VisualState>
                     <VisualState x:Name="IsChecked">
                         <VisualState.Setters>
-                            <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={StaticResource White}}" />
+                            <Setter Property="Color" Value="{AppThemeBinding Light={DynamicResource PrimaryColor}, Dark={DynamicResource PrimaryColor}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">

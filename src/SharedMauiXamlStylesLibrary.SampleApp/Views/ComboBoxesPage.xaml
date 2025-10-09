@@ -18,6 +18,18 @@
     <ScrollView>
         <VerticalStackLayout>
 
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,16"
                 Text="This is a default SfAutocomplete"
@@ -27,6 +39,7 @@
                 />
 
             <inputs:SfAutocomplete
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.SfAutocomplete.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
@@ -34,6 +47,7 @@
                 />
 
             <controls:MultiSelectAutoComplete
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.MultiSelectAutoComplete.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
@@ -47,8 +61,45 @@
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
+
+
+            <inputs:SfComboBox
+                IsEnabled="{Binding Enabled}"
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding SelectedItem}"
+                Margin="8"
+                >
+                <inputs:SfComboBox.Style>
+                    <Style TargetType="inputs:SfComboBox">
+                        <Setter Property="ShowBorder" Value="True" />
+                        <Setter Property="VisualStateManager.VisualStateGroups">
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                                            <Setter Property="DropDownBackground" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=Background}" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <VisualState.Setters>
+                                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
+                                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=TextColor}" />
+                                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+                                            <Setter Property="DropDownBackground" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=Background}" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </Setter>
+                    </Style>
+                </inputs:SfComboBox.Style>
+            </inputs:SfComboBox>
             
             <inputs:SfComboBox
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.SfComboBox.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
@@ -56,6 +107,7 @@
                 />
             
             <controls:MultiSelectComboBox
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.MultiSelectComboBox.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"

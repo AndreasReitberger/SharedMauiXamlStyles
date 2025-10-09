@@ -15,6 +15,18 @@
     >
     <ScrollView>
         <VerticalStackLayout>
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,16"
                 Text="This is a default Border"
@@ -24,9 +36,10 @@
                 />
 
             <Border
+                IsEnabled="{Binding Enabled}"
                 Margin="8"
                 Style="{StaticResource Style.Core.Border.Default}"
-                    >
+                >
                 <Label 
                     Margin="2,16"
                     Text="This is just some text to be displayed within the frame."
@@ -45,6 +58,7 @@
                 />
 
             <Border
+                IsEnabled="{Binding Enabled}"
                 Margin="8"
                 Style="{StaticResource Style.Core.Border.CardView}"
                 >
@@ -65,6 +79,7 @@
                 />
 
             <Border
+                IsEnabled="{Binding Enabled}"
                 Margin="8"
                 Style="{StaticResource Style.Core.Border.BrightMinimalPanelCardView}"
                 >
@@ -86,6 +101,7 @@
                 />
 
             <Border
+                IsEnabled="{Binding Enabled}"
                 Margin="8"
                 Style="{StaticResource Style.Core.Border.Default}"
                 >
@@ -107,6 +123,7 @@
                 </VerticalStackLayout>
             </Border>
             <Border
+                IsEnabled="{Binding Enabled}"
                 Margin="8"
                 Style="{StaticResource Style.Core.Border.Borderless}"
                 >
@@ -137,6 +154,7 @@
                 />
 
             <Border
+                IsEnabled="{Binding Enabled}"
                 Margin="8"
                 Style="{StaticResource Style.Core.Border.Settings}"
                 >

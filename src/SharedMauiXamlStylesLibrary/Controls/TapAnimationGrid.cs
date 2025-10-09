@@ -121,12 +121,14 @@ namespace AndreasReitberger.Shared.Controls
             if (grid.IsAnimated && Application.Current is not null)
             {
                 Application.Current.Resources.TryGetValue($"{(Application.Current.RequestedTheme == AppTheme.Light ? "Gray100" : "Gray900")}", out var retVal);
-                grid.Background = (Brush)retVal;
-
-                // To make the selected item color changes for 100 milliseconds.
-                await Task.Delay(100);
-                Application.Current.Resources.TryGetValue("TaptemGridBackground", out var retValue);
-                grid.Background = (Brush)retValue;
+                if (retVal is Color color)
+                {
+                    grid.Background = new SolidColorBrush(color);
+                    // To make the selected item color changes for 100 milliseconds.
+                    await Task.Delay(100);
+                    Application.Current.Resources.TryGetValue("TaptemGridBackground", out var retValue);
+                    grid.Background = (Brush)retValue;
+                }
             }
         }
         #endregion
