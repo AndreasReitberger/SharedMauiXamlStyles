@@ -190,6 +190,9 @@
 	  <MauiXaml Update="Resources\Themes\Controls\SfScheduler.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\SfTreeMap.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\SfTreeView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

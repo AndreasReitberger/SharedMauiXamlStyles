@@ -79,6 +79,9 @@
 	  <Compile Update="Views\SfShimmerPage.xaml.cs">
 	    <DependentUpon>SfShimmerPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\SfTreeMapPadPage.xaml.cs">
+	    <DependentUpon>SfTreeMapPadPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SfSignaturePadPage.xaml.cs">
 	    <DependentUpon>SfSignaturePadPage.xaml</DependentUpon>
 	  </Compile>
@@ -170,6 +173,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfShimmerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfTreeMapPadPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfSignaturePadPage.xaml">

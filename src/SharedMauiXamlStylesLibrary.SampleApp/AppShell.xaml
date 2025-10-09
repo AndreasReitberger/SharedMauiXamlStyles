@@ -142,6 +142,10 @@
         Title="TextInputLayout (Syncfusion)"
         ContentTemplate="{DataTemplate views:TextInputLayoutsPage}"
         Route="TextInputLayoutsPage" />
+    <ShellContent
+        Title="TreeMap (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfTreeMapPadPage}"
+        Route="SfTreeMapPadPage" />
     
     <Shell.FlyoutFooter>
         <VerticalStackLayout

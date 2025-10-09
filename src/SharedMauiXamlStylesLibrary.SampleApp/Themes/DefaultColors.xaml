@@ -15,6 +15,7 @@
     <Color x:Key="GradientStart">#FF6138</Color>
     <Color x:Key="GradientEnd">#FF9276</Color>
 
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource PrimaryColor}"/>
     <!--  Common style for sfCardView  -->
     <x:Array Type="{x:Type Color}" x:Key="ChartColors">
         <Color>#b02f35</Color>

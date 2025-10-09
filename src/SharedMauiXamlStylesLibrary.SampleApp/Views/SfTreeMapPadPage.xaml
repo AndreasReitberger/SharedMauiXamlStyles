@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfTreeMapPadPage"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"  
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:behaviors="clr-namespace:AndreasReitberger.Shared.Core.Behaviors;assembly=SharedMauiCoreLibrary"   
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+    
+    Title="SfTreeMapPadPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:SfTreeMapPadPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="Tree Map (Syncfusion)"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="8"
+                HorizontalOptions="Fill"
+                >
+                <treemap:SfTreeMap
+                    Style="{StaticResource Style.Syncfusion.SfTreeMap.Default}"
+                    DataSource="{Binding Tools}"
+                    PrimaryValuePath="Users"
+                    SelectionMode="Single"
+                    SelectedItems="{Binding SelectedSoftwares}"
+                    >
+                    <treemap:SfTreeMap.LeafItemSettings>
+                        <treemap:TreeMapLeafItemSettings LabelPath="Name"/>
+                    </treemap:SfTreeMap.LeafItemSettings>
+                    <treemap:SfTreeMap.Levels>
+                        <treemap:TreeMapLevel GroupPath="Group"/>
+                    </treemap:SfTreeMap.Levels>
+                </treemap:SfTreeMap>
+                <treemap:SfTreeMap
+                    Grid.Column="1"
+                    Style="{StaticResource Style.Syncfusion.SfTreeMap.Colorful}"
+                    DataSource="{Binding Tools}"
+                    PrimaryValuePath="Users"
+                    SelectedItems="{Binding SelectedSoftwares}"
+                    >
+                    <treemap:SfTreeMap.LeafItemSettings>
+                        <treemap:TreeMapLeafItemSettings LabelPath="Name"/>
+                    </treemap:SfTreeMap.LeafItemSettings>
+                </treemap:SfTreeMap>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

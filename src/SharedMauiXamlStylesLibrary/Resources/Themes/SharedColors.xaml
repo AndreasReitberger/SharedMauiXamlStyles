@@ -46,6 +46,21 @@
     <Color x:Key="Yellow">#E9B31A</Color>
     <Color x:Key="Pink">#C6275C</Color>
 
+    <SolidColorBrush x:Key="MidnightBlueBrush" Color="{StaticResource MidnightBlue}" />
+    <SolidColorBrush x:Key="GreenBrush" Color="{StaticResource Green}" />
+    <SolidColorBrush x:Key="LightGreenBrush" Color="{StaticResource LightGreen}" />
+    <SolidColorBrush x:Key="DarkGreenBrush" Color="{StaticResource DarkGreen}" />
+    <SolidColorBrush x:Key="RedBrush" Color="{StaticResource Red}" />
+    <SolidColorBrush x:Key="DarkRedBrush" Color="{StaticResource DarkRed}" />
+    <SolidColorBrush x:Key="OrangeBrush" Color="{StaticResource Orange}" />
+    <SolidColorBrush x:Key="DarkOrangeBrush" Color="{StaticResource DarkOrange}" />
+    <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource Blue}" />
+    <SolidColorBrush x:Key="LightBlueBrush" Color="{StaticResource LightBlue}" />
+    <SolidColorBrush x:Key="DarkBlueBrush" Color="{StaticResource DarkBlue}" />
+    <SolidColorBrush x:Key="LiliacBrush" Color="{StaticResource Liliac}" />
+    <SolidColorBrush x:Key="Purpleish-BlueBrush" Color="{StaticResource Purpleish-Blue}" />
+    <SolidColorBrush x:Key="PinkBrush" Color="{StaticResource Pink}" />
+    
     <Color x:Key="TempLow">#DD4E38</Color>
     <Color x:Key="TempMiddle">#B72316</Color>
     <Color x:Key="TempHigh">#93291e</Color>
@@ -121,4 +136,24 @@
     <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGray}"/>
     <SolidColorBrush x:Key="MidGrayBrush" Color="{StaticResource MidGray}"/>
     <SolidColorBrush x:Key="DarkGrayBrush" Color="{StaticResource DarkGray}"/>
+
+    <!--
+    <x:Array Type="{x:Type Brush}" x:Key="TreeMapBrushes">
+        <SolidColorBrush Color="{StaticResource MidnightBlue}" />
+        <SolidColorBrush Color="{StaticResource Green}" />
+        <SolidColorBrush Color="{StaticResource LightGreen}" />
+        <SolidColorBrush Color="{StaticResource DarkGreen}" />
+        <SolidColorBrush Color="{StaticResource Red}" />
+        <SolidColorBrush Color="{StaticResource DarkRed}" />
+        <SolidColorBrush Color="{StaticResource Orange}" />
+        <SolidColorBrush Color="{StaticResource DarkOrange}" />
+        <SolidColorBrush Color="{StaticResource Blue}" />
+        <SolidColorBrush Color="{StaticResource LightBlue}" />
+        <SolidColorBrush Color="{StaticResource DarkBlue}" />
+        <SolidColorBrush Color="{StaticResource Liliac}" />
+        <SolidColorBrush Color="{StaticResource Purpleish-Blue}" />
+        <SolidColorBrush Color="{StaticResource Pink}" />
+    </x:Array>
+    -->
+    
 </ResourceDictionary>
