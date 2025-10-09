@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     
+    xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Label.xaml;assembly=SharedMauiXamlStylesLibrary" />
+        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Docs: https://help.syncfusion.com/maui/circularprogressbar/getting-started -->
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Default" TargetType="progressBar:SfCircularProgressBar">
+        <Setter Property="HeightRequest" Value="128" />
+        <Setter Property="WidthRequest" Value="128" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="TrackFill" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
+        <Setter Property="ProgressFill" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray100}}" />
+        <Setter Property="Content">
+            <StackLayout
+                WidthRequest="92"
+                >
+                <Label
+                    Margin="0"
+                    Padding="0"
+                    Text="{Binding Source={RelativeSource AncestorType={x:Type progressBar:SfCircularProgressBar}}, Path=Progress,StringFormat='{0:N0}%'}"
+                    Style="{StaticResource Style.Core.Label.Small}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    />
+            </StackLayout>
+        </Setter>
+    </Style>
+
+    <Style TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Primary" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}">
+        <Setter Property="ProgressFill" Value="{DynamicResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Segment" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}">
+        <Setter Property="SegmentCount" Value="4" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Half" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}">
+        <Setter Property="StartAngle" Value="180" />
+        <Setter Property="EndAngle" Value="360" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Primary.Half" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Half}">
+        <Setter Property="ProgressFill" Value="{DynamicResource PrimaryColor}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Primary.Segment" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Primary}">
+        <Setter Property="SegmentCount" Value="4" />
+    </Style>
+    <!--
+    <Style x:Key="Style.Syncfusion.SfCircularProgressBar.Colorful" TargetType="progressBar:SfCircularProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfCircularProgressBar.Default}">
+        <Setter Property="GradientStops">
+            <Setter.Value>
+                <x:Array Type="{x:Type progressBar:ProgressGradientStop}">
+                    <progressBar:ProgressGradientStop Color="{StaticResource Green}" Value="0"/>
+                    <progressBar:ProgressGradientStop Color="{StaticResource Green}" Value="25"/>
+                    <progressBar:ProgressGradientStop Color="{StaticResource Blue}" Value="25"/>
+                    <progressBar:ProgressGradientStop Color="{StaticResource Blue}" Value="50"/>
+                    <progressBar:ProgressGradientStop Color="{StaticResource Pink}" Value="50"/>
+                    <progressBar:ProgressGradientStop Color="{StaticResource Pink}" Value="75"/>
+                    <progressBar:ProgressGradientStop Color="{StaticResource Yellow}" Value="75"/>
+                    <progressBar:ProgressGradientStop Color="{StaticResource Yellow}" Value="100"/>
+                </x:Array>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    -->
+</ResourceDictionary>
