@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfStepProgressBar"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"  
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:behaviors="clr-namespace:AndreasReitberger.Shared.Core.Behaviors;assembly=SharedMauiCoreLibrary"   
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+    
+    Title="SfStepProgressBar"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:SfStepProgressBarViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="Shimmer (Syncfusion)"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <!-- More than one progress causes a problem with page rendering?!
+            <progressBar:SfStepProgressBar 
+                Margin="8,4"
+                Style="{StaticResource Style.Syncfusion.SfStepProgressBar.Default}"
+                ActiveStepIndex="{Binding SelectedIndex}"
+                ActiveStepProgressValue="{Binding Progress}"
+                ItemsSource="{Binding StepProgress}"
+                />
+            -->
+            <progressBar:SfStepProgressBar 
+                Margin="8,4"
+                Style="{StaticResource Style.Syncfusion.SfStepProgressBar.Green}"
+                ActiveStepIndex="{Binding SelectedIndex}"
+                ActiveStepProgressValue="{Binding Progress}"
+                ItemsSource="{Binding StepProgress}"
+                />
+
+            <Label
+                Text="Index:"
+                />
+            <Slider
+                Style="{StaticResource Style.Core.Slider.Primary}"
+                Value="{Binding SelectedIndex}"
+                Maximum="2"
+                Minimum="0"
+                />
+            <Label
+                Text="Progresss:"
+                />
+            <Slider
+                Style="{StaticResource Style.Core.Slider.Primary}"
+                Value="{Binding Progress}"
+                Maximum="100"
+                Minimum="0"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

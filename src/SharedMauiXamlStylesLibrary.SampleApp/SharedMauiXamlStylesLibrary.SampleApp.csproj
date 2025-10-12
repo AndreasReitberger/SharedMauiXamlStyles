@@ -73,8 +73,14 @@
 	  <Compile Update="Views\SfExpandersPage.xaml.cs">
 	    <DependentUpon>SfExpandersPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\SfStepProgressBar.xaml.cs">
+	    <DependentUpon>SfStepProgressBar.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SfSchedulerCalendarPage.xaml.cs">
 	    <DependentUpon>SfSchedulerCalendarPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SfProgressBarPage.xaml.cs">
+	    <DependentUpon>SfProgressBarPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\SfShimmerPage.xaml.cs">
 	    <DependentUpon>SfShimmerPage.xaml</DependentUpon>
@@ -169,7 +175,13 @@
 	  <MauiXaml Update="Views\SfExpandersPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\SfStepProgressBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\SfSchedulerCalendarPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfProgressBarPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfShimmerPage.xaml">

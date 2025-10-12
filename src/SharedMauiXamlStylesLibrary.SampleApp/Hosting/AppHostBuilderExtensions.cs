@@ -63,7 +63,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfProgressBarPageViewModel>();
             builder.Services.AddSingleton<SfStepProgressBarViewModel>();
             builder.Services.AddSingleton<SfTextInputLayoutsPageViewModel>();
-
             return builder;
         }
         public static MauiAppBuilder RegisterMainViews(this MauiAppBuilder builder)
@@ -103,6 +102,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfStepProgressBar>();
             builder.Services.AddSingleton<SfTextInputLayoutsPage>();
             builder.Services.AddSingleton<TemplatePage>();
+            builder.Services.AddSingleton<TextInputLayoutsPage>();
 
             return builder;
         }

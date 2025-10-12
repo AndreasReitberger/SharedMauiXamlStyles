@@ -20,8 +20,10 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SfCheckBox.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfCartesianChart.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfChips.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfCircularProgressBar.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfComboBox.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfExpander.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfLinearProgressBar.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfListView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfMaskedEntry.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfNumericEntry.xaml" />
@@ -34,6 +36,7 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SfShimmer.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSignaturePad.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfSlider.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfStepProgressBar.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTabView.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTextInputLayout.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/SfTreeMap.xaml" />
