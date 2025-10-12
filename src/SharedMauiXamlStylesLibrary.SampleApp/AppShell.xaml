@@ -115,6 +115,14 @@
         ContentTemplate="{DataTemplate views:EntryPage}"
         Route="EntryPage" />
     <ShellContent
+        Title="Progress Bars (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfProgressBarPage}"
+        Route="SfProgressBarPage" />
+    <ShellContent
+        Title="Step Progress (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfStepProgressBar}"
+        Route="SfStepProgressBar" />
+    <ShellContent
         Title="SegmentedControl (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfSegmentedControlPage}"
         Route="SfSegmentedControlPage" />

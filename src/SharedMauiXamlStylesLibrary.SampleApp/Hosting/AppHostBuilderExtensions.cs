@@ -60,6 +60,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<TabViewPageViewModel>();
             builder.Services.AddSingleton<TemplatePageViewModel>();
             builder.Services.AddSingleton<SfListViewPageViewModel>();
+            builder.Services.AddSingleton<SfProgressBarPageViewModel>();
+            builder.Services.AddSingleton<SfStepProgressBarViewModel>();
             builder.Services.AddSingleton<TextInputLayoutsPageViewModel>();
             return builder;
         }
@@ -96,6 +98,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<TabViewPage>();
             builder.Services.AddSingleton<TemplatePage>();
             builder.Services.AddSingleton<SfListViewPage>();
+            builder.Services.AddSingleton<SfProgressBarPage>();
+            builder.Services.AddSingleton<SfStepProgressBar>();
             builder.Services.AddSingleton<TextInputLayoutsPage>();
             return builder;
         }
