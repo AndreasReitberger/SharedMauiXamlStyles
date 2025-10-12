@@ -24,13 +24,25 @@
         <VerticalStackLayout>
             <Label 
                 Margin="2,16"
-                Text="Shimmer (Syncfusion)"
+                Text="CircularProgressBar (Syncfusion)"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
             <progressBar:SfCircularProgressBar
                 Style="{StaticResource Style.Syncfusion.SfCircularProgressBar.Primary}"
+                Progress="{Binding Progress}"
+                />
+            
+            <Label 
+                Margin="2,16"
+                Text="SfLinearProgressBar (Syncfusion)"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <progressBar:SfLinearProgressBar
+                Style="{StaticResource Style.Syncfusion.SfLinearProgressBar.Primary}"
                 Progress="{Binding Progress}"
                 />
             <!-- More than one progress causes a problem with page rendering?!
@@ -45,6 +57,16 @@
                     />
             </HorizontalStackLayout>
             -->
+            <BoxView
+                Margin="0,16"
+                />
+            <Label 
+                Margin="2,16"
+                Text="Adjust the progress below:"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
             <Slider
                 Style="{StaticResource Style.Core.Slider.Primary}"
                 Value="{Binding Progress}"
