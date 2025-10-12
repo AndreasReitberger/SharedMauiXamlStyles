@@ -15,7 +15,7 @@
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
     </Style>
 
-    <Style TargetType="Page" ApplyToDerivedTypes="True" BasedOn="{StaticResource Style.Core.Page.Default}"/>
+    <Style TargetType="Page" BasedOn="{StaticResource Style.Core.Page.Default}" ApplyToDerivedTypes="True" />
 
     <Style x:Key="Style.Core.NavigationPage.Default" TargetType="NavigationPage">
         <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
