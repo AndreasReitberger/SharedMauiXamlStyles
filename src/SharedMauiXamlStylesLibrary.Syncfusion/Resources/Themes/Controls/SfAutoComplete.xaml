@@ -27,24 +27,23 @@
         <!-- Seems to cause a crash -->
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="Margin" Value="4,2"/>
+        <Setter Property="ShowBorder" Value="False"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray800}}" />
                             <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
                             <Setter Property="DropDownBackground" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <!--<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />-->
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
                             <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=TextColor}" />
-                            <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />-->
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
                             <Setter Property="DropDownBackground" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
@@ -63,24 +62,23 @@
         <Setter Property="SelectedDropDownItemBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="Margin" Value="4,2"/>
+        <Setter Property="ShowBorder" Value="False"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray800}}" />
                             <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=TextColor}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
                             <Setter Property="DropDownBackground" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <!--<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />-->
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
                             <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=TextColor}" />
-                            <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />-->
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
                             <Setter Property="DropDownBackground" Value="{Binding x:DataType='controls:MultiSelectAutoComplete', Source={RelativeSource Self}, Path=Background}" />
                         </VisualState.Setters>
                     </VisualState>
