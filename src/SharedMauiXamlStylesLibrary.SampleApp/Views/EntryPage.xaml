@@ -36,46 +36,43 @@
             </Grid>
             <Label 
                 Margin="2,16"
-                Text="SfNumericEntry"
+                Text="Entries for text"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
                     
-            <editors:SfNumericEntry 
-                IsEnabled="{Binding Enabled}"
+            <Entry 
                 Margin="8,16"
-                Value="{Binding SampleValue}"
-                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
+                Text="{Binding SampleText}"
+                Style="{StaticResource Style.Core.Entry.Default}"
                 />
-                    
-            <editors:SfNumericEntry 
-                IsEnabled="{Binding Enabled}"
-                Margin="8,16"
-                Value="{Binding SampleValue}"
-                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Transparent}"
-                />
-                        
+
             <Label 
                 Margin="2,16"
-                Text="SfMaskedEntry"
+                Text="Entries for numeric values"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+            <Entry 
+                Margin="8,16"
+                Text="{Binding SampleValue}"
+                Style="{StaticResource Style.Core.Entry.Numeric}"
+                />
+
+            <Label 
+                Margin="2,16"
+                Text="Entries for passwords"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
 
-            <editors:SfMaskedEntry 
-                IsEnabled="{Binding Enabled}"
+            <Entry 
                 Margin="8,16"
-                Value="{Binding SampleValue}"
-                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Default}"
-                />
-
-            <editors:SfMaskedEntry 
-                IsEnabled="{Binding Enabled}"
-                Margin="8,16"
-                Value="{Binding SampleValue}"
-                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Transparent}"
+                Text="{Binding SampleText}"
+                Style="{StaticResource Style.Core.Entry.Password}"
                 />
 
         </VerticalStackLayout>
