@@ -21,7 +21,7 @@
         <Setter Property="ShowWeekNumber" Value="True" />
         <Setter Property="HeaderView">
             <scheduler:SchedulerHeaderView
-                 Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"                             
+                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"                             
                  >
                 <scheduler:SchedulerHeaderView.TextStyle>
                     <scheduler:SchedulerTextStyle
@@ -61,7 +61,7 @@
                     <scheduler:SchedulerMonthHeaderSettings
                         DateFormat="MMM yyy"
                         Height="48"
-                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                        Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                         >
                         <scheduler:SchedulerMonthHeaderSettings.TextStyle>
                             <scheduler:SchedulerTextStyle
@@ -77,7 +77,7 @@
                     <scheduler:SchedulerWeekHeaderSettings
                         DateFormat="MM, ddd"
                         Height="48"
-                        Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}"
+                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"
                         >
                         <scheduler:SchedulerWeekHeaderSettings.TextStyle>
                             <scheduler:SchedulerTextStyle
@@ -92,7 +92,7 @@
                 <scheduler:SchedulerAgendaView.DayHeaderSettings>
                     <!-- DayFormat="MM, ddd" -->
                     <scheduler:SchedulerDayHeaderSettings
-                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+                        Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                         >
                         <scheduler:SchedulerDayHeaderSettings.DateTextStyle>
                             <scheduler:SchedulerTextStyle
