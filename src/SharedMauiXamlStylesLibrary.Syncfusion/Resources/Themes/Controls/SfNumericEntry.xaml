@@ -34,7 +34,7 @@
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray800}}" />
                             <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
                         </VisualState.Setters>
                     </VisualState>
