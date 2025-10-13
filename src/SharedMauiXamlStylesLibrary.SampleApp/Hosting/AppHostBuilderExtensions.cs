@@ -102,7 +102,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfStepProgressBar>();
             builder.Services.AddSingleton<SfTextInputLayoutsPage>();
             builder.Services.AddSingleton<TemplatePage>();
-            builder.Services.AddSingleton<TextInputLayoutsPage>();
+            builder.Services.AddSingleton<SfTextInputLayoutsPage>();
 
             return builder;
         }

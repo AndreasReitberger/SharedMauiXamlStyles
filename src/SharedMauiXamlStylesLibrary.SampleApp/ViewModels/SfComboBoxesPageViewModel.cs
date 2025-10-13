@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
-    public partial class ComboBoxesPageViewModel : BaseViewModel
+    public partial class SfComboBoxesPageViewModel : BaseViewModel
     {
 
         #region Properties
@@ -23,7 +23,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         #region Constructor, LoadSettings
 
-        public ComboBoxesPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
+        public SfComboBoxesPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
             UpdateVersionBuild();

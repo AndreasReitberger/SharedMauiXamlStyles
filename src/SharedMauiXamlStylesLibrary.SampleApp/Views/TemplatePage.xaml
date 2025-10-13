@@ -16,11 +16,13 @@
     >
     <Shell.TitleView>
         <contentViews:AccountConventView   
+            HeightRequest="48"
             IsVisible="True"
             UserImage="{Binding UserPhoto}"
             UsernameText="{Binding UserDisplayName}"
             IsSyncing="{Binding IsLoading}"
             IsSyncingText="{Binding SyncingText}"
+            Background="{DynamicResource PrimaryColor}"
             >
             <Grid
                 CompressedLayout.IsHeadless="True"

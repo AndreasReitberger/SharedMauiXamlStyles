@@ -2,9 +2,9 @@ using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Views;
 
-public partial class AccordionsPage : ContentPage
+public partial class SfTextInputLayoutsPage : ContentPage
 {
-    public AccordionsPage(AccordionsPageViewModel viewModel)
+    public SfTextInputLayoutsPage(SfTextInputLayoutsPageViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;

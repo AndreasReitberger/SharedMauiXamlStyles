@@ -2,9 +2,9 @@ using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Views;
 
-public partial class TabViewPage : ContentPage
+public partial class SfAccordionsPage : ContentPage
 {
-    public TabViewPage(TabViewPageViewModel viewModel)
+    public SfAccordionsPage(SfAccordionsPageViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;

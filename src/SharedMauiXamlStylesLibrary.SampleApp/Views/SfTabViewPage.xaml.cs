@@ -2,9 +2,9 @@ using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Views;
 
-public partial class TextInputLayoutsPage : ContentPage
+public partial class SfTabViewPage : ContentPage
 {
-    public TextInputLayoutsPage(TextInputLayoutsPageViewModel viewModel)
+    public SfTabViewPage(SfTabViewPageViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;

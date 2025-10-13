@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.EntryPage"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfNumericEntry"
     
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     
@@ -13,7 +13,7 @@
     
     xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
     
-    Title="ButtonsPage"
+    Title="SfNumericEntry"
     Style="{StaticResource Style.Core.ContentPage.Default}"
     x:DataType="viewModels:EntryPageViewModel"   
     >
@@ -22,59 +22,52 @@
     </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout>
-            <Grid
-                ColumnDefinitions="*,Auto"
-                >
-                <Label
-                    Margin="16,8"
-                    Text="Switch enable state"
-                    />
-                <Switch
-                    Grid.Column="1"
-                    IsToggled="{Binding Enabled}"
-                    />
-            </Grid>
             <Label 
                 Margin="2,16"
-                Text="Entries for text"
-                VerticalTextAlignment="Center" 
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Default}"
-                />
-                    
-            <Entry 
-                Margin="8,16"
-                Text="{Binding SampleText}"
-                Style="{StaticResource Style.Core.Entry.Default}"
-                />
-
-            <Label 
-                Margin="2,16"
-                Text="Entries for numeric values"
-                VerticalTextAlignment="Center" 
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource Style.Core.Label.Default}"
-                />
-            <Entry 
-                Margin="8,16"
-                Text="{Binding SampleValue}"
-                Style="{StaticResource Style.Core.Entry.Numeric}"
-                />
-
-            <Label 
-                Margin="2,16"
-                Text="Entries for passwords"
+                Text="SfNumericEntry"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
 
-            <Entry 
+            <editors:SfNumericEntry 
                 Margin="8,16"
-                Text="{Binding SampleText}"
-                Style="{StaticResource Style.Core.Entry.Password}"
+                Value="{Binding SampleValue}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
                 />
 
+            <editors:SfNumericEntry 
+                Margin="8,16"
+                Value="{Binding SampleValue}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Currency}"
+                />
+
+            <editors:SfNumericEntry 
+                Margin="8,16"
+                Value="{Binding SampleValue}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Percent}"
+                />
+
+            <Label 
+                Margin="2,16"
+                Text="SfMaskedEntry"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+
+            <editors:SfMaskedEntry 
+                Margin="8,16"
+                Value="{Binding SampleText}"
+                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Default}"
+                />
+
+            <editors:SfMaskedEntry 
+                Margin="8,16"
+                Value="{Binding SampleText}"
+                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Transparent}"
+                />
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

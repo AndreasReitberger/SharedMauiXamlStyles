@@ -2,9 +2,9 @@ using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Views;
 
-public partial class ComboBoxesPage : ContentPage
+public partial class SfNumericEntry : ContentPage
 {
-    public ComboBoxesPage(ComboBoxesPageViewModel viewModel)
+    public SfNumericEntry(EntryPageViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;

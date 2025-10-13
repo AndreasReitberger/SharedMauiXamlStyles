@@ -27,12 +27,11 @@
         Text="Test Menu" 
         >
     </MenuItem>
-    
+
     <ShellContent
         Title="ActivityIndicators"
         ContentTemplate="{DataTemplate views:ActivityIndicatorsPage}"
         Route="ActivityIndicatorsPage" />
-    
     <ShellContent
         Title="FontSizePage"
         ContentTemplate="{DataTemplate views:FontSizePage}"
@@ -57,6 +56,10 @@
         Title="CollectionViews"
         ContentTemplate="{DataTemplate views:CollectionViewPage}"
         Route="CollectionViewPage" />
+    <ShellContent
+        Title="Entries"
+        ContentTemplate="{DataTemplate views:EntryPage}"
+        Route="EntryPage" />
     <ShellContent
         Title="Editors and Entries"
         ContentTemplate="{DataTemplate views:EditorsPage}"
@@ -96,8 +99,8 @@
         Route="LanguagesPage" />
     <ShellContent
         Title="Accordions (Syncfusion)"
-        ContentTemplate="{DataTemplate views:AccordionsPage}"
-        Route="AccordionsPage" />
+        ContentTemplate="{DataTemplate views:SfAccordionsPage}"
+        Route="SfAccordionsPage" />
     <ShellContent
         Title="Expanders (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfExpandersPage}"
@@ -108,12 +111,12 @@
         Route="SfCheckBoxesPage" />
     <ShellContent
         Title="ComboBoxes (Syncfusion)"
-        ContentTemplate="{DataTemplate views:ComboBoxesPage}"
-        Route="ComboBoxesPage" />
+        ContentTemplate="{DataTemplate views:SfComboBoxesPage}"
+        Route="SfComboBoxesPage" />
     <ShellContent
-        Title="Entries (Syncfusion)"
-        ContentTemplate="{DataTemplate views:EntryPage}"
-        Route="EntryPage" />
+        Title="Numeric Entry (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfNumericEntry}"
+        Route="SfNumericEntry" />
     <ShellContent
         Title="Progress Bars (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfProgressBarPage}"
@@ -140,16 +143,16 @@
         Route="SfSchedulerCalendarPage" />
     <ShellContent
         Title="TabView (Syncfusion)"
-        ContentTemplate="{DataTemplate views:TabViewPage}"
-        Route="TabViewPage" />
+        ContentTemplate="{DataTemplate views:SfTabViewPage}"
+        Route="SfTabViewPage" />
     <ShellContent
         Title="ListView (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfListViewPage}"
         Route="SfListViewPage" />
     <ShellContent
         Title="TextInputLayout (Syncfusion)"
-        ContentTemplate="{DataTemplate views:TextInputLayoutsPage}"
-        Route="TextInputLayoutsPage" />
+        ContentTemplate="{DataTemplate views:SfTextInputLayoutsPage}"
+        Route="SfTextInputLayoutsPage" />
     <ShellContent
         Title="TreeMap (Syncfusion)"
         ContentTemplate="{DataTemplate views:SfTreeMapPadPage}"
