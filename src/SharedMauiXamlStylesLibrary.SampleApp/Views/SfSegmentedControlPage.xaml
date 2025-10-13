@@ -21,6 +21,18 @@
     </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout>
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,16"
                 Text="Segmented Control (Syncfusion)"
@@ -32,6 +44,7 @@
                 Style="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}"
             -->
             <buttons:SfSegmentedControl
+                IsEnabled="{Binding Enabled}"
                 Margin="4,16"
                 ItemsSource="{Binding Sizes}"
                 SelectedIndex="{Binding SelectedSizeIndex, Mode=TwoWay}"
@@ -39,6 +52,7 @@
                 />
 
             <buttons:SfSegmentedControl
+                IsEnabled="{Binding Enabled}"
                 Margin="4,16"
                 ItemsSource="{Binding Sizes}"
                 SelectedIndex="{Binding SelectedSizeIndex, Mode=TwoWay}"

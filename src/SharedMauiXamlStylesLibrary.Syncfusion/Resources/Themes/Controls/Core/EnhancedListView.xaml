@@ -14,10 +14,10 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Syncfusion.EnhancedListView.Default" TargetType="controls:EnhancedListView">
-        <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
+        <Setter Property="SelectionBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray850}}" />
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False" TargetType="controls:EnhancedListView">
-                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

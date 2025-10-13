@@ -59,7 +59,7 @@
         <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}" />
     </Style>
 
-    <Style TargetType="Shell" ApplyToDerivedTypes="True" BasedOn="{StaticResource Style.Core.Shell.Default}"/>
+    <Style TargetType="Shell" BasedOn="{StaticResource Style.Core.Shell.Default}" ApplyToDerivedTypes="True" />
     
     <!--
     <Style x:Key="DefaultShellStyle" TargetType="Shell">

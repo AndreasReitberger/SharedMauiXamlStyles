@@ -114,13 +114,39 @@
                 Text="This is a setting container calling a command."
                 Margin="16,8"
                 />
-            <!--  Danger zone - Delete all settings  -->
+            <!--  Warning zone - Delete all settings  -->
             <controls:TapAnimationGrid
-                Style="{StaticResource Style.Core.TapAnimationGrid.Default}"
+                Style="{StaticResource Style.Core.TapAnimationGrid.Warning}"
                 Command="{Binding DeleteAllSettingsCommand}"
                 Tapped="False"
                 ColumnDefinitions="Auto,*,Auto"
-                Background="{StaticResource Red}"
+                >
+                <Label
+                    Margin="16,0,0,0"
+                    Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
+                    Text="{x:Static icons:MaterialIcons.AlertOutline}"
+                    TextColor="{StaticResource White}"
+                    />
+                <Label
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource Style.Core.Label.Settings}"
+                    Text="Delete all settings?"
+                    TextColor="{StaticResource White}"
+                    />
+                <Label
+                    Grid.Column="2"
+                    Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
+                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
+                    TextColor="{StaticResource White}"
+                    />
+            </controls:TapAnimationGrid>
+            <!--  Danger zone - Delete all settings  -->
+            <controls:TapAnimationGrid
+                Style="{StaticResource Style.Core.TapAnimationGrid.Critical}"
+                Command="{Binding DeleteAllSettingsCommand}"
+                Tapped="False"
+                ColumnDefinitions="Auto,*,Auto"
                 >
                 <Label
                     Margin="16,0,0,0"

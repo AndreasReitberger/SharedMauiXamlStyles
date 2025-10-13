@@ -16,7 +16,18 @@
     >
     <ScrollView>
         <VerticalStackLayout>
-
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,16"
                 Text="This is a default Accordion"
@@ -26,6 +37,7 @@
                 />
 
             <expander:SfAccordion
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.SfAccordion.Default}"
                 Margin="8"
                 >
@@ -85,6 +97,97 @@
                 </expander:AccordionItem>
                 <expander:AccordionItem
                     Style="{StaticResource Style.Syncfusion.AccordionItem.Default}"
+                    >
+                    <expander:AccordionItem.Header>
+                        <Grid
+                            HeightRequest="48"
+                            >
+                            <Label 
+                                Margin="8,4"
+                                Text="Item #3"
+                                Style="{StaticResource Style.Core.Label.Default}"
+                                VerticalTextAlignment="Center"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Header>
+                    <expander:AccordionItem.Content>
+                        <Grid>
+                            <Label 
+                                Margin="2,16"
+                                Text="This is a sample text"
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource Style.Core.Label.Small}"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Content>
+                </expander:AccordionItem>
+            </expander:SfAccordion>
+            <BoxView />
+            <expander:SfAccordion
+                IsEnabled="{Binding Enabled}"
+                Style="{StaticResource Style.Syncfusion.SfAccordion.Default}"
+                Margin="8"
+                >
+                <expander:AccordionItem
+                    Style="{StaticResource Style.Syncfusion.AccordionItem.Primary}"
+                    >
+                    <expander:AccordionItem.Header>
+                        <Grid
+                            HeightRequest="48"
+                            >
+                            <Label 
+                                Margin="8,4"
+                                Text="Item #1"
+                                Style="{StaticResource Style.Core.Label.Default}"
+                                VerticalTextAlignment="Center"
+                                />
+                            <!-- 
+                            TextColor="{Binding x:DataType='expander:AccordionItem', Source={RelativeSource AncestorType={x:Type expander:AccordionItem}}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}"                                
+                            -->
+                        </Grid>
+                    </expander:AccordionItem.Header>
+                    <expander:AccordionItem.Content>
+                        <Grid>
+                            <Label 
+                                Margin="2,16"
+                                Text="This is a sample text"
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource Style.Core.Label.Small}"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Content>
+                </expander:AccordionItem>
+                <expander:AccordionItem
+                    Style="{StaticResource Style.Syncfusion.AccordionItem.Primary}"
+                    >
+                    <expander:AccordionItem.Header>
+                        <Grid
+                            HeightRequest="48"
+                            >
+                            <Label 
+                                Margin="8,4"
+                                Text="Item #2"
+                                Style="{StaticResource Style.Core.Label.Default}"
+                                VerticalTextAlignment="Center"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Header>
+                    <expander:AccordionItem.Content>
+                        <Grid>
+                            <Label 
+                                Margin="2,16"
+                                Text="This is a sample text"
+                                VerticalTextAlignment="Center" 
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource Style.Core.Label.Small}"
+                                />
+                        </Grid>
+                    </expander:AccordionItem.Content>
+                </expander:AccordionItem>
+                <expander:AccordionItem
+                    Style="{StaticResource Style.Syncfusion.AccordionItem.Primary}"
                     >
                     <expander:AccordionItem.Header>
                         <Grid

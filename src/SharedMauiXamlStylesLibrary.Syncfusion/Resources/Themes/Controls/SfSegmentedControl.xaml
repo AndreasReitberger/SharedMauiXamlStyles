@@ -18,8 +18,19 @@
 
     <converters:BrushToBlackWhiteConverter x:Key="BrushToBlackWhiteConverter"/>
 
-    <!-- Docs: https://help.syncfusion.com/maui/segmented-control/overviews -->
+    <!-- Docs: https://help.syncfusion.com/maui/segmented-control/getting-started -->
     <Style x:Key="Style.Syncfusion.SfSegmentedControl.Default" TargetType="buttons:SfSegmentedControl">
+        <!--
+        <Setter Property="SegmentBackground" Value="Transparent" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
+        <Setter Property="SelectionIndicatorSettings">
+            <Setter.Value>
+                <buttons:SelectionIndicatorSettings
+                    Background="{DynamicResource PrimaryColor}"
+                    TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                    />
+            </Setter.Value>
+        </Setter>
         <Setter Property="TextStyle">
             <Setter.Value>
                 <buttons:SegmentTextStyle
@@ -29,23 +40,64 @@
                     />
             </Setter.Value>
         </Setter>
-        <!--
-            Causes exception => Operation is not valid due to the current state of the object.
-            TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"  
         -->
-        <Setter Property="SelectionIndicatorSettings">
-            <Setter.Value>
-                <buttons:SelectionIndicatorSettings
-                    Background="{DynamicResource PrimaryColor}"
-                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
-                    />
-            </Setter.Value>
-        </Setter>
-        
+        <Setter Property="SegmentBackground" Value="Transparent" />
         <Setter Property="StrokeThickness" Value="2" />
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
         <Setter Property="CornerRadius" Value="8" />
         <Setter Property="SegmentCornerRadius" Value="0" />
+        <Setter Property="DisabledSegmentTextColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray200}}" />
+        <Setter Property="DisabledSegmentBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <!--<VisualState x:Name="Normal" />-->
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="SelectionIndicatorSettings">
+                                <Setter.Value>
+                                    <buttons:SelectionIndicatorSettings
+                                        Background="{DynamicResource PrimaryColor}"
+                                        TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TextStyle">
+                                <Setter.Value>
+                                    <buttons:SegmentTextStyle
+                                        FontSize="{OnIdiom Phone=14, Default=18}"
+                                        FontFamily="{StaticResource MontserratBold}"
+                                        TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"   
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="SelectionIndicatorSettings">
+                                <Setter.Value>
+                                    <buttons:SelectionIndicatorSettings
+                                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}"
+                                        TextColor="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray200}}"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TextStyle">
+                                <Setter.Value>
+                                    <buttons:SegmentTextStyle
+                                        FontSize="{OnIdiom Phone=14, Default=18}"
+                                        FontFamily="{StaticResource MontserratBold}"
+                                        TextColor="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray100}}"   
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
 
     <Style x:Key="Style.Syncfusion.SfSegmentedControl.Printers" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
@@ -55,31 +107,84 @@
     </Style>
 
     <Style x:Key="Style.Syncfusion.SfSegmentedControl.Borderless" TargetType="buttons:SfSegmentedControl" BasedOn="{StaticResource Style.Syncfusion.SfSegmentedControl.Default}">
+        <!--
+        <Setter Property="SegmentBackground" Value="Transparent" />
+        <Setter Property="Stroke" Value="Transparent" />
         <Setter Property="TextStyle">
             <Setter.Value>
                 <buttons:SegmentTextStyle
-                    FontSize="{OnIdiom Phone=10, Default=14}"   
-                    FontFamily="{StaticResource MontserratBold}"
-                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"   
-                    />    
+                FontSize="{OnIdiom Phone=10, Default=14}"   
+                FontFamily="{StaticResource MontserratBold}"
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"   
+                />
             </Setter.Value>
         </Setter>
-        <!--
-            Causes exception => Operation is not valid due to the current state of the object.
-            TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"  
-        -->
         <Setter Property="SelectionIndicatorSettings">
             <Setter.Value>
                 <buttons:SelectionIndicatorSettings
-                    Background="{DynamicResource PrimaryColor}"
-                    TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
-                    SelectionIndicatorPlacement="Border"
-                    />
+                Background="{DynamicResource PrimaryColor}"
+                TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                SelectionIndicatorPlacement="Border"
+                />
             </Setter.Value>
         </Setter>
+        -->
+        <Setter Property="SegmentBackground" Value="Transparent" />
         <Setter Property="StrokeThickness" Value="0" />
         <Setter Property="SegmentWidth" Value="{OnIdiom Phone=32, Default=64}" />
         <Setter Property="CornerRadius" Value="{OnIdiom Phone=16, Default=32}" />
         <Setter Property="SegmentCornerRadius" Value="{OnIdiom Phone=16, Default=32}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <!--<VisualState x:Name="Normal" />-->
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="Transparent" />
+                            <Setter Property="TextStyle">
+                                <Setter.Value>
+                                    <buttons:SegmentTextStyle
+                                        FontSize="{OnIdiom Phone=10, Default=14}"   
+                                        FontFamily="{StaticResource MontserratBold}"
+                                        TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"   
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="SelectionIndicatorSettings">
+                                <Setter.Value>
+                                    <buttons:SelectionIndicatorSettings
+                                        Background="{DynamicResource PrimaryColor}"
+                                        TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                                        SelectionIndicatorPlacement="Border"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="SelectionIndicatorSettings">
+                                <Setter.Value>
+                                    <buttons:SelectionIndicatorSettings
+                                        Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}"
+                                        TextColor="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray200}}"
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TextStyle">
+                                <Setter.Value>
+                                    <buttons:SegmentTextStyle
+                                        FontSize="{OnIdiom Phone=14, Default=18}"
+                                        FontFamily="{StaticResource MontserratBold}"
+                                        TextColor="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray100}}"   
+                                        />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
 </ResourceDictionary>
