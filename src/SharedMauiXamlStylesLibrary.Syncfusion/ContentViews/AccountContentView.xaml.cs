@@ -1,14 +1,14 @@
 namespace AndreasReitberger.Shared.Syncfusion.ContentViews;
 
-public partial class AccountConventView : ContentView
+public partial class AccountContentView : ContentView
 {
     #region Bindings
 
-    public static readonly BindableProperty UsernameTextProperty = BindableProperty.Create(nameof(UsernameText), typeof(string), typeof(AccountConventView), string.Empty);
-    public static readonly BindableProperty UserImageProperty = BindableProperty.Create(nameof(UserImage), typeof(ImageSource), typeof(AccountConventView), null);
+    public static readonly BindableProperty UsernameTextProperty = BindableProperty.Create(nameof(UsernameText), typeof(string), typeof(AccountContentView), string.Empty);
+    public static readonly BindableProperty UserImageProperty = BindableProperty.Create(nameof(UserImage), typeof(ImageSource), typeof(AccountContentView), null);
 
-    public static readonly BindableProperty IsSyncingProperty = BindableProperty.Create(nameof(IsSyncing), typeof(bool), typeof(AccountConventView), false);
-    public static readonly BindableProperty IsSyncingTextProperty = BindableProperty.Create(nameof(IsSyncingText), typeof(string), typeof(AccountConventView), string.Empty);
+    public static readonly BindableProperty IsSyncingProperty = BindableProperty.Create(nameof(IsSyncing), typeof(bool), typeof(AccountContentView), false);
+    public static readonly BindableProperty IsSyncingTextProperty = BindableProperty.Create(nameof(IsSyncingText), typeof(string), typeof(AccountContentView), string.Empty);
 
     #endregion
 
@@ -37,7 +37,7 @@ public partial class AccountConventView : ContentView
 
     #endregion
 
-    public AccountConventView()
+    public AccountContentView()
     {
         InitializeComponent();
     }

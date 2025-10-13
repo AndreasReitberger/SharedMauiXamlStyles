@@ -84,11 +84,11 @@
 	  <Compile Update="ContentViews\SwipeDeleteView.xaml.cs">
 	    <DependentUpon>SwipeDeleteView.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="ContentViews\AccountConventView.xaml.cs">
-	    <DependentUpon>AccountConventView.xaml</DependentUpon>
+	  <Compile Update="ContentViews\AccountContentView.xaml.cs">
+	    <DependentUpon>AccountContentView.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="ContentViews\TitleViewAccountConventView.xaml.cs">
-	    <DependentUpon>%(Filename)</DependentUpon>
+	  <Compile Update="ContentViews\TitleViewAccountContentView.xaml.cs">
+	    <DependentUpon>TitleViewAccountContentView.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Themes\SharedConverters.xaml.cs">
 	    <SubType>Code</SubType>
@@ -148,10 +148,10 @@
 	  <MauiXaml Update="ContentViews\SwipeDeleteView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ContentViews\AccountConventView.xaml">
+	  <MauiXaml Update="ContentViews\AccountContentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ContentViews\TitleViewAccountConventView.xaml">
+	  <MauiXaml Update="ContentViews\TitleViewAccountContentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\Core\Button.xaml">

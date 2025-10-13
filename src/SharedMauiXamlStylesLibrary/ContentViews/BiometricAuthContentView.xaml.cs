@@ -3,21 +3,21 @@ using System.Windows.Input;
 
 namespace AndreasReitberger.Shared.ContentViews;
 
-public partial class BiometricAuthConventView : ContentView
+public partial class BiometricAuthContentView : ContentView
 {
     #region Bindings
 
-    public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(BiometricAuthConventView), "MaterialDesignIcons");
+    public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(BiometricAuthContentView), "MaterialDesignIcons");
 
-    public static readonly BindableProperty AuthButtonTextProperty = BindableProperty.Create(nameof(AuthButtonText), typeof(string), typeof(BiometricAuthConventView), string.Empty);
-    public static readonly BindableProperty AuthedProperty = BindableProperty.Create(nameof(Authed), typeof(bool), typeof(BiometricAuthConventView), false);
+    public static readonly BindableProperty AuthButtonTextProperty = BindableProperty.Create(nameof(AuthButtonText), typeof(string), typeof(BiometricAuthContentView), string.Empty);
+    public static readonly BindableProperty AuthedProperty = BindableProperty.Create(nameof(Authed), typeof(bool), typeof(BiometricAuthContentView), false);
 
-    public static readonly BindableProperty TitleLabelTextProperty = BindableProperty.Create(nameof(TitleLabelText), typeof(string), typeof(BiometricAuthConventView), null);
-    public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(BiometricAuthConventView), null);
+    public static readonly BindableProperty TitleLabelTextProperty = BindableProperty.Create(nameof(TitleLabelText), typeof(string), typeof(BiometricAuthContentView), null);
+    public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(BiometricAuthContentView), null);
 
-    public static readonly BindableProperty AuthButtonIconTextProperty = BindableProperty.Create(nameof(AuthButtonIconText), typeof(string), typeof(BiometricAuthConventView), MaterialIcons.Filter);
+    public static readonly BindableProperty AuthButtonIconTextProperty = BindableProperty.Create(nameof(AuthButtonIconText), typeof(string), typeof(BiometricAuthContentView), MaterialIcons.Filter);
 
-    public static readonly BindableProperty AuthButtonCommandProperty = BindableProperty.Create(nameof(AuthButtonCommand), typeof(ICommand), typeof(BiometricAuthConventView), null);
+    public static readonly BindableProperty AuthButtonCommandProperty = BindableProperty.Create(nameof(AuthButtonCommand), typeof(ICommand), typeof(BiometricAuthContentView), null);
 
     #endregion
 
@@ -62,7 +62,7 @@ public partial class BiometricAuthConventView : ContentView
     }
     #endregion
 
-    public BiometricAuthConventView()
+    public BiometricAuthContentView()
     {
         InitializeComponent();
     }

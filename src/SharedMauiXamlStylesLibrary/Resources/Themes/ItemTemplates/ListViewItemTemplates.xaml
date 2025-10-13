@@ -130,11 +130,11 @@
             ColumnDefinitions="48,*,50,50"
             RowDefinitions="{OnIdiom Tablet=80, Default=60}"
             >
-            <!-- Flag 
+            <!-- Flag -->
             <Image 
                 HeightRequest="24"                                          
                 Source="{Binding FlagUri, Converter={StaticResource UriToStringConverter}}"
-                />-->
+                />
             <!-- Infos -->
             <StackLayout
                 Grid.Column="1"

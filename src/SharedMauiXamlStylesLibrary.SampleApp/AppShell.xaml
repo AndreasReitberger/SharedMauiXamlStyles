@@ -94,6 +94,10 @@
         Route="TemplatePage" />
 
     <ShellContent
+        Title="Templates (Syncfusion)"
+        ContentTemplate="{DataTemplate views:SfTemplatePage}"
+        Route="SfTemplatePage" />
+    <ShellContent
         Title="Languages (Syncfusion)"
         ContentTemplate="{DataTemplate views:LanguagesPage}"
         Route="LanguagesPage" />

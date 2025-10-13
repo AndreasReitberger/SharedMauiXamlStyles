@@ -2,17 +2,15 @@
 <ContentView
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AndreasReitberger.Shared.ContentViews.BiometricAuthConventView"
+    x:Class="AndreasReitberger.Shared.ContentViews.BiometricAuthContentView"
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:BiometricAuthConventView">
+        <ControlTemplate x:DataType="conventViews:BiometricAuthContentView">
             <Grid
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
                 IsVisible="{Binding IsVisible}"
                 Background="{Binding Background}"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
                 RowDefinitions="*,Auto,*"
                 >
                 <VerticalStackLayout
