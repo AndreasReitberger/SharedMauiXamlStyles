@@ -94,6 +94,9 @@
 	  <Compile Update="Views\SfSignaturePadPage.xaml.cs">
 	    <DependentUpon>SfSignaturePadPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\SfTemplatePage.xaml.cs">
+	    <DependentUpon>SfTemplatePage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\TemplatePage.xaml.cs">
 	    <DependentUpon>TemplatePage.xaml</DependentUpon>
 	  </Compile>
@@ -197,6 +200,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfSignaturePadPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfTemplatePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TemplatePage.xaml">

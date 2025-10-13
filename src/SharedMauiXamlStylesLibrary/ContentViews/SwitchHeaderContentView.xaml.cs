@@ -3,23 +3,23 @@ using System.Windows.Input;
 
 namespace AndreasReitberger.Shared.ContentViews;
 
-public partial class SwitchHeaderConventView : ContentView
+public partial class SwitchHeaderContentView : ContentView
 {
     #region Bindings
 
-    public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SwitchHeaderConventView), "MaterialDesignIcons");
+    public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SwitchHeaderContentView), "MaterialDesignIcons");
 
-    public static readonly BindableProperty BackButtonTextProperty = BindableProperty.Create(nameof(BackButtonText), typeof(string), typeof(SwitchHeaderConventView), string.Empty);
-    public static readonly BindableProperty NextButtonTextProperty = BindableProperty.Create(nameof(NextButtonText), typeof(string), typeof(SwitchHeaderConventView), string.Empty);
+    public static readonly BindableProperty BackButtonTextProperty = BindableProperty.Create(nameof(BackButtonText), typeof(string), typeof(SwitchHeaderContentView), string.Empty);
+    public static readonly BindableProperty NextButtonTextProperty = BindableProperty.Create(nameof(NextButtonText), typeof(string), typeof(SwitchHeaderContentView), string.Empty);
 
-    public static readonly BindableProperty TitleLabelTextProperty = BindableProperty.Create(nameof(TitleLabelText), typeof(string), typeof(SwitchHeaderConventView), null);
-    public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(SwitchHeaderConventView), null);
+    public static readonly BindableProperty TitleLabelTextProperty = BindableProperty.Create(nameof(TitleLabelText), typeof(string), typeof(SwitchHeaderContentView), null);
+    public static readonly BindableProperty TitleLabelFormattedStringProperty = BindableProperty.Create(nameof(TitleLabelFormattedString), typeof(FormattedString), typeof(SwitchHeaderContentView), null);
 
-    public static readonly BindableProperty BackButtonIconTextProperty = BindableProperty.Create(nameof(BackButtonIconText), typeof(string), typeof(SwitchHeaderConventView), MaterialIcons.Filter);
-    public static readonly BindableProperty NextButtonIconTextProperty = BindableProperty.Create(nameof(NextButtonIconText), typeof(string), typeof(SwitchHeaderConventView), MaterialIcons.Sort);
+    public static readonly BindableProperty BackButtonIconTextProperty = BindableProperty.Create(nameof(BackButtonIconText), typeof(string), typeof(SwitchHeaderContentView), MaterialIcons.Filter);
+    public static readonly BindableProperty NextButtonIconTextProperty = BindableProperty.Create(nameof(NextButtonIconText), typeof(string), typeof(SwitchHeaderContentView), MaterialIcons.Sort);
 
-    public static readonly BindableProperty BackButtonCommandProperty = BindableProperty.Create(nameof(BackButtonCommand), typeof(ICommand), typeof(SwitchHeaderConventView), null);
-    public static readonly BindableProperty NextButtonCommandProperty = BindableProperty.Create(nameof(NextButtonCommand), typeof(ICommand), typeof(SwitchHeaderConventView), null);
+    public static readonly BindableProperty BackButtonCommandProperty = BindableProperty.Create(nameof(BackButtonCommand), typeof(ICommand), typeof(SwitchHeaderContentView), null);
+    public static readonly BindableProperty NextButtonCommandProperty = BindableProperty.Create(nameof(NextButtonCommand), typeof(ICommand), typeof(SwitchHeaderContentView), null);
 
     #endregion
 
@@ -74,7 +74,7 @@ public partial class SwitchHeaderConventView : ContentView
     }
     #endregion
 
-    public SwitchHeaderConventView()
+    public SwitchHeaderContentView()
     {
         InitializeComponent();
     }

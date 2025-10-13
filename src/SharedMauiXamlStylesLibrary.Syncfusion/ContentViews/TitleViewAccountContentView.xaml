@@ -2,7 +2,7 @@
 <ContentView
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AndreasReitberger.Shared.Syncfusion.ContentViews.TitleViewAccountConventView"
+    x:Class="AndreasReitberger.Shared.Syncfusion.ContentViews.TitleViewAccountContentView"
     
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
@@ -13,7 +13,7 @@
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="contentViews:TitleViewAccountConventView">
+        <ControlTemplate x:DataType="contentViews:TitleViewAccountContentView">
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"

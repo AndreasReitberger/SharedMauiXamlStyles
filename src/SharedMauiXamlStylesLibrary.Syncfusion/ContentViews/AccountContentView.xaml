@@ -2,17 +2,18 @@
 <ContentView
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AndreasReitberger.Shared.ContentViews.AccountConventView"
+    x:Class="AndreasReitberger.Shared.Syncfusion.ContentViews.AccountContentView"
     
-    xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.Syncfusion.ContentViews"
     >
     <ContentView.Resources>
         <shared:SharedConverters />
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:AccountConventView">
+        <ControlTemplate x:DataType="contentViews:AccountContentView">
             <Grid
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
@@ -20,13 +21,22 @@
                 IsEnabled="{Binding IsEnabled}"
                 Background="{Binding Background}"
                 HeightRequest="{Binding HeightRequest}"
-                ColumnDefinitions="*,Auto,Auto"
+                ColumnDefinitions="Auto,*,Auto"
                 >
+                <core:SfAvatarView
+                    Margin="0"
+                    HeightRequest="{Binding HeightRequest}"
+                    AvatarName="{Binding UsernameText}"
+                    ImageSource="{Binding UserImage}"
+                    Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
+                    Background="{Binding Background}"
+                    />
                 <ContentPresenter
                     IsVisible="{Binding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    Grid.Column="1"
                     />
                 <HorizontalStackLayout
-                    Grid.Column="1"
+                    Grid.Column="2"
                     IsVisible="{Binding IsSyncing}"
                     >
                     <ActivityIndicator
@@ -42,19 +52,6 @@
                         HorizontalTextAlignment="Start"
                         />
                 </HorizontalStackLayout>
-                <Border
-                    IsVisible="{Binding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"                   
-                    HeightRequest="{Binding HeightRequest}"
-                    WidthRequest="50"
-                    Grid.Column="2"
-                    Style="{StaticResource Style.Core.Border.Profile}"
-                    StrokeShape="RoundRectangle 25"
-                    >
-                    <Image             
-                        Source="{Binding UserImage}"
-                        Aspect="AspectFit"
-                        />
-                </Border>
             </Grid>
         </ControlTemplate>
     </ContentView.ControlTemplate>

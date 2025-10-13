@@ -2,17 +2,16 @@
 <ContentView
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AndreasReitberger.Shared.ContentViews.SwitchHeaderConventView"
+    x:Class="AndreasReitberger.Shared.ContentViews.SwitchHeaderContentView"
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:SwitchHeaderConventView">
+        <ControlTemplate x:DataType="conventViews:SwitchHeaderContentView">
             <Grid
                 x:Name="root"
                 BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
                 Background="{Binding Background}"
                 HeightRequest="{Binding HeightRequest}"
-                HorizontalOptions="FillAndExpand"
                 ColumnDefinitions="Auto,*,Auto"
                 >
                 <!--  Back Button  -->

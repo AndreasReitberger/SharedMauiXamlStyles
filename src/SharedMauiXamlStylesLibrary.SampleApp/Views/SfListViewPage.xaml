@@ -31,7 +31,7 @@
             <!-- 
                 IsFiltered="{Binding Source={RelativeSource AncestorType={x:Type controls:SearchableListView}}, Path=IsFiltered}"
             -->
-            <views:SortFilterHeaderConventView
+            <views:SortFilterHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 SortButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=SortCommand}"
                 SortButtonIconText="{x:Static icons:MaterialIcons.Sort}"
@@ -45,7 +45,7 @@
                 />
         </DataTemplate>
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchYear">
-            <views:SwitchHeaderConventView
+            <views:SwitchHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
                 BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
@@ -57,7 +57,7 @@
                 />
         </DataTemplate>
         <DataTemplate x:Key="DataTemplate.Syncfusion.Header.SwitchPage">
-            <views:SwitchHeaderConventView
+            <views:SwitchHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
                 BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
