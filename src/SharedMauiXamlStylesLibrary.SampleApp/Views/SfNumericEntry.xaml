@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfNumericEntry"
+    
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    
+    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+    
+    Title="SfNumericEntry"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:EntryPageViewModel"   
+    >
+    <ContentPage.Resources>
+        <converters:ColorToBlackWhiteConverter x:Key="ColorToBlackWhiteConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Margin="2,16"
+                Text="SfNumericEntry"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+
+            <editors:SfNumericEntry 
+                Margin="8,16"
+                Value="{Binding SampleValue}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Default}"
+                />
+
+            <editors:SfNumericEntry 
+                Margin="8,16"
+                Value="{Binding SampleValue}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Currency}"
+                />
+
+            <editors:SfNumericEntry 
+                Margin="8,16"
+                Value="{Binding SampleValue}"
+                Style="{StaticResource Style.Syncfusion.SfNumericEntry.Percent}"
+                />
+
+            <Label 
+                Margin="2,16"
+                Text="SfMaskedEntry"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Style.Core.Label.Default}"
+                />
+
+            <editors:SfMaskedEntry 
+                Margin="8,16"
+                Value="{Binding SampleText}"
+                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Default}"
+                />
+
+            <editors:SfMaskedEntry 
+                Margin="8,16"
+                Value="{Binding SampleText}"
+                Style="{StaticResource Style.Syncfusion.SfMaskedEntry.Transparent}"
+                />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

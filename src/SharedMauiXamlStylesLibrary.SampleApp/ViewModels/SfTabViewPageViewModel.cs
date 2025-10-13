@@ -2,22 +2,19 @@
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
-    public partial class AccordionsPageViewModel : BaseViewModel
+    public partial class SfTabViewPageViewModel : BaseViewModel
     {
 
         #region Properties
 
         [ObservableProperty]
-        public new partial double Progress { get; set; } = 0.50;
-
-        [ObservableProperty]
-        public partial double ProgressSecond { get; set; } = 0.75;
+        public partial string SampleText { get; set; } = "This is just a sample text";
 
         #endregion
 
         #region Constructor, LoadSettings
 
-        public AccordionsPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
+        public SfTabViewPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
             UpdateVersionBuild();

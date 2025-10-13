@@ -67,6 +67,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\SfNumericEntry.xaml.cs">
+	    <DependentUpon>SfNumericEntry.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\FontSizePage.xaml.cs">
 	    <DependentUpon>FontSizePage.xaml</DependentUpon>
 	  </Compile>
@@ -106,11 +109,11 @@
 	  <Compile Update="Views\SfCheckBoxesPage.xaml.cs">
 	    <DependentUpon>SfCheckBoxesPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\ComboBoxesPage.xaml.cs">
-	    <DependentUpon>ComboBoxesPage.xaml</DependentUpon>
+	  <Compile Update="Views\SfComboBoxesPage.xaml.cs">
+	    <DependentUpon>SfComboBoxesPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\AccordionsPage.xaml.cs">
-	    <DependentUpon>AccordionsPage.xaml</DependentUpon>
+	  <Compile Update="Views\SfAccordionsPage.xaml.cs">
+	    <DependentUpon>SfAccordionsPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\EditorsPage.xaml.cs">
 	    <DependentUpon>EditorsPage.xaml</DependentUpon>
@@ -148,11 +151,11 @@
 	  <Compile Update="Views\SfListViewPage.xaml.cs">
 	    <DependentUpon>SfListViewPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\TextInputLayoutsPage.xaml.cs">
-	    <DependentUpon>TextInputLayoutsPage.xaml</DependentUpon>
+	  <Compile Update="Views\SfTextInputLayoutsPage.xaml.cs">
+	    <DependentUpon>SfTextInputLayoutsPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\TabViewPage.xaml.cs">
-	    <DependentUpon>TabViewPage.xaml</DependentUpon>
+	  <Compile Update="Views\SfTabViewPage.xaml.cs">
+	    <DependentUpon>SfTabViewPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\ButtonsPage.xaml.cs">
 	    <DependentUpon>ButtonsPage.xaml</DependentUpon>
@@ -167,6 +170,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SfNumericEntry.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\FontSizePage.xaml">
@@ -208,10 +214,10 @@
 	  <MauiXaml Update="Views\SfCheckBoxesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ComboBoxesPage.xaml">
+	  <MauiXaml Update="Views\SfComboBoxesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\AccordionsPage.xaml">
+	  <MauiXaml Update="Views\SfAccordionsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EditorsPage.xaml">
@@ -247,10 +253,10 @@
 	  <MauiXaml Update="Views\SfListViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TextInputLayoutsPage.xaml">
+	  <MauiXaml Update="Views\SfTextInputLayoutsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TabViewPage.xaml">
+	  <MauiXaml Update="Views\SfTabViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ButtonsPage.xaml">

@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.ComboBoxesPage"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.SfComboBoxesPage"
     
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     
@@ -13,7 +13,7 @@
     
     Title="ComboBoxesPage"
     Style="{StaticResource Style.Core.ContentPage.Default}"
-    x:DataType="viewModels:ComboBoxesPageViewModel"   
+    x:DataType="viewModels:SfComboBoxesPageViewModel"   
     >
     <ScrollView>
         <VerticalStackLayout>

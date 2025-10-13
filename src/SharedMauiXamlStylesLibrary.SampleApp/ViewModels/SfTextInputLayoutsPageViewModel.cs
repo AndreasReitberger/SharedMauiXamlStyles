@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 {
-    public partial class TextInputLayoutsPageViewModel : BaseViewModel
+    public partial class SfTextInputLayoutsPageViewModel : BaseViewModel
     {
 
         #region Properties
@@ -23,7 +23,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         #region Constructor, LoadSettings
 
-        public TextInputLayoutsPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
+        public SfTextInputLayoutsPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
             UpdateVersionBuild();
