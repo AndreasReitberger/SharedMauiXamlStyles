@@ -18,6 +18,18 @@
     <ScrollView>
         <VerticalStackLayout>
 
+            <Grid
+                ColumnDefinitions="*,Auto"
+                >
+                <Label
+                    Margin="16,8"
+                    Text="Switch enable state"
+                    />
+                <Switch
+                    Grid.Column="1"
+                    IsToggled="{Binding Enabled}"
+                    />
+            </Grid>
             <Label 
                 Margin="2,16"
                 Text="This is a default SfAutocomplete"
@@ -27,6 +39,7 @@
                 />
 
             <inputs:SfAutocomplete
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.SfAutocomplete.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
@@ -34,6 +47,7 @@
                 />
 
             <controls:MultiSelectAutoComplete
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.MultiSelectAutoComplete.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
@@ -47,8 +61,17 @@
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
-            
+
+
             <inputs:SfComboBox
+                IsEnabled="{Binding Enabled}"
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding SelectedItem}"
+                Margin="8"
+                />
+
+            <inputs:SfComboBox
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.SfComboBox.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"
@@ -56,6 +79,7 @@
                 />
             
             <controls:MultiSelectComboBox
+                IsEnabled="{Binding Enabled}"
                 Style="{StaticResource Style.Syncfusion.MultiSelectComboBox.Default}"
                 ItemsSource="{Binding Items}"
                 SelectedItem="{Binding SelectedItem}"

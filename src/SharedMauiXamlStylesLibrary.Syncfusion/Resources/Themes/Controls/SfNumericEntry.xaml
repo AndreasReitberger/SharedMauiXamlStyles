@@ -27,20 +27,23 @@
         <Setter Property="IsEditable" Value="True" />
         <Setter Property="ShowClearButton" Value="True" />
         <Setter Property="UpDownPlacementMode" Value="Inline" />
+        <Setter Property="ShowBorder" Value="False" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray800}}" />
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Focused" />
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -58,25 +61,29 @@
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
                             <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Focused">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
                             <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="PointOver">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
                             <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Selected" />
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>

@@ -21,16 +21,108 @@
                 </RowDefinitionCollection>
             </Setter.Value>
         </Setter>
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
         <Setter Property="IsAnimated" Value="False"/>
         <Setter Property="ColumnSpacing" Value="0"/>
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
-        <Style.Triggers>
-            <Trigger Property="IsEnabled" Value="False" TargetType="control:TapAnimationGrid">
-                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
-            </Trigger>
-        </Style.Triggers>
     </Style>
-    
+    <Style x:Key="Style.Core.TapAnimationGrid.Settings" TargetType="control:TapAnimationGrid" BasedOn="{StaticResource Style.Core.TapAnimationGrid.Default}">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+    </Style>
+    <!--  Common style for WarningGrid  -->
+    <Style x:Key="Style.Core.TapAnimationGrid.Warning" TargetType="control:TapAnimationGrid" BasedOn="{StaticResource Style.Core.TapAnimationGrid.Default}">
+        <Setter Property="Background" Value="{StaticResource Yellow}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource Yellow}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                    <!--
+                    <VisualState x:Name="PointerOver" >
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource Yellow100Accent}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    -->
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <!--  Common style for ErrorGrid  -->
+    <Style x:Key="Style.Core.TapAnimationGrid.Critical" TargetType="control:TapAnimationGrid" BasedOn="{StaticResource Style.Core.TapAnimationGrid.Default}">
+        <Setter Property="Background" Value="{StaticResource Red}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource Red}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                    <!--
+                    <VisualState x:Name="PointerOver" >
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource DarkRed}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    -->
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <!--  Common style for SettingsGrid  -->
+    <Style x:Key="Style.Core.TapAnimationGrid.Panel" TargetType="control:TapAnimationGrid" BasedOn="{StaticResource Style.Core.TapAnimationGrid.Default}">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
     <!--  Common style for SettingsGrid  -->
     <Style x:Key="Style.Core.Grid.Default" TargetType="Grid">
         <Setter Property="RowSpacing" Value="0"/>
@@ -43,28 +135,93 @@
             </Setter.Value>
         </Setter>
         <Setter Property="ColumnSpacing" Value="0"/>
-        <Style.Triggers>
-            <Trigger Property="IsEnabled" Value="False" TargetType="Grid">
-                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
-            </Trigger>
-        </Style.Triggers>
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="Transparent" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
-
     <Style x:Key="Style.Core.Grid.Settings" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
     </Style>
     <!--  Common style for WarningGrid  -->
     <Style x:Key="Style.Core.Grid.Warning" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="Background" Value="{StaticResource Yellow}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource Yellow}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
     <!--  Common style for ErrorGrid  -->
-    <Style x:Key="Style.Core.Grid.CriticalError" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
+    <Style x:Key="Style.Core.Grid.Critical" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="Background" Value="{StaticResource Red}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{StaticResource Red}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
+    <Style x:Key="Style.Core.Grid.CriticalError" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Critical}" />
     <!--  Common style for SettingsGrid  -->
     <Style x:Key="Style.Core.Grid.Panel" TargetType="Grid" BasedOn="{StaticResource Style.Core.Grid.Default}">
         <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
+    
     <!--  Common style for ModalGrid  -->
     <Style x:Key="Style.Core.Grid.Panel.Modal" TargetType="Grid">
         <!--<Setter Property="CompressedLayout.IsHeadless" Value="true" />-->
@@ -83,6 +240,23 @@
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="Padding" Value="0" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="Transparent" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
     
     <Style x:Key="Style.Core.Grid.ListItem" TargetType="Grid">
@@ -93,12 +267,13 @@
                     <VisualState x:Name="Normal" />
                     <VisualState x:Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray500}}" />
+                            <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />-->
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="PointerOver" />
