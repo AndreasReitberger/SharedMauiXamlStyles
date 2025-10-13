@@ -1,4 +1,5 @@
 ﻿using AndreasReitberger.Shared.Core;
+using AndreasReitberger.Shared.Core.Interfaces;
 using CommunityToolkit.Maui.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -24,6 +25,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         [ObservableProperty]
         public partial bool LicenseActivationShown { get; set; } = false;
+
+        [ObservableProperty]
+        public partial ILocalizationManager? LocalizationManager { get; set; }
+
         #endregion
 
         #region Navigation
@@ -87,6 +92,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Constructor
         public BaseViewModel(IDispatcher dispatcher, IServiceProvider? provider) : base(dispatcher, provider)
         {
+            InitializeLocalizeManager();
             Dispatcher = dispatcher;
             Provider = provider;
 
@@ -94,13 +100,22 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         }
         public BaseViewModel(IDispatcher dispatcher, IServiceProvider? provider, IFileSaver? fileSaver) : base(dispatcher, provider, fileSaver)
         {
+            InitializeLocalizeManager();
             Dispatcher = dispatcher;
             Provider = provider;
             FileSaver = fileSaver;
 
             UpdateVersionBuild();
         }
-
+        protected void InitializeLocalizeManager()
+        {
+            LocalizationManager = Provider?.GetServices<ILocalizationManager>().First();
+            if (LocalizationManager is not null)
+            {
+                //LocalizationManager.LanguageChanged += LocalizationManager_LanguageChanged;
+                //CurrentLanguage = LocalizationManager.CurrentLanguage;
+            }
+        }
         #endregion
 
         #region Destructor

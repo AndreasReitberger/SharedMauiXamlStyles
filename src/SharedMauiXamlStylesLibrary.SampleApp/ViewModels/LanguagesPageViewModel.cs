@@ -15,11 +15,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         public partial LocalizationInfo Language { get; set; }
 
         [ObservableProperty]
-        public partial ObservableCollection<LocalizationInfo> Languages { get; set; } = [
-            new() { Name = "German", Code = "de-DE", Translator = "Andreas", PercentTranslated = 100, IsOfficial = true },
-            new() { Name = "English", Code = "en-US", Translator = "Andreas", PercentTranslated = 75, IsOfficial = true },
-            new() { Name = "Italian", Code = "it-IT", Translator = "Some other guy", PercentTranslated = 50, IsOfficial = false },
-        ];
+        public partial ObservableCollection<LocalizationInfo> Languages { get; set; } = [];
 
         [ObservableProperty]
         public partial int Index { get; set; } = 0;
@@ -32,6 +28,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         {
             Dispatcher = dispatcher;
             UpdateVersionBuild();
+
+            Languages = [.. LocalizationManager?.Languages];
         }
 
         #endregion

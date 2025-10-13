@@ -1,6 +1,8 @@
 ﻿#if WINDOWS
 using Microsoft.Maui.Handlers;
 #endif
+using AndreasReitberger.Shared.Core.Hosting;
+using AndreasReitberger.Shared.Core.Localization;
 using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 using SharedMauiXamlStylesLibrary.SampleApp.Views;
 
@@ -17,6 +19,14 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
                 .RegisterDispatcher()
                 .RegisterMainViewModels()
                 .RegisterMainViews()
+                .ConfigureLocalizationManager([
+                    //https://www.fincher.org/Utilities/CountryLanguageList.shtml
+                    new("English", "English", LocalizationManager.GetImageUri("", "en-us"), "Andreas", "en-US", 100, true),
+                    new("German", "Deutsch", LocalizationManager.GetImageUri("", "de-de"), "Andreas", "de-DE", 100, true),
+                    new("Spanish", "Español", LocalizationManager.GetImageUri("", "es-es"), "", "es-ES", 0, false),
+                    new("Portuguese", "Português", LocalizationManager.GetImageUri("", "pt-pt"), "", "pt-PT", 0, false),
+                    new("Brazilian", "Brasileira", LocalizationManager.GetImageUri("", "pt-br"), "", "pt-BR", 0, false),
+                ], "")
                 ;
 
             ConfigureMappers();
@@ -97,6 +107,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfSignaturePadPage>();
             builder.Services.AddSingleton<SfTreeMapPadPage>();
             builder.Services.AddSingleton<SfTabViewPage>();
+            builder.Services.AddSingleton<SfTemplatePage>();
             builder.Services.AddSingleton<SfListViewPage>();
             builder.Services.AddSingleton<SfProgressBarPage>();
             builder.Services.AddSingleton<SfStepProgressBar>();
