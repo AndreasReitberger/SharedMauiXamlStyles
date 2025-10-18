@@ -24,7 +24,14 @@
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="Stroke" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="DropDownStroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
-        <Setter Property="SelectedDropDownItemBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
+        <Setter Property="SelectedDropDownItemBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray850}}" />
+        <Setter Property="SelectedDropDownItemTextStyle">
+            <inputs:DropDownTextStyle
+                TextColor="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray100}}"
+                FontFamily="{StaticResource MontserratRegular}"
+                FontSize="{StaticResource DefaultTextSize}" 
+                />
+        </Setter>
         <Setter Property="ShowBorder" Value="False" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

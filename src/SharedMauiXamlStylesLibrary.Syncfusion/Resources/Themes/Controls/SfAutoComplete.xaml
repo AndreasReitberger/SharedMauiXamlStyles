@@ -18,14 +18,20 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Syncfusion.SfAutocomplete.Default" TargetType="inputs:SfAutocomplete">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="DropDownStroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="SelectedDropDownItemBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
-        <!-- Seems to cause a crash -->
-        <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
+        <Setter Property="SelectedDropDownItemTextStyle">
+            <inputs:DropDownTextStyle
+                TextColor="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray100}}"
+                FontFamily="{StaticResource MontserratRegular}"
+                FontSize="{StaticResource DefaultTextSize}" 
+                />
+        </Setter>
         <Setter Property="Margin" Value="4,2"/>
         <Setter Property="ShowBorder" Value="False"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -53,6 +59,56 @@
     </Style>
 
     <Style TargetType="inputs:SfAutocomplete" BasedOn="{StaticResource Style.Syncfusion.SfAutocomplete.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.SfAutocomplete.Transparent" TargetType="inputs:SfAutocomplete" BasedOn="{StaticResource Style.Syncfusion.SfAutocomplete.Default}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointOver">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="DropDownBackground" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=Background}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
 
     <Style x:Key="Style.Syncfusion.MultiSelectAutoComplete.Default" TargetType="controls:MultiSelectAutoComplete">
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
@@ -88,5 +144,54 @@
     </Style>
 
     <Style TargetType="controls:MultiSelectAutoComplete" BasedOn="{StaticResource Style.Syncfusion.MultiSelectAutoComplete.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.MultiSelectAutoComplete.Transparent" TargetType="controls:MultiSelectAutoComplete" BasedOn="{StaticResource Style.Syncfusion.MultiSelectAutoComplete.Default}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointOver">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfAutocomplete', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="DropDownBackground" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray500}}" />
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="DropDownItemTextColor" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=TextColor}" />
+                            <Setter Property="DropDownBackground" Value="{Binding x:DataType='inputs:SfComboBox', Source={RelativeSource Self}, Path=Background}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>
