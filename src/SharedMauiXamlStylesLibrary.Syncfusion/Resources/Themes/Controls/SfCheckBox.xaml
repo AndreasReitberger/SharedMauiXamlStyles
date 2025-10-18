@@ -23,9 +23,13 @@
     <Style x:Key="Style.Syncfusion.SfCheckBox.Default" TargetType="buttons:SfCheckBox">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
+        <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
+                    <!--
+                    <VisualState x:Name="Normal" />
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
@@ -33,24 +37,20 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
                         </VisualState.Setters>
                     </VisualState>
+                    -->
                     <VisualState x:Name="Checked">
                         <VisualState.Setters>
                             <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Unchecked">
                         <VisualState.Setters>
                             <Setter Property="UncheckedColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
-                            <Setter Property="CheckedColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Intermediate">
                         <VisualState.Setters>
-                            <Setter Property="UncheckedColor" Value="{AppThemeBinding Light={StaticResource Light_Error}, Dark={StaticResource Dark_Error}}"/>
-                            <Setter Property="CheckedColor" Value="{AppThemeBinding Light={StaticResource Light_Error}, Dark={StaticResource Dark_Error}}"/>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Light_Error}, Dark={StaticResource Dark_Error}}"/>
+                            <Setter Property="CheckedColor" Value="{DynamicResource PrimaryColor}"/>
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
@@ -60,7 +60,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray400}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
