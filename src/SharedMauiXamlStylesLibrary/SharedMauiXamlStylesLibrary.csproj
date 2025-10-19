@@ -136,6 +136,9 @@
 	  <MauiXaml Update="Resources\Themes\Controls\CollectionView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\TitleBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\SharedConverters.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
