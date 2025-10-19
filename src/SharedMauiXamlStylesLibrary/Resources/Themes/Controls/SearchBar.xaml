@@ -11,20 +11,17 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.SearchBar.Default" TargetType="SearchBar">
+        <Setter Property="Margin" Value="4,8" />
+        <Setter Property="MaximumWidthRequest" Value="{OnIdiom Desktop=450, Default=300}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
-        <Setter Property="CancelButtonColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+        <Setter Property="CancelButtonColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-                            <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray800}}" />
-                        </VisualState.Setters>
-                    </VisualState>
+                    <VisualState x:Name="Normal" />
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />

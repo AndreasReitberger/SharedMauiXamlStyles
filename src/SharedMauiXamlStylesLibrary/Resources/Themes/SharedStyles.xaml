@@ -37,5 +37,6 @@
         <ResourceDictionary Source="/Resources/Themes/Controls/SwipeItem.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/Switch.xaml" />
         <ResourceDictionary Source="/Resources/Themes/Controls/TimePicker.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/TitleBar.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
