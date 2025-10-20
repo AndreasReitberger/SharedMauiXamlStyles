@@ -20,8 +20,9 @@
     <Style x:Key="Style.Syncfusion.SfAutocomplete.Default" TargetType="inputs:SfAutocomplete">
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
-        <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="IsClearButtonVisible" Value="True" />
+        <Setter Property="ClearButtonIconColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="SelectionTextHighlightColor" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="DropDownStroke" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
         <Setter Property="SelectedDropDownItemBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />

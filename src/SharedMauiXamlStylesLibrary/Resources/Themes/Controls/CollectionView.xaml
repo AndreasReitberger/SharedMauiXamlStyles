@@ -29,7 +29,6 @@
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--<VisualState x:Name="PointerOver" />-->             
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -55,7 +54,6 @@
                             <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <VisualState x:Name="PointerOver" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>

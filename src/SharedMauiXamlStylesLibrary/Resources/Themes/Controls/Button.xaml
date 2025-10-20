@@ -50,10 +50,6 @@
                             <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -81,9 +77,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!---->
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -128,7 +121,6 @@
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="PointerOver" />
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="Opacity" Value="1" />
@@ -173,9 +165,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!---->
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -203,10 +192,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -242,10 +227,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -273,10 +254,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -408,10 +385,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -440,10 +413,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -482,10 +451,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -518,10 +483,6 @@
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
-                    <!--
-                    <VisualState x:Name="Focused" />
-                    <VisualState x:Name="Selected" />
-                    -->
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
