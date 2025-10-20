@@ -13,6 +13,7 @@
     <Style x:Key="Style.Core.SearchBar.Default" TargetType="SearchBar">
         <Setter Property="Margin" Value="4,8" />
         <Setter Property="MaximumWidthRequest" Value="{OnIdiom Desktop=450, Default=300}" />
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
         <Setter Property="CancelButtonColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
