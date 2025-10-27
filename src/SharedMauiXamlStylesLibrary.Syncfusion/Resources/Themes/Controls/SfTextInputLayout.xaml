@@ -100,16 +100,16 @@
         <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
     </Style>
 
-    <Style x:Key="Style.Syncfusion.Entry.SfTextInputLayout" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Default}">
-        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
-    </Style>
-
-    <Style x:Key="Style.Syncfusion.BorderlessEntry.SfTextInputLayout" TargetType="controls:BorderlessEntry" BasedOn="{StaticResource Style.Core.BorderlessEntry.Default}">
-        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
-    </Style>
-
     <Style x:Key="Style.Syncfusion.DatePicker.SfTextInputLayout" TargetType="DatePicker" BasedOn="{StaticResource Style.Core.DatePicker.Default}">
         <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+    
+    <Style x:Key="Style.Syncfusion.Entry.SfTextInputLayout" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Transparent}">
+        <!--<Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />-->
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.BorderlessEntry.SfTextInputLayout" TargetType="controls:BorderlessEntry" BasedOn="{StaticResource Style.Core.BorderlessEntry.Transparent}">
+        <!--<Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />-->
     </Style>
 
 </ResourceDictionary>
