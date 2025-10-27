@@ -2,7 +2,7 @@
 <Project>
 	<Import Project="framework.maui.props" />
     <PropertyGroup>
-        <Version>1.2.20</Version>
+        <Version>1.2.21</Version>
         <PackageIcon>ar_128.png</PackageIcon>
         <NeutralLanguage>en</NeutralLanguage>
         <PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
