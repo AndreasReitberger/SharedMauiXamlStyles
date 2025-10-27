@@ -167,6 +167,24 @@
             <On Platform="Default">10</On>
         </OnPlatform.Platforms>
     </OnPlatform>
+    <OnPlatform x:Key="SmallIconSize" x:TypeArguments="x:Double">
+        <OnPlatform.Platforms>
+            <On Platform="Android">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>14</OnIdiom.Tablet>
+                    <OnIdiom.Default>13</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="iOS">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>14</OnIdiom.Tablet>
+                    <OnIdiom.Default>13</OnIdiom.Default>
+                </OnIdiom>
+            </On>
+            <On Platform="WinUI">16</On>
+            <On Platform="Default">13</On>
+        </OnPlatform.Platforms>
+    </OnPlatform>
     <OnPlatform x:Key="MicroTextSize" x:TypeArguments="x:Double">
         <OnPlatform.Platforms>
             <On Platform="Android">

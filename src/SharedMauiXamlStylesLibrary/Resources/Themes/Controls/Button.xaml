@@ -260,7 +260,13 @@
     </Style>
 
     <Style x:Key="Style.Core.Button.IconSmall.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
-        <Setter Property="FontSize" Value="{StaticResource SmallTextSize}" />
+        <Setter Property="FontSize" Value="{StaticResource SmallIconSize}" />
+        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
+        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
+    </Style>
+
+    <Style x:Key="Style.Core.Button.IconSmall.Transparent.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Transparent.MaterialDesign}">
+        <Setter Property="FontSize" Value="{StaticResource SmallIconSize}" />
         <Setter Property="HeightRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
     </Style>
