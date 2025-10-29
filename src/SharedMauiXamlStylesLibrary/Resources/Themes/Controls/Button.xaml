@@ -20,10 +20,6 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.Button.Default" TargetType="Button">
-        <!-- Set Background before setting the TextColor due to the Converter 
-        <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="TextColor" Value="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-        -->
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
         <Setter Property="MinimumHeightRequest" Value="50" />
@@ -62,18 +58,16 @@
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="PointerOver" >
                         <VisualState.Setters>
-                            <Setter Property="Background" Value="Transparent"/>
-                            <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray850}, Dark={StaticResource Gray200}}" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="Background" Value="Transparent"/>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
                         </VisualState.Setters>
                     </VisualState>
