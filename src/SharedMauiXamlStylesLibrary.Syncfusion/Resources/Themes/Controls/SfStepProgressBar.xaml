@@ -25,12 +25,59 @@
                 Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray400}}" 
                 ProgressColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray400}}" 
                 ContentType="Dot" 
+                ShapeType="Circle" 
+                ContentFillColor="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray900}}">
+                <progressBar:StepSettings.TextStyle>
+                    <progressBar:StepTextStyle 
+                        FontFamily="{StaticResource MontserratBold}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        />
+                </progressBar:StepSettings.TextStyle>
+            </progressBar:StepSettings>
+        </Setter>
+        <Setter Property="CompletedStepSettings">
+            <progressBar:StepSettings
+                Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray600}}" 
+                ProgressColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray600}}" 
+                ContentType="Tick" 
+                ShapeType="Circle" 
+                ContentFillColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}">
+                <progressBar:StepSettings.TextStyle>
+                    <progressBar:StepTextStyle 
+                        FontFamily="{StaticResource MontserratBold}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        />
+                </progressBar:StepSettings.TextStyle>
+            </progressBar:StepSettings>
+        </Setter>
+        <Setter Property="NotStartedStepSettings">
+            <progressBar:StepSettings
+                Background="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray200}}" 
+                ProgressColor="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray200}}" 
+                ContentType="Cross" 
+                ShapeType="Circle" 
+                ContentFillColor="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray800}}">
+                <progressBar:StepSettings.TextStyle>
+                    <progressBar:StepTextStyle 
+                        FontFamily="{StaticResource MontserratBold}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        />
+                </progressBar:StepSettings.TextStyle>
+            </progressBar:StepSettings>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfStepProgressBar.Square" TargetType="progressBar:SfStepProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfStepProgressBar.Default}">
+        <Setter Property="InProgressStepSettings">
+            <progressBar:StepSettings
+                Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray400}}" 
+                ProgressColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray400}}" 
+                ContentType="Dot" 
                 ShapeType="Square" 
                 ContentFillColor="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray900}}">
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle 
                         FontFamily="{StaticResource MontserratBold}"
-                        FontAttributes="Bold"
                         TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
                         />
                 </progressBar:StepSettings.TextStyle>
@@ -46,7 +93,6 @@
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle 
                         FontFamily="{StaticResource MontserratBold}"
-                        FontAttributes="Bold"
                         TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
                         />
                 </progressBar:StepSettings.TextStyle>
@@ -62,8 +108,58 @@
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle 
                         FontFamily="{StaticResource MontserratBold}"
-                        FontAttributes="Bold"
                         TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        />
+                </progressBar:StepSettings.TextStyle>
+            </progressBar:StepSettings>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.SfStepProgressBar.Minimalistic" TargetType="progressBar:SfStepProgressBar" BasedOn="{StaticResource Style.Syncfusion.SfStepProgressBar.Default}">
+        <Setter Property="InProgressStepSettings">
+            <progressBar:StepSettings
+                Background="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray400}}" 
+                ProgressColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray400}}" 
+                ContentType="None" 
+                ShapeType="Circle" 
+                ContentFillColor="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray900}}">
+                <progressBar:StepSettings.TextStyle>
+                    <progressBar:StepTextStyle 
+                        FontFamily="{StaticResource MontserratRegular}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        FontSize="{StaticResource SmallTextSize}"
+                        />
+                </progressBar:StepSettings.TextStyle>
+            </progressBar:StepSettings>
+        </Setter>
+        <Setter Property="CompletedStepSettings">
+            <progressBar:StepSettings
+                Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray600}}" 
+                ProgressColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray600}}" 
+                ContentType="Tick" 
+                ShapeType="Circle" 
+                ContentFillColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}">
+                <progressBar:StepSettings.TextStyle>
+                    <progressBar:StepTextStyle 
+                        FontFamily="{StaticResource MontserratRegular}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        FontSize="{StaticResource SmallTextSize}"
+                        />
+                </progressBar:StepSettings.TextStyle>
+            </progressBar:StepSettings>
+        </Setter>
+        <Setter Property="NotStartedStepSettings">
+            <progressBar:StepSettings
+                Background="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray200}}" 
+                ProgressColor="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray200}}" 
+                ContentType="None" 
+                ShapeType="Circle" 
+                ContentFillColor="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray800}}">
+                <progressBar:StepSettings.TextStyle>
+                    <progressBar:StepTextStyle 
+                        FontFamily="{StaticResource MontserratRegular}"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                        FontSize="{StaticResource SmallTextSize}"
                         />
                 </progressBar:StepSettings.TextStyle>
             </progressBar:StepSettings>
@@ -83,7 +179,6 @@
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle 
                          FontFamily="{StaticResource MontserratBold}"
-                         FontAttributes="Bold"
                          TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
                          />
                 </progressBar:StepSettings.TextStyle>
@@ -100,7 +195,6 @@
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle 
                         FontFamily="{StaticResource MontserratBold}"
-                        FontAttributes="Bold"
                         TextColor="{AppThemeBinding Light={StaticResource LightGreen}, Dark={StaticResource Green}}"
                         />
                 </progressBar:StepSettings.TextStyle>
@@ -116,7 +210,6 @@
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle 
                         FontFamily="{StaticResource MontserratBold}"
-                        FontAttributes="Bold"
                         TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
                         />
                 </progressBar:StepSettings.TextStyle>
