@@ -171,8 +171,8 @@
         <OnPlatform.Platforms>
             <On Platform="Android">
                 <OnIdiom x:TypeArguments="x:Double">
-                    <OnIdiom.Tablet>14</OnIdiom.Tablet>
-                    <OnIdiom.Default>13</OnIdiom.Default>
+                    <OnIdiom.Tablet>15</OnIdiom.Tablet>
+                    <OnIdiom.Default>14</OnIdiom.Default>
                 </OnIdiom>
             </On>
             <On Platform="iOS">
