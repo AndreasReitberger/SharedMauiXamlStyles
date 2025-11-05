@@ -3,33 +3,35 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.Syncfusion.ContentViews.AccountContentView"
+    x:Name="mainView"
     
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
     xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.Syncfusion.ContentViews"
+    x:DataType="contentViews:AccountContentView"
     >
     <ContentView.Resources>
         <shared:SharedConverters />
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="contentViews:AccountContentView">
+        <ControlTemplate>
             <Grid
+                BindingContext="{x:Reference mainView}"
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
-                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                IsVisible="{Binding IsVisible}"
-                IsEnabled="{Binding IsEnabled}"
-                Background="{Binding Background}"
-                HeightRequest="{Binding HeightRequest}"
+                IsVisible="{TemplateBinding IsVisible}"
+                IsEnabled="{TemplateBinding IsEnabled}"
+                Background="{TemplateBinding Background}"
+                HeightRequest="{TemplateBinding HeightRequest}"
                 ColumnDefinitions="Auto,*,Auto"
                 >
                 <core:SfAvatarView
                     Margin="0"
-                    HeightRequest="{Binding HeightRequest}"
+                    HeightRequest="{TemplateBinding HeightRequest}"
                     AvatarName="{Binding UsernameText}"
                     ImageSource="{Binding UserImage}"
                     Style="{StaticResource Style.Syncfusion.SfAvatarView.Initials}"
-                    Background="{Binding Background}"
+                    Background="{TemplateBinding Background}"
                     />
                 <ContentPresenter
                     IsVisible="{Binding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"

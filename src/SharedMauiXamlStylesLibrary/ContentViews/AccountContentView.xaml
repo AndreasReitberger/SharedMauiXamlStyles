@@ -3,22 +3,24 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.AccountContentView"
+    x:Name="mainView"
     
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    x:DataType="conventViews:AccountContentView"
     >
     <ContentView.Resources>
         <shared:SharedConverters />
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:AccountContentView">
+        <ControlTemplate>
             <Grid
-                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                IsVisible="{Binding IsVisible}"
-                IsEnabled="{Binding IsEnabled}"
-                Background="{Binding Background}"
-                HeightRequest="{Binding HeightRequest}"
+                BindingContext="{x:Reference mainView}"
+                IsVisible="{TemplateBinding IsVisible}"
+                IsEnabled="{TemplateBinding IsEnabled}"
+                Background="{TemplateBinding Background}"
+                HeightRequest="{TemplateBinding HeightRequest}"
                 ColumnDefinitions="*,Auto,Auto"
                 >
                 <Grid.Style>
@@ -53,12 +55,12 @@
                 <Border
                     Margin="0"
                     IsVisible="{Binding IsSyncing, Converter={StaticResource BooleanReverseVisibilityConverter}}"                   
-                    HeightRequest="{Binding HeightRequest}"
-                    WidthRequest="{Binding HeightRequest}"
+                    HeightRequest="{TemplateBinding HeightRequest}"
+                    WidthRequest="{TemplateBinding HeightRequest}"
                     Grid.Column="2"
                     Style="{StaticResource Style.Core.Border.Profile}"
                     StrokeShape="RoundRectangle 25"
-                    Background="{Binding Background}"
+                    Background="{TemplateBinding Background}"
                     >
                     <Image             
                         Source="{Binding UserImage}"

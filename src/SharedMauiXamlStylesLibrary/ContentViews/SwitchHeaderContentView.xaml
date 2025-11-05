@@ -3,15 +3,18 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.SwitchHeaderContentView"
+    x:Name="mainView"
+    
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
+    x:DataType="conventViews:SwitchHeaderContentView"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:SwitchHeaderContentView">
+        <ControlTemplate>
             <Grid
                 x:Name="root"
-                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                Background="{Binding Background}"
-                HeightRequest="{Binding HeightRequest}"
+                BindingContext="{x:Reference mainView}"
+                Background="{TemplateBinding Background}"
+                HeightRequest="{TemplateBinding HeightRequest}"
                 ColumnDefinitions="Auto,*,Auto"
                 >
                 <!--  Back Button  -->
@@ -46,8 +49,8 @@
                     Text="{Binding NextButtonIconText}"
                     FontFamily="{Binding ButtonIconFontFamily}"
                     Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
-                    MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
-                    HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
+                    MinimumHeightRequest="{TemplateBinding HeightRequest}"
+                    HeightRequest="{TemplateBinding HeightRequest}"
                     />
             </Grid>
         </ControlTemplate>

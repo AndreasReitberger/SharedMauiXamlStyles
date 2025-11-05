@@ -3,14 +3,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.BiometricAuthContentView"
+    x:Name="mainView"
+    
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
+    x:DataType="conventViews:BiometricAuthContentView"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:BiometricAuthContentView">
+        <ControlTemplate>
             <Grid
-                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                IsVisible="{Binding IsVisible}"
-                Background="{Binding Background}"
+                BindingContext="{x:Reference mainView}"
+                IsVisible="{TemplateBinding IsVisible}"
+                Background="{TemplateBinding Background}"
                 RowDefinitions="*,Auto,*"
                 >
                 <VerticalStackLayout

@@ -4,14 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.SortFilterHeaderContentView"
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
+    x:Name="mainView"
+    
+    x:DataType="conventViews:SortFilterHeaderContentView"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:SortFilterHeaderContentView">
+        <ControlTemplate>
             <Grid
-                x:Name="root"
-                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                Background="{Binding Background}"
-                HeightRequest="{Binding HeightRequest}"
+                BindingContext="{x:Reference mainView}"
+                Background="{TemplateBinding Background}"
+                HeightRequest="{TemplateBinding HeightRequest}"
                 ColumnDefinitions="*,Auto,Auto,Auto"
                 >
                 <Button
@@ -21,11 +23,11 @@
                     CornerRadius="0"
                     Text="{Binding SortButtonText}"
                     Command="{Binding SortButtonCommand}"
-                    CommandParameter="{Binding CommandParameter}"
+                    CommandParameter="{Binding SortButtonParameter}"
                     BorderWidth="0"
                     Style="{StaticResource Style.Core.Button.Default}"
-                    MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
-                    HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
+                    MinimumHeightRequest="{TemplateBinding HeightRequest}"
+                    HeightRequest="{TemplateBinding HeightRequest}"
                     >
                     <Button.ImageSource>
                         <FontImageSource
@@ -44,11 +46,11 @@
                     CornerRadius="0"
                     Text="{Binding FilterButtonText}"
                     Command="{Binding FilterButtonCommand}"
-                    CommandParameter="{Binding CommandParameter}"
+                    CommandParameter="{Binding FilterButtonParameter}"
                     BorderWidth="0"
                     Style="{StaticResource Style.Core.Button.Default}"
-                    MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
-                    HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
+                    MinimumHeightRequest="{TemplateBinding HeightRequest}"
+                    HeightRequest="{TemplateBinding HeightRequest}"
                     >
                     <Button.ImageSource>
                         <FontImageSource
@@ -65,9 +67,10 @@
                     Text="{Binding ClearButtonIconText}"
                     FontFamily="{Binding ButtonIconFontFamily}"
                     Command="{Binding ClearButtonCommand}"
+                    CommandParameter="{Binding ClearButtonParameter}"
                     FontSize="{OnPlatform Android=Small, Default=Default}"
-                    MinimumHeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
-                    HeightRequest="{Binding Source={Reference root}, Path=HeightRequest}"
+                    MinimumHeightRequest="{TemplateBinding HeightRequest}"
+                    HeightRequest="{TemplateBinding HeightRequest}"
                     WidthRequest="{OnPlatform Android=40, Default=48}"
                     CornerRadius="0"
                     BorderWidth="0"

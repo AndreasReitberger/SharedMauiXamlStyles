@@ -44,25 +44,25 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
             BindableProperty.Create(nameof(FilterCommand), typeof(ICommand), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty FilterCommandParameterProperty =
-            BindableProperty.Create(nameof(FilterCommandParameter), typeof(object), typeof(EnhancedListView), default);
+            BindableProperty.Create(nameof(FilterCommandParameter), typeof(object), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty OnFilterChangedCommandProperty =
             BindableProperty.Create(nameof(OnFilterChangedCommand), typeof(ICommand), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty OnFilterChangedCommandParameterProperty =
-            BindableProperty.Create(nameof(OnFilterChangedCommandParameter), typeof(object), typeof(EnhancedListView), default);
+            BindableProperty.Create(nameof(OnFilterChangedCommandParameter), typeof(object), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty SortCommandProperty =
             BindableProperty.Create(nameof(SortCommand), typeof(ICommand), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty SortCommandParameterProperty =
-            BindableProperty.Create(nameof(SortCommandParameter), typeof(object), typeof(EnhancedListView), default);
+            BindableProperty.Create(nameof(SortCommandParameter), typeof(object), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty ClearFilterCommandProperty =
             BindableProperty.Create(nameof(ClearFilterCommand), typeof(ICommand), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty ClearFilterCommandParameterProperty =
-            BindableProperty.Create(nameof(ClearFilterCommandParameter), typeof(object), typeof(EnhancedListView), default);
+            BindableProperty.Create(nameof(ClearFilterCommandParameter), typeof(object), typeof(EnhancedListView), null);
 
         public static readonly BindableProperty ValueBackCommandProperty =
             BindableProperty.Create(nameof(ValueBackCommand), typeof(ICommand), typeof(EnhancedListView), null);
