@@ -7,8 +7,6 @@
     <ResourceDictionary.MergedDictionaries>
         <!-- Item Templates -->
         <ResourceDictionary Source="/Resources/Themes/ItemTemplates/GeneralItemTemplates.xaml" />
-        <ResourceDictionary Source="/Resources/Themes/ItemTemplates/ShellItemTemplates.xaml" />
-        <ResourceDictionary Source="/Resources/Themes/ItemTemplates/ListViewGroupHeaderTemplates.xaml" />
         <ResourceDictionary Source="/Resources/Themes/ItemTemplates/ListViewHeaderTemplates.xaml" />
         <ResourceDictionary Source="/Resources/Themes/ItemTemplates/ListViewItemTemplates.xaml" />
         
