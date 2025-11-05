@@ -9,8 +9,6 @@ public partial class SortFilterHeaderContentView : ContentView
 
     public static readonly BindableProperty IsFilteredProperty = BindableProperty.Create(nameof(IsFiltered), typeof(bool), typeof(SortFilterHeaderContentView), false);
 
-    [Obsolete("Use `HeightRequest` instead")]
-    public static readonly BindableProperty ContainerHeightProperty = BindableProperty.Create(nameof(ContainerHeight), typeof(int), typeof(SortFilterHeaderContentView), 45);
     public static readonly BindableProperty ShowFilterButtonProperty = BindableProperty.Create(nameof(ShowFilterButton), typeof(bool), typeof(SortFilterHeaderContentView), true);
 
     public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SortFilterHeaderContentView), "MaterialDesignIcons");
@@ -27,6 +25,14 @@ public partial class SortFilterHeaderContentView : ContentView
     public static readonly BindableProperty FilterButtonCommandProperty = BindableProperty.Create(nameof(FilterButtonCommand), typeof(ICommand), typeof(SortFilterHeaderContentView), null);
     public static readonly BindableProperty ClearButtonCommandProperty = BindableProperty.Create(nameof(ClearButtonCommand), typeof(ICommand), typeof(SortFilterHeaderContentView), null);
 
+    public static readonly BindableProperty FilterButtonParameterProperty =
+        BindableProperty.Create(nameof(FilterButtonParameter), typeof(object), typeof(SortFilterHeaderContentView), null);
+
+    public static readonly BindableProperty SortButtonParameterProperty =
+        BindableProperty.Create(nameof(SortButtonParameter), typeof(object), typeof(SortFilterHeaderContentView), null);
+
+    public static readonly BindableProperty ClearButtonParameterProperty =
+        BindableProperty.Create(nameof(ClearButtonParameter), typeof(object), typeof(SortFilterHeaderContentView), null);
     #endregion
 
     #region Properties
@@ -74,13 +80,6 @@ public partial class SortFilterHeaderContentView : ContentView
         set => SetValue(IsFilteredProperty, value);
     }
 
-    [Obsolete("Use `HeightRequest` instead")]
-    public int ContainerHeight
-    {
-        get => (int)GetValue(ContainerHeightProperty);
-        set => SetValue(ContainerHeightProperty, value);
-    }
-
     public bool ShowFilterButton
     {
         get => (bool)GetValue(ShowFilterButtonProperty);
@@ -101,6 +100,21 @@ public partial class SortFilterHeaderContentView : ContentView
     {
         get => (ICommand)GetValue(ClearButtonCommandProperty);
         set => SetValue(ClearButtonCommandProperty, value);
+    }
+    public object FilterButtonParameter
+    {
+        get { return GetValue(FilterButtonParameterProperty); }
+        set { SetValue(FilterButtonParameterProperty, value); }
+    }
+    public object SortButtonParameter
+    {
+        get { return GetValue(SortButtonParameterProperty); }
+        set { SetValue(SortButtonParameterProperty, value); }
+    }
+    public object ClearButtonParameter
+    {
+        get { return GetValue(ClearButtonParameterProperty); }
+        set { SetValue(ClearButtonParameterProperty, value); }
     }
     #endregion
 

@@ -3,24 +3,27 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.TitleViewAccountContentView"
+    x:Name="mainView"
     
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared"
     xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
+    
+    x:DataType="conventViews:TitleViewAccountContentView"
     >
     <ContentView.Resources>
         <shared:SharedConverters />
     </ContentView.Resources>
     
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:TitleViewAccountContentView">
+        <ControlTemplate>
             <Grid
+                BindingContext="{x:Reference mainView}"
                 Style="{StaticResource Style.Core.Grid.ShellTitleView}"
-                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                IsVisible="{Binding IsVisible}"
-                IsEnabled="{Binding IsEnabled}"
-                Background="{Binding Background}"
-                HeightRequest="{Binding HeightRequest}"
+                IsVisible="{TemplateBinding IsVisible}"
+                IsEnabled="{TemplateBinding IsEnabled}"
+                Background="{TemplateBinding Background}"
+                HeightRequest="{TemplateBinding HeightRequest}"
                 ColumnDefinitions="*,Auto"
                 >
                 <ContentPresenter />

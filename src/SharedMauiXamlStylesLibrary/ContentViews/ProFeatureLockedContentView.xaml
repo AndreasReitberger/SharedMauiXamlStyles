@@ -3,21 +3,23 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AndreasReitberger.Shared.ContentViews.ProFeatureLockedContentView"
+    x:Name="mainView"
    
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
+    x:DataType="conventViews:ProFeatureLockedContentView"
     >
     <ContentView.ControlTemplate>
-        <ControlTemplate x:DataType="conventViews:ProFeatureLockedContentView">
+        <ControlTemplate>
             <Border   
-                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                BindingContext="{x:Reference mainView}"
                 Padding="4"
                 >
                 <Grid
                     CompressedLayout.IsHeadless="True"
                     >
                     <Grid
-                        Background="{Binding Background}"
-                        Opacity="{Binding Opacity}"
+                        Background="{TemplateBinding Background}"
+                        Opacity="{TemplateBinding Opacity}"
                         />
                     <Label
                         Text="{Binding ContentText}"

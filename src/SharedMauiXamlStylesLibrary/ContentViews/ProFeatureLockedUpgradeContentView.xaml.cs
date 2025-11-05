@@ -1,4 +1,3 @@
-using AndreasReitberger.Shared.FontIcons;
 using System.Windows.Input;
 
 namespace AndreasReitberger.Shared.ContentViews;
