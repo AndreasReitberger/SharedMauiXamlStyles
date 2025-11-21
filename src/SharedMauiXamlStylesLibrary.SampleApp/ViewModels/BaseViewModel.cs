@@ -98,15 +98,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
             UpdateVersionBuild();
         }
-        public BaseViewModel(IDispatcher dispatcher, IServiceProvider? provider, IFileSaver? fileSaver) : base(dispatcher, provider, fileSaver)
-        {
-            InitializeLocalizeManager();
-            Dispatcher = dispatcher;
-            Provider = provider;
-            FileSaver = fileSaver;
-
-            UpdateVersionBuild();
-        }
         protected void InitializeLocalizeManager()
         {
             LocalizationManager = Provider?.GetServices<ILocalizationManager>().First();
