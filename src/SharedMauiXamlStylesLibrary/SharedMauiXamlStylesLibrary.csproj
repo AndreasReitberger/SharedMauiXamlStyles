@@ -86,12 +86,6 @@
 	  <Compile Update="Resources\Themes\SharedStyles.xaml.cs">
 	    <DependentUpon>SharedStyles.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Themes\ItemTemplates\ShellItemTemplates.xaml.cs">
-	    <DependentUpon>ShellItemTemplates.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Themes\ItemTemplates\ListViewGroupHeaderTemplates.xaml.cs">
-	    <DependentUpon>ListViewGroupHeaderTemplates.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Resources\Themes\ItemTemplates\ListViewHeaderTemplates.xaml.cs">
 	    <DependentUpon>ListViewHeaderTemplates.xaml</DependentUpon>
 	  </Compile>
