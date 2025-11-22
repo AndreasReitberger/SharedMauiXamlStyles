@@ -39,9 +39,9 @@ jobs:
       run: |
         dotnet build ./src/SharedMauiXamlStylesLibrary/SharedMauiXamlStylesLibrary.csproj /p:Configuration=Release /t:restore,build,pack /p:PackageOutputPath=./nuget /p:ContinuousIntegrationBuild=true /p:DeterministicSourcePaths=false
         dotnet build ./src/SharedMauiXamlStylesLibrary.Syncfusion/SharedMauiXamlStylesLibrary.Syncfusion.csproj /p:Configuration=Release /t:restore,build,pack /p:PackageOutputPath=./nuget /p:ContinuousIntegrationBuild=true /p:DeterministicSourcePaths=false
-        dotnet build ./src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj /t:restore,build -c Release -f net9.0-windows10.0.19041.0 /p:RuntimeIdentifierOverride=win10-x64
+        dotnet build ./src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj /t:restore,build -c Release -f net10.0-windows10.0.19041.0 /p:RuntimeIdentifierOverride=win10-x64
 #    - name: Build (Sample)
-#      run: dotnet build ./src/MauiAppBasement.Syncfusion/MauiAppBasement.Syncfusion.csproj /t:restore,build -c Release -f net9.0-windows10.0.19041.0 /p:RuntimeIdentifierOverride=win10-x64
+#      run: dotnet build ./src/MauiAppBasement.Syncfusion/MauiAppBasement.Syncfusion.csproj /t:restore,build -c Release -f net10.0-windows10.0.19041.0 /p:RuntimeIdentifierOverride=win10-x64
     - name: Upload packages
       uses: actions/upload-artifact@v4
       with:
@@ -103,7 +103,7 @@ jobs:
       run: |
         dotnet build ./src/SharedMauiXamlStylesLibrary/SharedMauiXamlStylesLibrary.csproj /p:Configuration=Release /t:restore,build,pack /p:PackageOutputPath=./nuget /p:ContinuousIntegrationBuild=true /p:DeterministicSourcePaths=false
         dotnet build ./src/SharedMauiXamlStylesLibrary.Syncfusion/SharedMauiXamlStylesLibrary.Syncfusion.csproj /p:Configuration=Release /t:restore,build,pack /p:PackageOutputPath=./nuget /p:ContinuousIntegrationBuild=true /p:DeterministicSourcePaths=false
-#        dotnet build ./src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj /t:restore,build -c Release -f net9.0-ios
+#        dotnet build ./src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj /t:restore,build -c Release -f net10.0-ios
 
   androidBuild:
     runs-on: ubuntu-latest
@@ -124,4 +124,4 @@ jobs:
       run: |
         dotnet build ./src/SharedMauiXamlStylesLibrary/SharedMauiXamlStylesLibrary.csproj /p:Configuration=Release /t:restore,build,pack /p:PackageOutputPath=./nuget /p:ContinuousIntegrationBuild=true /p:DeterministicSourcePaths=false
         dotnet build ./src/SharedMauiXamlStylesLibrary.Syncfusion/SharedMauiXamlStylesLibrary.Syncfusion.csproj /p:Configuration=Release /t:restore,build,pack /p:PackageOutputPath=./nuget /p:ContinuousIntegrationBuild=true /p:DeterministicSourcePaths=false
-        dotnet build ./src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj /t:restore,build -c Release -f net9.0-android
+        dotnet build ./src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj /t:restore,build -c Release -f net10.0-android
