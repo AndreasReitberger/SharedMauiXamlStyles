@@ -192,7 +192,8 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
                     // Fire blank event
                     ItemSelectionChangedEventArgs args = new();
                     listView.ItemSelect_SelectionChanged(listView, args);
-                };
+                }
+                ;
             }
         }
 

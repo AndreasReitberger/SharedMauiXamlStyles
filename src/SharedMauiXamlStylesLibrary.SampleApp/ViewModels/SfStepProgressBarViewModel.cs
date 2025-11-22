@@ -10,7 +10,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        public partial ObservableCollection<StepProgressBarItem> StepProgress { get; set; } = 
+        public partial ObservableCollection<StepProgressBarItem> StepProgress { get; set; } =
         [
             new () { PrimaryText = "Packaged"},
             new () { PrimaryText = "Shipped"},
