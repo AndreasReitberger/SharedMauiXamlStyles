@@ -73,7 +73,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
                     using MemoryStream memStream = new();
                     await captureResult.CopyToAsync(memStream, ScreenshotFormat.Png, 100);
                     if (FileSaver.Default is not null)
-                    _ = await FileSaver.Default.SaveAsync("signature.png", memStream);
+                        _ = await FileSaver.Default.SaveAsync("signature.png", memStream);
                 }
                 ImageSource? imageSource = pad.ToImageSource();
 

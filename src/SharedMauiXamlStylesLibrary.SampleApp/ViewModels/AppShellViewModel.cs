@@ -32,7 +32,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
             UpdateVersionBuild();
 
             LoadSettings();
-            if(Application.Current?.UserAppTheme is not AppTheme.Unspecified)
+            if (Application.Current?.UserAppTheme is not AppTheme.Unspecified)
                 Darkmode = Application.Current?.UserAppTheme == AppTheme.Dark;
             else
                 Darkmode = Application.Current?.PlatformAppTheme == AppTheme.Dark;

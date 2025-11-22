@@ -10,7 +10,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Models.Demo
         public partial int Users { get; set; }
 
         [ObservableProperty]
-        public partial string Name { get;set; } = string.Empty;
+        public partial string Name { get; set; } = string.Empty;
 
         [ObservableProperty]
         public partial string Group { get; set; } = string.Empty;
