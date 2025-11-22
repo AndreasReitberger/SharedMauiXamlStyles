@@ -10,10 +10,7 @@
     xmlns:core="clr-namespace:AndreasReitberger.Shared.Core.Theme;assembly=SharedMauiCoreLibrary"
     
     Style="{StaticResource Style.Core.Shell.Default}"
-    FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"
-    
-    Shell.ItemTemplate="{StaticResource DataTemplate.Core.ShellItem.Default}"
-    Shell.MenuItemTemplate="{StaticResource DataTemplate.Core.ShellItem.Default}"
+    FlyoutBehavior="{OnPlatform WinUI=Locked, Default={OnIdiom Tablet=Locked, Default=Flyout}}"   
     x:DataType="viewModels:AppShellViewModel"
     >
     <Shell.FlyoutHeader>

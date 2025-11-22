@@ -14,7 +14,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         #region Constructor, LoadSettings
 
-        public SfProgressBarPageViewModel(IDispatcher dispatcher, IServiceProvider provider, IFileSaver fileSaver) : base(dispatcher, provider, fileSaver)
+        public SfProgressBarPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
         }

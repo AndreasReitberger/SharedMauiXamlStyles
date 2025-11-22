@@ -31,7 +31,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         #region Constructor, LoadSettings
 
-        public SfTreeMapPadPageViewModel(IDispatcher dispatcher, IServiceProvider provider, IFileSaver fileSaver) : base(dispatcher, provider, fileSaver)
+        public SfTreeMapPadPageViewModel(IDispatcher dispatcher, IServiceProvider provider) : base(dispatcher, provider)
         {
             Dispatcher = dispatcher;
         }
@@ -42,11 +42,11 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
 
         [RelayCommand]
         static Task DrawCompleted(object? parameter)
-            => Shell.Current.DisplayAlert("Draw completed", "Draw completed event triggered.", "OK");
+            => Shell.Current.DisplayAlertAsync("Draw completed", "Draw completed event triggered.", "OK");
 
         [RelayCommand]
         static Task DrawStarted(object? parameter)
-            => Shell.Current.DisplayAlert("Draw started", "Draw started event triggered.", "OK");
+            => Shell.Current.DisplayAlertAsync("Draw started", "Draw started event triggered.", "OK");
 
         [RelayCommand]
         static void Clear(object? parameter)
@@ -73,8 +73,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
                 {
                     using MemoryStream memStream = new();
                     await captureResult.CopyToAsync(memStream, ScreenshotFormat.Png, 100);
-                    if (FileSaver is not null)
-                    _ = await FileSaver.SaveAsync("signature.png", memStream);
+                    if (FileSaver.Default is not null)
+                    _ = await FileSaver.Default.SaveAsync("signature.png", memStream);
                 }
                 ImageSource? imageSource = pad.ToImageSource();
 

@@ -14,7 +14,7 @@ on:
 
 env:
   BUILD_CONFIGURATION: Release
-  DOTNET_VERSION: 8.0.x
+  DOTNET_VERSION: 10.0.x
   CSPROJ_TO_BUILD: ./src/SharedMauiXamlStylesLibrary.SampleApp/SharedMauiXamlStylesLibrary.SampleApp.csproj
 
 jobs:
@@ -32,9 +32,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ${{ env.CSPROJ_TO_BUILD }}
     - name: Build ${{ env.CSPROJ_TO_BUILD }}
-      run: dotnet build ${{ env.CSPROJ_TO_BUILD }} -c ${{ env.BUILD_CONFIGURATION }} -f:net8.0-android
+      run: dotnet build ${{ env.CSPROJ_TO_BUILD }} -c ${{ env.BUILD_CONFIGURATION }} -f:net10.0-android
     - name: Publish APK
-      run: dotnet publish ${{ env.CSPROJ_TO_BUILD }} -c ${{ env.BUILD_CONFIGURATION }} -f:net8.0-android -o ./output
+      run: dotnet publish ${{ env.CSPROJ_TO_BUILD }} -c ${{ env.BUILD_CONFIGURATION }} -f:net10.0-android -o ./output
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:

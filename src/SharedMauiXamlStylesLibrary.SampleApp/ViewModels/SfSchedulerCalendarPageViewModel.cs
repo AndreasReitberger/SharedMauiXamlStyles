@@ -36,10 +36,10 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Commands
 
         [RelayCommand]
-        static Task ActionFromTap(object? parameter) => Shell.Current.DisplayAlert("Tapped", "You tapped an item", "OK");
+        static Task ActionFromTap(object? parameter) => Shell.Current.DisplayAlertAsync("Tapped", "You tapped an item", "OK");
 
         [RelayCommand]
-        static Task ActionFromDoubleTap(object? parameter) => Shell.Current.DisplayAlert("Double tapped", "You double tapped an item", "OK");
+        static Task ActionFromDoubleTap(object? parameter) => Shell.Current.DisplayAlertAsync("Double tapped", "You double tapped an item", "OK");
 
         #endregion
     }

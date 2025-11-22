@@ -12,7 +12,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Properties
 
         [ObservableProperty]
-        public partial LocalizationInfo Language { get; set; }
+        public partial LocalizationInfo? Language { get; set; }
 
         [ObservableProperty]
         public partial ObservableCollection<LocalizationInfo> Languages { get; set; } = [];
@@ -37,13 +37,13 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
         #region Command
 
         [RelayCommand]
-        static Task Sort() => Shell.Current.DisplayAlert("Sort", "Sort command placeholder...", "OK");
+        static Task Sort() => Shell.Current.DisplayAlertAsync("Sort", "Sort command placeholder...", "OK");
 
         [RelayCommand]
-        static Task Filter() => Shell.Current.DisplayAlert("Filter", "Filter command placeholder...", "OK");
+        static Task Filter() => Shell.Current.DisplayAlertAsync("Filter", "Filter command placeholder...", "OK");
 
         [RelayCommand]
-        static Task Clear() => Shell.Current.DisplayAlert("Clear", "Clear command placeholder...", "OK");
+        static Task Clear() => Shell.Current.DisplayAlertAsync("Clear", "Clear command placeholder...", "OK");
 
         [RelayCommand]
         void ValueNext()
