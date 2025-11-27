@@ -91,7 +91,6 @@
             <StackLayout 
                 Grid.Column="1" 
                 Spacing="1"
-                CompressedLayout.IsHeadless="true"
                 >
                 <Label 
                     LineBreakMode="WordWrap" 
@@ -140,7 +139,6 @@
                 Grid.Column="1"
                 Spacing="1" 
                 Padding="2,5,-10,0"
-                CompressedLayout.IsHeadless="true"
                 >
                 <!-- Language name -->
                 <Label 
@@ -214,7 +212,6 @@
                 Grid.Column="1" 
                 Spacing="1" 
                 Padding="2,5,-10,0"
-                CompressedLayout.IsHeadless="true"
                 >
                 <!-- Language name -->
                 <Label 
