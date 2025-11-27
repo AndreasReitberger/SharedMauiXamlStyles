@@ -14,15 +14,12 @@
                 BindingContext="{x:Reference mainView}"
                 Padding="4"
                 >
-                <Grid
-                    CompressedLayout.IsHeadless="True"
-                    >
+                <Grid>
                     <Grid
                         Background="{TemplateBinding Background}"
                         Opacity="{TemplateBinding Opacity}"
                         />
                     <Grid
-                        CompressedLayout.IsHeadless="True"
                         RowDefinitions="*,Auto,Auto,*"
                         >
                         <Label

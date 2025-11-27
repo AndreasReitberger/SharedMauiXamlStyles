@@ -24,9 +24,7 @@
             IsSyncingText="{Binding SyncingText}"
             Background="{DynamicResource PrimaryColor}"
             >
-            <Grid
-                CompressedLayout.IsHeadless="True"
-                >
+            <Grid>
                 <Label
                     IsVisible="{Binding IsLoggedIn}"
                     Grid.Column="1"

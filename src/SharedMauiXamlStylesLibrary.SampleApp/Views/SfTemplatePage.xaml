@@ -25,7 +25,6 @@
             Background="{DynamicResource PrimaryColor}"
             >
             <Grid
-                CompressedLayout.IsHeadless="True"
                 >
                 <Label
                     IsVisible="{Binding IsLoggedIn}"
