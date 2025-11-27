@@ -10,7 +10,8 @@
 
     <Style x:Key="Style.Core.Switch.Default" TargetType="Switch">
         <Setter Property="VerticalOptions" Value="Center" />
-        <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
+        <Setter Property="OffColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
         <Setter Property="ThumbColor" Value="{StaticResource White}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -31,7 +32,7 @@
                     <VisualState x:Name="Off">
                         <VisualState.Setters>
                             <Setter Property="ThumbColor" Value="{StaticResource White}" />
-                            <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+                            <Setter Property="OffColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
