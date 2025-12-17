@@ -29,7 +29,7 @@
                 <Label
                     Margin="0"
                     Padding="0"
-                    Text="{Binding Source={RelativeSource AncestorType={x:Type progressBar:SfCircularProgressBar}}, Path=Progress,StringFormat='{0:N0}%'}"
+                    Text="{Binding x:DataType='progressBar:SfCircularProgressBar', Source={RelativeSource AncestorType={x:Type progressBar:SfCircularProgressBar}}, Path=Progress,StringFormat='{0:N0}%'}"
                     Style="{StaticResource Style.Core.Label.Small}"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
