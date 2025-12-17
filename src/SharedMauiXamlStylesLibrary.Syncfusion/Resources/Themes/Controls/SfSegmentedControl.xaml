@@ -58,7 +58,7 @@
                                 <Setter.Value>
                                     <buttons:SelectionIndicatorSettings
                                         Background="{DynamicResource PrimaryColor}"
-                                        TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                                        TextColor="{Binding x:DataType='buttons:SfSegmentedControl', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
                                         />
                                 </Setter.Value>
                             </Setter>
@@ -154,7 +154,7 @@
                                 <Setter.Value>
                                     <buttons:SelectionIndicatorSettings
                                         Background="{DynamicResource PrimaryColor}"
-                                        TextColor="{Binding Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
+                                        TextColor="{Binding x:DataType='buttons:SfSegmentedControl', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}"
                                         SelectionIndicatorPlacement="Border"
                                         />
                                 </Setter.Value>
