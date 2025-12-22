@@ -31,6 +31,11 @@
 	    <WarningsAsErrors>XC0045</WarningsAsErrors>
 		<!--<NoWarn>$(NoWarn);XC0022;XC0023</NoWarn>-->
 		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
+
+		<IsTrimmable>true</IsTrimmable>
+		<!-- Ref: https://learn.microsoft.com/en-us/dotnet/maui/deployment/trimming?view=net-maui-10.0#suppress-analysis-warnings -->
+		<SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+		<TrimmerSingleWarn>false</TrimmerSingleWarn>
     </PropertyGroup>
 
     <ItemGroup>
