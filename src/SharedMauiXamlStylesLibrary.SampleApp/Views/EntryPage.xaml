@@ -13,7 +13,7 @@
     
     xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
     
-    Title="ButtonsPage"
+    Title="Entries Page"
     Style="{StaticResource Style.Core.ContentPage.Default}"
     x:DataType="viewModels:EntryPageViewModel"   
     >

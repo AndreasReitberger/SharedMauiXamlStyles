@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\common.props" />
-	<Import Project="..\..\framework.maui.net9.props" Condition="'$(DefineConstants.Contains(NET9))'" />
-	<Import Project="..\..\framework.maui.props" Condition="'$(DefineConstants.Contains(NET10))'" />
+	<Import Project="..\..\framework.maui.props" />
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>SharedMauiXamlStylesLibrary.SampleApp</RootNamespace>
@@ -278,17 +277,8 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<!-- Used for net9-->
-	<ItemGroup Condition="'$(DefineConstants.Contains(NET9))'">
-		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.120" />
-	</ItemGroup>
-
-	<!-- Used for net10-->
-	<ItemGroup Condition="'$(DefineConstants.Contains(NET10))'">
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.20" />
-	</ItemGroup>
-
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.20" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.1" />
 	</ItemGroup>

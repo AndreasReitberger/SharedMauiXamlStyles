@@ -13,6 +13,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Style.Core.Entry.Default" TargetType="Entry">
+        <!--<Setter Property="UseSystemFocusVisuals" Value="{OnPlatform MacCatalyst=False}" />-->
         <Setter Property="FontFamily" Value="{StaticResource MontserratRegular}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}"/>
