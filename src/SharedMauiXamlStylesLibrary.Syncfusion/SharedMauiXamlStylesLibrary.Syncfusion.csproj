@@ -4,7 +4,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>$(TargetFrameworks);net10.0</TargetFrameworks>
 		<OutputType>Library</OutputType>
-		
+		<UseMaui>True</UseMaui>
 		<RootNamespace>AndreasReitberger.Shared.Syncfusion</RootNamespace>	
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		
