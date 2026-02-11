@@ -140,7 +140,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.30,)" />
 		<PackageReference Include="SharedMauiCoreLibrary" Version="1.2.4" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.3" />
 	</ItemGroup>
 
 	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->
