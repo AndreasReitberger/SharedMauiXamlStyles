@@ -25,12 +25,9 @@
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.31" />
-	</ItemGroup>
 	
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.30,)" />
 		<ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
 		<PackageReference Include="Syncfusion.Maui.AIAssistView" Version="32.2.4" />
 		<PackageReference Include="Syncfusion.Maui.Backdrop" Version="32.2.4" />

@@ -32,6 +32,8 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
                     .Build();
             }
             string settings = UserSecretsManager.Settings[sectionName].ToString();
+            if (string.IsNullOrEmpty(settings))
+                return default;
             context ??= AppSourceGenerationContext.Default;
             return (T?)JsonSerializer.Deserialize(settings, typeof(T), context);
         }
