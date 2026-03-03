@@ -21,17 +21,33 @@ public static MauiApp CreateMauiApp()
 To add the Styles and Colors to your app theme, you can merge the `ResourceDictionary` at your App.xaml page.
 
 ```xaml
-    <ResourceDictionary.MergedDictionaries>
-        <!-- your own stuff -->
-        <ResourceDictionary Source="/Themes/DefaultColors.xaml" />
-
-        <!-- Library componentes -->
-        <shared:Fonts />
-        <shared:Styles />
-        <shared:Templates />
-        <!-- or the whole theme -->
-        <shared:DefaultTheme/>
-    </ResourceDictionary.MergedDictionaries>
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp"     
+    
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:themes="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.Themes"
+    
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.App"
+    >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- your own stuff -->
+                <ResourceDictionary Source="/Themes/DefaultColors.xaml" />
+        
+                <!-- Library componentes -->
+                <shared:Fonts />
+                <shared:Styles />
+                <shared:Templates />
+                <!-- or the whole theme -->
+                <shared:DefaultTheme/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
 ```
 For further instructions or issues, please visit the project page on github.
 https://github.com/AndreasReitberger/SharedMauiXamlStyles
