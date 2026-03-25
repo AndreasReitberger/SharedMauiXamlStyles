@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\common.props" />
 	<Import Project="..\..\framework.maui.props" />
+	<Import Project="..\..\fonts.props" />
 	<PropertyGroup>
 		<TargetFrameworks>$(TargetFrameworks);net10.0</TargetFrameworks>
 		<!-- Needed at all? Causes problems on windows -->
@@ -28,6 +29,14 @@
 	<ItemGroup>
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />	
+	</ItemGroup>
+
+	<!-- Pack font files, .targets, .props, and license into NuGet -->
+	<ItemGroup>
+		<None Include="@(IconFontDefinition)" Pack="true" PackagePath="buildTransitive/Fonts/%(FileName)%(Extension)" />
+		<None Include="SharedMauiXamlStylesLibrary.targets" Pack="true" PackagePath="buildTransitive" />
+		<None Include="..\..\fonts.props" Pack="true" PackagePath="buildTransitive" />
+		<None Include="..\..\fonts.props" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.targets" />
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -144,5 +153,5 @@
 	</ItemGroup>
 
 	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->
-	<Import Project="PackMauiAssets.targets" />
+	<!--<Import Project="SharedMauiXamlStylesLibrary.targets" />-->
 </Project>

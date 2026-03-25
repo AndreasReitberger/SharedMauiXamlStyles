@@ -9,6 +9,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Hosting
         {
             builder
                 .RegisterSharedSyncfusionFonts()
+                .RegisterUIIconFonts()
                 .ConfigureSyncfusionAddons()
                 ;
             ConfigureSharedStyleMappers();

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
+	<!-- https://github.com/jfversluis/IconFont.Maui.Template/blob/main/src/IconFont.Maui.Template/buildTransitive/IconFont.Maui.Template.targets -->
+	<Import Project="$(MSBuildThisFileDirectory)fonts.syncfusion.props" Condition="Exists('$(MSBuildThisFileDirectory)fonts.syncfusion.props')" />
 
+	<!-- Fallback for single-font props -->
+	<ItemGroup Condition="'@(IconFontDefinition)' == ''">
+		<IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/$(IconFontFile)">
+			<FontAlias>$(IconFontAlias)</FontAlias>
+			<FontClass>$(IconFontClass)</FontClass>
+			<FontNamespace>$(IconFontNamespace)</FontNamespace>
+		</IconFontDefinition>
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiFont Include="$(MSBuildThisFileDirectory)Fonts/%(IconFontDefinition.FileName)%(IconFontDefinition.Extension)"
+				  Alias="%(IconFontDefinition.FontAlias)" />
+	</ItemGroup>
+	
 	<PropertyGroup>
 		<PackMauiItems Condition="'$(PackMauiItems)' == ''">true</PackMauiItems>
 		<!-- Defaults to '$(PackageId).targets' if no path was specified -->

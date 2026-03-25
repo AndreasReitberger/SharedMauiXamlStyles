@@ -360,3 +360,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+## Maui specific (generated)
+**/Resources/Raw/AboutAssets.txt
+
+## Generated sources
+generated/
+**/generated/

@@ -1,14 +1,13 @@
 ﻿using Microsoft.Maui.Controls.Internals;
 
-namespace AndreasReitberger.Shared.FontIcons
+namespace AndreasReitberger.Shared.Syncfusion.FontIcons
 {
-    // Source: https://github.com/jfversluis/IconFont.Maui.Template/blob/main/src/IconFont.Maui.Template/FluentIcons.cs
     [Preserve(AllMembers = true)]
-    public static class MaterialIcons
+    public static class UIFont
     {
         /// <summary>
-          /// The font family alias for the default (Regular) icon font style.
-          /// </summary>
+        /// The font family alias for the default (Regular) icon font style.
+        /// </summary>
         public static string FontFamily => IconFontConfigs.Default.FontAlias;
 
         /// <summary>
