@@ -37,6 +37,8 @@
 		<None Include="SharedMauiXamlStylesLibrary.targets" Pack="true" PackagePath="buildTransitive" />
 		<None Include="..\..\fonts.props" Pack="true" PackagePath="buildTransitive" />
 		<None Include="..\..\fonts.props" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.targets" />
+		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive" />
+		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.targets" />
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -153,5 +155,6 @@
 	</ItemGroup>
 
 	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->
+	<Import Project="..\..\PackMauiAssets.targets" />
 	<!--<Import Project="SharedMauiXamlStylesLibrary.targets" />-->
 </Project>
