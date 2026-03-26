@@ -82,7 +82,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print3d">
         <Label
             Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-            Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
+            Text="{x:Static icons:MaterialDesignIcons.Printer3dNozzleOutline}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -102,7 +102,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Execute">
         <Label
             Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-            Text="{x:Static icons:MaterialIcons.RunFast}"
+            Text="{x:Static icons:MaterialDesignIcons.RunFast}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -122,7 +122,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Export">
         <Label
             Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-            Text="{x:Static icons:MaterialIcons.FileExportOutline}"
+            Text="{x:Static icons:MaterialDesignIcons.FileExportOutline}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -434,7 +434,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
+                Text="{x:Static icons:MaterialDesignIcons.Printer3dNozzleOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -452,7 +452,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.EyeOutline}"
+                Text="{x:Static icons:MaterialDesignIcons.EyeOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -476,7 +476,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.RunFast}"
+                Text="{x:Static icons:MaterialDesignIcons.RunFast}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -494,7 +494,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.PencilOutline}"
+                Text="{x:Static icons:MaterialDesignIcons.PencilOutline}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"

@@ -35,8 +35,8 @@
                 <Setter Property="Icon">
                     <Setter.Value>
                         <FontImageSource
-                            FontFamily="{StaticResource MaterialDesignIcons}"
-                            Glyph="{x:Static icons:MaterialIcons.LockOutline}"                           
+                            FontFamily="{x:Static icons:MaterialDesignIcons.FontFamily}"
+                            Glyph="{x:Static icons:MaterialDesignIcons.LockOutline}"                           
                             Color="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}"
                             Size="{StaticResource DefaultIconSize}"
                             />
