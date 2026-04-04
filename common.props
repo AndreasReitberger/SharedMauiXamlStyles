@@ -37,14 +37,30 @@
 		<TrimmerSingleWarn>false</TrimmerSingleWarn>
     </PropertyGroup>
 
+	<!-- Source: https://github.com/jfversluis/IconFont.Maui.Template/blob/main/src/IconFont.Maui.Template/IconFont.Maui.Template.csproj-->
+	<PropertyGroup>
+		<EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+		<CompilerGeneratedFilesOutputPath>$(IntermediateOutputPath)generated</CompilerGeneratedFilesOutputPath>
+	</PropertyGroup>
+	<!-- Remove generated .cs files -->
+	<ItemGroup>
+		<Compile Remove="generated/**/*.cs" />
+	</ItemGroup>
+	<!-- Register all defined fonts as MauiFont -->
+	<ItemGroup>
+		<MauiFont Include="@(IconFontDefinition)" Alias="%(IconFontDefinition.FontAlias)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All"/>
+		<PackageReference Include="IconFont.Maui.SourceGenerator" Version="1.4.0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+	</ItemGroup>
+	
     <ItemGroup>
       <None Include="..\..\art\ar_128.png">
         <Pack>True</Pack>
         <PackagePath></PackagePath>
       </None>
    </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.200" PrivateAssets="All"/>
-  </ItemGroup>
 </Project>

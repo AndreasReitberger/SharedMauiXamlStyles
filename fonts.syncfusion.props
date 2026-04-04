@@ -1,0 +1,20 @@
+
+<Project>
+	<PropertyGroup>
+		<IconFontFile>UIFontIcons.ttf</IconFontFile>
+		<IconFontAlias>UIFontIcons</IconFontAlias>
+		<IconFontClass>UIFontIcons</IconFontClass>
+		<IconFontNamespace>AndreasReitberger.Shared.Syncfusion.FontIcons</IconFontNamespace>
+	</PropertyGroup>
+	
+	<!-- Source: https://github.com/jfversluis/IconFont.Maui.Template/blob/main/src/IconFont.Maui.Template/IconFont.props -->
+	<!-- Multi-font support: define one or more IconFontDefinition items. -->
+	<ItemGroup>
+		<!-- Icon fonts -->
+		<IconFontDefinition Include="Resources/Fonts/UIFontIcons.ttf">
+			<FontAlias>UIFontIcons</FontAlias>
+			<FontClass>UIFontIcons</FontClass>
+			<FontNamespace>AndreasReitberger.Shared.Syncfusion.FontIcons</FontNamespace>
+		</IconFontDefinition>
+	</ItemGroup>
+</Project>

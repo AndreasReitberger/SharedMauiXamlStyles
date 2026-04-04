@@ -79,11 +79,11 @@ If you already have used our style library, please replace all StaticResource as
 <!-- Replace -->
 {StaticResource MaterialDesign_{IconName}}
 <!-- with -->
-{x:Static icons:MaterialIcons.{IconName}}
+{x:Static icons:MaterialDesignIcons.{IconName}}
 ```
 
 # Available fonts
 
-* MaterialDesign: {x:Static icons:MaterialIcons.{IconName}}
+* MaterialDesign: {x:Static icons:MaterialDesignIcons.{IconName}}
 * FluentIcon: {x:Static icons:FluentIcons.{IconName}}
 * Syncfusion: {x:Static icons:SyncfusionIcons.{IconName}}

@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\common.props" />
 	<Import Project="..\..\framework.maui.props" />
+	<Import Project="..\..\fonts.syncfusion.props" />
 	<PropertyGroup>
 		<TargetFrameworks>$(TargetFrameworks);net10.0</TargetFrameworks>
 		<OutputType>Library</OutputType>
@@ -24,6 +25,16 @@
 	<ItemGroup>
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
+	</ItemGroup>
+
+	<!-- Pack font files, .targets, .props, and license into NuGet -->
+	<ItemGroup>
+		<None Include="@(IconFontDefinition)" Pack="true" PackagePath="buildTransitive/Fonts/%(FileName)%(Extension)" />
+		<None Include="SharedMauiXamlStylesLibrary.Syncfusion.targets" Pack="true" PackagePath="buildTransitive" />
+		<None Include="..\..\fonts.syncfusion.props" Pack="true" PackagePath="buildTransitive" />
+		<None Include="..\..\fonts.syncfusion.props" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.Syncfusion.targets" />
+		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive" />
+		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.Syncfusion.targets" />
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -302,5 +313,6 @@
 	</ItemGroup>
 
 	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->
-	<Import Project="PackMauiAssets.targets" />
+	<Import Project="..\..\PackMauiAssets.targets" />
+	<!--<Import Project="SharedMauiXamlStylesLibrary.Syncfusion.targets" />-->
 </Project>

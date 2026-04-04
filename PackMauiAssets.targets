@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-
+	
 	<PropertyGroup>
 		<PackMauiItems Condition="'$(PackMauiItems)' == ''">true</PackMauiItems>
 		<!-- Defaults to '$(PackageId).targets' if no path was specified -->
