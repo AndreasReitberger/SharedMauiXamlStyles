@@ -1,4 +1,6 @@
-﻿using Microsoft.Maui.Handlers;
+﻿#if WINDOWS
+using Microsoft.Maui.Handlers;
+#endif
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AndreasReitberger.Shared.Syncfusion.Hosting
@@ -9,7 +11,6 @@ namespace AndreasReitberger.Shared.Syncfusion.Hosting
         {
             builder
                 .RegisterSharedSyncfusionFonts()
-                .RegisterUIIconFonts()
                 .ConfigureSyncfusionAddons()
                 ;
             ConfigureSharedStyleMappers();

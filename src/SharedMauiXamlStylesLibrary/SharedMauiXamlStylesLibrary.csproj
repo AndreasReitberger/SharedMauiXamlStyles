@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\common.props" />
 	<Import Project="..\..\framework.maui.props" />
-	<Import Project="..\..\fonts.props" />
 	<PropertyGroup>
-		<TargetFrameworks>$(TargetFrameworks);net10.0</TargetFrameworks>
+		<!--<TargetFrameworks>$(TargetFrameworks);net10.0</TargetFrameworks>-->
 		<!-- Needed at all? Causes problems on windows -->
 		<!--<TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net9.0-macos</TargetFrameworks>-->
 		<OutputType>Library</OutputType>
@@ -33,10 +32,7 @@
 
 	<!-- Pack font files, .targets, .props, and license into NuGet -->
 	<ItemGroup>
-		<None Include="@(IconFontDefinition)" Pack="true" PackagePath="buildTransitive/Fonts/%(FileName)%(Extension)" />
 		<None Include="SharedMauiXamlStylesLibrary.targets" Pack="true" PackagePath="buildTransitive" />
-		<None Include="..\..\fonts.props" Pack="true" PackagePath="buildTransitive" />
-		<None Include="..\..\fonts.props" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.targets" />
 		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive" />
 		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.targets" />
 	</ItemGroup>
@@ -149,9 +145,10 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.30,)" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.50,)" />
 		<PackageReference Include="SharedMauiCoreLibrary" Version="1.2.5" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />
+		<PackageReference Include="IconFont.Maui.MaterialDesignIcons" Version="1.0.0" />
 	</ItemGroup>
 
 	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->

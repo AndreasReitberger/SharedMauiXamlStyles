@@ -1,4 +1,5 @@
-﻿using AndreasReitberger.Shared.FontIcons;
+﻿using IconFont.Maui.MaterialDesignIcons;
+
 #if WINDOWS
 using Microsoft.Maui.Handlers;
 #endif
@@ -11,7 +12,7 @@ namespace AndreasReitberger.Shared.Hosting
         {
             builder
                 .RegisterSharedFonts()
-                .RegisterIconFonts()
+                .UseMaterialDesignIcons()
                 ;
             ConfigureSharedStyleMappers();
             return builder;

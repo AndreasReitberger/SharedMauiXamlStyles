@@ -5,8 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
-    xmlns:material="clr-namespace:AndreasReitberger.Shared.FontIcons"
+    xmlns:iconsMaterialDesign="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
     >
     <!--
     Important notes:
@@ -194,11 +193,11 @@
     </Style>
 
     <Style x:Key="Style.Core.Button.Icon.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Default}">
-        <Setter Property="FontFamily" Value="{x:Static icons:MaterialDesignIcons.FontFamily}" />
+        <Setter Property="FontFamily" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FontFamily}" />
     </Style>
 
     <Style x:Key="Style.Core.Button.Icon.Transparent.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Default.Transparent}">
-        <Setter Property="FontFamily" Value="{x:Static icons:MaterialDesignIcons.FontFamily}" />
+        <Setter Property="FontFamily" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FontFamily}" />
     </Style>
 
     <Style x:Key="Style.Core.Button.Icon.MaterialDesign.Critical" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Transparent.MaterialDesign}">
@@ -494,7 +493,7 @@
         <Setter Property="Background" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
         <Setter Property="TextColor" Value="{StaticResource White}" />
-        <Setter Property="Text" Value="{x:Static icons:MaterialDesignIcons.HandFrontRight}" />
+        <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FrontHand}" />
         <Setter Property="BorderWidth" Value="3" />
         <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
@@ -505,8 +504,8 @@
         <Setter Property="Background" Value="{StaticResource White}" />
         <Setter Property="ImageSource">
             <FontImageSource
-                FontFamily="{x:Static icons:MaterialDesignIcons.FontFamily}"
-                Glyph="{x:Static icons:MaterialDesignIcons.Google}"
+                FontFamily="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FontFamily}"
+                Glyph="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Login}"
                 Color="{DynamicResource PrimaryColor}"
                 Size="{StaticResource DefaultIconSize}"
                 />
