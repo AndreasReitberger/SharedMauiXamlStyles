@@ -217,7 +217,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Controls
                 {
                     //listView.filter = null;
                     listView.IsFiltered = false;
-                    listView.DataSource.Filter = null;
+                    listView.DataSource.Filter = new Predicate<object>(item => true);
                     listView.DataSource.RefreshFilter();
                 }
                 if (listView.OnFilterChangedCommand?.CanExecute(listView.OnFilterChangedCommandParameter) is true)

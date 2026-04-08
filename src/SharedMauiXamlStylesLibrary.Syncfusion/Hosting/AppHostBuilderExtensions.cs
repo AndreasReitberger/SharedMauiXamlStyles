@@ -1,4 +1,7 @@
-﻿using Microsoft.Maui.Handlers;
+﻿#if WINDOWS
+using Microsoft.Maui.Handlers;
+#endif
+using AndreasReitberger.Shared.Hosting;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AndreasReitberger.Shared.Syncfusion.Hosting
@@ -8,6 +11,7 @@ namespace AndreasReitberger.Shared.Syncfusion.Hosting
         public static MauiAppBuilder InitializeSharedSyncfusionStyles(this MauiAppBuilder builder)
         {
             builder
+                .InitializeSharedMauiStyles()
                 .RegisterSharedSyncfusionFonts()
                 .ConfigureSyncfusionAddons()
                 ;

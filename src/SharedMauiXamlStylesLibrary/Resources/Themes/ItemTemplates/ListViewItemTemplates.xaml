@@ -10,7 +10,7 @@
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedNetCoreLibrary"
     xmlns:theme="clr-namespace:AndreasReitberger.Shared.Core.Theme;assembly=SharedMauiCoreLibrary"
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"   
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
+    xmlns:iconsMaterialDesign="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
     >
     <converters:UriToStringConverter x:Key="UriToStringConverter" />
 
@@ -30,7 +30,7 @@
                 >
                 <Label 
                     Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.Check}"
+                    Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Check}"
                     TextColor="{StaticResource White}"
                     />
             </Border>
@@ -61,26 +61,26 @@
                 >
                 <Label.Style>
                     <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
-                        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AlertCircleOutline}"/>
+                        <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Warning}"/>
                         <Style.Triggers>
                             <!-- Info -->
                             <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Info">
-                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.InformationOutline}"/>
+                                <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Info}"/>
                                 <Setter Property="TextColor" Value="{StaticResource Blue}"/>
                             </DataTrigger>
                             <!-- Alert -->
                             <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Warning">
-                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AlertCircleOutline}"/>
+                                <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Warning}"/>
                                 <Setter Property="TextColor" Value="{StaticResource Yellow}"/>
                             </DataTrigger>
                             <!-- Error -->
                             <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Critical">
-                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.CloseCircleOutline}"/>
+                                <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Close}"/>
                                 <Setter Property="TextColor" Value="{StaticResource Red}"/>
                             </DataTrigger>
                             <!-- Performance -->
                             <DataTrigger TargetType="Label" Binding="{Binding Level}" Value="Performance">
-                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.Speedometer}"/>
+                                <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Speed}"/>
                                 <Setter Property="TextColor" Value="{StaticResource LightGreen}"/>
                             </DataTrigger>
                         </Style.Triggers>
@@ -160,7 +160,7 @@
                 >
                 <Label.Style>
                     <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
-                        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.Check}"/>
+                        <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Check}"/>
                         <Setter Property="TextColor" Value="{StaticResource Green}"/>
                         <Style.Triggers>
                             <DataTrigger
@@ -168,7 +168,7 @@
                                 Value="False"
                                 TargetType="Label"
                                 >
-                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AccountBadge}"/>
+                                <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Badge}"/>
                                 <Setter Property="TextColor" Value="{StaticResource Orange}"/>
                             </DataTrigger>
                         </Style.Triggers>
@@ -235,7 +235,7 @@
                 >
                 <Label.Style>
                     <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
-                        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.Check}"/>
+                        <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Check}"/>
                         <Setter Property="TextColor" Value="{StaticResource Green}"/>
                         <Style.Triggers>
                             <DataTrigger
@@ -243,7 +243,7 @@
                                 Value="False"
                                 TargetType="Label"
                                 >
-                                <Setter Property="Text" Value="{x:Static icons:MaterialIcons.AccountBadge}"/>
+                                <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Badge}"/>
                                 <Setter Property="TextColor" Value="{StaticResource Orange}"/>
                             </DataTrigger>
                         </Style.Triggers>

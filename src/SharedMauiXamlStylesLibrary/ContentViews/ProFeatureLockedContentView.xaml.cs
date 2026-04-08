@@ -1,6 +1,3 @@
-using AndreasReitberger.Shared.FontIcons;
-using System.Windows.Input;
-
 namespace AndreasReitberger.Shared.ContentViews;
 
 public partial class ProFeatureLockedContentView : ContentView
@@ -19,8 +16,10 @@ public partial class ProFeatureLockedContentView : ContentView
     }
     #endregion
 
+    #region Ctor
     public ProFeatureLockedContentView()
     {
         InitializeComponent();
     }
+    #endregion
 }

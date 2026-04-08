@@ -6,6 +6,7 @@
     
     xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsMaterialDesign="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
     >
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
@@ -54,7 +55,7 @@
     </Style>
 
     <Style x:Key="Style.Syncfusion.SfTabItem.Icon.MaterialDesign" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.SfTabItem.Default}">
-        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}"/>
+        <Setter Property="FontFamily" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FontFamily}"/>
         <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
     </Style>
 

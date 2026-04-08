@@ -10,8 +10,7 @@
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedNetCoreLibrary"
 
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
-    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
+    xmlns:iconsMaterialDesign="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
     
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"
@@ -27,10 +26,10 @@
             <Label Margin="10,4">
                 <Label.Style>
                     <Style TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon}">
-                        <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.Dropdown}"/>
+                        <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.ArrowDropDown}"/>
                         <Style.Triggers>
                             <DataTrigger TargetType="Label" Binding="{Binding IsExpand}" Value="True">
-                                <Setter Property="Text" Value="{x:Static iconsSyncfusion:SyncfusionIcons.UpArrow}"/>
+                                <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.ArrowDropUp}"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>

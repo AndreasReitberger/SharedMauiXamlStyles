@@ -9,7 +9,7 @@
     xmlns:documentation="clr-namespace:AndreasReitberger.Shared.Core.Documentation;assembly=SharedNetCoreLibrary"
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedNetCoreLibrary"
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsMaterialDesign="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
     
     xmlns:controls="clr-namespace:AndreasReitberger.Shared.Syncfusion.Controls"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
@@ -22,7 +22,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Delete">
         <Label
             Style="{StaticResource Style.Core.Label.Icon}"
-            Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+            Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Delete}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -42,7 +42,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Edit">
         <Label
             Style="{StaticResource Style.Core.Label.Icon}"
-            Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+            Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
             TextColor="{StaticResource White}"
             Background="{StaticResource Green}"
             VerticalTextAlignment="Center"
@@ -62,7 +62,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.View">
         <Label
             Style="{StaticResource Style.Core.Label.Icon}"
-            Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
+            Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.OpenWith}"
             TextColor="{StaticResource White}"
             Background="{StaticResource Blue}"
             VerticalTextAlignment="Center"
@@ -82,7 +82,27 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print3d">
         <Label
             Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-            Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
+            Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Glyph3DRotation}"
+            TextColor="{StaticResource White}"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            Background="{StaticResource Green}"
+            Margin="0"
+            >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Command="{Binding BindingContext.PrintItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                    CommandParameter="{Binding .}"
+                    />
+            </Label.GestureRecognizers>
+        </Label>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print">
+        <Label
+            Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
+            Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Print}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -102,7 +122,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Execute">
         <Label
             Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-            Text="{x:Static icons:MaterialIcons.RunFast}"
+            Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Terminal}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -122,7 +142,7 @@
     <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Export">
         <Label
             Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-            Text="{x:Static icons:MaterialIcons.FileExportOutline}"
+            Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Publish}"
             TextColor="{StaticResource White}"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
@@ -146,7 +166,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Delete}"
                 TextColor="{StaticResource White}"
                 Background="{StaticResource Red}"
                 VerticalTextAlignment="Center"
@@ -164,7 +184,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
                 TextColor="{StaticResource White}"
                 Background="{StaticResource Green}"
                 VerticalTextAlignment="Center"
@@ -188,7 +208,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.FileExplorer}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.ImportExport}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -206,7 +226,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -230,7 +250,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Delete}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -248,7 +268,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -266,7 +286,7 @@
             <Label
                 Grid.Column="2"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.OpenInFull}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -290,7 +310,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Delete}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -308,7 +328,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.OpenInFull}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -332,7 +352,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -350,7 +370,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.OpenInNew}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -374,7 +394,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -392,7 +412,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Show}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.OpenInNew}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -410,7 +430,7 @@
             <Label
                 Grid.Column="2"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Delete}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -428,13 +448,13 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print3dView">
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.PrintView">
         <Grid
             ColumnDefinitions="*,*"
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.Printer3dNozzleOutline}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Print}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -452,7 +472,49 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.EyeOutline}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.OpenInFull}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0"
+                Background="{StaticResource Blue}"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.ViewItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DataTemplate.Syncfusion.Swipe.Print3dView">
+        <Grid
+            ColumnDefinitions="*,*"
+            >
+            <Label
+                Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Glyph3DRotation}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Background="{StaticResource Green}"
+                Margin="0"
+                >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Command="{Binding BindingContext.PrintItemCommand, Source={x:RelativeSource AncestorType={x:Type listView:SfListView}, AncestorLevel=1}}"
+                        CommandParameter="{Binding .}"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="1"
+                Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.OpenInFull}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -476,7 +538,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.RunFast}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Terminal}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -494,7 +556,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                Text="{x:Static icons:MaterialIcons.PencilOutline}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -518,7 +580,7 @@
             >
             <Label
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Viewed}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.ControlPointDuplicate}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -536,7 +598,7 @@
             <Label
                 Grid.Column="1"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Edit}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Edit}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
@@ -554,7 +616,7 @@
             <Label
                 Grid.Column="2"
                 Style="{StaticResource Style.Core.Label.Icon}"
-                Text="{x:Static iconsSyncfusion:SyncfusionIcons.Delete}"
+                Text="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.Delete}"
                 TextColor="{StaticResource White}"
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"

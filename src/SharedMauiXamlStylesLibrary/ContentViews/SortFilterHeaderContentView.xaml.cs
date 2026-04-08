@@ -1,4 +1,4 @@
-using AndreasReitberger.Shared.FontIcons;
+using IconFont.Maui.MaterialDesignIcons;
 using System.Windows.Input;
 
 namespace AndreasReitberger.Shared.ContentViews;
@@ -11,15 +11,15 @@ public partial class SortFilterHeaderContentView : ContentView
 
     public static readonly BindableProperty ShowFilterButtonProperty = BindableProperty.Create(nameof(ShowFilterButton), typeof(bool), typeof(SortFilterHeaderContentView), true);
 
-    public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SortFilterHeaderContentView), "MaterialDesignIcons");
+    public static readonly BindableProperty ButtonIconFontFamilyProperty = BindableProperty.Create(nameof(ButtonIconFontFamily), typeof(string), typeof(SortFilterHeaderContentView), MaterialDesignIconsOutlinedRegular.FontFamily);
     public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(SortFilterHeaderContentView), null);
 
     public static readonly BindableProperty SortButtonTextProperty = BindableProperty.Create(nameof(SortButtonText), typeof(string), typeof(SortFilterHeaderContentView), string.Empty);
     public static readonly BindableProperty FilterButtonTextProperty = BindableProperty.Create(nameof(FilterButtonText), typeof(string), typeof(SortFilterHeaderContentView), string.Empty);
 
-    public static readonly BindableProperty SortButtonIconTextProperty = BindableProperty.Create(nameof(SortButtonIconText), typeof(string), typeof(SortFilterHeaderContentView), MaterialIcons.Sort);
-    public static readonly BindableProperty FilterButtonIconTextProperty = BindableProperty.Create(nameof(FilterButtonIconText), typeof(string), typeof(SortFilterHeaderContentView), MaterialIcons.Filter);
-    public static readonly BindableProperty ClearButtonIconTextProperty = BindableProperty.Create(nameof(ClearButtonIconText), typeof(string), typeof(SortFilterHeaderContentView), MaterialIcons.Close);
+    public static readonly BindableProperty SortButtonIconTextProperty = BindableProperty.Create(nameof(SortButtonIconText), typeof(string), typeof(SortFilterHeaderContentView), MaterialDesignIconsOutlinedRegular.Sort);
+    public static readonly BindableProperty FilterButtonIconTextProperty = BindableProperty.Create(nameof(FilterButtonIconText), typeof(string), typeof(SortFilterHeaderContentView), MaterialDesignIconsOutlinedRegular.Filter);
+    public static readonly BindableProperty ClearButtonIconTextProperty = BindableProperty.Create(nameof(ClearButtonIconText), typeof(string), typeof(SortFilterHeaderContentView), MaterialDesignIconsOutlinedRegular.Close);
 
     public static readonly BindableProperty SortButtonCommandProperty = BindableProperty.Create(nameof(SortButtonCommand), typeof(ICommand), typeof(SortFilterHeaderContentView), null);
     public static readonly BindableProperty FilterButtonCommandProperty = BindableProperty.Create(nameof(FilterButtonCommand), typeof(ICommand), typeof(SortFilterHeaderContentView), null);
@@ -118,8 +118,10 @@ public partial class SortFilterHeaderContentView : ContentView
     }
     #endregion
 
+    #region Ctor
     public SortFilterHeaderContentView()
     {
         InitializeComponent();
     }
+    #endregion
 }

@@ -7,8 +7,7 @@
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     xmlns:contentViews="clr-namespace:AndreasReitberger.Shared.ContentViews;assembly=SharedMauiXamlStylesLibrary"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
-    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    xmlns:iconsMaterialDesign="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
     
     Title="TemplatePage"
     Style="{StaticResource Style.Core.ContentPage.Default}"
@@ -41,22 +40,22 @@
                     </Label.FormattedText>
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
-                                NumberOfTapsRequired="1"
-                                />
+                            NumberOfTapsRequired="1"
+                            />
                     </Label.GestureRecognizers>
                 </Label>
                 <Label
-                        IsVisible="{Binding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Start"
-                        Text="Login"
-                        Style="{StaticResource Style.Core.Label.Header}"
-                        >
+                    IsVisible="{Binding IsLoggedIn, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    Text="Login"
+                    Style="{StaticResource Style.Core.Label.Header}"
+                    >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
-                                NumberOfTapsRequired="1"
-                                />
+                            NumberOfTapsRequired="1"
+                            />
                     </Label.GestureRecognizers>
                 </Label>
             </Grid>
@@ -72,7 +71,6 @@
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.Default}"
                 />
-
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

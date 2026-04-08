@@ -1,13 +1,18 @@
-﻿using Microsoft.Maui.Handlers;
+﻿using IconFont.Maui.MaterialDesignIcons;
+
+#if WINDOWS
+using Microsoft.Maui.Handlers;
+#endif
 
 namespace AndreasReitberger.Shared.Hosting
 {
-    public static class AppHostBuilderExtensions
+    public static partial class AppHostBuilderExtensions
     {
         public static MauiAppBuilder InitializeSharedMauiStyles(this MauiAppBuilder builder)
         {
             builder
                 .RegisterSharedFonts()
+                .UseMaterialDesignIcons()
                 ;
             ConfigureSharedStyleMappers();
             return builder;
@@ -15,6 +20,7 @@ namespace AndreasReitberger.Shared.Hosting
 
         public static MauiAppBuilder RegisterSharedFonts(this MauiAppBuilder builder)
         {
+            // Register all other fonts
             builder
                 .ConfigureFonts(fonts =>
                 {
