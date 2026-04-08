@@ -77,11 +77,13 @@
             <ShellContent
                 Title="Material Design Icons"
                 ContentTemplate="{DataTemplate views:MaterialDesignIconLabelsPage}"
-                Route="MaterialDesignIconLabelsPage" />
+                Route="MaterialDesignIconLabelsPage" 
+                />
             <ShellContent
                 Title="Tabler Icon"
                 ContentTemplate="{DataTemplate views:TablerIconLabelsPage}"
-                Route="TablerIconLabelsPage" />
+                Route="TablerIconLabelsPage" 
+                />
         </Tab>
     </FlyoutItem>
     <ShellContent
