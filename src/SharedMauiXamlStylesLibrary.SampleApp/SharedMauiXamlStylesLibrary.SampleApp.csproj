@@ -68,6 +68,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\TablerIconLabelsPage.xaml.cs">
+	    <DependentUpon>TablerIconLabelsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\MaterialDesignIconLabelsPage.xaml.cs">
+	    <DependentUpon>MaterialDesignIconLabelsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SfNumericEntry.xaml.cs">
 	    <DependentUpon>SfNumericEntry.xaml</DependentUpon>
 	  </Compile>
@@ -174,6 +180,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Themes\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TablerIconLabelsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MaterialDesignIconLabelsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfNumericEntry.xaml">

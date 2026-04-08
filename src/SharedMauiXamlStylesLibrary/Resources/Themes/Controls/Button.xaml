@@ -192,108 +192,6 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Style.Core.Button.Icon.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Default}">
-        <Setter Property="FontFamily" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FontFamily}" />
-    </Style>
-
-    <Style x:Key="Style.Core.Button.Icon.Transparent.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Default.Transparent}">
-        <Setter Property="FontFamily" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FontFamily}" />
-    </Style>
-
-    <Style x:Key="Style.Core.Button.Icon.MaterialDesign.Critical" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Transparent.MaterialDesign}">
-        <Setter Property="Background" Value="{StaticResource Transparent}" />
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Yellow}, Dark={StaticResource Yellow}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="PointerOver" >
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="Transparent" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Yellow100Accent}, Dark={StaticResource Yellow100Accent}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="Transparent" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-    </Style>
-
-    <Style x:Key="Style.Core.Button.Icon.MaterialDesign.Error" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Transparent.MaterialDesign}">
-        <Setter Property="Background" Value="{StaticResource Transparent}" />
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Light_Error}, Dark={StaticResource Dark_Error}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="PointerOver" >
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="Transparent" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Light_Error}, Dark={StaticResource Dark_Error}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="Transparent" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-    </Style>
-
-    <Style x:Key="Style.Core.Button.IconSmall.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
-        <Setter Property="FontSize" Value="{StaticResource SmallIconSize}" />
-        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
-        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
-    </Style>
-
-    <Style x:Key="Style.Core.Button.IconSmall.Transparent.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Transparent.MaterialDesign}">
-        <Setter Property="FontSize" Value="{StaticResource SmallIconSize}" />
-        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
-        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=48, Tablet=48, Default=40}" />
-    </Style>
-
-    <Style x:Key="Style.Core.Button.IconPrimary.MaterialDesign" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
-        <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
-        <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="PointerOver">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{DynamicResource PrimaryDarkenColor}" />
-                            <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-    </Style>
-
     <Style x:Key="Style.Core.Button.Link" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="Background" Value="{StaticResource Transparent}"/>
         <Setter Property="BorderWidth" Value="0" />
@@ -357,68 +255,6 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Style.Core.Button.IconRound.MaterialDesign" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}" TargetType="Button">
-        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
-        <Setter Property="FontSize" Value="{StaticResource LargeTextSize}" />
-        <Setter Property="BorderWidth" Value="1" />
-        <Setter Property="HeightRequest" Value="{OnIdiom Desktop=64, Tablet=64, Default=50}" />
-        <Setter Property="WidthRequest" Value="{OnIdiom Desktop=64, Tablet=64, Default=50}" />
-        <Setter Property="CornerRadius" Value="{OnIdiom Desktop=32, Tablet=32, Default=25}" />
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
-                            <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="PointerOver">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
-                            <Setter Property="TextColor" Value="{Binding x:DataType='Button', Source={RelativeSource Self}, Path=Background, Converter={StaticResource BrushToBlackWhiteConverter}}" />
-                            <Setter Property="BorderColor" Value="{DynamicResource PrimaryDarkenColor}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-    </Style>
-
-    <Style x:Key="Style.Core.Button.IconRound.MaterialDesign.Transparent" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.IconRound.MaterialDesign}">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderWidth" Value="0" />
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="PointerOver">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="Transparent" />
-                            <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-    </Style>
-    
     <Style x:Key="Style.Core.Button.RoundedLong" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Default}">
         <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBold}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
@@ -489,11 +325,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Style.Core.Button.IconRound.EmergencyStop" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.MaterialDesign}">
+    <Style x:Key="Style.Core.Button.IconRound.EmergencyStop" TargetType="Button" BasedOn="{StaticResource Style.Core.Button.Icon.Default}">
         <Setter Property="Background" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
         <Setter Property="TextColor" Value="{StaticResource White}" />
-        <Setter Property="Text" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FrontHand}" />
         <Setter Property="BorderWidth" Value="3" />
         <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />

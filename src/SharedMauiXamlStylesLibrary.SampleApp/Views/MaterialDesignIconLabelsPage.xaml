@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SharedMauiXamlStylesLibrary.SampleApp.Views.MaterialDesignIconLabelsPage"
+    
+    xmlns:glyph="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.Icons"
+    xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
+    
+    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
+    
+    Title="MaterialDesignIconLabelsPage"
+    Style="{StaticResource Style.Core.ContentPage.Default}"
+    x:DataType="viewModels:IconLablesPageViewModel"   
+    >
+    <Grid
+        RowDefinitions="Auto,*"
+        Padding="20,0"
+        >
+        <VerticalStackLayout
+            Spacing="8"
+            >
+            <Label
+                Text="Material Design Icons"
+                Style="{StaticResource Style.Core.Label.Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                />
+            <Label
+                Text="Outline"
+                Style="{StaticResource Style.Core.Label.Medium}"
+                />
+        </VerticalStackLayout>
+
+        <CollectionView
+            Grid.Row="1"
+            ItemsSource="{Binding Icons}"
+            SelectionMode="None"
+            Margin="0,16,0,0"
+            ItemSizingStrategy="MeasureAllItems"
+            >
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical">
+                    <GridItemsLayout.Span>
+                        <OnPlatform x:TypeArguments="x:Int32">
+                            <On Platform="iOS,Android" Value="2" />
+                            <On Platform="MacCatalyst,WinUI" Value="4" />
+                        </OnPlatform>
+                    </GridItemsLayout.Span>
+                </GridItemsLayout>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="glyph:IconGlyph">
+                    <Grid
+                        Padding="8"
+                        RowDefinitions="Auto,Auto"
+                        ColumnDefinitions="*"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        >
+                        <Label
+                            Grid.Row="0"
+                            Text="{Binding Glyph}"
+                            FontFamily="{Binding FontFamily}"
+                            FontSize="32"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                        <Label 
+                            Grid.Row="1"
+                            Text="{Binding Identifier}"
+                            HorizontalTextAlignment="Center"
+                            LineBreakMode="CharacterWrap"
+                            MaxLines="2" 
+                            Style="{StaticResource Style.Core.Label.VerySmall}"
+                            />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
