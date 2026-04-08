@@ -34,7 +34,7 @@
 	<ItemGroup>
 		<None Include="SharedMauiXamlStylesLibrary.targets" Pack="true" PackagePath="buildTransitive" />
 		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive" />
-		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.targets" />
+		<!--<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.targets" />-->
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -148,7 +148,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.50,)" />
 		<PackageReference Include="SharedMauiCoreLibrary" Version="1.2.5" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />
-		<PackageReference Include="IconFont.Maui.MaterialDesignIcons" Version="1.0.0" />
+		<PackageReference Include="IconFont.Maui.MaterialDesignIcons" Version="1.0.1" />
 	</ItemGroup>
 
 	<!-- https://github.com/mattleibow/PackagingMauiAssets/blob/main/MauiLibrary/MauiLibrary.csproj -->

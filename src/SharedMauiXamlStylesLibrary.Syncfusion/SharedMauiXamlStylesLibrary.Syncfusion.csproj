@@ -30,7 +30,7 @@
 	<ItemGroup>
 		<None Include="SharedMauiXamlStylesLibrary.Syncfusion.targets" Pack="true" PackagePath="buildTransitive" />
 		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive" />
-		<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.Syncfusion.targets" />
+		<!--<None Include="..\..\PackMauiAssets.targets" Pack="true" PackagePath="buildTransitive/SharedMauiXamlStylesLibrary.Syncfusion.targets" />-->
 	</ItemGroup>
 	
 	<ItemGroup>
