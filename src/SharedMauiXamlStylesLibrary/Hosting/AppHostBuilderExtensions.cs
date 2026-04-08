@@ -1,4 +1,5 @@
 ﻿using IconFont.Maui.MaterialDesignIcons;
+using IconFont.Maui.TablerIcons;
 
 #if WINDOWS
 using Microsoft.Maui.Handlers;
@@ -13,6 +14,7 @@ namespace AndreasReitberger.Shared.Hosting
             builder
                 .RegisterSharedFonts()
                 .UseMaterialDesignIcons()
+                .UseTablerIcons()
                 ;
             ConfigureSharedStyleMappers();
             return builder;

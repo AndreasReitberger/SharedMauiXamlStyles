@@ -5,6 +5,7 @@ using AndreasReitberger.Shared.Core.Hosting;
 using AndreasReitberger.Shared.Core.Localization;
 using SharedMauiXamlStylesLibrary.SampleApp.ViewModels;
 using SharedMauiXamlStylesLibrary.SampleApp.Views;
+using CommunityToolkit.Maui;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
 {
@@ -17,7 +18,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         {
             builder
                 .RegisterDispatcher()
-                .RegisterMainViewModels()
                 .RegisterMainViews()
                 .ConfigureLocalizationManager([
                     //https://www.fincher.org/Utilities/CountryLanguageList.shtml
@@ -39,81 +39,46 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         /// </summary>
         /// <param name="builder"></param>
         /// <returns>MauiAppBuilder</returns>
-        public static MauiAppBuilder RegisterMainViewModels(this MauiAppBuilder builder)
-        {
-            // Main view models
-            builder.Services.AddSingleton<AppShellViewModel>();
-            builder.Services.AddSingleton<SfAccordionsPageViewModel>();
-            builder.Services.AddSingleton<ActivityIndicatorsPageViewModel>();
-            builder.Services.AddSingleton<BordersPageViewModel>();
-            builder.Services.AddSingleton<ButtonsPageViewModel>();
-            builder.Services.AddSingleton<CheckBoxesPageViewModel>();
-            builder.Services.AddSingleton<CollectionViewPageViewModel>();
-            builder.Services.AddSingleton<LablesPageViewModel>();
-            builder.Services.AddSingleton<LanguagesPageViewModel>();
-            builder.Services.AddSingleton<SfComboBoxesPageViewModel>();
-            builder.Services.AddSingleton<EntryPageViewModel>();
-            builder.Services.AddSingleton<BoxViewsPageViewModel>();
-            builder.Services.AddSingleton<GridsPageViewModel>();
-            builder.Services.AddSingleton<EditorsPageViewModel>();
-            builder.Services.AddSingleton<PickersPageViewModel>();
-            builder.Services.AddSingleton<ProgressBarsPageViewModel>();
-            builder.Services.AddSingleton<SlidersPageViewModel>();
-            builder.Services.AddSingleton<SwitchesPageViewModel>();
-            builder.Services.AddSingleton<SfCheckBoxesPageViewModel>();
-            builder.Services.AddSingleton<SfExpandersPageViewModel>();
-            builder.Services.AddSingleton<SfSchedulerCalendarPageViewModel>();
-            builder.Services.AddSingleton<SfSegmentedControlPageViewModel>();
-            builder.Services.AddSingleton<SfShimmerPageViewModel>();
-            builder.Services.AddSingleton<SfSignaturePadPageViewModel>();
-            builder.Services.AddSingleton<SfTreeMapPadPageViewModel>();
-            builder.Services.AddSingleton<SfTabViewPageViewModel>();
-            builder.Services.AddSingleton<TemplatePageViewModel>();
-            builder.Services.AddSingleton<SfListViewPageViewModel>();
-            builder.Services.AddSingleton<SfProgressBarPageViewModel>();
-            builder.Services.AddSingleton<SfStepProgressBarViewModel>();
-            builder.Services.AddSingleton<SfTextInputLayoutsPageViewModel>();
-            return builder;
-        }
         public static MauiAppBuilder RegisterMainViews(this MauiAppBuilder builder)
         {
             // Example: https://github.com/microsoft/dotnet-podcasts/blob/main/src/Mobile/Pages/PagesExtensions.cs
-            builder.Services.AddSingleton<AppShell>();
+            builder.Services.AddSingleton<AppShell, AppShellViewModel>();
             // Main view models
-            builder.Services.AddSingleton<SfAccordionsPage>();
-            builder.Services.AddSingleton<ActivityIndicatorsPage>();
-            builder.Services.AddSingleton<BordersPage>();
-            builder.Services.AddSingleton<ButtonsPage>();
-            builder.Services.AddSingleton<BoxViewsPage>();
-            builder.Services.AddSingleton<CheckBoxesPage>();
-            builder.Services.AddSingleton<CollectionViewPage>();
-            builder.Services.AddSingleton<SfComboBoxesPage>();
-            builder.Services.AddSingleton<EntryPage>();
-            builder.Services.AddSingleton<FontSizePage>();
-            builder.Services.AddSingleton<LabelsPage>();
-            builder.Services.AddSingleton<LanguagesPage>();
-            builder.Services.AddSingleton<GridsPage>();
-            builder.Services.AddSingleton<EditorsPage>();
-            builder.Services.AddSingleton<PickersPage>();
-            builder.Services.AddSingleton<ProgressBarsPage>();
-            builder.Services.AddSingleton<SlidersPage>();
-            builder.Services.AddSingleton<SwitchesPage>();
-            builder.Services.AddSingleton<SfCheckBoxesPage>();
-            builder.Services.AddSingleton<SfExpandersPage>();
-            builder.Services.AddSingleton<SfNumericEntry>();
-            builder.Services.AddSingleton<SfSchedulerCalendarPage>();
-            builder.Services.AddSingleton<SfSegmentedControlPage>();
-            builder.Services.AddSingleton<SfShimmerPage>();
-            builder.Services.AddSingleton<SfSignaturePadPage>();
-            builder.Services.AddSingleton<SfTreeMapPadPage>();
-            builder.Services.AddSingleton<SfTabViewPage>();
-            builder.Services.AddSingleton<SfTemplatePage>();
-            builder.Services.AddSingleton<SfListViewPage>();
-            builder.Services.AddSingleton<SfProgressBarPage>();
-            builder.Services.AddSingleton<SfStepProgressBar>();
-            builder.Services.AddSingleton<SfTextInputLayoutsPage>();
-            builder.Services.AddSingleton<TemplatePage>();
-            builder.Services.AddSingleton<SfTextInputLayoutsPage>();
+            builder.Services.AddSingleton<SfAccordionsPage, SfAccordionsPageViewModel>();
+            builder.Services.AddSingleton<ActivityIndicatorsPage, ActivityIndicatorsPageViewModel>();
+            builder.Services.AddSingleton<BordersPage, BordersPageViewModel>();
+            builder.Services.AddSingleton<ButtonsPage, ButtonsPageViewModel>();
+            builder.Services.AddSingleton<BoxViewsPage, BoxViewsPageViewModel>();
+            builder.Services.AddSingleton<CheckBoxesPage, CheckBoxesPageViewModel>();
+            builder.Services.AddSingleton<CollectionViewPage, CollectionViewPageViewModel>();
+            builder.Services.AddSingleton<EntryPage, EntryPageViewModel>();
+            builder.Services.AddSingleton<FontSizePage, LablesPageViewModel>();
+            builder.Services.AddSingleton<LabelsPage, LablesPageViewModel>();
+            builder.Services.AddSingleton<MaterialDesignIconLabelsPage, IconLablesPageViewModel>();
+            builder.Services.AddSingleton<TablerIconLabelsPage, IconLablesPageViewModel>();
+            builder.Services.AddSingleton<LanguagesPage, LanguagesPageViewModel>();
+            builder.Services.AddSingleton<GridsPage, GridsPageViewModel>();
+            builder.Services.AddSingleton<EditorsPage, EditorsPageViewModel>();
+            builder.Services.AddSingleton<PickersPage, PickersPageViewModel>();
+            builder.Services.AddSingleton<ProgressBarsPage, ProgressBarsPageViewModel>();
+            builder.Services.AddSingleton<SlidersPage, SlidersPageViewModel>();
+            builder.Services.AddSingleton<SwitchesPage, SwitchesPageViewModel>();
+            builder.Services.AddSingleton<SfCheckBoxesPage, SfCheckBoxesPageViewModel>();
+            builder.Services.AddSingleton<SfComboBoxesPage, SfComboBoxesPageViewModel>();
+            builder.Services.AddSingleton<SfExpandersPage, SfExpandersPageViewModel>();
+            builder.Services.AddSingleton<SfNumericEntry, EntryPageViewModel>();
+            builder.Services.AddSingleton<SfSchedulerCalendarPage, SfSchedulerCalendarPageViewModel>();
+            builder.Services.AddSingleton<SfSegmentedControlPage, SfSegmentedControlPageViewModel>();
+            builder.Services.AddSingleton<SfShimmerPage, SfShimmerPageViewModel>();
+            builder.Services.AddSingleton<SfSignaturePadPage, SfSignaturePadPageViewModel>();
+            builder.Services.AddSingleton<SfTreeMapPadPage, SfTreeMapPadPageViewModel>();
+            builder.Services.AddSingleton<SfTabViewPage, SfTabViewPageViewModel>();
+            builder.Services.AddSingleton<SfTemplatePage, TemplatePageViewModel>();
+            builder.Services.AddSingleton<SfListViewPage, SfListViewPageViewModel>();
+            builder.Services.AddSingleton<SfProgressBarPage, SfProgressBarPageViewModel>();
+            builder.Services.AddSingleton<SfStepProgressBar, SfStepProgressBarViewModel>();
+            builder.Services.AddSingleton<SfTextInputLayoutsPage, SfTextInputLayoutsPageViewModel>();
+            builder.Services.AddSingleton<TemplatePage, TemplatePageViewModel>();
 
             return builder;
         }

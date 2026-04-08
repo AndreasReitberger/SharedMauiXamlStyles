@@ -130,7 +130,25 @@
 	  <MauiXaml Update="ContentViews\TitleViewAccountContentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Button.TablerIcons.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Button.MaterialDesignWeb.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Button.MaterialDesign.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\CollectionView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Label.TablerIcons.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Label.MaterialDesign.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Themes\Controls\Label.MaterialDesignWeb.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Themes\Controls\TitleBar.xaml">
@@ -145,6 +163,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+		<PackageReference Include="IconFont.Maui.TablerIcons" Version="1.0.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.50,)" />
 		<PackageReference Include="SharedMauiCoreLibrary" Version="1.2.5" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />

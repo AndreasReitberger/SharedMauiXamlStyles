@@ -69,6 +69,21 @@
         Title="Labels"
         ContentTemplate="{DataTemplate views:LabelsPage}"
         Route="LabelsPage" />
+
+    <FlyoutItem
+        Title="Icons"
+        >
+        <Tab>
+            <ShellContent
+                Title="Material Design Icons"
+                ContentTemplate="{DataTemplate views:MaterialDesignIconLabelsPage}"
+                Route="MaterialDesignIconLabelsPage" />
+            <ShellContent
+                Title="Tabler Icon"
+                ContentTemplate="{DataTemplate views:TablerIconLabelsPage}"
+                Route="TablerIconLabelsPage" />
+        </Tab>
+    </FlyoutItem>
     <ShellContent
         Title="Pickers"
         ContentTemplate="{DataTemplate views:PickersPage}"
