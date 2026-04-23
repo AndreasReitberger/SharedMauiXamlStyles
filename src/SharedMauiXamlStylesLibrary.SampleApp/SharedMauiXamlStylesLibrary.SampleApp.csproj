@@ -63,6 +63,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary.Syncfusion.Toolkit\SharedMauiXamlStylesLibrary.Syncfusion.Toolkit.csproj" />
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary.Syncfusion\SharedMauiXamlStylesLibrary.Syncfusion.csproj" />
 	  <ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
 	</ItemGroup>
@@ -103,6 +104,9 @@
 	  </Compile>
 	  <Compile Update="Views\SfTemplatePage.xaml.cs">
 	    <DependentUpon>SfTemplatePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SyncfusionToolkitPage.xaml.cs">
+	    <DependentUpon>SyncfusionToolkitPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\TemplatePage.xaml.cs">
 	    <DependentUpon>TemplatePage.xaml</DependentUpon>
@@ -216,6 +220,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SfTemplatePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SyncfusionToolkitPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TemplatePage.xaml">

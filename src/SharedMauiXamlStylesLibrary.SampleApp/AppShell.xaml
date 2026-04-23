@@ -69,7 +69,6 @@
         Title="Labels"
         ContentTemplate="{DataTemplate views:LabelsPage}"
         Route="LabelsPage" />
-
     <FlyoutItem
         Title="Icons"
         >
@@ -106,6 +105,11 @@
         Title="Templates"
         ContentTemplate="{DataTemplate views:TemplatePage}"
         Route="TemplatePage" />
+
+    <ShellContent
+        Title="Syncfusion MAUI Toolkit"
+        ContentTemplate="{DataTemplate views:SyncfusionToolkitPage}"
+        Route="SyncfusionToolkitPage" />
 
     <ShellContent
         Title="Templates (Syncfusion)"

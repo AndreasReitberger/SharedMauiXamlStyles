@@ -5,6 +5,7 @@
     xmlns:local="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp"     
     
     xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:toolkit="clr-namespace:AndreasReitberger.Shared.Syncfusion.Toolkit;assembly=SharedMauiXamlStylesLibrary.Syncfusion.Toolkit"
     xmlns:themes="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.Themes"
     
     x:Class="SharedMauiXamlStylesLibrary.SampleApp.App"
@@ -13,6 +14,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <themes:DefaultTheme />
+                <toolkit:DefaultTheme />
                 <ResourceDictionary Source="/Themes/DefaultColors.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

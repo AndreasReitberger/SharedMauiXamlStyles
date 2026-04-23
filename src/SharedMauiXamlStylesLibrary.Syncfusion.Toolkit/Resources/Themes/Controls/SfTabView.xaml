@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:tabView="clr-namespace:Syncfusion.Maui.Toolkit.TabView;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:iconsMaterialDesign="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.SfTabView.Default" TargetType="tabView:SfTabView">
+        <Setter Property="IndicatorBackground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+        <Setter Property="IndicatorPlacement" Value="Top"/>
+        <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />-->
+    </Style>
+
+    <Style TargetType="tabView:SfTabView" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfTabView.Default}" />
+
+    <Style x:Key="Style.Syncfusion.Toolkit.SfTabView.BlackWhite" TargetType="tabView:SfTabView" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfTabView.Default}">
+        <Setter Property="IndicatorBackground" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
+        <Setter Property="TabBarBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+        <Setter Property="IndicatorPlacement" Value="Top"/>
+        <!--<Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />-->
+    </Style>
+    
+    <Style x:Key="Style.Syncfusion.Toolkit.SfTabItem.Default" TargetType="tabView:SfTabItem">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratMedium}"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Normal" >
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray900}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+                            <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.SfTabItem.Icon.MaterialDesign" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfTabItem.Default}">
+        <Setter Property="FontFamily" Value="{x:Static iconsMaterialDesign:MaterialDesignIconsOutlinedRegular.FontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}" />
+    </Style>
+
+    <Style TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfTabItem.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.SfTabItem.BlackWhite" TargetType="tabView:SfTabItem" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfTabItem.Default}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Normal" >
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray900}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
