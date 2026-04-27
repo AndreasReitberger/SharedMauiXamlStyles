@@ -9,7 +9,7 @@
     <ResourceDictionary.MergedDictionaries>
         <shared:Colors />
         <shared:Fonts />
-        
-        <ResourceDictionary Source="/Resources/Themes/SharedFonts.xaml" />
+
+        <ResourceDictionary Source="/Resources/Themes/SharedStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

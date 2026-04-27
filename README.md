@@ -23,6 +23,7 @@ Get the latest version from nuget.org<br>
 | ----------------------------------- |:-----:| -------:|
 | SharedMauiXamlStyles                | [![NuGet](https://img.shields.io/nuget/v/SharedMauiXamlStylesLibrary.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary/)   | [![NuGet](https://img.shields.io/nuget/dt/SharedMauiXamlStylesLibrary.svg)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary)      |
 | SharedMauiXamlStyles.Syncfusion     | [![NuGet](https://img.shields.io/nuget/v/SharedMauiXamlStylesLibrary.Syncfusion.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion/)   | [![NuGet](https://img.shields.io/nuget/dt/SharedMauiXamlStylesLibrary.Syncfusion.svg)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion)      |
+| SharedMauiXamlStyles.Syncfusion.Toolkit (free)     | [![NuGet](https://img.shields.io/nuget/v/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit/)   | [![NuGet](https://img.shields.io/nuget/dt/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit.svg)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit)      |
 
 # IMPORTANT CHANGE
 Since putting all `FontKeys` in a `ResourceDictionary` leads to poor performance of the app, we moved all `FontKeys` to a static class instead.
