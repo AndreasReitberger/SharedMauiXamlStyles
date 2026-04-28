@@ -1,6 +1,7 @@
 ﻿using AndreasReitberger.Shared.Core.Hosting;
 using AndreasReitberger.Shared.Hosting;
 using AndreasReitberger.Shared.Syncfusion.Hosting;
+using AndreasReitberger.Shared.Syncfusion.Toolkit.Hosting;
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using SharedMauiXamlStylesLibrary.SampleApp.Hosting;
@@ -20,6 +21,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp
                 .ConfigureSyncfusionCore()
                 .InitializeSharedMauiStyles()
                 .InitializeSharedSyncfusionStyles()
+                .InitializeSharedSyncfusionToolkitStyles()
                 .ConfigureApp()
                 .ConfigureDispatching() //https://github.com/dotnet/maui/blob/main/src/Core/src/Hosting/Dispatching/AppHostBuilderExtensions.cs
                 .ConfigureFonts(fonts =>

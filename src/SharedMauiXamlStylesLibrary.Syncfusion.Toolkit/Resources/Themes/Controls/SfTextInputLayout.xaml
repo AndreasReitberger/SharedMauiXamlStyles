@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     
+    xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+        <ResourceDictionary Source="/Resources/Themes/Controls/SfPicker.xaml" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/Entry.xaml;assembly=SharedMauiXamlStylesLibrary" />
+        <ResourceDictionary Source="/Resources/Themes/Controls/DatePicker.xaml;assembly=SharedMauiXamlStylesLibrary" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!-- Docs: https://help.syncfusion.com/maui/textinputlayout/states-and-colors -->
+    <Style x:Key="Style.Syncfusion.Toolkit.SfTextInputLayout.Default" TargetType="inputLayout:SfTextInputLayout">
+        <Setter Property="ContainerType" Value="Outlined"/>
+        <Setter Property="LeadingViewPosition" Value="Inside"/>
+        <Setter Property="ContainerBackground" Value="{AppThemeBinding Light={StaticResource Gray50},Dark={StaticResource Gray950}}"/>
+        <Setter Property="HintLabelStyle">
+            <Setter.Value>
+                <inputLayout:LabelStyle
+                    FontSize="{OnPlatform iOS=10, Default=13}"
+                    FontFamily="{StaticResource MontserratRegular}"
+                    TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
+                    />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HelperLabelStyle">
+            <Setter.Value>
+                <inputLayout:LabelStyle
+                    FontSize="{OnPlatform iOS=10, Default=13}"
+                    FontFamily="{StaticResource MontserratRegular}"
+                    TextColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"
+                    />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ErrorLabelStyle">
+            <Setter.Value>
+                <inputLayout:LabelStyle
+                    FontSize="{OnPlatform iOS=10, Default=13}"
+                    FontFamily="{StaticResource MontserratRegular}"
+                    />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200},Dark={StaticResource Gray800}}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="{DynamicResource PrimaryColor}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Error">
+                        <VisualState.Setters>
+                            <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Light_Error},Dark={StaticResource Dark_Error}}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="inputLayout:SfTextInputLayout" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfTextInputLayout.Default}"/>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.DatePicker.SfTextInputLayout" TargetType="DatePicker" BasedOn="{StaticResource Style.Core.DatePicker.Default}">
+        <Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />
+    </Style>
+    
+    <Style x:Key="Style.Syncfusion.Toolkit.Entry.SfTextInputLayout" TargetType="Entry" BasedOn="{StaticResource Style.Core.Entry.Transparent}">
+        <!--<Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />-->
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.BorderlessEntry.SfTextInputLayout" TargetType="controls:BorderlessEntry" BasedOn="{StaticResource Style.Core.BorderlessEntry.Transparent}">
+        <!--<Setter Property="Background" Value="{Binding x:DataType='inputLayout:SfTextInputLayout', Source={RelativeSource AncestorType={x:Type inputLayout:SfTextInputLayout}}, Path=Background}" />-->
+    </Style>
+
+</ResourceDictionary>

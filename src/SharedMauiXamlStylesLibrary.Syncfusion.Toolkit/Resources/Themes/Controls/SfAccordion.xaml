@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     
+    xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
+    xmlns:expander="clr-namespace:Syncfusion.Maui.Toolkit.Accordion;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+        <shared:SharedConverters />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Docs: https://help.syncfusion.com/maui/accordion/ -->
+    <Style x:Key="Style.Syncfusion.Toolkit.SfAccordion.Default" TargetType="expander:SfAccordion">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.AccordionItem.Default" TargetType="expander:AccordionItem">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState Name="Expanded">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray950}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Collapsed">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <!--
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    -->
+                    <VisualState Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.AccordionItem.Primary" TargetType="expander:AccordionItem" BasedOn="{StaticResource Style.Syncfusion.Toolkit.AccordionItem.Default}">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState Name="Expanded">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="HeaderIconColor" Value="{Binding x:DataType='expander:AccordionItem', Source={RelativeSource Self}, Path=HeaderBackground, Converter={StaticResource ColorToBlackWhiteConverter}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Collapsed">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <!--
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    -->
+                    <VisualState Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}"/>
+                            <Setter Property="HeaderIconColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="expander:SfAccordion" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfAccordion.Default}"/>
+    <Style TargetType="expander:AccordionItem" BasedOn="{StaticResource Style.Syncfusion.Toolkit.AccordionItem.Default}"/>
+</ResourceDictionary>

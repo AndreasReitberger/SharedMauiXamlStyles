@@ -78,6 +78,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
             builder.Services.AddSingleton<SfProgressBarPage, SfProgressBarPageViewModel>();
             builder.Services.AddSingleton<SfStepProgressBar, SfStepProgressBarViewModel>();
             builder.Services.AddSingleton<SfTextInputLayoutsPage, SfTextInputLayoutsPageViewModel>();
+            builder.Services.AddSingleton<SyncfusionToolkitPage, SyncfusionToolkitPageViewModel>();
             builder.Services.AddSingleton<TemplatePage, TemplatePageViewModel>();
 
             return builder;

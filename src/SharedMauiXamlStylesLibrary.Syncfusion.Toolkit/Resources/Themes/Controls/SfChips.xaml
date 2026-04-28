@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     
+    xmlns:chips="clr-namespace:Syncfusion.Maui.Toolkit.Chips;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:shared="clr-namespace:AndreasReitberger.Shared;assembly=SharedMauiXamlStylesLibrary"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <shared:Colors />
+        <shared:Fonts />
+        <shared:FontSizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Docs: https://help.syncfusion.com/maui/chips -->
+    <!-- MissingFieldException: Field not found: 'Syncfusion.Maui.Core.SfChip.FontSizeProperty  on Net8? -->
+    <Style x:Key="Style.Syncfusion.Toolkit.SfChip.Default" TargetType="chips:SfChip">
+        <Setter Property="FontSize" Value="{StaticResource DefaultTextSize}" />
+        <Setter Property="FontFamily" Value="{StaticResource MontserratBold}" />
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="Padding" Value="2"/>
+    </Style>
+
+    <Style x:Key="Style.Syncfusion.Toolkit.SfChip.ColorSelection" TargetType="chips:SfChip" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfChip.Default}">
+        <Setter Property="WidthRequest" Value="140"/>
+        <Setter Property="HeightRequest" Value="30"/>
+        <Setter Property="ShowSelectionIndicator" Value="False"/>
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Transparent}" />
+    </Style>
+
+    <Style TargetType="chips:SfChip" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfChip.Default}"/>
+
+
+    <Style x:Key="Style.Syncfusion.Toolkit.SfChipGroup.Default" TargetType="chips:SfChipGroup">
+        <Setter Property="SelectionIndicatorColor" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="ChipTextColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="ChipBackground" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" />
+        <Setter Property="ChipTextSize" Value="{StaticResource DefaultTextSize}" />
+        <Setter Property="Background" Value="{StaticResource Transparent}" />
+        <Setter Property="SelectionIndicatorColor" Value="{StaticResource Pink}" />
+        <Setter Property="ChipLayout">
+            <Setter.Value>
+                <FlexLayout 
+					HorizontalOptions="Start" 
+					VerticalOptions="Center" 
+                    Direction="Row" 
+                    Wrap="Wrap"
+                    JustifyContent="Center"
+                    AlignContent="SpaceAround" 
+                    AlignItems="Center"
+					/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="chips:SfChipGroup" BasedOn="{StaticResource Style.Syncfusion.Toolkit.SfChipGroup.Default}"/>
+</ResourceDictionary>

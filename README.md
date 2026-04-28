@@ -23,6 +23,7 @@ Get the latest version from nuget.org<br>
 | ----------------------------------- |:-----:| -------:|
 | SharedMauiXamlStyles                | [![NuGet](https://img.shields.io/nuget/v/SharedMauiXamlStylesLibrary.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary/)   | [![NuGet](https://img.shields.io/nuget/dt/SharedMauiXamlStylesLibrary.svg)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary)      |
 | SharedMauiXamlStyles.Syncfusion     | [![NuGet](https://img.shields.io/nuget/v/SharedMauiXamlStylesLibrary.Syncfusion.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion/)   | [![NuGet](https://img.shields.io/nuget/dt/SharedMauiXamlStylesLibrary.Syncfusion.svg)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion)      |
+| SharedMauiXamlStyles.Syncfusion.Toolkit (free)     | [![NuGet](https://img.shields.io/nuget/v/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit/)   | [![NuGet](https://img.shields.io/nuget/dt/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit.svg)](https://www.nuget.org/packages/SharedMauiXamlStylesLibrary.Syncfusion.Toolkit)      |
 
 # IMPORTANT CHANGE
 Since putting all `FontKeys` in a `ResourceDictionary` leads to poor performance of the app, we moved all `FontKeys` to a static class instead.
@@ -431,6 +432,8 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 | ---------------------------------------|:-------------------:| ---------:|
 | Style.Core.TimePicker.Default          | TimePicker          | Core      |
 
+# Syncfusion
+
 ## SfAccordion
 
 | Key                                    | TargetType          | Library   |
@@ -556,6 +559,94 @@ https://github.com/AndreasReitberger/SharedMauiXamlStyles/issues/43
 | Key                                        | TargetType          | Library   |
 | -------------------------------------------|:-------------------:| ---------:|
 | Style.Syncfusion.SfTextInputLayout.Default | SfTextInputLayout   | Syncfusion|
+
+# Syncfusion Toolkit
+
+## SfAccordion
+
+| Key                                    | TargetType          | Library   |
+| ---------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfAccordion.Default   | SfAccordion         | Syncfusion.Toolkit|
+| Style.Syncfusion.Toolkit.AccordionItem.Default | AccordionItem       | Syncfusion.Toolkit|
+
+## SfButton
+
+| Key                                                | TargetType          | Library   |
+| ---------------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfButton.Default          | SfButton            | Syncfusion.Toolkit|
+
+## SfCard
+
+| Key                                                | TargetType          | Library   |
+| ---------------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfCard.Default          | SfCard            | Syncfusion.Toolkit|
+
+## SfChip
+
+| Key                                    | TargetType          | Library   |
+| ---------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfChip.Default        | SfChip              | Syncfusion.Toolkit|
+| Style.Syncfusion.Toolkit.SfChip.ColorSelection | SfChip              | Syncfusion.Toolkit|
+| Style.Syncfusion.Toolkit.SfChipGroup.Default   | SfChipGroup         | Syncfusion.Toolkit|
+
+## SfCircularProgressBar
+
+| Key                                           | TargetType          | Library   |
+| ----------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfCircularProgressBar.Default           | SfCircularProgressBar          | Syncfusion.Toolkit|
+
+## SfExpander
+
+| Key                                    | TargetType          | Library   |
+| ---------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfExpander.Default    | SfExpander          | Syncfusion.Toolkit|
+
+## SfLinearProgressBar
+
+| Key                                           | TargetType          | Library   |
+| ----------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfLinearProgressBar.Default           | SfLinearProgressBar          | Syncfusion.Toolkit|
+
+
+## SfNumericEntry
+
+| Key                                      | TargetType          | Library   |
+| -----------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfNumericEntry.Default  | SfNumericEntry      | Syncfusion.Toolkit|
+| Style.Syncfusion.Toolkit.SfNumericEntry.Currency | SfNumericEntry      | Syncfusion.Toolkit|
+| Style.Syncfusion.Toolkit.SfNumericEntry.Percent  | SfNumericEntry      | Syncfusion.Toolkit|
+
+## SfPicker
+
+| Key                                      | TargetType          | Library   |
+| -----------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfPicker.Default        | SfPicker            | Syncfusion.Toolkit|
+| Style.Syncfusion.Toolkit.SfDateTimePicker.Default| SfDateTimePicker    | Syncfusion.Toolkit|
+
+## SfSegmentedControl
+
+| Key                                    | TargetType          | Library   |
+| ---------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfSegmentedControl.Default      | SfSegmentedControl            | Syncfusion.Toolkit|
+
+## SfShimmer
+
+| Key                                    | TargetType          | Library   |
+| ---------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfShimmer.Default     | SfShimmer           | Syncfusion.Toolkit|
+
+## SfTabView
+
+| Key                                    | TargetType          | Library   |
+| ---------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfTabView.Default     | SfTabView           | Syncfusion.Toolkit|
+| Style.Syncfusion.Toolkit.SfTabItem.Default     | SfTabItem           | Syncfusion.Toolkit|
+
+## SfTextInputLayout
+
+| Key                                        | TargetType          | Library   |
+| -------------------------------------------|:-------------------:| ---------:|
+| Style.Syncfusion.Toolkit.SfTextInputLayout.Default | SfTextInputLayout   | Syncfusion.Toolkit|
 
 # Workarounds
 
