@@ -2,7 +2,7 @@
 <Project>
 	<Import Project="conditions.props" />
 	<PropertyGroup>
-		<Version>1.3.5-preview2</Version>
+		<Version>1.3.5-preview1</Version>
         <PackageIcon>ar_128.png</PackageIcon>
         <NeutralLanguage>en</NeutralLanguage>
         <PackageProjectUrl>https://github.com/AndreasReitberger/SharedMauiXamlStyles</PackageProjectUrl>
