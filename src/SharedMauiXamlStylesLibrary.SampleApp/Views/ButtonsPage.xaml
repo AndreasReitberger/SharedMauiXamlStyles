@@ -125,14 +125,14 @@
                         IsEnabled="{Binding Enabled}"
                         Grid.Column="1"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.PhonePlusOutline}"
+                        Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
                         Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                         />
                     <Button 
                         IsEnabled="{Binding Enabled}"
                         Grid.Column="2"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.ProgressCheck}"
+                        Text="{x:Static icons:MaterialIcons.ProgressCheck}"
                         Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                         />
                     <Button 
@@ -140,7 +140,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.ProgressCheck}"
+                        Text="{x:Static icons:MaterialIcons.ProgressCheck}"
                         Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                         />
                     <Button 
@@ -148,7 +148,7 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.AlertCircleCheckOutline}"
+                        Text="{x:Static icons:MaterialIcons.AlertCircleCheckOutline}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Critical}"
                         />
                     <Button 
@@ -156,7 +156,7 @@
                         Grid.Row="1"
                         Grid.Column="2"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.ScriptOutline}"
+                        Text="{x:Static icons:MaterialIcons.ScriptOutline}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Error}"
                         />
                     <Button 
@@ -164,7 +164,7 @@
                         Grid.Row="2"
                         Grid.Column="0"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.AccessPoint}"
+                        Text="{x:Static icons:MaterialIcons.AccessPoint}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign}"
                         />
                     <Button 
@@ -172,7 +172,7 @@
                         Grid.Row="2"
                         Grid.Column="1"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.Alert}"
+                        Text="{x:Static icons:MaterialIcons.Alert}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Critical}"
                         />
                     <Button 
@@ -180,7 +180,7 @@
                         Grid.Row="2"
                         Grid.Column="2"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialDesignIcons.Alert}"
+                        Text="{x:Static icons:MaterialIcons.Alert}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Error}"
                         />
                 </Grid>
