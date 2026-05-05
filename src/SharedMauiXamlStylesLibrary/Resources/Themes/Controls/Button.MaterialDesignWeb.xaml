@@ -191,7 +191,7 @@
         <Setter Property="Background" Value="{StaticResource Red}" />
         <Setter Property="BorderColor" Value="{StaticResource Yellow}" />
         <Setter Property="TextColor" Value="{StaticResource White}" />
-        <Setter Property="Text" Value="{x:Static icons:MaterialDesignIcons.HandBackRight}" />
+        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.HandBackRight}" />
         <Setter Property="BorderWidth" Value="3" />
         <Setter Property="HeightRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
         <Setter Property="WidthRequest" Value="{OnIdiom Tablet=70, Phone=50, Default=50}" />
@@ -203,7 +203,7 @@
         <Setter Property="ImageSource">
             <FontImageSource
                 FontFamily="{StaticResource MaterialDesignIcons}"
-                Glyph="{x:Static icons:MaterialDesignIcons.Google}"
+                Glyph="{x:Static icons:MaterialIcons.Google}"
                 Color="{DynamicResource PrimaryColor}"
                 Size="{StaticResource DefaultIconSize}"
                 />

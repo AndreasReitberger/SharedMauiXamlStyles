@@ -34,7 +34,7 @@
                     >
                     <Label
                         IsVisible="{Binding IsLoggedIn}"
-                        Text="{x:Static icons:MaterialDesignIcons.AccountOutline}"
+                        Text="{x:Static icons:MaterialIcons.AccountOutline}"
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                         />
                     <Label

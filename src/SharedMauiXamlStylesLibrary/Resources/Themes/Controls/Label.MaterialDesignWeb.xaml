@@ -51,7 +51,7 @@
 
     <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
         <Setter Property="Margin" Value="4,0,0,0" />
-        <Setter Property="Text" Value="{x:Static icons:MaterialDesignIcons.VectorSquare}" />
+        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.VectorSquare}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
     </Style>
 

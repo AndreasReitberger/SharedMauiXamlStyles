@@ -65,7 +65,7 @@
 
             <Label 
                 Margin="2,16"
-                Text="{x:Static icons:MaterialDesignIcons.HeartOutline}"
+                Text="{x:Static icons:MaterialIcons.HeartOutline}"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.IconPrimary.MaterialDesign}"

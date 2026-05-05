@@ -34,13 +34,13 @@
             <views:SortFilterHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 SortButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=SortCommand}"
-                SortButtonIconText="{x:Static icons:MaterialDesignIcons.Sort}"
+                SortButtonIconText="{x:Static icons:MaterialIcons.Sort}"
                 SortButtonText="Sort"
                 FilterButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=FilterCommand}"
-                FilterButtonIconText="{x:Static icons:MaterialDesignIcons.Filter}"
+                FilterButtonIconText="{x:Static icons:MaterialIcons.Filter}"
                 FilterButtonText="Filter"
                 ClearButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ClearFilterCommand}"
-                ClearButtonIconText="{x:Static icons:MaterialDesignIcons.Close}"
+                ClearButtonIconText="{x:Static icons:MaterialIcons.Close}"
                 IsFiltered="True"
                 />
         </DataTemplate>
@@ -48,10 +48,10 @@
             <views:SwitchHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
-                BackButtonIconText="{x:Static icons:MaterialDesignIcons.ArrowLeft}"
+                BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
                 BackButtonText=""
                 NextButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueNextCommand}"
-                NextButtonIconText="{x:Static icons:MaterialDesignIcons.ArrowRight}"
+                NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
                 NextButtonText=""
                 TitleLabelText="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=CurrentPage}"
                 />
@@ -60,10 +60,10 @@
             <views:SwitchHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
-                BackButtonIconText="{x:Static icons:MaterialDesignIcons.ArrowLeft}"
+                BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
                 BackButtonText=""
                 NextButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueNextCommand}"
-                NextButtonIconText="{x:Static icons:MaterialDesignIcons.ArrowRight}"
+                NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
                 NextButtonText=""
                 TitleLabelText="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=CurrentPage}"
                 />

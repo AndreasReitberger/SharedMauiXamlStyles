@@ -168,7 +168,7 @@
                         <Label
                             Margin="4,0,0,0"
                             Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                            Text="{x:Static icons:MaterialDesignIcons.Reload}"
+                            Text="{x:Static icons:MaterialIcons.Reload}"
                             />
                         <Label
                             Grid.Column="1"
@@ -192,7 +192,7 @@
                         <Label
                             Margin="4,0,0,0"
                             Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                            Text="{x:Static icons:MaterialDesignIcons.Close}"
+                            Text="{x:Static icons:MaterialIcons.Close}"
                             />
                         <Label
                             Grid.Column="1"

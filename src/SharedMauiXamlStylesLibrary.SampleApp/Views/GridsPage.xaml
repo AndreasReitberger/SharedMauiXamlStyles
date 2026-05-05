@@ -38,7 +38,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialDesignIcons.Reload}"
+                    Text="{x:Static icons:MaterialIcons.Reload}"
                     />
                 <Label
                     Grid.Column="1"
@@ -62,7 +62,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialDesignIcons.Close}"
+                    Text="{x:Static icons:MaterialIcons.Close}"
                     />
                 <Label
                     Grid.Column="1"
@@ -92,7 +92,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialDesignIcons.Close}"
+                    Text="{x:Static icons:MaterialIcons.Close}"
                     />
                 <Label
                     Grid.Column="1"
@@ -124,7 +124,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialDesignIcons.AlertOutline}"
+                    Text="{x:Static icons:MaterialIcons.AlertOutline}"
                     TextColor="{StaticResource White}"
                     />
                 <Label
@@ -137,7 +137,7 @@
                 <Label
                     Grid.Column="2"
                     Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                    Text="{x:Static icons:MaterialDesignIcons.DeleteOutline}"
+                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     />
             </controls:TapAnimationGrid>
@@ -151,7 +151,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialDesignIcons.AlertOutline}"
+                    Text="{x:Static icons:MaterialIcons.AlertOutline}"
                     TextColor="{StaticResource White}"
                     />
                 <Label
@@ -164,7 +164,7 @@
                 <Label
                     Grid.Column="2"
                     Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                    Text="{x:Static icons:MaterialDesignIcons.DeleteOutline}"
+                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     />
             </controls:TapAnimationGrid>

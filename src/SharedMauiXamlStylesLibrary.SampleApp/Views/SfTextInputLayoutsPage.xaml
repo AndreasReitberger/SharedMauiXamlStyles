@@ -37,7 +37,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                        Text="{x:Static icons:MaterialDesignIcons.Pencil}"
+                        Text="{x:Static icons:MaterialIcons.Pencil}"
                         />
                 </core:SfTextInputLayout.LeadingView>
                 <controls:BorderlessEntry 
@@ -62,7 +62,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                        Text="{x:Static icons:MaterialDesignIcons.Pencil}"
+                        Text="{x:Static icons:MaterialIcons.Pencil}"
                         />
                 </core:SfTextInputLayout.LeadingView>
                 <Entry
@@ -88,7 +88,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                          Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                         Text="{x:Static icons:MaterialDesignIcons.Numeric}"
+                         Text="{x:Static icons:MaterialIcons.Numeric}"
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
@@ -106,7 +106,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                          Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                         Text="{x:Static icons:MaterialDesignIcons.CurrencyUsd}"
+                         Text="{x:Static icons:MaterialIcons.CurrencyUsd}"
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
@@ -133,7 +133,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                          Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                         Text="{x:Static icons:MaterialDesignIcons.Numeric}"
+                         Text="{x:Static icons:MaterialIcons.Numeric}"
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfMaskedEntry
@@ -159,7 +159,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                        Text="{x:Static icons:MaterialDesignIcons.ListStatus}"
+                        Text="{x:Static icons:MaterialIcons.ListStatus}"
                         />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfComboBox
