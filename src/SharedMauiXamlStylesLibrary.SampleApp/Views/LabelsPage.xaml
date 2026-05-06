@@ -6,7 +6,7 @@
     
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
     Title="LabelsPage"
@@ -65,7 +65,7 @@
 
             <Label 
                 Margin="2,16"
-                Text="{x:Static icons:MaterialIcons.HeartOutline}"
+                Text="{x:Static icons:MaterialDesignWebIcons.HeartOutline}"
                 VerticalTextAlignment="Center" 
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Style.Core.Label.IconPrimary.MaterialDesign}"

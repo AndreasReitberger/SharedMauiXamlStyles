@@ -7,7 +7,7 @@
     
     xmlns:conventViews="clr-namespace:AndreasReitberger.Shared.ContentViews"
     xmlns:shared="clr-namespace:AndreasReitberger.Shared"
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     
     x:DataType="conventViews:TitleViewAccountContentView"
     >
@@ -34,7 +34,7 @@
                     >
                     <Label
                         IsVisible="{Binding IsLoggedIn}"
-                        Text="{x:Static icons:MaterialIcons.AccountOutline}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.AccountOutline}"
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
                         />
                     <Label

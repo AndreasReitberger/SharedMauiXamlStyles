@@ -7,11 +7,8 @@
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"  
     xmlns:behaviors="clr-namespace:AndreasReitberger.Shared.Core.Behaviors;assembly=SharedMauiCoreLibrary"   
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
-    
     xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
     

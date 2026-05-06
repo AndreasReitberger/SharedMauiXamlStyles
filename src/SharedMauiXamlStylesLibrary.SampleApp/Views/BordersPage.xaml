@@ -6,7 +6,7 @@
     
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
     Title="BordersPage"
@@ -168,7 +168,7 @@
                         <Label
                             Margin="4,0,0,0"
                             Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                            Text="{x:Static icons:MaterialIcons.Reload}"
+                            Text="{x:Static icons:MaterialDesignWebIcons.Reload}"
                             />
                         <Label
                             Grid.Column="1"
@@ -192,7 +192,7 @@
                         <Label
                             Margin="4,0,0,0"
                             Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                            Text="{x:Static icons:MaterialIcons.Close}"
+                            Text="{x:Static icons:MaterialDesignWebIcons.Close}"
                             />
                         <Label
                             Grid.Column="1"

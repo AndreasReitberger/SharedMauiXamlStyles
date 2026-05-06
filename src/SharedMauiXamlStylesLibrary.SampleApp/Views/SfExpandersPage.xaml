@@ -6,7 +6,7 @@
     
     xmlns:viewModels="clr-namespace:SharedMauiXamlStylesLibrary.SampleApp.ViewModels"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     xmlns:expander="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
     
@@ -32,7 +32,7 @@
                             <Label
                                 Margin="16,0,0,0"
                                 Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                                Text="{x:Static icons:MaterialIcons.FrequentlyAskedQuestions}" 
+                                Text="{x:Static icons:MaterialDeisgnWebIconsOutlined.FrequentlyAskedQuestions}" 
                                 LineHeight="0.25"
                                 TextColor="{Binding x:DataType=expander:SfExpander, Source={RelativeSource AncestorType={x:Type expander:SfExpander}}, Path=HeaderBackground, Converter={StaticResource BrushToBlackWhiteConverter}}"
                                 />
@@ -72,7 +72,7 @@
                             <Label
                                 Margin="16,0,0,0"
                                 Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                                Text="{x:Static icons:MaterialIcons.FrequentlyAskedQuestions}" 
+                                Text="{x:Static icons:MaterialDesignWebIcons.FrequentlyAskedQuestions}" 
                                 LineHeight="0.25"
                                 TextColor="{Binding x:DataType=expander:SfExpander, Source={RelativeSource AncestorType={x:Type expander:SfExpander}}, Path=HeaderBackground, Converter={StaticResource BrushToBlackWhiteConverter}}"
                                 />

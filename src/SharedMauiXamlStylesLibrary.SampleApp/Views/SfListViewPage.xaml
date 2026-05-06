@@ -8,7 +8,7 @@
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
@@ -34,13 +34,13 @@
             <views:SortFilterHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 SortButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=SortCommand}"
-                SortButtonIconText="{x:Static icons:MaterialIcons.Sort}"
+                SortButtonIconText="{x:Static icons:MaterialDesignWebIcons.Sort}"
                 SortButtonText="Sort"
                 FilterButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=FilterCommand}"
-                FilterButtonIconText="{x:Static icons:MaterialIcons.Filter}"
+                FilterButtonIconText="{x:Static icons:MaterialDesignWebIcons.Filter}"
                 FilterButtonText="Filter"
                 ClearButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ClearFilterCommand}"
-                ClearButtonIconText="{x:Static icons:MaterialIcons.Close}"
+                ClearButtonIconText="{x:Static icons:MaterialDesignWebIcons.Close}"
                 IsFiltered="True"
                 />
         </DataTemplate>
@@ -48,10 +48,10 @@
             <views:SwitchHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
-                BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
+                BackButtonIconText="{x:Static icons:MaterialDesignWebIcons.ArrowLeft}"
                 BackButtonText=""
                 NextButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueNextCommand}"
-                NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
+                NextButtonIconText="{x:Static icons:MaterialDesignWebIcons.ArrowRight}"
                 NextButtonText=""
                 TitleLabelText="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=CurrentPage}"
                 />
@@ -60,10 +60,10 @@
             <views:SwitchHeaderContentView
                 Background="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
                 BackButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueBackCommand}"
-                BackButtonIconText="{x:Static icons:MaterialIcons.ArrowLeft}"
+                BackButtonIconText="{x:Static icons:MaterialDesignWebIcons.ArrowLeft}"
                 BackButtonText=""
                 NextButtonCommand="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=ValueNextCommand}"
-                NextButtonIconText="{x:Static icons:MaterialIcons.ArrowRight}"
+                NextButtonIconText="{x:Static icons:MaterialDesignWebIcons.ArrowRight}"
                 NextButtonText=""
                 TitleLabelText="{Binding x:DataType=controls:EnhancedListView, Source={RelativeSource AncestorType={x:Type controls:EnhancedListView}}, Path=CurrentPage}"
                 />

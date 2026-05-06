@@ -10,7 +10,6 @@
     xmlns:language="clr-namespace:AndreasReitberger.Shared.Core.Localization;assembly=SharedNetCoreLibrary"
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"   
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons"
     
     xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"

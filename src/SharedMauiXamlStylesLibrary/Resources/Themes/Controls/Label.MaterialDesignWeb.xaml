@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resources/Themes/Controls/Label.xaml;assembly=SharedMauiXamlStylesLibrary" />
@@ -13,7 +13,7 @@
 
     <Style x:Key="Style.Core.Label.Icon.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Default}">
         <Setter Property="Margin" Value="16,8" />
-        <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
+        <Setter Property="FontFamily" Value="{x:Static icons:MaterialDesignWebIcons.FontFamily}" />
         <Setter Property="FontSize" Value="{StaticResource DefaultIconSize}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
         <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
@@ -51,7 +51,7 @@
 
     <Style x:Key="Style.Core.Label.IconSettings.MaterialDesign" TargetType="Label" BasedOn="{StaticResource Style.Core.Label.Icon.MaterialDesign}">
         <Setter Property="Margin" Value="4,0,0,0" />
-        <Setter Property="Text" Value="{x:Static icons:MaterialIcons.VectorSquare}" />
+        <Setter Property="Text" Value="{x:Static icons:MaterialDesignWebIcons.VectorSquare}" />
         <Setter Property="FontFamily" Value="{StaticResource MaterialDesignIcons}" />
     </Style>
 
