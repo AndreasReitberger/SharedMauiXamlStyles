@@ -32,7 +32,7 @@
                             <Label
                                 Margin="16,0,0,0"
                                 Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                                Text="{x:Static icons:MaterialDeisgnWebIconsOutlined.FrequentlyAskedQuestions}" 
+                                Text="{x:Static icons:MaterialDesignWebIcons.FrequentlyAskedQuestions}" 
                                 LineHeight="0.25"
                                 TextColor="{Binding x:DataType=expander:SfExpander, Source={RelativeSource AncestorType={x:Type expander:SfExpander}}, Path=HeaderBackground, Converter={StaticResource BrushToBlackWhiteConverter}}"
                                 />
