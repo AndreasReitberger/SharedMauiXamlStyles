@@ -9,7 +9,7 @@
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
     Title="GridsPage"
@@ -38,7 +38,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.Reload}"
+                    Text="{x:Static icons:MaterialDesignWebIcons.Reload}"
                     />
                 <Label
                     Grid.Column="1"
@@ -62,7 +62,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.Close}"
+                    Text="{x:Static icons:MaterialDesignWebIcons.Close}"
                     />
                 <Label
                     Grid.Column="1"
@@ -92,7 +92,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.Close}"
+                    Text="{x:Static icons:MaterialDesignWebIcons.Close}"
                     />
                 <Label
                     Grid.Column="1"
@@ -124,7 +124,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.AlertOutline}"
+                    Text="{x:Static icons:MaterialDesignWebIcons.AlertOutline}"
                     TextColor="{StaticResource White}"
                     />
                 <Label
@@ -137,7 +137,7 @@
                 <Label
                     Grid.Column="2"
                     Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
+                    Text="{x:Static icons:MaterialDesignWebIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     />
             </controls:TapAnimationGrid>
@@ -151,7 +151,7 @@
                 <Label
                     Margin="16,0,0,0"
                     Style="{StaticResource Style.Core.Label.IconSettings.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.AlertOutline}"
+                    Text="{x:Static icons:MaterialDesignWebIcons.AlertOutline}"
                     TextColor="{StaticResource White}"
                     />
                 <Label
@@ -164,7 +164,7 @@
                 <Label
                     Grid.Column="2"
                     Style="{StaticResource Style.Core.Label.Icon.MaterialDesign}"
-                    Text="{x:Static icons:MaterialIcons.DeleteOutline}"
+                    Text="{x:Static icons:MaterialDesignWebIcons.DeleteOutline}"
                     TextColor="{StaticResource White}"
                     />
             </controls:TapAnimationGrid>

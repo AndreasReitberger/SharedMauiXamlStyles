@@ -9,7 +9,7 @@
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     xmlns:controls="clr-namespace:AndreasReitberger.Shared.Controls;assembly=SharedMauiXamlStylesLibrary"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"  
     
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
@@ -37,7 +37,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                        Text="{x:Static icons:MaterialIcons.Pencil}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.Pencil}"
                         />
                 </core:SfTextInputLayout.LeadingView>
                 <controls:BorderlessEntry 
@@ -62,7 +62,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                        Text="{x:Static icons:MaterialIcons.Pencil}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.Pencil}"
                         />
                 </core:SfTextInputLayout.LeadingView>
                 <Entry
@@ -88,7 +88,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                          Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                         Text="{x:Static icons:MaterialIcons.Numeric}"
+                         Text="{x:Static icons:MaterialDesignWebIcons.Numeric}"
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
@@ -106,7 +106,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                          Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                         Text="{x:Static icons:MaterialIcons.CurrencyUsd}"
+                         Text="{x:Static icons:MaterialDesignWebIcons.CurrencyUsd}"
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfNumericEntry
@@ -133,7 +133,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                          Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                         Text="{x:Static icons:MaterialIcons.Numeric}"
+                         Text="{x:Static icons:MaterialDesignWebIcons.Numeric}"
                          />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfMaskedEntry
@@ -159,7 +159,7 @@
                 <core:SfTextInputLayout.LeadingView>
                     <Label
                         Style="{StaticResource Style.Core.Label.Icon.MaterialDesign.TextInputLayout}"
-                        Text="{x:Static icons:MaterialIcons.ListStatus}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.ListStatus}"
                         />
                 </core:SfTextInputLayout.LeadingView>
                 <inputs:SfComboBox

@@ -8,7 +8,7 @@
     
     xmlns:converters="clr-namespace:AndreasReitberger.Shared.Core.Converters;assembly=SharedMauiCoreLibrary"
     
-    xmlns:icons="clr-namespace:AndreasReitberger.Shared.FontIcons;assembly=SharedMauiXamlStylesLibrary"
+    xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
     xmlns:iconsSyncfusion="clr-namespace:AndreasReitberger.Shared.Syncfusion.FontIcons;assembly=SharedMauiXamlStylesLibrary.Syncfusion"
     
     Title="ButtonsPage"
@@ -125,14 +125,14 @@
                         IsEnabled="{Binding Enabled}"
                         Grid.Column="1"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.PhonePlusOutline}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.PhonePlusOutline}"
                         Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                         />
                     <Button 
                         IsEnabled="{Binding Enabled}"
                         Grid.Column="2"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.ProgressCheck}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.ProgressCheck}"
                         Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                         />
                     <Button 
@@ -140,7 +140,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.ProgressCheck}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.ProgressCheck}"
                         Style="{StaticResource Style.Core.Button.IconPrimary.MaterialDesign}"
                         />
                     <Button 
@@ -148,7 +148,7 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.AlertCircleCheckOutline}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.AlertCircleCheckOutline}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Critical}"
                         />
                     <Button 
@@ -156,7 +156,7 @@
                         Grid.Row="1"
                         Grid.Column="2"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.ScriptOutline}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.ScriptOutline}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Error}"
                         />
                     <Button 
@@ -164,7 +164,7 @@
                         Grid.Row="2"
                         Grid.Column="0"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.AccessPoint}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.AccessPoint}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign}"
                         />
                     <Button 
@@ -172,7 +172,7 @@
                         Grid.Row="2"
                         Grid.Column="1"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.Alert}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.Alert}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Critical}"
                         />
                     <Button 
@@ -180,7 +180,7 @@
                         Grid.Row="2"
                         Grid.Column="2"
                         Margin="8,16"
-                        Text="{x:Static icons:MaterialIcons.Alert}"
+                        Text="{x:Static icons:MaterialDesignWebIcons.Alert}"
                         Style="{StaticResource Style.Core.Button.Icon.MaterialDesign.Error}"
                         />
                 </Grid>
