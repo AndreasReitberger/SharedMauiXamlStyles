@@ -166,7 +166,7 @@
 		<PackageReference Include="IconFont.Maui.MaterialDesignWebIcons" Version="1.0.0" />
 		<PackageReference Include="IconFont.Maui.TablerIcons" Version="1.0.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.60,)" />
-		<PackageReference Include="SharedMauiCoreLibrary" Version="1.2.9" />
+		<PackageReference Include="SharedMauiCoreLibrary" Version="1.3.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.9" />
 		<PackageReference Include="IconFont.Maui.MaterialDesignIcons" Version="1.0.1" />
 	</ItemGroup>

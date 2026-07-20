@@ -1,9 +1,7 @@
-﻿using AndreasReitberger.Shared.Core.Services;
-using AndreasReitberger.Shared.Core.Theme;
+﻿using AndreasReitberger.Shared.Core.Theme;
 using AndreasReitberger.Shared.Interfaces;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Diagnostics;
-using System.Runtime.Versioning;
 
 namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
 {
@@ -108,23 +106,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Utilities
                     $"secondary: {theme.SecondaryColor?.ToHex()}"
                     );
 #endif
-            }
-            catch (Exception exc)
-            {
-                Debug.WriteLine(exc);
-            }
-        }
-
-        /// <summary>
-        /// Updates the `PrimaryColor` for platform specific resources, as the StatusBar
-        /// </summary>
-        /// <param name="theme">The ThemeColorInfo to be changed to</param>
-        public static void UpdatePlatformThemeColor(ThemeColorInfo? theme)
-        {
-            try
-            {
-                if (theme?.PrimaryColor is not null)
-                    PlatformThemeService.SetStatusBarColor(theme.PrimaryColor);
             }
             catch (Exception exc)
             {
