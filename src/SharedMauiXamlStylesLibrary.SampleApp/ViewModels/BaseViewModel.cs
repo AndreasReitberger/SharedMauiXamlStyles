@@ -84,7 +84,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.ViewModels
                 //SettingsApp.Theme_PrimaryThemeColor = value;
                 //SettingsApp.SettingsChanged = true;
                 ThemeManager.Instance.UpdatePrimaryThemeColor(ThemeManager.Instance.FindThemeOrDefault(value), Application.Current);
-                ThemeManager.UpdatePlatformThemeColor(ThemeManager.Instance.FindThemeOrDefault(value));
+                //ThemeManager.UpdatePlatformThemeColor(ThemeManager.Instance.FindThemeOrDefault(value));
             }
         }
         #endregion

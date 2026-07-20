@@ -1,8 +1,4 @@
-﻿using SharedMauiXamlStylesLibrary.SampleApp.SourceGeneration;
-using SharedMauiXamlStylesLibrary.SampleApp.Utilities;
-using Syncfusion.Licensing;
-
-namespace SharedMauiXamlStylesLibrary.SampleApp
+﻿namespace SharedMauiXamlStylesLibrary.SampleApp
 {
     public partial class App : Application
     {
@@ -11,11 +7,6 @@ namespace SharedMauiXamlStylesLibrary.SampleApp
         public App(IServiceProvider serviceProvider)
         {
             ServiceProvider = serviceProvider;
-            SecretAppSetting? secrets = SecretAppSettingReader.ReadSection<SecretAppSetting>("ExampleApp", AppSourceGenerationContext.Default);
-            if (secrets is not null)
-            {
-                SyncfusionLicenseProvider.RegisterLicense(secrets.SyncfusionApiKey);
-            }
             InitializeComponent();
         }
         protected override Window CreateWindow(IActivationState? activationState)

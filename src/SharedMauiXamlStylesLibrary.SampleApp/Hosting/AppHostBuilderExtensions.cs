@@ -17,6 +17,7 @@ namespace SharedMauiXamlStylesLibrary.SampleApp.Hosting
         public static MauiAppBuilder ConfigureApp(this MauiAppBuilder builder)
         {
             builder
+                .ConfigureUserSecrets(typeof(MauiProgram), "SharedMauiXamlStylesLibrary.SampleApp")
                 .RegisterDispatcher()
                 .RegisterMainViews()
                 .ConfigureLocalizationManager([
