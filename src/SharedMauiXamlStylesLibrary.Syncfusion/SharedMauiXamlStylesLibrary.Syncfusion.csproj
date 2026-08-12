@@ -34,6 +34,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.11" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="[10.0.60,)" />
 		<ProjectReference Include="..\SharedMauiXamlStylesLibrary\SharedMauiXamlStylesLibrary.csproj" />
 		<PackageReference Include="Syncfusion.Maui.AIAssistView" Version="34.1.33" />
