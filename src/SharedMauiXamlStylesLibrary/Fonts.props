@@ -1,0 +1,17 @@
+<Project>
+  <!-- Multi-font support: define one or more FontDefinition items. -->
+  <ItemGroup>
+    <FontDefinition Include="Resources/Fonts/Montserrat-Bold.ttf">
+      <FontAlias>MontserratBold</FontAlias>
+    </FontDefinition>
+    <FontDefinition Include="Resources/Fonts/Montserrat-Medium.ttf">
+      <FontAlias>MontserratMedium</FontAlias>
+    </FontDefinition>
+    <FontDefinition Include="Resources/Fonts/Montserrat-Regular.ttf">
+      <FontAlias>MontserratRegular</FontAlias>
+    </FontDefinition>
+    <FontDefinition Include="Resources/Fonts/Montserrat-SemiBold.ttf">
+      <FontAlias>MontserratSemiBold</FontAlias>
+    </FontDefinition>
+  </ItemGroup>
+</Project>
