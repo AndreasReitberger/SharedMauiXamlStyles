@@ -81,12 +81,19 @@
             Color=&quot;%(Color)&quot;
             Visible=&quot;False&quot;
             /&gt;')" />
-			<!-- MauiFont -->
+      <!-- MauiFont -->
+      <_IncludeMauiItems Include="@(_SafeMauiFont->'&lt;MauiFont
+            Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\Fonts\%(Filename)%(Extension)&quot;
+            Link=&quot;%(Link)&quot;
+            Visible=&quot;True&quot;
+            /&gt;')" />
+			<!-- MauiFont (invisible link, original) 
 			<_IncludeMauiItems Include="@(_SafeMauiFont->'&lt;MauiFont
             Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\Fonts\%(Filename)%(Extension)&quot;
             Link=&quot;%(Link)&quot;
             Visible=&quot;False&quot;
             /&gt;')" />
+      -->
 			<!-- MauiAsset -->
 			<_IncludeMauiItems Include="@(_SafeMauiAsset->'&lt;MauiAsset
             Include=&quot;%24(MSBuildThisFileDirectory)_MauiItems\Raw\%(RecursiveDir)%(Filename)%(Extension)&quot;

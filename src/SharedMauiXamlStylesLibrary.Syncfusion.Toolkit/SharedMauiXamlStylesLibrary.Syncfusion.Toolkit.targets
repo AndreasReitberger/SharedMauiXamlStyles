@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
+  <Import Project="$(MSBuildThisFileDirectory)PackMauiAssets.targets" Condition="Exists('$(MSBuildThisFileDirectory)PackMauiAssets.targets')" />
+</Project>
+
+<!-- https://github.com/jfversluis/IconFont.Maui.Template/blob/main/src/IconFont.Maui.Template/buildTransitive/IconFont.Maui.Template.targets -->
+<!--
+<Project>
 	<Import Project="$(MSBuildThisFileDirectory)PackMauiAssets.targets" Condition="Exists('$(MSBuildThisFileDirectory)PackMauiAssets.targets')" />
 	
-	<!-- https://github.com/jfversluis/IconFont.Maui.Template/blob/main/src/IconFont.Maui.Template/buildTransitive/IconFont.Maui.Template.targets -->
 	<Import Project="$(MSBuildThisFileDirectory)fonts.syncfusion.props" Condition="Exists('$(MSBuildThisFileDirectory)fonts.syncfusion.props')" />
 
-	<!-- Fallback for single-font props -->
 	<ItemGroup Condition="'@(IconFontDefinition)' == ''">
 		<IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/$(IconFontFile)">
 			<FontAlias>$(IconFontAlias)</FontAlias>
@@ -19,3 +23,4 @@
 				  Alias="%(IconFontDefinition.FontAlias)" />
 	</ItemGroup>
 </Project>
+-->

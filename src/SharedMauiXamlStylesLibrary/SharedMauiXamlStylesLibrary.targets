@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
 	<Import Project="$(MSBuildThisFileDirectory)PackMauiAssets.targets" Condition="Exists('$(MSBuildThisFileDirectory)PackMauiAssets.targets')" />
+  
+  <!-- Set the correct build action for font files 
+  <ItemGroup>
+    <MauiFont Include="$(MSBuildThisFileDirectory)..\buildTransitive\_MauiItems\Fonts\materialdesignicons-webfont.ttf">
+      <Link>Resources\Fonts\materialdesignicons-webfont.ttf</Link>
+    </MauiFont>
+    <MauiFont Include="$(MSBuildThisFileDirectory)..\buildTransitive\_MauiItems\Fonts\Montserrat-Bold.ttf">
+      <Link>Resources\Fonts\Montserrat-Bold.ttf</Link>
+    </MauiFont>
+    <MauiFont Include="$(MSBuildThisFileDirectory)..\buildTransitive\_MauiItems\Fonts\Montserrat-Medium.ttf">
+      <Link>Resources\Fonts\Montserrat-Medium.ttf</Link>
+    </MauiFont>
+    <MauiFont Include="$(MSBuildThisFileDirectory)..\buildTransitive\_MauiItems\Fonts\Montserrat-Regular.ttf">
+      <Link>Resources\Fonts\Montserrat-Regular.ttf</Link>
+    </MauiFont>
+    <MauiFont Include="$(MSBuildThisFileDirectory)..\buildTransitive\_MauiItems\Fonts\Montserrat-SemiBold.ttf">
+      <Link>Resources\Fonts\Montserrat-SemiBold.ttf</Link>
+    </MauiFont>
+  </ItemGroup>
+  -->
 </Project>
