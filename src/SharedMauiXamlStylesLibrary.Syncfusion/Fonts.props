@@ -1,0 +1,8 @@
+<Project>
+  <!-- Multi-font support: define one or more FontDefinition items. -->
+  <ItemGroup>
+    <FontDefinition Include="Resources/Fonts/UIFontIcons.ttf">
+      <FontAlias>UIFontIcons</FontAlias>
+    </FontDefinition>
+  </ItemGroup>
+</Project>
